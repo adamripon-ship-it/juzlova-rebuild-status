@@ -60,17 +60,16 @@
 </header>
 
 <div class="status">
-  <span class="badge">PLANNED · PHASE 1 OF 4 · RECOVERY NOT YET STARTED</span>
-  <span class="meta" style="float:right">As of 2026-07-08 10:35 UTC</span>
-  <p>Deliverable decided (<strong>Option C</strong> — clean content package + working local mirror). Last-live capture pinned to <strong>2025-12-09</strong> on live CDX evidence (visual confirm pending). Target folder <code>/Users/adam/Juzlova</code> is empty — no gate, work can proceed automatically.</p>
+  <span class="badge">RECOVERED · PHASE 4 OF 4 · READY FOR WEBFLOW</span>
+  <span class="meta" style="float:right">As of 2026-07-09 11:58 UTC</span>
+  <p><strong>Option C package built</strong> in <code>/Users/adam/Juzlova</code>: <strong>27/27 pages</strong> (Markdown + raw HTML + offline mirror) and <strong>16 images</strong> recovered from the pinned <strong>2025-12-09</strong> capture. 15 referenced images were never archived near the pin (logged as gaps). Snapshot verified real vs. the 2026 parking page. Next: hand off to the Webflow rebuild.</p>
 </div>
 
 <details class="next" open>
-  <summary>Next steps <span class="meta">· 3 items</span></summary>
+  <summary>Next steps <span class="meta">· 2 items</span></summary>
   <ol>
-    <li><span class="who">Claude Code</span> — open the 2025-12-09 capture (and 2025-11-15 fallback), confirm they render as the real recipe site, and confirm the 2026 ~47 KB captures are the down/parking page <span class="meta">— pins the exact snapshot to recover from (workstream R1)</span></li>
-    <li><span class="who">Claude Code</span> — write the lightweight recovery spec to <code>docs/superpowers/specs/</code>, then run CDX enumeration + text/image extraction into <code>/Users/adam/Juzlova</code> <span class="meta">— produces the Option C package (R0 → R2 → R3–R6)</span></li>
-    <li><span class="who">Adam</span> <em>(optional)</em> — confirm scope: full recipe archive vs. a curated subset, and whether to keep the spam-looking URLs <span class="meta">— shapes what gets recovered; default is exclude-spam, recover-all-real</span></li>
+    <li><span class="who">Adam</span> — start the <strong>Webflow rebuild</strong> from the package: content in <code>Juzlova/pages/*.md</code>, visuals from <code>Juzlova/mirror/index.html</code>, assets in <code>Juzlova/images/</code> <span class="meta">— the recovery deliverable is ready; no return to Wayback needed</span></li>
+    <li><span class="who">Adam</span> <em>(optional)</em> — decide whether the 15 uncaptured images (Kakao product shots, strawberry/potato recipe photos) should be re-sourced/re-shot, or dropped <span class="meta">— listed under Gaps in <code>Juzlova/INVENTORY.md</code></span></li>
   </ol>
 </details>
 
@@ -116,19 +115,19 @@
     <div class="scroll-x">
     <table>
       <tr><th style="width:56px">ID</th><th>What</th><th style="width:110px">Owner</th><th style="width:90px">After</th><th style="width:130px">Status</th></tr>
-      <tr><td>R0</td><td>Write the lightweight recovery spec to <code>docs/superpowers/specs/</code></td><td>Claude Code</td><td>—</td><td><span class="pill next">next</span></td></tr>
-      <tr><td>R1</td><td>Verify last-live snapshot: open 2025-12-09 (+ 2025-11-15 fallback), confirm real site vs. down page</td><td>Claude Code</td><td>—</td><td><span class="pill now">in progress</span></td></tr>
-      <tr><td>R2</td><td>Enumerate all pages via CDX around the pinned timestamp; triage spam URLs</td><td>Claude Code</td><td>R1</td><td><span class="pill now">in progress</span></td></tr>
-      <tr><td>R3</td><td>Extract text → one clean Markdown file per page</td><td>Claude Code</td><td>R2</td><td><span class="pill next">next</span></td></tr>
-      <tr><td>R4</td><td>Download all referenced images → <code>images/</code></td><td>Claude Code</td><td>R2</td><td><span class="pill next">next</span></td></tr>
-      <tr><td>R5</td><td>Build the inventory manifest (pages + images + source URLs)</td><td>Claude Code</td><td>R3, R4</td><td><span class="pill next">next</span></td></tr>
-      <tr><td>R6</td><td>Assemble a working local mirror as visual reference</td><td>Claude Code</td><td>R2</td><td><span class="pill next">next</span></td></tr>
+      <tr><td>R0</td><td>Write the lightweight recovery spec to <code>docs/superpowers/specs/</code></td><td>Claude Code</td><td>—</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R1</td><td>Verify last-live snapshot: 2025-12-09 confirmed real (WordPress/Avada, 0 down-signals); 2026 = parking page</td><td>Claude Code</td><td>—</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R2</td><td>Enumerate pages via CDX (27 real pages); Latin-spam + WP defaults excluded</td><td>Claude Code</td><td>R1</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R3</td><td>Extract text → 27 clean Markdown files (page-builder pages flattened)</td><td>Claude Code</td><td>R2</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R4</td><td>Download images → 16 recovered, 15 uncaptured gaps logged</td><td>Claude Code</td><td>R2</td><td><span class="pill done">done ⚠</span></td></tr>
+      <tr><td>R5</td><td>Build the inventory manifest (pages + images + gaps + excluded)</td><td>Claude Code</td><td>R3, R4</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R6</td><td>Assemble offline-viewable mirror (<code>mirror/index.html</code>)</td><td>Claude Code</td><td>R2</td><td><span class="pill done">done ✓</span></td></tr>
     </table>
     </div>
 
     <hr>
 
-    <h2>R1 · Verify last-live snapshot <span class="pill now">in progress</span></h2>
+    <h2>R1 · Verify last-live snapshot <span class="pill done">done ✓</span></h2>
     <h3>Done so far</h3>
     <ul>
       <li>Pulled the homepage capture history from the live Wayback CDX API (2025-10 → 2026-06).</li>
@@ -149,7 +148,7 @@
 
     <hr>
 
-    <h2>R2 · Enumerate pages <span class="pill now">in progress</span></h2>
+    <h2>R2 · Enumerate pages <span class="pill done">done ✓</span></h2>
     <h3>Done so far</h3>
     <p>A first CDX pass (<code>url=juzlova.cz*</code>, 2025-09 → 2025-12, collapsed by URL) returned <strong>~24 distinct URLs</strong>, including the core marketing pages and the recipe archive:</p>
     <ul>
@@ -238,7 +237,7 @@
 </main>
 
 <script type="application/json" id="artifact-state">
-{"as_of": "2026-07-08 10:35 UTC", "phase": "1 of 4 — recovery not started", "deliverable": "Option C (content package + local mirror)", "pinned_snapshot_candidate": "2025-12-09", "fallback_snapshot": "2025-11-15", "target_dir": "/Users/adam/Juzlova", "target_dir_empty": true, "workstreams": [{"id": "R0", "what": "write recovery spec", "status": "next", "owner": "Claude Code"}, {"id": "R1", "what": "verify last-live snapshot", "status": "in progress", "owner": "Claude Code"}, {"id": "R2", "what": "enumerate pages via CDX + triage spam", "status": "in progress", "owner": "Claude Code"}, {"id": "R3", "what": "extract text to markdown per page", "status": "next", "owner": "Claude Code"}, {"id": "R4", "what": "download images", "status": "next", "owner": "Claude Code"}, {"id": "R5", "what": "build inventory manifest", "status": "next", "owner": "Claude Code"}, {"id": "R6", "what": "assemble local mirror", "status": "next", "owner": "Claude Code"}]}
+{"as_of": "2026-07-09 11:58 UTC", "phase": "4 of 4 — recovered, ready for Webflow", "deliverable": "Option C (content package + local mirror)", "pinned_snapshot": "2025-12-09", "fallback_snapshot": "2025-11-15", "target_dir": "/Users/adam/Juzlova", "pages_recovered": 27, "images_recovered": 16, "image_gaps": 15, "workstreams": [{"id": "R0", "what": "write recovery spec", "status": "done", "owner": "Claude Code"}, {"id": "R1", "what": "verify last-live snapshot", "status": "done", "owner": "Claude Code"}, {"id": "R2", "what": "enumerate pages via CDX + triage spam", "status": "done", "owner": "Claude Code"}, {"id": "R3", "what": "extract text to markdown per page", "status": "done", "owner": "Claude Code"}, {"id": "R4", "what": "download images", "status": "done-with-gaps", "owner": "Claude Code"}, {"id": "R5", "what": "build inventory manifest", "status": "done", "owner": "Claude Code"}, {"id": "R6", "what": "assemble local mirror", "status": "done", "owner": "Claude Code"}]}
 </script>
 
 <script>
