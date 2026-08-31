@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Juzlová rebuild — recovery status</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%9F%3C/text%3E%3C/svg%3E">
+<style>
+  :root { --fg:#1a1a1a; --bg:#fdfdfd; --accent:#0a7d4a; --warn:#b45309; --red:#b91c1c; --muted:#666; --border:#ddd; --code-bg:#f5f5f5; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e4e4e4; --bg:#1a1a1a; --accent:#4ade80; --warn:#fbbf24; --red:#f87171; --muted:#999; --border:#333; --code-bg:#262626; }
+  }
+  * { box-sizing:border-box; }
+  body { font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--fg); background:var(--bg); max-width:980px; margin:1.5em auto; padding:0 1.5em 3em; }
+  h1,h2,h3,h4 { font-weight:600; margin-top:1.6em; line-height:1.3; }
+  h1 { font-size:1.7em; margin-bottom:.2em; }
+  h2 { font-size:1.35em; border-bottom:1px solid var(--border); padding-bottom:.2em; }
+  h3 { font-size:1.1em; }
+  a { color:var(--accent); }
+  code { background:var(--code-bg); padding:.15em .35em; border-radius:3px; font-size:.92em; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; word-break:break-all; }
+  pre { background:var(--code-bg); padding:1em 1.2em; border-radius:6px; overflow-x:auto; font-size:.87em; line-height:1.5; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  pre code { background:none; padding:0; }
+  .scroll-x { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; margin:.8em 0; font-size:.93em; }
+  th,td { border:1px solid var(--border); padding:.45em .7em; vertical-align:top; text-align:left; }
+  th { font-weight:600; background:var(--code-bg); }
+  ul { padding-left:1.4em; } li { margin:.25em 0; }
+  details { margin:.5em 0; } details > summary { cursor:pointer; font-weight:600; padding:.4em 0; }
+  hr { border:none; border-top:1px solid var(--border); margin:2em 0; }
+  .meta { color:var(--muted); font-size:.85em; }
+  .sub { color:var(--muted); font-size:.95em; margin-top:.3em; }
+  .status { background:color-mix(in srgb, var(--accent) 12%, var(--bg)); border:1px solid var(--accent); border-radius:8px; padding:.9em 1.2em; margin:1.2em 0; }
+  .status .badge { display:inline-block; background:var(--accent); color:var(--bg); padding:.1em .6em; border-radius:4px; font-size:.78em; font-weight:600; letter-spacing:.02em; }
+  .status p { margin:.5em 0 0; font-size:.92em; }
+  .next { border:1px solid var(--warn); border-left:4px solid var(--warn); border-radius:8px; padding:.8em 1.2em; margin:1.2em 0; background:color-mix(in srgb, var(--warn) 8%, var(--bg)); }
+  .next > summary { cursor:pointer; font-weight:600; font-size:1.02em; padding:0; }
+  .next > summary .meta { font-weight:400; }
+  .next ol { margin:.5em 0 .1em 1.3em; padding:0; }
+  .next ol li { margin:.3em 0; }
+  .next .who { font-weight:600; }
+  .next p.none { margin:.5em 0 .1em; font-size:.93em; }
+  .pill { display:inline-block; font-size:.78em; padding:.1em .55em; border-radius:10px; background:var(--code-bg); color:var(--muted); margin-left:.4em; vertical-align:1px; }
+  .pill.done { background:var(--accent); color:var(--bg); }
+  .pill.now  { background:var(--warn);   color:var(--bg); }
+  .pill.next { background:var(--code-bg); color:var(--fg); border:1px solid var(--border); }
+  .pill.warn { background:var(--red);    color:var(--bg); }
+  .callout { border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:4px; padding:.7em 1em; margin:1em 0; font-size:.93em; background:color-mix(in srgb, var(--accent) 5%, var(--bg)); }
+  .tabbar { display:flex; flex-wrap:wrap; gap:.2em; border-bottom:2px solid var(--border); margin:1.2em 0 1.5em; }
+  .tabbar .tab { padding:.55em 1em; cursor:pointer; border:1px solid transparent; border-bottom:none; border-radius:6px 6px 0 0; font:inherit; font-weight:500; font-size:.95em; color:var(--muted); background:none; margin-bottom:-2px; }
+  .tabbar .tab:hover { color:var(--fg); }
+  .tabbar .tab.active { color:var(--fg); border-color:var(--border); border-bottom:2px solid var(--bg); background:var(--bg); font-weight:600; }
+  .pane { display:none; } .pane.active { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Juzlová.cz rebuild — content recovery</h1>
+  <div class="sub">Recovering the last-live version of a down recipe/marketing site from the Wayback Machine, packaged for a fresh rebuild in Webflow.</div>
+</header>
+
+<div class="status">
+  <span class="badge">RECOVERED · PHASE 4 OF 4 · READY FOR WEBFLOW</span>
+  <span class="meta" style="float:right">As of 2026-07-09 11:58 UTC</span>
+  <p><strong>Option C package built</strong> in <code>/Users/adam/Juzlova</code>: <strong>27/27 pages</strong> (Markdown + raw HTML + offline mirror) and <strong>16 images</strong> recovered from the pinned <strong>2025-12-09</strong> capture. 15 referenced images were never archived near the pin (logged as gaps). Snapshot verified real vs. the 2026 parking page. Next: hand off to the Webflow rebuild.</p>
+</div>
+
+<details class="next" open>
+  <summary>Next steps <span class="meta">· 2 items</span></summary>
+  <ol>
+    <li><span class="who">Adam</span> — start the <strong>Webflow rebuild</strong> from the package: content in <code>Juzlova/pages/*.md</code>, visuals from <code>Juzlova/mirror/index.html</code>, assets in <code>Juzlova/images/</code> <span class="meta">— the recovery deliverable is ready; no return to Wayback needed</span></li>
+    <li><span class="who">Adam</span> <em>(optional)</em> — decide whether the 15 uncaptured images (Kakao product shots, strawberry/potato recipe photos) should be re-sourced/re-shot, or dropped <span class="meta">— listed under Gaps in <code>Juzlova/INVENTORY.md</code></span></li>
+  </ol>
+</details>
+
+<div class="tabbar">
+  <button class="tab active" data-pane="over">1 &middot; Overview</button>
+  <button class="tab" data-pane="work">2 &middot; Workstreams</button>
+  <button class="tab" data-pane="bg">3 &middot; Background</button>
+  <button class="tab" data-pane="plan">4 &middot; Plan</button>
+  <button class="tab" data-pane="risk">5 &middot; Risks &amp; open questions</button>
+  <button class="tab" data-pane="faq">6 &middot; FAQ</button>
+</div>
+
+<main>
+
+  <!-- ─────────────────────────────────── TAB: OVERVIEW ─────────────────────── -->
+  <section class="pane active" id="over">
+    <div class="callout"><strong>What this is:</strong> <code>juzlova.cz</code> — a Czech recipe / marketing content site (traditional recipes: knedlíky, perník, pudinky …) — is <strong>down</strong>. It carried no orders and no payments, just images and text. The job is to recover the last-live content from the Wayback Machine and hand it off as a clean package the owner can rebuild in <strong>Webflow</strong>.</div>
+
+    <h2>Success criteria</h2>
+    <table>
+      <tr><th style="width:170px">Criterion</th><th>Statement</th><th style="width:290px">Check (how you'd know it's met)</th><th style="width:90px">Status</th></tr>
+      <tr><td>Snapshot pinned</td><td>The exact last-live capture is identified and confirmed to be the real site, not the down page.</td><td>2025-12-09 capture opens as the recipe site; 2026 captures confirmed as parking/down.</td><td><span class="pill now">in progress</span></td></tr>
+      <tr><td>Content recovered</td><td>Every real last-live page has a clean Markdown file.</td><td><code>.md</code> count matches the enumerated real-page count (spam excluded).</td><td><span class="pill next">not yet</span></td></tr>
+      <tr><td>Images recovered</td><td>All referenced images are downloaded locally.</td><td><code>images/</code> populated; the local mirror renders with no broken image refs (gaps logged).</td><td><span class="pill next">not yet</span></td></tr>
+      <tr><td>Inventory complete</td><td>A manifest lists every page and image with its source Wayback URL.</td><td>Inventory file exists and cross-checks against the <code>.md</code> and <code>images/</code> contents.</td><td><span class="pill next">not yet</span></td></tr>
+      <tr><td>Visual reference</td><td>A working local mirror reproduces the look of the 2025-12-09 capture.</td><td>Opening the mirror's index renders like the archived homepage.</td><td><span class="pill next">not yet</span></td></tr>
+      <tr><td>Webflow-ready</td><td>The package is enough to start the Webflow rebuild without returning to Wayback.</td><td>Owner can begin the Webflow build from <code>/Users/adam/Juzlova</code> alone.</td><td><span class="pill next">not yet</span></td></tr>
+    </table>
+
+    <h2>Out of scope</h2>
+    <ul>
+      <li><strong>Writing the Webflow site itself</strong> — Webflow is a visual builder; layout/design is the owner's manual step. Recovery produces content + a reference, not site code.</li>
+      <li><strong>Orders / payments / customer data</strong> — the site never had any; nothing commercial to recover.</li>
+      <li><strong>The 2026 down-state pages</strong> — the parking/unavailable captures are explicitly <em>not</em> what we want.</li>
+      <li><strong>Resurrecting the original CMS</strong> — this is a content-only recovery; we are not restoring WordPress/Shopify infrastructure.</li>
+      <li><strong>SEO / redirect migration</strong> — not part of Option C unless the owner asks later.</li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────────────── TAB: WORKSTREAMS ──────────────────── -->
+  <section class="pane" id="work">
+    <h2>Status</h2>
+    <div class="scroll-x">
+    <table>
+      <tr><th style="width:56px">ID</th><th>What</th><th style="width:110px">Owner</th><th style="width:90px">After</th><th style="width:130px">Status</th></tr>
+      <tr><td>R0</td><td>Write the lightweight recovery spec to <code>docs/superpowers/specs/</code></td><td>Claude Code</td><td>—</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R1</td><td>Verify last-live snapshot: 2025-12-09 confirmed real (WordPress/Avada, 0 down-signals); 2026 = parking page</td><td>Claude Code</td><td>—</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R2</td><td>Enumerate pages via CDX (27 real pages); Latin-spam + WP defaults excluded</td><td>Claude Code</td><td>R1</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R3</td><td>Extract text → 27 clean Markdown files (page-builder pages flattened)</td><td>Claude Code</td><td>R2</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R4</td><td>Download images → 16 recovered, 15 uncaptured gaps logged</td><td>Claude Code</td><td>R2</td><td><span class="pill done">done ⚠</span></td></tr>
+      <tr><td>R5</td><td>Build the inventory manifest (pages + images + gaps + excluded)</td><td>Claude Code</td><td>R3, R4</td><td><span class="pill done">done ✓</span></td></tr>
+      <tr><td>R6</td><td>Assemble offline-viewable mirror (<code>mirror/index.html</code>)</td><td>Claude Code</td><td>R2</td><td><span class="pill done">done ✓</span></td></tr>
+    </table>
+    </div>
+
+    <hr>
+
+    <h2>R1 · Verify last-live snapshot <span class="pill done">done ✓</span></h2>
+    <h3>Done so far</h3>
+    <ul>
+      <li>Pulled the homepage capture history from the live Wayback CDX API (2025-10 → 2026-06).</li>
+      <li>Confirmed the size/digest signature of the site going down: homepage held at <strong>~14.8 KB</strong> through 2025-12-09, then <strong>26 KB</strong> (2026-01-19) and <strong>~47 KB</strong> (2026-02-14 onward) — a jump this size with a fresh digest is the hallmark of a live page swapped for a parking/"store unavailable" page.</li>
+    </ul>
+    <div class="scroll-x">
+    <table>
+      <tr><th>Capture (UTC)</th><th style="width:90px">HTTP</th><th style="width:90px">Bytes</th><th>Read</th></tr>
+      <tr><td>2025-10-14</td><td>200</td><td>14,685</td><td>live site</td></tr>
+      <tr><td>2025-11-15</td><td>200</td><td>14,836</td><td>live site (fallback candidate)</td></tr>
+      <tr><td>2025-12-09</td><td>200</td><td>14,834</td><td><strong>last-live candidate</strong></td></tr>
+      <tr><td>2026-01-19</td><td>200</td><td>26,169</td><td>⚠ likely transitioning / down</td></tr>
+      <tr><td>2026-02-14 → 2026-05-12</td><td>200</td><td>~47,000</td><td>⚠ down / parking page</td></tr>
+    </table>
+    </div>
+    <h3>How it will be verified</h3>
+    <p>Open the 2025-12-09 capture (and 2025-11-15) in a browser/fetch and read the rendered content — it must be the real recipe site with navigation and recipe pages. Then open a 2026 ~47 KB capture and confirm it is the down/parking page. Only after this visual check is the snapshot considered pinned. <span class="meta">Size evidence is strong but a byte count alone doesn't prove content — the visual open is what closes this.</span></p>
+
+    <hr>
+
+    <h2>R2 · Enumerate pages <span class="pill done">done ✓</span></h2>
+    <h3>Done so far</h3>
+    <p>A first CDX pass (<code>url=juzlova.cz*</code>, 2025-09 → 2025-12, collapsed by URL) returned <strong>~24 distinct URLs</strong>, including the core marketing pages and the recipe archive:</p>
+    <ul>
+      <li><strong>Structural:</strong> <code>/</code>, <code>/kdo_jsme/</code> (about), <code>/kontakt/</code>, <code>/kde-nas-najdete/</code> (find us), <code>/ceny/</code> (prices), <code>/recepty/</code> (recipes index)</li>
+      <li><strong>Recipes:</strong> <code>/bramborove_knedliky/</code>, <code>/chlupate-knedliky/</code>, <code>/domaci-pernik-recept.../</code>, <code>/slehackova-rolada-recept/</code>, <code>/vanilkovy_pudink/</code>, <code>/sisky-s-makem-recept/</code>, and ~10 more</li>
+      <li><strong>⚠ Suspected spam / junk:</strong> <code>/praesent-et-urna-turpis-sadips/</code>, <code>/potravinarske-smesi-kontact-praha-ceske-republiky/</code>, <code>/hello-world/</code>, <code>/category/uncategorized/</code>, <code>/author/…/</code> — flagged for triage, default is to exclude from the recovered content.</li>
+    </ul>
+    <p class="meta">This list is provisional — it must be re-run pinned to the confirmed last-live timestamp (R1) before extraction, since the page set may differ slightly at the exact capture.</p>
+  </section>
+
+  <!-- ─────────────────────────────────── TAB: BACKGROUND ───────────────────── -->
+  <section class="pane" id="bg">
+    <div class="callout">If you only read one tab, read this: the site is gone, the Wayback Machine is the only surviving source, and the whole job hinges on picking the <em>right</em> archived moment to copy from.</div>
+
+    <h2>The situation</h2>
+    <p><code>juzlova.cz</code> was a small Czech recipe / marketing content site — traditional recipes and a few info pages (about, contact, where-to-find-us, prices). It is now down. There is no access to the original hosting admin or database, so nothing can be exported from the source; everything has to come from public archives.</p>
+    <p>The Wayback Machine holds <strong>~1,246 snapshots going back to 2014</strong>. The task is to find the last capture taken while the site was still live, and recover its content and images.</p>
+
+    <h2>Platform note <span class="pill warn">discrepancy</span></h2>
+    <p>Project notes described this as a "Shopify" site, but the captured URLs (<code>/hello-world/</code>, <code>/category/uncategorized/</code>, <code>/author/…/</code>, dated recipe slugs) are <strong>WordPress</strong> fingerprints, not Shopify. This doesn't change a content-only recovery — we copy text and images regardless of platform — but it is flagged so no effort is wasted chasing a platform-specific export. The recovery reads the rendered HTML, not any CMS internals.</p>
+
+    <h2>Key ideas</h2>
+    <ul>
+      <li><strong>Wayback CDX API</strong> — a queryable index of every capture. Used to list all archived URLs for the host (<code>url=juzlova.cz*</code>) and to pull the homepage's capture history with size and content digest per snapshot.</li>
+      <li><strong>Size / digest as a down-detector</strong> — when a live page is replaced by a parking page, its byte size and content digest change sharply. That's how the 2026 captures were flagged as the down state and 2025-12-09 as the last live one.</li>
+      <li><strong>Content vs. presentation</strong> — the Webflow rebuild recreates the <em>look</em> by hand; recovery only needs to preserve the <em>content</em> (words + images) plus a visual reference to build against.</li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────────────── TAB: PLAN ─────────────────────────── -->
+  <section class="pane" id="plan">
+    <h2>Approach</h2>
+    <p>Option C: produce a <strong>clean content package</strong> — one Markdown file per page, an <code>images/</code> folder, and an inventory manifest — <em>plus</em> a working local mirror to serve as a visual reference during the Webflow rebuild. Work proceeds automatically (the owner delegated the decision and asked for auto-continue on resume); the only hard prerequisite is pinning the right snapshot first, so a wrong choice doesn't poison everything downstream.</p>
+
+    <h2>Phases</h2>
+    <div class="scroll-x">
+    <table>
+      <tr><th style="width:70px">Phase</th><th>Goal</th><th style="width:160px">Workstreams</th><th style="width:110px">Depends on</th></tr>
+      <tr><td>1 · Pin</td><td>Confirm the exact last-live snapshot to recover from</td><td>R0, R1</td><td>—</td></tr>
+      <tr><td>2 · Map</td><td>Enumerate every real page at that snapshot; set aside spam</td><td>R2</td><td>Phase 1</td></tr>
+      <tr><td>3 · Extract</td><td>Pull text (Markdown) and download all images</td><td>R3, R4</td><td>Phase 2</td></tr>
+      <tr><td>4 · Package</td><td>Inventory + local mirror; hand off ready for Webflow</td><td>R5, R6</td><td>Phase 3</td></tr>
+    </table>
+    </div>
+    <p class="meta">Everything lands in <code>/Users/adam/Juzlova/</code>: <code>*.md</code> per page, <code>images/</code>, an inventory manifest, and a <code>mirror/</code> for visual reference.</p>
+  </section>
+
+  <!-- ───────────────────────────── TAB: RISKS & OPEN QUESTIONS ─────────────── -->
+  <section class="pane" id="risk">
+    <h2>Risks</h2>
+    <div class="scroll-x">
+    <table>
+      <tr><th>Risk</th><th style="width:120px">Likelihood / impact</th><th>Mitigation</th><th style="width:110px">Owner</th></tr>
+      <tr><td>Wrong snapshot chosen → recover stale or down-state content</td><td>Low / High</td><td>Visually verify 2025-12-09 before extraction; keep 2025-11-15 as fallback (R1).</td><td>Claude Code</td></tr>
+      <tr><td>Images referenced but never captured by Wayback → unrecoverable</td><td>Medium / Medium</td><td>Fall back to nearest-timestamp capture; log every gap in the inventory for the owner to re-source.</td><td>Claude Code</td></tr>
+      <tr><td>Wayback rate-limiting / partial captures → incomplete pull</td><td>Medium / Medium</td><td>Retry with backoff; cross-check the mirror for broken refs; re-run for misses.</td><td>Claude Code</td></tr>
+      <tr><td>Spam-injected pages mistaken for real content → junk in package</td><td>Medium / Low</td><td>Triage list; default-exclude suspicious slugs, keep them listed separately for review.</td><td>Claude Code</td></tr>
+    </table>
+    </div>
+    <h4 style="color:var(--red)">⚠ The honest caveat</h4>
+    <p>The Wayback Machine only has what it actually crawled. If a recipe image or an entire page was never snapshotted near 2025-12-09, it is simply <strong>gone</strong> — no recovery method reaches it. The package will therefore have <em>documented holes</em> rather than being a guaranteed 100% faithful copy. The inventory will make every gap explicit so nothing silently goes missing.</p>
+
+    <h2>Open questions</h2>
+    <ul>
+      <li><strong>Exact last-live snapshot</strong> — 2025-12-09 is the leading candidate on size evidence; is it visually cleaner than 2025-11-15? Decided after R1's visual check.</li>
+      <li><strong>Spam URLs</strong> — drop entirely, or keep listed for the owner's review? Default: exclude from content, list separately. <em>(Adam to confirm — optional.)</em></li>
+      <li><strong>Scope</strong> — recover the full recipe archive, or a curated subset for the initial Webflow build? <em>(Adam to confirm — optional.)</em></li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────────────── TAB: FAQ ──────────────────────────── -->
+  <section class="pane" id="faq">
+    <h3>Why recover from the Wayback Machine instead of the original host?</h3>
+    <p>The site is down and there's no access to the original hosting admin or database. The public web archive is the only surviving source of the content.</p>
+
+    <h3>Why Webflow, and not just restore the old CMS?</h3>
+    <p>The owner chose Webflow — a visual builder — for a fresh, clean rebuild. The goal is a new site, not resurrecting the old (WordPress-shaped) infrastructure. So the recovery hands over content, not server code.</p>
+
+    <h3>Why content-only (Option C) rather than a full site clone?</h3>
+    <p>Because the rebuild happens by hand in Webflow, the valuable output is clean, reusable content (Markdown + images) plus a visual reference to build against — not layout code that Webflow regenerates anyway. Option C also includes a working local mirror, so there's a faithful picture to copy from.</p>
+
+    <h3>What does "done" look like?</h3>
+    <p><code>/Users/adam/Juzlova/</code> holds a Markdown file per real page, an <code>images/</code> folder, an inventory manifest listing every page and image with its source Wayback URL (and any gaps), and a working local mirror — enough for the owner to start the Webflow rebuild without ever returning to the Wayback Machine.</p>
+  </section>
+
+</main>
+
+<script type="application/json" id="artifact-state">
+{"as_of": "2026-07-09 11:58 UTC", "phase": "4 of 4 — recovered, ready for Webflow", "deliverable": "Option C (content package + local mirror)", "pinned_snapshot": "2025-12-09", "fallback_snapshot": "2025-11-15", "target_dir": "/Users/adam/Juzlova", "pages_recovered": 27, "images_recovered": 16, "image_gaps": 15, "workstreams": [{"id": "R0", "what": "write recovery spec", "status": "done", "owner": "Claude Code"}, {"id": "R1", "what": "verify last-live snapshot", "status": "done", "owner": "Claude Code"}, {"id": "R2", "what": "enumerate pages via CDX + triage spam", "status": "done", "owner": "Claude Code"}, {"id": "R3", "what": "extract text to markdown per page", "status": "done", "owner": "Claude Code"}, {"id": "R4", "what": "download images", "status": "done-with-gaps", "owner": "Claude Code"}, {"id": "R5", "what": "build inventory manifest", "status": "done", "owner": "Claude Code"}, {"id": "R6", "what": "assemble local mirror", "status": "done", "owner": "Claude Code"}]}
+</script>
+
+<script>
+function goTab(id){
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.pane === id));
+  document.querySelectorAll('.pane').forEach(p => p.classList.toggle('active', p.id === id));
+}
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => goTab(t.dataset.pane)));
+</script>
+
+</body>
+</html>
