@@ -1,22 +1,19 @@
 Jůzlová.cz — local copy on this Mac
 
-1. Unzip the download. You should see a folder named
-   juzlova-rebuild-status-main (or similar).
-2. Open that folder, then open the local-mac folder.
-3. Double-click "Open Juzlova locally.command".
-   The site opens at http://127.0.0.1:8765/
-4. Leave the Terminal window open while you browse.
-   Close it when you are done.
+Your copy lives at:
+  /Users/adam/juzlova-site/juzlova-rebuild-status-cursor-mac-local-download-ddb7
 
-If macOS says the file cannot be opened:
-  Right-click "Open Juzlova locally.command" → Open → Open.
+Port 8765 is often already taken. Use 8770, or double-click
+"Open Juzlova locally.command" in the unzipped site folder
+(it picks a free port for you).
 
-To refresh later, in Terminal:
+In Terminal, paste this whole block:
 
-  cd ~/Downloads/juzlova-rebuild-status-main
-  git pull
+  cd /Users/adam/juzlova-site/juzlova-rebuild-status-cursor-mac-local-download-ddb7
+  open http://127.0.0.1:8770/
+  python3 -m http.server 8770 --bind 127.0.0.1
 
-Or clone a living copy:
+Leave that window open. The site is at http://127.0.0.1:8770/
 
-  cd ~/Documents
-  git clone https://github.com/adamripon-ship-it/juzlova-rebuild-status.git juzlova.cz
+If macOS says the .command file cannot be opened:
+  Right-click it → Open → Open.
