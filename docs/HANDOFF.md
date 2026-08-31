@@ -4,6 +4,21 @@ Written 2026-08-31 for whoever picks this up next. It covers what is deployed,
 what is in this repo, where the two disagree, and what has to happen to close
 the gap. Open issues reference this file rather than repeating it.
 
+## Status update — 2026-08-31 (verified live)
+
+The gap this doc was written to close is **already closed**: `https://juzlova.cz`
+now serves the four-language `main` build. Verified by fetching the live site —
+the homepage is byte-for-byte identical to the committed `index.html`, and
+`/en/`, `/de/`, `/sk/` return the real translated pages (no "Tady nic nepeče"
+404, no `/assets/img/...`). The `server` header is `Google Frontend`, so the new
+build is served by the **Google host (Cloud Run / GCS), not GitHub Pages**; the
+`www.juzlova.cz` CNAME still points at `ghs.googlehosted.com`.
+
+Consequence: the DNS cutover to GitHub Pages described below is now a
+**host-preference choice, not a content fix** — both hosts serve the same build.
+Older sections (e.g. "What is live right now" describing a Czech-only site) are
+historical and superseded by this note.
+
 ## Decision (2026-08-31)
 
 The owner picked **Option 1: serve the `main` build** on juzlova.cz — four
