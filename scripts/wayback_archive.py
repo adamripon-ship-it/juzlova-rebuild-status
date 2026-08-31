@@ -20,6 +20,7 @@ import html as htmllib
 import json
 import os
 import re
+import sys
 import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -57,6 +58,23 @@ def safe(orig):
     return s
 
 
+def cached(path):
+    """Bytes an earlier run already saved here, or None.
+
+    archive.org goes intermittently unavailable, and without this a bad run
+    would report everything it could not re-fetch as failed — erasing a
+    recovery that already succeeded and is sitting on disk. Re-runs read what
+    they have and only go to the network for what is genuinely missing.
+    """
+    try:
+        if os.path.getsize(path) > 0:
+            with open(path, "rb") as f:
+                return f.read()
+    except OSError:
+        pass
+    return None
+
+
 def strip_html(h):
     h = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", h)
     h = re.sub(r"(?is)<br[^>]*>", "\n", h)
@@ -70,19 +88,21 @@ def main():
     for d in ["cdx", "pages_html", "pages_text", "seo", "images", "other"]:
         os.makedirs(os.path.join(BASE, d), exist_ok=True)
 
+    all_cdx = os.path.join(BASE, "cdx", "all-captures.txt")
     cdx = fetch(
         "https://web.archive.org/cdx/search/cdx?url=juzlova.cz*&limit=100000"
         "&fl=urlkey,timestamp,original,mimetype,statuscode,digest,length"
-    )
+    ) or cached(all_cdx)
     if not cdx:
-        raise SystemExit("CDX index unreachable")
-    open(os.path.join(BASE, "cdx", "all-captures.txt"), "wb").write(cdx)
+        raise SystemExit("CDX index unreachable and no cached copy")
+    open(all_cdx, "wb").write(cdx)
+    hp_cdx = os.path.join(BASE, "cdx", "homepage-captures.txt")
     hp = fetch(
         "https://web.archive.org/cdx/search/cdx?url=juzlova.cz&limit=10000"
         "&fl=timestamp,statuscode,length,digest"
     )
     if hp:
-        open(os.path.join(BASE, "cdx", "homepage-captures.txt"), "wb").write(hp)
+        open(hp_cdx, "wb").write(hp)
 
     last = {}
     for ln in cdx.decode("utf-8", "replace").splitlines():
@@ -99,11 +119,12 @@ def main():
     def do_page(item):
         ts, orig, mime = item
         s = safe(orig)
-        data = fetch(f"https://web.archive.org/web/{ts}id_/{orig}")
+        dest = os.path.join(BASE, "pages_html", s + ".html")
+        data = cached(dest) or fetch(f"https://web.archive.org/web/{ts}id_/{orig}")
         if not data:
             results["failed"].append(["page", orig, ts])
             return
-        open(os.path.join(BASE, "pages_html", s + ".html"), "wb").write(data)
+        open(dest, "wb").write(data)
         h = data.decode("utf-8", "replace")
         seo = {"url": orig, "wayback_timestamp": ts, "slug": s}
         m = re.search(r"(?is)<title[^>]*>(.*?)</title>", h)
@@ -131,22 +152,28 @@ def main():
     def do_img(item):
         ts, orig, mime = item
         s = safe(orig)
-        data = fetch(f"https://web.archive.org/web/{ts}im_/{orig}")
-        if not data or data[:6] == b"<html>":
-            results["failed"].append(["image", orig, ts])
-            return
-        open(os.path.join(BASE, "images", s), "wb").write(data)
+        dest = os.path.join(BASE, "images", s)
+        data = cached(dest)
+        if data is None:
+            data = fetch(f"https://web.archive.org/web/{ts}im_/{orig}")
+            if not data or data[:6] == b"<html>":
+                results["failed"].append(["image", orig, ts])
+                return
+            open(dest, "wb").write(data)
         results["images"].append([orig, ts, s, len(data)])
 
     def do_other(item):
         ts, orig, mime = item
         s = safe(orig)
-        data = fetch(f"https://web.archive.org/web/{ts}id_/{orig}")
-        if data:
-            open(os.path.join(BASE, "other", s), "wb").write(data)
-            results["other"].append([orig, ts, s])
-        else:
-            results["failed"].append(["other", orig, ts])
+        dest = os.path.join(BASE, "other", s)
+        data = cached(dest)
+        if data is None:
+            data = fetch(f"https://web.archive.org/web/{ts}id_/{orig}")
+            if not data:
+                results["failed"].append(["other", orig, ts])
+                return
+            open(dest, "wb").write(data)
+        results["other"].append([orig, ts, s])
 
     pages, imgs, other = [], [], []
     for key, (ts, orig, mime) in last.items():
@@ -175,5 +202,28 @@ def main():
         print("FAILED", *f)
 
 
+def is_complete():
+    """True once every page and image is mirrored.
+
+    Feeds, robots.txt and the other odds and ends are indexed for
+    completeness but are not site content, and some of them the Wayback
+    Machine simply never captured a working copy of. Blocking on those would
+    re-run the whole crawl on every push for something that can never
+    succeed, so only pages and images decide whether the mirror is done.
+    """
+    try:
+        with open(os.path.join(BASE, "manifest.json")) as f:
+            m = json.load(f)
+    except (OSError, ValueError):
+        return False
+    if not m.get("pages"):
+        return False
+    return not [f for f in m.get("failed", []) if f[0] in ("page", "image")]
+
+
 if __name__ == "__main__":
+    if "--check" in sys.argv:
+        ok = is_complete()
+        print("archive complete" if ok else "archive incomplete — crawl needed")
+        sys.exit(0 if ok else 1)
     main()

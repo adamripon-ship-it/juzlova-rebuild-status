@@ -8,6 +8,7 @@ LANG = {
         "nav_products": "Produkty", "nav_prices": "Cenník", "nav_recipes": "Recepty",
         "nav_contact": "Kontakt",
         "brand_tag": "potravinárske zmesi · Vysočina",
+        "workshop_caption": "Naša dielňa v Kochánove — vrecia s múkou, váha a baliaca linka.",
         "est": "Rodinná dielňa · Kochánov · od roku 2004",
         "hero_h1": "Knedle ako od babičky. Hotové za 15 minút.",
         "hero_lead": "Poctivé potravinárske zmesi z Vysočiny — zemiakové cestá, pudingy, vanilínový cukor a kakao. Z múky ocenenej českou značkou kvality KLASA, bez kompromisov v kvalite.",

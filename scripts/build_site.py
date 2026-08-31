@@ -50,7 +50,9 @@ RECIPE_SLUGS = [
 IMAGE_MAP = {
     "wp-content_uploads_2017_06_juzlova-logo-black-2017.png": "logo.png",
     "wp-content_uploads_2012_07_Bramborov_-knedl_ky-300x225.png": "bramborove-knedliky.png",
-    "wp-content_uploads_2012_07_Chlupat_-knedl_ky-300x225.png": "chlupate-knedliky.png",
+    # Named for chlupaté knedlíky on the old site, but the picture is actually
+    # two packets of vanilla sugar. Published under what it shows.
+    "wp-content_uploads_2012_07_Chlupat_-knedl_ky-300x225.png": "vanilkovy-cukr-pytliky.png",
     "wp-content_uploads_2012_07_Vanilkov_-puding-juzlova-300x225.png": "vanilkovy-puding.png",
     "wp-content_uploads_2012_07_Kakaov_-puding-juzlova-224x300.png": "kakaovy-puding.png",
     "wp-content_uploads_2012_07_HERO_Hot-Cocoa_363x276-300x228.jpg": "kakao.jpg",
@@ -68,20 +70,20 @@ IMAGE_MAP = {
     "wp-content_uploads_2017_04_Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg": "bramborovo-tvarohove-knedliky.jpg",
 }
 PRODUCT_IMG = {
-    "bramborove_knedliky": "bramborove-knedliky.png",
-    "chlupate_knedliky": "chlupate-knedliky.png",
-    "vanilkovy_pudink": "vanilkovy-puding.png",
-    "kakao_holandskeho_typu": "kakao.jpg",
-    "vanilkovy_cukr": "vanilkovy-cukr.png",
+    "bramborove_knedliky": "produkt-bramborove-knedliky.webp",
+    "chlupate_knedliky": "produkt-chlupate-knedliky.webp",
+    "vanilkovy_pudink": "produkt-vanilkovy-puding.webp",
+    "kakao_holandskeho_typu": "produkt-kakao.webp",
+    "vanilkovy_cukr": "vanilkovy-cukr-pytliky.webp",  # the workshop’s own photo
 }
 RECIPE_IMG = {
     "sisky-s-makem-recept": "sisky-s-makem.png",
-    "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac.png",
+    "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac.webp",
     "strapacky-se-zelim-a-slaninou-recept": "strapacky.jpg",
     "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "bebe-rezy.gif",
-    "slehackova-rolada-recept": "slehackova-rolada.gif",
-    "domaci-pernik-recept-podle-jirina-juzlova": "domaci-pernik.png",
-    "bramborovo-tvarohove-knedliky-s-jahodami": "bramborovo-tvarohove-knedliky.jpg",
+    "slehackova-rolada-recept": "slehackova-rolada.webp",
+    "domaci-pernik-recept-podle-jirina-juzlova": "domaci-pernik.webp",
+    "bramborovo-tvarohove-knedliky-s-jahodami": "bramborovo-tvarohove-knedliky.webp",
 }
 PRICE_ROWS = [  # (product key, package, price CZK)
     ("bramborove_knedliky", "5 kg", "165 Kč"),
@@ -160,7 +162,11 @@ def nav(L, depth, active, path):
         cls = ' class="on"' if other == lg else ""
         langsel += f'<a{cls} lang="{other}" hreflang="{other}" href="{url_for(other, path)}">{other.upper()}</a>'
     return f"""<div class="bar">
-  <a class="brand" href="{p if p else './'}"><span class="name">Jůzlová.cz</span><span class="tag">{esc(ui["brand_tag"])}</span></a>
+  <a class="brand" href="{p if p else './'}" aria-label="Jůzlová.cz">
+    <img class="wordmark on-light" src="{p}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200">
+    <img class="wordmark on-dark" src="{p}img/logo-wordmark-white.png" alt="" aria-hidden="true" width="650" height="200">
+    <span class="tag">{esc(ui["brand_tag"])}</span>
+  </a>
   <nav class="main" aria-label="hlavní navigace">
     {a('', ui['nav_home'], 'home')}
     {a('kdo_jsme/', ui['nav_about'], 'kdo_jsme')}
@@ -184,9 +190,11 @@ def footer(L, depth):
         f'<a href="{p}{slug}/">{esc(L["recipes"].get(slug, {}).get("name", slug))}</a>'
         for slug in RECIPE_SLUGS[:5])
     return f"""<footer class="site">
+  <img class="footmark" src="{p}img/mark-white.png" alt="" aria-hidden="true" width="640" height="640">
   <div class="wrap">
     <div class="cols">
-      <div><h4>Jůzlová</h4>
+      <div>
+        <img class="footlogo" src="{p}img/logo-wordmark-white.png" alt="Jůzlová" width="650" height="200">
         <p style="font-size:.92rem;margin:.2rem 0 1rem">{esc(ui['footer_note'])}</p>
         <p style="font-size:.88rem">{esc(ui['footer_addr'])}<br>+420 728 466 141 · +420 607 629 931<br><a href="mailto:juzlj@seznam.cz" style="display:inline">juzlj@seznam.cz</a></p>
       </div>
@@ -208,7 +216,7 @@ def org_jsonld():
     return {
         "@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"],
         "@id": BASE + "/#org", "name": "Jůzlová",
-        "url": BASE + "/", "logo": BASE + "/img/logo.png",
+        "url": BASE + "/", "logo": BASE + "/img/logo-wordmark-black.png",
         "foundingDate": "2004", "email": "juzlj@seznam.cz",
         "telephone": "+420728466141",
         "address": {"@type": "PostalAddress", "streetAddress": "Kochánov 40",
@@ -249,7 +257,12 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 <meta property="og:image" content="{ogimg}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{p}assets/site.css">
-<link rel="icon" href="{p}img/favicon.png" type="image/png">
+<link rel="icon" href="{p}img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{p}img/icon-32.png">
+<link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)" href="{p}img/icon-white-32.png">
+<link rel="apple-touch-icon" href="{p}img/apple-touch-icon.png">
+<link rel="manifest" href="{p}site.webmanifest">
+<meta name="theme-color" content="#021536">
 {ld}
 </head>
 <body{body_cls}>
@@ -334,7 +347,10 @@ def img_or_none(depth, name):
     return None
 
 
-FILM_FRAMES = ["film-krajina.webp", "hero.webp", "film-blizko.webp", "film-makro.webp"]
+# The film opens on Kochánov itself: the aerial the old site ran as its
+# background video, recovered from the archive. Their own village, not a
+# stand-in for it.
+FILM_FRAMES = ["kochanov-letecky.webp", "hero.webp", "film-blizko.webp", "film-makro.webp"]
 SCROLL_HINT = {"cs": "Rolujte", "en": "Scroll", "de": "Scrollen", "sk": "Rolujte"}
 
 
@@ -454,9 +470,14 @@ def build_page(L, key):
     crumbs = [(L["ui"]["breadcrumb_home"], url_for(lg, "")), (pg["h1"], url_for(lg, path))]
     fig = ""
     if key == "kdo_jsme":
-        w = img_or_none(depth, "workshop.jpg") or img_or_none(depth, "workshop.webp")
+        # Their own production room — sacks, scale and bag sealer — recovered
+        # from the archive, in preference to a generic workshop picture.
+        w = (img_or_none(depth, "dilna-panorama.webp")
+             or img_or_none(depth, "workshop.webp") or img_or_none(depth, "workshop.jpg"))
         if w:
-            fig = f'<figure><img src="{w}" alt="Jůzlová — dílna" loading="lazy"></figure>'
+            cap = esc(L["ui"].get("workshop_caption", ""))
+            fig = (f'<figure><img src="{w}" alt="{esc(pg["h1"])} — Kochánov" loading="lazy">'
+                   + (f"<figcaption>{cap}</figcaption>" if cap else "") + "</figure>")
     body = f"""<main class="wrap"><article class="page">
 <nav class="breadcrumb"><a href="{rel(depth)}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pg['h1'])}</nav>
 <h1>{esc(pg['h1'])}</h1>
@@ -630,6 +651,21 @@ def build_sitemap(langs_data):
           '<?xml version="1.0" encoding="UTF-8"?>\n' + ns + "\n" + "\n".join(entries) + "\n</urlset>\n")
 
 
+def build_manifest():
+    write(["site.webmanifest"], json.dumps({
+        "name": "Jůzlová — potravinářské směsi",
+        "short_name": "Jůzlová",
+        "start_url": BASE + "/",
+        "display": "standalone",
+        "background_color": "#faf6ef",
+        "theme_color": "#021536",
+        "icons": [
+            {"src": BASE + "/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
+            {"src": BASE + "/img/icon-512.png", "sizes": "512x512", "type": "image/png"},
+        ],
+    }, ensure_ascii=False, indent=1))
+
+
 def build_robots():
     write(["robots.txt"], f"""User-agent: *
 Allow: /
@@ -736,10 +772,8 @@ def copy_images():
                       ("strapacky.jpg", "strapacky-alt.png")]:
         if not (dst / want).exists() and (dst / alt).exists():
             shutil.copyfile(dst / alt, dst / want)
-    logo = dst / "logo.png"
-    fav = dst / "favicon.png"
-    if logo.exists() and not fav.exists():
-        shutil.copyfile(logo, fav)
+    # img/logo.png is the recovered 2017 logo, kept as an archive asset; the
+    # icons the site actually links come from scripts/make_brand_assets.py.
 
 
 def main():
@@ -758,6 +792,7 @@ def main():
     build_redirects()
     build_sitemap(langs_data)
     build_robots()
+    build_manifest()
     build_llms(langs_data)
     print("built:", ", ".join(LANGS))
 

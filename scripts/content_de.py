@@ -8,6 +8,7 @@ LANG = {
         "nav_products": "Produkte", "nav_prices": "Preisliste", "nav_recipes": "Rezepte",
         "nav_contact": "Kontakt",
         "brand_tag": "Lebensmittelmischungen · Vysočina, Tschechien",
+        "workshop_caption": "Unsere Werkstatt in Kochánov — Mehlsäcke, Waage und Abfülllinie.",
         "est": "Familienbetrieb · Kochánov · seit 2004",
         "hero_h1": "Knödel wie bei Großmutter. Fertig in 15 Minuten.",
         "hero_lead": "Ehrliche Lebensmittelmischungen aus der Vysočina (Böhmisch-Mährische Höhe) — Kartoffelteige, Pudding, Vanillinzucker und Kakao. Aus Mehl mit dem tschechischen Gütesiegel KLASA, ohne Kompromisse bei der Qualität.",

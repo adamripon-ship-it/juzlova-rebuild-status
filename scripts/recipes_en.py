@@ -2,8 +2,8 @@
 RECIPES = {
     "domaci-pernik-recept-podle-jirina-juzlova": {
         "name": "Homemade gingerbread (perník)",
-        "teaser": "Cup-measure gingerbread you'll love for its easy preparation and great taste. No scales needed — a mug is enough.",
-        "title": "Homemade Czech gingerbread — Jiřina Jůzlová's cup recipe",
+        "teaser": "Cup-measure gingerbread you’ll love for its easy preparation and great taste. No scales needed — a mug is enough.",
+        "title": "Homemade Czech gingerbread — Jiřina Jůzlová’s cup recipe",
         "desc": "Czech cup-measure gingerbread with no weighing: 10 minutes prep, 20–25 minutes baking, 25–30 servings. With vanilla pudding powder and Dutch-process cocoa.",
         "product": "vanilkovy_pudink",
         "meta": "Prep 10 min · Bake 20–25 min · 25–30 servings",
@@ -43,7 +43,7 @@ RECIPES = {
             "Whisk the egg whites to stiff peaks, then add the yolks and icing sugar. Fold gently into a smooth batter.",
             "Finally add the Dutch-process cocoa — it gives a deep chocolate colour and pronounced taste.",
             "Prepare baking paper lightly greased with lard (oil works too) so the roulade rolls up easily after baking.",
-            "Bake at 180 °C for about 8 minutes; don't open the oven while it bakes.",
+            "Bake at 180 °C for about 8 minutes; don’t open the oven while it bakes.",
             "Let the sponge cool on the tray, then carefully peel off the paper.",
             "Whip the cream stiff, spread it over the sponge and roll it up. Decorate the top with the remaining cream and chocolate shavings.",
         ],
@@ -52,7 +52,7 @@ RECIPES = {
     "hruskovy-kolac-s-vanilkovym-pudinkem-recept": {
         "name": "Pear cake with vanilla pudding",
         "teaser": "A cake your children will enjoy making with you. Baking is fun twice — once preparing, once tasting.",
-        "title": "Pear cake with vanilla pudding — Lucie Kůželová's recipe",
+        "title": "Pear cake with vanilla pudding — Lucie Kůželová’s recipe",
         "desc": "Pear cake with sour cream and vanilla pudding: 20 minutes prep, 45 minutes baking, 8 servings. Works with apples, raspberries or peaches too.",
         "product": "vanilkovy_pudink",
         "meta": "Prep 20 min · Bake 45 min · 8 servings",
@@ -112,7 +112,7 @@ RECIPES = {
         ],
         "steps": [
             'Mix the hairy dumpling powder with water per the instructions. Press the swollen dough through a colander straight into boiling water and cook the halušky until they float.',
-            "Boil the sauerkraut in a pot of water for about 10 minutes; drain any water that hasn't boiled off.",
+            "Boil the sauerkraut in a pot of water for about 10 minutes; drain any water that hasn’t boiled off.",
             'Fry diced bacon in lard; once lightly crisped, add sliced spring onion and take the pan off the heat after a minute.',
             'Mix the halušky with the cabbage and top each plate with the bacon and onion.',
         ],
@@ -120,7 +120,7 @@ RECIPES = {
     },
     "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": {
         "name": "Bebe biscuit slices with chocolate pudding",
-        "teaser": "Want to treat your guests but you're no Jamie Oliver? These no-bake biscuit slices are for everyone.",
+        "teaser": "Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone.",
         "title": "Bebe biscuit slices with chocolate pudding — no-bake recipe",
         "desc": "No-bake bebe biscuit slices with Jůzlová cocoa pudding, after Lucie Kůželová: biscuits, pudding cream and whipped cream. No oven needed.",
         "product": "kakao_holandskeho_typu",
