@@ -4,6 +4,21 @@ Written 2026-08-31 for whoever picks this up next. It covers what is deployed,
 what is in this repo, where the two disagree, and what has to happen to close
 the gap. Open issues reference this file rather than repeating it.
 
+## Status update — 2026-08-31 (verified live)
+
+The gap this doc was written to close is **already closed**: `https://juzlova.cz`
+now serves the four-language `main` build. Verified by fetching the live site —
+the homepage is byte-for-byte identical to the committed `index.html`, and
+`/en/`, `/de/`, `/sk/` return the real translated pages (no "Tady nic nepeče"
+404, no `/assets/img/...`). The `server` header is `Google Frontend`, so the new
+build is served by the **Google host (Cloud Run / GCS), not GitHub Pages**; the
+`www.juzlova.cz` CNAME still points at `ghs.googlehosted.com`.
+
+Consequence: the DNS cutover to GitHub Pages described below is now a
+**host-preference choice, not a content fix** — both hosts serve the same build.
+Older sections (e.g. "What is live right now" describing a Czech-only site) are
+historical and superseded by this note.
+
 ## Decision (2026-08-31)
 
 The owner picked **Option 1: serve the `main` build** on juzlova.cz — four
@@ -22,6 +37,25 @@ record). Apex already 301s to `www`, so that single change is enough:
 
 Do not run `scripts/cloudflare_dns.sh` for this — that script still aims at
 `ghs.googlehosted.com`, which is where production is today.
+
+### Canonical cutover — do not add competing workflows (2026-08-31)
+
+There is exactly one supported cutover mechanism:
+`.github/workflows/cutover-pages-dns.yml`. It sets `www.juzlova.cz` CNAME →
+`adamripon-ship-it.github.io` (proxied false) using the repo secret
+`CLOUDFLARE_API_TOKEN`, and skips cleanly when that secret is absent. The only
+outstanding step is owner-only:
+
+1. Create a Cloudflare API token (Zone:Read + DNS:Edit, scoped to `juzlova.cz`).
+2. Add it as the repo secret `CLOUDFLARE_API_TOKEN`.
+3. Run the **Cut over www to GitHub Pages** workflow (Actions → Run workflow),
+   or make the single `www` CNAME edit by hand in Cloudflare.
+
+Do **not** open new branches/PRs that add parallel cutover or Cloud-Run-hosting
+workflows. Two such attempts were closed as duplicative/off-decision: the
+Cloudflare-MCP variant and the "deploy `main` to Cloud Run" variant. If the
+hosting decision itself changes (Pages → Cloud Run), reverse this section first,
+then change the workflow — don't add a second competing one.
 
 ## The situation in one paragraph
 
