@@ -1,0 +1,17 @@
+{
+  "name": "Jůzlová.cz static site",
+  "install": "chmod +x scripts/cloud_agent_install.sh scripts/dev_server.sh && scripts/cloud_agent_install.sh",
+  "terminals": [
+    {
+      "name": "dev-server",
+      "command": "PORT=8080 scripts/dev_server.sh",
+      "description": "nginx preview of the built site at http://localhost:8080 with production-like clean URLs, cache headers and gzip. Rebuild with 'python3 scripts/build_site.py'."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 8080
+    }
+  ]
+}
