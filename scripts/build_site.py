@@ -228,7 +228,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
     ld = "\n".join(
         f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>'
         for b in blocks)
-    ogimg = og_img or f"{BASE}/img/hero.jpg"
+    ogimg = og_img or f"{BASE}/img/hero.webp"
     p = rel(depth)
     return f"""<!doctype html>
 <html lang="{lg}">
