@@ -159,3 +159,59 @@ footer.site .fine { border-top: 1px solid #3a332b; padding: 1.1rem 0 1.6rem; fon
   .hero .inner { padding: 12vh 1.2rem 10vh; }
   .scrub { height: auto; } .scrub .stage { position: relative; height: 60vh; }
 }
+
+/* ═══ motion redesign (scroll-film + parallax) ═══ */
+header.site { transition: background .35s ease, box-shadow .35s ease; }
+body.filmed header.site { position: fixed; inset-inline: 0; top: 0; background: transparent; border-bottom-color: transparent; }
+body.filmed header.site .brand, body.filmed header.site nav.main > a,
+body.filmed header.site .navgroup > button { color: #f5efe4; text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+body.filmed header.site .langs a { color: #e7dcc6; }
+body.filmed header.site.scrolled { background: rgba(29,23,18,.88); backdrop-filter: blur(10px); box-shadow: 0 2px 18px rgba(0,0,0,.25); }
+
+.film { position: relative; height: 380vh; background: #14100c; }
+.film .stage { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+.film .frame {
+  position: absolute; inset: 0; opacity: 0; will-change: opacity, transform;
+  background-size: cover; background-position: center;
+}
+.film .frame:first-child { opacity: 1; }
+.film .frame:after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(20,16,12,.42), rgba(20,16,12,.12) 40%, rgba(20,16,12,.55)); }
+.film .grain { position: absolute; inset: -50%; opacity: .05; pointer-events: none; z-index: 3;
+  background-image: repeating-conic-gradient(#000 0 .0001%, #fff 0 .0002%);
+  animation: grain 8s steps(10) infinite; }
+@keyframes grain { 0%{transform:translate(0,0)} 50%{transform:translate(3%,-2%)} 100%{transform:translate(-2%,3%)} }
+.film .copy { position: absolute; inset: 0; z-index: 4; display: grid; place-items: center; text-align: center; padding: 0 1.4rem; }
+.filmline { position: absolute; max-width: 780px; opacity: 0; will-change: opacity, transform; color: #f5efe4; }
+.filmline .est { font-family: var(--sans); font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; }
+.filmline h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1.08; margin: 0 0 1rem; text-wrap: balance; text-shadow: 0 2px 24px rgba(0,0,0,.45); }
+.filmline p { font-size: clamp(1.05rem, 2.1vw, 1.3rem); color: #ead9be; max-width: 640px; margin: 0 auto 1.6rem; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
+.filmline h2 { font-size: clamp(1.7rem, 4.6vw, 3rem); line-height: 1.12; margin: 0 0 .8rem; text-shadow: 0 2px 24px rgba(0,0,0,.45); }
+.film .hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 4;
+  font-family: var(--sans); font-size: .7rem; letter-spacing: .26em; text-transform: uppercase; color: rgba(245,239,228,.75); }
+.film .hint:after { content: ""; display: block; width: 1px; height: 34px; margin: .6rem auto 0;
+  background: linear-gradient(180deg, var(--gold), transparent); animation: drip 1.8s ease infinite; }
+@keyframes drip { 0%{transform:scaleY(0);transform-origin:top} 55%{transform:scaleY(1);transform-origin:top} 100%{transform:scaleY(0);transform-origin:bottom} }
+
+.plx { position: relative; overflow: hidden; color: #f5efe4; }
+.plx .plx-img { position: absolute; inset: -18% 0; background-size: cover; background-position: center; transform: scale(1.18); will-change: transform; }
+.plx .plx-img:after { content: ""; position: absolute; inset: 0; background: rgba(24,18,12,.62); }
+.plx .inner { position: relative; padding: 5rem 1.4rem; }
+.plx h2.sec { color: #f5efe4; }
+.plx .grid h3 { color: var(--gold); }
+.plx .grid p { color: #e2d5bc; }
+
+.marquee { overflow: hidden; background: var(--ink); color: #e7dcc6; padding: .7rem 0; }
+.marquee .track { display: inline-flex; gap: 3rem; white-space: nowrap; will-change: transform;
+  animation: marquee 36s linear infinite; font-family: var(--sans); font-size: .82rem; letter-spacing: .06em; }
+.marquee .track span b { color: var(--gold); font-weight: 700; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee .track, .film .grain, .film .hint:after { animation: none; }
+  .film { height: auto; } .film .stage { position: relative; height: 72vh; }
+  body.filmed header.site { position: sticky; background: rgba(29,23,18,.92); }
+}
+.card img.thumb { transition: transform .5s ease; }
+.card:hover img.thumb { transform: scale(1.05); }
+.btn { position: relative; overflow: hidden; }
+.btn.gold:active { transform: translateY(0) scale(.98); }

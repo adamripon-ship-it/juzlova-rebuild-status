@@ -36,6 +36,8 @@ jobs:
           grab hero.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5_min.webp"
           grab hero.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5.png"
           grab workshop.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_012021_260c1625-ff7f-42ab-92f5-7a25f72ed1da_min.webp"
+          grab film-blizko.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_030819_50f693a2-0778-4390-8a6c-cc531a138e63_min.webp"
+          grab film-makro.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_030948_5e5e7f85-15b3-4b1e-8de1-3ddb094c382e_min.webp"
           command -v ffmpeg && [ -f img/hero.png ] && ffmpeg -y -loglevel error -i img/hero.png -vf scale=1920:-2 -q:v 3 img/hero.jpg && rm -f img/hero.png || true
           ls -la img/ | sed -n '1,30p'
       - name: Try 2019-capture recipe thumbnails

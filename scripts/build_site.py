@@ -221,7 +221,7 @@ def org_jsonld():
     }
 
 
-def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None):
+def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None, body_class=""):
     lg = L["code"]
     canonical = url_for(lg, path)
     blocks = [org_jsonld()] + (jsonld or [])
@@ -230,6 +230,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
         for b in blocks)
     ogimg = og_img or f"{BASE}/img/hero.webp"
     p = rel(depth)
+    body_cls = f' class="{body_class}"' if body_class else ""
     return f"""<!doctype html>
 <html lang="{lg}">
 <head>
@@ -251,7 +252,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 <link rel="icon" href="{p}img/favicon.png" type="image/png">
 {ld}
 </head>
-<body>
+<body{body_cls}>
 <header class="site">
   <div class="wrap">{nav(L, depth, active, path)}</div>
 </header>
@@ -333,14 +334,16 @@ def img_or_none(depth, name):
     return None
 
 
+FILM_FRAMES = ["film-krajina.webp", "hero.webp", "film-blizko.webp", "film-makro.webp"]
+SCROLL_HINT = {"cs": "Rolujte", "en": "Scroll", "de": "Scrollen", "sk": "Rolujte"}
+
+
 def build_home(L):
     lg = L["code"]
     depth = 0 if lg == "cs" else 1
     ui = L["ui"]
     p = rel(depth)
-    hero_img = img_or_none(depth, "hero.jpg") or img_or_none(depth, "hero.webp")
-    hero_media = (f'<img src="{hero_img}" alt="" fetchpriority="high">' if hero_img
-                  else '<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%, #3a2c1c, #1d1712)"></div>')
+    frames = [f for f in FILM_FRAMES if (ROOT / "img" / f).exists()]
     prod_cards = ""
     for k in PRODUCT_SLUGS:
         pr = L["products"][k]
@@ -358,13 +361,65 @@ def build_home(L):
         imtag = f'<img class="thumb" src="{im}" alt="{esc(r["name"])}" loading="lazy">' if im else ""
         rec_cards += f"""<li class="card rv">{imtag}<div class="pad">
 <h3><a href="{p}{slug}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
-    body = f"""<div class="hero"><div class="media">{hero_media}</div>
+    frame_divs = "".join(
+        f'<div class="frame" style="background-image:url({p}img/{f})"></div>' for f in frames)
+    ticker_items = "".join(
+        f"<span>{esc(L['products'][k]['name'])} · <b>{esc(L['products'][k]['price'])}</b></span>"
+        for k in PRODUCT_SLUGS)
+    if frames:
+        hero_html = f"""<section class="film" data-film>
+  <div class="stage">
+    {frame_divs}
+    <div class="grain"></div>
+    <div class="copy">
+      <div class="filmline" data-in="0" data-out="0.34">
+        <div class="est">{esc(ui['est'])}</div>
+        <h1>{esc(ui['hero_h1'])}</h1>
+        <p>{esc(ui['hero_lead'])}</p>
+        <a class="btn gold" href="{p}kontakt/">{esc(ui['hero_cta'])}</a><a class="btn ghost" href="#produkty">{esc(ui['hero_cta2'])}</a>
+      </div>
+      <div class="filmline" data-in="0.36" data-out="0.66">
+        <h2>{esc(ui['why_2_h'])}</h2>
+        <p>{esc(ui['why_2_p'])}</p>
+      </div>
+      <div class="filmline" data-in="0.68" data-out="1">
+        <h2>{esc(ui['cta_sample_h'])}</h2>
+        <p>{esc(ui['cta_sample_p'])}</p>
+        <a class="btn gold" href="{p}kontakt/">{esc(ui['cta_sample_btn'])}</a>
+      </div>
+    </div>
+    <div class="hint">{esc(SCROLL_HINT[lg])}</div>
+  </div>
+</section>
+<div class="marquee" aria-hidden="true"><div class="track">{ticker_items}{ticker_items}</div></div>"""
+        body_class = "filmed"
+    else:
+        hero_html = f"""<div class="hero">
+  <div class="media"><div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%, #3a2c1c, #1d1712)"></div></div>
   <div class="inner">
     <div class="est">{esc(ui['est'])}</div>
     <h1>{esc(ui['hero_h1'])}</h1>
     <p class="lead">{esc(ui['hero_lead'])}</p>
     <a class="btn gold" href="{p}kontakt/">{esc(ui['hero_cta'])}</a><a class="btn ghost" href="#produkty">{esc(ui['hero_cta2'])}</a>
-  </div></div>
+  </div></div>"""
+        body_class = ""
+    wshop = img_or_none(depth, "workshop.webp") or img_or_none(depth, "workshop.jpg")
+    why_inner = f"""
+  <p class="kicker" style="color:var(--gold)">{esc(ui['sec_why_kicker'])}</p>
+  <h2 class="sec">{esc(ui['sec_why'])}</h2>
+  <div class="grid c3">
+    <div class="rv"><h3>{esc(ui['why_1_h'])}</h3><p>{esc(ui['why_1_p'])}</p></div>
+    <div class="rv"><h3>{esc(ui['why_2_h'])}</h3><p>{esc(ui['why_2_p'])}</p></div>
+    <div class="rv"><h3>{esc(ui['why_3_h'])}</h3><p>{esc(ui['why_3_p'])}</p></div>
+  </div>"""
+    if wshop:
+        why_band = f"""<section class="plx" data-plx>
+  <div class="plx-img" style="background-image:url({wshop})"></div>
+  <div class="inner"><div class="wrap">{why_inner}</div></div>
+</section>"""
+    else:
+        why_band = f'<section class="band cream"><div class="wrap">{why_inner}</div></section>'
+    body = f"""{hero_html}
 <section class="band" id="produkty"><div class="wrap">
   <p class="kicker">{esc(ui['sec_products_kicker'])}</p>
   <h2 class="sec">{esc(ui['sec_products'])}</h2>
@@ -372,15 +427,7 @@ def build_home(L):
   <ul class="grid c3" style="list-style:none;padding:0">{prod_cards}</ul>
   <p><a href="{p}ceny/">{esc(ui['full_price_list'])} →</a></p>
 </div></section>
-<section class="band cream"><div class="wrap">
-  <p class="kicker">{esc(ui['sec_why_kicker'])}</p>
-  <h2 class="sec">{esc(ui['sec_why'])}</h2>
-  <div class="grid c3">
-    <div class="rv"><h3>{esc(ui['why_1_h'])}</h3><p>{esc(ui['why_1_p'])}</p></div>
-    <div class="rv"><h3>{esc(ui['why_2_h'])}</h3><p>{esc(ui['why_2_p'])}</p></div>
-    <div class="rv"><h3>{esc(ui['why_3_h'])}</h3><p>{esc(ui['why_3_p'])}</p></div>
-  </div>
-</div></section>
+{why_band}
 <section class="band"><div class="wrap">
   <p class="kicker">{esc(ui['sec_recipes_kicker'])}</p>
   <h2 class="sec">{esc(ui['sec_recipes'])}</h2>
@@ -394,7 +441,7 @@ def build_home(L):
   <a class="btn gold" href="{p}kontakt/">{esc(ui['cta_sample_btn'])}</a>
 </div></section>"""
     html_out = shell(L, title=L["meta"]["home_title"], desc=L["meta"]["home_desc"],
-                     path="", depth=depth, active="home", body=body)
+                     path="", depth=depth, active="home", body=body, body_class=body_class)
     write(([lg] if lg != "cs" else []) + ["index.html"], html_out)
 
 
