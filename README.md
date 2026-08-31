@@ -47,5 +47,8 @@ SITE_BASE=https://juzlova.cz python scripts/build_site.py
 |---|---|
 | `build_site.py` | Builds every page in all four languages |
 | `wayback_archive.py` | Mirrors juzlova.cz from the Wayback Machine; `--check` reports completeness |
+| `verify_refs.py` | Checks generated pages for broken local `src` / `href` / `url()` |
 | `make_brand_assets.py` | Wordmarks, favicons and the footer monogram from `brand/` |
 | `optimize_images.py` | Resizes oversized artwork to web-sized WebP |
+| `cloudflare_dns.sh` | Issue #9 only — refuses to run unless `I_MEAN_IT=yes` |
+| `gcp_domain_mapping.sh` | Issue #9 only — same guard |

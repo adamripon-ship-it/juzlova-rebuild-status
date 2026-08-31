@@ -3,7 +3,7 @@ name: Wayback archive fetch
 on:
   workflow_dispatch:
   push:
-    branches: [claude/website-deployment-258ncm]
+    branches: [main]
     paths:
       - '.github/workflows/wayback-archive.yml'
       - 'scripts/wayback_archive.py'

@@ -7,6 +7,11 @@ name: Deploy to Google Cloud Storage
 #   GCP_SA_KEY      — JSON key of a service account with Storage Admin on the bucket
 #   GCP_PROJECT     — the Google Cloud project id
 #   GCS_BUCKET      — bucket name (e.g. "juzlova-cz" or "www.juzlova.cz")
+#
+# Do not set vars.SITE_BASE to https://juzlova.cz until issue #9. The
+# committed HTML keeps the GitHub Pages canonicals so Pages stays a
+# coherent staging copy. At cutover, set the variable and this job
+# rebuilds before the sync.
 
 on:
   push:
@@ -22,8 +27,21 @@ jobs:
       - name: Check credentials
         id: creds
         run: |
-          if [ -n "${{ secrets.GCP_SA_KEY }}" ]; then echo "ok=true" >> "$GITHUB_OUTPUT";
-          else echo "ok=false" >> "$GITHUB_OUTPUT"; echo "GCP secrets not configured — skipping deploy."; fi
+          if [ -n "${{ secrets.GCP_SA_KEY }}" ] && [ -n "${{ secrets.GCS_BUCKET }}" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "GCP secrets not configured — skipping deploy."
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.creds.outputs.ok == 'true' && vars.SITE_BASE != ''
+        with:
+          python-version: '3.12'
+      - name: Rebuild with production SITE_BASE
+        if: steps.creds.outputs.ok == 'true' && vars.SITE_BASE != ''
+        env:
+          SITE_BASE: ${{ vars.SITE_BASE }}
+        run: python scripts/build_site.py
       - uses: google-github-actions/auth@v2
         if: steps.creds.outputs.ok == 'true'
         with:
@@ -41,6 +59,6 @@ jobs:
         if: steps.creds.outputs.ok == 'true'
         run: |
           gsutil -m rsync -r -d \
-            -x '^\.git/|^\.github/|^scripts/|^archive/|^status\.html$|^README\.md$|^\.gitignore$|^\.nojekyll$' \
+            -x '^\.git/|^\.github/|^scripts/|^archive/|^brand/|^docs/|^status\.html$|^README\.md$|^Dockerfile$|^nginx\.conf$|^\.gcloudignore$|^\.dockerignore$|^\.gitignore$|^\.nojekyll$' \
             . "gs://${{ secrets.GCS_BUCKET }}"
           echo "Deployed to https://storage.googleapis.com/${{ secrets.GCS_BUCKET }}/index.html"
