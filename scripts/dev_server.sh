@@ -50,7 +50,9 @@ http {
         location /.github/ { return 404; }
 
         gzip on;
-        gzip_types text/html text/css application/javascript image/svg+xml application/json text/xml application/xml text/plain;
+        # text/html is always gzipped by nginx, so it is intentionally omitted
+        # here to avoid a "duplicate MIME type" startup warning.
+        gzip_types text/css application/javascript image/svg+xml application/json text/xml application/xml text/plain;
     }
 }
 NGINX
