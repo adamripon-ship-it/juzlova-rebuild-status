@@ -671,6 +671,7 @@ def build_robots():
 Allow: /
 Disallow: /archive/
 Disallow: /status.html
+Disallow: /local-mac/
 
 Sitemap: {BASE}/sitemap.xml
 """)
