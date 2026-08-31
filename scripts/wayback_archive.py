@@ -26,21 +26,24 @@ from concurrent.futures import ThreadPoolExecutor
 
 BASE = os.path.join(os.path.dirname(__file__), "..", "archive")
 HDR = {"User-Agent": "Mozilla/5.0 (juzlova.cz archive recovery)"}
+DEADLINE = time.monotonic() + int(os.environ.get("FETCH_BUDGET_SECONDS", "1500"))
 
 
-def fetch(url, tries=12):
+def fetch(url, tries=8):
     for i in range(tries):
+        if time.monotonic() > DEADLINE:
+            return None
         try:
             req = urllib.request.Request(url, headers=HDR)
-            with urllib.request.urlopen(req, timeout=90) as r:
+            with urllib.request.urlopen(req, timeout=60) as r:
                 data = r.read()
             head = data[:4000]
             if b"Temporarily Offline" in head and b"Internet Archive" in head:
-                time.sleep(4 + i * 3)
+                time.sleep(min(3 + i * 2, 15))
                 continue
             return data
         except Exception:
-            time.sleep(4 + i * 3)
+            time.sleep(min(3 + i * 2, 15))
     return None
 
 
@@ -158,7 +161,7 @@ def main():
               or "/feed/" in orig or mime == "text/xml"):
             other.append((ts, orig, mime))
 
-    with ThreadPoolExecutor(6) as ex:
+    with ThreadPoolExecutor(10) as ex:
         list(ex.map(do_page, pages))
         list(ex.map(do_img, imgs))
         list(ex.map(do_other, other))

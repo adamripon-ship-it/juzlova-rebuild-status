@@ -22,11 +22,18 @@ jobs:
           python-version: '3.12'
       - name: Fetch full juzlova.cz mirror from the Wayback Machine
         run: python scripts/wayback_archive.py
+      - name: Fetch generated hero images
+        if: always()
+        run: |
+          mkdir -p img
+          [ -f img/hero.jpg ] || { curl -fsSL -o /tmp/hero.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5.png" && convert /tmp/hero.png -resize 1920x -quality 84 img/hero.jpg || true; }
       - name: Commit archive
+        if: always()
         run: |
           git config user.name "wayback-archive-bot"
           git config user.email "actions@github.com"
-          git add archive/
+          git add archive/ img/
           git diff --cached --quiet && echo "nothing new" && exit 0
           git commit -m "Archive: full juzlova.cz mirror from Wayback Machine (pages, SEO, images, CDX)"
+          git pull --rebase origin "${GITHUB_REF_NAME}" || true
           git push

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /archive/
+Disallow: /status.html
+
+Sitemap: https://adamripon-ship-it.github.io/juzlova-rebuild-status/sitemap.xml
