@@ -16,7 +16,8 @@ python scripts/build_site.py
 
 No dependencies outside the standard library. Output is written into the repo
 root — `index.html` plus one directory per original URL slug, so old links keep
-working — and committed, because GitHub Pages serves the repo directly.
+working — and committed. GitHub Pages can still serve a staging copy;
+production is Google Cloud Run (`www` → `ghs.googlehosted.com`).
 
 Canonical URLs default to `https://juzlova.cz`. Override only for a staging
 copy:

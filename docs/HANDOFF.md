@@ -8,28 +8,22 @@ the gap. Open issues reference this file rather than repeating it.
 
 The owner picked **Option 1: serve the `main` build** on juzlova.cz — four
 languages, recovered photos, the workshop's own marks. Do **not** merge PR #3.
-Its site stays as the previous production copy until DNS moves off Cloud Run.
+Host that build on **Google Cloud Run**, which already serves the domain.
+Do **not** CNAME `www` to `adamripon-ship-it.github.io`.
 
 `scripts/build_site.py` now defaults `SITE_BASE` to `https://juzlova.cz`. The
 committed HTML, sitemap, llms.txt and redirect stubs use that domain.
 
-To finish the cutover, point `www.juzlova.cz` at GitHub Pages (one Cloudflare
-record). Apex already 301s to `www`, so that single change is enough:
-
-| Record | Change to | Proxy |
-|---|---|---|
-| `www.juzlova.cz` CNAME | `adamripon-ship-it.github.io` | DNS only (grey cloud) until GitHub's certificate is issued |
-
-Do not run `scripts/cloudflare_dns.sh` for this — that script still aims at
-`ghs.googlehosted.com`, which is where production is today.
+Cutover is a Cloud Run deploy of `main` onto the existing service
+(`juzlova-web`, europe-west3). DNS stays CNAME `ghs.googlehosted.com`.
+See [`docs/DEPLOY-GCP.md`](DEPLOY-GCP.md).
 
 ## The situation in one paragraph
 
 Two different rebuilds of juzlova.cz exist. One is live on the real domain and
 is Czech-only. The other is on `main` in this repo, has four languages, and is
-served from GitHub Pages. The owner chose `main`. The remaining step is the
-DNS flip above; until then juzlova.cz still serves the Czech-only Cloud Run
-copy.
+served from GitHub Pages. The owner chose `main` on Google Cloud. Until `GCP_SA_KEY` and
+`GCP_PROJECT` exist, juzlova.cz still serves the Czech-only Cloud Run copy.
 
 ## What is live right now
 
@@ -48,9 +42,10 @@ branch.
 **Where it is hosted.** The apex `301`s to `https://www.juzlova.cz/`. The
 `www` host is CNAME `ghs.googlehosted.com` and both answers come from
 `Google Frontend`. That is a Cloud Run custom-domain mapping, last-modified
-`2026-08-31 05:01:02 GMT`. Do not deploy a preview to a service named
-`juzlova-web` — that is almost certainly what production is. Use a different
-service name (`juzlova-main-preview`) until issue #7 is decided.
+`2026-08-31 05:01:02 GMT`. That service is almost certainly `juzlova-web`.
+Issue #7 is decided (`main` wins), so the four-language image should be
+deployed **onto** `juzlova-web`. Use `juzlova-main-preview` only as a
+scratch service.
 
 Two gaps against the brief the owner gave:
 
@@ -95,33 +90,17 @@ JSON-LD `url` and `llms.txt` link is built from it.
 Copy lives in `scripts/content_{cs,en,de,sk}.py` and
 `scripts/recipes_{cs,en,de,sk}.py`. Czech is the source of truth.
 
-## Three deploy proposals, one of which shipped
+## Deploy paths
 
 | | Where | Serves | State |
 |---|---|---|---|
-| `.github/workflows/deploy-gcp.yml` on `main` | GCS bucket, europe-central2 (Warsaw) | the `main` build | merged, skips itself until secrets exist |
-| `.github/workflows/deploy-cloudrun-preview.yml` | Cloud Run `juzlova-main-preview`, europe-west3 | the `main` build | dispatch-only; will not overwrite live `juzlova-web` |
-| PR #2 | Cloud Run, europe-west3 (Frankfurt) | whatever the repo holds | open; its `Dockerfile` + `nginx.conf` are now on this tree |
-| PR #3 | Cloud Run, europe-west3, with automated Cloudflare DNS cutover | its own parallel site build | open, appears to be what production runs — do not merge |
+| `.github/workflows/deploy-cloudrun.yml` | Cloud Run `juzlova-web`, europe-west3 | the `main` build | **production path**; needs `GCP_SA_KEY` + `GCP_PROJECT` |
+| `.github/workflows/deploy-gcp.yml` on `main` | GCS bucket, europe-central2 (Warsaw) | the `main` build | optional; skips until `GCS_BUCKET` exists |
+| PR #3 | Cloud Run, europe-west3 | its own parallel site | closed; still what production runs until `juzlova-web` is redeployed |
 
-They differ on two axes that should be decided separately.
-
-**Which site.** PR #3 carries a complete second site — its own `assets/`,
-fonts, images, stylesheet and `404.html`. Merging it into `main` would collide
-with the build there across most of the tree. This is the decision that
-matters; the hosting question is minor next to it.
-
-**Which host.** Warsaw is nearer Czechia than Frankfurt, but both are one hop
-away and the difference will not be visible to a visitor. A bucket is cheaper
-and simpler for a static site; Cloud Run gives clean URLs and cache headers
-through nginx without a load balancer. PR #3 is the only one that also
-automates the Cloudflare DNS change.
-
-Recommendation, for whoever decides: keep the `main` build, because it meets
-the four-language brief and production does not, and take PR #3's DNS
-automation (`scripts/cloudflare_dns.sh`, `scripts/gcp_domain_mapping.sh`)
-rather than its site. That reduces the merge to two small scripts instead of a
-whole tree.
+DNS for `www` stays on Google (`ghs.googlehosted.com`). The Pages DNS cutover
+workflow was removed so a Cloudflare token cannot point the domain at
+github.io by accident.
 
 ## DNS
 
@@ -145,20 +124,14 @@ orange with SSL/TLS set to Full (strict).
 
 ## What only the owner can do
 
-- **DNS cutover (this is what makes juzlova.cz serve `main`).** In Cloudflare,
-  edit `www.juzlova.cz` from CNAME `ghs.googlehosted.com` to CNAME
-  `adamripon-ship-it.github.io`, grey cloud. Leave the apex as-is — it already
-  301s to `www`.
-- Add the repository secrets if you still want the GCS / Cloud Run path:
-  `GCP_SA_KEY`, `GCP_PROJECT`, `GCS_BUCKET`.
-
-Until the secrets exist the deploy workflow skips itself and GitHub Pages keeps
-serving `main`, so nothing breaks in the meantime.
-
-A dispatch-only workflow, `.github/workflows/deploy-cloudrun-preview.yml`,
-deploys `main` to a Cloud Run service named `juzlova-main-preview`. That is
-the safe way to get a Google host URL for issue #8 without touching the
-live `juzlova-web` mapping.
+- **Put `main` on the live Cloud Run service.** In
+  [Google Cloud Console → Cloud Run](https://console.cloud.google.com/run)
+  open the project that already serves `www.juzlova.cz`. Create a service
+  account with **Cloud Run Admin** + **Service Account User**, download a
+  JSON key, and add GitHub secrets `GCP_SA_KEY` and `GCP_PROJECT`. Then run
+  **Deploy latest main to Cloud Run**. Leave Cloudflare DNS on
+  `ghs.googlehosted.com`.
+- Optional GCS path still wants `GCS_BUCKET` as well.
 
 ## Known limits
 

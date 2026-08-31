@@ -1,0 +1,82 @@
+name: Deploy latest main to Cloud Run
+
+# Puts this repo's main build on the Cloud Run service already serving
+# www.juzlova.cz (CNAME ghs.googlehosted.com). Does not change DNS.
+# Do not CNAME www to adamripon-ship-it.github.io.
+#
+# Required GitHub secrets (from the Google Cloud project that already
+# hosts juzlova-web):
+#   GCP_SA_KEY   — JSON key; Cloud Run Admin + Service Account User
+#   GCP_PROJECT  — project id
+#
+# Optional: CLOUD_RUN_SERVICE (default juzlova-web), CLOUD_RUN_REGION
+# (default europe-west3).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      service:
+        description: Cloud Run service. juzlova-web is live juzlova.cz.
+        type: choice
+        options:
+          - juzlova-web
+          - juzlova-main-preview
+        default: juzlova-web
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Require GCP credentials
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+        run: |
+          if [ -z "$GCP_SA_KEY" ] || [ -z "$GCP_PROJECT" ]; then
+            echo "::error::GCP_SA_KEY and GCP_PROJECT are not set. In Google Cloud Console open the project that already serves www.juzlova.cz, create a service account with Cloud Run Admin + Service Account User, download a JSON key, and add both secrets on this repo. DNS stays ghs.googlehosted.com."
+            exit 1
+          fi
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebuild with production SITE_BASE
+        env:
+          SITE_BASE: https://juzlova.cz
+        run: python scripts/build_site.py
+
+      - uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy to Cloud Run
+        env:
+          PROJECT: ${{ secrets.GCP_PROJECT }}
+          REGION: europe-west3
+          SERVICE: ${{ github.event.inputs.service || 'juzlova-web' }}
+        run: |
+          set -euo pipefail
+          gcloud config set project "$PROJECT"
+          if [ "$SERVICE" = "juzlova-web" ]; then
+            if ! gcloud run services describe juzlova-web --region "$REGION" --format='value(metadata.name)' >/dev/null 2>&1; then
+              echo "::error::juzlova-web was not found in $PROJECT / $REGION. Live services:"
+              gcloud run services list --region "$REGION" || true
+              exit 1
+            fi
+          fi
+          gcloud run deploy "$SERVICE" \
+            --source . \
+            --region "$REGION" \
+            --allow-unauthenticated \
+            --quiet
+          echo "Deployed $SERVICE:"
+          gcloud run services describe "$SERVICE" \
+            --region "$REGION" --format='value(status.url)'

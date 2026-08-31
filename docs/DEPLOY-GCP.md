@@ -1,64 +1,45 @@
 # Deploying juzlova.cz to Google Cloud
 
-The site is a static build (no server code). Two paths sit in this repo.
-Neither one should touch DNS until issues #7 and #9 are decided.
+The live domain already points at **Cloud Run**. `www.juzlova.cz` is CNAME
+`ghs.googlehosted.com`. Do **not** point `www` at GitHub Pages
+(`adamripon-ship-it.github.io`). The four-language `main` build goes live by
+replacing the container on that Cloud Run service.
 
-**What is live today** is already on Google Cloud Run: `www.juzlova.cz` is
-CNAME `ghs.googlehosted.com` and the apex 301s there. That service is
-almost certainly named `juzlova-web` and is serving the Czech-only PR #3
-build. Do not deploy a preview onto that name.
+`.github/workflows/deploy-cloudrun.yml` rebuilds with `SITE_BASE=https://juzlova.cz`
+and deploys to **`juzlova-web`** in **europe-west3** on every push to `main`
+(and from **Actions → Deploy latest main to Cloud Run**).
 
-**GCS (merged workflow).** `.github/workflows/deploy-gcp.yml` syncs the
-`main` build to a bucket in **europe-central2 (Warsaw)** on every push to
-`main` once three repository secrets exist. Until then it skips itself and
-GitHub Pages keeps serving the site.
+`Dockerfile` + `nginx.conf` serve the static tree (clean URLs, cache headers).
+`archive/`, `scripts/` and git metadata stay out of the image.
 
-**Cloud Run preview of `main`.** `.github/workflows/deploy-cloudrun-preview.yml`
-is dispatch-only. It deploys to a service named `juzlova-main-preview` so
-it cannot overwrite production. Use this for issue #8 if you want a
-`*.run.app` URL to check the four-language build.
+## One-time setup (Google Cloud Console)
 
-`Dockerfile` + `nginx.conf` serve `main`'s static tree (clean URLs, cache
-headers). `archive/`, `scripts/` and git metadata stay out of the image.
+Use the project that already has the Cloud Run service behind juzlova.cz.
 
-## One-time setup (≈10 minutes, done by the project owner)
+1. Open [Cloud Run](https://console.cloud.google.com/run) and confirm the
+   service mapped to `www.juzlova.cz` (expected name: `juzlova-web`,
+   region `europe-west3`).
+2. [IAM → Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts)
+   → Create. Grant **Cloud Run Admin** and **Service Account User**.
+3. Keys → Add key → JSON. Download the file.
+4. In GitHub: Settings → Secrets and variables → Actions → add:
+   - `GCP_SA_KEY` — the full JSON key contents
+   - `GCP_PROJECT` — that project's id
+5. Run **Deploy latest main to Cloud Run** (target `juzlova-web`).
 
-1. In [Google Cloud Console](https://console.cloud.google.com/) create (or
-   pick) a project, note its **project id**.
-2. Create a service account: IAM & Admin → Service Accounts → Create.
-   Grant it **Storage Admin** (GCS path) and **Cloud Run Admin** plus
-   **Service Account User** (preview path). Create a **JSON key** and
-   download it.
-3. In the GitHub repo: Settings → Secrets and variables → Actions → add:
-   - `GCP_SA_KEY` — the full JSON key file contents
-   - `GCP_PROJECT` — the project id
-   - `GCS_BUCKET` — bucket name; use something like `juzlova-site` for a
-     preview bucket. Do not reuse a name that already serves production.
-4. For issue #8, run **Cloud Run preview of main** from the Actions tab
-   (dispatch-only, service `juzlova-main-preview`). The GCS workflow still
-   runs on push to `main` once the three secrets exist; it skips until then.
+Until those two secrets exist the workflow **fails** instead of skipping, so
+a missing key is visible. DNS is left alone.
 
-## Custom domain + HTTPS
+Optional GCS sync still lives in `.github/workflows/deploy-gcp.yml` and still
+skips without `GCS_BUCKET`. That path is not what serves juzlova.cz.
 
-A bare bucket serves HTTP only. For `https://juzlova.cz`:
+## After deploy
 
-1. Reserve a global static IP; create an **external Application Load
-   Balancer** with a backend bucket pointing at the site bucket, enable
-   **Cloud CDN** on it.
-2. Attach a **Google-managed certificate** for `juzlova.cz` and
-   `www.juzlova.cz`.
-3. Point DNS `A` records for `juzlova.cz`/`www` at the load-balancer IP.
-4. At cutover (issue #9) set the repository variable `SITE_BASE` to
-   `https://juzlova.cz`. The GCS workflow then rebuilds before it syncs.
-   Do not set this while GitHub Pages is still the public copy — every
-   canonical, hreflang, sitemap and redirect stub is generated from it.
+Check all four languages on the real domain (no DNS change):
 
-The Cloudflare / Cloud Run mapping scripts in `scripts/` refuse to run
-unless `I_MEAN_IT=yes`. Rollback is **not** "put Shopify back"; capture
-the live zone first. See `docs/HANDOFF.md`.
+- `https://www.juzlova.cz/`
+- `https://www.juzlova.cz/en/`
+- `https://www.juzlova.cz/de/`
+- `https://www.juzlova.cz/sk/`
 
-## Alternative
-
-Firebase Hosting (also Google) gives HTTPS + CDN + custom domain with less
-setup (`firebase init hosting && firebase deploy`), if you prefer that over
-the load-balancer route.
+Success is English / German / Slovak copy, not the Czech 404 "Tady nic nepeče".
