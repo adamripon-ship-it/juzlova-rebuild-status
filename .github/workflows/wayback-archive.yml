@@ -11,6 +11,12 @@ on:
 permissions:
   contents: write
 
+# The job commits to the branch it runs on, so two overlapping runs would race
+# each other's push. Newest wins.
+concurrency:
+  group: wayback-archive-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -22,8 +28,8 @@ jobs:
           python-version: '3.12'
       - name: Fetch full juzlova.cz mirror from the Wayback Machine
         run: |
-          if python -c "import json,sys; m=json.load(open('archive/manifest.json')); sys.exit(0 if len(m['failed'])==0 else 1)" 2>/dev/null; then
-            echo "Archive already complete (0 failures) — skipping crawl."
+          if python scripts/wayback_archive.py --check; then
+            echo "Archive already holds every page and image — skipping crawl."
           else
             python scripts/wayback_archive.py
           fi

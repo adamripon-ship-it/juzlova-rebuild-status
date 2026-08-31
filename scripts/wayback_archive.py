@@ -20,6 +20,7 @@ import html as htmllib
 import json
 import os
 import re
+import sys
 import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -175,5 +176,28 @@ def main():
         print("FAILED", *f)
 
 
+def is_complete():
+    """True once every page and image is mirrored.
+
+    Feeds, robots.txt and the other odds and ends are indexed for
+    completeness but are not site content, and some of them the Wayback
+    Machine simply never captured a working copy of. Blocking on those would
+    re-run the whole crawl on every push for something that can never
+    succeed, so only pages and images decide whether the mirror is done.
+    """
+    try:
+        with open(os.path.join(BASE, "manifest.json")) as f:
+            m = json.load(f)
+    except (OSError, ValueError):
+        return False
+    if not m.get("pages"):
+        return False
+    return not [f for f in m.get("failed", []) if f[0] in ("page", "image")]
+
+
 if __name__ == "__main__":
+    if "--check" in sys.argv:
+        ok = is_complete()
+        print("archive complete" if ok else "archive incomplete — crawl needed")
+        sys.exit(0 if ok else 1)
     main()
