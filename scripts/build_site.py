@@ -338,7 +338,7 @@ def build_home(L):
     depth = 0 if lg == "cs" else 1
     ui = L["ui"]
     p = rel(depth)
-    hero_img = img_or_none(depth, "hero.jpg")
+    hero_img = img_or_none(depth, "hero.jpg") or img_or_none(depth, "hero.webp")
     hero_media = (f'<img src="{hero_img}" alt="" fetchpriority="high">' if hero_img
                   else '<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%, #3a2c1c, #1d1712)"></div>')
     prod_cards = ""
@@ -407,7 +407,7 @@ def build_page(L, key):
     crumbs = [(L["ui"]["breadcrumb_home"], url_for(lg, "")), (pg["h1"], url_for(lg, path))]
     fig = ""
     if key == "kdo_jsme":
-        w = img_or_none(depth, "workshop.jpg")
+        w = img_or_none(depth, "workshop.jpg") or img_or_none(depth, "workshop.webp")
         if w:
             fig = f'<figure><img src="{w}" alt="Jůzlová — dílna" loading="lazy"></figure>'
     body = f"""<main class="wrap"><article class="page">
