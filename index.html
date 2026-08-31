@@ -23,7 +23,7 @@
 <link rel="icon" href="img/favicon.png" type="image/png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], "@id": "https://adamripon-ship-it.github.io/juzlova-rebuild-status/#org", "name": "Jůzlová", "url": "https://adamripon-ship-it.github.io/juzlova-rebuild-status/", "logo": "https://adamripon-ship-it.github.io/juzlova-rebuild-status/img/logo.png", "foundingDate": "2004", "email": "juzlj@seznam.cz", "telephone": "+420728466141", "address": {"@type": "PostalAddress", "streetAddress": "Kochánov 40", "postalCode": "582 53", "addressRegion": "Vysočina", "addressCountry": "CZ"}, "areaServed": ["Havlíčkův Brod", "Humpolec", "Světlá nad Sázavou", "Jihlava", "Czech Republic"], "openingHours": "Mo-Sa 08:00-19:00", "description": "Rodinná výroba potravinářských směsí od roku 2004: knedlíky v prášku, pudingy bez lepku, vanilínový cukr, kakao holandského typu."}</script>
 </head>
-<body>
+<body class="filmed">
 <header class="site">
   <div class="wrap"><div class="bar">
   <a class="brand" href="./"><span class="name">Jůzlová.cz</span><span class="tag">potravinářské směsi · Vysočina</span></a>
@@ -39,13 +39,31 @@
   </nav>
 </div></div>
 </header>
-<div class="hero"><div class="media"><img src="img/hero.webp" alt="" fetchpriority="high"></div>
-  <div class="inner">
-    <div class="est">Rodinná dílna · Kochánov · od roku 2004</div>
-    <h1>Knedlíky jako od babičky. Hotové za 15 minut.</h1>
-    <p class="lead">Poctivé potravinářské směsi z Vysočiny — bramborová těsta, pudingy, vanilínový cukr a kakao. Z mouky oceněné značkou KLASA, bez kompromisů v kvalitě.</p>
-    <a class="btn gold" href="kontakt/">Ochutnejte zdarma</a><a class="btn ghost" href="#produkty">Naše produkty</a>
-  </div></div>
+<section class="film" data-film>
+  <div class="stage">
+    <div class="frame" style="background-image:url(img/film-krajina.webp)"></div><div class="frame" style="background-image:url(img/hero.webp)"></div><div class="frame" style="background-image:url(img/film-blizko.webp)"></div><div class="frame" style="background-image:url(img/film-makro.webp)"></div>
+    <div class="grain"></div>
+    <div class="copy">
+      <div class="filmline" data-in="0" data-out="0.34">
+        <div class="est">Rodinná dílna · Kochánov · od roku 2004</div>
+        <h1>Knedlíky jako od babičky. Hotové za 15 minut.</h1>
+        <p>Poctivé potravinářské směsi z Vysočiny — bramborová těsta, pudingy, vanilínový cukr a kakao. Z mouky oceněné značkou KLASA, bez kompromisů v kvalitě.</p>
+        <a class="btn gold" href="kontakt/">Ochutnejte zdarma</a><a class="btn ghost" href="#produkty">Naše produkty</a>
+      </div>
+      <div class="filmline" data-in="0.36" data-out="0.66">
+        <h2>Rychlost bez kompromisů</h2>
+        <p>Chlupaté knedlíky máte hotové za 15 minut — a chutí je nerozeznáte od knedlíků připravovaných celé odpoledne.</p>
+      </div>
+      <div class="filmline" data-in="0.68" data-out="1">
+        <h2>Máte zájem ochutnat?</h2>
+        <p>Ozvěte se — rádi vám připravíme vzorek zdarma. Zboží si vyzvednete v Kochánově či Humpolci, nebo je přivezeme až k vám.</p>
+        <a class="btn gold" href="kontakt/">Napište si o vzorek</a>
+      </div>
+    </div>
+    <div class="hint">Rolujte</div>
+  </div>
+</section>
+<div class="marquee" aria-hidden="true"><div class="track"><span>Bramborové knedlíky v prášku · <b>5 kg / 165 Kč</b></span><span>Chlupaté knedlíky v prášku · <b>5 kg / 185 Kč</b></span><span>Vanilkový puding bez lepku · <b>1 kg / 34 Kč · 400 g / 17 Kč</b></span><span>Kakao holandského typu · <b>500 g / 100 Kč</b></span><span>Vanilínový cukr · <b>1 kg / 38 Kč</b></span><span>Bramborové knedlíky v prášku · <b>5 kg / 165 Kč</b></span><span>Chlupaté knedlíky v prášku · <b>5 kg / 185 Kč</b></span><span>Vanilkový puding bez lepku · <b>1 kg / 34 Kč · 400 g / 17 Kč</b></span><span>Kakao holandského typu · <b>500 g / 100 Kč</b></span><span>Vanilínový cukr · <b>1 kg / 38 Kč</b></span></div></div>
 <section class="band" id="produkty"><div class="wrap">
   <p class="kicker">Co vyrábíme</p>
   <h2 class="sec">Naše produkty</h2>
@@ -63,15 +81,17 @@
 <p>Jemně mletý cukr s vanilínovým aroma. Do těsta i na posyp cukroví.</p><p class="price">1 kg / 38 Kč</p></div></li></ul>
   <p><a href="ceny/">Kompletní ceník →</a></p>
 </div></section>
-<section class="band cream"><div class="wrap">
-  <p class="kicker">Rodinná výroba</p>
+<section class="plx" data-plx>
+  <div class="plx-img" style="background-image:url(img/workshop.webp)"></div>
+  <div class="inner"><div class="wrap">
+  <p class="kicker" style="color:var(--gold)">Rodinná výroba</p>
   <h2 class="sec">Proč Jůzlová</h2>
   <div class="grid c3">
     <div class="rv"><h3>Suroviny, které známe jménem</h3><p>Pšeničná mouka oceněná značkou KLASA pochází z mlýna v Havlíčkově Brodě, 12 km od naší dílny. Kukuřičný škrob v pudincích neobsahuje lepek.</p></div>
     <div class="rv"><h3>Rychlost bez kompromisů</h3><p>Chlupaté knedlíky máte hotové za 15 minut — a chutí je nerozeznáte od knedlíků připravovaných celé odpoledne.</p></div>
     <div class="rv"><h3>Cena pod úrovní supermarketu</h3><p>Vyrábíme kvalitu za cenu nižší než „supermarketové“ výrobky nejistého původu. Bramborové knedlíky: 5 kg za 165 Kč.</p></div>
-  </div>
-</div></section>
+  </div></div></div>
+</section>
 <section class="band"><div class="wrap">
   <p class="kicker">Inspirace do kuchyně</p>
   <h2 class="sec">Recepty z našich směsí</h2>

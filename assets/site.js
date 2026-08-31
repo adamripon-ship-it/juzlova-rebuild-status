@@ -1,57 +1,113 @@
-/* Jůzlová.cz — reveal-on-scroll + optional hero frame scrub (progressive enhancement). */
+/* Jůzlová.cz — motion engine: inertial scroll, scroll-film hero, parallax, reveals. */
 (function () {
-  // Reveal on scroll
+  'use strict';
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── staggered reveal on scroll ── */
   var io = 'IntersectionObserver' in window
     ? new IntersectionObserver(function (es) {
-        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          var siblings = el.parentElement ? [].slice.call(el.parentElement.children).filter(function (c) { return c.classList && c.classList.contains('rv'); }) : [el];
+          var idx = siblings.indexOf(el);
+          el.style.transitionDelay = reduced ? '0s' : (Math.max(idx, 0) * 70) + 'ms';
+          el.classList.add('in');
+          io.unobserve(el);
+        });
       }, { threshold: 0.12 })
     : null;
   document.querySelectorAll('.rv').forEach(function (el) {
-    if (io) io.observe(el); else el.classList.add('in');
+    if (io && !reduced) io.observe(el); else el.classList.add('in');
   });
 
-  // Hero canvas scrub: plays a numbered JPG sequence by scroll progress.
-  var scrub = document.querySelector('[data-scrub]');
-  if (!scrub || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var canvas = scrub.querySelector('canvas');
-  if (!canvas || !canvas.getContext) return;
-  var count = parseInt(scrub.getAttribute('data-frames'), 10) || 0;
-  var path = scrub.getAttribute('data-path'); // e.g. /assets/hero/frame_%04d.jpg
-  if (!count || !path) return;
-
-  var ctx = canvas.getContext('2d');
-  var frames = new Array(count);
-  var loaded = 0, current = -1;
-
-  function src(i) { return path.replace('%04d', String(i + 1).padStart(4, '0')); }
-  function draw(i) {
-    var img = frames[i];
-    if (!img || !img.complete || !img.naturalWidth) return;
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var w = scrub.clientWidth, h = scrub.querySelector('.stage').clientHeight;
-    if (canvas.width !== w * dpr) { canvas.width = w * dpr; canvas.height = h * dpr; }
-    var s = Math.max((w * dpr) / img.naturalWidth, (h * dpr) / img.naturalHeight);
-    var dw = img.naturalWidth * s, dh = img.naturalHeight * s;
-    ctx.drawImage(img, (w * dpr - dw) / 2, (h * dpr - dh) / 2, dw, dh);
+  /* ── header: transparent over hero, solid after ── */
+  var header = document.querySelector('header.site');
+  function headerState() {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 40);
   }
-  for (var i = 0; i < count; i++) {
-    frames[i] = new Image();
-    frames[i].onload = (function (n) { return function () { if (++loaded === 1) draw(0); }; })(i);
-    frames[i].src = src(i);
+  addEventListener('scroll', headerState, { passive: true });
+  headerState();
+
+  /* ── inertial smooth scroll (lenis-lite) ── */
+  if (!reduced && matchMedia('(pointer: fine)').matches) {
+    var current = window.scrollY, target = current, raf = null;
+    function tick() {
+      current += (target - current) * 0.11;
+      if (Math.abs(target - current) < 0.5) { current = target; raf = null; }
+      else raf = requestAnimationFrame(tick);
+      window.scrollTo(0, current);
+      drive();
+    }
+    addEventListener('wheel', function (e) {
+      if (e.ctrlKey) return;
+      e.preventDefault();
+      target = Math.max(0, Math.min(target + e.deltaY, document.documentElement.scrollHeight - innerHeight));
+      if (!raf) raf = requestAnimationFrame(tick);
+    }, { passive: false });
+    addEventListener('scroll', function () { if (!raf) { current = target = window.scrollY; } }, { passive: true });
   }
-  var ticking = false;
-  function onScroll() {
-    if (ticking) return; ticking = true;
-    requestAnimationFrame(function () {
-      ticking = false;
-      var rect = scrub.getBoundingClientRect();
-      var total = rect.height - window.innerHeight;
-      var p = total > 0 ? Math.min(Math.max(-rect.top / total, 0), 1) : 0;
-      var idx = Math.min(count - 1, Math.round(p * (count - 1)));
-      if (idx !== current) { current = idx; draw(idx); }
+
+  /* ── scroll-film: pinned keyframe crossfade scrub ── */
+  var film = document.querySelector('[data-film]');
+  var frames = film ? [].slice.call(film.querySelectorAll('.frame')) : [];
+  var lines = film ? [].slice.call(film.querySelectorAll('.filmline')) : [];
+  function clamp(v) { return Math.min(Math.max(v, 0), 1); }
+  function filmScrub() {
+    if (!film || !frames.length) return;
+    var rect = film.getBoundingClientRect();
+    var total = rect.height - innerHeight;
+    var p = total > 0 ? clamp(-rect.top / total) : 0;
+    var n = frames.length;
+    frames.forEach(function (f, i) {
+      var start = i / n, end = (i + 1) / n;
+      var local = clamp((p - start) / (end - start));
+      var vis;
+      if (i === 0) vis = p < end ? 1 : clamp(1 - (p - end) * n * 2);
+      else vis = clamp((p - start) * n * 2);
+      if (i < n - 1 && p > end) vis = clamp(1 - (p - end) * n * 2);
+      f.style.opacity = vis;
+      f.style.transform = 'scale(' + (1 + local * 0.09) + ')';
+    });
+    lines.forEach(function (l) {
+      var a = parseFloat(l.getAttribute('data-in') || 0);
+      var b = parseFloat(l.getAttribute('data-out') || 1);
+      var mid = (a + b) / 2, span = (b - a) / 2;
+      var vis = clamp(1 - Math.abs(p - mid) / span * 1.4);
+      l.style.opacity = vis;
+      l.style.transform = 'translateY(' + (1 - vis) * 26 + 'px)';
     });
   }
-  addEventListener('scroll', onScroll, { passive: true });
-  addEventListener('resize', function () { current = -1; onScroll(); });
-  onScroll();
+
+  /* ── parallax bands ── */
+  var plx = [].slice.call(document.querySelectorAll('[data-plx]'));
+  function parallax() {
+    plx.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      var mid = r.top + r.height / 2 - innerHeight / 2;
+      var img = el.querySelector('.plx-img');
+      if (img) img.style.transform = 'translateY(' + mid * -0.12 + 'px) scale(1.18)';
+    });
+  }
+
+  var driving = false;
+  function drive() {
+    if (reduced) return;
+    filmScrub();
+    parallax();
+  }
+  function onScroll() {
+    if (driving) return;
+    driving = true;
+    requestAnimationFrame(function () { driving = false; drive(); });
+  }
+  if (!reduced) {
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', onScroll);
+    drive();
+  } else if (frames.length) {
+    frames.forEach(function (f, i) { f.style.opacity = i === 0 ? 1 : 0; });
+    lines.forEach(function (l) { l.style.opacity = 1; l.style.position = 'relative'; });
+  }
 })();
