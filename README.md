@@ -18,11 +18,11 @@ No dependencies outside the standard library. Output is written into the repo
 root — `index.html` plus one directory per original URL slug, so old links keep
 working — and committed, because GitHub Pages serves the repo directly.
 
-Pass the production domain at cutover, since every canonical URL, hreflang
-alternate, sitemap entry and JSON-LD `url` is built from it:
+Canonical URLs default to `https://juzlova.cz`. Override only for a staging
+copy:
 
 ```sh
-SITE_BASE=https://juzlova.cz python scripts/build_site.py
+SITE_BASE=https://adamripon-ship-it.github.io/juzlova-rebuild-status python3 scripts/build_site.py
 ```
 
 ## What is here

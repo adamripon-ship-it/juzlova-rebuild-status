@@ -28,6 +28,15 @@ jobs:
             echo "ok=false" >> "$GITHUB_OUTPUT"
             echo "GCP secrets not configured — skipping Cloud Run preview."
           fi
+      - uses: actions/setup-python@v5
+        if: steps.creds.outputs.ok == 'true'
+        with:
+          python-version: '3.12'
+      - name: Rebuild with production SITE_BASE
+        if: steps.creds.outputs.ok == 'true'
+        env:
+          SITE_BASE: https://juzlova.cz
+        run: python scripts/build_site.py
       - uses: google-github-actions/auth@v2
         if: steps.creds.outputs.ok == 'true'
         with:

@@ -20,7 +20,7 @@ import shutil
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-BASE = os.environ.get("SITE_BASE", "https://adamripon-ship-it.github.io/juzlova-rebuild-status")
+BASE = os.environ.get("SITE_BASE", "https://juzlova.cz")
 TODAY = "2026-08-31"
 
 LANGS = ["cs", "en", "de", "sk"]

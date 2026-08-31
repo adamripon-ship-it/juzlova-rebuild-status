@@ -8,10 +8,9 @@ name: Deploy to Google Cloud Storage
 #   GCP_PROJECT     — the Google Cloud project id
 #   GCS_BUCKET      — bucket name (e.g. "juzlova-cz" or "www.juzlova.cz")
 #
-# Do not set vars.SITE_BASE to https://juzlova.cz until issue #9. The
-# committed HTML keeps the GitHub Pages canonicals so Pages stays a
-# coherent staging copy. At cutover, set the variable and this job
-# rebuilds before the sync.
+# SITE_BASE is https://juzlova.cz (owner chose the main build, 2026-08-31).
+# This job rebuilds with that domain before every sync so canonicals stay
+# on the real host.
 
 on:
   push:
@@ -34,13 +33,13 @@ jobs:
             echo "GCP secrets not configured — skipping deploy."
           fi
       - uses: actions/setup-python@v5
-        if: steps.creds.outputs.ok == 'true' && vars.SITE_BASE != ''
+        if: steps.creds.outputs.ok == 'true'
         with:
           python-version: '3.12'
       - name: Rebuild with production SITE_BASE
-        if: steps.creds.outputs.ok == 'true' && vars.SITE_BASE != ''
+        if: steps.creds.outputs.ok == 'true'
         env:
-          SITE_BASE: ${{ vars.SITE_BASE }}
+          SITE_BASE: https://juzlova.cz
         run: python scripts/build_site.py
       - uses: google-github-actions/auth@v2
         if: steps.creds.outputs.ok == 'true'

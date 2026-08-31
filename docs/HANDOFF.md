@@ -4,13 +4,32 @@ Written 2026-08-31 for whoever picks this up next. It covers what is deployed,
 what is in this repo, where the two disagree, and what has to happen to close
 the gap. Open issues reference this file rather than repeating it.
 
+## Decision (2026-08-31)
+
+The owner picked **Option 1: serve the `main` build** on juzlova.cz — four
+languages, recovered photos, the workshop's own marks. Do **not** merge PR #3.
+Its site stays as the previous production copy until DNS moves off Cloud Run.
+
+`scripts/build_site.py` now defaults `SITE_BASE` to `https://juzlova.cz`. The
+committed HTML, sitemap, llms.txt and redirect stubs use that domain.
+
+To finish the cutover, point `www.juzlova.cz` at GitHub Pages (one Cloudflare
+record). Apex already 301s to `www`, so that single change is enough:
+
+| Record | Change to | Proxy |
+|---|---|---|
+| `www.juzlova.cz` CNAME | `adamripon-ship-it.github.io` | DNS only (grey cloud) until GitHub's certificate is issued |
+
+Do not run `scripts/cloudflare_dns.sh` for this — that script still aims at
+`ghs.googlehosted.com`, which is where production is today.
+
 ## The situation in one paragraph
 
 Two different rebuilds of juzlova.cz exist. One is live on the real domain and
 is Czech-only. The other is on `main` in this repo, has four languages, and is
-served from GitHub Pages. Neither is a draft — both are finished work, built in
-parallel by separate sessions that could not see each other. Before any deploy
-work happens, somebody has to decide which one juzlova.cz should serve.
+served from GitHub Pages. The owner chose `main`. The remaining step is the
+DNS flip above; until then juzlova.cz still serves the Czech-only Cloud Run
+copy.
 
 ## What is live right now
 
@@ -69,14 +88,9 @@ python3 scripts/verify_refs.py                # local src/href/url() must resolv
 python3 scripts/optimize_images.py            # resizes oversized art to WebP
 ```
 
-`build_site.py` reads `SITE_BASE` from the environment and falls back to the
-GitHub Pages URL. Every canonical URL, hreflang alternate, sitemap entry,
-JSON-LD `url` and `llms.txt` link is built from it, so the production domain
-has to be passed in at cutover:
-
-```sh
-SITE_BASE=https://juzlova.cz python scripts/build_site.py
-```
+`build_site.py` reads `SITE_BASE` from the environment and defaults to
+`https://juzlova.cz`. Every canonical URL, hreflang alternate, sitemap entry,
+JSON-LD `url` and `llms.txt` link is built from it.
 
 Copy lives in `scripts/content_{cs,en,de,sk}.py` and
 `scripts/recipes_{cs,en,de,sk}.py`. Czech is the source of truth.
@@ -131,11 +145,12 @@ orange with SSL/TLS set to Full (strict).
 
 ## What only the owner can do
 
-- Add the repository secrets. `deploy-gcp.yml` on `main` wants `GCP_SA_KEY`,
-  `GCP_PROJECT` and `GCS_BUCKET`; PR #3's workflow wants `GCP_SA_KEY`,
-  `GCP_PROJECT_ID` and `CLOUDFLARE_API_TOKEN`. The names differ — match them to
-  whichever workflow survives.
-- Decide which site juzlova.cz serves.
+- **DNS cutover (this is what makes juzlova.cz serve `main`).** In Cloudflare,
+  edit `www.juzlova.cz` from CNAME `ghs.googlehosted.com` to CNAME
+  `adamripon-ship-it.github.io`, grey cloud. Leave the apex as-is — it already
+  301s to `www`.
+- Add the repository secrets if you still want the GCS / Cloud Run path:
+  `GCP_SA_KEY`, `GCP_PROJECT`, `GCS_BUCKET`.
 
 Until the secrets exist the deploy workflow skips itself and GitHub Pages keeps
 serving `main`, so nothing breaks in the meantime.
