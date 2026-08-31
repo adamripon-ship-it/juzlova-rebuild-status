@@ -1,0 +1,27 @@
+name: Wayback archive fetch
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch full juzlova.cz mirror from the Wayback Machine
+        run: python scripts/wayback_archive.py
+      - name: Commit archive
+        run: |
+          git config user.name "wayback-archive-bot"
+          git config user.email "actions@github.com"
+          git add archive/
+          git diff --cached --quiet && echo "nothing new" && exit 0
+          git commit -m "Archive: full juzlova.cz mirror from Wayback Machine (pages, SEO, images, CDX)"
+          git push
