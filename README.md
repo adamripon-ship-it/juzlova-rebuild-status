@@ -56,7 +56,12 @@ the standard library.
 
 ## Deploying
 
-GitHub Pages serves this repo directly — `CNAME` holds `www.juzlova.cz` and the
-apex 301s there. Building commits the output, so a push to `main` is the deploy.
-`.github/workflows/cutover-pages-dns.yml` points the Cloudflare `www` record at
-Pages and skips itself when `CLOUDFLARE_API_TOKEN` is absent.
+The build output is committed, so a push to `main` is the deploy. `CNAME` holds
+`www.juzlova.cz` and `.nojekyll` keeps Jekyll out of the tree, so GitHub Pages
+serves the repo as-is.
+
+`www.juzlova.cz` does **not** point at Pages yet — it is still CNAME
+`ghs.googlehosted.com`, so the public site is served by a Google host running the
+same build. `.github/workflows/cutover-pages-dns.yml` makes that DNS change; it
+needs the `CLOUDFLARE_API_TOKEN` secret and skips itself without one. See
+[`docs/HANDOFF.md`](docs/HANDOFF.md).

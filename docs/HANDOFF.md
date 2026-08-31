@@ -4,6 +4,21 @@ Written 2026-08-31 for whoever picks this up next. It covers what is deployed,
 what is in this repo, where the two disagree, and what has to happen to close
 the gap. Open issues reference this file rather than repeating it.
 
+## Status update — 2026-08-31 (verified live)
+
+The gap this doc was written to close is **already closed**: `https://juzlova.cz`
+now serves the four-language `main` build. Verified by fetching the live site —
+the homepage is byte-for-byte identical to the committed `index.html`, and
+`/en/`, `/de/`, `/sk/` return the real translated pages (no "Tady nic nepeče"
+404, no `/assets/img/...`). The `server` header is `Google Frontend`, so the new
+build is served by the **Google host (Cloud Run / GCS), not GitHub Pages**; the
+`www.juzlova.cz` CNAME still points at `ghs.googlehosted.com`.
+
+Consequence: the DNS cutover to GitHub Pages described below is now a
+**host-preference choice, not a content fix** — both hosts serve the same build.
+Older sections (e.g. "What is live right now" describing a Czech-only site) are
+historical and superseded by this note.
+
 ## Decision (2026-08-31)
 
 The owner picked **Option 1: serve the `main` build** on juzlova.cz — four
@@ -20,9 +35,29 @@ record). Apex already 301s to `www`, so that single change is enough:
 |---|---|---|
 | `www.juzlova.cz` CNAME | `adamripon-ship-it.github.io` | DNS only (grey cloud) until GitHub's certificate is issued |
 
-**Update:** that cutover shipped (#12-#14). `.github/workflows/cutover-pages-dns.yml`
-now makes the `www` change, and the Cloud Run deploy path has been removed from
-this repo — see *Deploying* below.
+**Not done yet.** #12-#14 added `.github/workflows/cutover-pages-dns.yml`, which
+performs this change, but it has never run: it needs the `CLOUDFLARE_API_TOKEN`
+secret and skips itself without it. The verified note at the top of this file
+confirms `www` still resolves to `ghs.googlehosted.com`.
+
+### Canonical cutover — do not add competing workflows (2026-08-31)
+
+There is exactly one supported cutover mechanism:
+`.github/workflows/cutover-pages-dns.yml`. It sets `www.juzlova.cz` CNAME →
+`adamripon-ship-it.github.io` (proxied false) using the repo secret
+`CLOUDFLARE_API_TOKEN`, and skips cleanly when that secret is absent. The only
+outstanding step is owner-only:
+
+1. Create a Cloudflare API token (Zone:Read + DNS:Edit, scoped to `juzlova.cz`).
+2. Add it as the repo secret `CLOUDFLARE_API_TOKEN`.
+3. Run the **Cut over www to GitHub Pages** workflow (Actions → Run workflow),
+   or make the single `www` CNAME edit by hand in Cloudflare.
+
+Do **not** open new branches/PRs that add parallel cutover or Cloud-Run-hosting
+workflows. Two such attempts were closed as duplicative/off-decision: the
+Cloudflare-MCP variant and the "deploy `main` to Cloud Run" variant. If the
+hosting decision itself changes (Pages → Cloud Run), reverse this section first,
+then change the workflow — don't add a second competing one.
 
 ## The situation in one paragraph
 
@@ -98,17 +133,33 @@ Copy lives in `scripts/content_{cs,en,de,sk}.py` and
 
 ## Deploying
 
-GitHub Pages serves this repo directly. `CNAME` holds `www.juzlova.cz`, the apex
-301s there, and `.nojekyll` stops Jekyll from touching the tree. The build output
-is committed, so a push to `main` is the deploy — there is no build step in CI.
+**The live host is Google, not GitHub Pages.** Per the verified note at the top
+of this file, `www.juzlova.cz` is still CNAME `ghs.googlehosted.com` and the live
+responses carry `Google Frontend`. Both hosts serve the same `main` build, so
+this is a host-preference question, not a content one — but it means the Pages
+path below is not yet what the public hits.
 
-The Google Cloud path that this document used to compare against is gone.
-`deploy-gcp.yml` (GCS, Warsaw), `deploy-cloudrun-preview.yml`, `Dockerfile`,
-`nginx.conf`, `.dockerignore`, `.gcloudignore`, `docs/DEPLOY-GCP.md` and the two
-DNS scripts (`scripts/cloudflare_dns.sh`, `scripts/gcp_domain_mapping.sh`) were
-removed once Pages became the live host. Both scripts pointed DNS at
-`ghs.googlehosted.com`, so running either would have reverted the cutover. Git
-history has them if that path is ever wanted again.
+GitHub Pages is configured and ready: `CNAME` holds `www.juzlova.cz`, `.nojekyll`
+stops Jekyll touching the tree, and the build output is committed, so a push to
+`main` is a Pages deploy. It becomes the live host only once the `www` record
+moves (see *Canonical cutover* above).
+
+Nothing in this repo deploys to the Google host. `deploy-gcp.yml` targeted a GCS
+bucket and skipped itself for want of secrets; `deploy-cloudrun-preview.yml` was
+dispatch-only and aimed at `juzlova-main-preview`, never at production
+`juzlova-web`. Whatever put the current build on the Google host was done outside
+this repo.
+
+**Removed on this branch, pending the cutover.** `deploy-gcp.yml`,
+`deploy-cloudrun-preview.yml`, `Dockerfile`, `nginx.conf`, `.dockerignore`,
+`.gcloudignore`, `docs/DEPLOY-GCP.md`, `scripts/cloudflare_dns.sh` and
+`scripts/gcp_domain_mapping.sh`. Note the caveat: while the domain still points
+at the Google host, `Dockerfile` + `nginx.conf` are the only in-repo recipe for
+the container that host runs, and `cloudflare_dns.sh` is the one-command way back
+to today's DNS if a Pages cutover has to be rolled back. Git history keeps all of
+them, but the safer sequence is to land the cutover first and remove this tooling
+after. `scripts/dev_server.sh` is unaffected — it writes its own nginx config
+inline and never read the root `nginx.conf`.
 
 PR #3 remains open and carries a complete second, Czech-only site — its own
 `assets/`, fonts, images, stylesheet and `404.html`. Merging it into `main` would
@@ -142,8 +193,9 @@ orange with SSL/TLS set to Full (strict).
   `.github/workflows/cutover-pages-dns.yml` to make that change instead. It
   skips itself when the secret is absent.
 
-The `GCP_SA_KEY`, `GCP_PROJECT` and `GCS_BUCKET` secrets are no longer read by
-anything; they can be deleted from the repository settings.
+With the workflows above removed, `GCP_SA_KEY`, `GCP_PROJECT` and `GCS_BUCKET`
+are read by nothing in this repo. Confirm the Google host is genuinely retired
+before deleting them from repository settings — the domain still points there.
 
 ## Known limits
 
