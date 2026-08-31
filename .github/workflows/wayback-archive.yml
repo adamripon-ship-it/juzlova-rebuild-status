@@ -44,12 +44,19 @@ jobs:
           grab film-krajina.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_031116_653a4637-216d-4721-95b4-ccf4bf370829_min.webp"
           grab film-blizko.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_030819_50f693a2-0778-4390-8a6c-cc531a138e63_min.webp"
           grab film-makro.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_030948_5e5e7f85-15b3-4b1e-8de1-3ddb094c382e_min.webp"
+          # Recipe thumbnails the Wayback Machine never captured a working copy of
+          grab hruskovy-kolac.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_9e2ce870-de53-4dfc-ada9-ff950d199c74.png"
+          grab slehackova-rolada.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_9332ab59-de89-472d-90ef-eef5035b89e9.png"
+          grab domaci-pernik.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_dcabb61d-b9f8-4f66-9ae5-8c6da20080cd.png"
+          grab bramborovo-tvarohove-knedliky.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_fb5b3f46-0770-4540-af0c-a6d654d0a6ce.png"
           command -v ffmpeg && [ -f img/hero.png ] && ffmpeg -y -loglevel error -i img/hero.png -vf scale=1920:-2 -q:v 3 img/hero.jpg && rm -f img/hero.png || true
           ls -la img/ | sed -n '1,30p'
       - name: Try 2019-capture recipe thumbnails
         if: always()
         run: |
-          try_img() { [ -f "archive/images/$1" ] || curl -fsSL -o "archive/images/$1" "https://web.archive.org/web/20190328202526im_/https://www.juzlova.cz/wp-content/uploads/2017/04/$2" || rm -f "archive/images/$1"; }
+          # Best-effort and time-boxed: archive.org has never served these six,
+          # and an unbounded curl here would hang the whole job.
+          try_img() { [ -f "archive/images/$1" ] || curl -fsSL --max-time 12 --connect-timeout 5 -o "archive/images/$1" "https://web.archive.org/web/20190328202526im_/https://www.juzlova.cz/wp-content/uploads/2017/04/$2" || rm -f "archive/images/$1"; }
           try_img "wp-content_uploads_2017_04_Domaci-pernik-300x206.png" "Domaci-pernik-300x206.png"
           try_img "wp-content_uploads_2017_04_slehackova-rolada-juzlova-1-1-300x206.gif" "slehackova-rolada-juzlova-1-1-300x206.gif"
           try_img "wp-content_uploads_2017_04_Strapacky-se-zelim-a-slaninou-recept-juzlova.jpg" "Strapacky-se-zelim-a-slaninou-recept-juzlova.jpg"

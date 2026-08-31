@@ -79,9 +79,9 @@ RECIPE_IMG = {
     "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac.png",
     "strapacky-se-zelim-a-slaninou-recept": "strapacky.jpg",
     "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "bebe-rezy.gif",
-    "slehackova-rolada-recept": "slehackova-rolada.gif",
+    "slehackova-rolada-recept": "slehackova-rolada.png",
     "domaci-pernik-recept-podle-jirina-juzlova": "domaci-pernik.png",
-    "bramborovo-tvarohove-knedliky-s-jahodami": "bramborovo-tvarohove-knedliky.jpg",
+    "bramborovo-tvarohove-knedliky-s-jahodami": "bramborovo-tvarohove-knedliky.png",
 }
 PRICE_ROWS = [  # (product key, package, price CZK)
     ("bramborove_knedliky", "5 kg", "165 Kč"),
