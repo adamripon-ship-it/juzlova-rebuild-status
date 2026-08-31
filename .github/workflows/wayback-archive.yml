@@ -78,12 +78,18 @@ jobs:
           try_img "wp-content_uploads_2017_04_Pe_en_-_i_ky-s-m_kem-recept-300x206.png" "Pe%C4%8Den%C3%A9-%C5%A1i%C5%A1ky-s-m%C3%A1kem-recept-300x206.png"
           try_img "wp-content_uploads_2017_04_Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg" "Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg"
           for f in archive/images/wp-content_uploads_2017_04_*; do [ -f "$f" ] && grep -qi "temporarily offline\|<html" "$f" && rm -f "$f" || true; done
+      - name: Rebuild the site against the images that are now present
+        if: always()
+        run: |
+          # A page only references an image the build can see, so fetching
+          # without rebuilding would leave the HTML pointing at nothing.
+          python scripts/build_site.py
       - name: Commit archive
         if: always()
         run: |
           git config user.name "wayback-archive-bot"
           git config user.email "actions@github.com"
-          git add archive/ img/
+          git add -A
           git diff --cached --quiet && echo "nothing new" && exit 0
           git commit -m "Archive: full juzlova.cz mirror from Wayback Machine (pages, SEO, images, CDX)"
           git pull --rebase origin "${GITHUB_REF_NAME}" || true
