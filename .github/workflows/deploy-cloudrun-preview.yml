@@ -1,0 +1,60 @@
+name: Cloud Run preview of main
+
+# Deploys the main build to a *separate* Cloud Run service so it can be
+# checked on a *.run.app URL. Does not run on push, does not touch DNS,
+# and must not be named juzlova-web (that is almost certainly production).
+#
+# Required repository secrets (same names as the GCS workflow):
+#   GCP_SA_KEY   — JSON key of a service account with Cloud Run Admin
+#   GCP_PROJECT  — the Google Cloud project id
+#
+# Optional: CLOUD_RUN_REGION (default europe-west3, matching live).
+
+on:
+  workflow_dispatch:
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check credentials
+        id: creds
+        run: |
+          if [ -n "${{ secrets.GCP_SA_KEY }}" ] && [ -n "${{ secrets.GCP_PROJECT }}" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "GCP secrets not configured — skipping Cloud Run preview."
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.creds.outputs.ok == 'true'
+        with:
+          python-version: '3.12'
+      - name: Rebuild with production SITE_BASE
+        if: steps.creds.outputs.ok == 'true'
+        env:
+          SITE_BASE: https://juzlova.cz
+        run: python scripts/build_site.py
+      - uses: google-github-actions/auth@v2
+        if: steps.creds.outputs.ok == 'true'
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+      - uses: google-github-actions/setup-gcloud@v2
+        if: steps.creds.outputs.ok == 'true'
+      - name: Deploy preview service
+        if: steps.creds.outputs.ok == 'true'
+        env:
+          PROJECT: ${{ secrets.GCP_PROJECT }}
+          REGION: europe-west3
+        run: |
+          gcloud config set project "$PROJECT"
+          gcloud run deploy juzlova-main-preview \
+            --source . \
+            --region "$REGION" \
+            --allow-unauthenticated \
+            --quiet
+          echo "Preview URL:"
+          gcloud run services describe juzlova-main-preview \
+            --region "$REGION" --format='value(status.url)'

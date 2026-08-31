@@ -18,11 +18,11 @@ No dependencies outside the standard library. Output is written into the repo
 root — `index.html` plus one directory per original URL slug, so old links keep
 working — and committed, because GitHub Pages serves the repo directly.
 
-Pass the production domain at cutover, since every canonical URL, hreflang
-alternate, sitemap entry and JSON-LD `url` is built from it:
+Canonical URLs default to `https://juzlova.cz`. Override only for a staging
+copy:
 
 ```sh
-SITE_BASE=https://juzlova.cz python scripts/build_site.py
+SITE_BASE=https://adamripon-ship-it.github.io/juzlova-rebuild-status python3 scripts/build_site.py
 ```
 
 ## What is here
@@ -47,5 +47,8 @@ SITE_BASE=https://juzlova.cz python scripts/build_site.py
 |---|---|
 | `build_site.py` | Builds every page in all four languages |
 | `wayback_archive.py` | Mirrors juzlova.cz from the Wayback Machine; `--check` reports completeness |
+| `verify_refs.py` | Checks generated pages for broken local `src` / `href` / `url()` |
 | `make_brand_assets.py` | Wordmarks, favicons and the footer monogram from `brand/` |
 | `optimize_images.py` | Resizes oversized artwork to web-sized WebP |
+| `cloudflare_dns.sh` | Issue #9 only — refuses to run unless `I_MEAN_IT=yes` |
+| `gcp_domain_mapping.sh` | Issue #9 only — same guard |

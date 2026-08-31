@@ -2,36 +2,36 @@
 
 > Jůzlová je rodinná česká výroba potravinářských směsí (od roku 2004, Kochánov 40, Vysočina): bramborové a chlupaté knedlíky v prášku, vanilkový a kakaový puding bez lepku, vanilínový cukr a kakao holandského typu. Prodej přímo z dílny, vzorky zdarma, rozvoz na Vysočině.
 
-Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čitelný souhrn: [llms-full.txt](https://adamripon-ship-it.github.io/juzlova-rebuild-status/llms-full.txt)
+Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čitelný souhrn: [llms-full.txt](https://juzlova.cz/llms-full.txt)
 
 ## Hlavní stránky
-- [Úvod](https://adamripon-ship-it.github.io/juzlova-rebuild-status/): co vyrábíme a pro koho
-- [Kdo jsme](https://adamripon-ship-it.github.io/juzlova-rebuild-status/kdo_jsme/): rodinná dílna od roku 2004
-- [Dodání zboží](https://adamripon-ship-it.github.io/juzlova-rebuild-status/kde-nas-najdete/): odběr Kochánov/Humpolec, rozvoz, dopravce
-- [Ceník](https://adamripon-ship-it.github.io/juzlova-rebuild-status/ceny/): aktuální ceny všech směsí
-- [Kontakt](https://adamripon-ship-it.github.io/juzlova-rebuild-status/kontakt/): telefony, e-mail, adresa
+- [Úvod](https://juzlova.cz/): co vyrábíme a pro koho
+- [Kdo jsme](https://juzlova.cz/kdo_jsme/): rodinná dílna od roku 2004
+- [Dodání zboží](https://juzlova.cz/kde-nas-najdete/): odběr Kochánov/Humpolec, rozvoz, dopravce
+- [Ceník](https://juzlova.cz/ceny/): aktuální ceny všech směsí
+- [Kontakt](https://juzlova.cz/kontakt/): telefony, e-mail, adresa
 
 ## Produkty
-- [Bramborové knedlíky v prášku](https://adamripon-ship-it.github.io/juzlova-rebuild-status/bramborove_knedliky/): Náš nejvyhledávanější výrobek. Klasické knedlíky, šišky, krokety i gnocchi z jednoho těsta. Cena: 5 kg / 165 Kč.
-- [Chlupaté knedlíky v prášku](https://adamripon-ship-it.github.io/juzlova-rebuild-status/chlupate-knedliky/): Bosáky podle tradiční receptury. Hotové za 15 minut, chutí k nerozeznání od domácích. Cena: 5 kg / 185 Kč.
-- [Vanilkový puding bez lepku](https://adamripon-ship-it.github.io/juzlova-rebuild-status/vanilkovy_pudink/): Kukuřičný škrob bez lepku, přirozená vanilková chuť. Na dezerty i pečení. Cena: 1 kg / 34 Kč · 400 g / 17 Kč.
-- [Kakao holandského typu](https://adamripon-ship-it.github.io/juzlova-rebuild-status/kakao-holandskeho-typu/): Tmavé cukrářské kakao s 21 % tuku. Výrazná barva i chuť moučníků a koktejlů. Cena: 500 g / 100 Kč.
-- [Vanilínový cukr](https://adamripon-ship-it.github.io/juzlova-rebuild-status/vanilkovy-cukr/): Jemně mletý cukr s vanilínovým aroma. Do těsta i na posyp cukroví. Cena: 1 kg / 38 Kč.
+- [Bramborové knedlíky v prášku](https://juzlova.cz/bramborove_knedliky/): Náš nejvyhledávanější výrobek. Klasické knedlíky, šišky, krokety i gnocchi z jednoho těsta. Cena: 5 kg / 165 Kč.
+- [Chlupaté knedlíky v prášku](https://juzlova.cz/chlupate-knedliky/): Bosáky podle tradiční receptury. Hotové za 15 minut, chutí k nerozeznání od domácích. Cena: 5 kg / 185 Kč.
+- [Vanilkový puding bez lepku](https://juzlova.cz/vanilkovy_pudink/): Kukuřičný škrob bez lepku, přirozená vanilková chuť. Na dezerty i pečení. Cena: 1 kg / 34 Kč · 400 g / 17 Kč.
+- [Kakao holandského typu](https://juzlova.cz/kakao-holandskeho-typu/): Tmavé cukrářské kakao s 21 % tuku. Výrazná barva i chuť moučníků a koktejlů. Cena: 500 g / 100 Kč.
+- [Vanilínový cukr](https://juzlova.cz/vanilkovy-cukr/): Jemně mletý cukr s vanilínovým aroma. Do těsta i na posyp cukroví. Cena: 1 kg / 38 Kč.
 
 ## Recepty
-- [Šišky s mákem](https://adamripon-ship-it.github.io/juzlova-rebuild-status/sisky-s-makem-recept/): Tradiční sladká večeře z bramborového těsta: šišky obalené v máku s cukrem, přelité rozpuštěným máslem.
-- [Hruškový koláč s vanilkovým pudinkem](https://adamripon-ship-it.github.io/juzlova-rebuild-status/hruskovy-kolac-s-vanilkovym-pudinkem-recept/): Koláč, jehož přípravu si užijí i děti. Pečení baví dvakrát — při přípravě i při ochutnávání.
-- [Strapačky se zelím a slaninou](https://adamripon-ship-it.github.io/juzlova-rebuild-status/strapacky-se-zelim-a-slaninou-recept/): Slovenská klasika z chlupatých knedlíků v prášku — halušky s kysaným zelím a vypečenou slaninou.
-- [Bebe řezy s čokoládovým pudingem](https://adamripon-ship-it.github.io/juzlova-rebuild-status/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/): Rádi byste pohostili návštěvu, ale nejste zrovna Jamie Oliver? Nepečené bebe řezy zvládne opravdu každý.
-- [Šlehačková roláda](https://adamripon-ship-it.github.io/juzlova-rebuild-status/slehackova-rolada-recept/): Lehký moučník za půl hodiny: kontrast nahořklého kakaa a jemně sladké šlehačky. Bez mouky, tedy i bez lepku.
-- [Domácí perník](https://adamripon-ship-it.github.io/juzlova-rebuild-status/domaci-pernik-recept-podle-jirina-juzlova/): Hrníčkový perník, který si zamilujete pro snadnou přípravu i výbornou chuť. Nepotřebujete váhu — vystačíte si s hrnečkem.
-- [Bramborovo-tvarohové knedlíky s jahodami](https://adamripon-ship-it.github.io/juzlova-rebuild-status/bramborovo-tvarohove-knedliky-s-jahodami/): Léto je tady a s ním i dozrávání jahod. Jednoduchý a rychlý recept, kterým za 20 minut potěšíte i největší mlsouny.
+- [Šišky s mákem](https://juzlova.cz/sisky-s-makem-recept/): Tradiční sladká večeře z bramborového těsta: šišky obalené v máku s cukrem, přelité rozpuštěným máslem.
+- [Hruškový koláč s vanilkovým pudinkem](https://juzlova.cz/hruskovy-kolac-s-vanilkovym-pudinkem-recept/): Koláč, jehož přípravu si užijí i děti. Pečení baví dvakrát — při přípravě i při ochutnávání.
+- [Strapačky se zelím a slaninou](https://juzlova.cz/strapacky-se-zelim-a-slaninou-recept/): Slovenská klasika z chlupatých knedlíků v prášku — halušky s kysaným zelím a vypečenou slaninou.
+- [Bebe řezy s čokoládovým pudingem](https://juzlova.cz/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/): Rádi byste pohostili návštěvu, ale nejste zrovna Jamie Oliver? Nepečené bebe řezy zvládne opravdu každý.
+- [Šlehačková roláda](https://juzlova.cz/slehackova-rolada-recept/): Lehký moučník za půl hodiny: kontrast nahořklého kakaa a jemně sladké šlehačky. Bez mouky, tedy i bez lepku.
+- [Domácí perník](https://juzlova.cz/domaci-pernik-recept-podle-jirina-juzlova/): Hrníčkový perník, který si zamilujete pro snadnou přípravu i výbornou chuť. Nepotřebujete váhu — vystačíte si s hrnečkem.
+- [Bramborovo-tvarohové knedlíky s jahodami](https://juzlova.cz/bramborovo-tvarohove-knedliky-s-jahodami/): Léto je tady a s ním i dozrávání jahod. Jednoduchý a rychlý recept, kterým za 20 minut potěšíte i největší mlsouny.
 
 ## Jazykové verze
-- Čeština (výchozí): https://adamripon-ship-it.github.io/juzlova-rebuild-status/
-- English: https://adamripon-ship-it.github.io/juzlova-rebuild-status/en/
-- Deutsch: https://adamripon-ship-it.github.io/juzlova-rebuild-status/de/
-- Slovenčina: https://adamripon-ship-it.github.io/juzlova-rebuild-status/sk/
+- Čeština (výchozí): https://juzlova.cz/
+- English: https://juzlova.cz/en/
+- Deutsch: https://juzlova.cz/de/
+- Slovenčina: https://juzlova.cz/sk/
 
 ## Aktualizace
 - Naposledy aktualizováno: 2026-08-31

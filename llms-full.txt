@@ -13,7 +13,7 @@ Jůzlová s.r.o., IČO 45900124, Kochánov 40, 582 53, Vysočina, Czech Republic
 
 ## Pages (Czech canonical text)
 
-### Kdo jsme — https://adamripon-ship-it.github.io/juzlova-rebuild-status/kdo_jsme/
+### Kdo jsme — https://juzlova.cz/kdo_jsme/
 Výrobu potravinářských směsí jsme v malé dílně v Kochánově zahájili v roce 2004. Během let jsme citlivě upravovali receptury a vybírali nejkvalitnější dodavatele surovin, až jsme dosáhli jedinečné kombinace chuti a kvality, kvůli které nás vyhledávají zákazníci v Čechách i na Moravě.
 Dnes jako obchodní firma „Jůzlová“ dodáváme nejen do domácností, ale do řady restaurací, jídelen a cukráren. Naši zákazníci oceňují především tradiční domácí chuť a zároveň rychlost, se kterou je možné z našich instantních výrobků připravit výborné přílohy a dezerty.
 **Bramborové těsto v prášku — náš nejvyhledávanější výrobek**
@@ -24,7 +24,7 @@ Instantní vanilkový a čokoládový puding je skvělý na přípravu sladkých
 Vyrábět potravinářské směsi nejvyšší kvality za cenu pod úrovní „supermarketových“ výrobků nejistého původu. Používáme suroviny nejvyšší jakosti, protože věříme, že naši zákazníci si zaslouží jen to nejlepší. Klademe důraz na přímý kontakt se zákazníky a vždy se snažíme přizpůsobit jejich potřebám.
 Máte zájem ochutnat? Ozvěte se, rádi vám nabídneme vzorek zdarma.
 
-### Dodání zboží — https://adamripon-ship-it.github.io/juzlova-rebuild-status/kde-nas-najdete/
+### Dodání zboží — https://juzlova.cz/kde-nas-najdete/
 Uvědomujeme si, že pro naše zákazníky je vedle vysoké kvality výrobků důležitá i cena. Protože ceny smluvních dopravců mohou naše výrobky prodražit, nabízíme možnost vyzvednutí zboží přímo u nás v provozovně v Kochánově. Stačí se předem ozvat a zboží vám kdykoli připravíme k odběru.
 Po předchozí domluvě si zboží můžete vyzvednout také v Humpolci. V současné době rozvážíme v Havlíčkově Brodě, Humpolci, Světlé nad Sázavou, Jihlavě a okolí — a po individuální domluvě přivezeme zboží i přímo k vám domů.
 **Možnosti doručení**
@@ -34,17 +34,17 @@ Po předchozí domluvě si zboží můžete vyzvednout také v Humpolci. V souč
 **Kdy se můžete zastavit**
 Otevřeno denně po telefonické domluvě: pondělí–sobota 8:00–19:00.
 
-### Kontakt — https://adamripon-ship-it.github.io/juzlova-rebuild-status/kontakt/
+### Kontakt — https://juzlova.cz/kontakt/
 **Kde nás najdete**
 Provozovna: Kochánov 40, 582 53, kraj Vysočina — 12 km od Havlíčkova Brodu. Po předchozí domluvě je možné vyzvednutí zboží také v Humpolci.
 Jůzlová s.r.o. · IČO 45900124
 
-### Ceník — https://adamripon-ship-it.github.io/juzlova-rebuild-status/ceny/
+### Ceník — https://juzlova.cz/ceny/
 Pro restaurace, jídelny a cukrárny připravíme individuální nabídku podle odebíraného množství — ozvěte se nám.
 
 ## Recipes
 
-### Šišky s mákem — https://adamripon-ship-it.github.io/juzlova-rebuild-status/sisky-s-makem-recept/
+### Šišky s mákem — https://juzlova.cz/sisky-s-makem-recept/
 Tradiční sladká večeře z bramborového těsta: šišky obalené v máku s cukrem, přelité rozpuštěným máslem.
 Suroviny: 400 g bramborových knedlíků v prášku; 100 g mletého máku; 2 polévkové lžíce moučkového cukru (může být více); 2 polévkové lžíce rozpuštěného másla
 1. Bramborové knedlíky v prášku smíchejte s vodou dle návodu a z těsta vytvarujte malé šišky.
@@ -52,7 +52,7 @@ Suroviny: 400 g bramborových knedlíků v prášku; 100 g mletého máku; 2 pol
 3. Po upečení šišky vhoďte do vroucí vody a na 5 minut spařte.
 4. Vložte je do velké mísy, posypte mákem a cukrem, polijte máslem, promíchejte a ještě teplé podávejte.
 
-### Hruškový koláč s vanilkovým pudinkem — https://adamripon-ship-it.github.io/juzlova-rebuild-status/hruskovy-kolac-s-vanilkovym-pudinkem-recept/
+### Hruškový koláč s vanilkovým pudinkem — https://juzlova.cz/hruskovy-kolac-s-vanilkovym-pudinkem-recept/
 Koláč, jehož přípravu si užijí i děti. Pečení baví dvakrát — při přípravě i při ochutnávání.
 Suroviny: 2 vejce; 80 g rozehřátého másla; 150 g krystalového cukru; 200 g hladké mouky (lze kombinovat s celozrnnou nebo špaldovou); 1 kypřicí prášek; 2 zakysané smetany; 1 smetana ke šlehání (30 %); 40 g vanilkového pudinku v prášku; 5 hrušek (lze nahradit jablky, malinami, broskvemi — čerstvým i mraženým ovocem)
 1. Smíchejte jedno vejce, máslo, 50 g cukru, mouku a kypřicí prášek. Těsto rukama vypracujte a vtlačte do koláčové formy vyložené pečicím papírem (drolivé těsto nevadí — vymačkejte je do formy).
@@ -60,7 +60,7 @@ Suroviny: 2 vejce; 80 g rozehřátého másla; 150 g krystalového cukru; 200 g 
 3. V misce promíchejte zakysanou smetanu, šlehačku, pudink v prášku, 100 g cukru a druhé vejce; směs nalijte na koláč.
 4. Pečte uprostřed vyhřáté trouby na 180 °C asi 45 minut.
 
-### Strapačky se zelím a slaninou — https://adamripon-ship-it.github.io/juzlova-rebuild-status/strapacky-se-zelim-a-slaninou-recept/
+### Strapačky se zelím a slaninou — https://juzlova.cz/strapacky-se-zelim-a-slaninou-recept/
 Slovenská klasika z chlupatých knedlíků v prášku — halušky s kysaným zelím a vypečenou slaninou.
 Suroviny: 400 g chlupatých knedlíků v prášku; 400 g kysaného zelí; svazek jarní cibulky; 100 g slaniny; lžíce sádla
 1. Chlupaté knedlíky v prášku smíchejte s vodou dle návodu. Nabobtnalé těsto protlačte cedníkem na halušky přímo do vroucí vody a vařte, dokud nevyplavou.
@@ -68,7 +68,7 @@ Suroviny: 400 g chlupatých knedlíků v prášku; 400 g kysaného zelí; svazek
 3. Na pánvi na sádle osmažte slaninu nakrájenou na menší kousky; když je lehce vysmažená, přidejte na kolečka nakrájenou jarní cibulku a po minutě odstavte.
 4. Halušky smíchejte se zelím a na talíři posypte slaninou s cibulkou.
 
-### Bebe řezy s čokoládovým pudingem — https://adamripon-ship-it.github.io/juzlova-rebuild-status/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/
+### Bebe řezy s čokoládovým pudingem — https://juzlova.cz/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/
 Rádi byste pohostili návštěvu, ale nejste zrovna Jamie Oliver? Nepečené bebe řezy zvládne opravdu každý.
 Suroviny: 4 balíčky sušenek BEBE: 2 světlé, 2 tmavé; 2 zakysané smetany; 1 smetana ke šlehání; 40 g vanilkového cukru; 150 g čokoládového pudingu (3 balení); 1 litr mléka; kakao holandského typu na posyp
 1. Na plech poklaďte světlé bebe sušenky.
@@ -77,7 +77,7 @@ Suroviny: 4 balíčky sušenek BEBE: 2 světlé, 2 tmavé; 2 zakysané smetany; 
 4. V míse vyšlehejte smetanu s vanilkovým cukrem do tuha, vmíchejte zakysanou smetanu a směs rozetřete na sušenky.
 5. Řez posypte tmavým kakaem a nechte v lednici odležet, nejlépe přes noc.
 
-### Šlehačková roláda — https://adamripon-ship-it.github.io/juzlova-rebuild-status/slehackova-rolada-recept/
+### Šlehačková roláda — https://juzlova.cz/slehackova-rolada-recept/
 Lehký moučník za půl hodiny: kontrast nahořklého kakaa a jemně sladké šlehačky. Bez mouky, tedy i bez lepku.
 Suroviny: 5 vajec; 100 g moučkového cukru; 1 lžíce kakaa holandského typu; 1 smetana ke šlehání (případně ztužovač smetany)
 1. Z bílků ušlehejte tuhý sníh, pak přidejte žloutky a moučkový cukr. Opatrným mísením vznikne hladké těsto.
@@ -87,7 +87,7 @@ Suroviny: 5 vajec; 100 g moučkového cukru; 1 lžíce kakaa holandského typu; 
 5. Roládu nechte na plechu vychladnout a opatrně ji sejměte z papíru.
 6. Ušlehejte tuhou šlehačku, roládu potřete a zabalte. Zbylou šlehačkou ozdobte hřbet, na efekt přidejte čokoládové hobliny.
 
-### Domácí perník — https://adamripon-ship-it.github.io/juzlova-rebuild-status/domaci-pernik-recept-podle-jirina-juzlova/
+### Domácí perník — https://juzlova.cz/domaci-pernik-recept-podle-jirina-juzlova/
 Hrníčkový perník, který si zamilujete pro snadnou přípravu i výbornou chuť. Nepotřebujete váhu — vystačíte si s hrnečkem.
 Suroviny: 3 hrnečky hladké mouky (hrneček = 200 ml); 2 hrnečky cukru krystal; 1 hrneček oleje; 2 středně velká vejce; 2 vrchovaté polévkové lžíce vanilkového pudinku v prášku; 1 prášek do perníku; ½ prášku do pečiva; 250 ml mléka (1¼ hrnečku); kakao holandského typu dle chuti
 1. Všechny ingredience nasypte do jedné nádoby a důkladně promíchejte mixérem, aby se netvořily hrudky.
@@ -95,7 +95,7 @@ Suroviny: 3 hrnečky hladké mouky (hrneček = 200 ml); 2 hrnečky cukru krystal
 3. Pečte v troubě předehřáté na 180 °C 20 až 25 minut (podle výšky plechu).
 4. Hotový perník poznáte dřevěným párátkem — po zapíchnutí musí zůstat čisté, bez přilepeného těsta.
 
-### Bramborovo-tvarohové knedlíky s jahodami — https://adamripon-ship-it.github.io/juzlova-rebuild-status/bramborovo-tvarohove-knedliky-s-jahodami/
+### Bramborovo-tvarohové knedlíky s jahodami — https://juzlova.cz/bramborovo-tvarohove-knedliky-s-jahodami/
 Léto je tady a s ním i dozrávání jahod. Jednoduchý a rychlý recept, kterým za 20 minut potěšíte i největší mlsouny.
 Suroviny: 250 g bramborových knedlíků v prášku; 250 g měkkého tvarohu (v kostce, ne ve vaničce); jahody (jako náplň i na ozdobu); cukr, máslo a tvaroh na ozdobu
 1. Bramborové knedlíky v prášku smíchejte s vodou dle návodu a připravte vláčné těsto; zapracujte měkký tvaroh (lepivé těsto nevadí).
