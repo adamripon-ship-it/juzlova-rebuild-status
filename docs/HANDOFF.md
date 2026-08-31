@@ -20,8 +20,9 @@ record). Apex already 301s to `www`, so that single change is enough:
 |---|---|---|
 | `www.juzlova.cz` CNAME | `adamripon-ship-it.github.io` | DNS only (grey cloud) until GitHub's certificate is issued |
 
-Do not run `scripts/cloudflare_dns.sh` for this — that script still aims at
-`ghs.googlehosted.com`, which is where production is today.
+**Update:** that cutover shipped (#12-#14). `.github/workflows/cutover-pages-dns.yml`
+now makes the `www` change, and the Cloud Run deploy path has been removed from
+this repo — see *Deploying* below.
 
 ## The situation in one paragraph
 
@@ -95,33 +96,23 @@ JSON-LD `url` and `llms.txt` link is built from it.
 Copy lives in `scripts/content_{cs,en,de,sk}.py` and
 `scripts/recipes_{cs,en,de,sk}.py`. Czech is the source of truth.
 
-## Three deploy proposals, one of which shipped
+## Deploying
 
-| | Where | Serves | State |
-|---|---|---|---|
-| `.github/workflows/deploy-gcp.yml` on `main` | GCS bucket, europe-central2 (Warsaw) | the `main` build | merged, skips itself until secrets exist |
-| `.github/workflows/deploy-cloudrun-preview.yml` | Cloud Run `juzlova-main-preview`, europe-west3 | the `main` build | dispatch-only; will not overwrite live `juzlova-web` |
-| PR #2 | Cloud Run, europe-west3 (Frankfurt) | whatever the repo holds | open; its `Dockerfile` + `nginx.conf` are now on this tree |
-| PR #3 | Cloud Run, europe-west3, with automated Cloudflare DNS cutover | its own parallel site build | open, appears to be what production runs — do not merge |
+GitHub Pages serves this repo directly. `CNAME` holds `www.juzlova.cz`, the apex
+301s there, and `.nojekyll` stops Jekyll from touching the tree. The build output
+is committed, so a push to `main` is the deploy — there is no build step in CI.
 
-They differ on two axes that should be decided separately.
+The Google Cloud path that this document used to compare against is gone.
+`deploy-gcp.yml` (GCS, Warsaw), `deploy-cloudrun-preview.yml`, `Dockerfile`,
+`nginx.conf`, `.dockerignore`, `.gcloudignore`, `docs/DEPLOY-GCP.md` and the two
+DNS scripts (`scripts/cloudflare_dns.sh`, `scripts/gcp_domain_mapping.sh`) were
+removed once Pages became the live host. Both scripts pointed DNS at
+`ghs.googlehosted.com`, so running either would have reverted the cutover. Git
+history has them if that path is ever wanted again.
 
-**Which site.** PR #3 carries a complete second site — its own `assets/`,
-fonts, images, stylesheet and `404.html`. Merging it into `main` would collide
-with the build there across most of the tree. This is the decision that
-matters; the hosting question is minor next to it.
-
-**Which host.** Warsaw is nearer Czechia than Frankfurt, but both are one hop
-away and the difference will not be visible to a visitor. A bucket is cheaper
-and simpler for a static site; Cloud Run gives clean URLs and cache headers
-through nginx without a load balancer. PR #3 is the only one that also
-automates the Cloudflare DNS change.
-
-Recommendation, for whoever decides: keep the `main` build, because it meets
-the four-language brief and production does not, and take PR #3's DNS
-automation (`scripts/cloudflare_dns.sh`, `scripts/gcp_domain_mapping.sh`)
-rather than its site. That reduces the merge to two small scripts instead of a
-whole tree.
+PR #3 remains open and carries a complete second, Czech-only site — its own
+`assets/`, fonts, images, stylesheet and `404.html`. Merging it into `main` would
+collide across most of the tree. Do not merge it.
 
 ## DNS
 
@@ -135,11 +126,9 @@ in PR #3 are **no longer authoritative**.
 | `www.juzlova.cz` | CNAME `ghs.googlehosted.com` | CNAME `shops.myshopify.com` |
 
 Rollback is therefore **not** "put Shopify back". Capture the current
-Cloudflare zone before any edit. The two scripts from PR #3
-(`scripts/cloudflare_dns.sh`, `scripts/gcp_domain_mapping.sh`) are in this
-repo for issue #9; they refuse to run unless `I_MEAN_IT=yes` is set.
+Cloudflare zone before any edit.
 
-Google issues its managed certificate over an unproxied record, so a Cloudflare
+GitHub issues its certificate over an unproxied record, so the Cloudflare `www`
 record has to stay grey-cloud until the certificate is provisioned, then go
 orange with SSL/TLS set to Full (strict).
 
@@ -149,16 +138,12 @@ orange with SSL/TLS set to Full (strict).
   edit `www.juzlova.cz` from CNAME `ghs.googlehosted.com` to CNAME
   `adamripon-ship-it.github.io`, grey cloud. Leave the apex as-is — it already
   301s to `www`.
-- Add the repository secrets if you still want the GCS / Cloud Run path:
-  `GCP_SA_KEY`, `GCP_PROJECT`, `GCS_BUCKET`.
+- Add `CLOUDFLARE_API_TOKEN` (Zone:Read + DNS:Edit on juzlova.cz) if you want
+  `.github/workflows/cutover-pages-dns.yml` to make that change instead. It
+  skips itself when the secret is absent.
 
-Until the secrets exist the deploy workflow skips itself and GitHub Pages keeps
-serving `main`, so nothing breaks in the meantime.
-
-A dispatch-only workflow, `.github/workflows/deploy-cloudrun-preview.yml`,
-deploys `main` to a Cloud Run service named `juzlova-main-preview`. That is
-the safe way to get a Google host URL for issue #8 without touching the
-live `juzlova-web` mapping.
+The `GCP_SA_KEY`, `GCP_PROJECT` and `GCS_BUCKET` secrets are no longer read by
+anything; they can be deleted from the repository settings.
 
 ## Known limits
 
