@@ -1,9 +1,9 @@
 {
  "pages": [
   [
-   "https://juzlova.cz/ceny/",
-   "20251209024417",
-   "ceny"
+   "https://juzlova.cz/amp/",
+   "20171105114029",
+   "amp"
   ],
   [
    "https://juzlova.cz/category/uncategorized/",
@@ -11,24 +11,9 @@
    "category_uncategorized"
   ],
   [
-   "https://juzlova.cz/amp/",
-   "20171105114029",
-   "amp"
-  ],
-  [
    "https://juzlova.cz/author/adam.ripon2@mail.dcu.ie/",
    "20260119204838",
    "author_adam.ripon2_mail.dcu.ie"
-  ],
-  [
-   "https://www.juzlova.cz/",
-   "20260610154026",
-   "home"
-  ],
-  [
-   "https://www.juzlova.cz/adam-kennedy-ripon/",
-   "20160508023502",
-   "adam-kennedy-ripon"
   ],
   [
    "https://juzlova.cz/bramborovo-tvarohove-knedliky-s-jahodami/",
@@ -36,9 +21,9 @@
    "bramborovo-tvarohove-knedliky-s-jahodami"
   ],
   [
-   "https://juzlova.cz/bramborove_knedliky/",
-   "20260119212451",
-   "bramborove_knedliky"
+   "https://www.juzlova.cz/",
+   "20260610154026",
+   "home"
   ],
   [
    "https://juzlova.cz/category/design/",
@@ -46,14 +31,24 @@
    "category_design"
   ],
   [
+   "https://juzlova.cz/ceny/",
+   "20251209024417",
+   "ceny"
+  ],
+  [
+   "https://www.juzlova.cz/adam-kennedy-ripon/",
+   "20160508023502",
+   "adam-kennedy-ripon"
+  ],
+  [
    "https://juzlova.cz/author/adam-ripon2mail-dcu-ie/",
    "20190328105601",
    "author_adam-ripon2mail-dcu-ie"
   ],
   [
-   "https://juzlova.cz/class-aptent-taciti-sociosqu-ad-litora/",
-   "20191021051933",
-   "class-aptent-taciti-sociosqu-ad-litora"
+   "https://juzlova.cz/bramborove_knedliky/",
+   "20260119212451",
+   "bramborove_knedliky"
   ],
   [
    "https://juzlova.cz/chlupate-knedliky/",
@@ -61,29 +56,14 @@
    "chlupate-knedliky"
   ],
   [
-   "https://juzlova.cz/hello-world/",
-   "20251014131706",
-   "hello-world"
-  ],
-  [
    "https://juzlova.cz/domaci-pernik-recept-podle-jirina-juzlova/",
    "20260119204701",
    "domaci-pernik-recept-podle-jirina-juzlova"
   ],
   [
-   "https://juzlova.cz/jiri-juzl/",
-   "20250618205822",
-   "jiri-juzl"
-  ],
-  [
-   "https://juzlova.cz/hruskovy-kolac-s-vanilkovym-pudinkem-recept/",
-   "20260119210910",
-   "hruskovy-kolac-s-vanilkovym-pudinkem-recept"
-  ],
-  [
-   "https://juzlova.cz/donec-at-mauris-enim-duis-nisi-tellus/",
-   "20191021043528",
-   "donec-at-mauris-enim-duis-nisi-tellus"
+   "https://juzlova.cz/hello-world/",
+   "20251014131706",
+   "hello-world"
   ],
   [
    "https://www.juzlova.cz/dotaz-na-produkty/",
@@ -91,9 +71,44 @@
    "dotaz-na-produkty"
   ],
   [
+   "https://juzlova.cz/donec-at-mauris-enim-duis-nisi-tellus/",
+   "20191021043528",
+   "donec-at-mauris-enim-duis-nisi-tellus"
+  ],
+  [
+   "https://juzlova.cz/class-aptent-taciti-sociosqu-ad-litora/",
+   "20191021051933",
+   "class-aptent-taciti-sociosqu-ad-litora"
+  ],
+  [
+   "https://juzlova.cz/hruskovy-kolac-s-vanilkovym-pudinkem-recept/",
+   "20260119210910",
+   "hruskovy-kolac-s-vanilkovym-pudinkem-recept"
+  ],
+  [
+   "https://juzlova.cz/jiri-juzl/",
+   "20250618205822",
+   "jiri-juzl"
+  ],
+  [
    "https://juzlova.cz/jirina-juzlova/",
    "20241213031717",
    "jirina-juzlova"
+  ],
+  [
+   "https://juzlova.cz/kde-nas-najdete/",
+   "20260119205638",
+   "kde-nas-najdete"
+  ],
+  [
+   "https://juzlova.cz/kontakt/",
+   "20260119203542",
+   "kontakt"
+  ],
+  [
+   "https://juzlova.cz/kdo_jsme/",
+   "20260119211743",
+   "kdo_jsme"
   ],
   [
    "https://juzlova.cz/nunc-tincidunt-elit-non-cursus/",
@@ -106,14 +121,14 @@
    "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem"
   ],
   [
+   "https://juzlova.cz/nullam-vitae-nibh-un-odio/",
+   "20191021045440",
+   "nullam-vitae-nibh-un-odio"
+  ],
+  [
    "https://juzlova.cz/jirina-juzlova-praha/",
    "20220927072910",
    "jirina-juzlova-praha"
-  ],
-  [
-   "https://www.juzlova.cz/kakao/",
-   "20141110143024",
-   "kakao"
   ],
   [
    "https://juzlova.cz/kakao-holandskeho-typu/",
@@ -121,44 +136,9 @@
    "kakao-holandskeho-typu"
   ],
   [
-   "https://juzlova.cz/kakaovy_puding/",
-   "20251014141656",
-   "kakaovy_puding"
-  ],
-  [
-   "https://juzlova.cz/kde-nas-najdete/",
-   "20260119205638",
-   "kde-nas-najdete"
-  ],
-  [
-   "https://juzlova.cz/kdo_jsme/",
-   "20260119211743",
-   "kdo_jsme"
-  ],
-  [
-   "https://juzlova.cz/potravinarske-smesi-kontact-praha-ceske-republiky/",
-   "20260119211316",
-   "potravinarske-smesi-kontact-praha-ceske-republiky"
-  ],
-  [
-   "https://juzlova.cz/proin-sodales-quam-nec-ante-sollicits/",
-   "20191021053645",
-   "proin-sodales-quam-nec-ante-sollicits"
-  ],
-  [
-   "https://juzlova.cz/sisky-s-makem-recept/",
-   "20260119195229",
-   "sisky-s-makem-recept"
-  ],
-  [
-   "https://juzlova.cz/slehackova-rolada-recept/",
-   "20260119212814",
-   "slehackova-rolada-recept"
-  ],
-  [
-   "https://juzlova.cz/strapacky-se-zelim-a-slaninou-recept/",
-   "20260119210705",
-   "strapacky-se-zelim-a-slaninou-recept"
+   "https://juzlova.cz/recepty/",
+   "20260119205520",
+   "recepty"
   ],
   [
    "https://juzlova.cz/sitemap/",
@@ -166,29 +146,19 @@
    "sitemap"
   ],
   [
-   "https://www.juzlova.cz/vanilkovy_puding/",
-   "20141110143448",
-   "vanilkovy_puding"
+   "https://juzlova.cz/kakaovy_puding/",
+   "20251014141656",
+   "kakaovy_puding"
   ],
   [
-   "https://juzlova.cz/praesent-et-urna-turpis-sadips/",
-   "20251114233717",
-   "praesent-et-urna-turpis-sadips"
+   "https://juzlova.cz/sisky-s-makem-recept/",
+   "20260119195229",
+   "sisky-s-makem-recept"
   ],
   [
-   "https://juzlova.cz/nullam-vitae-nibh-un-odio/",
-   "20191021045440",
-   "nullam-vitae-nibh-un-odio"
-  ],
-  [
-   "https://juzlova.cz/vanilkovy_pudink/",
-   "20260119211246",
-   "vanilkovy_pudink"
-  ],
-  [
-   "https://juzlova.cz/kontakt/",
-   "20260119203542",
-   "kontakt"
+   "https://juzlova.cz/strapacky-se-zelim-a-slaninou-recept/",
+   "20260119210705",
+   "strapacky-se-zelim-a-slaninou-recept"
   ],
   [
    "https://juzlova.cz/vanilkovy-cukr/",
@@ -196,143 +166,47 @@
    "vanilkovy-cukr"
   ],
   [
-   "https://juzlova.cz/recepty/",
-   "20260119205520",
-   "recepty"
+   "https://www.juzlova.cz/vanilkovy_puding/",
+   "20141110143448",
+   "vanilkovy_puding"
+  ],
+  [
+   "https://www.juzlova.cz/kakao/",
+   "20141110143024",
+   "kakao"
+  ],
+  [
+   "https://juzlova.cz/vanilkovy_pudink/",
+   "20260119211246",
+   "vanilkovy_pudink"
+  ],
+  [
+   "https://juzlova.cz/potravinarske-smesi-kontact-praha-ceske-republiky/",
+   "20260119211316",
+   "potravinarske-smesi-kontact-praha-ceske-republiky"
+  ],
+  [
+   "https://juzlova.cz/praesent-et-urna-turpis-sadips/",
+   "20251114233717",
+   "praesent-et-urna-turpis-sadips"
+  ],
+  [
+   "https://juzlova.cz/slehackova-rolada-recept/",
+   "20260119212814",
+   "slehackova-rolada-recept"
+  ],
+  [
+   "https://juzlova.cz/proin-sodales-quam-nec-ante-sollicits/",
+   "20191021053645",
+   "proin-sodales-quam-nec-ante-sollicits"
   ]
  ],
  "images": [
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/frozen-banana-custard-300x225.jpg",
-   "20141110153804",
-   "wp-content_uploads_2012_07_frozen-banana-custard-300x225.jpg",
-   10471
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/blog_4.jpg",
-   "20141110153343",
-   "wp-content_uploads_2012_07_blog_4.jpg",
-   12383
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/IMG_20141026_100948-300x225.png",
-   "20141110151250",
-   "wp-content_uploads_2012_07_IMG_20141026_100948-300x225.png",
-   59197
-  ],
   [
    "http://www.juzlova.cz/wp-content/uploads/2012/07/HERO_Hot-Cocoa_363x276-300x228.jpg",
    "20141110153727",
    "wp-content_uploads_2012_07_HERO_Hot-Cocoa_363x276-300x228.jpg",
    44975
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/Koch%C3%A1nov-300x225.png",
-   "20141110145650",
-   "wp-content_uploads_2012_07_Koch_nov-300x225.png",
-   51469
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/orange-custard-_7-300x224.jpg",
-   "20141110161023",
-   "wp-content_uploads_2012_07_orange-custard-_7-300x224.jpg",
-   6394
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/Koch%C3%A1nov-juzlova-Na%C5%A1e-produkty-Bramborov%C3%A9-knedl%C3%ADky-300x225.png",
-   "20141110151504",
-   "wp-content_uploads_2012_07_Koch_nov-juzlova-Na_e-produkty-Bramborov_-knedl_ky-300x225.png",
-   56625
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/Vanilkov%C3%BD-cukr-juzlova-300x103.png",
-   "20141110151355",
-   "wp-content_uploads_2012_07_Vanilkov_-cukr-juzlova-300x103.png",
-   26527
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/blog_3.jpg",
-   "20141110153428",
-   "wp-content_uploads_2012_07_blog_3.jpg",
-   36975
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/Kakaov%C3%BD-puding-juzlova-224x300.png",
-   "20141110150023",
-   "wp-content_uploads_2012_07_Kakaov_-puding-juzlova-224x300.png",
-   52498
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2013/05/portfolio_6.jpg",
-   "20141110153642",
-   "wp-content_uploads_2013_05_portfolio_6.jpg",
-   21795
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/10/Koch%C3%A1nov_juzlova.png",
-   "20141110164557",
-   "wp-content_uploads_2014_10_Koch_nov_juzlova.png",
-   2073262
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/114114.png",
-   "20141110144002",
-   "wp-content_uploads_2014_11_114114.png",
-   5641
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/portfolio_2.jpg",
-   "20141110154051",
-   "wp-content_uploads_2012_07_portfolio_2.jpg",
-   27786
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/5757.png",
-   "20141110144135",
-   "wp-content_uploads_2014_11_5757.png",
-   2510
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/Vanilkov%C3%BD-puding-juzlova-300x225.png",
-   "20141110145759",
-   "wp-content_uploads_2012_07_Vanilkov_-puding-juzlova-300x225.png",
-   52757
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/juzlova-Na%C5%A1e-produkty-300x99.png",
-   "20141110150124",
-   "wp-content_uploads_2012_07_juzlova-Na_e-produkty-300x99.png",
-   23070
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/144144.png",
-   "20141110150026",
-   "wp-content_uploads_2014_11_144144.png",
-   7363
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/portfolio_1.jpg",
-   "20141110153640",
-   "wp-content_uploads_2012_07_portfolio_1.jpg",
-   33397
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-czech-polish-shop-150x150.jpg",
-   "20141110162949",
-   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-czech-polish-shop-150x150.jpg",
-   6148
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2012/07/Koch%C3%A1nov-juzlova-224x300.png",
-   "20141110151501",
-   "wp-content_uploads_2012_07_Koch_nov-juzlova-224x300.png",
-   42998
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-juzlova-150x150.jpg",
-   "20141110162340",
-   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-juzlova-150x150.jpg",
-   82404
   ],
   [
    "http://www.juzlova.cz/wp-content/uploads/2012/07/Chlupat%C3%A9-knedl%C3%ADky-300x225.png",
@@ -341,88 +215,28 @@
    51295
   ],
   [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-czech-food-150x150.jpg",
-   "20141110162500",
-   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-czech-food-150x150.jpg",
-   4211
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/blog_4.jpg",
+   "20141110153343",
+   "wp-content_uploads_2012_07_blog_4.jpg",
+   12383
   ],
   [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/juzlova_juzlova.png",
-   "20141110145027",
-   "wp-content_uploads_2014_11_juzlova_juzlova.png",
-   11454
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/Kakaov%C3%BD-puding-juzlova-224x300.png",
+   "20141110150023",
+   "wp-content_uploads_2012_07_Kakaov_-puding-juzlova-224x300.png",
+   52498
   ],
   [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-juzlova.cz_-150x150.jpg",
-   "20141110162241",
-   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-juzlova.cz_-150x150.jpg",
-   8222
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/Koch%C3%A1nov-300x225.png",
+   "20141110145650",
+   "wp-content_uploads_2012_07_Koch_nov-300x225.png",
+   51469
   ],
   [
-   "http://www.juzlova.cz/wp-content/uploads/2014/12/paypal-transparent-logo.png",
-   "20150804034338",
-   "wp-content_uploads_2014_12_paypal-transparent-logo.png",
-   5451
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/Juzlova_small1.png",
-   "20150804040109",
-   "wp-content_uploads_2014_11_Juzlova_small1.png",
-   825
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-juzlova-czech-food-150x150.jpg",
-   "20141110162502",
-   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-juzlova-czech-food-150x150.jpg",
-   13571
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/logo_Juzlov%C3%A1.png",
-   "20141110162550",
-   "wp-content_uploads_2014_11_logo_Juzlov_.png",
-   10545
-  ],
-  [
-   "https://juzlova.cz/wp-content/uploads/2015/02/bramborove-sisky-s-makem-recept3-150x150.png",
-   "20190516182747",
-   "wp-content_uploads_2015_02_bramborove-sisky-s-makem-recept3-150x150.png",
-   45558
-  ],
-  [
-   "https://www.juzlova.cz/wp-content/uploads/2015/02/J%C5%AFzlov%C3%A1-homepage.png",
-   "20160505175545",
-   "wp-content_uploads_2015_02_J_zlov_-homepage.png",
-   1304167
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2015/02/J%C5%AFzlov%C3%A1-SSL-Footer.png",
-   "20150804040639",
-   "wp-content_uploads_2015_02_J_zlov_-SSL-Footer.png",
-   6841
-  ],
-  [
-   "https://www.juzlova.cz/wp-content/uploads/2015/12/finaljuzlovapng.png",
-   "20160505185733",
-   "wp-content_uploads_2015_12_finaljuzlovapng.png",
-   9890
-  ],
-  [
-   "https://juzlova.cz/wp-content/uploads/2015/12/adam-kennedy-ripon-e1455967364870.jpg",
-   "20200814052653",
-   "wp-content_uploads_2015_12_adam-kennedy-ripon-e1455967364870.jpg",
-   32277
-  ],
-  [
-   "https://www.juzlova.cz/wp-content/uploads/2014/11/Female-Headshot-1-150x150.png",
-   "20190516183101",
-   "wp-content_uploads_2014_11_Female-Headshot-1-150x150.png",
-   3385
-  ],
-  [
-   "https://www.juzlova.cz/wp-content/uploads/2015/12/Jirina-Juzlova-150x150.png",
-   "20190516165246",
-   "wp-content_uploads_2015_12_Jirina-Juzlova-150x150.png",
-   55359
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/portfolio_1.jpg",
+   "20141110153640",
+   "wp-content_uploads_2012_07_portfolio_1.jpg",
+   33397
   ],
   [
    "http://www.juzlova.cz/wp-content/uploads/2012/07/blog_6.jpg",
@@ -431,16 +245,46 @@
    11681
   ],
   [
-   "https://www.juzlova.cz/wp-content/uploads/2015/12/juzlova_logo_small.png",
-   "20160505165723",
-   "wp-content_uploads_2015_12_juzlova_logo_small.png",
-   5140
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/portfolio_2.jpg",
+   "20141110154051",
+   "wp-content_uploads_2012_07_portfolio_2.jpg",
+   27786
   ],
   [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/Background_Juzlova1.png",
-   "20141110142155",
-   "wp-content_uploads_2014_11_Background_Juzlova1.png",
-   2120704
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/orange-custard-_7-300x224.jpg",
+   "20141110161023",
+   "wp-content_uploads_2012_07_orange-custard-_7-300x224.jpg",
+   6394
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/Vanilkov%C3%BD-cukr-juzlova-300x103.png",
+   "20141110151355",
+   "wp-content_uploads_2012_07_Vanilkov_-cukr-juzlova-300x103.png",
+   26527
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/juzlova-Na%C5%A1e-produkty-300x99.png",
+   "20141110150124",
+   "wp-content_uploads_2012_07_juzlova-Na_e-produkty-300x99.png",
+   23070
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/frozen-banana-custard-300x225.jpg",
+   "20141110153804",
+   "wp-content_uploads_2012_07_frozen-banana-custard-300x225.jpg",
+   10471
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/Vanilkov%C3%BD-puding-juzlova-300x225.png",
+   "20141110145759",
+   "wp-content_uploads_2012_07_Vanilkov_-puding-juzlova-300x225.png",
+   52757
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/5757.png",
+   "20141110144135",
+   "wp-content_uploads_2014_11_5757.png",
+   2510
   ],
   [
    "http://www.juzlova.cz/wp-content/uploads/2012/07/Bramborov%C3%A9-knedl%C3%ADky-300x225.png",
@@ -449,10 +293,142 @@
    62715
   ],
   [
-   "https://juzlova.cz/wp-content/uploads/2015/12/juzlova-background-image.jpg",
-   "20171021025835",
-   "wp-content_uploads_2015_12_juzlova-background-image.jpg",
-   225725
+   "http://www.juzlova.cz/wp-content/uploads/2014/10/Koch%C3%A1nov_juzlova.png",
+   "20141110164557",
+   "wp-content_uploads_2014_10_Koch_nov_juzlova.png",
+   2073262
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/IMG_20141026_100948-300x225.png",
+   "20141110151250",
+   "wp-content_uploads_2012_07_IMG_20141026_100948-300x225.png",
+   59197
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/Background_Juzlova1.png",
+   "20141110142155",
+   "wp-content_uploads_2014_11_Background_Juzlova1.png",
+   2120704
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/7272.png",
+   "20141110144355",
+   "wp-content_uploads_2014_11_7272.png",
+   3318
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/Koch%C3%A1nov-juzlova-224x300.png",
+   "20141110151501",
+   "wp-content_uploads_2012_07_Koch_nov-juzlova-224x300.png",
+   42998
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/Koch%C3%A1nov-juzlova-Na%C5%A1e-produkty-Bramborov%C3%A9-knedl%C3%ADky-300x225.png",
+   "20141110151504",
+   "wp-content_uploads_2012_07_Koch_nov-juzlova-Na_e-produkty-Bramborov_-knedl_ky-300x225.png",
+   56625
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/114114.png",
+   "20141110144002",
+   "wp-content_uploads_2014_11_114114.png",
+   5641
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-juzlova.cz_-150x150.jpg",
+   "20141110162241",
+   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-juzlova.cz_-150x150.jpg",
+   8222
+  ],
+  [
+   "https://www.juzlova.cz/wp-content/uploads/2014/11/Female-Headshot-1-150x150.png",
+   "20190516183101",
+   "wp-content_uploads_2014_11_Female-Headshot-1-150x150.png",
+   3385
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-czech-polish-shop-150x150.jpg",
+   "20141110162949",
+   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-czech-polish-shop-150x150.jpg",
+   6148
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-juzlova-150x150.jpg",
+   "20141110162340",
+   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-juzlova-150x150.jpg",
+   82404
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-juzlova-czech-food-150x150.jpg",
+   "20141110162502",
+   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-juzlova-czech-food-150x150.jpg",
+   13571
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/144144.png",
+   "20141110150026",
+   "wp-content_uploads_2014_11_144144.png",
+   7363
+  ],
+  [
+   "https://www.juzlova.cz/wp-content/uploads/2015/02/J%C5%AFzlov%C3%A1-homepage.png",
+   "20160505175545",
+   "wp-content_uploads_2015_02_J_zlov_-homepage.png",
+   1304167
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/Bramborov%C3%A9-Knedl%C3%ADky-czech-food-150x150.jpg",
+   "20141110162500",
+   "wp-content_uploads_2014_11_Bramborov_-Knedl_ky-czech-food-150x150.jpg",
+   4211
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2013/05/portfolio_6.jpg",
+   "20141110153642",
+   "wp-content_uploads_2013_05_portfolio_6.jpg",
+   21795
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/Jidlo_obrazek-Bramborov%C3%A9-Knedl%C3%ADky-150x150.jpg",
+   "20141110162346",
+   "wp-content_uploads_2014_11_Jidlo_obrazek-Bramborov_-Knedl_ky-150x150.jpg",
+   6492
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/Juzlova_small1.png",
+   "20150804040109",
+   "wp-content_uploads_2014_11_Juzlova_small1.png",
+   825
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/12/paypal-transparent-logo.png",
+   "20150804034338",
+   "wp-content_uploads_2014_12_paypal-transparent-logo.png",
+   5451
+  ],
+  [
+   "https://www.juzlova.cz/wp-content/uploads/2015/12/Jirina-Juzlova-150x150.png",
+   "20190516165246",
+   "wp-content_uploads_2015_12_Jirina-Juzlova-150x150.png",
+   55359
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/juzlova_juzlova.png",
+   "20141110145027",
+   "wp-content_uploads_2014_11_juzlova_juzlova.png",
+   11454
+  ],
+  [
+   "http://www.juzlova.cz/wp-content/uploads/2014/11/logo_Juzlov%C3%A1.png",
+   "20141110162550",
+   "wp-content_uploads_2014_11_logo_Juzlov_.png",
+   10545
+  ],
+  [
+   "https://juzlova.cz/wp-content/uploads/2015/12/adam-kennedy-ripon-e1455967364870.jpg",
+   "20200814052653",
+   "wp-content_uploads_2015_12_adam-kennedy-ripon-e1455967364870.jpg",
+   32277
   ],
   [
    "https://www.juzlova.cz/wp-content/uploads/2017/04/Bebe-rezy-s-cokoladovym-pudingem-300x231-300x206.gif",
@@ -461,28 +437,40 @@
    41938
   ],
   [
-   "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-192x192.png",
-   "20171021032409",
-   "wp-content_uploads_2017_06_cropped-Juzlova-favicon-2017-192x192.png",
-   9932
+   "https://www.juzlova.cz/wp-content/uploads/2015/12/juzlova_logo_small.png",
+   "20160505165723",
+   "wp-content_uploads_2015_12_juzlova_logo_small.png",
+   5140
   ],
   [
-   "http://www.juzlova.cz/wp-content/uploads/2015/02/J%C5%AFzlov%C3%A13.png",
-   "20150804031126",
-   "wp-content_uploads_2015_02_J_zlov_3.png",
-   7730
+   "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-180x180.png",
+   "20171021025845",
+   "wp-content_uploads_2017_06_cropped-Juzlova-favicon-2017-180x180.png",
+   9038
   ],
   [
-   "https://juzlova.cz/wp-content/uploads/2017/06/Juzlova-favicon-2017.png",
-   "20171021033156",
-   "wp-content_uploads_2017_06_Juzlova-favicon-2017.png",
-   903
+   "https://juzlova.cz/wp-content/uploads/2015/02/bramborove-sisky-s-makem-recept3-150x150.png",
+   "20190516182747",
+   "wp-content_uploads_2015_02_bramborove-sisky-s-makem-recept3-150x150.png",
+   45558
   ],
   [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/7272.png",
-   "20141110144355",
-   "wp-content_uploads_2014_11_7272.png",
-   3318
+   "http://www.juzlova.cz/wp-content/uploads/2015/02/J%C5%AFzlov%C3%A1-SSL-Footer.png",
+   "20150804040639",
+   "wp-content_uploads_2015_02_J_zlov_-SSL-Footer.png",
+   6841
+  ],
+  [
+   "https://juzlova.cz/wp-content/uploads/2015/12/juzlova-background-image.jpg",
+   "20171021025835",
+   "wp-content_uploads_2015_12_juzlova-background-image.jpg",
+   225725
+  ],
+  [
+   "https://www.juzlova.cz/wp-content/uploads/2017/06/Juzlova-background-video.jpg",
+   "20171021033023",
+   "wp-content_uploads_2017_06_Juzlova-background-video.jpg",
+   263081
   ],
   [
    "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
@@ -497,10 +485,10 @@
    14131
   ],
   [
-   "https://www.juzlova.cz/wp-content/uploads/2015/12/open157-1.png",
-   "20160505175538",
-   "wp-content_uploads_2015_12_open157-1.png",
-   237
+   "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-192x192.png",
+   "20171021032409",
+   "wp-content_uploads_2017_06_cropped-Juzlova-favicon-2017-192x192.png",
+   9932
   ],
   [
    "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-270x270.png",
@@ -509,66 +497,29 @@
    15311
   ],
   [
-   "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-180x180.png",
-   "20171021025845",
-   "wp-content_uploads_2017_06_cropped-Juzlova-favicon-2017-180x180.png",
-   9038
+   "https://juzlova.cz/wp-content/uploads/2017/06/Juzlova-favicon-2017.png",
+   "20171021033156",
+   "wp-content_uploads_2017_06_Juzlova-favicon-2017.png",
+   903
+  ],
+  [
+   "https://www.juzlova.cz/wp-content/uploads/2015/12/open157-1.png",
+   "20160505175538",
+   "wp-content_uploads_2015_12_open157-1.png",
+   237
   ],
   [
    "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-32x32.png",
    "20171021025211",
    "wp-content_uploads_2017_06_cropped-Juzlova-favicon-2017-32x32.png",
    1305
-  ],
-  [
-   "https://www.juzlova.cz/wp-content/uploads/2017/06/Juzlova-background-video.jpg",
-   "20171021033023",
-   "wp-content_uploads_2017_06_Juzlova-background-video.jpg",
-   263081
-  ],
-  [
-   "https://juzlova.cz/wp-content/uploads/2015/03/Strapacky-se-zellm-a-slaninou-2-150x150.png",
-   "20190516123602",
-   "wp-content_uploads_2015_03_Strapacky-se-zellm-a-slaninou-2-150x150.png",
-   59187
-  ],
-  [
-   "http://www.juzlova.cz/wp-content/uploads/2014/11/Jidlo_obrazek-Bramborov%C3%A9-Knedl%C3%ADky-150x150.jpg",
-   "20141110162346",
-   "wp-content_uploads_2014_11_Jidlo_obrazek-Bramborov_-Knedl_ky-150x150.jpg",
-   6492
   ]
  ],
  "other": [
   [
-   "http://www.juzlova.cz/home-2/feed/",
-   "20141110162853",
-   "home-2_feed"
-  ],
-  [
-   "https://www.juzlova.cz/dotaz-na-produkty/feed/",
-   "20141110162855",
-   "dotaz-na-produkty_feed"
-  ],
-  [
-   "http://www.juzlova.cz/favicon.ico",
-   "20171105104809",
-   "favicon.ico"
-  ],
-  [
-   "https://www.juzlova.cz/author/adam-ripon2mail-dcu-ie/feed/",
-   "20141110161025",
-   "author_adam-ripon2mail-dcu-ie_feed"
-  ],
-  [
    "https://www.juzlova.cz/kde-nas-najdete/feed/",
    "20141110162109",
    "kde-nas-najdete_feed"
-  ],
-  [
-   "https://www.juzlova.cz/home-2-2/feed/",
-   "20160505175519",
-   "home-2-2_feed"
   ],
   [
    "https://juzlova.cz/juzlova-potravinarske-smesi/feed/",
@@ -576,9 +527,19 @@
    "juzlova-potravinarske-smesi_feed"
   ],
   [
-   "https://juzlova.cz/feed/",
-   "20190217112141",
-   "feed"
+   "https://www.juzlova.cz/author/adam-ripon2mail-dcu-ie/feed/",
+   "20141110161025",
+   "author_adam-ripon2mail-dcu-ie_feed"
+  ],
+  [
+   "http://www.juzlova.cz/favicon.ico",
+   "20171105104809",
+   "favicon.ico"
+  ],
+  [
+   "https://www.juzlova.cz/dotaz-na-produkty/feed/",
+   "20141110162855",
+   "dotaz-na-produkty_feed"
   ],
   [
    "https://juzlova.cz/comments/feed/",
@@ -586,14 +547,19 @@
    "comments_feed"
   ],
   [
+   "https://juzlova.cz/feed/",
+   "20190217112141",
+   "feed"
+  ],
+  [
    "https://www.juzlova.cz/kdo_jsme/feed/",
    "20141110151142",
    "kdo_jsme_feed"
   ],
   [
-   "https://juzlova.cz/robots.txt",
-   "20220314235738",
-   "robots.txt"
+   "https://juzlova.cz/strapacky-se-zelim-a-slaninou-recept/feed/",
+   "20190516111420",
+   "strapacky-se-zelim-a-slaninou-recept_feed"
   ],
   [
    "https://juzlova.cz/xmlrpc.php?rsd",
@@ -606,17 +572,47 @@
    "wp-json_oembed_1.0_embed_url_https___juzlova.cz_kontakt__format_xml"
   ],
   [
-   "https://juzlova.cz/strapacky-se-zelim-a-slaninou-recept/feed/",
-   "20190516111420",
-   "strapacky-se-zelim-a-slaninou-recept_feed"
+   "https://juzlova.cz/robots.txt",
+   "20220314235738",
+   "robots.txt"
   ],
   [
    "https://juzlova.cz/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjuzlova.cz%2F&format=xml",
    "20190216090741",
    "wp-json_oembed_1.0_embed_url_https___juzlova.cz__format_xml"
+  ],
+  [
+   "https://www.juzlova.cz/home-2-2/feed/",
+   "20160505175519",
+   "home-2-2_feed"
+  ],
+  [
+   "http://www.juzlova.cz/home-2/feed/",
+   "20141110162853",
+   "home-2_feed"
   ]
  ],
  "failed": [
+  [
+   "image",
+   "http://www.juzlova.cz/wp-content/uploads/2012/07/blog_3.jpg",
+   "20141110153428"
+  ],
+  [
+   "image",
+   "https://juzlova.cz/wp-content/uploads/2015/03/Strapacky-se-zellm-a-slaninou-2-150x150.png",
+   "20190516123602"
+  ],
+  [
+   "image",
+   "http://www.juzlova.cz/wp-content/uploads/2015/02/J%C5%AFzlov%C3%A13.png",
+   "20150804031126"
+  ],
+  [
+   "image",
+   "https://www.juzlova.cz/wp-content/uploads/2015/12/finaljuzlovapng.png",
+   "20160505185733"
+  ],
   [
    "other",
    "https://juzlova.cz/jirina-juzlova-praha/feed/",
