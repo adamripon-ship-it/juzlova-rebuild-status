@@ -124,12 +124,13 @@ orange with SSL/TLS set to Full (strict).
 
 ## What only the owner can do
 
-- **Put `main` on the live Cloud Run service.** In
-  [Google Cloud Console → Cloud Run](https://console.cloud.google.com/run)
-  open the project that already serves `www.juzlova.cz`. Create a service
-  account with **Cloud Run Admin** + **Service Account User**, download a
-  JSON key, and add GitHub secrets `GCP_SA_KEY` and `GCP_PROJECT`. Then run
-  **Deploy latest main to Cloud Run**. Leave Cloudflare DNS on
+- **Connect Cloud Run MCP (preferred).** In Cursor: Settings → MCP →
+  **cloud-run** → Connect, with the Google account that already hosts
+  `www.juzlova.cz`. Endpoint: `https://run.googleapis.com/mcp` (see
+  `.cursor/mcp.json`). After it is connected, the agent can list services and
+  deploy `main` onto `juzlova-web` without a JSON key and without changing DNS.
+- **Optional CI.** If you want GitHub Actions to deploy on every push, add
+  secrets `GCP_SA_KEY` and `GCP_PROJECT`. Leave Cloudflare DNS on
   `ghs.googlehosted.com`.
 - Optional GCS path still wants `GCS_BUCKET` as well.
 

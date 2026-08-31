@@ -4,8 +4,10 @@ name: Deploy latest main to Cloud Run
 # www.juzlova.cz (CNAME ghs.googlehosted.com). Does not change DNS.
 # Do not CNAME www to adamripon-ship-it.github.io.
 #
-# Required GitHub secrets (from the Google Cloud project that already
-# hosts juzlova-web):
+# Preferred for agents: Cloud Run MCP at https://run.googleapis.com/mcp
+# (OAuth, see .cursor/mcp.json). This workflow is the CI fallback.
+#
+# GitHub secrets if you use this workflow:
 #   GCP_SA_KEY   — JSON key; Cloud Run Admin + Service Account User
 #   GCP_PROJECT  — project id
 #
