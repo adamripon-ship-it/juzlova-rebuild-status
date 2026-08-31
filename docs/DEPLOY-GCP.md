@@ -26,15 +26,17 @@ headers). `archive/`, `scripts/` and git metadata stay out of the image.
 1. In [Google Cloud Console](https://console.cloud.google.com/) create (or
    pick) a project, note its **project id**.
 2. Create a service account: IAM & Admin → Service Accounts → Create.
-   Grant it the **Storage Admin** role. Create a **JSON key** and download it.
+   Grant it **Storage Admin** (GCS path) and **Cloud Run Admin** plus
+   **Service Account User** (preview path). Create a **JSON key** and
+   download it.
 3. In the GitHub repo: Settings → Secrets and variables → Actions → add:
    - `GCP_SA_KEY` — the full JSON key file contents
    - `GCP_PROJECT` — the project id
-   - `GCS_BUCKET` — bucket name; use `www.juzlova.cz` if you'll serve the
-     custom domain directly from the bucket (requires domain verification in
-     Search Console), otherwise something like `juzlova-site`.
-4. Re-run the "Deploy to Google Cloud Storage" workflow (Actions tab) or push
-   any commit to `main`.
+   - `GCS_BUCKET` — bucket name; use something like `juzlova-site` for a
+     preview bucket. Do not reuse a name that already serves production.
+4. For issue #8, run **Cloud Run preview of main** from the Actions tab
+   (dispatch-only, service `juzlova-main-preview`). The GCS workflow still
+   runs on push to `main` once the three secrets exist; it skips until then.
 
 ## Custom domain + HTTPS
 
