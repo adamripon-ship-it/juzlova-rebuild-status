@@ -21,7 +21,7 @@ Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čiteln
 ## Recepty
 - [Šišky s mákem](https://adamripon-ship-it.github.io/juzlova-rebuild-status/sisky-s-makem-recept/): Tradiční sladká večeře z bramborového těsta: šišky obalené v máku s cukrem, přelité rozpuštěným máslem.
 - [Hruškový koláč s vanilkovým pudinkem](https://adamripon-ship-it.github.io/juzlova-rebuild-status/hruskovy-kolac-s-vanilkovym-pudinkem-recept/): Koláč, jehož přípravu si užijí i děti. Pečení baví dvakrát — při přípravě i při ochutnávání.
-- [Strapačky se zelím a slaninou](https://adamripon-ship-it.github.io/juzlova-rebuild-status/strapacky-se-zelim-a-slaninou-recept/): Slovenská klasika z bramborového těsta — strapačky s kysaným zelím a opečenou slaninou.
+- [Strapačky se zelím a slaninou](https://adamripon-ship-it.github.io/juzlova-rebuild-status/strapacky-se-zelim-a-slaninou-recept/): Slovenská klasika z chlupatých knedlíků v prášku — halušky s kysaným zelím a vypečenou slaninou.
 - [Bebe řezy s čokoládovým pudingem](https://adamripon-ship-it.github.io/juzlova-rebuild-status/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/): Rádi byste pohostili návštěvu, ale nejste zrovna Jamie Oliver? Nepečené bebe řezy zvládne opravdu každý.
 - [Šlehačková roláda](https://adamripon-ship-it.github.io/juzlova-rebuild-status/slehackova-rolada-recept/): Lehký moučník za půl hodiny: kontrast nahořklého kakaa a jemně sladké šlehačky. Bez mouky, tedy i bez lepku.
 - [Domácí perník](https://adamripon-ship-it.github.io/juzlova-rebuild-status/domaci-pernik-recept-podle-jirina-juzlova/): Hrníčkový perník, který si zamilujete pro snadnou přípravu i výbornou chuť. Nepotřebujete váhu — vystačíte si s hrnečkem.

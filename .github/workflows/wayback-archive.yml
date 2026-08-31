@@ -26,7 +26,20 @@ jobs:
         if: always()
         run: |
           mkdir -p img
-          [ -f img/hero.jpg ] || { curl -fsSL -o /tmp/hero.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5.png" && convert /tmp/hero.png -resize 1920x -quality 84 img/hero.jpg || true; }
+          fetch_jpg() { curl -fsSL -o /tmp/g.png "$2" && ffmpeg -y -loglevel error -i /tmp/g.png -vf scale=1920:-2 -q:v 3 "img/$1"; }
+          [ -f img/hero.jpg ] || fetch_jpg hero.jpg "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5.png" || true
+          [ -f img/workshop.jpg ] || fetch_jpg workshop.jpg "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_012021_260c1625-ff7f-42ab-92f5-7a25f72ed1da.png" || true
+      - name: Try 2019-capture recipe thumbnails
+        if: always()
+        run: |
+          try_img() { [ -f "archive/images/$1" ] || curl -fsSL -o "archive/images/$1" "https://web.archive.org/web/20190328202526im_/https://www.juzlova.cz/wp-content/uploads/2017/04/$2" || rm -f "archive/images/$1"; }
+          try_img "wp-content_uploads_2017_04_Domaci-pernik-300x206.png" "Domaci-pernik-300x206.png"
+          try_img "wp-content_uploads_2017_04_slehackova-rolada-juzlova-1-1-300x206.gif" "slehackova-rolada-juzlova-1-1-300x206.gif"
+          try_img "wp-content_uploads_2017_04_Strapacky-se-zelim-a-slaninou-recept-juzlova.jpg" "Strapacky-se-zelim-a-slaninou-recept-juzlova.jpg"
+          try_img "wp-content_uploads_2017_04_Hruskovy-kolac-s-vanilkovym-pudinkem-2-300x300-300x206.png" "Hruskovy-kolac-s-vanilkovym-pudinkem-2-300x300-300x206.png"
+          try_img "wp-content_uploads_2017_04_Pe_en_-_i_ky-s-m_kem-recept-300x206.png" "Pe%C4%8Den%C3%A9-%C5%A1i%C5%A1ky-s-m%C3%A1kem-recept-300x206.png"
+          try_img "wp-content_uploads_2017_04_Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg" "Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg"
+          for f in archive/images/wp-content_uploads_2017_04_*; do [ -f "$f" ] && grep -qi "temporarily offline\|<html" "$f" && rm -f "$f" || true; done
       - name: Commit archive
         if: always()
         run: |

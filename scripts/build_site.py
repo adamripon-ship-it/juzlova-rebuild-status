@@ -62,6 +62,9 @@ IMAGE_MAP = {
     "wp-content_uploads_2017_04_Strapacky-se-zelim-a-slaninou-recept-juzlova.jpg": "strapacky.jpg",
     "wp-content_uploads_2017_04_Hruskovy-kolac-s-vanilkovym-pudinkem-2-300x300-300x206.png": "hruskovy-kolac.png",
     "wp-content_uploads_2017_04_Pe_en_-_i_ky-s-m_kem-recept-300x206.png": "sisky-s-makem.png",
+    "wp-content_uploads_2015_02_bramborove-sisky-s-makem-recept3-150x150.png": "sisky-s-makem-alt.png",
+    "wp-content_uploads_2015_03_Strapacky-se-zellm-a-slaninou-2-150x150.png": "strapacky-alt.png",
+    "wp-content_uploads_2012_07_IMG_20141026_100948-300x225.png": "vyroba.png",
     "wp-content_uploads_2017_04_Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg": "bramborovo-tvarohove-knedliky.jpg",
 }
 PRODUCT_IMG = {
@@ -402,10 +405,16 @@ def build_page(L, key):
     pg = L["pages"][key]
     path = f"{slug}/"
     crumbs = [(L["ui"]["breadcrumb_home"], url_for(lg, "")), (pg["h1"], url_for(lg, path))]
+    fig = ""
+    if key == "kdo_jsme":
+        w = img_or_none(depth, "workshop.jpg")
+        if w:
+            fig = f'<figure><img src="{w}" alt="Jůzlová — dílna" loading="lazy"></figure>'
     body = f"""<main class="wrap"><article class="page">
 <nav class="breadcrumb"><a href="{rel(depth)}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pg['h1'])}</nav>
 <h1>{esc(pg['h1'])}</h1>
 <p class="sub">{esc(pg['sub'])}</p>
+{fig}
 {render_body(L, pg['body'], depth)}
 </article></main>"""
     html_out = shell(L, title=pg["title"], desc=pg["desc"], path=path, depth=depth,
@@ -675,6 +684,11 @@ def copy_images():
             f = src / a_name
             if f.exists():
                 shutil.copyfile(f, dst / pub)
+    # fallbacks for recipe thumbnails whose originals were never captured
+    for want, alt in [("sisky-s-makem.png", "sisky-s-makem-alt.png"),
+                      ("strapacky.jpg", "strapacky-alt.png")]:
+        if not (dst / want).exists() and (dst / alt).exists():
+            shutil.copyfile(dst / alt, dst / want)
     logo = dst / "logo.png"
     fav = dst / "favicon.png"
     if logo.exists() and not fav.exists():
