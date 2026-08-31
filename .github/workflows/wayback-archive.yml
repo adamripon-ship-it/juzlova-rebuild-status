@@ -34,7 +34,6 @@ jobs:
           UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
           grab() { [ -f "img/$1" ] || curl -fSL -A "$UA" --retry 3 -o "img/$1" "$2" || { echo "FAILED $1"; rm -f "img/$1"; }; }
           grab hero.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5_min.webp"
-          grab hero.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5.png"
           grab workshop.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_012021_260c1625-ff7f-42ab-92f5-7a25f72ed1da_min.webp"
           grab film-krajina.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_031116_653a4637-216d-4721-95b4-ccf4bf370829_min.webp"
           grab film-blizko.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_030819_50f693a2-0778-4390-8a6c-cc531a138e63_min.webp"
