@@ -145,10 +145,21 @@ orange with SSL/TLS set to Full (strict).
 
 ## What only the owner can do
 
-- **DNS cutover (this is what makes juzlova.cz serve `main`).** In Cloudflare,
-  edit `www.juzlova.cz` from CNAME `ghs.googlehosted.com` to CNAME
+- **Connect the DNS-capable Cloudflare MCP.** Bindings (`bindings.mcp.cloudflare.com`)
+  cannot edit DNS records. The project MCP config in `.cursor/mcp.json` points at
+  Cloudflare's API MCP (`https://mcp.cloudflare.com/mcp`), which can. In Cursor:
+  Settings → MCP → **cloudflare-api** → Connect / Sign in. Grant Zone DNS Edit
+  for `juzlova.cz`. This is Cloudflare's official remote MCP, not Runlayer.
+- **Add `CLOUDFLARE_API_TOKEN`** so `.github/workflows/cutover-pages-dns.yml`
+  can flip `www` without the dashboard. Create a zone-scoped token
+  (Zone:Read + DNS:Edit on `juzlova.cz`) at
+  [API Tokens](https://dash.cloudflare.com/profile/api-tokens), then store it as
+  a [repo Actions secret](https://github.com/adamripon-ship-it/juzlova-rebuild-status/settings/secrets/actions)
+  named `CLOUDFLARE_API_TOKEN`. Re-run **Cut over www to GitHub Pages**.
+- **DNS cutover (this is what makes juzlova.cz serve `main`).** Edit only
+  `www.juzlova.cz` from CNAME `ghs.googlehosted.com` to CNAME
   `adamripon-ship-it.github.io`, grey cloud. Leave the apex as-is — it already
-  301s to `www`.
+  301s to `www`. Prefer the MCP or the token+workflow above.
 - Add the repository secrets if you still want the GCS / Cloud Run path:
   `GCP_SA_KEY`, `GCP_PROJECT`, `GCS_BUCKET`.
 

@@ -3,6 +3,13 @@ name: Cut over www to GitHub Pages
 # Uses CLOUDFLARE_API_TOKEN (Zone:Read + DNS:Edit on juzlova.cz) to point
 # www.juzlova.cz at GitHub Pages. The apex already 301s to www.
 # Does not print the token. Skips cleanly if the secret is missing.
+#
+# Create the token (restrict to zone juzlova.cz):
+#   https://dash.cloudflare.com/profile/api-tokens
+#   Template: Edit zone DNS. Permissions: Zone:Read + DNS:Edit.
+# Store it as repo secret CLOUDFLARE_API_TOKEN, then re-run this workflow.
+# Agents that need to edit DNS should use the Cloudflare API MCP
+# (https://mcp.cloudflare.com/mcp in .cursor/mcp.json), not Bindings.
 
 on:
   workflow_dispatch:
