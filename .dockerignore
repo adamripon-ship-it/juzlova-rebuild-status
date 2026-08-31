@@ -1,0 +1,8 @@
+.git
+.github
+scripts
+Dockerfile
+.dockerignore
+MIGRATION.md
+README.md
+status.html
