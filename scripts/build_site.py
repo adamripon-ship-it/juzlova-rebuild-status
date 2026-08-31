@@ -50,7 +50,9 @@ RECIPE_SLUGS = [
 IMAGE_MAP = {
     "wp-content_uploads_2017_06_juzlova-logo-black-2017.png": "logo.png",
     "wp-content_uploads_2012_07_Bramborov_-knedl_ky-300x225.png": "bramborove-knedliky.png",
-    "wp-content_uploads_2012_07_Chlupat_-knedl_ky-300x225.png": "chlupate-knedliky.png",
+    # Named for chlupaté knedlíky on the old site, but the picture is actually
+    # two packets of vanilla sugar. Published under what it shows.
+    "wp-content_uploads_2012_07_Chlupat_-knedl_ky-300x225.png": "vanilkovy-cukr-pytliky.png",
     "wp-content_uploads_2012_07_Vanilkov_-puding-juzlova-300x225.png": "vanilkovy-puding.png",
     "wp-content_uploads_2012_07_Kakaov_-puding-juzlova-224x300.png": "kakaovy-puding.png",
     "wp-content_uploads_2012_07_HERO_Hot-Cocoa_363x276-300x228.jpg": "kakao.jpg",
@@ -68,20 +70,20 @@ IMAGE_MAP = {
     "wp-content_uploads_2017_04_Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg": "bramborovo-tvarohove-knedliky.jpg",
 }
 PRODUCT_IMG = {
-    "bramborove_knedliky": "bramborove-knedliky.png",
-    "chlupate_knedliky": "chlupate-knedliky.png",
-    "vanilkovy_pudink": "vanilkovy-puding.png",
-    "kakao_holandskeho_typu": "kakao.jpg",
-    "vanilkovy_cukr": "vanilkovy-cukr.png",
+    "bramborove_knedliky": "produkt-bramborove-knedliky.webp",
+    "chlupate_knedliky": "produkt-chlupate-knedliky.webp",
+    "vanilkovy_pudink": "produkt-vanilkovy-puding.webp",
+    "kakao_holandskeho_typu": "produkt-kakao.webp",
+    "vanilkovy_cukr": "vanilkovy-cukr-pytliky.png",  # the workshop's own photo
 }
 RECIPE_IMG = {
     "sisky-s-makem-recept": "sisky-s-makem.png",
-    "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac.png",
+    "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac.webp",
     "strapacky-se-zelim-a-slaninou-recept": "strapacky.jpg",
     "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "bebe-rezy.gif",
-    "slehackova-rolada-recept": "slehackova-rolada.png",
-    "domaci-pernik-recept-podle-jirina-juzlova": "domaci-pernik.png",
-    "bramborovo-tvarohove-knedliky-s-jahodami": "bramborovo-tvarohove-knedliky.png",
+    "slehackova-rolada-recept": "slehackova-rolada.webp",
+    "domaci-pernik-recept-podle-jirina-juzlova": "domaci-pernik.webp",
+    "bramborovo-tvarohove-knedliky-s-jahodami": "bramborovo-tvarohove-knedliky.webp",
 }
 PRICE_ROWS = [  # (product key, package, price CZK)
     ("bramborove_knedliky", "5 kg", "165 Kč"),
@@ -345,7 +347,10 @@ def img_or_none(depth, name):
     return None
 
 
-FILM_FRAMES = ["film-krajina.webp", "hero.webp", "film-blizko.webp", "film-makro.webp"]
+# The film opens on Kochánov itself: the aerial the old site ran as its
+# background video, recovered from the archive. Their own village, not a
+# stand-in for it.
+FILM_FRAMES = ["kochanov-letecky.webp", "hero.webp", "film-blizko.webp", "film-makro.webp"]
 SCROLL_HINT = {"cs": "Rolujte", "en": "Scroll", "de": "Scrollen", "sk": "Rolujte"}
 
 

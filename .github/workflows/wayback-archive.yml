@@ -39,18 +39,32 @@ jobs:
           mkdir -p img
           UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
           grab() { [ -f "img/$1" ] || curl -fSL -A "$UA" --retry 3 -o "img/$1" "$2" || { echo "FAILED $1"; rm -f "img/$1"; }; }
+          # A .webp target already exists once optimize_images.py has run, so
+          # skip the multi-megabyte source rather than fetching it again.
+          grab_big() { [ -f "img/${1%.*}.webp" ] || grab "$1" "$2"; }
           grab hero.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5_min.webp"
           grab workshop.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_012021_260c1625-ff7f-42ab-92f5-7a25f72ed1da_min.webp"
           grab film-krajina.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_031116_653a4637-216d-4721-95b4-ccf4bf370829_min.webp"
           grab film-blizko.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_030819_50f693a2-0778-4390-8a6c-cc531a138e63_min.webp"
           grab film-makro.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_030948_5e5e7f85-15b3-4b1e-8de1-3ddb094c382e_min.webp"
           # Recipe thumbnails the Wayback Machine never captured a working copy of
-          grab hruskovy-kolac.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_9e2ce870-de53-4dfc-ada9-ff950d199c74.png"
-          grab slehackova-rolada.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_9332ab59-de89-472d-90ef-eef5035b89e9.png"
-          grab domaci-pernik.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_dcabb61d-b9f8-4f66-9ae5-8c6da20080cd.png"
-          grab bramborovo-tvarohove-knedliky.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_fb5b3f46-0770-4540-af0c-a6d654d0a6ce.png"
-          command -v ffmpeg && [ -f img/hero.png ] && ffmpeg -y -loglevel error -i img/hero.png -vf scale=1920:-2 -q:v 3 img/hero.jpg && rm -f img/hero.png || true
-          ls -la img/ | sed -n '1,30p'
+          grab_big hruskovy-kolac.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_9e2ce870-de53-4dfc-ada9-ff950d199c74.png"
+          grab_big slehackova-rolada.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_9332ab59-de89-472d-90ef-eef5035b89e9.png"
+          grab_big domaci-pernik.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_dcabb61d-b9f8-4f66-9ae5-8c6da20080cd.png"
+          grab_big bramborovo-tvarohove-knedliky.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054030_fb5b3f46-0770-4540-af0c-a6d654d0a6ce.png"
+          # Product shots. The recovered 2012 photos are the workshop's own but
+          # mislabelled (the "chlupate knedliky" file is a picture of vanilla
+          # sugar), so the product pages get accurate images instead.
+          grab_big produkt-bramborove-knedliky.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054811_21d86b99-f3b5-4bf3-8656-ccba10095e6a.png"
+          grab_big produkt-chlupate-knedliky.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054811_a83fed3b-8b76-4b80-baba-4ec174861692.png"
+          grab_big produkt-vanilkovy-puding.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054811_a89b40ec-fff2-43e5-95e6-7f2c48727641.png"
+          grab_big produkt-kakao.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054811_e16c6445-cc9a-44c1-9c5a-7789b3d234e7.png"
+          ls -la img/ | sed -n '1,40p'
+      - name: Resize anything oversized to web-sized WebP
+        if: always()
+        run: |
+          pip install --quiet pillow
+          python scripts/optimize_images.py
       - name: Try 2019-capture recipe thumbnails
         if: always()
         run: |
