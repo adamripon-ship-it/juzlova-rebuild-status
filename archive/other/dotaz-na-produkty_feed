@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Dotaz na produkty</title>
+	<atom:link href="https://www.juzlova.cz/dotaz-na-produkty/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.juzlova.cz</link>
+	<description>Vanilkový puding - Bramborové knedlíky - Chlupaté knedlíky - Vanilkový cukr - Kakaový puding - Kakao - Jůzlová</description>
+	<lastBuildDate>Thu, 30 Oct 2014 11:37:51 +0000</lastBuildDate>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=4.0</generator>
+</channel>
+</rss>

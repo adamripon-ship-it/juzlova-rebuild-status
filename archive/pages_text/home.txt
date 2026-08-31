@@ -1,0 +1,208 @@
+Jůzlová - Potravinářské Směsi
+
+ { document.querySelector('#SearchOpen').click() }, 200) 
+ } else if (event.target.parentNode.parentNode.id == 'cart-icon' || event.target.parentNode.id == 'cart-icon') { setTimeout(() => { document.querySelector('#cart-icon').click() }, 200) 
+ } else if (event.target.parentNode.id == 'mobile-navigation' || event.target.id == 'mobile-navigation') { setTimeout(() => { document.querySelector('#mobile-navigation').click() }, 200) 
+ }
+ $dispatch('init-run'); runDispatch = false;
+ }"
+ > 
+
+ Přeskočit na obsah
+
+ { $store.xMobileNav.open() }, 0)"
+ class="relative w-11 h-8 px-3 py-2.5 -left-3 rounded-full cursor-pointer "
+ > 
+
+ { $store.xModal.setActiveElement('cart-icon'); $store.xMiniCart.openCart(); }, 0)"
+ :class="$store.xMiniCart.open && 'pointer-events-none'"
+
+ aria-controls="CartDrawer"
+ aria-expanded="false"
+ aria-label="icon-cart"
+ >
+
+ 0 
+
+ Kdo jsme 
+
+ Dodání zboží 
+
+ Naše produkty 
+
+ Chlupaté Knedlíky 
+
+ Vanilínový cukr 
+
+ Vanilkový Pudink 
+
+ Kakao Holandského Typu 
+
+ Bramborové Knedlíky 
+
+ Ceny 
+
+ Recepty 
+
+ Hruškový koláč 
+
+ Strapačky se zelím 
+
+ BeBe řezy 
+
+ Hrníčkový perník 
+
+ Šlehačková roláda 
+
+ šišky s mákem 
+
+ Knedlíky s jahodami 
+
+ Kontakt 
+
+ { $store.xMobileNav.close() }, 0)"
+>
+
+ Menu 
+ { $store.xMobileNav.close() }, 0)"
+ > 
+
+ Kdo jsme 
+
+ Dodání zboží 
+
+ Naše produkty 
+
+ Naše produkty 
+
+ { $store.xMobileNav.close() }, 0)"
+ > 
+
+ Chlupaté Knedlíky 
+
+ Vanilínový cukr 
+
+ Vanilkový Pudink 
+
+ Kakao Holandského Typu 
+
+ Bramborové Knedlíky 
+
+ Ceny 
+
+ Recepty 
+
+ Recepty 
+
+ { $store.xMobileNav.close() }, 0)"
+ > 
+
+ Hruškový koláč 
+
+ Strapačky se zelím 
+
+ BeBe řezy 
+
+ Hrníčkový perník 
+
+ Šlehačková roláda 
+
+ šišky s mákem 
+
+ Knedlíky s jahodami 
+
+ Kontakt 
+
+ Přihlásit se 
+
+ We use cookies and similar technologies to provide the best experience on our website. 
+
+ Decline
+
+ Got it!
+
+ Chuť, která spojuje.
+
+ Od naší rodiny k vaší.
+
+ Objevte prémiové potravinářské směsi, kterým důvěřují šéfkuchaři i generace domácích kuchařů
+
+ Objednat Nyní 
+
+ Nejprodávanější
+
+ Chlupaté Knedlíky
+
+ (0)
+
+ 26000
+
+ 260,00 Kč 
+
+ Jednotková cena 
+
+260,00 Kč
+
+ / 
+  za  
+ 5kg
+
+ Kakao Holandského Typu
+
+ (0)
+
+ 30000
+
+ 300,00 Kč 
+
+ Jednotková cena 
+
+300,00 Kč
+
+ / 
+  za  
+ 500g
+
+ +420 607 629 931 
+ www.juzlova.cz
+ DIČ: CZ6051070421
+ IČO 45900124
+
+ +420 607 629 931 
+ www.juzlova.cz
+ DIČ: CZ6051070421
+ IČO 45900124
+
+ Kochánov 40 
+ 582 53 Štoky
+ Vysočina
+
+ Kochánov 40 
+ 582 53 Štoky
+ Vysočina
+
+ Sobota 8:00–21:00
+ Neděle 8:00–21:00
+ Pondělí 8:00–21:00
+ Úterý 8:00–21:00
+ Středa 8:00–21:00
+ Čtvrtek 8:00–21:00
+ Pátek 8:00–21:00
+
+ Sobota 8:00–21:00
+ Neděle 8:00–21:00
+ Pondělí 8:00–21:00
+ Úterý 8:00–21:00
+ Středa 8:00–21:00
+ Čtvrtek 8:00–21:00
+ Pátek 8:00–21:00
+
+ © 2026, 
+
+ Jůzlová - Potravinářské Směsi .
+
+ PayPal 
+
+ Výběr vede k úplnému obnovení stránky.
+
+ Otevře se v novém okně.

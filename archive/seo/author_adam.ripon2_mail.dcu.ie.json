@@ -1,0 +1,33 @@
+{
+ "url": "https://juzlova.cz/author/adam.ripon2@mail.dcu.ie/",
+ "wayback_timestamp": "20260119204838",
+ "slug": "author_adam.ripon2_mail.dcu.ie",
+ "title": ", Author at Jůzlová.cz — Potravinárské smesi — Vysočina",
+ "meta": {
+  "viewport": "width=device-width, initial-scale=1",
+  "robots": "noindex, follow",
+  "og:locale": "en_US",
+  "og:type": "profile",
+  "og:site_name": "Jůzlová.cz  —  Potravinárské smesi  — Vysočina",
+  "og:title": " Authored by Jůzlová.cz  —  Potravinárské smesi  — Vysočina",
+  "og:url": "https://juzlova.cz/hello-world/",
+  "og:image": "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "og:image:width": "118",
+  "og:image:height": "72",
+  "og:image:type": "image/png",
+  "generator": "Powered by Slider Revolution 6.7.39 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.",
+  "msapplication-TileImage": "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-270x270.png"
+ },
+ "canonical": null,
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://juzlova.cz/#website\",\"url\":\"https://juzlova.cz/\",\"name\":\"Jůzlová.cz — Potravinárské smesi — Vysočina\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://juzlova.cz/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}"
+ ],
+ "h1": [],
+ "h2": [
+  "Hello world!"
+ ],
+ "images_referenced": [
+  "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "https://juzlova.cz/wp-content/uploads/fusion-scripts/c6722160dcce5b0e31f2df7076e021f4.min.js?ver=3.14.2"
+ ]
+}

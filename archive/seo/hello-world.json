@@ -1,0 +1,39 @@
+{
+ "url": "https://juzlova.cz/hello-world/",
+ "wayback_timestamp": "20251014131706",
+ "slug": "hello-world",
+ "title": "Hello world! - Jůzlová.cz — Potravinárské smesi — Vysočina",
+ "meta": {
+  "viewport": "width=device-width, initial-scale=1",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "description": "Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!",
+  "og:locale": "en_US",
+  "og:type": "article",
+  "og:site_name": "Jůzlová.cz  —  Potravinárské smesi  — Vysočina",
+  "og:title": "Hello world! - Jůzlová.cz — Potravinárské smesi — Vysočina",
+  "og:description": "Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!",
+  "og:url": "https://juzlova.cz/hello-world/",
+  "article:published_time": "2014-10-30T11:37:51+02:00",
+  "article:modified_time": "2017-06-09T16:16:51+02:00",
+  "og:image": "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "og:image:width": "118",
+  "og:image:height": "72",
+  "og:image:type": "image/png",
+  "generator": "Powered by Slider Revolution 6.7.21 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.",
+  "msapplication-TileImage": "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-270x270.png"
+ },
+ "canonical": "https://juzlova.cz/hello-world/",
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://juzlova.cz/hello-world/\",\"url\":\"https://juzlova.cz/hello-world/\",\"name\":\"Hello world! - Jůzlová.cz — Potravinárské smesi — Vysočina\",\"isPartOf\":{\"@id\":\"https://juzlova.cz/#website\"},\"datePublished\":\"2014-10-30T11:37:51+00:00\",\"dateModified\":\"2017-06-09T16:16:51+00:00\",\"author\":{\"@id\":\"\"},\"breadcrumb\":{\"@id\":\"https://juzlova.cz/hello-world/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://juzlova.cz/hello-world/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://juzlova.cz/hello-world/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://juzlova.cz/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Hello world!\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://juzlova.cz/#website\",\"url\":\"https://juzlova.cz/\",\"name\":\"Jůzlová.cz — Potravinárské smesi — Vysočina\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://juzlova.cz/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}"
+ ],
+ "h1": [
+  "Hello world!"
+ ],
+ "h2": [
+  "About the Author:"
+ ],
+ "images_referenced": [
+  "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "https://juzlova.cz/wp-content/uploads/fusion-scripts/57278997be328ca1be25e6029fe8d5c8.min.js?ver=3.11.11"
+ ]
+}
