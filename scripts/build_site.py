@@ -74,7 +74,7 @@ PRODUCT_IMG = {
     "chlupate_knedliky": "produkt-chlupate-knedliky.webp",
     "vanilkovy_pudink": "produkt-vanilkovy-puding.webp",
     "kakao_holandskeho_typu": "produkt-kakao.webp",
-    "vanilkovy_cukr": "vanilkovy-cukr-pytliky.png",  # the workshop's own photo
+    "vanilkovy_cukr": "vanilkovy-cukr-pytliky.webp",  # the workshop’s own photo
 }
 RECIPE_IMG = {
     "sisky-s-makem-recept": "sisky-s-makem.png",

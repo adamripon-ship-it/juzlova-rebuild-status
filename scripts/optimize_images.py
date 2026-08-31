@@ -42,9 +42,39 @@ def optimize(src, width, quality=82):
     return out
 
 
+def warm(src, out, width=1200):
+    """Tone a grey archive photo into the site's cream palette.
+
+    The one genuine product photograph we have — their own packets of vanilla
+    sugar — is a grainy 2012 greyscale snap, and sitting next to four warm
+    colour shots it reads as a mistake rather than as the real thing. Mapping
+    its greys onto the page's own ink-to-paper ramp keeps the photograph
+    honest while letting the product grid read as one set.
+    """
+    im = Image.open(src).convert("L")
+    if im.width > width:
+        im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
+    ramp = []
+    for v in range(256):
+        t = v / 255
+        ramp.append((
+            round(36 + t * (250 - 36)),
+            round(31 + t * (246 - 31)),
+            round(26 + t * (239 - 26)),
+        ))
+    toned = Image.new("RGB", im.size)
+    toned.putdata([ramp[p] for p in im.getdata()])
+    toned.save(out, "WEBP", quality=86, method=6)
+    return out
+
+
 def main():
     if not IMG.exists():
         return
+    packets = IMG / "vanilkovy-cukr-pytliky.png"
+    if packets.exists():
+        out = warm(packets, IMG / "vanilkovy-cukr-pytliky.webp")
+        print(f"  {out.name}: warm-toned from the greyscale original")
     for stem, width in sorted(TARGETS.items()):
         out = IMG / f"{stem}.webp"
         srcs = [p for p in IMG.glob(f"{stem}.*") if p != out]
