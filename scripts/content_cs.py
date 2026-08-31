@@ -8,6 +8,7 @@ LANG = {
         "nav_products": "Produkty", "nav_prices": "Ceník", "nav_recipes": "Recepty",
         "nav_contact": "Kontakt",
         "brand_tag": "potravinářské směsi · Vysočina",
+        "workshop_caption": "Naše dílna v Kochánově — pytle s moukou, váha a balicí linka.",
         "est": "Rodinná dílna · Kochánov · od roku 2004",
         "hero_h1": "Knedlíky jako od babičky. Hotové za 15 minut.",
         "hero_lead": "Poctivé potravinářské směsi z Vysočiny — bramborová těsta, pudingy, vanilínový cukr a kakao. Z mouky oceněné značkou KLASA, bez kompromisů v kvalitě.",

@@ -470,9 +470,14 @@ def build_page(L, key):
     crumbs = [(L["ui"]["breadcrumb_home"], url_for(lg, "")), (pg["h1"], url_for(lg, path))]
     fig = ""
     if key == "kdo_jsme":
-        w = img_or_none(depth, "workshop.jpg") or img_or_none(depth, "workshop.webp")
+        # Their own production room — sacks, scale and bag sealer — recovered
+        # from the archive, in preference to a generic workshop picture.
+        w = (img_or_none(depth, "dilna-panorama.webp")
+             or img_or_none(depth, "workshop.webp") or img_or_none(depth, "workshop.jpg"))
         if w:
-            fig = f'<figure><img src="{w}" alt="Jůzlová — dílna" loading="lazy"></figure>'
+            cap = esc(L["ui"].get("workshop_caption", ""))
+            fig = (f'<figure><img src="{w}" alt="{esc(pg["h1"])} — Kochánov" loading="lazy">'
+                   + (f"<figcaption>{cap}</figcaption>" if cap else "") + "</figure>")
     body = f"""<main class="wrap"><article class="page">
 <nav class="breadcrumb"><a href="{rel(depth)}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pg['h1'])}</nav>
 <h1>{esc(pg['h1'])}</h1>

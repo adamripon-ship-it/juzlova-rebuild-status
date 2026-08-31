@@ -8,6 +8,7 @@ LANG = {
         "nav_products": "Products", "nav_prices": "Price list", "nav_recipes": "Recipes",
         "nav_contact": "Contact",
         "brand_tag": "food mixes · Vysočina, Czechia",
+        "workshop_caption": "Our workshop in Kochánov — flour sacks, the scale and the bagging line.",
         "est": "Family workshop · Kochánov · since 2004",
         "hero_h1": "Dumplings like grandma's. Ready in 15 minutes.",
         "hero_lead": "Honest food mixes from the Czech Highlands — potato dumpling doughs, puddings, vanilla sugar and cocoa. Made with KLASA-awarded flour, with no compromise on quality.",
