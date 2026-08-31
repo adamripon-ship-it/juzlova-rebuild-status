@@ -1,0 +1,40 @@
+{
+ "url": "https://juzlova.cz/kontakt/",
+ "wayback_timestamp": "20260119203542",
+ "slug": "kontakt",
+ "title": "kontakt",
+ "meta": {
+  "viewport": "width=device-width, initial-scale=1",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "description": "Kontakt \r\nKochánov, Vysočina    \r\nHumpolec, Vysočina",
+  "twitter:label1": "Est. reading time",
+  "twitter:data1": "4 minutes",
+  "og:locale": "en_US",
+  "og:type": "article",
+  "og:site_name": "Jůzlová.cz  —  Potravinárské smesi  — Vysočina",
+  "og:title": "kontakt",
+  "og:description": "Kontakt \r\nKochánov, Vysočina    \r\nHumpolec, Vysočina",
+  "og:url": "https://juzlova.cz/kontakt/",
+  "article:modified_time": "2024-05-02T11:01:14+01:00",
+  "og:image": "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "og:image:width": "118",
+  "og:image:height": "72",
+  "og:image:type": "image/png",
+  "generator": "Powered by Slider Revolution 6.7.39 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.",
+  "msapplication-TileImage": "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-270x270.png"
+ },
+ "canonical": "https://juzlova.cz/kontakt/",
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://juzlova.cz/kontakt/\",\"url\":\"https://juzlova.cz/kontakt/\",\"name\":\"kontakt\",\"isPartOf\":{\"@id\":\"https://juzlova.cz/#website\"},\"datePublished\":\"2014-11-13T00:19:23+00:00\",\"dateModified\":\"2024-05-02T11:01:14+00:00\",\"description\":\"Kontakt: Jiřina Jůzlová +420 728 466 141 / Jiří Jůzl +420 607 629 931, Kochánov 40, Vysočina, 582 53 - Email: juzlj@seznam.cz - Jůzlová.cz\",\"breadcrumb\":{\"@id\":\"https://juzlova.cz/kontakt/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://juzlova.cz/kontakt/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://juzlova.cz/kontakt/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://juzlova.cz/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Kontakt\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://juzlova.cz/#website\",\"url\":\"https://juzlova.cz/\",\"name\":\"Jůzlová.cz — Potravinárské smesi — Vysočina\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://juzlova.cz/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}"
+ ],
+ "h1": [
+  "Kontakt",
+  "Kochánov, Vysočina",
+  "Humpolec, Vysočina"
+ ],
+ "h2": [],
+ "images_referenced": [
+  "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "https://juzlova.cz/wp-content/uploads/fusion-scripts/a0c26cb86f38377e4c6fabd6ed939108.min.js?ver=3.14.2"
+ ]
+}

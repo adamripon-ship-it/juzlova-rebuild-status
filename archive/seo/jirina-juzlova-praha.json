@@ -1,0 +1,31 @@
+{
+ "url": "https://juzlova.cz/jirina-juzlova-praha/",
+ "wayback_timestamp": "20220927072910",
+ "slug": "jirina-juzlova-praha",
+ "title": "Jířa Jůzlová - Praha",
+ "meta": {
+  "viewport": "width=device-width, initial-scale=1",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "description": "Jířa Jůzlová - Praha",
+  "og:title": "Jiřina Jůzlová - Praha",
+  "og:type": "article",
+  "og:url": "https://juzlova.cz/jirina-juzlova-praha/",
+  "og:site_name": "Jůzlová.cz  —  Potravinárské smesi  — Vysočina",
+  "og:description": "",
+  "og:image": "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "generator": "Powered by Slider Revolution 6.5.7 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.",
+  "msapplication-TileImage": "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-270x270.png",
+  "google-site-verification": "_YHMvyPcIRlwPT_79uzkPu50JyF0VaRnTe8JKAgJo2g",
+  "seznam-wmt": "cXiE8JwAYlMKfDmFIdMOe4vxCK8paRYD",
+  "msvalidate.01": "94849AF9DFD3FDE828AEB2E4EC2B1F14"
+ },
+ "canonical": "https://juzlova.cz/jirina-juzlova-praha/",
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://juzlova.cz/#website\",\"url\":\"https://juzlova.cz/\",\"name\":\"Jůzlová.cz — Potravinárské smesi — Vysočina\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://juzlova.cz/?s={search_term_string}\"},\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"en-US\"},{\"@type\":\"WebPage\",\"@id\":\"https://juzlova.cz/jirina-juzlova-praha/\",\"url\":\"https://juzlova.cz/jirina-juzlova-praha/\",\"name\":\"Jířa Jůzlová - Praha\",\"isPartOf\":{\"@id\":\"https://juzlova.cz/#website\"},\"datePublished\":\"2015-12-22T17:11:16+00:00\",\"dateModified\":\"2017-06-09T16:16:49+00:00\",\"description\":\"Jířa Jůzlová - Praha\",\"breadcrumb\":{\"@id\":\"https://juzlova.cz/jirina-juzlova-praha/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://juzlova.cz/jirina-juzlova-praha/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://juzlova.cz/jirina-juzlova-praha/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://juzlova.cz/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Jiřina Jůzlová &#8211; Praha\"}]}]}"
+ ],
+ "h1": [],
+ "h2": [],
+ "images_referenced": [
+  "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png"
+ ]
+}

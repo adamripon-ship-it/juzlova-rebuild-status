@@ -1,0 +1,61 @@
+name: Wayback archive fetch
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/website-deployment-258ncm]
+    paths:
+      - '.github/workflows/wayback-archive.yml'
+      - 'scripts/wayback_archive.py'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch full juzlova.cz mirror from the Wayback Machine
+        run: |
+          if python -c "import json,sys; m=json.load(open('archive/manifest.json')); sys.exit(0 if len(m['failed'])==0 else 1)" 2>/dev/null; then
+            echo "Archive already complete (0 failures) — skipping crawl."
+          else
+            python scripts/wayback_archive.py
+          fi
+      - name: Fetch generated hero images
+        if: always()
+        run: |
+          mkdir -p img
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+          grab() { [ -f "img/$1" ] || curl -fSL -A "$UA" --retry 3 -o "img/$1" "$2" || { echo "FAILED $1"; rm -f "img/$1"; }; }
+          grab hero.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5_min.webp"
+          grab hero.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_011803_7a6c5524-80df-4eb1-8275-ecaede8404f5.png"
+          grab workshop.webp "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_012021_260c1625-ff7f-42ab-92f5-7a25f72ed1da_min.webp"
+          command -v ffmpeg && [ -f img/hero.png ] && ffmpeg -y -loglevel error -i img/hero.png -vf scale=1920:-2 -q:v 3 img/hero.jpg && rm -f img/hero.png || true
+          ls -la img/ | sed -n '1,30p'
+      - name: Try 2019-capture recipe thumbnails
+        if: always()
+        run: |
+          try_img() { [ -f "archive/images/$1" ] || curl -fsSL -o "archive/images/$1" "https://web.archive.org/web/20190328202526im_/https://www.juzlova.cz/wp-content/uploads/2017/04/$2" || rm -f "archive/images/$1"; }
+          try_img "wp-content_uploads_2017_04_Domaci-pernik-300x206.png" "Domaci-pernik-300x206.png"
+          try_img "wp-content_uploads_2017_04_slehackova-rolada-juzlova-1-1-300x206.gif" "slehackova-rolada-juzlova-1-1-300x206.gif"
+          try_img "wp-content_uploads_2017_04_Strapacky-se-zelim-a-slaninou-recept-juzlova.jpg" "Strapacky-se-zelim-a-slaninou-recept-juzlova.jpg"
+          try_img "wp-content_uploads_2017_04_Hruskovy-kolac-s-vanilkovym-pudinkem-2-300x300-300x206.png" "Hruskovy-kolac-s-vanilkovym-pudinkem-2-300x300-300x206.png"
+          try_img "wp-content_uploads_2017_04_Pe_en_-_i_ky-s-m_kem-recept-300x206.png" "Pe%C4%8Den%C3%A9-%C5%A1i%C5%A1ky-s-m%C3%A1kem-recept-300x206.png"
+          try_img "wp-content_uploads_2017_04_Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg" "Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg"
+          for f in archive/images/wp-content_uploads_2017_04_*; do [ -f "$f" ] && grep -qi "temporarily offline\|<html" "$f" && rm -f "$f" || true; done
+      - name: Commit archive
+        if: always()
+        run: |
+          git config user.name "wayback-archive-bot"
+          git config user.email "actions@github.com"
+          git add archive/ img/
+          git diff --cached --quiet && echo "nothing new" && exit 0
+          git commit -m "Archive: full juzlova.cz mirror from Wayback Machine (pages, SEO, images, CDX)"
+          git pull --rebase origin "${GITHUB_REF_NAME}" || true
+          git push

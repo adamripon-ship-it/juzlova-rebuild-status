@@ -1,0 +1,40 @@
+{
+ "url": "https://juzlova.cz/sisky-s-makem-recept/",
+ "wayback_timestamp": "20260119195229",
+ "slug": "sisky-s-makem-recept",
+ "title": "Šišky s mákem recept",
+ "meta": {
+  "viewport": "width=device-width, initial-scale=1",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "description": "Strapačky se zelím a slaninou",
+  "twitter:label1": "Est. reading time",
+  "twitter:data1": "1 minute",
+  "og:locale": "en_US",
+  "og:type": "article",
+  "og:site_name": "Jůzlová.cz  —  Potravinárské smesi  — Vysočina",
+  "og:title": "Šišky s mákem recept",
+  "og:description": "Strapačky se zelím a slaninou",
+  "og:url": "https://juzlova.cz/sisky-s-makem-recept/",
+  "article:modified_time": "2026-01-13T21:50:23+01:00",
+  "og:image": "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "og:image:width": "118",
+  "og:image:height": "72",
+  "og:image:type": "image/png",
+  "generator": "Powered by Slider Revolution 6.7.39 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.",
+  "msapplication-TileImage": "https://juzlova.cz/wp-content/uploads/2017/06/cropped-Juzlova-favicon-2017-270x270.png"
+ },
+ "canonical": "https://juzlova.cz/sisky-s-makem-recept/",
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://juzlova.cz/sisky-s-makem-recept/\",\"url\":\"https://juzlova.cz/sisky-s-makem-recept/\",\"name\":\"Šišky s mákem recept\",\"isPartOf\":{\"@id\":\"https://juzlova.cz/#website\"},\"datePublished\":\"2015-02-28T18:19:55+00:00\",\"dateModified\":\"2026-01-13T21:50:23+00:00\",\"description\":\"Šišky s mákem recept - Jůzlová - Potravinářské Směsi\",\"breadcrumb\":{\"@id\":\"https://juzlova.cz/sisky-s-makem-recept/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://juzlova.cz/sisky-s-makem-recept/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://juzlova.cz/sisky-s-makem-recept/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://juzlova.cz/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Šišky s mákem\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://juzlova.cz/#website\",\"url\":\"https://juzlova.cz/\",\"name\":\"Jůzlová.cz — Potravinárské smesi — Vysočina\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://juzlova.cz/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}"
+ ],
+ "h1": [
+  "Šišky s mákem"
+ ],
+ "h2": [
+  "Lucie Kůželové"
+ ],
+ "images_referenced": [
+  "https://juzlova.cz/wp-content/uploads/2017/06/juzlova-logo-black-2017.png",
+  "https://juzlova.cz/wp-content/uploads/fusion-scripts/afb9c3e1bb29d9505a1af3302468a111.min.js?ver=3.14.2"
+ ]
+}

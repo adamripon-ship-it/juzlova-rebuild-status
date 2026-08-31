@@ -1,0 +1,31 @@
+{
+ "url": "https://www.juzlova.cz/",
+ "wayback_timestamp": "20260610154026",
+ "slug": "home",
+ "title": "Jůzlová - Potravinářské Směsi",
+ "meta": {
+  "viewport": "width=device-width, initial-scale=1.0",
+  "theme-color": "",
+  "og:site_name": "Jůzlová - Potravinářské Směsi",
+  "og:url": "https://www.juzlova.cz/",
+  "og:title": "Jůzlová - Potravinářské Směsi",
+  "og:type": "website",
+  "og:description": "Jůzlová - Potravinářské Směsi",
+  "twitter:card": "summary_large_image",
+  "twitter:title": "Jůzlová - Potravinářské Směsi",
+  "twitter:description": "Jůzlová - Potravinářské Směsi",
+  "shopify-digital-wallet": "/98903261526/digital_wallets/dialog",
+  "shopify-checkout-api-token": "cb830cd5c8245c021931a9a30718178d"
+ },
+ "canonical": "https://www.juzlova.cz/",
+ "jsonld": [
+  "{\n    \"@context\": \"http://schema.org\",\n    \"@type\": \"Organization\",\n    \"name\": \"Jůzlová - Potravinářské Směsi\",\n    \n      \"logo\": \"https:\\/\\/www.juzlova.cz\\/cdn\\/shop\\/files\\/juzlova-bk-lg.png?v=1768856484\\u0026width=4053\",\n    \n    \"sameAs\": [\n      \"\",\n      \"https:\\/\\/www.facebook.com\\/juzlova\\/\",\n      \"\",\n      \"\",\n      \"\",\n      \"\",\n      \"\",\n      \"\",\n      \"\"\n    ],\n    \"url\": \"https:\\/\\/www.juzlova.cz\"\n  }",
+  "{\n      \"@context\": \"http://schema.org\",\n      \"@type\": \"WebSite\",\n      \"name\": \"Jůzlová - Potravinářské Směsi\",\n      \"potentialAction\": {\n        \"@type\": \"SearchAction\",\n        \"target\": \"https:\\/\\/www.juzlova.cz\\/search?q={search_term_string}\",\n        \"query-input\": \"required name=search_term_string\"\n      },\n      \"url\": \"https:\\/\\/www.juzlova.cz\"\n    }"
+ ],
+ "h1": [
+  "",
+  "Chuť, která spojuje.\n\n Od naší rodiny k vaší."
+ ],
+ "h2": [],
+ "images_referenced": []
+}
