@@ -31,14 +31,16 @@ header.site {
   background: rgba(250, 246, 239, .92); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
+header.site .wrap { max-width: 1240px; }
 .bar { display: flex; align-items: center; gap: 1rem; padding: .7rem 0; }
-.brand { display: flex; align-items: baseline; gap: .55rem; text-decoration: none; color: var(--ink); margin-right: auto; }
-.brand .name { font-size: 1.45rem; font-weight: 700; letter-spacing: .01em; }
-.brand .tag { font-family: var(--sans); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
-nav.main { display: flex; flex-wrap: wrap; gap: .1rem; align-items: center; }
+.brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--ink); margin-right: auto; }
+.brand .wordmark { height: 34px; width: auto; display: block; }
+.brand .wordmark.on-dark { display: none; }
+.brand .tag { font-family: var(--sans); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); padding-left: .7rem; border-left: 1px solid var(--line); }
+nav.main { display: flex; flex-wrap: nowrap; gap: .05rem; align-items: center; }
 nav.main > a, .navgroup > button {
   font-family: var(--sans); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--ink); text-decoration: none; padding: .5rem .65rem; background: none; border: 0; cursor: pointer;
+  color: var(--ink); text-decoration: none; padding: .5rem .55rem; background: none; border: 0; cursor: pointer; white-space: nowrap;
 }
 nav.main > a.active { color: var(--gold-deep); box-shadow: inset 0 -2px 0 var(--gold); }
 nav.main > a:hover, .navgroup > button:hover { color: var(--rust); }
@@ -182,7 +184,8 @@ body.filmed header.site.scrolled { background: rgba(29,23,18,.88); backdrop-filt
   animation: grain 8s steps(10) infinite; }
 @keyframes grain { 0%{transform:translate(0,0)} 50%{transform:translate(3%,-2%)} 100%{transform:translate(-2%,3%)} }
 .film .copy { position: absolute; inset: 0; z-index: 4; display: grid; place-items: center; text-align: center; padding: 0 1.4rem; }
-.filmline { position: absolute; max-width: 780px; opacity: 0; will-change: opacity, transform; color: #f5efe4; }
+.filmline { position: absolute; max-width: 780px; opacity: 0; pointer-events: none; will-change: opacity, transform; color: #f5efe4; }
+.filmline:first-child { opacity: 1; pointer-events: auto; }
 .filmline .est { font-family: var(--sans); font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; }
 .filmline h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1.08; margin: 0 0 1rem; text-wrap: balance; text-shadow: 0 2px 24px rgba(0,0,0,.45); }
 .filmline p { font-size: clamp(1.05rem, 2.1vw, 1.3rem); color: #ead9be; max-width: 640px; margin: 0 auto 1.6rem; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
@@ -215,3 +218,36 @@ body.filmed header.site.scrolled { background: rgba(29,23,18,.88); backdrop-filt
 .card:hover img.thumb { transform: scale(1.05); }
 .btn { position: relative; overflow: hidden; }
 .btn.gold:active { transform: translateY(0) scale(.98); }
+
+/* ═══ brand marks (contrast-driven) ═══ */
+body.filmed .brand .wordmark.on-light { display: none; }
+body.filmed .brand .wordmark.on-dark  { display: block; }
+body.filmed .brand .tag { border-left-color: rgba(245,239,228,.35); }
+footer.site { position: relative; overflow: hidden; }
+footer.site .footmark {
+  position: absolute; right: -70px; bottom: -110px; width: 340px; height: auto;
+  opacity: .05; pointer-events: none; user-select: none;
+}
+footer.site .cols, footer.site .fine { position: relative; }
+footer.site .footlogo { height: 40px; width: auto; display: block; margin-bottom: .9rem; }
+@media (max-width: 760px) {
+  .brand .wordmark { height: 28px; }
+  .brand .tag { display: none; }
+  footer.site .footmark { width: 220px; right: -50px; bottom: -80px; }
+}
+
+@media (max-width: 1180px) { .brand .tag { display: none; } }
+
+/* contrast fixes on the film pages: the tagline and kicker sit on dark or
+   bright frames, so they need their own light colour and a shadow */
+body.filmed header.site .brand .tag { color: #e2d5bc; }
+.film .hint { transition: opacity .3s ease; }
+
+/* The frame gradient is at its thinnest exactly where the copy sits, so the
+   landscape frame's hazy sky washes the kicker out. A soft ellipse under the
+   copy layer holds the text without flattening the picture behind it. */
+.film .copy::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 70% 42% at 50% 47%, rgba(16,12,9,.5), rgba(16,12,9,0) 72%);
+}
+.filmline .est { color: #dcb865; text-shadow: 0 1px 14px rgba(0,0,0,.65); }

@@ -69,15 +69,30 @@
       f.style.opacity = vis;
       f.style.transform = 'scale(' + (1 + local * 0.09) + ')';
     });
-    lines.forEach(function (l) {
+    var last = lines.length - 1;
+    lines.forEach(function (l, i) {
       var a = parseFloat(l.getAttribute('data-in') || 0);
       var b = parseFloat(l.getAttribute('data-out') || 1);
-      var mid = (a + b) / 2, span = (b - a) / 2;
-      var vis = clamp(1 - Math.abs(p - mid) / span * 1.4);
+      // Trapezoid: hold the copy readable across its whole window, fading only
+      // at the edges. The opening act is already visible at rest, and the
+      // closing act stays up through the end of the film.
+      var fade = Math.min(0.1, (b - a) * 0.4);
+      var vis;
+      if (p <= a) vis = i === 0 ? 1 : 0;
+      else if (p >= b) vis = i === last ? 1 : 0;
+      else vis = Math.min(i === 0 ? 1 : clamp((p - a) / fade),
+                          i === last ? 1 : clamp((b - p) / fade));
       l.style.opacity = vis;
       l.style.transform = 'translateY(' + (1 - vis) * 26 + 'px)';
+      // Acts are stacked on top of each other, so only the visible one may
+      // take clicks — otherwise a faded act swallows the other's buttons.
+      l.style.pointerEvents = vis > 0.5 ? 'auto' : 'none';
     });
+    if (hint) hint.style.opacity = clamp(1 - p * 5);
   }
+
+  /* scroll hint retires once the film is under way */
+  var hint = film ? film.querySelector('.hint') : null;
 
   /* ── parallax bands ── */
   var plx = [].slice.call(document.querySelectorAll('[data-plx]'));

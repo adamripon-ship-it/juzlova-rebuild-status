@@ -160,7 +160,11 @@ def nav(L, depth, active, path):
         cls = ' class="on"' if other == lg else ""
         langsel += f'<a{cls} lang="{other}" hreflang="{other}" href="{url_for(other, path)}">{other.upper()}</a>'
     return f"""<div class="bar">
-  <a class="brand" href="{p if p else './'}"><span class="name">Jůzlová.cz</span><span class="tag">{esc(ui["brand_tag"])}</span></a>
+  <a class="brand" href="{p if p else './'}" aria-label="Jůzlová.cz">
+    <img class="wordmark on-light" src="{p}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200">
+    <img class="wordmark on-dark" src="{p}img/logo-wordmark-white.png" alt="" aria-hidden="true" width="650" height="200">
+    <span class="tag">{esc(ui["brand_tag"])}</span>
+  </a>
   <nav class="main" aria-label="hlavní navigace">
     {a('', ui['nav_home'], 'home')}
     {a('kdo_jsme/', ui['nav_about'], 'kdo_jsme')}
@@ -184,9 +188,11 @@ def footer(L, depth):
         f'<a href="{p}{slug}/">{esc(L["recipes"].get(slug, {}).get("name", slug))}</a>'
         for slug in RECIPE_SLUGS[:5])
     return f"""<footer class="site">
+  <img class="footmark" src="{p}img/mark-white.png" alt="" aria-hidden="true" width="640" height="640">
   <div class="wrap">
     <div class="cols">
-      <div><h4>Jůzlová</h4>
+      <div>
+        <img class="footlogo" src="{p}img/logo-wordmark-white.png" alt="Jůzlová" width="650" height="200">
         <p style="font-size:.92rem;margin:.2rem 0 1rem">{esc(ui['footer_note'])}</p>
         <p style="font-size:.88rem">{esc(ui['footer_addr'])}<br>+420 728 466 141 · +420 607 629 931<br><a href="mailto:juzlj@seznam.cz" style="display:inline">juzlj@seznam.cz</a></p>
       </div>
@@ -208,7 +214,7 @@ def org_jsonld():
     return {
         "@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"],
         "@id": BASE + "/#org", "name": "Jůzlová",
-        "url": BASE + "/", "logo": BASE + "/img/logo.png",
+        "url": BASE + "/", "logo": BASE + "/img/logo-wordmark-black.png",
         "foundingDate": "2004", "email": "juzlj@seznam.cz",
         "telephone": "+420728466141",
         "address": {"@type": "PostalAddress", "streetAddress": "Kochánov 40",
@@ -249,7 +255,12 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 <meta property="og:image" content="{ogimg}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{p}assets/site.css">
-<link rel="icon" href="{p}img/favicon.png" type="image/png">
+<link rel="icon" href="{p}img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{p}img/icon-32.png">
+<link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)" href="{p}img/icon-white-32.png">
+<link rel="apple-touch-icon" href="{p}img/apple-touch-icon.png">
+<link rel="manifest" href="{p}site.webmanifest">
+<meta name="theme-color" content="#021536">
 {ld}
 </head>
 <body{body_cls}>
@@ -630,6 +641,21 @@ def build_sitemap(langs_data):
           '<?xml version="1.0" encoding="UTF-8"?>\n' + ns + "\n" + "\n".join(entries) + "\n</urlset>\n")
 
 
+def build_manifest():
+    write(["site.webmanifest"], json.dumps({
+        "name": "Jůzlová — potravinářské směsi",
+        "short_name": "Jůzlová",
+        "start_url": BASE + "/",
+        "display": "standalone",
+        "background_color": "#faf6ef",
+        "theme_color": "#021536",
+        "icons": [
+            {"src": BASE + "/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
+            {"src": BASE + "/img/icon-512.png", "sizes": "512x512", "type": "image/png"},
+        ],
+    }, ensure_ascii=False, indent=1))
+
+
 def build_robots():
     write(["robots.txt"], f"""User-agent: *
 Allow: /
@@ -736,10 +762,8 @@ def copy_images():
                       ("strapacky.jpg", "strapacky-alt.png")]:
         if not (dst / want).exists() and (dst / alt).exists():
             shutil.copyfile(dst / alt, dst / want)
-    logo = dst / "logo.png"
-    fav = dst / "favicon.png"
-    if logo.exists() and not fav.exists():
-        shutil.copyfile(logo, fav)
+    # img/logo.png is the recovered 2017 logo, kept as an archive asset; the
+    # icons the site actually links come from scripts/make_brand_assets.py.
 
 
 def main():
@@ -758,6 +782,7 @@ def main():
     build_redirects()
     build_sitemap(langs_data)
     build_robots()
+    build_manifest()
     build_llms(langs_data)
     print("built:", ", ".join(LANGS))
 
