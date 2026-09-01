@@ -10,6 +10,7 @@ alternates, JSON-LD (Organization, Product, Recipe, FAQPage,
 BreadcrumbList), plus sitemap.xml, robots.txt, llms.txt, llms-full.txt
 and legacy-URL redirect stubs.
 """
+import hashlib
 import html as H
 import importlib.util
 import json
@@ -20,14 +21,33 @@ import shutil
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+
+def _load_dotenv():
+    path = ROOT / ".env"
+    if not path.is_file():
+        return
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+_load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://juzlova.cz")
-TODAY = "2026-08-31"
+TODAY = "2026-09-01"
 
 LANGS = ["cs", "en", "de", "sk"]
 PRODUCT_SLUGS = {
     "bramborove_knedliky": "bramborove_knedliky",
     "chlupate_knedliky": "chlupate-knedliky",
     "vanilkovy_pudink": "vanilkovy_pudink",
+    "kakaovy_pudink": "kakaovy_pudink",
     "kakao_holandskeho_typu": "kakao-holandskeho-typu",
     "vanilkovy_cukr": "vanilkovy-cukr",
 }
@@ -64,8 +84,6 @@ IMAGE_MAP = {
     "wp-content_uploads_2017_04_Strapacky-se-zelim-a-slaninou-recept-juzlova.jpg": "strapacky.jpg",
     "wp-content_uploads_2017_04_Hruskovy-kolac-s-vanilkovym-pudinkem-2-300x300-300x206.png": "hruskovy-kolac.png",
     "wp-content_uploads_2017_04_Pe_en_-_i_ky-s-m_kem-recept-300x206.png": "sisky-s-makem.png",
-    "wp-content_uploads_2015_02_bramborove-sisky-s-makem-recept3-150x150.png": "sisky-s-makem-alt.png",
-    "wp-content_uploads_2015_03_Strapacky-se-zellm-a-slaninou-2-150x150.png": "strapacky-alt.png",
     "wp-content_uploads_2012_07_IMG_20141026_100948-300x225.png": "vyroba.png",
     "wp-content_uploads_2017_04_Bramborovo-tvarohove-knedliky-s-jahodami-podle-lucie-kuzelove.jpg": "bramborovo-tvarohove-knedliky.jpg",
 }
@@ -73,8 +91,9 @@ PRODUCT_IMG = {
     "bramborove_knedliky": "produkt-bramborove-knedliky.webp",
     "chlupate_knedliky": "produkt-chlupate-knedliky.webp",
     "vanilkovy_pudink": "produkt-vanilkovy-puding.webp",
+    "kakaovy_pudink": "kakaovy-puding.png",
     "kakao_holandskeho_typu": "produkt-kakao.webp",
-    "vanilkovy_cukr": "vanilkovy-cukr-pytliky.webp",  # the workshop’s own photo
+    "vanilkovy_cukr": "vanilkovy-cukr-pytliky.webp",
 }
 RECIPE_IMG = {
     "sisky-s-makem-recept": "sisky-s-makem.png",
@@ -89,15 +108,12 @@ PRICE_ROWS = [  # (product key, package, price CZK)
     ("bramborove_knedliky", "5 kg", "165 Kč"),
     ("chlupate_knedliky", "5 kg", "185 Kč"),
     ("vanilkovy_pudink", "1 kg / 400 g", "34 Kč / 17 Kč"),
-    (None, "1 kg / 400 g", "44 Kč / 22 Kč"),  # kakaovy puding row, name via lang
+    ("kakaovy_pudink", "1 kg / 400 g", "44 Kč / 22 Kč"),
     ("kakao_holandskeho_typu", "500 g", "100 Kč"),
     ("vanilkovy_cukr", "1 kg", "38 Kč"),
 ]
-KAKAOVY_PUDING_NAME = {
-    "cs": "Kakaový puding", "en": "Cocoa pudding", "de": "Kakaopudding", "sk": "Kakaový puding",
-}
 LEGACY_REDIRECTS = {
-    "kakao": "kakao-holandskeho-typu", "kakaovy_puding": "vanilkovy_pudink",
+    "kakao": "kakao-holandskeho-typu", "kakaovy_puding": "kakaovy_pudink",
     "vanilkovy_puding": "vanilkovy_pudink", "jiri-juzl": "kontakt",
     "jirina-juzlova": "kontakt", "jirina-juzlova-praha": "kontakt",
     "dotaz-na-produkty": "kontakt", "kdo-jsme": "kdo_jsme",
@@ -134,8 +150,41 @@ def url_for(lang, path):
     return f"{BASE}/{lang_prefix(lang)}{path}"
 
 
+def google_form_embed_src():
+    """Native Google Form iframe src from Google Forms (Send → Embed)."""
+    raw = os.environ.get("GOOGLE_FORM_EMBED_URL", "").strip()
+    if not raw:
+        return ""
+    if raw.startswith("http://"):
+        raw = "https://" + raw[7:]
+    if not raw.startswith("https://docs.google.com/forms/"):
+        return ""
+    if "embedded=true" not in raw:
+        raw += ("&" if "?" in raw else "?") + "embedded=true"
+    return raw
+
+
 def rel(depth):
     return "../" * depth
+
+
+def asset_rel(depth):
+    """Prefix from this page to the site root (img, css, js)."""
+    return rel(depth)
+
+
+def page_rel(lang, depth):
+    """Prefix from this page to the language home (nav, products, footer)."""
+    extra = 0 if lang == "cs" else 1
+    return rel(max(depth - extra, 0))
+
+
+def lang_href(other, path, depth):
+    """Relative language-switcher URL (works on file:// and preview hosts)."""
+    root = asset_rel(depth)
+    if other == "cs":
+        return (root if root else "./") + path
+    return root + other + "/" + path
 
 
 def hreflangs(path):
@@ -147,64 +196,78 @@ def hreflangs(path):
 
 
 def nav(L, depth, active, path):
-    p = rel(depth)
+    assets = asset_rel(depth)
+    pages = page_rel(L["code"], depth)
     ui = L["ui"]
     lg = L["code"]
-    home = p + ("" if lg == "cs" else "")  # within language tree, p already points at language root
+    home = pages if pages else "./"
+
     def a(slug, label, key):
         cls = ' class="active"' if active == key else ""
-        return f'<a href="{p}{slug}"{cls}>{esc(label)}</a>'
+        href = home if slug == "" else f"{pages}{slug}"
+        return f'<a href="{href}"{cls}>{esc(label)}</a>'
     prods = "".join(
-        f'<a href="{p}{PRODUCT_SLUGS[k]}/">{esc(L["products"][k]["name"])}</a>'
+        f'<a href="{pages}{PRODUCT_SLUGS[k]}/">{esc(L["products"][k]["name"])}</a>'
         for k in PRODUCT_SLUGS)
     langsel = ""
     for other in LANGS:
         cls = ' class="on"' if other == lg else ""
-        langsel += f'<a{cls} lang="{other}" hreflang="{other}" href="{url_for(other, path)}">{other.upper()}</a>'
+        langsel += (
+            f'<a{cls} lang="{other}" hreflang="{other}" '
+            f'href="{lang_href(other, path, depth)}">{other.upper()}</a>'
+        )
     return f"""<div class="bar">
-  <a class="brand" href="{p if p else './'}" aria-label="Jůzlová.cz">
-    <img class="wordmark on-light" src="{p}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200">
-    <img class="wordmark on-dark" src="{p}img/logo-wordmark-white.png" alt="" aria-hidden="true" width="650" height="200">
+  <a class="brand" href="{home}" aria-label="Jůzlová.cz">
+    <img class="wordmark on-light" src="{assets}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200">
+    <img class="wordmark on-dark" src="{assets}img/logo-wordmark-white.png" alt="" aria-hidden="true" width="650" height="200">
     <span class="tag">{esc(ui["brand_tag"])}</span>
   </a>
-  <nav class="main" aria-label="hlavní navigace">
+  <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="{esc(ui['menu_open'])}" data-open-label="{esc(ui['menu_open'])}" data-close-label="{esc(ui['menu_close'])}">
+    <span class="menu-toggle-bars" aria-hidden="true"></span>
+  </button>
+  <nav class="main" id="site-nav" aria-label="{esc(ui['nav_aria'])}">
     {a('', ui['nav_home'], 'home')}
     {a('kdo_jsme/', ui['nav_about'], 'kdo_jsme')}
     {a('kde-nas-najdete/', ui['nav_delivery'], 'kde_nas_najdete')}
-    <span class="navgroup"><button type="button">{esc(ui['nav_products'])} ▾</button><span class="drop">{prods}</span></span>
+    <span class="navgroup">
+      <button type="button" class="nav-products" aria-expanded="false" aria-controls="nav-products-list">{esc(ui['nav_products'])} ▾</button>
+      <span class="drop" id="nav-products-list">{prods}</span>
+    </span>
     {a('ceny/', ui['nav_prices'], 'ceny')}
     {a('recepty/', ui['nav_recipes'], 'recepty')}
     {a('kontakt/', ui['nav_contact'], 'kontakt')}
     <span class="langs" aria-label="{esc(ui['lang_label'])}">{langsel}</span>
   </nav>
-</div>"""
+</div>
+<div class="nav-backdrop" hidden></div>"""
 
 
 def footer(L, depth):
-    p = rel(depth)
+    assets = asset_rel(depth)
+    pages = page_rel(L["code"], depth)
     ui = L["ui"]
     prods = "".join(
-        f'<a href="{p}{PRODUCT_SLUGS[k]}/">{esc(L["products"][k]["name"])}</a>'
+        f'<a href="{pages}{PRODUCT_SLUGS[k]}/">{esc(L["products"][k]["name"])}</a>'
         for k in PRODUCT_SLUGS)
     recs = "".join(
-        f'<a href="{p}{slug}/">{esc(L["recipes"].get(slug, {}).get("name", slug))}</a>'
-        for slug in RECIPE_SLUGS[:5])
+        f'<a href="{pages}{slug}/">{esc(L["recipes"].get(slug, {}).get("name", slug))}</a>'
+        for slug in RECIPE_SLUGS)
     return f"""<footer class="site">
-  <img class="footmark" src="{p}img/mark-white.png" alt="" aria-hidden="true" width="640" height="640">
+  <img class="footmark" src="{assets}img/mark-white.png" alt="" aria-hidden="true" width="640" height="640">
   <div class="wrap">
     <div class="cols">
       <div>
-        <img class="footlogo" src="{p}img/logo-wordmark-white.png" alt="Jůzlová" width="650" height="200">
+        <img class="footlogo" src="{assets}img/logo-wordmark-white.png" alt="Jůzlová" width="650" height="200">
         <p style="font-size:.92rem;margin:.2rem 0 1rem">{esc(ui['footer_note'])}</p>
         <p style="font-size:.88rem">{esc(ui['footer_addr'])}<br>+420 728 466 141 · +420 607 629 931<br><a href="mailto:juzlj@seznam.cz" style="display:inline">juzlj@seznam.cz</a></p>
       </div>
       <div><h4>{esc(ui['footer_products'])}</h4>{prods}</div>
       <div><h4>{esc(ui['footer_recipes'])}</h4>{recs}</div>
       <div><h4>{esc(ui['footer_company'])}</h4>
-        <a href="{p}kdo_jsme/">{esc(ui['nav_about'])}</a>
-        <a href="{p}kde-nas-najdete/">{esc(ui['nav_delivery'])}</a>
-        <a href="{p}ceny/">{esc(ui['nav_prices'])}</a>
-        <a href="{p}kontakt/">{esc(ui['nav_contact'])}</a>
+        <a href="{pages}kdo_jsme/">{esc(ui['nav_about'])}</a>
+        <a href="{pages}kde-nas-najdete/">{esc(ui['nav_delivery'])}</a>
+        <a href="{pages}ceny/">{esc(ui['nav_prices'])}</a>
+        <a href="{pages}kontakt/">{esc(ui['nav_contact'])}</a>
       </div>
     </div>
     <div class="fine"><span>© 2004–2026 Jůzlová s.r.o. · IČO 45900124</span><span>{esc(ui['open_hours'])}</span></div>
@@ -224,7 +287,7 @@ def org_jsonld():
                     "addressCountry": "CZ"},
         "areaServed": ["Havlíčkův Brod", "Humpolec", "Světlá nad Sázavou", "Jihlava",
                        "Czech Republic"],
-        "openingHours": "Mo-Sa 08:00-19:00",
+        "openingHours": "Mo-Su 08:00-19:00",
         "description": "Rodinná výroba potravinářských směsí od roku 2004: knedlíky v prášku, pudingy bez lepku, vanilínový cukr, kakao holandského typu.",
     }
 
@@ -237,8 +300,9 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
         f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>'
         for b in blocks)
     ogimg = og_img or f"{BASE}/img/hero.webp"
-    p = rel(depth)
+    p = asset_rel(depth)
     body_cls = f' class="{body_class}"' if body_class else ""
+    skip = esc(L["ui"]["skip_label"])
     return f"""<!doctype html>
 <html lang="{lg}">
 <head>
@@ -266,6 +330,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 {ld}
 </head>
 <body{body_cls}>
+<a class="skip" href="#main">{skip}</a>
 <header class="site">
   <div class="wrap">{nav(L, depth, active, path)}</div>
 </header>
@@ -278,7 +343,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 
 
 def render_body(L, body_spec, depth):
-    p = rel(depth)
+    pages = page_rel(L["code"], depth)
     out = []
     for kind, val in body_spec:
         if kind == "p":
@@ -290,7 +355,7 @@ def render_body(L, body_spec, depth):
         elif kind == "ol":
             out.append("<ol>" + "".join(f"<li>{esc(x)}</li>" for x in val) + "</ol>")
         elif kind == "contacts":
-            out.append(f"""<div class="factbox"><dl>
+            out.append("""<div class="factbox"><dl>
 <dt>Jiřina Jůzlová</dt><dd>Kochánov 40, 582 53 · <a href="tel:+420728466141">+420 728 466 141</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a></dd>
 <dt>Jiří Jůzl</dt><dd>Kochánov 40, 582 53 · <a href="tel:+420607629931">+420 607 629 931</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a></dd>
 </dl></div>""")
@@ -298,14 +363,28 @@ def render_body(L, body_spec, depth):
             ui = L["ui"]
             rows = ""
             for key, pack, price in PRICE_ROWS:
-                if key is None:
-                    name = KAKAOVY_PUDING_NAME[L["code"]]
-                    link = esc(name)
-                else:
-                    name = L["products"][key]["name"]
-                    link = f'<a href="{p}{PRODUCT_SLUGS[key]}/">{esc(name)}</a>'
+                name = L["products"][key]["name"]
+                link = f'<a href="{pages}{PRODUCT_SLUGS[key]}/">{esc(name)}</a>'
                 rows += f"<tr><td>{link}</td><td>{esc(pack)}</td><td><strong>{esc(price)}</strong></td></tr>"
-            out.append(f"""<table class="tbl"><thead><tr><th>{esc(ui['nav_products'])}</th><th>{esc(ui['package_label'])}</th><th>{esc(ui['price_label'])}</th></tr></thead><tbody>{rows}</tbody></table>""")
+            out.append(
+                f"""<table class="tbl"><thead><tr><th>{esc(ui['nav_products'])}</th>"""
+                f"""<th>{esc(ui['package_label'])}</th><th>{esc(ui['price_label'])}</th>"""
+                f"""</tr></thead><tbody>{rows}</tbody></table>"""
+            )
+        elif kind == "form":
+            ui = L["ui"]
+            src = google_form_embed_src()
+            if src:
+                out.append(f"""<div class="google-form">
+  <h2>{esc(ui['form_h'])}</h2>
+  <p class="form-hint">{esc(ui['form_hint'])}</p>
+  <iframe class="google-form-frame" title="{esc(ui['form_h'])}" src="{esc(src)}" loading="lazy"></iframe>
+</div>""")
+            else:
+                out.append(f"""<div class="google-form google-form-pending">
+  <h2>{esc(ui['form_h'])}</h2>
+  <p class="form-hint">{esc(ui['form_google_pending'])}</p>
+</div>""")
     return "\n".join(out)
 
 
@@ -343,30 +422,30 @@ def write(path_parts, content):
 
 def img_or_none(depth, name):
     if name and (ROOT / "img" / name).exists():
-        return rel(depth) + "img/" + name
+        return asset_rel(depth) + "img/" + name
     return None
 
 
-# The film opens on Kochánov itself: the aerial the old site ran as its
-# background video, recovered from the archive. Their own village, not a
-# stand-in for it.
-FILM_FRAMES = ["kochanov-letecky.webp", "hero.webp", "film-blizko.webp", "film-makro.webp"]
-SCROLL_HINT = {"cs": "Rolujte", "en": "Scroll", "de": "Scrollen", "sk": "Rolujte"}
+def product_img_src(depth, key):
+    return img_or_none(depth, PRODUCT_IMG.get(key))
+
+
+# Compact convert-first hero uses one still. Film frames stay on disk unused.
+HERO_STILLS = ["kochanov-letecky.webp", "hero.webp"]
 
 
 def build_home(L):
     lg = L["code"]
     depth = 0 if lg == "cs" else 1
     ui = L["ui"]
-    p = rel(depth)
-    frames = [f for f in FILM_FRAMES if (ROOT / "img" / f).exists()]
+    pages = page_rel(lg, depth)
     prod_cards = ""
     for k in PRODUCT_SLUGS:
         pr = L["products"][k]
-        im = img_or_none(depth, PRODUCT_IMG.get(k))
+        im = product_img_src(depth, k)
         imtag = f'<img class="thumb" src="{im}" alt="{esc(pr["name"])}" loading="lazy">' if im else ""
         prod_cards += f"""<li class="card rv">{imtag}<div class="pad">
-<h3><a href="{p}{PRODUCT_SLUGS[k]}/">{esc(pr['name'])}</a></h3>
+<h3><a href="{pages}{PRODUCT_SLUGS[k]}/">{esc(pr['name'])}</a></h3>
 <p>{esc(pr['short'])}</p><p class="price">{esc(pr['price'])}</p></div></li>"""
     rec_cards = ""
     for slug in RECIPE_SLUGS:
@@ -376,49 +455,32 @@ def build_home(L):
         im = img_or_none(depth, RECIPE_IMG.get(slug))
         imtag = f'<img class="thumb" src="{im}" alt="{esc(r["name"])}" loading="lazy">' if im else ""
         rec_cards += f"""<li class="card rv">{imtag}<div class="pad">
-<h3><a href="{p}{slug}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
-    frame_divs = "".join(
-        f'<div class="frame" style="background-image:url({p}img/{f})"></div>' for f in frames)
+<h3><a href="{pages}{slug}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
     ticker_items = "".join(
         f"<span>{esc(L['products'][k]['name'])} · <b>{esc(L['products'][k]['price'])}</b></span>"
         for k in PRODUCT_SLUGS)
-    if frames:
-        hero_html = f"""<section class="film" data-film>
-  <div class="stage">
-    {frame_divs}
-    <div class="grain"></div>
-    <div class="copy">
-      <div class="filmline" data-in="0" data-out="0.34">
-        <div class="est">{esc(ui['est'])}</div>
-        <h1>{esc(ui['hero_h1'])}</h1>
-        <p>{esc(ui['hero_lead'])}</p>
-        <a class="btn gold" href="{p}kontakt/">{esc(ui['hero_cta'])}</a><a class="btn ghost" href="#produkty">{esc(ui['hero_cta2'])}</a>
-      </div>
-      <div class="filmline" data-in="0.36" data-out="0.66">
-        <h2>{esc(ui['why_2_h'])}</h2>
-        <p>{esc(ui['why_2_p'])}</p>
-      </div>
-      <div class="filmline" data-in="0.68" data-out="1">
-        <h2>{esc(ui['cta_sample_h'])}</h2>
-        <p>{esc(ui['cta_sample_p'])}</p>
-        <a class="btn gold" href="{p}kontakt/">{esc(ui['cta_sample_btn'])}</a>
-      </div>
-    </div>
-    <div class="hint">{esc(SCROLL_HINT[lg])}</div>
-  </div>
-</section>
-<div class="marquee" aria-hidden="true"><div class="track">{ticker_items}{ticker_items}</div></div>"""
-        body_class = "filmed"
+    still = None
+    for name in HERO_STILLS:
+        still = img_or_none(depth, name)
+        if still:
+            break
+    if still:
+        media = f'<div class="media"><img src="{still}" alt="{esc(ui["hero_img_alt"])}"></div>'
     else:
-        hero_html = f"""<div class="hero">
-  <div class="media"><div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%, #3a2c1c, #1d1712)"></div></div>
+        media = '<div class="media"><div class="hero-fallback"></div></div>'
+    hero_html = f"""<section class="hero convert">
+  {media}
   <div class="inner">
     <div class="est">{esc(ui['est'])}</div>
     <h1>{esc(ui['hero_h1'])}</h1>
     <p class="lead">{esc(ui['hero_lead'])}</p>
-    <a class="btn gold" href="{p}kontakt/">{esc(ui['hero_cta'])}</a><a class="btn ghost" href="#produkty">{esc(ui['hero_cta2'])}</a>
-  </div></div>"""
-        body_class = ""
+    <p class="hero-actions">
+      <a class="btn gold" href="#produkty">{esc(ui['hero_cta2'])}</a>
+      <a class="btn ghost" href="{pages}kontakt/">{esc(ui['hero_cta'])}</a>
+    </p>
+  </div>
+</section>
+<div class="marquee" aria-hidden="true"><div class="track">{ticker_items}{ticker_items}</div></div>"""
     wshop = img_or_none(depth, "workshop.webp") or img_or_none(depth, "workshop.jpg")
     why_inner = f"""
   <p class="kicker" style="color:var(--gold)">{esc(ui['sec_why_kicker'])}</p>
@@ -435,13 +497,14 @@ def build_home(L):
 </section>"""
     else:
         why_band = f'<section class="band cream"><div class="wrap">{why_inner}</div></section>'
-    body = f"""{hero_html}
+    body = f"""<main id="main">
+{hero_html}
 <section class="band" id="produkty"><div class="wrap">
   <p class="kicker">{esc(ui['sec_products_kicker'])}</p>
   <h2 class="sec">{esc(ui['sec_products'])}</h2>
   <p class="lead">{esc(ui['sec_products_lead'])}</p>
-  <ul class="grid c3" style="list-style:none;padding:0">{prod_cards}</ul>
-  <p><a href="{p}ceny/">{esc(ui['full_price_list'])} →</a></p>
+  <ul class="grid products" style="list-style:none;padding:0">{prod_cards}</ul>
+  <p><a href="{pages}ceny/">{esc(ui['full_price_list'])} →</a></p>
 </div></section>
 {why_band}
 <section class="band"><div class="wrap">
@@ -449,15 +512,16 @@ def build_home(L):
   <h2 class="sec">{esc(ui['sec_recipes'])}</h2>
   <p class="lead">{esc(ui['sec_recipes_lead'])}</p>
   <ul class="grid c3" style="list-style:none;padding:0">{rec_cards}</ul>
-  <p><a href="{p}recepty/">{esc(ui['all_recipes'])} →</a></p>
+  <p><a href="{pages}recepty/">{esc(ui['all_recipes'])} →</a></p>
 </div></section>
 <section class="band cream center"><div class="wrap">
   <h2 class="sec" style="display:inline-block">{esc(ui['cta_sample_h'])}</h2>
   <p class="lead" style="max-width:560px;margin:.6rem auto 1.4rem">{esc(ui['cta_sample_p'])}</p>
-  <a class="btn gold" href="{p}kontakt/">{esc(ui['cta_sample_btn'])}</a>
-</div></section>"""
+  <a class="btn gold" href="{pages}kontakt/">{esc(ui['cta_sample_btn'])}</a>
+</div></section>
+</main>"""
     html_out = shell(L, title=L["meta"]["home_title"], desc=L["meta"]["home_desc"],
-                     path="", depth=depth, active="home", body=body, body_class=body_class)
+                     path="", depth=depth, active="home", body=body)
     write(([lg] if lg != "cs" else []) + ["index.html"], html_out)
 
 
@@ -478,8 +542,10 @@ def build_page(L, key):
             cap = esc(L["ui"].get("workshop_caption", ""))
             fig = (f'<figure><img src="{w}" alt="{esc(pg["h1"])} — Kochánov" loading="lazy">'
                    + (f"<figcaption>{cap}</figcaption>" if cap else "") + "</figure>")
-    body = f"""<main class="wrap"><article class="page">
-<nav class="breadcrumb"><a href="{rel(depth)}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pg['h1'])}</nav>
+    pages = page_rel(lg, depth)
+    home = pages if pages else "./"
+    body = f"""<main id="main" class="wrap"><article class="page">
+<nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pg['h1'])}</nav>
 <h1>{esc(pg['h1'])}</h1>
 <p class="sub">{esc(pg['sub'])}</p>
 {fig}
@@ -496,7 +562,9 @@ def build_product(L, key):
     depth = (0 if lg == "cs" else 1) + 1
     pr = L["products"][key]
     path = f"{slug}/"
-    im = img_or_none(depth, PRODUCT_IMG.get(key))
+    pages = page_rel(lg, depth)
+    home = pages if pages else "./"
+    im = product_img_src(depth, key)
     figure = (f'<figure><img src="{im}" alt="{esc(pr["name"])}"></figure>' if im else "")
     price_num = re.search(r"(\d+)\s*(?:Kč|CZK)", pr["price"])
     product_ld = {
@@ -515,16 +583,16 @@ def build_product(L, key):
         (pr["name"], url_for(lg, path))])]
     if pr.get("faq"):
         lds.append(faq_jsonld(pr["faq"]))
-    body = f"""<main class="wrap"><article class="page">
-<nav class="breadcrumb"><a href="{rel(depth)}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pr['name'])}</nav>
+    body = f"""<main id="main" class="wrap"><article class="page">
+<nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pr['name'])}</nav>
 <h1>{esc(pr['name'])}</h1>
 <p class="sub">{esc(pr['short'])}</p>
 <div class="factbox"><dl><dt>{esc(L['ui']['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong></dd>
-<dt>{esc(L['ui']['order_info'])}</dt><dd><a href="{rel(depth)}kontakt/">{esc(L['ui']['nav_contact'])}</a> · +420 728 466 141 · juzlj@seznam.cz</dd></dl></div>
+<dt>{esc(L['ui']['order_info'])}</dt><dd><a href="{pages}kontakt/">{esc(L['ui']['nav_contact'])}</a> · +420 728 466 141 · juzlj@seznam.cz</dd></dl></div>
 {figure}
 {render_body(L, pr['body'], depth)}
 {faq_html(pr.get('faq'))}
-<p style="margin-top:2rem"><a class="btn gold" href="{rel(depth)}kontakt/">{esc(L['ui']['cta_sample_btn'])}</a></p>
+<p style="margin-top:2rem"><a class="btn gold" href="{pages}kontakt/">{esc(L['ui']['cta_sample_btn'])}</a></p>
 </article></main>"""
     html_out = shell(L, title=pr["title"], desc=pr["desc"], path=path, depth=depth,
                      active=None, body=body, jsonld=lds,
@@ -535,7 +603,8 @@ def build_product(L, key):
 def build_recipes_index(L):
     lg = L["code"]
     depth = (0 if lg == "cs" else 1) + 1
-    p = rel(depth)
+    pages = page_rel(lg, depth)
+    home = pages if pages else "./"
     cards = ""
     for slug in RECIPE_SLUGS:
         r = L["recipes"].get(slug)
@@ -543,10 +612,10 @@ def build_recipes_index(L):
             continue
         im = img_or_none(depth, RECIPE_IMG.get(slug))
         imtag = f'<img class="thumb" src="{im}" alt="{esc(r["name"])}" loading="lazy">' if im else ""
-        cards += f"""<li class="card rv">{imtag}<div class="pad"><h3><a href="{p}{slug}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
+        cards += f"""<li class="card rv">{imtag}<div class="pad"><h3><a href="{pages}{slug}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
     ui = L["ui"]
-    body = f"""<main class="wrap"><article class="page" style="max-width:none">
-<nav class="breadcrumb"><a href="{p}">{esc(ui['breadcrumb_home'])}</a> › {esc(ui['nav_recipes'])}</nav>
+    body = f"""<main id="main" class="wrap"><article class="page" style="max-width:none">
+<nav class="breadcrumb"><a href="{home}">{esc(ui['breadcrumb_home'])}</a> › {esc(ui['nav_recipes'])}</nav>
 <h1>{esc(ui['nav_recipes'])}</h1>
 <p class="sub">{esc(L['recipes_intro'])}</p>
 <ul class="grid c3" style="list-style:none;padding:0">{cards}</ul>
@@ -566,7 +635,8 @@ def build_recipe(L, slug):
     if not r:
         return
     depth = (0 if lg == "cs" else 1) + 1
-    p = rel(depth)
+    pages = page_rel(lg, depth)
+    home = pages if pages else "./"
     im = img_or_none(depth, RECIPE_IMG.get(slug))
     figure = f'<figure><img src="{im}" alt="{esc(r["name"])}"></figure>' if im else ""
     ing = "".join(f"<li>{esc(x)}</li>" for x in r.get("ingredients", []))
@@ -575,7 +645,7 @@ def build_recipe(L, slug):
     prod_link = ""
     if prod_key and prod_key in L["products"]:
         prod_link = (f'<div class="factbox"><dl><dt>{esc(L["ui"]["uses_product"])}</dt>'
-                     f'<dd><a href="{p}{PRODUCT_SLUGS[prod_key]}/">'
+                     f'<dd><a href="{pages}{PRODUCT_SLUGS[prod_key]}/">'
                      f'{esc(L["products"][prod_key]["name"])}</a></dd></dl></div>')
     recipe_ld = {
         "@context": "https://schema.org", "@type": "Recipe",
@@ -593,8 +663,8 @@ def build_recipe(L, slug):
     ing_block = f"<h2>{ing_h}</h2><ul>{ing}</ul>" if ing else ""
     steps_block = f"<h2>{steps_h}</h2><ol>{steps}</ol>" if steps else ""
     extra = "".join(f"<p>{esc(x)}</p>" for x in r.get("notes", []))
-    body = f"""<main class="wrap"><article class="page">
-<nav class="breadcrumb"><a href="{p}">{esc(L['ui']['breadcrumb_home'])}</a> › <a href="{p}recepty/">{esc(L['ui']['nav_recipes'])}</a> › {esc(r['name'])}</nav>
+    body = f"""<main id="main" class="wrap"><article class="page">
+<nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › <a href="{pages}recepty/">{esc(L['ui']['nav_recipes'])}</a> › {esc(r['name'])}</nav>
 <h1>{esc(r['name'])}</h1>
 <p class="sub">{esc(r.get('teaser',''))}</p>
 {prod_link}
@@ -666,11 +736,39 @@ def build_manifest():
     }, ensure_ascii=False, indent=1))
 
 
+def build_forms_skeleton():
+    """Hidden form so Netlify detects fields at build time."""
+    fields = "".join(
+        f'<input type="checkbox" name="product" value="{esc(k)}">\n'
+        for k in PRODUCT_SLUGS
+    )
+    write(["__forms.html"], f"""<!DOCTYPE html>
+<html lang="cs">
+<head><meta charset="utf-8"><title>forms</title></head>
+<body>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="contact">
+  <input type="hidden" name="lang" value="cs">
+  <input type="hidden" name="subject" value="Jůzlová — poptávka z webu">
+  <input type="text" name="bot-field">
+  <input type="text" name="name">
+  <input type="tel" name="phone">
+  <input type="email" name="email">
+  {fields}
+  <input type="text" name="products">
+  <textarea name="message"></textarea>
+</form>
+</body>
+</html>
+""")
+
+
 def build_robots():
     write(["robots.txt"], f"""User-agent: *
 Allow: /
 Disallow: /archive/
 Disallow: /status.html
+Disallow: /__forms.html
 
 Sitemap: {BASE}/sitemap.xml
 """)
@@ -687,7 +785,7 @@ def build_llms(langs_data):
         for s in RECIPE_SLUGS if s in cs["recipes"])
     write(["llms.txt"], f"""# Jůzlová.cz
 
-> Jůzlová je rodinná česká výroba potravinářských směsí (od roku 2004, Kochánov 40, Vysočina): bramborové a chlupaté knedlíky v prášku, vanilkový a kakaový puding bez lepku, vanilínový cukr a kakao holandského typu. Prodej přímo z dílny, vzorky zdarma, rozvoz na Vysočině.
+> Jůzlová je rodinná česká výroba potravinářských směsí (od roku 2004, Kochánov 40, Vysočina): bramborové a chlupaté knedlíky v prášku, vanilkový a kakaový puding bez lepku, vanilínový cukr a kakao holandského typu. Prodej přímo z dílny, odběr Kochánov/Humpolec, rozvoz na Vysočině.
 
 Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čitelný souhrn: [llms-full.txt]({BASE}/llms-full.txt)
 
@@ -718,17 +816,14 @@ Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čiteln
     full.append("Jůzlová s.r.o., IČO 45900124, Kochánov 40, 582 53, Vysočina, Czech Republic. "
                 "Family production of food mixes since 2004. Phones: +420 728 466 141 (Jiřina Jůzlová), "
                 "+420 607 629 931 (Jiří Jůzl). E-mail: juzlj@seznam.cz. "
-                "Open daily 8:00–19:00 by phone arrangement. Free samples on request. "
+                "Open daily 8:00–19:00 by phone arrangement. Orders by phone or e-mail. "
                 "Pick-up: Kochánov or Humpolec (free). Free local delivery: Havlíčkův Brod, "
                 "Světlá nad Sázavou, Jihlava and surroundings.\n")
     full.append("## Products (name | package | price | key facts)\n")
     for key, pack, price in PRICE_ROWS:
-        if key is None:
-            full.append(f"- Kakaový puding | {pack} | {price} | cocoa pudding with Dutch-process cocoa, gluten-free corn starch base")
-        else:
-            pr = cs["products"][key]
-            en = langs_data["en"]["products"][key]
-            full.append(f"- {pr['name']} (EN: {en['name']}) | {pack} | {price} | {en['short']}")
+        pr = cs["products"][key]
+        en = langs_data["en"]["products"][key]
+        full.append(f"- {pr['name']} (EN: {en['name']}) | {pack} | {price} | {en['short']}")
     full.append("\n## Pages (Czech canonical text)\n")
     for key in PAGE_SLUGS:
         pg = cs["pages"][key]
@@ -767,13 +862,47 @@ def copy_images():
             f = src / a_name
             if f.exists():
                 shutil.copyfile(f, dst / pub)
-    # fallbacks for recipe thumbnails whose originals were never captured
-    for want, alt in [("sisky-s-makem.png", "sisky-s-makem-alt.png"),
-                      ("strapacky.jpg", "strapacky-alt.png")]:
-        if not (dst / want).exists() and (dst / alt).exists():
-            shutil.copyfile(dst / alt, dst / want)
+        # 2017 recipe plates were never captured. Use the 150x150 archive
+        # thumb once, under the canonical name — never as a second -alt file.
+        for pub, a_name in (
+            ("sisky-s-makem.png",
+             "wp-content_uploads_2015_02_bramborove-sisky-s-makem-recept3-150x150.png"),
+            ("strapacky.jpg",
+             "wp-content_uploads_2015_03_Strapacky-se-zellm-a-slaninou-2-150x150.png"),
+        ):
+            dest = dst / pub
+            f = src / a_name
+            if dest.exists() or not f.exists():
+                continue
+            shutil.copyfile(f, dest)
+    drop_duplicate_images(dst)
     # img/logo.png is the recovered 2017 logo, kept as an archive asset; the
     # icons the site actually links come from scripts/make_brand_assets.py.
+
+
+def drop_duplicate_images(dst):
+    """Keep one file per checksum. Prefer names the site actually links."""
+    if not dst.exists():
+        return
+    canonical = (
+        set(PRODUCT_IMG.values()) | set(RECIPE_IMG.values()) | set(IMAGE_MAP.values())
+    )
+    by_hash = {}
+    for p in dst.iterdir():
+        if not p.is_file():
+            continue
+        digest = hashlib.md5(p.read_bytes()).hexdigest()
+        by_hash.setdefault(digest, []).append(p)
+    for paths in by_hash.values():
+        if len(paths) < 2:
+            continue
+        keep = next(
+            (p for p in paths if p.name in canonical),
+            sorted(paths, key=lambda x: x.name)[0],
+        )
+        for p in paths:
+            if p != keep:
+                p.unlink()
 
 
 def main():
@@ -792,6 +921,7 @@ def main():
     build_redirects()
     build_sitemap(langs_data)
     build_robots()
+    build_forms_skeleton()
     build_manifest()
     build_llms(langs_data)
     print("built:", ", ".join(LANGS))

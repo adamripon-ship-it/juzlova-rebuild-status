@@ -10,3 +10,14 @@ status.html
 .gcloudignore
 .gitignore
 .nojekyll
+.env
+.env.local
+.env.example
+.netlify
+netlify
+netlify.toml
+node_modules
+package.json
+package-lock.json
+deno.lock
+__forms.html

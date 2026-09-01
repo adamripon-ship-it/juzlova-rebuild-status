@@ -26,11 +26,12 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <meta name="theme-color" content="#021536">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], "@id": "https://juzlova.cz/#org", "name": "Jůzlová", "url": "https://juzlova.cz/", "logo": "https://juzlova.cz/img/logo-wordmark-black.png", "foundingDate": "2004", "email": "juzlj@seznam.cz", "telephone": "+420728466141", "address": {"@type": "PostalAddress", "streetAddress": "Kochánov 40", "postalCode": "582 53", "addressRegion": "Vysočina", "addressCountry": "CZ"}, "areaServed": ["Havlíčkův Brod", "Humpolec", "Světlá nad Sázavou", "Jihlava", "Czech Republic"], "openingHours": "Mo-Sa 08:00-19:00", "description": "Rodinná výroba potravinářských směsí od roku 2004: knedlíky v prášku, pudingy bez lepku, vanilínový cukr, kakao holandského typu."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], "@id": "https://juzlova.cz/#org", "name": "Jůzlová", "url": "https://juzlova.cz/", "logo": "https://juzlova.cz/img/logo-wordmark-black.png", "foundingDate": "2004", "email": "juzlj@seznam.cz", "telephone": "+420728466141", "address": {"@type": "PostalAddress", "streetAddress": "Kochánov 40", "postalCode": "582 53", "addressRegion": "Vysočina", "addressCountry": "CZ"}, "areaServed": ["Havlíčkův Brod", "Humpolec", "Světlá nad Sázavou", "Jihlava", "Czech Republic"], "openingHours": "Mo-Su 08:00-19:00", "description": "Rodinná výroba potravinářských směsí od roku 2004: knedlíky v prášku, pudingy bez lepku, vanilínový cukr, kakao holandského typu."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Vanilínový cukr", "description": "Vanilínový cukr z jemně mletého cukru s vanilínovým aroma. Na koláče, zákusky i vánoční cukroví — do těsta i na posyp. 1 kg / 38 Kč.", "brand": {"@type": "Brand", "name": "Jůzlová"}, "url": "https://juzlova.cz/vanilkovy-cukr/", "image": "https://juzlova.cz/img/vanilkovy-cukr-pytliky.webp", "offers": {"@type": "Offer", "priceCurrency": "CZK", "price": "38", "availability": "https://schema.org/InStock", "url": "https://juzlova.cz/vanilkovy-cukr/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Úvod", "item": "https://juzlova.cz/"}, {"@type": "ListItem", "position": 2, "name": "Vanilínový cukr", "item": "https://juzlova.cz/vanilkovy-cukr/"}]}</script>
 </head>
 <body>
+<a class="skip" href="#main">Přeskočit na obsah</a>
 <header class="site">
   <div class="wrap"><div class="bar">
   <a class="brand" href="../" aria-label="Jůzlová.cz">
@@ -38,19 +39,26 @@
     <img class="wordmark on-dark" src="../img/logo-wordmark-white.png" alt="" aria-hidden="true" width="650" height="200">
     <span class="tag">potravinářské směsi · Vysočina</span>
   </a>
-  <nav class="main" aria-label="hlavní navigace">
+  <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otevřít menu" data-open-label="Otevřít menu" data-close-label="Zavřít menu">
+    <span class="menu-toggle-bars" aria-hidden="true"></span>
+  </button>
+  <nav class="main" id="site-nav" aria-label="Hlavní navigace">
     <a href="../">Úvod</a>
     <a href="../kdo_jsme/">Kdo jsme</a>
     <a href="../kde-nas-najdete/">Dodání zboží</a>
-    <span class="navgroup"><button type="button">Produkty ▾</button><span class="drop"><a href="../bramborove_knedliky/">Bramborové knedlíky v prášku</a><a href="../chlupate-knedliky/">Chlupaté knedlíky v prášku</a><a href="../vanilkovy_pudink/">Vanilkový puding bez lepku</a><a href="../kakao-holandskeho-typu/">Kakao holandského typu</a><a href="../vanilkovy-cukr/">Vanilínový cukr</a></span></span>
+    <span class="navgroup">
+      <button type="button" class="nav-products" aria-expanded="false" aria-controls="nav-products-list">Produkty ▾</button>
+      <span class="drop" id="nav-products-list"><a href="../bramborove_knedliky/">Bramborové knedlíky v prášku</a><a href="../chlupate-knedliky/">Chlupaté knedlíky v prášku</a><a href="../vanilkovy_pudink/">Vanilkový puding bez lepku</a><a href="../kakaovy_pudink/">Kakaový puding bez lepku</a><a href="../kakao-holandskeho-typu/">Kakao holandského typu</a><a href="../vanilkovy-cukr/">Vanilínový cukr</a></span>
+    </span>
     <a href="../ceny/">Ceník</a>
     <a href="../recepty/">Recepty</a>
     <a href="../kontakt/">Kontakt</a>
-    <span class="langs" aria-label="Jazyk"><a class="on" lang="cs" hreflang="cs" href="https://juzlova.cz/vanilkovy-cukr/">CS</a><a lang="en" hreflang="en" href="https://juzlova.cz/en/vanilkovy-cukr/">EN</a><a lang="de" hreflang="de" href="https://juzlova.cz/de/vanilkovy-cukr/">DE</a><a lang="sk" hreflang="sk" href="https://juzlova.cz/sk/vanilkovy-cukr/">SK</a></span>
+    <span class="langs" aria-label="Jazyk"><a class="on" lang="cs" hreflang="cs" href="../vanilkovy-cukr/">CS</a><a lang="en" hreflang="en" href="../en/vanilkovy-cukr/">EN</a><a lang="de" hreflang="de" href="../de/vanilkovy-cukr/">DE</a><a lang="sk" hreflang="sk" href="../sk/vanilkovy-cukr/">SK</a></span>
   </nav>
-</div></div>
+</div>
+<div class="nav-backdrop" hidden></div></div>
 </header>
-<main class="wrap"><article class="page">
+<main id="main" class="wrap"><article class="page">
 <nav class="breadcrumb"><a href="../">Úvod</a> › Vanilínový cukr</nav>
 <h1>Vanilínový cukr</h1>
 <p class="sub">Jemně mletý cukr s vanilínovým aroma. Do těsta i na posyp cukroví.</p>
@@ -60,7 +68,7 @@
 <p>Vanilínový cukr obsahuje kromě jemně mletého cukru také vanilínové aroma, které mu dodává příjemnou, jedinečnou vůni vanilky.</p>
 <p>Oceníte jej při pečení koláčů, zákusků i ostatních dezertů. Skvěle se hodí při přípravě vánočního cukroví — nejen jako přísada do těsta, ale i pro posyp hotového cukroví.</p>
 
-<p style="margin-top:2rem"><a class="btn gold" href="../kontakt/">Napište si o vzorek</a></p>
+<p style="margin-top:2rem"><a class="btn gold" href="../kontakt/">Zavolejte nebo napište</a></p>
 </article></main>
 <footer class="site">
   <img class="footmark" src="../img/mark-white.png" alt="" aria-hidden="true" width="640" height="640">
@@ -71,8 +79,8 @@
         <p style="font-size:.92rem;margin:.2rem 0 1rem">Rodinná výroba potravinářských směsí od roku 2004.</p>
         <p style="font-size:.88rem">Jůzlová · Kochánov 40, 582 53 · Vysočina<br>+420 728 466 141 · +420 607 629 931<br><a href="mailto:juzlj@seznam.cz" style="display:inline">juzlj@seznam.cz</a></p>
       </div>
-      <div><h4>Produkty</h4><a href="../bramborove_knedliky/">Bramborové knedlíky v prášku</a><a href="../chlupate-knedliky/">Chlupaté knedlíky v prášku</a><a href="../vanilkovy_pudink/">Vanilkový puding bez lepku</a><a href="../kakao-holandskeho-typu/">Kakao holandského typu</a><a href="../vanilkovy-cukr/">Vanilínový cukr</a></div>
-      <div><h4>Recepty</h4><a href="../sisky-s-makem-recept/">Šišky s mákem</a><a href="../hruskovy-kolac-s-vanilkovym-pudinkem-recept/">Hruškový koláč s vanilkovým pudinkem</a><a href="../strapacky-se-zelim-a-slaninou-recept/">Strapačky se zelím a slaninou</a><a href="../podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/">Bebe řezy s čokoládovým pudingem</a><a href="../slehackova-rolada-recept/">Šlehačková roláda</a></div>
+      <div><h4>Produkty</h4><a href="../bramborove_knedliky/">Bramborové knedlíky v prášku</a><a href="../chlupate-knedliky/">Chlupaté knedlíky v prášku</a><a href="../vanilkovy_pudink/">Vanilkový puding bez lepku</a><a href="../kakaovy_pudink/">Kakaový puding bez lepku</a><a href="../kakao-holandskeho-typu/">Kakao holandského typu</a><a href="../vanilkovy-cukr/">Vanilínový cukr</a></div>
+      <div><h4>Recepty</h4><a href="../sisky-s-makem-recept/">Šišky s mákem</a><a href="../hruskovy-kolac-s-vanilkovym-pudinkem-recept/">Hruškový koláč s vanilkovým pudinkem</a><a href="../strapacky-se-zelim-a-slaninou-recept/">Strapačky se zelím a slaninou</a><a href="../podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/">Bebe řezy s čokoládovým pudingem</a><a href="../slehackova-rolada-recept/">Šlehačková roláda</a><a href="../domaci-pernik-recept-podle-jirina-juzlova/">Domácí perník</a><a href="../bramborovo-tvarohove-knedliky-s-jahodami/">Bramborovo-tvarohové knedlíky s jahodami</a></div>
       <div><h4>Firma</h4>
         <a href="../kdo_jsme/">Kdo jsme</a>
         <a href="../kde-nas-najdete/">Dodání zboží</a>

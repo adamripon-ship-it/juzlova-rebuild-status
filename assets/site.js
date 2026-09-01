@@ -125,4 +125,199 @@
     frames.forEach(function (f, i) { f.style.opacity = i === 0 ? 1 : 0; });
     lines.forEach(function (l) { l.style.opacity = 1; l.style.position = 'relative'; });
   }
+
+  /* ── phone menu + products accordion ── */
+  var menuBtn = document.querySelector('.menu-toggle')
+  var navEl = document.querySelector('nav.main')
+  var backdrop = document.querySelector('.nav-backdrop')
+  var prodBtn = document.querySelector('.nav-products')
+  var prodGroup = prodBtn ? prodBtn.closest('.navgroup') : null
+  function setMenu(open) {
+    if (!navEl || !menuBtn) return
+    navEl.classList.toggle('is-open', open)
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false')
+    var label = menuBtn.getAttribute(open ? 'data-close-label' : 'data-open-label')
+    if (label) menuBtn.setAttribute('aria-label', label)
+    document.body.classList.toggle('nav-open', open)
+    if (backdrop) {
+      backdrop.classList.toggle('is-open', open)
+      backdrop.hidden = !open
+    }
+  }
+
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function () {
+      setMenu(!navEl.classList.contains('is-open'))
+    })
+  }
+  if (backdrop) {
+    backdrop.addEventListener('click', function () { setMenu(false) })
+  }
+  if (navEl) {
+    navEl.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setMenu(false) })
+    })
+  }
+  if (prodBtn && prodGroup) {
+    prodBtn.addEventListener('click', function () {
+      var open = !prodGroup.classList.contains('is-open')
+      prodGroup.classList.toggle('is-open', open)
+      prodBtn.setAttribute('aria-expanded', open ? 'true' : 'false')
+    })
+  }
+  addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      setMenu(false)
+      if (prodGroup) {
+        prodGroup.classList.remove('is-open')
+        if (prodBtn) prodBtn.setAttribute('aria-expanded', 'false')
+      }
+    }
+  })
+
+  /* ── contact form posts to /api/contact (Turnstile + honeypot) ── */
+  document.querySelectorAll('[data-contact-form]').forEach(function (form) {
+    var statusEl = form.querySelector('[data-form-status]');
+    var submitBtn = form.querySelector('[type="submit"]');
+    var widgetId = null;
+    var siteKey = (form.getAttribute('data-turnstile-key') || '').trim();
+
+    var handleSetStatus = function (kind, text) {
+      if (!statusEl) return;
+      statusEl.hidden = !text;
+      statusEl.textContent = text || '';
+      statusEl.className = 'form-status' + (kind ? ' is-' + kind : '');
+    };
+
+    var handleLoadTurnstile = function (key) {
+      var slot = form.querySelector('[data-turnstile-slot]');
+      if (!slot || !key) return;
+
+      var handleRender = function () {
+        if (!window.turnstile || widgetId != null) return;
+        var renderWidget = function () {
+          if (widgetId != null) return;
+          widgetId = window.turnstile.render(slot, {
+            sitekey: key,
+            action: 'contact',
+            appearance: 'always',
+            theme: 'light',
+            language: form.getAttribute('data-lang') || 'cs'
+          });
+        };
+        if (typeof window.turnstile.ready === 'function') {
+          window.turnstile.ready(renderWidget);
+          return;
+        }
+        renderWidget();
+      };
+
+      if (window.turnstile) {
+        handleRender();
+        return;
+      }
+
+      var existing = document.querySelector('script[data-turnstile-api]');
+      if (existing) {
+        existing.addEventListener('load', handleRender);
+        return;
+      }
+
+      var script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.async = true;
+      script.dataset.turnstileApi = '1';
+      script.addEventListener('load', handleRender);
+      document.head.appendChild(script);
+    };
+
+    fetch('/api/contact', { headers: { Accept: 'application/json' } })
+      .then(function (res) { return res.ok ? res.json() : {}; })
+      .then(function (data) {
+        if (data && data.siteKey) siteKey = data.siteKey;
+        if (siteKey) handleLoadTurnstile(siteKey);
+      })
+      .catch(function () {
+        if (siteKey) handleLoadTurnstile(siteKey);
+      });
+
+    if (siteKey) handleLoadTurnstile(siteKey);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.classList.contains('is-success')) return;
+
+      var honey = form.querySelector('[name="bot-field"]');
+      if (honey && honey.value) {
+        form.classList.add('is-success');
+        handleSetStatus('success', form.getAttribute('data-i18n-success') || '');
+        return;
+      }
+
+      var token = '';
+      if (siteKey && window.turnstile && widgetId != null) {
+        token = window.turnstile.getResponse(widgetId) || '';
+      }
+      if (siteKey && !token) {
+        handleSetStatus('error', form.getAttribute('data-i18n-captcha') || '');
+        return;
+      }
+
+      var products = [].slice.call(form.querySelectorAll('[name="product"]:checked')).map(function (c) {
+        return c.value;
+      });
+
+      var payload = {
+        name: ((form.querySelector('[name="name"]') || {}).value || '').trim(),
+        phone: ((form.querySelector('[name="phone"]') || {}).value || '').trim(),
+        email: ((form.querySelector('[name="email"]') || {}).value || '').trim(),
+        message: ((form.querySelector('[name="message"]') || {}).value || '').trim(),
+        products: products,
+        lang: form.getAttribute('data-lang') || 'cs',
+        turnstileToken: token,
+        honeypot: honey ? honey.value : ''
+      };
+
+      var defaultLabel = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = form.getAttribute('data-i18n-sending') || defaultLabel;
+      }
+      handleSetStatus('', '');
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (body) {
+            return { ok: res.ok && body && body.ok, body: body };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok) {
+            var errKey = result.body && result.body.error === 'captcha'
+              ? 'data-i18n-captcha'
+              : 'data-i18n-error';
+            handleSetStatus('error', form.getAttribute(errKey) || '');
+            if (window.turnstile && widgetId != null) window.turnstile.reset(widgetId);
+            return;
+          }
+          form.classList.add('is-success');
+          form.reset();
+          handleSetStatus('success', form.getAttribute('data-i18n-success') || '');
+        })
+        .catch(function () {
+          handleSetStatus('error', form.getAttribute('data-i18n-error') || '');
+          if (window.turnstile && widgetId != null) window.turnstile.reset(widgetId);
+        })
+        .then(function () {
+          if (submitBtn && !form.classList.contains('is-success')) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultLabel;
+          }
+        });
+    });
+  });
 })();

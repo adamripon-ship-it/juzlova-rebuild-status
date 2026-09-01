@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /archive/
 Disallow: /status.html
+Disallow: /__forms.html
 
 Sitemap: https://juzlova.cz/sitemap.xml
