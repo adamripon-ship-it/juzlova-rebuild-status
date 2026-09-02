@@ -1,0 +1,9 @@
+{
+  "name": "juzlova-rebuild-status",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@netlify/blobs": "^9.1.6",
+    "@netlify/functions": "^2.8.2"
+  }
+}

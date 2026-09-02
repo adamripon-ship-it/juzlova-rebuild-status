@@ -338,4 +338,108 @@
       cocoaBlocks.forEach(function (el) { cocoaIo.observe(el) })
     }
   }
+
+  /* ── recipe star ratings ── */
+  document.querySelectorAll('[data-rating-slug]').forEach(function (box) {
+    var slug = box.getAttribute('data-rating-slug')
+    var api = box.getAttribute('data-api') || '/api/ratings'
+    var countTpl = box.getAttribute('data-count-tpl') || '{n}'
+    var thanks = box.getAttribute('data-thanks') || ''
+    var already = box.getAttribute('data-already') || ''
+    var errTxt = box.getAttribute('data-error') || ''
+    var votedKey = 'juzlova-rated:' + slug
+    var stars = box.querySelectorAll('[data-stars]')
+    var valueOut = box.querySelector('[data-rating-out]')
+    var countOut = box.querySelector('[data-count-out]')
+    var status = box.querySelector('.recipe-rating-status')
+    var voted = false
+    try { voted = localStorage.getItem(votedKey) === '1' } catch (e) { voted = false }
+
+    var handlePaint = function (value) {
+      var rounded = Math.round(Number(value) || 0)
+      stars.forEach(function (btn) {
+        var n = Number(btn.getAttribute('data-stars'))
+        btn.classList.toggle('is-on', n <= rounded)
+      })
+    }
+
+    var handleShow = function (data) {
+      if (!data) return
+      if (valueOut && data.ratingValue != null) valueOut.textContent = data.ratingValue
+      if (countOut && data.ratingCount != null) {
+        countOut.textContent = countTpl.replace('{n}', String(data.ratingCount))
+      }
+      if (data.ratingValue != null) {
+        box.setAttribute('data-rating-value', String(data.ratingValue))
+        handlePaint(data.ratingValue)
+      }
+    }
+
+    var handleLock = function (msg, ok) {
+      voted = true
+      box.classList.add('is-locked')
+      stars.forEach(function (btn) { btn.disabled = true })
+      if (status && msg) {
+        status.hidden = false
+        status.textContent = msg
+        status.classList.toggle('is-ok', !!ok)
+        status.classList.toggle('is-err', !ok)
+      }
+      try { localStorage.setItem(votedKey, '1') } catch (e) {}
+    }
+
+    handlePaint(box.getAttribute('data-rating-value'))
+    if (voted) {
+      box.classList.add('is-locked')
+      stars.forEach(function (btn) { btn.disabled = true })
+    }
+
+    fetch(api + '/' + encodeURIComponent(slug), { headers: { 'Accept': 'application/json' } })
+      .then(function (res) { return res.ok ? res.json() : null })
+      .then(handleShow)
+      .catch(function () {})
+
+    stars.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (voted || box.classList.contains('is-busy')) return
+        var n = Number(btn.getAttribute('data-stars'))
+        if (!n) return
+        box.classList.add('is-busy')
+        handlePaint(n)
+        fetch(api + '/' + encodeURIComponent(slug), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ stars: n })
+        })
+          .then(function (res) {
+            return res.json().catch(function () { return {} }).then(function (body) {
+              return { ok: res.ok, body: body }
+            })
+          })
+          .then(function (result) {
+            box.classList.remove('is-busy')
+            if (!result.ok) {
+              handlePaint(box.getAttribute('data-rating-value'))
+              if (status) {
+                status.hidden = false
+                status.textContent = errTxt
+                status.classList.add('is-err')
+              }
+              return
+            }
+            handleShow(result.body)
+            handleLock(result.body.already ? already : thanks, true)
+          })
+          .catch(function () {
+            box.classList.remove('is-busy')
+            handlePaint(box.getAttribute('data-rating-value'))
+            if (status) {
+              status.hidden = false
+              status.textContent = errTxt
+              status.classList.add('is-err')
+            }
+          })
+      })
+    })
+  })
 })();
