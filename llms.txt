@@ -26,6 +26,12 @@ Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čiteln
 - [Šlehačková roláda](https://juzlova.cz/slehackova-rolada-recept/): Lehký moučník za půl hodiny: kontrast nahořklého kakaa a jemně sladké šlehačky. Bez mouky, tedy i bez lepku.
 - [Domácí perník](https://juzlova.cz/domaci-pernik-recept-podle-jirina-juzlova/): Hrníčkový perník, který si zamilujete pro snadnou přípravu i výbornou chuť. Nepotřebujete váhu — vystačíte si s hrnečkem.
 - [Bramborovo-tvarohové knedlíky s jahodami](https://juzlova.cz/bramborovo-tvarohove-knedliky-s-jahodami/): Léto je tady a s ním i dozrávání jahod. Jednoduchý a rychlý recept, kterým za 20 minut potěšíte i největší mlsouny.
+- [Rychlé věnečky či větrníčky](https://juzlova.cz/rychle-venecky-ci-vetrnicky-recept/): Jedno odpalované těsto na věnečky i větrníčky: vyšší podíl másla a start na 250 °C. Asi 80 kousků na dvou plechách.
+- [Věnečky s vanilkovým krémem](https://juzlova.cz/venecky-s-vanilkovym-kremem-recept/): Klasické věnečky z odpalovaného těsta s vanilkovým máslovým krémem a rumovou polevou. Asi 20 kousků.
+- [Kremrole](https://juzlova.cz/kremrole-recept/): Křehké trubičky plněné lesklým italským sněhem. Asi 35–40 kousků; budete potřebovat kovové trubičky na kremrole.
+- [Minivětrníčky](https://juzlova.cz/minivetrnicky-recept/): Malé větrníčky z odpalovaného těsta s máslovo-pudinkovým krémem s tvarohem a čokoládovou polevou. Asi 40–45 kousků.
+- [Karamelové větrníky](https://juzlova.cz/karamelove-vetrniky-recept/): Větrníky s vanilkovým pudinkovým krémem, karamelovou šlehačkou a karamelovou polevou. Asi 24 středních kousků.
+- [Irský sticky toffee pudding](https://juzlova.cz/irsky-sticky-toffee-pudding-recept/): Vlhké datlové těsto s kakaem holandského typu a Baileys, přelité slanou toffee omáčkou. 6 porcí.
 
 ## Jazykové verze
 - Čeština (výchozí): https://juzlova.cz/

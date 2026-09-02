@@ -72,6 +72,12 @@ RECIPE_SLUGS = [
     "slehackova-rolada-recept",
     "domaci-pernik-recept-podle-jirina-juzlova",
     "bramborovo-tvarohove-knedliky-s-jahodami",
+    "rychle-venecky-ci-vetrnicky-recept",
+    "venecky-s-vanilkovym-kremem-recept",
+    "kremrole-recept",
+    "minivetrnicky-recept",
+    "karamelove-vetrniky-recept",
+    "irsky-sticky-toffee-pudding-recept",
 ]
 # archive image file -> public img name (used when archive/images is populated)
 IMAGE_MAP = {
@@ -109,6 +115,12 @@ RECIPE_IMG = {
     "slehackova-rolada-recept": "slehackova-rolada.webp",
     "domaci-pernik-recept-podle-jirina-juzlova": "domaci-pernik.webp",
     "bramborovo-tvarohove-knedliky-s-jahodami": "bramborovo-tvarohove-knedliky.webp",
+    "rychle-venecky-ci-vetrnicky-recept": "rychle-venecky-vetrnicky.webp",
+    "venecky-s-vanilkovym-kremem-recept": "venecky-s-vanilkovym-kremem.webp",
+    "kremrole-recept": "kremrole.webp",
+    "minivetrnicky-recept": "minivetrnicky.webp",
+    "karamelove-vetrniky-recept": "karamelove-vetrniky.webp",
+    "irsky-sticky-toffee-pudding-recept": "irsky-sticky-toffee-pudding.webp",
 }
 PRICE_ROWS = [  # (product key, package, price CZK)
     ("bramborove_knedliky", "5 kg", "165 Kč"),
