@@ -20,6 +20,13 @@ import re
 import shutil
 import sys
 
+_SCRIPTS = pathlib.Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from cocoa_blocks import (
+    cocoa_apps_html, cocoa_facts_html, cocoa_nutrition_html, cocoa_sensory_html,
+)
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 
@@ -40,14 +47,14 @@ def _load_dotenv():
 
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://juzlova.cz")
-TODAY = "2026-09-01"
+TODAY = "2026-09-02"
+ASSET_VER = "20260902f"
 
 LANGS = ["cs", "en", "de", "sk"]
 PRODUCT_SLUGS = {
     "bramborove_knedliky": "bramborove_knedliky",
     "chlupate_knedliky": "chlupate-knedliky",
     "vanilkovy_pudink": "vanilkovy_pudink",
-    "kakaovy_pudink": "kakaovy_pudink",
     "kakao_holandskeho_typu": "kakao-holandskeho-typu",
     "vanilkovy_cukr": "vanilkovy-cukr",
 }
@@ -91,15 +98,14 @@ PRODUCT_IMG = {
     "bramborove_knedliky": "produkt-bramborove-knedliky.webp",
     "chlupate_knedliky": "produkt-chlupate-knedliky.webp",
     "vanilkovy_pudink": "produkt-vanilkovy-puding.webp",
-    "kakaovy_pudink": "kakaovy-puding.png",
     "kakao_holandskeho_typu": "produkt-kakao.webp",
-    "vanilkovy_cukr": "vanilkovy-cukr-pytliky.webp",
+    "vanilkovy_cukr": "vanilkovy-cukr.webp",
 }
 RECIPE_IMG = {
-    "sisky-s-makem-recept": "sisky-s-makem.png",
+    "sisky-s-makem-recept": "sisky-s-makem.webp",
     "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac.webp",
-    "strapacky-se-zelim-a-slaninou-recept": "strapacky.jpg",
-    "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "bebe-rezy.gif",
+    "strapacky-se-zelim-a-slaninou-recept": "strapacky.webp",
+    "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "bebe-rezy.webp",
     "slehackova-rolada-recept": "slehackova-rolada.webp",
     "domaci-pernik-recept-podle-jirina-juzlova": "domaci-pernik.webp",
     "bramborovo-tvarohove-knedliky-s-jahodami": "bramborovo-tvarohove-knedliky.webp",
@@ -108,12 +114,12 @@ PRICE_ROWS = [  # (product key, package, price CZK)
     ("bramborove_knedliky", "5 kg", "165 Kč"),
     ("chlupate_knedliky", "5 kg", "185 Kč"),
     ("vanilkovy_pudink", "1 kg / 400 g", "34 Kč / 17 Kč"),
-    ("kakaovy_pudink", "1 kg / 400 g", "44 Kč / 22 Kč"),
     ("kakao_holandskeho_typu", "500 g", "100 Kč"),
     ("vanilkovy_cukr", "1 kg", "38 Kč"),
 ]
 LEGACY_REDIRECTS = {
-    "kakao": "kakao-holandskeho-typu", "kakaovy_puding": "kakaovy_pudink",
+    "kakao": "kakao-holandskeho-typu", "kakaovy_puding": "vanilkovy_pudink",
+    "kakaovy_pudink": "vanilkovy_pudink",
     "vanilkovy_puding": "vanilkovy_pudink", "jiri-juzl": "kontakt",
     "jirina-juzlova": "kontakt", "jirina-juzlova-praha": "kontakt",
     "dotaz-na-produkty": "kontakt", "kdo-jsme": "kdo_jsme",
@@ -220,7 +226,6 @@ def nav(L, depth, active, path):
   <a class="brand" href="{home}" aria-label="Jůzlová.cz">
     <img class="wordmark on-light" src="{assets}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200">
     <img class="wordmark on-dark" src="{assets}img/logo-wordmark-white.png" alt="" aria-hidden="true" width="650" height="200">
-    <span class="tag">{esc(ui["brand_tag"])}</span>
   </a>
   <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="{esc(ui['menu_open'])}" data-open-label="{esc(ui['menu_open'])}" data-close-label="{esc(ui['menu_close'])}">
     <span class="menu-toggle-bars" aria-hidden="true"></span>
@@ -302,7 +307,6 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
     ogimg = og_img or f"{BASE}/img/hero.webp"
     p = asset_rel(depth)
     body_cls = f' class="{body_class}"' if body_class else ""
-    skip = esc(L["ui"]["skip_label"])
     return f"""<!doctype html>
 <html lang="{lg}">
 <head>
@@ -320,30 +324,31 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{ogimg}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="{p}assets/site.css">
+<link rel="stylesheet" href="{p}assets/site.css?v={ASSET_VER}">
 <link rel="icon" href="{p}img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="{p}img/icon-32.png">
 <link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)" href="{p}img/icon-white-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{p}img/icon-192.png">
 <link rel="apple-touch-icon" href="{p}img/apple-touch-icon.png">
 <link rel="manifest" href="{p}site.webmanifest">
 <meta name="theme-color" content="#021536">
 {ld}
 </head>
 <body{body_cls}>
-<a class="skip" href="#main">{skip}</a>
 <header class="site">
   <div class="wrap">{nav(L, depth, active, path)}</div>
 </header>
 {body}
 {footer(L, depth)}
-<script src="{p}assets/site.js" defer></script>
+<script src="{p}assets/site.js?v={ASSET_VER}" defer></script>
 </body>
 </html>
 """
 
 
-def render_body(L, body_spec, depth):
+def render_body(L, body_spec, depth, product=None):
     pages = page_rel(L["code"], depth)
+    show = (product or {}).get("showcase") or {}
     out = []
     for kind, val in body_spec:
         if kind == "p":
@@ -385,6 +390,17 @@ def render_body(L, body_spec, depth):
   <h2>{esc(ui['form_h'])}</h2>
   <p class="form-hint">{esc(ui['form_google_pending'])}</p>
 </div>""")
+        elif kind == "cocoa_sensory":
+            out.append(cocoa_sensory_html(show))
+        elif kind == "cocoa_apps":
+            out.append(cocoa_apps_html(show))
+        elif kind == "cocoa_nutrition":
+            out.append(cocoa_nutrition_html(show))
+        elif kind == "cocoa_facts":
+            out.append(cocoa_facts_html(show))
+        else:
+            unknown: str = kind
+            raise ValueError(f"unknown body block: {unknown}")
     return "\n".join(out)
 
 
@@ -590,7 +606,7 @@ def build_product(L, key):
 <div class="factbox"><dl><dt>{esc(L['ui']['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong></dd>
 <dt>{esc(L['ui']['order_info'])}</dt><dd><a href="{pages}kontakt/">{esc(L['ui']['nav_contact'])}</a> · +420 728 466 141 · juzlj@seznam.cz</dd></dl></div>
 {figure}
-{render_body(L, pr['body'], depth)}
+{render_body(L, pr['body'], depth, product=pr)}
 {faq_html(pr.get('faq'))}
 <p style="margin-top:2rem"><a class="btn gold" href="{pages}kontakt/">{esc(L['ui']['cta_sample_btn'])}</a></p>
 </article></main>"""
@@ -629,6 +645,54 @@ def build_recipes_index(L):
     write(([lg] if lg != "cs" else []) + ["recepty", "index.html"], html_out)
 
 
+def more_recipes_html(L, current_slug, depth):
+    """Editorial thumbnail nav to the other recipes in this language."""
+    ui = L["ui"]
+    pages = page_rel(L["code"], depth)
+    cards = []
+    for other in RECIPE_SLUGS:
+        if other == current_slug:
+            continue
+        rec = L["recipes"].get(other)
+        if not rec:
+            continue
+        name = rec["name"]
+        teaser = rec.get("teaser", "")
+        href = f"{pages}{other}/"
+        label = ui["more_recipe_open"].replace("{name}", name)
+        im = img_or_none(depth, RECIPE_IMG.get(other))
+        media = ""
+        if im:
+            media = (
+                f'<span class="more-recipe-media">'
+                f'<img src="{im}" alt="" width="480" height="320" loading="lazy">'
+                f"</span>"
+            )
+        teaser_html = (
+            f'<span class="more-recipe-teaser">{esc(teaser)}</span>' if teaser else ""
+        )
+        cards.append(
+            f'<li>'
+            f'<a class="more-recipe" href="{href}" aria-label="{esc(label)}">'
+            f"{media}"
+            f'<span class="more-recipe-body">'
+            f'<span class="more-recipe-name">{esc(name)}</span>'
+            f"{teaser_html}"
+            f'<span class="more-recipe-go">{esc(ui["detail"])}</span>'
+            f"</span></a></li>"
+        )
+    if not cards:
+        return ""
+    return f"""<nav class="more-recipes" aria-labelledby="more-recipes-h">
+<div class="wrap">
+<p class="kicker">{esc(ui["more_recipes_kicker"])}</p>
+<h2 id="more-recipes-h" class="sec">{esc(ui["more_recipes"])}</h2>
+<p class="more-recipes-lead">{esc(ui["more_recipes_lead"])}</p>
+<ul class="more-recipes-grid">{"".join(cards)}</ul>
+</div>
+</nav>"""
+
+
 def build_recipe(L, slug):
     lg = L["code"]
     r = L["recipes"].get(slug)
@@ -663,7 +727,9 @@ def build_recipe(L, slug):
     ing_block = f"<h2>{ing_h}</h2><ul>{ing}</ul>" if ing else ""
     steps_block = f"<h2>{steps_h}</h2><ol>{steps}</ol>" if steps else ""
     extra = "".join(f"<p>{esc(x)}</p>" for x in r.get("notes", []))
-    body = f"""<main id="main" class="wrap"><article class="page">
+    more = more_recipes_html(L, slug, depth)
+    body = f"""<main id="main">
+<div class="wrap"><article class="page">
 <nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › <a href="{pages}recepty/">{esc(L['ui']['nav_recipes'])}</a> › {esc(r['name'])}</nav>
 <h1>{esc(r['name'])}</h1>
 <p class="sub">{esc(r.get('teaser',''))}</p>
@@ -672,7 +738,9 @@ def build_recipe(L, slug):
 {ing_block}
 {steps_block}
 {extra}
-</article></main>"""
+</article></div>
+{more}
+</main>"""
     html_out = shell(L, title=r.get("title", r["name"]), desc=r.get("desc", r.get("teaser", "")),
                      path=f"{slug}/", depth=depth, active="recepty", body=body,
                      jsonld=[recipe_ld, breadcrumb_jsonld(L, [
@@ -685,9 +753,11 @@ def build_recipe(L, slug):
 
 def build_redirects():
     for old, new in LEGACY_REDIRECTS.items():
-        target = f"{BASE}/{new}/"
-        write([old, "index.html"], f"""<!doctype html>
-<html lang="cs"><head><meta charset="utf-8"><title>Jůzlová.cz</title>
+        for lg in LANGS:
+            target = url_for(lg, f"{new}/")
+            parts = [old, "index.html"] if lg == "cs" else [lg, old, "index.html"]
+            write(parts, f"""<!doctype html>
+<html lang="{lg}"><head><meta charset="utf-8"><title>Jůzlová.cz</title>
 <link rel="canonical" href="{target}">
 <meta http-equiv="refresh" content="0;url={target}">
 </head><body><p><a href="{target}">→ {target}</a></p></body></html>
@@ -785,7 +855,7 @@ def build_llms(langs_data):
         for s in RECIPE_SLUGS if s in cs["recipes"])
     write(["llms.txt"], f"""# Jůzlová.cz
 
-> Jůzlová je rodinná česká výroba potravinářských směsí (od roku 2004, Kochánov 40, Vysočina): bramborové a chlupaté knedlíky v prášku, vanilkový a kakaový puding bez lepku, vanilínový cukr a kakao holandského typu. Prodej přímo z dílny, odběr Kochánov/Humpolec, rozvoz na Vysočině.
+> Jůzlová je rodinná česká výroba potravinářských směsí (od roku 2004, Kochánov 40, Vysočina): bramborové a chlupaté knedlíky v prášku, vanilkový puding bez lepku, vanilínový cukr a kakao holandského typu. Prodej přímo z dílny, odběr Kochánov/Humpolec, rozvoz na Vysočině.
 
 Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čitelný souhrn: [llms-full.txt]({BASE}/llms-full.txt)
 
@@ -858,7 +928,15 @@ def copy_images():
     dst = ROOT / "img"
     dst.mkdir(exist_ok=True)
     if src.exists():
+        skip_if_brand = {
+            "vanilkovy-cukr-pytliky.png": "vanilkovy-cukr.webp",
+            "vanilkovy-cukr.png": "vanilkovy-cukr.webp",
+            "sisky-s-makem.png": "sisky-s-makem.webp",
+        }
         for a_name, pub in IMAGE_MAP.items():
+            keep = skip_if_brand.get(pub)
+            if keep and (dst / keep).exists():
+                continue
             f = src / a_name
             if f.exists():
                 shutil.copyfile(f, dst / pub)
@@ -873,6 +951,10 @@ def copy_images():
             dest = dst / pub
             f = src / a_name
             if dest.exists() or not f.exists():
+                continue
+            if pub.startswith("strapacky") and (dst / "strapacky.webp").exists():
+                continue
+            if pub.startswith("sisky-s-makem") and (dst / "sisky-s-makem.webp").exists():
                 continue
             shutil.copyfile(f, dest)
     drop_duplicate_images(dst)

@@ -7,8 +7,7 @@ Jůzlová s.r.o., IČO 45900124, Kochánov 40, 582 53, Vysočina, Czech Republic
 - Bramborové knedlíky v prášku (EN: Potato dumpling mix) | 5 kg | 165 Kč | Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough.
 - Chlupaté knedlíky v prášku (EN: Hairy dumpling mix (bosáky)) | 5 kg | 185 Kč | Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made.
 - Vanilkový puding bez lepku (EN: Gluten-free vanilla pudding) | 1 kg / 400 g | 34 Kč / 17 Kč | Gluten-free corn starch, natural vanilla taste. For desserts and baking.
-- Kakaový puding bez lepku (EN: Gluten-free cocoa pudding) | 1 kg / 400 g | 44 Kč / 22 Kč | Ready in five minutes. Light dessert, diet creams or baking — with Dutch-process cocoa.
-- Kakao holandského typu (EN: Dutch-process cocoa) | 500 g | 100 Kč | Dark confectionery cocoa with 21% fat. Rich colour and taste for cakes and drinks.
+- Kakao holandského typu (EN: Dutch-process cocoa) | 500 g | 100 Kč | Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar.
 - Vanilínový cukr (EN: Vanilla sugar) | 1 kg | 38 Kč | Finely ground sugar with vanillin aroma. For dough and for dusting pastries.
 
 ## Pages (Czech canonical text)
@@ -18,8 +17,8 @@ Výrobu potravinářských směsí jsme v malé dílně v Kochánově zahájili 
 Dnes jako obchodní firma „Jůzlová“ dodáváme nejen do domácností, ale do řady restaurací, jídelen a cukráren. Naši zákazníci oceňují především tradiční domácí chuť a zároveň rychlost, se kterou je možné z našich instantních výrobků připravit výborné přílohy a dezerty.
 **Bramborové těsto v prášku — náš nejvyhledávanější výrobek**
 Při jeho výrobě používáme kvalitní a značkou KLASA oceněnou pšeničnou mouku z blízkého mlýna v Havlíčkově Brodě. Typickou chuť a charakteristickou konzistenci zajišťují sušené bramborové vločky. Těsto se hodí pro přípravu bramborových knedlíků, ať už klasických, plněných masem nebo ovocem, šišek, kroket či gnocchi.
-**Pudingy bez lepku**
-Instantní vanilkový a čokoládový puding je skvělý na přípravu sladkých dezertů. Základem je kvalitní kukuřičný škrob, který neobsahuje lepek, takže je vhodný i pro bezlepkovou dietu. Do kakaového pudingu mícháme vysoce kvalitní kakao holandského typu s 21 % tuku, které dodává výraznou čokoládovou chuť.
+**Puding bez lepku**
+Instantní vanilkový puding je skvělý na přípravu sladkých dezertů. Základem je kvalitní kukuřičný škrob, který neobsahuje lepek, takže je vhodný i pro bezlepkovou dietu. Čokoládovou chuť mu dodáte naším kakaem holandského typu s 21 % tuku.
 **Náš cíl**
 Vyrábět potravinářské směsi nejvyšší kvality za cenu pod úrovní „supermarketových“ výrobků nejistého původu. Používáme suroviny nejvyšší jakosti, protože věříme, že naši zákazníci si zaslouží jen to nejlepší. Klademe důraz na přímý kontakt se zákazníky a vždy se snažíme přizpůsobit jejich potřebám.
 Chcete objednat? Ozvěte se — domluvíme odběr v Kochánově či Humpolci, nebo rozvoz.
@@ -104,4 +103,4 @@ Suroviny: 250 g bramborových knedlíků v prášku; 250 g měkkého tvarohu (v 
 4. Knedlíky vařte v páře 5 minut — těsto se krásně uvaří a nerozvaří.
 5. Mezitím můžete povařit kousky jahod na ozdobu. Na talíři knedlíky dozdobte máslem, cukrem, jahodami nebo tvarohem.
 
-Last updated: 2026-09-01
+Last updated: 2026-09-02

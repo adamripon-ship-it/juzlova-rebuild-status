@@ -320,4 +320,22 @@
         });
     });
   });
+
+  /* ── cocoa radar + nutrition bars: animate when in view ── */
+  var cocoaBlocks = document.querySelectorAll('[data-cocoa-anim]')
+  if (cocoaBlocks.length) {
+    var handleCocoaOn = function (el) { el.classList.add('is-on') }
+    if (reduced || !('IntersectionObserver' in window)) {
+      cocoaBlocks.forEach(handleCocoaOn)
+    } else {
+      var cocoaIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return
+          handleCocoaOn(entry.target)
+          cocoaIo.unobserve(entry.target)
+        })
+      }, { threshold: 0.22 })
+      cocoaBlocks.forEach(function (el) { cocoaIo.observe(el) })
+    }
+  }
 })();

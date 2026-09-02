@@ -122,7 +122,7 @@ RECIPES = {
         "name": "Bebe rezy s čokoládovým pudingom",
         "teaser": "Radi by ste pohostili návštevu, ale nie ste práve Jamie Oliver? Nepečené bebe rezy zvládne naozaj každý.",
         "title": "Bebe rezy s čokoládovým pudingom — nepečený recept",
-        "desc": "Nepečené bebe rezy s kakaovým pudingom Jůzlová podľa Lucie Kůželovej: keksy, pudingový krém a šľahačka. Bez pečenia.",
+        "desc": "Nepečené bebe rezy s čokoládovým pudingom podľa Lucie Kůželovej: keksy, pudingový krém a šľahačka. Bez pečenia.",
         "product": "kakao_holandskeho_typu",
         "meta": "Nepečený dezert · Podľa Lucie Kůželovej",
         "ingredients": [

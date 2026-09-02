@@ -1,6 +1,6 @@
 # Jůzlová.cz
 
-> Jůzlová je rodinná česká výroba potravinářských směsí (od roku 2004, Kochánov 40, Vysočina): bramborové a chlupaté knedlíky v prášku, vanilkový a kakaový puding bez lepku, vanilínový cukr a kakao holandského typu. Prodej přímo z dílny, odběr Kochánov/Humpolec, rozvoz na Vysočině.
+> Jůzlová je rodinná česká výroba potravinářských směsí (od roku 2004, Kochánov 40, Vysočina): bramborové a chlupaté knedlíky v prášku, vanilkový puding bez lepku, vanilínový cukr a kakao holandského typu. Prodej přímo z dílny, odběr Kochánov/Humpolec, rozvoz na Vysočině.
 
 Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čitelný souhrn: [llms-full.txt](https://juzlova.cz/llms-full.txt)
 
@@ -15,8 +15,7 @@ Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čiteln
 - [Bramborové knedlíky v prášku](https://juzlova.cz/bramborove_knedliky/): Náš nejvyhledávanější výrobek. Klasické knedlíky, šišky, krokety i gnocchi z jednoho těsta. Cena: 5 kg / 165 Kč.
 - [Chlupaté knedlíky v prášku](https://juzlova.cz/chlupate-knedliky/): Bosáky podle tradiční receptury. Hotové za 15 minut, chutí k nerozeznání od domácích. Cena: 5 kg / 185 Kč.
 - [Vanilkový puding bez lepku](https://juzlova.cz/vanilkovy_pudink/): Kukuřičný škrob bez lepku, přirozená vanilková chuť. Na dezerty i pečení. Cena: 1 kg / 34 Kč · 400 g / 17 Kč.
-- [Kakaový puding bez lepku](https://juzlova.cz/kakaovy_pudink/): Hotový za pět minut. Lehký dezert, dietní krémy i pečení — s kakaem holandského typu. Cena: 1 kg / 44 Kč · 400 g / 22 Kč.
-- [Kakao holandského typu](https://juzlova.cz/kakao-holandskeho-typu/): Tmavé cukrářské kakao s 21 % tuku. Výrazná barva i chuť moučníků a koktejlů. Cena: 500 g / 100 Kč.
+- [Kakao holandského typu](https://juzlova.cz/kakao-holandskeho-typu/): Tmavé cukrářské kakao třídy 21 % tuku. Červenohnědá barva, krémová chuť, bez přidaného cukru. Cena: 500 g / 100 Kč.
 - [Vanilínový cukr](https://juzlova.cz/vanilkovy-cukr/): Jemně mletý cukr s vanilínovým aroma. Do těsta i na posyp cukroví. Cena: 1 kg / 38 Kč.
 
 ## Recepty
@@ -35,4 +34,4 @@ Fakta v tomto souboru odpovídají obsahu webu. Podrobnější strojově čiteln
 - Slovenčina: https://juzlova.cz/sk/
 
 ## Aktualizace
-- Naposledy aktualizováno: 2026-09-01
+- Naposledy aktualizováno: 2026-09-02

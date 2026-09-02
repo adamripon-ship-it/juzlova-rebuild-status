@@ -122,7 +122,7 @@ RECIPES = {
         "name": "Bebe biscuit slices with chocolate pudding",
         "teaser": "Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone.",
         "title": "Bebe biscuit slices with chocolate pudding — no-bake recipe",
-        "desc": "No-bake bebe biscuit slices with Jůzlová cocoa pudding, after Lucie Kůželová: biscuits, pudding cream and whipped cream. No oven needed.",
+        "desc": "No-bake bebe biscuit slices with chocolate pudding, after Lucie Kůželová: biscuits, pudding cream and whipped cream. No oven needed.",
         "product": "kakao_holandskeho_typu",
         "meta": "No-bake dessert · After Lucie Kůželová",
         "ingredients": [

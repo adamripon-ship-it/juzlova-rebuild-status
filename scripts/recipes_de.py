@@ -122,7 +122,7 @@ RECIPES = {
         "name": "Bebe-Schnitten mit Schokoladenpudding",
         "teaser": "Sie möchten Gäste bewirten, sind aber kein Jamie Oliver? Diese Bebe-Schnitten ohne Backen gelingen wirklich jedem.",
         "title": "Bebe-Schnitten mit Schokoladenpudding — ohne Backen",
-        "desc": "Bebe-Schnitten ohne Backen mit Jůzlová Kakaopudding nach Lucie Kůželová: Kekse, Puddingcreme und Schlagsahne. Ganz ohne Ofen.",
+        "desc": "Bebe-Schnitten ohne Backen mit Schokoladenpudding nach Lucie Kůželová: Kekse, Puddingcreme und Schlagsahne. Ganz ohne Ofen.",
         "product": "kakao_holandskeho_typu",
         "meta": "Dessert ohne Backen · Nach Lucie Kůželová",
         "ingredients": [
