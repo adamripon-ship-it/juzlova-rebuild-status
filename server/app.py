@@ -333,30 +333,12 @@ def send_smtp(payload: dict) -> bool:
         return False
 
 
-def send_formsubmit(payload: dict) -> bool:
-    url = f"https://formsubmit.co/ajax/{urllib.parse.quote(CONTACT_TO)}"
-    return http_json(url, {
-        "_subject": SUBJECT[payload["lang"]],
-        "_template": "table",
-        "_captcha": "false",
-        "name": payload["name"],
-        "phone": payload["phone"],
-        "email": payload["email"],
-        "message": payload["message"],
-        "products": ", ".join(payload["products"]),
-        "lang": payload["lang"],
-        "body": format_mail(payload),
-    })
-
-
 def deliver_contact(payload: dict) -> str:
     save_contact(payload)
     if send_zapier(payload):
         return "zapier"
     if send_smtp(payload):
         return "smtp"
-    if IS_CLOUD_RUN and send_formsubmit(payload):
-        return "formsubmit"
     if not IS_CLOUD_RUN:
         return "dev"
     return "stored"
