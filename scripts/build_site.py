@@ -56,6 +56,19 @@ BASE = os.environ.get("SITE_BASE", "https://juzlova.cz")
 TODAY = "2026-09-02"
 ASSET_VER = "20260902i"
 
+# Analytics. Nothing is embedded unless SITE_ANALYTICS is set at build time, so
+# a plain `python3 scripts/build_site.py` produces exactly the same HTML as CI
+# and the drift check stays honest. Set it to the snippet your provider gives
+# you — for Cloudflare Web Analytics that is the one <script> tag with your
+# token. Keep it cookieless: an aggregate, cookie-free counter needs no consent
+# banner under GDPR, and a banner costs more visitors than the data is worth.
+#
+#   SITE_ANALYTICS='<script defer src="https://..." data-token="..."></script>' \
+#     python3 scripts/build_site.py
+ANALYTICS = os.environ.get("SITE_ANALYTICS", "").strip()
+if ANALYTICS and not ANALYTICS.endswith("\n"):
+    ANALYTICS += "\n"
+
 LANGS = ["cs", "en", "de", "sk"]
 PRODUCT_SLUGS = {
     "bramborove_knedliky": "bramborove_knedliky",
@@ -478,7 +491,7 @@ def rating_widget_html(L, slug):
 </div>"""
 
 
-def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None, body_class="", keywords=""):
+def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None, body_class="", keywords="", preload_img=None, preload_srcset=""):
     lg = L["code"]
     canonical = url_for(lg, path)
     blocks = [org_jsonld(), website_jsonld(), webpage_jsonld(L, path, title, desc)]
@@ -490,6 +503,14 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
     p = asset_rel(depth)
     body_cls = f' class="{body_class}"' if body_class else ""
     kw = f'<meta name="keywords" content="{esc(keywords)}">\n' if keywords else ""
+    # Fetch the LCP image in parallel with the stylesheet instead of waiting for
+    # the layout to discover it. The preload must advertise the same candidates
+    # as the <img>, or a phone downloads the preloaded full-size file and then
+    # the narrow one it actually wanted.
+    pre = ""
+    if preload_img:
+        pre = (f'<link rel="preload" as="image" href="{preload_img}"'
+               f'{preload_srcset} fetchpriority="high">\n')
     og_alts = "\n".join(
         f'<meta property="og:locale:alternate" content="{loc}">'
         for code, loc in (("cs", "cs_CZ"), ("en", "en_US"), ("de", "de_DE"), ("sk", "sk_SK"))
@@ -516,7 +537,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 <meta property="og:image" content="{ogimg}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="stylesheet" href="{p}assets/site.css?v={ASSET_VER}">
+{pre}<link rel="stylesheet" href="{p}assets/site.css?v={ASSET_VER}">
 <link rel="icon" href="{p}img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="{p}img/icon-32.png">
 <link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)" href="{p}img/icon-white-32.png">
@@ -525,7 +546,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 <link rel="manifest" href="{p}site.webmanifest">
 <meta name="theme-color" content="#021536">
 {ld}
-</head>
+{ANALYTICS}</head>
 <body{body_cls}>
 <header class="site">
   <div class="wrap">{nav(L, depth, active, path)}</div>
@@ -625,6 +646,73 @@ def img_or_none(depth, name):
     return None
 
 
+def _read_size(path):
+    """Pixel size of a PNG, GIF, WebP or JPEG, from its header alone.
+
+    Deliberately not Pillow: this build is standard-library only, and the CI
+    build check rebuilds without installing anything. If dimensions depended on
+    an optional package the committed HTML would differ between a machine that
+    had it and one that did not, and the drift check would fail on a clean
+    checkout.
+    """
+    with open(path, "rb") as f:
+        head = f.read(32)
+        if head[:8] == b"\x89PNG\r\n\x1a\n":
+            return int.from_bytes(head[16:20], "big"), int.from_bytes(head[20:24], "big")
+        if head[:3] == b"GIF":
+            return int.from_bytes(head[6:8], "little"), int.from_bytes(head[8:10], "little")
+        if head[:4] == b"RIFF" and head[8:12] == b"WEBP":
+            kind = head[12:16]
+            if kind == b"VP8X":
+                return (int.from_bytes(head[24:27], "little") + 1,
+                        int.from_bytes(head[27:30], "little") + 1)
+            if kind == b"VP8 ":
+                return (int.from_bytes(head[26:28], "little") & 0x3FFF,
+                        int.from_bytes(head[28:30], "little") & 0x3FFF)
+            if kind == b"VP8L":
+                b = int.from_bytes(head[21:25], "little")
+                return (b & 0x3FFF) + 1, ((b >> 14) & 0x3FFF) + 1
+            return None
+        if head[:2] == b"\xff\xd8":  # JPEG: walk segments to the frame header
+            f.seek(2)
+            while True:
+                marker = f.read(2)
+                if len(marker) < 2 or marker[0] != 0xFF:
+                    return None
+                if marker[1] in (0xD8, 0xD9) or 0xD0 <= marker[1] <= 0xD7:
+                    continue
+                length = int.from_bytes(f.read(2), "big")
+                if 0xC0 <= marker[1] <= 0xCF and marker[1] not in (0xC4, 0xC8, 0xCC):
+                    block = f.read(5)
+                    return (int.from_bytes(block[3:5], "big"),
+                            int.from_bytes(block[1:3], "big"))
+                f.seek(length - 2, 1)
+    return None
+
+
+_DIMS = {}
+
+
+def dims(name):
+    """`width="..." height="..."` for img/<name>, or "" if unreadable.
+
+    Without these the browser cannot reserve space, so every photo shoves the
+    text below it down as it arrives.
+    """
+    if name not in _DIMS:
+        try:
+            size = _read_size(ROOT / "img" / name)
+        except OSError:
+            size = None
+        _DIMS[name] = f' width="{size[0]}" height="{size[1]}"' if size else ""
+    return _DIMS[name]
+
+
+def dims_for(src):
+    """Same, addressed by the emitted src path rather than the bare name."""
+    return dims(src.rsplit("/", 1)[-1]) if src else ""
+
+
 def product_img_src(depth, key):
     return img_or_none(depth, PRODUCT_IMG.get(key))
 
@@ -642,7 +730,7 @@ def build_home(L):
     for k in PRODUCT_SLUGS:
         pr = L["products"][k]
         im = product_img_src(depth, k)
-        imtag = f'<img class="thumb" src="{im}" alt="{esc(pr["name"])}" loading="lazy">' if im else ""
+        imtag = f'<img class="thumb" src="{im}"{dims_for(im)} alt="{esc(pr["name"])}" loading="lazy">' if im else ""
         prod_cards += f"""<li class="card rv">{imtag}<div class="pad">
 <h3><a href="{pages}{PRODUCT_SLUGS[k]}/">{esc(pr['name'])}</a></h3>
 <p>{esc(pr['short'])}</p><p class="price">{esc(pr['price'])}</p></div></li>"""
@@ -652,7 +740,7 @@ def build_home(L):
         if not r:
             continue
         im = img_or_none(depth, RECIPE_IMG.get(slug))
-        imtag = f'<img class="thumb" src="{im}" alt="{esc(r["name"])}" loading="lazy">' if im else ""
+        imtag = f'<img class="thumb" src="{im}"{dims_for(im)} alt="{esc(r["name"])}" loading="lazy">' if im else ""
         rec_cards += f"""<li class="card rv">{imtag}<div class="pad">
 <h3><a href="{pages}{slug}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
     ticker_items = "".join(
@@ -663,8 +751,23 @@ def build_home(L):
         still = img_or_none(depth, name)
         if still:
             break
+    srcset = hero_srcset = ""
     if still:
-        media = f'<div class="media"><img src="{still}" alt="{esc(ui["hero_img_alt"])}"></div>'
+        # The hero is the largest thing on the page and the LCP element, so it
+        # gets the priority hints and a narrow variant for phones — the full
+        # file is 2200px wide, which no phone needs. Variants are optional: if
+        # they have not been generated yet the hero simply ships at full size.
+        stem = still.rsplit("/", 1)[-1].rsplit(".", 1)[0]
+        srcs = [(w, img_or_none(depth, f"{stem}-{w}.webp")) for w in (900, 1400)]
+        srcs = [(w, s) for w, s in srcs if s]
+        full = _read_size(ROOT / "img" / still.rsplit("/", 1)[-1])
+        if srcs and full:
+            parts = [f"{s} {w}w" for w, s in srcs] + [f"{still} {full[0]}w"]
+            candidates = ", ".join(parts)
+            srcset = f' srcset="{candidates}" sizes="100vw"'
+            hero_srcset = f' imagesrcset="{candidates}" imagesizes="100vw"'
+        media = (f'<div class="media"><img src="{still}"{srcset}{dims_for(still)}'
+                 f' alt="{esc(ui["hero_img_alt"])}" fetchpriority="high" decoding="async"></div>')
     else:
         media = '<div class="media"><div class="hero-fallback"></div></div>'
     hero_html = f"""<section class="hero convert">
@@ -729,6 +832,7 @@ def build_home(L):
     html_out = shell(L, title=L["meta"]["home_title"], desc=L["meta"]["home_desc"],
                      path="", depth=depth, active="home", body=body,
                      keywords=keywords_for(lg, "home"),
+                     preload_img=still, preload_srcset=hero_srcset,
                      jsonld=[faq_jsonld(home_faq(lg))])
     write(([lg] if lg != "cs" else []) + ["index.html"], html_out)
 
@@ -748,7 +852,7 @@ def build_page(L, key):
              or img_or_none(depth, "workshop.webp") or img_or_none(depth, "workshop.jpg"))
         if w:
             cap = esc(L["ui"].get("workshop_caption", ""))
-            fig = (f'<figure><img src="{w}" alt="{esc(pg["h1"])} — Kochánov" loading="lazy">'
+            fig = (f'<figure><img src="{w}"{dims_for(w)} alt="{esc(pg["h1"])} — Kochánov" loading="lazy" decoding="async">'
                    + (f"<figcaption>{cap}</figcaption>" if cap else "") + "</figure>")
     pages = page_rel(lg, depth)
     home = pages if pages else "./"
@@ -774,7 +878,7 @@ def build_product(L, key):
     pages = page_rel(lg, depth)
     home = pages if pages else "./"
     im = product_img_src(depth, key)
-    figure = (f'<figure><img src="{im}" alt="{esc(pr["name"])}"></figure>' if im else "")
+    figure = (f'<figure><img src="{im}"{dims_for(im)} alt="{esc(pr["name"])}" loading="lazy" decoding="async"></figure>' if im else "")
     price_num = re.search(r"(\d+)\s*(?:Kč|CZK)", pr["price"])
     img_name = PRODUCT_IMG.get(key)
     product_ld = {
@@ -837,7 +941,7 @@ def build_recipes_index(L):
         if not r:
             continue
         im = img_or_none(depth, RECIPE_IMG.get(slug))
-        imtag = f'<img class="thumb" src="{im}" alt="{esc(r["name"])}" loading="lazy">' if im else ""
+        imtag = f'<img class="thumb" src="{im}"{dims_for(im)} alt="{esc(r["name"])}" loading="lazy">' if im else ""
         cards += f"""<li class="card rv">{imtag}<div class="pad"><h3><a href="{pages}{slug}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
     ui = L["ui"]
     body = f"""<main id="main" class="wrap"><article class="page" style="max-width:none">
@@ -956,7 +1060,7 @@ def build_recipe(L, slug):
     pages = page_rel(lg, depth)
     home = pages if pages else "./"
     im = img_or_none(depth, RECIPE_IMG.get(slug))
-    figure = f'<figure><img src="{im}" alt="{esc(r["name"])}"></figure>' if im else ""
+    figure = f'<figure><img src="{im}"{dims_for(im)} alt="{esc(r["name"])}" loading="lazy" decoding="async"></figure>' if im else ""
     ing = "".join(f"<li>{esc(x)}</li>" for x in r.get("ingredients", []))
     steps = "".join(f"<li>{esc(x)}</li>" for x in r.get("steps", []))
     prod_key = r.get("product")
