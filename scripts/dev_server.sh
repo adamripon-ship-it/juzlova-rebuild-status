@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Local development server for the static site.
 #
-# Serves the built site from the repository root with the same clean-URL
-# behaviour, cache headers and gzip as the production nginx image, so what you
-# see locally matches what GitHub Pages / Cloud Run serve. Runs nginx in the
+# Serves the built site from the repository root with production-like clean
+# URLs, cache headers and gzip, so what you see locally matches what the live
+# site serves. The config below is self-contained. Runs nginx in the
 # foreground; stop with Ctrl-C.
 #
 #   PORT=8080 scripts/dev_server.sh

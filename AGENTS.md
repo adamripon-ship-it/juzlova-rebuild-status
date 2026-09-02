@@ -80,8 +80,6 @@ scripts/
   make_brand_assets.py     brand/ sources -> favicons and wordmarks in img/
   optimize_images.py       resizes oversized artwork to WebP
   dev_server.sh            local nginx preview with production-like clean URLs
-  cloudflare_dns.sh        DNS cutover; refuses to run without I_MEAN_IT=yes
-  gcp_domain_mapping.sh    Cloud Run domain mapping + Google site verification
 assets/site.css            design system, motion, brand contrast rules
 assets/site.js             inertial scroll, scroll-film hero, parallax, reveals
 assets/style.css           UNUSED leftover — nothing references it
@@ -148,8 +146,10 @@ history of how it got there.
   `.github/workflows/cutover-pages-dns.yml`. Do not add a competing one; two
   earlier attempts were closed as duplicates.
 - Do not deploy to the Cloud Run service named `juzlova-web` — that is
-  production. `deploy-cloudrun-preview.yml` exists for previews and uses a
-  different service name.
+  production. The Google Cloud deploy tooling (`deploy-gcp.yml`,
+  `deploy-cloudrun-preview.yml`, `Dockerfile`, `nginx.conf`, and the two DNS
+  scripts) has been removed from the tree; `docs/HANDOFF.md` says what went and
+  what that costs while `www` still points at the Google host.
 - `PR #3` carries a whole parallel site — its own `assets/`, fonts, stylesheet,
   `404.html`. Do not merge it; it would collide across most of the tree.
 

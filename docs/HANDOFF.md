@@ -81,21 +81,38 @@ to Cloud Run" variant — were closed as duplicative. If the hosting choice
 itself changes, revise this section first, then change that workflow. Do not
 add a second one.
 
-`scripts/cloudflare_dns.sh` still aims at `ghs.googlehosted.com`, which is where
-production is today. It and `gcp_domain_mapping.sh` refuse to run unless
-`I_MEAN_IT=yes` is set.
+`scripts/cloudflare_dns.sh` and `scripts/gcp_domain_mapping.sh` have been
+removed (see *Hosting tooling removed* below). Both aimed at
+`ghs.googlehosted.com`, which is where production is today; git history has them
+if that path is wanted again.
 
-## Hosting options that exist but are not in use
+## Hosting tooling removed
 
-| Workflow | Target | State |
-|---|---|---|
-| `deploy-gcp.yml` | GCS bucket, europe-central2 (Warsaw) | skips itself until `GCP_SA_KEY`, `GCP_PROJECT`, `GCS_BUCKET` exist |
-| `deploy-cloudrun-preview.yml` | Cloud Run `juzlova-main-preview`, europe-west3 | dispatch-only; deliberately not the live `juzlova-web` |
-| `cutover-pages-dns.yml` | points `www` at GitHub Pages | needs `CLOUDFLARE_API_TOKEN` |
+`cutover-pages-dns.yml` remains — it points `www` at GitHub Pages and needs
+`CLOUDFLARE_API_TOKEN`. Everything else on the Google Cloud side has been
+removed from the tree:
 
-Warsaw is nearer Czechia than Frankfurt, but both are one hop away and no
-visitor will notice. Do not deploy to the Cloud Run service named `juzlova-web`
-— that is production.
+| Removed | Was |
+|---|---|
+| `deploy-gcp.yml` | GCS bucket, europe-central2 (Warsaw); skipped itself for want of `GCP_SA_KEY` / `GCP_PROJECT` / `GCS_BUCKET` |
+| `deploy-cloudrun-preview.yml` | dispatch-only Cloud Run `juzlova-main-preview`, europe-west3 |
+| `cloudflare_dns.sh`, `gcp_domain_mapping.sh` | pointed `www` at Cloud Run; mapped the domain to it |
+| `Dockerfile`, `nginx.conf`, `.dockerignore`, `.gcloudignore` | the Cloud Run container recipe |
+| `docs/DEPLOY-GCP.md` | setup guide for all of it |
+
+None of them deployed production: the two workflows targeted a bucket and a
+preview service, never `juzlova-web`. Whatever puts the build on the Google host
+is done outside this repo.
+
+**Caveat worth knowing.** `www` still points at that Google host, so while it
+serves the site, `Dockerfile` + `nginx.conf` were the only in-repo recipe for the
+container it runs, and `cloudflare_dns.sh` was the one-command way back to
+today's DNS if a Pages cutover had to be rolled back. Git history keeps all of
+them. If the Google host is to stay, consider restoring the Dockerfile pair.
+
+Do not deploy to the Cloud Run service named `juzlova-web` — that is production.
+`scripts/dev_server.sh` is unaffected by the removal: it writes its own nginx
+config inline and never read the root `nginx.conf`.
 
 ## Known limits
 

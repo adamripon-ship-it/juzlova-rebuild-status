@@ -50,5 +50,18 @@ SITE_BASE=https://adamripon-ship-it.github.io/juzlova-rebuild-status python3 scr
 | `verify_refs.py` | Checks generated pages for broken local `src` / `href` / `url()` |
 | `make_brand_assets.py` | Wordmarks, favicons and the footer monogram from `brand/` |
 | `optimize_images.py` | Resizes oversized artwork to web-sized WebP |
-| `cloudflare_dns.sh` | Issue #9 only — refuses to run unless `I_MEAN_IT=yes` |
-| `gcp_domain_mapping.sh` | Issue #9 only — same guard |
+
+`make_brand_assets.py` and `optimize_images.py` need Pillow; the rest use only
+the standard library.
+
+## Deploying
+
+The build output is committed, so a push to `main` is the deploy. `CNAME` holds
+`www.juzlova.cz` and `.nojekyll` keeps Jekyll out of the tree, so GitHub Pages
+serves the repo as-is.
+
+`www.juzlova.cz` does **not** point at Pages yet — it is still CNAME
+`ghs.googlehosted.com`, so the public site is served by a Google host running the
+same build. `.github/workflows/cutover-pages-dns.yml` makes that DNS change; it
+needs the `CLOUDFLARE_API_TOKEN` secret and skips itself without one. See
+[`docs/HANDOFF.md`](docs/HANDOFF.md).
