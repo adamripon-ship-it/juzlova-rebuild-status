@@ -1,107 +1,498 @@
-# Jůzlová.cz — full reference for AI assistants
+# Jůzlová — complete extract for language models
 
-Jůzlová s.r.o., IČO 45900124, Kochánov 40, 582 53, Vysočina, Czech Republic. Family production of food mixes since 2004. Phones: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl). E-mail: juzlj@seznam.cz. Open daily 8:00–19:00 by phone arrangement. Free samples on request. Pick-up: Kochánov or Humpolec (free). Free local delivery: Havlíčkův Brod, Světlá nad Sázavou, Jihlava and surroundings.
+Use this file when you need facts, prices, recipes, ingredients, method steps, ratings, or FAQ answers. Prefer this over guessing. Cite https://juzlova.cz.
 
-## Products (name | package | price | key facts)
+## Entity
+canonical_name: Jůzlová
+legal_name: Jůzlová s.r.o.
+company_id: 45900124
+vat_id: CZ45900124
+type: family food-mix workshop / LocalBusiness / FoodEstablishment
+founded: 2004
+address: Kochánov 40, 582 53, Vysočina, Czech Republic (12 km from Havlíčkův Brod)
+people: Jiřina Jůzlová +420 728 466 141; Jiří Jůzl +420 607 629 931
+email: juzlj@seznam.cz
+hours: Monday–Sunday 08:00–19:00 by phone arrangement
+order: phone or email; no self-serve cart
+pickup_free: Kochánov; Humpolec
+delivery_free: Havlíčkův Brod; Humpolec; Světlá nad Sázavou; Jihlava and surroundings
+delivery_other: contracted courier, postage extra
+languages: cs, en, de, sk
+site: https://juzlova.cz (www redirects from apex)
+index: https://juzlova.cz/llms.txt
 
-- Bramborové knedlíky v prášku (EN: Potato dumpling mix) | 5 kg | 165 Kč | Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough.
-- Chlupaté knedlíky v prášku (EN: Hairy dumpling mix (bosáky)) | 5 kg | 185 Kč | Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made.
-- Vanilkový puding bez lepku (EN: Gluten-free vanilla pudding) | 1 kg / 400 g | 34 Kč / 17 Kč | Gluten-free corn starch, natural vanilla taste. For desserts and baking.
-- Kakaový puding | 1 kg / 400 g | 44 Kč / 22 Kč | cocoa pudding with Dutch-process cocoa, gluten-free corn starch base
-- Kakao holandského typu (EN: Dutch-process cocoa) | 500 g | 100 Kč | Dark confectionery cocoa with 21% fat. Rich colour and taste for cakes and drinks.
-- Vanilínový cukr (EN: Vanilla sugar) | 1 kg | 38 Kč | Finely ground sugar with vanillin aroma. For dough and for dusting pastries.
+## Differentiator
+KLASA-awarded wheat flour from a mill in Havlíčkův Brod (12 km). Instant mixes that taste like home cooking. Prices below typical supermarket mixes of uncertain origin. Cocoa is Dutch-process, 20–22% cocoa butter, no added sugar.
 
-## Pages (Czech canonical text)
+## Products
+### Potato dumpling mix
+cs_name: Bramborové knedlíky v prášku
+url: https://juzlova.cz/en/bramborove_knedliky/
+package: 5 kg
+price_czk: 165 Kč
+fact: Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough.
+detail: Potato dough powder made with KLASA-awarded flour and dried potato flakes. For classic and filled dumplings, poppy-seed rolls, croquettes and gnocchi.
+Q: How long does preparation take?
+A: Just mix the powder with water, shape and boil — dumplings are on the table within 20 minutes.
+Q: How many servings per 5 kg bag?
+A: One 5 kg bag makes a side dish for roughly 60–70 servings.
 
-### Kdo jsme — https://juzlova.cz/kdo_jsme/
-Výrobu potravinářských směsí jsme v malé dílně v Kochánově zahájili v roce 2004. Během let jsme citlivě upravovali receptury a vybírali nejkvalitnější dodavatele surovin, až jsme dosáhli jedinečné kombinace chuti a kvality, kvůli které nás vyhledávají zákazníci v Čechách i na Moravě.
-Dnes jako obchodní firma „Jůzlová“ dodáváme nejen do domácností, ale do řady restaurací, jídelen a cukráren. Naši zákazníci oceňují především tradiční domácí chuť a zároveň rychlost, se kterou je možné z našich instantních výrobků připravit výborné přílohy a dezerty.
-**Bramborové těsto v prášku — náš nejvyhledávanější výrobek**
-Při jeho výrobě používáme kvalitní a značkou KLASA oceněnou pšeničnou mouku z blízkého mlýna v Havlíčkově Brodě. Typickou chuť a charakteristickou konzistenci zajišťují sušené bramborové vločky. Těsto se hodí pro přípravu bramborových knedlíků, ať už klasických, plněných masem nebo ovocem, šišek, kroket či gnocchi.
-**Pudingy bez lepku**
-Instantní vanilkový a čokoládový puding je skvělý na přípravu sladkých dezertů. Základem je kvalitní kukuřičný škrob, který neobsahuje lepek, takže je vhodný i pro bezlepkovou dietu. Do kakaového pudingu mícháme vysoce kvalitní kakao holandského typu s 21 % tuku, které dodává výraznou čokoládovou chuť.
-**Náš cíl**
-Vyrábět potravinářské směsi nejvyšší kvality za cenu pod úrovní „supermarketových“ výrobků nejistého původu. Používáme suroviny nejvyšší jakosti, protože věříme, že naši zákazníci si zaslouží jen to nejlepší. Klademe důraz na přímý kontakt se zákazníky a vždy se snažíme přizpůsobit jejich potřebám.
-Máte zájem ochutnat? Ozvěte se, rádi vám nabídneme vzorek zdarma.
+### Hairy dumpling mix (bosáky)
+cs_name: Chlupaté knedlíky v prášku
+url: https://juzlova.cz/en/chlupate-knedliky/
+package: 5 kg
+price_czk: 185 Kč
+fact: Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made.
+detail: Hairy dumplings made to a traditional recipe: ready in 15 minutes, popular with canteens and restaurants. 5 kg bag for 185 CZK.
+Q: What do hairy dumplings go with?
+A: Traditionally with cabbage and smoked meat, with fried onion and cracklings, or sweet with poppy seeds and sugar.
 
-### Dodání zboží — https://juzlova.cz/kde-nas-najdete/
-Uvědomujeme si, že pro naše zákazníky je vedle vysoké kvality výrobků důležitá i cena. Protože ceny smluvních dopravců mohou naše výrobky prodražit, nabízíme možnost vyzvednutí zboží přímo u nás v provozovně v Kochánově. Stačí se předem ozvat a zboží vám kdykoli připravíme k odběru.
-Po předchozí domluvě si zboží můžete vyzvednout také v Humpolci. V současné době rozvážíme v Havlíčkově Brodě, Humpolci, Světlé nad Sázavou, Jihlavě a okolí — a po individuální domluvě přivezeme zboží i přímo k vám domů.
-**Možnosti doručení**
-- Vyzvednutí zboží na provozovně v Kochánově nebo v Humpolci — zdarma
-- Bezplatný závoz zboží v okolí Havlíčkova Brodu, Světlé nad Sázavou a Jihlavy
-- Smluvní dopravce dle vašeho výběru (poštovné dle ceníku dopravce)
-**Kdy se můžete zastavit**
-Otevřeno denně po telefonické domluvě: pondělí–sobota 8:00–19:00.
+### Gluten-free vanilla pudding
+cs_name: Vanilkový puding bez lepku
+url: https://juzlova.cz/en/vanilkovy_pudink/
+package: 1 kg / 400 g
+price_czk: 34 Kč / 17 Kč
+fact: Gluten-free corn starch, natural vanilla taste. For desserts and baking.
+detail: Instant vanilla pudding based on gluten-free corn starch. Natural taste with no chemical off-notes, suitable for a gluten-free diet. 1 kg / 34 CZK, 400 g / 17 CZK.
+Q: Is the pudding really gluten-free?
+A: Yes. The base is pure corn starch, which contains no gluten.
+Q: Do you make a chocolate version?
+A: We do not sell a ready-made cocoa pudding mix. For a chocolate taste, stir Dutch-process cocoa — sold separately — into the vanilla pudding.
 
-### Kontakt — https://juzlova.cz/kontakt/
-**Kde nás najdete**
-Provozovna: Kochánov 40, 582 53, kraj Vysočina — 12 km od Havlíčkova Brodu. Po předchozí domluvě je možné vyzvednutí zboží také v Humpolci.
-Jůzlová s.r.o. · IČO 45900124
+### Dutch-process cocoa
+cs_name: Kakao holandského typu
+url: https://juzlova.cz/en/kakao-holandskeho-typu/
+package: 500 g
+price_czk: 100 Kč
+fact: Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar.
+detail: Dark Dutch-process confectionery cocoa with 20–22% cocoa butter. No added sugar, vegan, free of the 14 EU allergens. 500 g / 100 CZK.
+Q: What makes Dutch-process cocoa different?
+A: Alkalisation — it is darker, less acidic and dissolves better than natural cocoa. At 20–22% fat it ranks among the finest confectionery cocoas.
+Q: Do you add sugar?
+A: No. Added sugar is 0 g. Naturally occurring sugars from the bean are 0.9 g per 100 g.
+Q: Is it gluten-free and allergen-free?
+A: Yes. It contains none of the 14 EU allergens. Gluten is below 20 ppm. It is vegan and vegetarian — no ingredients of animal origin.
+Q: How should I store it?
+A: Dry, away from strong odours, ideally at 15–20 °C with humidity under 50%.
 
-### Ceník — https://juzlova.cz/ceny/
-Pro restaurace, jídelny a cukrárny připravíme individuální nabídku podle odebíraného množství — ozvěte se nám.
+### Vanilla sugar
+cs_name: Vanilínový cukr
+url: https://juzlova.cz/en/vanilkovy-cukr/
+package: 1 kg
+price_czk: 38 Kč
+fact: Finely ground sugar with vanillin aroma. For dough and for dusting pastries.
+detail: Vanilla sugar made of finely ground sugar with vanillin aroma. For cakes, desserts and Christmas cookies — in the dough and as a dusting. 1 kg / 38 CZK.
+Q: Is the vanilla sugar good for Christmas cookies?
+A: Yes. Use it in the dough and as a dusting on the finished pastry. Pack 1 kg / 38 CZK.
+Q: Is it vanilla bean or vanillin?
+A: Vanilla sugar: finely ground sugar with vanillin aroma, not vanilla pods.
 
 ## Recipes
+### Poppy-seed rolls (šišky s mákem)
+cs_name: Šišky s mákem
+url: https://juzlova.cz/en/sisky-s-makem-recept/
+image: https://juzlova.cz/img/sisky-s-makem.webp
+rating: 4.7/5 from 87 ratings
+prep: PT15M cook: PT25M total: PT40M yield: 4
+summary: A traditional sweet supper from potato dough: rolls coated in poppy seeds and sugar, drizzled with melted butter.
+ingredients:
+- 400 g potato dumpling powder
+- 100 g ground poppy seeds
+- 2 tablespoons icing sugar (or more)
+- 2 tablespoons melted butter
+method:
+1. Mix the potato dumpling powder with water per the instructions and shape small rolls from the dough.
+2. Bake on a greased tray in the middle of an oven preheated to 200 °C; turn once during baking so both sides turn golden.
+3. After baking, drop the rolls into boiling water and scald for 5 minutes.
+4. Put them in a large bowl, dust with poppy seeds and sugar, pour over the butter, toss and serve warm.
+Q: How do you make poppy-seed potato rolls with Jůzlová mix?
+A: Mix the potato dumpling powder with water as on the pack, shape small rolls, bake at 200 °C until golden on both sides, blanch 5 minutes in boiling water, then toss with poppy seed, sugar and butter.
+Q: What oven temperature for šišky s mákem?
+A: 200 °C, middle rack, greased tray, turn once so both sides brown.
 
-### Šišky s mákem — https://juzlova.cz/sisky-s-makem-recept/
-Tradiční sladká večeře z bramborového těsta: šišky obalené v máku s cukrem, přelité rozpuštěným máslem.
-Suroviny: 400 g bramborových knedlíků v prášku; 100 g mletého máku; 2 polévkové lžíce moučkového cukru (může být více); 2 polévkové lžíce rozpuštěného másla
-1. Bramborové knedlíky v prášku smíchejte s vodou dle návodu a z těsta vytvarujte malé šišky.
-2. Pečte na vymaštěném plechu uprostřed trouby předehřáté na 200 °C; v průběhu pečení šišky jednou otočte, aby měly zlatavou barvu z obou stran.
-3. Po upečení šišky vhoďte do vroucí vody a na 5 minut spařte.
-4. Vložte je do velké mísy, posypte mákem a cukrem, polijte máslem, promíchejte a ještě teplé podávejte.
+### Pear cake with vanilla pudding
+cs_name: Hruškový koláč s vanilkovým pudinkem
+url: https://juzlova.cz/en/hruskovy-kolac-s-vanilkovym-pudinkem-recept/
+image: https://juzlova.cz/img/hruskovy-kolac.webp
+rating: 4.5/5 from 64 ratings
+prep: PT20M cook: PT45M total: PT65M yield: 8
+summary: A cake your children will enjoy making with you. Baking is fun twice — once preparing, once tasting.
+ingredients:
+- 2 eggs
+- 80 g melted butter
+- 150 g granulated sugar
+- 200 g plain flour (can be mixed with wholemeal or spelt)
+- 1 sachet baking powder
+- 2 cartons sour cream
+- 1 carton whipping cream (30%)
+- 40 g vanilla pudding powder
+- 5 pears (or apples, raspberries, peaches — fresh or frozen fruit)
+method:
+1. Mix one egg, the butter, 50 g sugar, flour and baking powder. Work the dough by hand and press it into a cake tin lined with baking paper (a crumbly dough is fine — just press it in).
+2. Peel the pears, slice them and spread over the dough.
+3. In a bowl combine the sour cream, whipping cream, pudding powder, 100 g sugar and the second egg; pour over the cake.
+4. Bake in the middle of an oven preheated to 180 °C for about 45 minutes.
+Q: How long does the pear and vanilla-pudding cake bake?
+A: 20 minutes prep and about 45 minutes at 180 °C. The recipe serves 8 and also works with apples, raspberries or peaches.
+Q: How much pudding mix goes into the pear cake?
+A: 40 g of Jůzlová vanilla pudding powder in the poured layer with sour cream, whipping cream, sugar and egg.
 
-### Hruškový koláč s vanilkovým pudinkem — https://juzlova.cz/hruskovy-kolac-s-vanilkovym-pudinkem-recept/
-Koláč, jehož přípravu si užijí i děti. Pečení baví dvakrát — při přípravě i při ochutnávání.
-Suroviny: 2 vejce; 80 g rozehřátého másla; 150 g krystalového cukru; 200 g hladké mouky (lze kombinovat s celozrnnou nebo špaldovou); 1 kypřicí prášek; 2 zakysané smetany; 1 smetana ke šlehání (30 %); 40 g vanilkového pudinku v prášku; 5 hrušek (lze nahradit jablky, malinami, broskvemi — čerstvým i mraženým ovocem)
-1. Smíchejte jedno vejce, máslo, 50 g cukru, mouku a kypřicí prášek. Těsto rukama vypracujte a vtlačte do koláčové formy vyložené pečicím papírem (drolivé těsto nevadí — vymačkejte je do formy).
-2. Okrájené hrušky nakrájejte na plátky a rozprostřete na těsto.
-3. V misce promíchejte zakysanou smetanu, šlehačku, pudink v prášku, 100 g cukru a druhé vejce; směs nalijte na koláč.
-4. Pečte uprostřed vyhřáté trouby na 180 °C asi 45 minut.
+### Strapačky with cabbage and bacon
+cs_name: Strapačky se zelím a slaninou
+url: https://juzlova.cz/en/strapacky-se-zelim-a-slaninou-recept/
+image: https://juzlova.cz/img/strapacky.webp
+rating: 4.8/5 from 92 ratings
+prep: PT10M cook: PT20M total: PT30M yield: 4
+summary: A Slovak classic from hairy-dumpling mix — halušky with sauerkraut and crispy bacon.
+ingredients:
+- 400 g hairy dumpling (bosáky) powder
+- 400 g sauerkraut
+- a bunch of spring onions
+- 100 g bacon
+- a spoonful of lard
+method:
+1. Mix the hairy dumpling powder with water per the instructions. Press the swollen dough through a colander straight into boiling water and cook the halušky until they float.
+2. Boil the sauerkraut in a pot of water for about 10 minutes; drain any water that hasn’t boiled off.
+3. Fry diced bacon in lard; once lightly crisped, add sliced spring onion and take the pan off the heat after a minute.
+4. Mix the halušky with the cabbage and top each plate with the bacon and onion.
+Q: What are Jůzlová strapačky made from?
+A: Hairy dumpling mix pressed through a colander as halušky into boiling water, with sauerkraut, bacon and spring onion.
+Q: How long do strapačky take?
+A: About 30 minutes: mix the dough, boil the dumplings until they float, simmer cabbage 10 minutes, fry the bacon.
 
-### Strapačky se zelím a slaninou — https://juzlova.cz/strapacky-se-zelim-a-slaninou-recept/
-Slovenská klasika z chlupatých knedlíků v prášku — halušky s kysaným zelím a vypečenou slaninou.
-Suroviny: 400 g chlupatých knedlíků v prášku; 400 g kysaného zelí; svazek jarní cibulky; 100 g slaniny; lžíce sádla
-1. Chlupaté knedlíky v prášku smíchejte s vodou dle návodu. Nabobtnalé těsto protlačte cedníkem na halušky přímo do vroucí vody a vařte, dokud nevyplavou.
-2. Kysané zelí povařte v hrnci s vodou asi 10 minut; nevyvařenou vodu slijte.
-3. Na pánvi na sádle osmažte slaninu nakrájenou na menší kousky; když je lehce vysmažená, přidejte na kolečka nakrájenou jarní cibulku a po minutě odstavte.
-4. Halušky smíchejte se zelím a na talíři posypte slaninou s cibulkou.
+### Bebe biscuit slices with chocolate pudding
+cs_name: Bebe řezy s čokoládovým pudingem
+url: https://juzlova.cz/en/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/
+image: https://juzlova.cz/img/bebe-rezy.webp
+rating: 4.4/5 from 71 ratings
+prep: PT25M cook: PT0M total: PT25M yield: 12
+summary: Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone.
+ingredients:
+- 4 packs of BEBE biscuits: 2 plain, 2 dark
+- 2 cartons sour cream
+- 1 carton whipping cream
+- 40 g vanilla sugar
+- 150 g chocolate pudding powder (3 sachets)
+- 1 litre milk
+- Dutch-process cocoa for dusting
+method:
+1. Line a tray with the plain bebe biscuits.
+2. Cook the chocolate pudding per the pack instructions and pour it evenly over the biscuits.
+3. Lay the dark bebe biscuits over the pudding layer.
+4. Whip the cream with the vanilla sugar until stiff, fold in the sour cream and spread the mixture over the biscuits.
+5. Dust with dark cocoa and let it rest in the fridge, ideally overnight.
+Q: Do you bake the Bebe chocolate-pudding slices?
+A: No. They are no-bake: light biscuits, cooked pudding, dark biscuits, whipped cream with sour cream, cocoa dusting. Best overnight in the fridge.
+Q: Can I use vanilla pudding instead of chocolate?
+A: Yes. The slice is excellent with Jůzlová vanilla pudding and a cinnamon dusting.
 
-### Bebe řezy s čokoládovým pudingem — https://juzlova.cz/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/
-Rádi byste pohostili návštěvu, ale nejste zrovna Jamie Oliver? Nepečené bebe řezy zvládne opravdu každý.
-Suroviny: 4 balíčky sušenek BEBE: 2 světlé, 2 tmavé; 2 zakysané smetany; 1 smetana ke šlehání; 40 g vanilkového cukru; 150 g čokoládového pudingu (3 balení); 1 litr mléka; kakao holandského typu na posyp
-1. Na plech poklaďte světlé bebe sušenky.
-2. Uvařte čokoládový puding dle návodu na obalu a nalijte jej na sušenky tak, aby se rovnoměrně rozprostřel.
-3. Na vrstvu pudingu poklaďte tmavé bebe sušenky.
-4. V míse vyšlehejte smetanu s vanilkovým cukrem do tuha, vmíchejte zakysanou smetanu a směs rozetřete na sušenky.
-5. Řez posypte tmavým kakaem a nechte v lednici odležet, nejlépe přes noc.
+### Whipped cream roulade
+cs_name: Šlehačková roláda
+url: https://juzlova.cz/en/slehackova-rolada-recept/
+image: https://juzlova.cz/img/slehackova-rolada.webp
+rating: 4.7/5 from 55 ratings
+prep: PT20M cook: PT8M total: PT30M yield: 8
+summary: A light dessert in half an hour: the contrast of slightly bitter cocoa and gently sweet whipped cream. No flour — so no gluten either.
+ingredients:
+- 5 eggs
+- 100 g icing sugar
+- 1 tablespoon Dutch-process cocoa
+- 1 carton whipping cream (cream stiffener optional)
+method:
+1. Whisk the egg whites to stiff peaks, then add the yolks and icing sugar. Fold gently into a smooth batter.
+2. Finally add the Dutch-process cocoa — it gives a deep chocolate colour and pronounced taste.
+3. Prepare baking paper lightly greased with lard (oil works too) so the roulade rolls up easily after baking.
+4. Bake at 180 °C for about 8 minutes; don’t open the oven while it bakes.
+5. Let the sponge cool on the tray, then carefully peel off the paper.
+6. Whip the cream stiff, spread it over the sponge and roll it up. Decorate the top with the remaining cream and chocolate shavings.
+Q: Is the cream roulade gluten-free?
+A: Yes. The sponge is only eggs, icing sugar and Dutch-process cocoa — no flour, so no gluten. Ready in about 30 minutes.
+Q: What temperature for the cream roll?
+A: 8 minutes at 180 °C; do not open the oven. Cool, spread whipped cream, roll.
 
-### Šlehačková roláda — https://juzlova.cz/slehackova-rolada-recept/
-Lehký moučník za půl hodiny: kontrast nahořklého kakaa a jemně sladké šlehačky. Bez mouky, tedy i bez lepku.
-Suroviny: 5 vajec; 100 g moučkového cukru; 1 lžíce kakaa holandského typu; 1 smetana ke šlehání (případně ztužovač smetany)
-1. Z bílků ušlehejte tuhý sníh, pak přidejte žloutky a moučkový cukr. Opatrným mísením vznikne hladké těsto.
-2. Nakonec přidejte kakao holandského typu — dodá sytou čokoládovou barvu a výraznou chuť.
-3. Připravte si pečicí papír lehce vymaštěný sádlem (poslouží i olej), aby šla roláda po upečení dobře sbalit.
-4. Pečte v troubě předehřáté na 180 °C asi 8 minut; troubu po celou dobu neotevírejte.
-5. Roládu nechte na plechu vychladnout a opatrně ji sejměte z papíru.
-6. Ušlehejte tuhou šlehačku, roládu potřete a zabalte. Zbylou šlehačkou ozdobte hřbet, na efekt přidejte čokoládové hobliny.
+### Homemade gingerbread (perník)
+cs_name: Domácí perník
+url: https://juzlova.cz/en/domaci-pernik-recept-podle-jirina-juzlova/
+image: https://juzlova.cz/img/domaci-pernik.webp
+rating: 4.5/5 from 98 ratings
+prep: PT10M cook: PT25M total: PT35M yield: 28
+summary: Cup-measure gingerbread you’ll love for its easy preparation and great taste. No scales needed — a mug is enough.
+ingredients:
+- 3 cups plain flour (cup = 200 ml)
+- 2 cups granulated sugar
+- 1 cup oil
+- 2 medium eggs
+- 2 heaped tablespoons vanilla pudding powder
+- 1 sachet gingerbread spice-leavening mix
+- ½ sachet baking powder
+- 250 ml milk (1¼ cups)
+- Dutch-process cocoa to taste
+method:
+1. Put all the ingredients into one bowl and mix thoroughly with an electric mixer so no lumps form.
+2. Pour the batter onto a greased baking tray dusted with coarse flour.
+3. Bake in an oven preheated to 180 °C for 20–25 minutes (depending on tray depth).
+4. Test with a wooden toothpick — it should come out clean, with no batter sticking.
+Q: Do I need scales for the cup gingerbread?
+A: No. Jiřina Jůzlová’s cup recipe: 10 minutes mixing, 20–25 minutes at 180 °C, 25–30 portions. The batter includes vanilla pudding powder and Dutch-process cocoa.
+Q: How do I know the gingerbread is done?
+A: A wooden skewer must come out clean, with no sticky batter.
 
-### Domácí perník — https://juzlova.cz/domaci-pernik-recept-podle-jirina-juzlova/
-Hrníčkový perník, který si zamilujete pro snadnou přípravu i výbornou chuť. Nepotřebujete váhu — vystačíte si s hrnečkem.
-Suroviny: 3 hrnečky hladké mouky (hrneček = 200 ml); 2 hrnečky cukru krystal; 1 hrneček oleje; 2 středně velká vejce; 2 vrchovaté polévkové lžíce vanilkového pudinku v prášku; 1 prášek do perníku; ½ prášku do pečiva; 250 ml mléka (1¼ hrnečku); kakao holandského typu dle chuti
-1. Všechny ingredience nasypte do jedné nádoby a důkladně promíchejte mixérem, aby se netvořily hrudky.
-2. Těsto nalijte na vymaštěný plech vysypaný hrubou moukou.
-3. Pečte v troubě předehřáté na 180 °C 20 až 25 minut (podle výšky plechu).
-4. Hotový perník poznáte dřevěným párátkem — po zapíchnutí musí zůstat čisté, bez přilepeného těsta.
+### Potato-and-curd dumplings with strawberries
+cs_name: Bramborovo-tvarohové knedlíky s jahodami
+url: https://juzlova.cz/en/bramborovo-tvarohove-knedliky-s-jahodami/
+image: https://juzlova.cz/img/bramborovo-tvarohove-knedliky.webp
+rating: 4.8/5 from 76 ratings
+prep: PT15M cook: PT5M total: PT20M yield: 4
+summary: Summer is here, and with it ripening strawberries. A simple 20-minute recipe that delights the sweetest tooth.
+ingredients:
+- 250 g potato dumpling powder
+- 250 g soft curd cheese (the block kind, not the tub)
+- strawberries (for filling and garnish)
+- sugar, butter and curd for garnish
+method:
+1. Mix the potato dumpling powder with water per the instructions into a supple dough; work in the curd cheese (a sticky dough is fine).
+2. Shape the dough into a log and cut equal pieces so the dumplings cook evenly.
+3. Round each piece, press into a disc, push a strawberry into the middle and wrap it up.
+4. Steam the dumplings for 5 minutes — steaming cooks the dough through without it falling apart.
+5. Meanwhile simmer some strawberry pieces for a garnish. Serve topped with butter, sugar, strawberries or curd.
+Q: How fast are the strawberry quark dumplings?
+A: 20 minutes: potato mix plus quark dough, a strawberry inside, 5 minutes in steam.
+Q: Which quark for fruit dumplings?
+A: Soft block quark, not the tub kind — 250 g to 250 g of Jůzlová mix.
 
-### Bramborovo-tvarohové knedlíky s jahodami — https://juzlova.cz/bramborovo-tvarohove-knedliky-s-jahodami/
-Léto je tady a s ním i dozrávání jahod. Jednoduchý a rychlý recept, kterým za 20 minut potěšíte i největší mlsouny.
-Suroviny: 250 g bramborových knedlíků v prášku; 250 g měkkého tvarohu (v kostce, ne ve vaničce); jahody (jako náplň i na ozdobu); cukr, máslo a tvaroh na ozdobu
-1. Bramborové knedlíky v prášku smíchejte s vodou dle návodu a připravte vláčné těsto; zapracujte měkký tvaroh (lepivé těsto nevadí).
-2. Z těsta vytvarujte válec a nakrájejte jej na stejně velké části, aby se knedlíky vařily rovnoměrně.
-3. Každou část zakulaťte, dlaněmi vytvořte placičku, doprostřed zatlačte jahodu a zabalte.
-4. Knedlíky vařte v páře 5 minut — těsto se krásně uvaří a nerozvaří.
-5. Mezitím můžete povařit kousky jahod na ozdobu. Na talíři knedlíky dozdobte máslem, cukrem, jahodami nebo tvarohem.
+### Quick choux wreaths or puffs
+cs_name: Rychlé věnečky či větrníčky
+url: https://juzlova.cz/en/rychle-venecky-ci-vetrnicky-recept/
+image: https://juzlova.cz/img/rychle-venecky-vetrnicky.webp
+rating: 4.4/5 from 53 ratings
+prep: PT45M cook: PT15M total: PT60M yield: 80
+summary: One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays.
+ingredients:
+- 250 ml water
+- a pinch of salt
+- 90 g butter
+- 140 g coarse flour (hrubá mouka)
+- 4 eggs
+- fat, for greasing the trays
+method:
+1. Bring the water, salt and butter to a boil.
+2. Reduce the heat and stir in the flour all at once; mix until the dough pulls cleanly away from the pan and is no longer sticky.
+3. Take it off the heat and let it cool slightly.
+4. Preheat the oven to 250 °C.
+5. Beat in the eggs one at a time, mixing continuously, until the batter is smooth and slightly elastic.
+6. Pipe onto greased trays: wreaths as two stacked rings for věnečky, or small round mounds for větrníčky.
+7. Bake at 250 °C for 5 minutes, then reduce to 200 °C and bake until golden — roughly 5 more minutes at the higher heat and 5 at the moderate heat. Do not open the oven door while baking.
+8. Slice immediately while still hot (this keeps the shells from tearing later). Cool completely before filling.
+Q: Why bake cream puffs at 250 °C?
+A: A hot start at 250 °C and a higher butter ratio (90 g to 140 g flour) make the choux rise fast. After 5 minutes drop to 200 °C. About 80 pieces on two trays.
+Q: Can one dough make both rings and puffs?
+A: Yes. Same choux: rings as two stacked circles, puffs as small mounds. Fill with cream, vanilla custard or caramel as you like.
 
-Last updated: 2026-08-31
+### Choux wreaths with vanilla cream
+cs_name: Věnečky s vanilkovým krémem
+url: https://juzlova.cz/en/venecky-s-vanilkovym-kremem-recept/
+image: https://juzlova.cz/img/venecky-s-vanilkovym-kremem.webp
+rating: 4.7/5 from 81 ratings
+prep: PT60M cook: PT35M total: PT95M yield: 20
+summary: Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces.
+ingredients:
+- Choux pastry: 320 ml water
+- 100 g butter
+- a pinch of salt
+- 235 g flour
+- 4–5 eggs, added gradually
+- Vanilla buttercream: 500 ml milk
+- 2 sachets vanilla pudding powder
+- 5 egg yolks
+- 150 g sugar
+- 250 g softened butter
+- 2 tablespoons rum (optional)
+- Rum glaze: 300 g icing sugar
+- 2 tablespoons rum
+- 3 tablespoons hot milk
+method:
+1. Bring the water, butter and salt to a boil. Take off the heat, stir in all the flour, then cook 2–3 minutes on low heat until it pulls into a ball.
+2. Cool until just warm. Beat in the eggs a little at a time until the dough falls from a spoon in a thick ribbon.
+3. Pipe 6–7 cm rings onto baking paper. Bake at 200 °C for 10 minutes without opening the door, then reduce to 180 °C for another 15–25 minutes until deep golden and dry to the touch.
+4. Cool completely, then ideally leave uncovered for a few hours or overnight so the shells stay crisp.
+5. Cook the pudding with the milk, sugar and yolks, stirring constantly, until thickened (do not let it boil hard once the yolks are in). Cool completely, pressing cling film onto the surface.
+6. Beat the softened butter until fluffy, then add the cooled pudding a spoonful at a time until smooth and light. Stir in the rum.
+7. Whisk the icing sugar, rum and hot milk to a smooth, pourable glaze.
+8. Slice the rings horizontally. Pipe the buttercream generously into the bottom half, replace the top, and dip the top in rum glaze. Let it set.
+Q: What fills the vanilla-cream rings?
+A: Vanilla buttercream from Jůzlová pudding, egg yolks and butter, with a rum glaze on top. About 20 pieces.
+Q: How do I bake choux shells so they do not collapse?
+A: 10 minutes at 200 °C without opening the door, then 15–25 minutes at 180 °C until deep gold and dry. Cool fully before filling.
+
+### Cream horns (kremrole)
+cs_name: Kremrole
+url: https://juzlova.cz/en/kremrole-recept/
+image: https://juzlova.cz/img/kremrole.webp
+rating: 4.5/5 from 69 ratings
+prep: PT90M cook: PT15M total: PT105M yield: 38
+summary: Flaky pastry tubes filled with glossy Italian meringue. About 35–40 pieces; you will need metal cream-horn tubes.
+ingredients:
+- Dough: 350 g flour
+- 250 g cold butter (or Hera shortening), grated or cubed
+- 125 ml whipping cream
+- optional, for extra flakiness: swap 25 g of the cream for sour cream
+- Italian meringue: 80 g egg whites (about 2 eggs)
+- 160 g sugar
+- 40 ml water
+- icing sugar, for dusting
+method:
+1. Work the flour, butter and cream into a smooth dough — don’t overwork it. Wrap and chill at least 1 hour (overnight is fine).
+2. Roll into a thin sheet, cut into 2 cm × 20 cm strips, and wind each strip around a greased metal tube, overlapping the edges slightly.
+3. Bake at 180–200 °C until golden, about 12–15 minutes. Cool slightly before easing off the tubes.
+4. Heat the sugar and water to 115–120 °C without stirring (a sugar thermometer helps). Meanwhile whip the egg whites to stiff peaks.
+5. With the mixer running, drizzle in the hot syrup in a thin stream, then keep beating until the meringue is glossy and only slightly warm. Chill briefly, then pipe into the cooled shells from both ends. Dust with icing sugar.
+Q: How many kremrole and what equipment?
+A: About 35–40 pieces. Butter pastry and Italian meringue. You need metal cream-horn tubes — foil tubes work in a pinch.
+Q: What oven temperature for kremrole?
+A: 12–15 minutes at 180–200 °C until golden. Meringue: sugar syrup to 115–120 °C poured into whipped whites.
+
+### Mini choux buns (minivětrníčky)
+cs_name: Minivětrníčky
+url: https://juzlova.cz/en/minivetrnicky-recept/
+image: https://juzlova.cz/img/minivetrnicky.webp
+rating: 4.8/5 from 58 ratings
+prep: PT50M cook: PT20M total: PT70M yield: 42
+summary: Mini větrníčky from choux pastry with a butter-pudding-curd cream and chocolate glaze. About 40–45 pieces.
+ingredients:
+- Choux pastry: 250 ml water
+- a pinch of salt
+- 90 g butter
+- 160 g flour
+- 1 teaspoon baking powder
+- 4 eggs
+- Filling: 0.5 l milk
+- 2 sachets vanilla pudding powder
+- 3 tablespoons sugar
+- 250 g softened butter
+- 125 g sugar
+- vanilla sugar
+- 2 teaspoons rum
+- about 150–200 g full-fat curd cheese (tvaroh)
+- Glaze: dark or milk chocolate (with a little butter or oil for shine)
+method:
+1. Bring the water, butter and salt to a boil. Off the heat, stir in the flour and baking powder until smooth, then stir over low heat until the dough cools slightly.
+2. Beat in the eggs one at a time with a mixer. Pipe small 2–3 cm mounds onto baking paper (two spoons work if you have no piping bag).
+3. Bake at 200 °C for about 20 minutes. Do not open the oven for the first 10 minutes.
+4. Cook the pudding and cool it completely (a few hours ahead is fine). Beat the softened butter with the sugar and vanilla sugar until fluffy, add the rum, then fold in the cooled pudding and curd a little at a time until smooth.
+5. Split the cooled buns three-quarters of the way through, pipe in the filling, and dip or coat the top with melted chocolate.
+Q: What fills Jůzlová mini cream puffs?
+A: Butter-pudding cream with quark from Jůzlová vanilla pudding, chocolate glaze on top. About 40–45 pieces, 20 minutes at 200 °C.
+Q: Is there a lighter summer version?
+A: Yes: skip the buttercream and glaze, fill with sweetened whipped cream and strawberries, dust with icing sugar.
+
+### Caramel větrníky
+cs_name: Karamelové větrníky
+url: https://juzlova.cz/en/karamelove-vetrniky-recept/
+image: https://juzlova.cz/img/karamelove-vetrniky.webp
+rating: 4.4/5 from 94 ratings
+prep: PT90M cook: PT30M total: PT120M yield: 24
+summary: Větrníky with vanilla pudding cream, caramel whipped cream and caramel glaze. About 24 medium pieces.
+ingredients:
+- Choux pastry: 250 ml water
+- 100 g butter
+- a pinch of salt
+- 160 g flour
+- 4–5 eggs (room temperature), whisked, added gradually
+- ½ teaspoon baking powder
+- Vanilla pudding cream: 400 ml milk
+- 1 sachet vanilla pudding powder
+- 3 tablespoons sugar
+- 250 ml whipping cream (33%), whipped stiff
+- Caramel whipped cream: 150 g sugar
+- 250 ml whipping cream (33%), cold, plus a splash more to deglaze
+- a pinch of salt
+- Caramel glaze: 125 g sugar
+- 45 g butter
+- 75 ml whipping cream
+- optional: 3–4 tablespoons of the reserved caramel cream, thinned with a little icing sugar
+method:
+1. Bring the water, butter and salt to a boil. Remove from the heat, add all the flour at once, stir vigorously, then return to low heat 2–3 minutes until the dough pulls into a ball and a thin film forms on the pot bottom.
+2. Spread the dough around the sides of a mixing bowl to cool it quickly. Once only warm (not hot — eggs will scramble), beat in the whisked eggs a little at a time on low speed. Stop when the dough falls off a spoon in a thick “V” — you may not need all the egg. Fold in the baking powder last.
+3. Pipe 4–5 cm rounds onto baking paper with a large star tip, spaced well apart. Bake at 200–220 °C for 10 minutes, then reduce to 170–180 °C for another 15–20 minutes until deep golden and firm. Do not open the oven door during baking — the buns will collapse. Cool completely before filling.
+4. Cook the pudding with the milk and sugar per the packet; cool completely (press cling film onto the surface). Fold in the whipped cream once both are cold.
+5. Melt the sugar dry in a pan (no stirring, just swirl) until deep amber. Off the heat, carefully pour in a splash of the cream — it will bubble violently — then stir in the rest and a pinch of salt. Cool completely, chill several hours or overnight, then whip to stiff peaks. Reserve 3–4 tablespoons for the glaze.
+6. Caramelize the glaze sugar the same way, remove from the heat, stir in the butter then the cream until smooth and glossy. Cool until it coats the back of a spoon but is still pourable.
+7. Slice each cooled bun horizontally, keeping the top as a cap. Pipe a base of vanilla pudding cream, a swirl of caramel whipped cream on top, replace the cap and dip or spoon the caramel glaze over. Chill at least 2 hours before serving so the layers set.
+Q: How are the caramel cream puffs layered?
+A: Choux shell, vanilla pudding cream, a ring of caramel whipped cream, caramel glaze. About 24 medium puffs.
+Q: Why make the caramel cream the day before?
+A: The caramel-and-cream mix must chill until it whips stiff. Do not open the oven while the shells bake or they collapse.
+
+### Irish sticky toffee pudding
+cs_name: Irský sticky toffee pudding
+url: https://juzlova.cz/en/irsky-sticky-toffee-pudding-recept/
+image: https://juzlova.cz/img/irsky-sticky-toffee-pudding.webp
+rating: 4.7/5 from 62 ratings
+prep: PT25M cook: PT50M total: PT75M yield: 6
+summary: A moist date pudding with Dutch-process cocoa and Baileys, finished with a salty toffee sauce. Serves 6.
+ingredients:
+- Pudding: 125 g butter
+- 150 g light muscovado sugar
+- 1 tablespoon golden syrup
+- 1 tablespoon black treacle
+- 2 large eggs
+- 1 teaspoon vanilla extract
+- 150 g self-raising flour
+- 60 g Dutch-process cocoa
+- 150 g Medjool dates, chopped
+- 2 teaspoons bicarbonate of soda
+- 100 ml Baileys Irish Cream
+- 180 ml water
+- vanilla ice cream, for serving
+- Toffee sauce: 100 g unsalted butter
+- 150 g dark muscovado sugar
+- 3 tablespoons golden syrup
+- 150 ml double cream
+- 1 teaspoon vanilla extract
+- a generous pinch of sea salt
+method:
+1. Heat the oven to 160 °C (140 °C fan). Grease a 20 cm round ovenproof dish.
+2. Beat the butter and sugar until light and fluffy.
+3. Mix in the golden syrup, treacle, eggs and vanilla, slowly, on low speed.
+4. Sift the self-raising flour and cocoa together, then fold into the mixture on low speed.
+5. Simmer the 180 ml water with the chopped dates for a few minutes, take off the heat, then stir in the Baileys and the bicarbonate of soda — it will foam up.
+6. Fold the hot date-Baileys mixture into the flour-cocoa batter, pour into the prepared dish, and bake 45–50 minutes, until firm and slightly springy. Check with a skewer for a few moist crumbs rather than judging by colour — the batter is dark.
+7. For the sauce: melt the butter, sugar and golden syrup until the sugar dissolves. Add the cream, vanilla and salt, and simmer 3 minutes until thickened. For extra Irish flavour, stir 1–2 tablespoons of Baileys into the sauce off the heat at the end (optional — the alcohol will not cook off once the sauce is off the heat).
+8. Drizzle the toffee sauce over the warm pudding and serve with vanilla ice cream.
+Q: Does the sticky toffee pudding use Jůzlová cocoa?
+A: Yes. 60 g Dutch-process cocoa and 100 ml Baileys in the date batter, 6 portions, 45–50 minutes at 160 °C, salted toffee sauce.
+Q: Why add Baileys after boiling the dates?
+A: Off the heat — longer boiling would drive off alcohol and mute the liqueur. Water is 180 ml (100 ml less than the original), matching the Baileys volume.
+
+## FAQ
+Q: What is Jůzlová?
+A: Jůzlová is a Czech family workshop making food mixes since 2004. At Kochánov 40 in the Vysočina highlands we produce potato dumpling mix, hairy dumpling mix (bosáky), gluten-free vanilla pudding, vanilla sugar and Dutch-process cocoa. Legal name: Jůzlová s.r.o., company ID 45900124.
+
+Q: Where is Jůzlová and how do I order?
+A: The workshop is Kochánov 40, 582 53, 12 km from Havlíčkův Brod. Order by phone +420 728 466 141 (Jiřina Jůzlová) or +420 607 629 931 (Jiří Jůzl), or e-mail juzlj@seznam.cz. Open daily 8:00–19:00 by phone arrangement.
+
+Q: Do you deliver, and where is pick-up free?
+A: Pick-up in Kochánov or Humpolec is free. Free local delivery covers Havlíčkův Brod, Humpolec, Světlá nad Sázavou, Jihlava and surroundings. Farther away we ship with a contracted courier; postage follows the courier’s tariff.
+
+Q: What are the current Jůzlová prices?
+A: Potato dumpling mix 5 kg / 165 CZK. Hairy dumplings (bosáky) 5 kg / 185 CZK. Gluten-free vanilla pudding 1 kg / 34 CZK or 400 g / 17 CZK. Dutch-process cocoa 500 g / 100 CZK. Vanilla sugar 1 kg / 38 CZK. Restaurants and bakeries get a quote by volume.
+
+Q: Is Jůzlová vanilla pudding gluten-free?
+A: Yes. It is based on corn starch, which contains no gluten. For a chocolate taste, stir in our Dutch-process cocoa — we do not sell a ready-made chocolate pudding mix.
+
+Q: What is the difference between potato dumplings and hairy dumplings?
+A: Potato dumpling mix is classic dough from KLASA-awarded wheat flour and dried potato flakes — for dumplings, poppy-seed rolls, croquettes and gnocchi. Hairy dumplings (bosáky) follow a traditional recipe, ready in 15 minutes, typically served with cabbage and smoked meat or as strapačky/halušky.
+
+Q: What is Dutch-process cocoa with 21% fat?
+A: Alkalised confectionery cocoa powder with 20–22% cocoa butter. It is darker, less acidic and creamier than natural cocoa. No added sugar (naturally occurring sugars 0.9 g / 100 g), vegan, free of the 14 EU allergens, gluten under 20 ppm. Pack 500 g / 100 CZK.
+
+Q: How many portions from a 5 kg dumpling mix bag?
+A: A 5 kg bag of potato dumpling mix makes a side dish for about 60–70 portions. Hairy dumplings from 5 kg similarly cover a canteen service or several family meals.
+
+Q: Do you supply restaurants, canteens and pastry shops?
+A: Yes. Since 2004 we have supplied households and professional kitchens across Bohemia and Moravia. Larger orders get an individual price — call or e-mail.
+
+Q: Are the website recipes free to use?
+A: Yes. Thirteen recipes using our mixes — from poppy-seed rolls to cream puffs and sticky toffee pudding — are free on the site, in four languages, with ingredients, method and photographs.
+
+updated: 2026-09-02

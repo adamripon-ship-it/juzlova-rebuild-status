@@ -1,2 +1,7 @@
 scripts/__pycache__/
 *.pyc
+.netlify
+.env
+.env.local
+node_modules/
+

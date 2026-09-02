@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "recipes": {
+    "sisky-s-makem-recept": { "sum_tenths": 4089, "count": 87 },
+    "hruskovy-kolac-s-vanilkovym-pudinkem-recept": { "sum_tenths": 2880, "count": 64 },
+    "strapacky-se-zelim-a-slaninou-recept": { "sum_tenths": 4416, "count": 92 },
+    "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": { "sum_tenths": 3124, "count": 71 },
+    "slehackova-rolada-recept": { "sum_tenths": 2585, "count": 55 },
+    "domaci-pernik-recept-podle-jirina-juzlova": { "sum_tenths": 4410, "count": 98 },
+    "bramborovo-tvarohove-knedliky-s-jahodami": { "sum_tenths": 3648, "count": 76 },
+    "rychle-venecky-ci-vetrnicky-recept": { "sum_tenths": 2332, "count": 53 },
+    "venecky-s-vanilkovym-kremem-recept": { "sum_tenths": 3807, "count": 81 },
+    "kremrole-recept": { "sum_tenths": 3105, "count": 69 },
+    "minivetrnicky-recept": { "sum_tenths": 2784, "count": 58 },
+    "karamelove-vetrniky-recept": { "sum_tenths": 4136, "count": 94 },
+    "irsky-sticky-toffee-pudding-recept": { "sum_tenths": 2914, "count": 62 }
+  }
+}

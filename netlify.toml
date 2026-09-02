@@ -1,0 +1,71 @@
+[build]
+  command = "python3 scripts/build_site.py"
+  publish = "."
+
+[build.environment]
+  PYTHON_VERSION = "3.13"
+  NODE_VERSION = "22"
+  CONTACT_TO = "juzlj@seznam.cz"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[dev]
+  framework = "#static"
+  publish = "."
+  port = 8888
+
+# Function Config.path is /api/contact. This rewrite is a fallback
+# if an older runtime only exposes /.netlify/functions/contact.
+[[redirects]]
+  from = "/api/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/api/ratings"
+  to = "/.netlify/functions/ratings"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/api/ratings/*"
+  to = "/.netlify/functions/ratings"
+  status = 200
+  force = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = '</llms.txt>; rel="describedby"; type="text/plain"; title="llms.txt", </llms-full.txt>; rel="alternate"; type="text/plain"; title="llms-full.txt"'
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/llms-*.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+
+# TURNSTILE_SITE_KEY      public widget key (also available to the function GET)
+# TURNSTILE_SECRET_KEY    server verify key — set only via Netlify env
+# ZAPIER_WEBHOOK_URL      Zapier Catch Hook — JSON post, Zap emails juzlj@seznam.cz
+# CONTACT_TO              optional; defaults to juzlj@seznam.cz (also in Zap payload)
+# TURNSTILE_HOSTNAMES     optional comma list, e.g. juzlova.cz,www.juzlova.cz

@@ -1,0 +1,92 @@
+organization:
+  canonical_name: Jůzlová
+  alternate_names:
+    - Jůzlová s.r.o.
+    - Juzlova
+    - Jůzlová.cz
+  short_description: >-
+    Czech family workshop making food mixes since 2004 in Kochánov, Vysočina:
+    potato and hairy dumpling mixes, gluten-free vanilla pudding, vanilla sugar
+    and Dutch-process cocoa.
+  long_description: >-
+    Jůzlová s.r.o. (IČO 45900124) has produced food mixes in Kochánov 40,
+    582 53 since 2004. Wheat flour is KLASA-awarded and milled 12 km away in
+    Havlíčkův Brod. They sell to households, restaurants, canteens and pastry
+    shops. Pick-up in Kochánov or Humpolec is free; local delivery is free in
+    Havlíčkův Brod, Humpolec, Světlá nad Sázavou, Jihlava and surroundings.
+  category: Family food-mix workshop
+  audience: Home cooks, restaurants, canteens and pastry shops in Bohemia and Moravia
+  differentiators:
+    - KLASA-awarded wheat flour from Havlíčkův Brod
+    - Hairy dumplings ready in 15 minutes
+    - Gluten-free vanilla pudding (corn starch)
+    - Dutch-process cocoa 20–22% cocoa butter, no added sugar
+    - Prices below typical supermarket mixes
+  certifications:
+    - name: KLASA (flour, mill in Havlíčkův Brod)
+      issuing_body: Czech Ministry of Agriculture quality mark
+      year: ""
+  primary_url: https://juzlova.cz/
+  approved_supporting_urls:
+    - https://juzlova.cz/llms.txt
+    - https://juzlova.cz/llms-full.txt
+  schema_type: Organization
+
+products:
+  - canonical_name: Bramborové knedlíky v prášku
+    alternate_names: [Potato dumpling mix]
+    type: Instant potato dumpling mix
+    proof: ["5 kg / 165 Kč", "KLASA wheat flour + dried potato flakes"]
+    primary_url: https://juzlova.cz/bramborove_knedliky/
+    schema_type: Product
+  - canonical_name: Chlupaté knedlíky v prášku
+    alternate_names: [Hairy dumpling mix, bosáky]
+    type: Instant hairy dumpling mix
+    proof: ["5 kg / 185 Kč", "Ready in 15 minutes"]
+    primary_url: https://juzlova.cz/chlupate-knedliky/
+    schema_type: Product
+  - canonical_name: Vanilkový puding bez lepku
+    alternate_names: [Gluten-free vanilla pudding]
+    type: Instant pudding
+    proof: ["1 kg / 34 Kč", "400 g / 17 Kč", "Corn starch, gluten-free"]
+    primary_url: https://juzlova.cz/vanilkovy_pudink/
+    schema_type: Product
+  - canonical_name: Kakao holandského typu
+    alternate_names: [Dutch-process cocoa]
+    type: Alkalised cocoa powder
+    proof: ["500 g / 100 Kč", "20–22% cocoa butter", "0 g added sugar"]
+    primary_url: https://juzlova.cz/kakao-holandskeho-typu/
+    schema_type: Product
+  - canonical_name: Vanilínový cukr
+    alternate_names: [Vanilla sugar]
+    type: Flavoured sugar
+    proof: ["1 kg / 38 Kč"]
+    primary_url: https://juzlova.cz/vanilkovy-cukr/
+    schema_type: Product
+
+people:
+  - canonical_name: Jiřina Jůzlová
+    role: Co-owner / orders
+    approved_bio: Jiřina Jůzlová, Kochánov 40, +420 728 466 141
+    schema_type: Person
+  - canonical_name: Jiří Jůzl
+    role: Co-owner / orders
+    approved_bio: Jiří Jůzl, Kochánov 40, +420 607 629 931
+    schema_type: Person
+
+claims:
+  - statement: Family production of food mixes since 2004
+    evidence: On-site copy, Organization.foundingDate
+    last_verified: "2026-09-02"
+  - statement: Vanilla pudding is gluten-free (corn starch)
+    evidence: Product FAQ and body copy
+    last_verified: "2026-09-02"
+  - statement: Dutch-process cocoa 20–22% fat, no added sugar
+    evidence: Cocoa product technical facts
+    last_verified: "2026-09-02"
+
+provenance:
+  source_system: juzlova-rebuild-status/docs/entity-source-of-truth.yaml
+  owner: Jůzlová
+  verification_status: reviewed
+  last_reviewed: "2026-09-02"
