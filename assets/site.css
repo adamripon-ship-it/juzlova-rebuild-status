@@ -256,8 +256,11 @@ table.tbl tr:hover td { background: var(--cream); }
 .order-form fieldset { border: 0; padding: 0; margin: 0 0 1rem; }
 .order-form legend { font-family: var(--sans); font-size: .86rem; margin-bottom: .5rem; }
 .order-form .chk {
-  display: flex; align-items: center; gap: .6rem; min-height: 48px;
+  display: flex; align-items: center; gap: .75rem; min-height: 48px;
   font-size: 1rem; margin: 0;
+}
+.order-form .chk input {
+  width: 1.15rem; height: 1.15rem; flex: 0 0 auto;
 }
 .order-form .btn { min-height: 48px; border: 0; cursor: pointer; width: 100%; }
 .order-form .btn:disabled { opacity: .65; cursor: wait; }
@@ -280,6 +283,21 @@ table.tbl tr:hover td { background: var(--cream); }
 .google-form-pending {
   background: var(--cream); border: 1px solid var(--line); border-radius: 10px;
   padding: 1.2rem 1.4rem;
+}
+.place-map {
+  display: flex; flex-direction: column; gap: .75rem;
+  margin: 1rem 0 1.75rem;
+}
+.place-map iframe {
+  display: block; width: 100%; min-height: 240px; height: 58vw; max-height: 420px;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--cream);
+}
+@media (min-width: 768px) {
+  .place-map iframe { min-height: 360px; height: 380px; }
+}
+.place-map-addr { margin: 0; font-size: .95rem; }
+.place-map-addr a {
+  display: inline-flex; align-items: center; min-height: 48px;
 }
 
 /* footer */

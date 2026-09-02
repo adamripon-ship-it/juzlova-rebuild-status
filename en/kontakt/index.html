@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://juzlova.cz/img/hero.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="stylesheet" href="../../assets/site.css?v=20260902h">
+<link rel="stylesheet" href="../../assets/site.css?v=20260902i">
 <link rel="icon" href="../../img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../../img/icon-32.png">
 <link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)" href="../../img/icon-white-32.png">
@@ -75,11 +75,31 @@
 <dt>Jiřina Jůzlová</dt><dd>Kochánov 40, 582 53 · <a href="tel:+420728466141">+420 728 466 141</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a></dd>
 <dt>Jiří Jůzl</dt><dd>Kochánov 40, 582 53 · <a href="tel:+420607629931">+420 607 629 931</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a></dd>
 </dl></div>
-<div class="google-form google-form-pending">
-  <h2>Write to us</h2>
-  <p class="form-hint">The Google Form is not connected yet. Call +420 728 466 141, or in Google Forms use Send → Embed, copy the iframe URL, and set GOOGLE_FORM_EMBED_URL.</p>
-</div>
+<form class="order-form" data-contact-form data-lang="en" data-i18n-success="Thank you — we have your message. We will get back to you about your order." data-i18n-error="We could not send the message just now. Please try again, or call us." data-i18n-captcha="Verification failed. Refresh the page and try again." data-i18n-sending="Sending…" action="/api/contact" method="post">
+<h2 id="write-to-us">Write to us</h2>
+<p class="form-hint">Enter your name, e-mail and message — we will reply to the address you give. You can also call +420 728 466 141.</p>
+<label class="hp" aria-hidden="true">Leave this field empty<input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+<label>Name<input type="text" name="name" required aria-required="true" autocomplete="name" maxlength="200"></label>
+<label>Phone<input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="40"></label>
+<label>E-mail<input type="email" name="email" required aria-required="true" autocomplete="email" inputmode="email" maxlength="200"></label>
+<fieldset>
+<legend>Which mixes are you ordering</legend>
+  <label class="chk"><input type="checkbox" name="product" value="Potato dumpling mix"><span>Potato dumpling mix</span></label>
+  <label class="chk"><input type="checkbox" name="product" value="Hairy dumpling mix (bosáky)"><span>Hairy dumpling mix (bosáky)</span></label>
+  <label class="chk"><input type="checkbox" name="product" value="Gluten-free vanilla pudding"><span>Gluten-free vanilla pudding</span></label>
+  <label class="chk"><input type="checkbox" name="product" value="Dutch-process cocoa"><span>Dutch-process cocoa</span></label>
+  <label class="chk"><input type="checkbox" name="product" value="Vanilla sugar"><span>Vanilla sugar</span></label>
+</fieldset>
+<label>Message<textarea name="message" required aria-required="true" maxlength="4000" rows="5"></textarea></label>
+<div class="turnstile-slot" data-turnstile-slot></div>
+<p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
+<button type="submit" class="btn gold">Send message</button>
+</form>
 <h2>Where to find us</h2>
+<div class="place-map">
+<iframe title="Map of the Jůzlová workshop, Kochánov 40, 582 53" src="https://maps.google.com/maps?q=Koch%C3%A1nov%2040%2C%20582%2053%2C%20Vyso%C4%8Dina%2C%20Czechia&amp;hl=en&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+<p class="place-map-addr"><a href="https://www.google.com/maps/search/?api=1&amp;query=Koch%C3%A1nov+40%2C+582+53%2C+Vyso%C4%8Dina" rel="noopener noreferrer" target="_blank">Kochánov 40, 582 53, Vysočina, Czechia</a></p>
+</div>
 <p>Premises: Kochánov 40, 582 53, Vysočina Region, Czech Republic — 12 km from Havlíčkův Brod. By prior arrangement, pick-up is also possible in Humpolec.</p>
 <p>Jůzlová s.r.o. · Company ID (IČO) 45900124</p>
 </article></main>
@@ -105,6 +125,6 @@
     <div class="fine"><span>© 2004–2026 Jůzlová s.r.o. · IČO 45900124</span><span>Open daily by phone arrangement, 8:00–19:00 (weekends included)</span></div>
   </div>
 </footer>
-<script src="../../assets/site.js?v=20260902h" defer></script>
+<script src="../../assets/site.js?v=20260902i" defer></script>
 </body>
 </html>

@@ -19,6 +19,7 @@ import pathlib
 import re
 import shutil
 import sys
+import urllib.parse
 
 _SCRIPTS = pathlib.Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
@@ -53,7 +54,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://juzlova.cz")
 TODAY = "2026-09-02"
-ASSET_VER = "20260902h"
+ASSET_VER = "20260902i"
 
 LANGS = ["cs", "en", "de", "sk"]
 PRODUCT_SLUGS = {
@@ -186,18 +187,58 @@ def url_for(lang, path):
     return f"{BASE}/{lang_prefix(lang)}{path}"
 
 
-def google_form_embed_src():
-    """Native Google Form iframe src from Google Forms (Send → Embed)."""
-    raw = os.environ.get("GOOGLE_FORM_EMBED_URL", "").strip()
-    if not raw:
-        return ""
-    if raw.startswith("http://"):
-        raw = "https://" + raw[7:]
-    if not raw.startswith("https://docs.google.com/forms/"):
-        return ""
-    if "embedded=true" not in raw:
-        raw += ("&" if "?" in raw else "?") + "embedded=true"
-    return raw
+MAP_QUERY = "Kochánov 40, 582 53, Vysočina, Czechia"
+MAP_SEARCH = (
+    "https://www.google.com/maps/search/?api=1&query="
+    + "Koch%C3%A1nov+40%2C+582+53%2C+Vyso%C4%8Dina"
+)
+
+
+def place_map_src(lang):
+    query = urllib.parse.quote(MAP_QUERY)
+    return (
+        f"https://maps.google.com/maps?q={query}"
+        f"&hl={lang}&z=16&output=embed"
+    )
+
+
+def place_map_html(L):
+    ui = L["ui"]
+    title = ui.get("map_title") or MAP_QUERY
+    src = place_map_src(L["code"])
+    return f"""<div class="place-map">
+<iframe title="{esc(title)}" src="{esc(src)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+<p class="place-map-addr"><a href="{esc(MAP_SEARCH)}" rel="noopener noreferrer" target="_blank">{esc(MAP_QUERY)}</a></p>
+</div>"""
+
+
+def contact_form_html(L):
+    ui = L["ui"]
+    lang = L["code"]
+    boxes = []
+    for key in PRODUCT_SLUGS:
+        name = L["products"][key]["name"]
+        boxes.append(
+            f'<label class="chk"><input type="checkbox" name="product" value="{esc(name)}">'
+            f"<span>{esc(name)}</span></label>"
+        )
+    checks = "\n  ".join(boxes)
+    return f"""<form class="order-form" data-contact-form data-lang="{esc(lang)}" data-i18n-success="{esc(ui['form_success'])}" data-i18n-error="{esc(ui['form_error'])}" data-i18n-captcha="{esc(ui['form_captcha'])}" data-i18n-sending="{esc(ui['form_sending'])}" action="/api/contact" method="post">
+<h2 id="write-to-us">{esc(ui['form_h'])}</h2>
+<p class="form-hint">{esc(ui['form_hint'])}</p>
+<label class="hp" aria-hidden="true">{esc(ui['form_honeypot'])}<input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+<label>{esc(ui['form_name'])}<input type="text" name="name" required aria-required="true" autocomplete="name" maxlength="200"></label>
+<label>{esc(ui['form_phone'])}<input type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="40"></label>
+<label>{esc(ui['form_email'])}<input type="email" name="email" required aria-required="true" autocomplete="email" inputmode="email" maxlength="200"></label>
+<fieldset>
+<legend>{esc(ui['form_products'])}</legend>
+  {checks}
+</fieldset>
+<label>{esc(ui['form_message'])}<textarea name="message" required aria-required="true" maxlength="4000" rows="5"></textarea></label>
+<div class="turnstile-slot" data-turnstile-slot></div>
+<p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
+<button type="submit" class="btn gold">{esc(ui['form_submit'])}</button>
+</form>"""
 
 
 def rel(depth):
@@ -528,19 +569,9 @@ def render_body(L, body_spec, depth, product=None):
                 f"""</tr></thead><tbody>{rows}</tbody></table>"""
             )
         elif kind == "form":
-            ui = L["ui"]
-            src = google_form_embed_src()
-            if src:
-                out.append(f"""<div class="google-form">
-  <h2>{esc(ui['form_h'])}</h2>
-  <p class="form-hint">{esc(ui['form_hint'])}</p>
-  <iframe class="google-form-frame" title="{esc(ui['form_h'])}" src="{esc(src)}" loading="lazy"></iframe>
-</div>""")
-            else:
-                out.append(f"""<div class="google-form google-form-pending">
-  <h2>{esc(ui['form_h'])}</h2>
-  <p class="form-hint">{esc(ui['form_google_pending'])}</p>
-</div>""")
+            out.append(contact_form_html(L))
+        elif kind == "map":
+            out.append(place_map_html(L))
         elif kind == "cocoa_sensory":
             out.append(cocoa_sensory_html(show))
         elif kind == "cocoa_apps":

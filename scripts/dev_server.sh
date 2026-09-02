@@ -11,6 +11,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PORT="${PORT:-8080}"
+API_PORT="${API_PORT:-8090}"
 RUNTIME="${TMPDIR:-/tmp}/juzlova-dev-nginx"
 
 mkdir -p "$RUNTIME/logs" "$RUNTIME/tmp"
@@ -36,6 +37,14 @@ http {
         root $ROOT;
         index index.html;
 
+        location /api/ {
+            proxy_pass http://127.0.0.1:${API_PORT};
+            proxy_http_version 1.1;
+            proxy_set_header Host \$host;
+            proxy_set_header X-Real-IP \$remote_addr;
+            proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+            proxy_set_header User-Agent \$http_user_agent;
+        }
         location / {
             try_files \$uri \$uri/ \$uri/index.html =404;
         }
@@ -46,6 +55,8 @@ http {
         # Match the production image: keep source trees out of the served site.
         location /archive/ { return 404; }
         location /scripts/ { return 404; }
+        location /server/  { return 404; }
+        location /data/    { return 404; }
         location /.git/    { return 404; }
         location /.github/ { return 404; }
 
@@ -57,5 +68,12 @@ http {
 }
 NGINX
 
+API_HOST=127.0.0.1 API_PORT="$API_PORT" DATA_DIR="$RUNTIME/data" \
+  RATINGS_SEED="$ROOT/data/ratings-seed.json" \
+  python3 "$ROOT/server/app.py" &
+API_PID=$!
+trap 'kill "$API_PID" 2>/dev/null || true' EXIT INT TERM
+
 echo "Serving $ROOT at http://0.0.0.0:$PORT (Ctrl-C to stop)"
-exec nginx -p "$RUNTIME" -c "$RUNTIME/nginx.conf" -g 'daemon off;'
+nginx -p "$RUNTIME" -c "$RUNTIME/nginx.conf" -g 'daemon off;'
+kill "$API_PID" 2>/dev/null || true
