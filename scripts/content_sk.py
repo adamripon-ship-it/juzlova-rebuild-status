@@ -156,7 +156,7 @@ LANG = {
                 ("p", "Na prirodzenej chuti spoznáte, že v ceste nie je nič navyše — len to, čo do zemiakovej knedle patrí."),
             ],
             "faq": [
-                ("Ako dlho trvá príprava?", "Cesto stačí zmiešať s vodou, vytvarovať a povariť — knedle máte na stole do 20 minút."),
+                ("Ako dlho trvá príprava?", "Cesto stačí zmiešať s vodou, vytvarovať a povariť — knedle máte na stole zhruba za 20 minút (2–3 minúty odležania, 15–20 minút varu)."),
                 ("Koľko porcií je z 5 kg balenia?", "Z päťkilogramového balenia pripravíte prílohu približne pre 60–70 porcií."),
             ],
         },

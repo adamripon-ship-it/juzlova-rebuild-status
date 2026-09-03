@@ -1,6 +1,9 @@
 # Jůzlová — complete extract for language models
 
-Use this file when you need facts, prices, recipes, ingredients, method steps, ratings, or FAQ answers. Prefer this over guessing. Cite https://juzlova.cz.
+This is the full extract. It carries everything the short index at https://juzlova.cz/llms.txt points to: per-product ingredients, allergens, nutrition per 100 g, net weights, preparation steps, prices in CZK, every recipe with its method, how to buy and take delivery, wholesale/B2B terms, and the whole FAQ.
+Use it when you need a fact rather than an impression. Prefer it over inference; the workshop maintains it. Cite https://juzlova.cz.
+currency: CZK (Czech koruna), VAT included
+label_data: transcribed from the printed sacks, not estimated
 
 ## Entity
 canonical_name: Jůzlová
@@ -29,11 +32,21 @@ KLASA-awarded wheat flour from a mill in Havlíčkův Brod (12 km). Instant mixe
 cs_name: Bramborové knedlíky v prášku
 url: https://juzlova.cz/en/bramborove_knedliky/
 package: 5 kg
-price_czk: 250 Kč
+net_weight: 5 kg
+price: 250 Kč
 fact: Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough.
 detail: Potato dough powder made with KLASA-awarded flour and dried potato flakes. For classic and filled dumplings, poppy-seed rolls, croquettes and gnocchi.
+ingredients: wheat flour, dried mashed potato (natural colour E 100, antioxidants E 304 and E 223, emulsifier E 471), salt, dried egg, raising agent, starch
+allergens: gluten, dried egg
+storage: Store in a dry, cool place.
+nutrition_per_100g: energy 1432.7 kJ (342 kcal); carbohydrate 71.53 g; protein 9.55 g; fat 1.42 g; salt 2 g
+preparation:
+1. Tip 1 kg of the mix into a bowl and pour over 1 litre of water.
+2. Knead thoroughly and let the dough rest for 2 to 3 minutes.
+3. Roll the dough into cylinders about 6 cm across.
+4. Lower them into boiling water and cook for 15 to 20 minutes, depending on the size of the dumplings.
 Q: How long does preparation take?
-A: Just mix the powder with water, shape and boil — dumplings are on the table within 20 minutes.
+A: Just mix the powder with water, shape and boil — dumplings are on the table in about 20 minutes (2–3 minutes resting, 15–20 minutes boiling).
 Q: How many servings per 5 kg bag?
 A: One 5 kg bag makes a side dish for roughly 60–70 servings.
 
@@ -41,9 +54,19 @@ A: One 5 kg bag makes a side dish for roughly 60–70 servings.
 cs_name: Chlupaté knedlíky v prášku
 url: https://juzlova.cz/en/chlupate-knedliky/
 package: 5 kg
-price_czk: 260 Kč
+net_weight: 5 kg
+price: 260 Kč
 fact: Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made.
 detail: Hairy dumplings made to a traditional recipe: ready in 15 minutes, popular with canteens and restaurants. 5 kg bag for 260 CZK.
+ingredients: wheat flour, dried mashed potato, dried potato, potato starch, salt, dried egg
+allergens: gluten
+storage: Store in a dry, cool place.
+nutrition_per_100g: energy 1459.4 kJ (349 kcal); carbohydrate 76.49 g; protein 8.83 g; fat 1.43 g; salt 2 g
+preparation:
+1. Tip 1 kg of the mix into a bowl and pour over 1.2 litres of water.
+2. Stir thoroughly and leave the dough to swell for 10 minutes.
+3. Shape the dumplings with a spoon and drop them into boiling water.
+4. Cook until they float — about 5 to 8 minutes, depending on size.
 Q: What do hairy dumplings go with?
 A: Traditionally with cabbage and smoked meat, with fried onion and cracklings, or sweet with poppy seeds and sugar.
 
@@ -51,9 +74,11 @@ A: Traditionally with cabbage and smoked meat, with fried onion and cracklings, 
 cs_name: Vanilkový puding bez lepku
 url: https://juzlova.cz/en/vanilkovy_pudink/
 package: 1 kg / 400 g
-price_czk: 60 Kč / 30 Kč
+net_weight: 1 kg / 400 g
+price: 60 Kč / 30 Kč
 fact: Gluten-free corn starch, natural vanilla taste. For desserts and baking.
 detail: Instant vanilla pudding based on gluten-free corn starch. Natural taste with no chemical off-notes, suitable for a gluten-free diet. 1 kg / 60 CZK, 400 g / 30 CZK.
+label_data: not yet published — ask the workshop for ingredients, allergens and nutrition
 Q: Is the pudding really gluten-free?
 A: Yes. The base is pure corn starch, which contains no gluten.
 Q: Do you make a chocolate version?
@@ -63,9 +88,11 @@ A: We do not sell a ready-made cocoa pudding mix. For a chocolate taste, stir Du
 cs_name: Kakao holandského typu
 url: https://juzlova.cz/en/kakao-holandskeho-typu/
 package: 500 g
-price_czk: 270 Kč
+net_weight: 500 g
+price: 270 Kč
 fact: Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar.
 detail: Dark Dutch-process confectionery cocoa with 20–22% cocoa butter. No added sugar, vegan, free of the 14 EU allergens. 500 g / 270 CZK.
+label_data: not yet published — ask the workshop for ingredients, allergens and nutrition
 Q: What makes Dutch-process cocoa different?
 A: Alkalisation — it is darker, less acidic and dissolves better than natural cocoa. At 20–22% fat it ranks among the finest confectionery cocoas.
 Q: Do you add sugar?
@@ -79,13 +106,32 @@ A: Dry, away from strong odours, ideally at 15–20 °C with humidity under 50%.
 cs_name: Vanilínový cukr
 url: https://juzlova.cz/en/vanilkovy-cukr/
 package: 1 kg
-price_czk: 60 Kč
+net_weight: 1 kg
+price: 60 Kč
 fact: Finely ground sugar with vanillin aroma. For dough and for dusting pastries.
 detail: Vanilla sugar made of finely ground sugar with vanillin aroma. For cakes, desserts and Christmas cookies — in the dough and as a dusting. 1 kg / 60 CZK.
+label_data: not yet published — ask the workshop for ingredients, allergens and nutrition
 Q: Is the vanilla sugar good for Christmas cookies?
 A: Yes. Use it in the dough and as a dusting on the finished pastry. Pack 1 kg / 60 CZK.
 Q: Is it vanilla bean or vanillin?
 A: Vanilla sugar: finely ground sugar with vanillin aroma, not vanilla pods.
+
+## Buying, collection and delivery
+order_channel: phone or email. There is no online cart.
+phone: +420 728 466 141 (Jiřina Jůzlová); +420 607 629 931 (Jiří Jůzl)
+email: juzlj@seznam.cz
+hours: every day 08:00–19:00, by phone arrangement
+goods_location: the workshop at Kochánov 40, 582 53 Štoky, Vysočina, Czech Republic
+collection_free: Kochánov and Humpolec. Listed prices are the collection prices.
+delivery_free: Havlíčkův Brod, Humpolec, Světlá nad Sázavou, Jihlava and surroundings
+delivery_elsewhere: by contracted courier anywhere in the Czech Republic; postage is charged on top
+currency: CZK only
+
+### Wholesale and B2B
+available: yes. Restaurants, canteens, patisseries, bakeries, hotels and other volume buyers are quoted individually rather than at the list price.
+how: state the mixes and the monthly volume by phone or email and the workshop prices it. Repeat deliveries can be scheduled.
+pack_size: the mixes are made in 5 kg sacks, which is a catering pack rather than a retail one; larger standing orders are normal.
+page: https://juzlova.cz/en/ceny/
 
 ## Recipes
 ### Poppy-seed rolls (šišky s mákem)

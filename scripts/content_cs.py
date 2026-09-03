@@ -156,7 +156,7 @@ LANG = {
                 ("p", "Na přirozené chuti poznáte, že v těstě není nic navíc — jen to, co do bramborového knedlíku patří."),
             ],
             "faq": [
-                ("Jak dlouho trvá příprava?", "Těsto stačí smíchat s vodou, vytvarovat a povařit — knedlíky máte na stole do 20 minut."),
+                ("Jak dlouho trvá příprava?", "Těsto stačí smíchat s vodou, vytvarovat a povařit — knedlíky máte na stole zhruba za 20 minut (2–3 minuty odležení, 15–20 minut varu)."),
                 ("Kolik porcí je z 5kg balení?", "Z pětikilogramového balení připravíte přílohu zhruba pro 60–70 porcí."),
             ],
         },

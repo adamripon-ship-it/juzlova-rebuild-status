@@ -156,7 +156,7 @@ LANG = {
                 ("p", "Am natürlichen Geschmack erkennen Sie: In diesem Teig steckt nichts Überflüssiges — nur das, was in einen Kartoffelknödel gehört."),
             ],
             "faq": [
-                ("Wie lange dauert die Zubereitung?", "Einfach das Pulver mit Wasser vermengen, formen und kochen — die Knödel stehen in 20 Minuten auf dem Tisch."),
+                ("Wie lange dauert die Zubereitung?", "Einfach das Pulver mit Wasser vermengen, formen und kochen — die Knödel stehen in etwa 20 Minuten auf dem Tisch (2–3 Minuten ruhen, 15–20 Minuten kochen)."),
                 ("Wie viele Portionen ergibt der 5-kg-Beutel?", "Aus einem 5-kg-Beutel bereiten Sie eine Beilage für etwa 60–70 Portionen zu."),
             ],
         },

@@ -156,7 +156,7 @@ LANG = {
                 ("p", "The natural taste tells you there’s nothing extra in the dough — only what belongs in a potato dumpling."),
             ],
             "faq": [
-                ("How long does preparation take?", "Just mix the powder with water, shape and boil — dumplings are on the table within 20 minutes."),
+                ("How long does preparation take?", "Just mix the powder with water, shape and boil — dumplings are on the table in about 20 minutes (2–3 minutes resting, 15–20 minutes boiling)."),
                 ("How many servings per 5 kg bag?", "One 5 kg bag makes a side dish for roughly 60–70 servings."),
             ],
         },

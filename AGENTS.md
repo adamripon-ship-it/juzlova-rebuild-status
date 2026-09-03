@@ -27,6 +27,7 @@ Change the source, then rebuild:
 |---|---|
 | Page copy, product text, UI strings | `scripts/content_{cs,en,de,sk}.py` |
 | Recipes | `scripts/recipes_{cs,en,de,sk}.py` |
+| Label data: composition, allergens, nutrition, preparation | `scripts/product_spec.py` |
 | Layout, SEO tags, JSON-LD, nav, sitemap, llms.txt, redirects | `scripts/build_site.py` |
 | Styling | `assets/site.css` |
 | Scroll and motion behaviour | `assets/site.js` |
