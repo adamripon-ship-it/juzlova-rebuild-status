@@ -14,17 +14,17 @@ Canonical English index: https://juzlova.cz/llms.txt
 - [Domov](https://juzlova.cz/sk/): Rodinná výroba od roku 2004: zemiakové a chlpaté knedle v prášku, vanilkový puding bez lepku, vanilínový cukor a kakao holandského typu. Kochánov, Vysočina.
 - [Kto sme](https://juzlova.cz/sk/kdo_jsme/): Potravinárske zmesi vyrábame od roku 2004 v malej dielni v Kochánove na Vysočine. Dodávame domácnostiam, reštauráciám aj cukrárňam v Čechách i na Morave.
 - [Dodanie](https://juzlova.cz/sk/kde-nas-najdete/): Vyzdvihnutie zadarmo v Kochánove alebo Humpolci, bezplatný rozvoz v okolí Havlíčkovho Brodu, Světlej nad Sázavou a Jihlavy, alebo zaslanie zmluvným dopravcom.
-- [Cenník](https://juzlova.cz/sk/ceny/): Aktuálne ceny: zemiakové knedle 5 kg / 165 Kč, chlpaté knedle 5 kg / 185 Kč, vanilkový puding od 17 Kč, vanilínový cukor 38 Kč, kakao 100 Kč.
+- [Cenník](https://juzlova.cz/sk/ceny/): Aktuálne ceny: zemiakové knedle 5 kg / 250 Kč, chlpaté knedle 5 kg / 260 Kč, vanilkový puding od 30 Kč, vanilínový cukor 60 Kč, kakao 270 Kč.
 - [Časté otázky](https://juzlova.cz/sk/faq/): Odpovede o Jůzlovej: kde sídlime, ako objednať, ceny, bezlepkový puding, kakao holandského typu a rozvoz na Vysočine.
 - [Kontakt](https://juzlova.cz/sk/kontakt/): Jiřina Jůzlová (+420 728 466 141) a Jiří Jůzl (+420 607 629 931), Kochánov 40, 582 53. E-mail juzlj@seznam.cz. Odber tovaru aj v Humpolci.
 - [Recepty](https://juzlova.cz/sk/recepty/): Vyskúšajte osvedčené recepty z našich zmesí — od nedeľných knedieľ po nepečené dezerty.
 
 ## Products
-- [Zemiakové knedle v prášku](https://juzlova.cz/sk/bramborove_knedliky/): Náš najvyhľadávanejší výrobok. Klasické knedle, šúľance, krokety aj gnocchi z jedného cesta. | 5 kg | 165 Kč
-- [Chlpaté knedle v prášku](https://juzlova.cz/sk/chlupate-knedliky/): Bosáky podľa tradičnej receptúry. Hotové za 15 minút, chuťou na nerozoznanie od domácich. | 5 kg | 185 Kč
-- [Vanilkový puding bez lepku](https://juzlova.cz/sk/vanilkovy_pudink/): Kukuričný škrob bez lepku, prirodzená vanilková chuť. Na dezerty aj pečenie. | 1 kg / 400 g | 34 Kč / 17 Kč
-- [Kakao holandského typu](https://juzlova.cz/sk/kakao-holandskeho-typu/): Tmavé cukrárske kakao triedy 21 % tuku. Červenohnedá farba, krémová chuť, bez pridaného cukru. | 500 g | 100 Kč
-- [Vanilínový cukor](https://juzlova.cz/sk/vanilkovy-cukr/): Jemne mletý cukor s vanilínovou arómou. Do cesta aj na posypanie pečiva. | 1 kg | 38 Kč
+- [Zemiakové knedle v prášku](https://juzlova.cz/sk/bramborove_knedliky/): Náš najvyhľadávanejší výrobok. Klasické knedle, šúľance, krokety aj gnocchi z jedného cesta. | 5 kg | 250 Kč
+- [Chlpaté knedle v prášku](https://juzlova.cz/sk/chlupate-knedliky/): Bosáky podľa tradičnej receptúry. Hotové za 15 minút, chuťou na nerozoznanie od domácich. | 5 kg | 260 Kč
+- [Vanilkový puding bez lepku](https://juzlova.cz/sk/vanilkovy_pudink/): Kukuričný škrob bez lepku, prirodzená vanilková chuť. Na dezerty aj pečenie. | 1 kg / 400 g | 60 Kč / 30 Kč
+- [Kakao holandského typu](https://juzlova.cz/sk/kakao-holandskeho-typu/): Tmavé cukrárske kakao triedy 21 % tuku. Červenohnedá farba, krémová chuť, bez pridaného cukru. | 500 g | 270 Kč
+- [Vanilínový cukor](https://juzlova.cz/sk/vanilkovy-cukr/): Jemne mletý cukor s vanilínovou arómou. Do cesta aj na posypanie pečiva. | 1 kg | 60 Kč
 
 ## Recipes
 - [Šúľance s makom](https://juzlova.cz/sk/sisky-s-makem-recept/): Tradičná sladká večera zo zemiakového cesta: šúľance obalené v maku s cukrom, preliate rozpusteným maslom. | rating 4.7/5 (87)

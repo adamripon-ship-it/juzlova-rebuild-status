@@ -27,7 +27,7 @@ LANG = {
         "why_2_h": "Schnell, ohne Kompromisse",
         "why_2_p": "Haarige Knödel (Bosáky) sind in 15 Minuten fertig — und geschmacklich nicht von Knödeln zu unterscheiden, an denen man den ganzen Nachmittag arbeitet.",
         "why_3_h": "Günstiger als im Supermarkt",
-        "why_3_p": "Wir bieten Qualität zu einem Preis unter dem von Supermarktprodukten unklarer Herkunft. Kartoffelknödel: 5 kg für 165 Kč.",
+        "why_3_p": "Wir bieten Qualität zu einem Preis unter dem von Supermarktprodukten unklarer Herkunft. Kartoffelknödel: 5 kg für 250 Kč.",
         "cta_sample_h": "Möchten Sie bestellen?",
         "cta_sample_p": "Rufen Sie an oder schreiben Sie uns — holen Sie die Ware in Kochánov oder Humpolec ab, oder wir liefern sie zu Ihnen.",
         "cta_sample_btn": "Anrufen oder schreiben",
@@ -132,7 +132,7 @@ LANG = {
         },
         "ceny": {
             "title": "Preisliste — Knödelmischungen, Pudding, Zucker, Kakao",
-            "desc": "Preise: Kartoffelknödel 5 kg / 165 Kč, Haarige Knödel 5 kg / 185 Kč, Vanillepudding ab 17 Kč, Vanillinzucker 38 Kč, Kakao 100 Kč.",
+            "desc": "Preise: Kartoffelknödel 5 kg / 250 Kč, Haarige Knödel 5 kg / 260 Kč, Vanillepudding ab 30 Kč, Vanillinzucker 60 Kč, Kakao 270 Kč.",
             "h1": "Preisliste",
             "sub": "Qualität zu Preisen unter Supermarktniveau. Die Preise gelten bei Abholung in Kochánov oder Humpolec.",
             "body": [("pricetable", None),
@@ -143,8 +143,8 @@ LANG = {
         "bramborove_knedliky": {
             "name": "Kartoffelknödel-Mischung",
             "short": "Unser gefragtestes Produkt. Klassische Knödel, Mohnnudeln, Kroketten und Gnocchi aus einem Teig.",
-            "price": "5 kg / 165 Kč",
-            "title": "Kartoffelknödel-Mischung — 5 kg / 165 Kč",
+            "price": "5 kg / 250 Kč",
+            "title": "Kartoffelknödel-Mischung — 5 kg / 250 Kč",
             "desc": "Kartoffelteig-Pulver aus KLASA-Mehl (tschechisches Gütesiegel) und Kartoffelflocken. Für klassische und gefüllte Knödel, Mohnnudeln, Kroketten und Gnocchi.",
             "body": [
                 ("p", "Kartoffelteig in Pulverform ist unser gefragtestes Produkt. Wir verwenden hochwertiges Weizenmehl mit dem tschechischen Gütesiegel KLASA aus der nahegelegenen Mühle in Havlíčkův Brod; getrocknete Kartoffelflocken sorgen für den typischen Geschmack und die Konsistenz."),
@@ -162,9 +162,9 @@ LANG = {
         "chlupate_knedliky": {
             "name": "Haarige Knödel (Bosáky) — Fertigmischung",
             "short": "Bosáky nach traditioneller Rezeptur. Fertig in 15 Minuten, geschmacklich wie hausgemacht.",
-            "price": "5 kg / 185 Kč",
-            "title": "Haarige Knödel (Bosáky) — Mischung, 5 kg / 185 Kč",
-            "desc": "Haarige Kartoffelknödel (Bosáky) nach traditioneller Rezeptur: in 15 Minuten fertig, beliebt in Kantinen und Restaurants. 5-kg-Beutel für 185 Kč.",
+            "price": "5 kg / 260 Kč",
+            "title": "Haarige Knödel (Bosáky) — Mischung, 5 kg / 260 Kč",
+            "desc": "Haarige Kartoffelknödel (Bosáky) nach traditioneller Rezeptur: in 15 Minuten fertig, beliebt in Kantinen und Restaurants. 5-kg-Beutel für 260 Kč.",
             "body": [
                 ("p", "Haarige Knödel, in Tschechien auch als Bosáky bekannt, zählen zu unseren beliebtesten Produkten. Wir stellen sie nach traditioneller Rezeptur her."),
                 ("p", "Dank der schnellen, einfachen Zubereitung sind sie in Kantinen und Restaurants beliebt — und überzeugen mit Geschmack und Konsistenz auch zu Hause. Sie sind in 15 Minuten fertig und geschmacklich nicht von Knödeln zu unterscheiden, die auf traditionelle Weise aus rohen Kartoffeln zubereitet werden."),
@@ -176,9 +176,9 @@ LANG = {
         "vanilkovy_pudink": {
             "name": "Glutenfreier Vanillepudding",
             "short": "Glutenfreie Maisstärke, natürlicher Vanillegeschmack. Für Desserts und zum Backen.",
-            "price": "1 kg / 34 Kč · 400 g / 17 Kč",
-            "title": "Glutenfreier Vanillepudding — 1 kg / 34 Kč",
-            "desc": "Instant-Vanillepudding aus glutenfreier Maisstärke. Natürlicher Geschmack ohne chemische Noten, für glutenfreie Ernährung geeignet. 1 kg / 34 Kč, 400 g / 17 Kč.",
+            "price": "1 kg / 60 Kč · 400 g / 30 Kč",
+            "title": "Glutenfreier Vanillepudding — 1 kg / 60 Kč",
+            "desc": "Instant-Vanillepudding aus glutenfreier Maisstärke. Natürlicher Geschmack ohne chemische Noten, für glutenfreie Ernährung geeignet. 1 kg / 60 Kč, 400 g / 30 Kč.",
             "body": [
                 ("p", "Vanillepudding gehört zu unseren traditionellen Produkten. Er eignet sich hervorragend für leichte Desserts und zum Backen."),
                 ("p", "Die Basis ist hochwertige Maisstärke, die kein Gluten enthält — der Pudding ist daher auch für eine glutenfreie Ernährung geeignet. Probieren Sie seinen natürlichen Geschmack ohne chemische Noten, und Sie werden zu den gängigen Supermarktmarken nicht mehr zurückkehren."),
@@ -191,9 +191,9 @@ LANG = {
         "kakao_holandskeho_typu": {
             "name": "Kakao holländischer Art",
             "short": "Dunkler Konditorkakao der 21-%-Fettklasse. Rotbraun, cremig, ohne Zuckerzusatz.",
-            "price": "500 g / 100 Kč",
-            "title": "Kakao holländischer Art, 21 % Fett — 500 g / 100 Kč",
-            "desc": "Dunkler Konditorkakao holländischer Art mit 20–22 % Kakaobutter. Ohne Zuckerzusatz, vegan, ohne die 14 EU-Allergene. 500 g / 100 Kč.",
+            "price": "500 g / 270 Kč",
+            "title": "Kakao holländischer Art, 21 % Fett — 500 g / 270 Kč",
+            "desc": "Dunkler Konditorkakao holländischer Art mit 20–22 % Kakaobutter. Ohne Zuckerzusatz, vegan, ohne die 14 EU-Allergene. 500 g / 270 Kč.",
             "body": [
                 ("p", "Unser dunkler Konditorkakao ist holländischer Art — ein alkalisiertes Pulver aus Theobroma-cacao-Bohnen, Fettklasse 21 %. Voller Kakaokörper, cremiger Schokoladengeschmack und ein sattes Rotbraun, das trocken und im fertigen Rezept hält."),
                 ("h2", "Woher der Kakao kommt"),
@@ -260,16 +260,16 @@ LANG = {
         "vanilkovy_cukr": {
             "name": "Vanillinzucker",
             "short": "Fein gemahlener Zucker mit Vanillinaroma. Für den Teig und zum Bestreuen von Gebäck.",
-            "price": "1 kg / 38 Kč",
-            "title": "Vanillinzucker — 1 kg / 38 Kč",
-            "desc": "Vanillinzucker aus fein gemahlenem Zucker mit Vanillinaroma. Für Kuchen, Desserts und Weihnachtsgebäck — im Teig und zum Bestreuen. 1 kg / 38 Kč.",
+            "price": "1 kg / 60 Kč",
+            "title": "Vanillinzucker — 1 kg / 60 Kč",
+            "desc": "Vanillinzucker aus fein gemahlenem Zucker mit Vanillinaroma. Für Kuchen, Desserts und Weihnachtsgebäck — im Teig und zum Bestreuen. 1 kg / 60 Kč.",
             "body": [
                 ("p", "Unser Vanillinzucker enthält neben fein gemahlenem Zucker ein Vanillinaroma, das ihm einen angenehmen, unverwechselbaren Vanilleduft verleiht."),
                 ("p", "Sie werden ihn beim Backen von Kuchen, Torten und anderen Desserts zu schätzen wissen. Besonders gut eignet er sich für Weihnachtsgebäck — nicht nur als Zutat im Teig, sondern auch zum Bestreuen des fertigen Gebäcks."),
             ],
             "faq": [
                 ("Eignet sich der Vanillinzucker für Weihnachtsgebäck?",
-                 "Ja. Im Teig und zum Bestreuen des fertigen Gebäcks. Packung 1 kg / 38 Kč."),
+                 "Ja. Im Teig und zum Bestreuen des fertigen Gebäcks. Packung 1 kg / 60 Kč."),
                 ("Ist das Vanille oder Vanillin?",
                  "Vanillinzucker: fein gemahlener Zucker mit Vanillinaroma, keine Vanilleschote."),
             ],

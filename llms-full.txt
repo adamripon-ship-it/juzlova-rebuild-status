@@ -29,7 +29,7 @@ KLASA-awarded wheat flour from a mill in Havlíčkův Brod (12 km). Instant mixe
 cs_name: Bramborové knedlíky v prášku
 url: https://juzlova.cz/en/bramborove_knedliky/
 package: 5 kg
-price_czk: 165 Kč
+price_czk: 250 Kč
 fact: Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough.
 detail: Potato dough powder made with KLASA-awarded flour and dried potato flakes. For classic and filled dumplings, poppy-seed rolls, croquettes and gnocchi.
 Q: How long does preparation take?
@@ -41,9 +41,9 @@ A: One 5 kg bag makes a side dish for roughly 60–70 servings.
 cs_name: Chlupaté knedlíky v prášku
 url: https://juzlova.cz/en/chlupate-knedliky/
 package: 5 kg
-price_czk: 185 Kč
+price_czk: 260 Kč
 fact: Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made.
-detail: Hairy dumplings made to a traditional recipe: ready in 15 minutes, popular with canteens and restaurants. 5 kg bag for 185 CZK.
+detail: Hairy dumplings made to a traditional recipe: ready in 15 minutes, popular with canteens and restaurants. 5 kg bag for 260 CZK.
 Q: What do hairy dumplings go with?
 A: Traditionally with cabbage and smoked meat, with fried onion and cracklings, or sweet with poppy seeds and sugar.
 
@@ -51,9 +51,9 @@ A: Traditionally with cabbage and smoked meat, with fried onion and cracklings, 
 cs_name: Vanilkový puding bez lepku
 url: https://juzlova.cz/en/vanilkovy_pudink/
 package: 1 kg / 400 g
-price_czk: 34 Kč / 17 Kč
+price_czk: 60 Kč / 30 Kč
 fact: Gluten-free corn starch, natural vanilla taste. For desserts and baking.
-detail: Instant vanilla pudding based on gluten-free corn starch. Natural taste with no chemical off-notes, suitable for a gluten-free diet. 1 kg / 34 CZK, 400 g / 17 CZK.
+detail: Instant vanilla pudding based on gluten-free corn starch. Natural taste with no chemical off-notes, suitable for a gluten-free diet. 1 kg / 60 CZK, 400 g / 30 CZK.
 Q: Is the pudding really gluten-free?
 A: Yes. The base is pure corn starch, which contains no gluten.
 Q: Do you make a chocolate version?
@@ -63,9 +63,9 @@ A: We do not sell a ready-made cocoa pudding mix. For a chocolate taste, stir Du
 cs_name: Kakao holandského typu
 url: https://juzlova.cz/en/kakao-holandskeho-typu/
 package: 500 g
-price_czk: 100 Kč
+price_czk: 270 Kč
 fact: Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar.
-detail: Dark Dutch-process confectionery cocoa with 20–22% cocoa butter. No added sugar, vegan, free of the 14 EU allergens. 500 g / 100 CZK.
+detail: Dark Dutch-process confectionery cocoa with 20–22% cocoa butter. No added sugar, vegan, free of the 14 EU allergens. 500 g / 270 CZK.
 Q: What makes Dutch-process cocoa different?
 A: Alkalisation — it is darker, less acidic and dissolves better than natural cocoa. At 20–22% fat it ranks among the finest confectionery cocoas.
 Q: Do you add sugar?
@@ -79,11 +79,11 @@ A: Dry, away from strong odours, ideally at 15–20 °C with humidity under 50%.
 cs_name: Vanilínový cukr
 url: https://juzlova.cz/en/vanilkovy-cukr/
 package: 1 kg
-price_czk: 38 Kč
+price_czk: 60 Kč
 fact: Finely ground sugar with vanillin aroma. For dough and for dusting pastries.
-detail: Vanilla sugar made of finely ground sugar with vanillin aroma. For cakes, desserts and Christmas cookies — in the dough and as a dusting. 1 kg / 38 CZK.
+detail: Vanilla sugar made of finely ground sugar with vanillin aroma. For cakes, desserts and Christmas cookies — in the dough and as a dusting. 1 kg / 60 CZK.
 Q: Is the vanilla sugar good for Christmas cookies?
-A: Yes. Use it in the dough and as a dusting on the finished pastry. Pack 1 kg / 38 CZK.
+A: Yes. Use it in the dough and as a dusting on the finished pastry. Pack 1 kg / 60 CZK.
 Q: Is it vanilla bean or vanillin?
 A: Vanilla sugar: finely ground sugar with vanillin aroma, not vanilla pods.
 
@@ -475,7 +475,7 @@ Q: Do you deliver, and where is pick-up free?
 A: Pick-up in Kochánov or Humpolec is free. Free local delivery covers Havlíčkův Brod, Humpolec, Světlá nad Sázavou, Jihlava and surroundings. Farther away we ship with a contracted courier; postage follows the courier’s tariff.
 
 Q: What are the current Jůzlová prices?
-A: Potato dumpling mix 5 kg / 165 CZK. Hairy dumplings (bosáky) 5 kg / 185 CZK. Gluten-free vanilla pudding 1 kg / 34 CZK or 400 g / 17 CZK. Dutch-process cocoa 500 g / 100 CZK. Vanilla sugar 1 kg / 38 CZK. Restaurants and bakeries get a quote by volume.
+A: Potato dumpling mix 5 kg / 250 CZK. Hairy dumplings (bosáky) 5 kg / 260 CZK. Gluten-free vanilla pudding 1 kg / 60 CZK or 400 g / 30 CZK. Dutch-process cocoa 500 g / 270 CZK. Vanilla sugar 1 kg / 60 CZK. Restaurants and bakeries get a quote by volume.
 
 Q: Is Jůzlová vanilla pudding gluten-free?
 A: Yes. It is based on corn starch, which contains no gluten. For a chocolate taste, stir in our Dutch-process cocoa — we do not sell a ready-made chocolate pudding mix.
@@ -484,7 +484,7 @@ Q: What is the difference between potato dumplings and hairy dumplings?
 A: Potato dumpling mix is classic dough from KLASA-awarded wheat flour and dried potato flakes — for dumplings, poppy-seed rolls, croquettes and gnocchi. Hairy dumplings (bosáky) follow a traditional recipe, ready in 15 minutes, typically served with cabbage and smoked meat or as strapačky/halušky.
 
 Q: What is Dutch-process cocoa with 21% fat?
-A: Alkalised confectionery cocoa powder with 20–22% cocoa butter. It is darker, less acidic and creamier than natural cocoa. No added sugar (naturally occurring sugars 0.9 g / 100 g), vegan, free of the 14 EU allergens, gluten under 20 ppm. Pack 500 g / 100 CZK.
+A: Alkalised confectionery cocoa powder with 20–22% cocoa butter. It is darker, less acidic and creamier than natural cocoa. No added sugar (naturally occurring sugars 0.9 g / 100 g), vegan, free of the 14 EU allergens, gluten under 20 ppm. Pack 500 g / 270 CZK.
 
 Q: How many portions from a 5 kg dumpling mix bag?
 A: A 5 kg bag of potato dumpling mix makes a side dish for about 60–70 portions. Hairy dumplings from 5 kg similarly cover a canteen service or several family meals.

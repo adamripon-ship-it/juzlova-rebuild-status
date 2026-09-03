@@ -16,31 +16,31 @@
     {
       "id": "bramborove_knedliky",
       "name": "Potato dumpling mix",
-      "price": "165 Kč",
+      "price": "250 Kč",
       "url": "https://juzlova.cz/en/bramborove_knedliky/"
     },
     {
       "id": "chlupate_knedliky",
       "name": "Hairy dumpling mix (bosáky)",
-      "price": "185 Kč",
+      "price": "260 Kč",
       "url": "https://juzlova.cz/en/chlupate-knedliky/"
     },
     {
       "id": "vanilkovy_pudink",
       "name": "Gluten-free vanilla pudding",
-      "price": "34 Kč / 17 Kč",
+      "price": "60 Kč / 30 Kč",
       "url": "https://juzlova.cz/en/vanilkovy_pudink/"
     },
     {
       "id": "kakao_holandskeho_typu",
       "name": "Dutch-process cocoa",
-      "price": "100 Kč",
+      "price": "270 Kč",
       "url": "https://juzlova.cz/en/kakao-holandskeho-typu/"
     },
     {
       "id": "vanilkovy_cukr",
       "name": "Vanilla sugar",
-      "price": "38 Kč",
+      "price": "60 Kč",
       "url": "https://juzlova.cz/en/vanilkovy-cukr/"
     }
   ],

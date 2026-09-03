@@ -27,7 +27,7 @@ LANG = {
         "why_2_h": "Speed without compromise",
         "why_2_p": "Hairy dumplings (bosáky) are ready in 15 minutes — and you won’t tell them apart from dumplings made the traditional way all afternoon.",
         "why_3_h": "Priced below the supermarket",
-        "why_3_p": "We make quality that costs less than supermarket products of uncertain origin. Potato dumplings: 5 kg for 165 CZK.",
+        "why_3_p": "We make quality that costs less than supermarket products of uncertain origin. Potato dumplings: 5 kg for 250 CZK.",
         "cta_sample_h": "Ready to order?",
         "cta_sample_p": "Call or write — pick up in Kochánov or Humpolec, or we’ll deliver to you.",
         "cta_sample_btn": "Call or write",
@@ -132,7 +132,7 @@ LANG = {
         },
         "ceny": {
             "title": "Price list — dumpling mixes, puddings, vanilla sugar, cocoa",
-            "desc": "Current prices: potato dumplings 5 kg / 165 CZK, hairy dumplings 5 kg / 185 CZK, vanilla pudding from 17 CZK, vanilla sugar 38 CZK, cocoa 100 CZK.",
+            "desc": "Current prices: potato dumplings 5 kg / 250 CZK, hairy dumplings 5 kg / 260 CZK, vanilla pudding from 30 CZK, vanilla sugar 60 CZK, cocoa 270 CZK.",
             "h1": "Price list",
             "sub": "Quality priced below the supermarket. Prices apply to pick-up in Kochánov or Humpolec.",
             "body": [("pricetable", None),
@@ -143,8 +143,8 @@ LANG = {
         "bramborove_knedliky": {
             "name": "Potato dumpling mix",
             "short": "Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough.",
-            "price": "5 kg / 165 CZK",
-            "title": "Potato dumpling mix — 5 kg / 165 CZK",
+            "price": "5 kg / 250 CZK",
+            "title": "Potato dumpling mix — 5 kg / 250 CZK",
             "desc": "Potato dough powder made with KLASA-awarded flour and dried potato flakes. For classic and filled dumplings, poppy-seed rolls, croquettes and gnocchi.",
             "body": [
                 ("p", "Potato dough powder is our most sought-after product. We use quality wheat flour awarded the KLASA mark from a nearby mill in Havlíčkův Brod; dried potato flakes provide the typical taste and texture."),
@@ -162,9 +162,9 @@ LANG = {
         "chlupate_knedliky": {
             "name": "Hairy dumpling mix (bosáky)",
             "short": "Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made.",
-            "price": "5 kg / 185 CZK",
-            "title": "Hairy dumpling mix (bosáky) — 5 kg / 185 CZK",
-            "desc": "Hairy dumplings made to a traditional recipe: ready in 15 minutes, popular with canteens and restaurants. 5 kg bag for 185 CZK.",
+            "price": "5 kg / 260 CZK",
+            "title": "Hairy dumpling mix (bosáky) — 5 kg / 260 CZK",
+            "desc": "Hairy dumplings made to a traditional recipe: ready in 15 minutes, popular with canteens and restaurants. 5 kg bag for 260 CZK.",
             "body": [
                 ("p", "Hairy dumplings, also known as bosáky, are among our most popular products. We make them to a traditional recipe."),
                 ("p", "Their quick, easy preparation makes them a favourite of canteens and restaurants, and their taste and texture stand up at home too. They’re ready in 15 minutes, and you won’t tell them apart from dumplings made the traditional way from raw potatoes."),
@@ -176,9 +176,9 @@ LANG = {
         "vanilkovy_pudink": {
             "name": "Gluten-free vanilla pudding",
             "short": "Gluten-free corn starch, natural vanilla taste. For desserts and baking.",
-            "price": "1 kg / 34 CZK · 400 g / 17 CZK",
-            "title": "Gluten-free vanilla pudding — 1 kg / 34 CZK",
-            "desc": "Instant vanilla pudding based on gluten-free corn starch. Natural taste with no chemical off-notes, suitable for a gluten-free diet. 1 kg / 34 CZK, 400 g / 17 CZK.",
+            "price": "1 kg / 60 CZK · 400 g / 30 CZK",
+            "title": "Gluten-free vanilla pudding — 1 kg / 60 CZK",
+            "desc": "Instant vanilla pudding based on gluten-free corn starch. Natural taste with no chemical off-notes, suitable for a gluten-free diet. 1 kg / 60 CZK, 400 g / 30 CZK.",
             "body": [
                 ("p", "Vanilla pudding is one of our traditional products. It shines in light desserts and in baking."),
                 ("p", "The base is quality corn starch, which contains no gluten — so the pudding suits a gluten-free diet. Try its natural taste, free of chemical off-notes, and you won’t go back to the established supermarket brands."),
@@ -191,9 +191,9 @@ LANG = {
         "kakao_holandskeho_typu": {
             "name": "Dutch-process cocoa",
             "short": "Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar.",
-            "price": "500 g / 100 CZK",
-            "title": "Dutch-process cocoa, 21% fat — 500 g / 100 CZK",
-            "desc": "Dark Dutch-process confectionery cocoa with 20–22% cocoa butter. No added sugar, vegan, free of the 14 EU allergens. 500 g / 100 CZK.",
+            "price": "500 g / 270 CZK",
+            "title": "Dutch-process cocoa, 21% fat — 500 g / 270 CZK",
+            "desc": "Dark Dutch-process confectionery cocoa with 20–22% cocoa butter. No added sugar, vegan, free of the 14 EU allergens. 500 g / 270 CZK.",
             "body": [
                 ("p", "Our dark confectionery cocoa is Dutch-process — an alkalised powder from Theobroma cacao beans, 21% fat class. Full cocoa body, a creamy chocolate taste and a deep red-brown colour that holds both dry and in the finished recipe."),
                 ("h2", "Where the cocoa comes from"),
@@ -260,16 +260,16 @@ LANG = {
         "vanilkovy_cukr": {
             "name": "Vanilla sugar",
             "short": "Finely ground sugar with vanillin aroma. For dough and for dusting pastries.",
-            "price": "1 kg / 38 CZK",
-            "title": "Vanilla sugar — 1 kg / 38 CZK",
-            "desc": "Vanilla sugar made of finely ground sugar with vanillin aroma. For cakes, desserts and Christmas cookies — in the dough and as a dusting. 1 kg / 38 CZK.",
+            "price": "1 kg / 60 CZK",
+            "title": "Vanilla sugar — 1 kg / 60 CZK",
+            "desc": "Vanilla sugar made of finely ground sugar with vanillin aroma. For cakes, desserts and Christmas cookies — in the dough and as a dusting. 1 kg / 60 CZK.",
             "body": [
                 ("p", "Our vanilla sugar combines finely ground sugar with a vanillin aroma that gives it a pleasant, distinctive vanilla scent."),
                 ("p", "You’ll appreciate it when baking cakes, desserts and other sweets. It’s ideal for Christmas cookies — not only in the dough but also for dusting the finished pastry."),
             ],
             "faq": [
                 ("Is the vanilla sugar good for Christmas cookies?",
-                 "Yes. Use it in the dough and as a dusting on the finished pastry. Pack 1 kg / 38 CZK."),
+                 "Yes. Use it in the dough and as a dusting on the finished pastry. Pack 1 kg / 60 CZK."),
                 ("Is it vanilla bean or vanillin?",
                  "Vanilla sugar: finely ground sugar with vanillin aroma, not vanilla pods."),
             ],
