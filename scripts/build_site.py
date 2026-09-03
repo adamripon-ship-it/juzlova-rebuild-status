@@ -1017,7 +1017,7 @@ def build_product(L, key):
     body = f"""<main id="main" class="wrap"><article class="page">
 <nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pr['name'])}</nav>
 <h1>{esc(pr['name'])}</h1>
-<p class="sub">{esc(pr['short'])}</p>
+<p class="sub">{esc(pr.get('lede') or pr['short'])}</p>
 <div class="factbox"><dl><dt>{esc(L['ui']['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong></dd>
 <dt>{esc(L['ui']['order_info'])}</dt><dd><a href="{pages}kontakt/">{esc(L['ui']['nav_contact'])}</a> · +420 728 466 141 · juzlj@seznam.cz</dd></dl></div>
 {figure}
@@ -1616,6 +1616,8 @@ def build_llms(langs_data):
         full.append(f"net_weight: {pack}")
         full.append(f"price: {price}")
         full.append(f"fact: {pr_en['short']}")
+        if pr_en.get("lede"):
+            full.append(f"summary: {pr_en['lede']}")
         full.append(f"detail: {pr_en['desc']}")
         sp = product_spec.spec_for("en", key)
         if sp:

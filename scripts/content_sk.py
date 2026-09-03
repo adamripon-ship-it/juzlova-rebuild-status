@@ -144,6 +144,7 @@ LANG = {
         "bramborove_knedliky": {
             "name": "Zemiakové knedle v prášku",
             "short": "Náš najvyhľadávanejší výrobok. Klasické knedle, šúľance, krokety aj gnocchi z jedného cesta.",
+            "lede": "Zemiakové knedle v prášku sú instantné zemiakové cesto z rodinnej dielne Jůzlová v Kochánove na Vysočine. Balenie 5 kg stojí 250 Kč. Z jedného cesta pripravíte klasické aj plnené knedle, šúľance s makom, krokety a gnocchi.",
             "price": "5 kg / 250 Kč",
             "title": "Zemiakové knedle v prášku — 5 kg / 250 Kč",
             "desc": "Zemiakové cesto v prášku z múky ocenenej českou značkou kvality KLASA a sušených zemiakových vločiek. Na klasické aj plnené knedle, šúľance, krokety a gnocchi.",
@@ -163,6 +164,7 @@ LANG = {
         "chlupate_knedliky": {
             "name": "Chlpaté knedle v prášku",
             "short": "Bosáky podľa tradičnej receptúry. Hotové za 15 minút, chuťou na nerozoznanie od domácich.",
+            "lede": "Chlpaté knedle v prášku, známe aj ako bosáky, sú instantná zemiaková zmes z rodinnej dielne Jůzlová v Kochánove na Vysočine. Balenie 5 kg stojí 260 Kč. Hotové sú za 15 minút a chuťou ich nerozoznáte od knedlí zo surových zemiakov.",
             "price": "5 kg / 260 Kč",
             "title": "Chlpaté knedle (bosáky) v prášku — 5 kg / 260 Kč",
             "desc": "Chlpaté knedle podľa tradičnej receptúry: hotové za 15 minút, obľúbené v jedálňach aj reštauráciách. Balenie 5 kg za 260 Kč.",
@@ -177,6 +179,7 @@ LANG = {
         "vanilkovy_pudink": {
             "name": "Vanilkový puding bez lepku",
             "short": "Kukuričný škrob bez lepku, prirodzená vanilková chuť. Na dezerty aj pečenie.",
+            "lede": "Vanilkový puding bez lepku je instantná pudingová zmes z rodinnej dielne Jůzlová v Kochánove na Vysočine. Balenie 1 kg stojí 60 Kč, balenie 400 g stojí 30 Kč. Základom je kukuričný škrob, takže puding je vhodný aj pre bezlepkovú diétu.",
             "price": "1 kg / 60 Kč · 400 g / 30 Kč",
             "title": "Vanilkový puding bez lepku — 1 kg / 60 Kč",
             "desc": "Instantný vanilkový puding z kukuričného škrobu bez lepku. Prirodzená chuť bez chemických príchutí, vhodný pri bezlepkovej diéte. 1 kg / 60 Kč, 400 g / 30 Kč.",
@@ -192,6 +195,7 @@ LANG = {
         "kakao_holandskeho_typu": {
             "name": "Kakao holandského typu",
             "short": "Tmavé cukrárske kakao triedy 21 % tuku. Červenohnedá farba, krémová chuť, bez pridaného cukru.",
+            "lede": "Kakao holandského typu je tmavé cukrárske kakao s 20–22 % kakaového masla z rodinnej dielne Jůzlová v Kochánove na Vysočine. Balenie 500 g stojí 270 Kč. Je bez pridaného cukru, vegánske a neobsahuje žiadny zo 14 alergénov EU.",
             "price": "500 g / 270 Kč",
             "title": "Kakao holandského typu 21 % tuku — 500 g / 270 Kč",
             "desc": "Tmavé cukrárske kakao holandského typu s 20–22 % kakaového masla. Bez pridaného cukru, vegánske, bez 14 alergénov EÚ. 500 g / 270 Kč.",
@@ -261,6 +265,7 @@ LANG = {
         "vanilkovy_cukr": {
             "name": "Vanilínový cukor",
             "short": "Jemne mletý cukor s vanilínovou arómou. Do cesta aj na posypanie pečiva.",
+            "lede": "Vanilínový cukor je jemne mletý cukor s vanilínovou arómou z rodinnej dielne Jůzlová v Kochánove na Vysočine. Balenie 1 kg stojí 60 Kč. Používa sa do cesta aj na posypanie pečiva a múčnikov.",
             "price": "1 kg / 60 Kč",
             "title": "Vanilínový cukor — 1 kg / 60 Kč",
             "desc": "Vanilínový cukor z jemne mletého cukru s vanilínovou arómou. Na koláče, zákusky aj vianočné pečivo — do cesta aj na posyp. 1 kg / 60 Kč.",

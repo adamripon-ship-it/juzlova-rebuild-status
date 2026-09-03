@@ -144,6 +144,7 @@ LANG = {
         "bramborove_knedliky": {
             "name": "Bramborové knedlíky v prášku",
             "short": "Náš nejvyhledávanější výrobek. Klasické knedlíky, šišky, krokety i gnocchi z jednoho těsta.",
+            "lede": "Bramborové knedlíky v prášku jsou instantní bramborové těsto z rodinné dílny Jůzlová v Kochánově na Vysočině. Balení 5 kg stojí 250 Kč. Z jednoho těsta uděláte klasické i plněné knedlíky, šišky s mákem, krokety a gnocchi.",
             "price": "5 kg / 250 Kč",
             "title": "Bramborové knedlíky v prášku — 5 kg / 250 Kč",
             "desc": "Bramborové těsto v prášku z mouky oceněné značkou KLASA a sušených bramborových vloček. Na knedlíky klasické i plněné, šišky s mákem, krokety a gnocchi.",
@@ -163,6 +164,7 @@ LANG = {
         "chlupate_knedliky": {
             "name": "Chlupaté knedlíky v prášku",
             "short": "Bosáky podle tradiční receptury. Hotové za 15 minut, chutí k nerozeznání od domácích.",
+            "lede": "Chlupaté knedlíky v prášku, známé také jako bosáky, jsou instantní bramborová směs z rodinné dílny Jůzlová v Kochánově na Vysočině. Balení 5 kg stojí 260 Kč. Hotové jsou za 15 minut a chutí je nerozeznáte od knedlíků ze syrových brambor.",
             "price": "5 kg / 260 Kč",
             "title": "Chlupaté knedlíky (bosáky) v prášku — 5 kg / 260 Kč",
             "desc": "Chlupaté knedlíky podle tradiční receptury: za 15 minut hotové, oblíbené v jídelnách i restauracích. Balení 5 kg za 260 Kč.",
@@ -177,6 +179,7 @@ LANG = {
         "vanilkovy_pudink": {
             "name": "Vanilkový puding bez lepku",
             "short": "Kukuřičný škrob bez lepku, přirozená vanilková chuť. Na dezerty i pečení.",
+            "lede": "Vanilkový puding bez lepku je instantní pudingová směs z rodinné dílny Jůzlová v Kochánově na Vysočině. Balení 1 kg stojí 60 Kč, balení 400 g stojí 30 Kč. Základem je kukuřičný škrob, takže puding je vhodný i pro bezlepkovou dietu.",
             "price": "1 kg / 60 Kč · 400 g / 30 Kč",
             "title": "Vanilkový puding bez lepku — 1 kg / 60 Kč",
             "desc": "Instantní vanilkový puding z kukuřičného škrobu bez lepku. Přirozená chuť bez chemických odstínů, vhodný i pro bezlepkovou dietu. 1 kg / 60 Kč, 400 g / 30 Kč.",
@@ -192,6 +195,7 @@ LANG = {
         "kakao_holandskeho_typu": {
             "name": "Kakao holandského typu",
             "short": "Tmavé cukrářské kakao třídy 21 % tuku. Červenohnědá barva, krémová chuť, bez přidaného cukru.",
+            "lede": "Kakao holandského typu je tmavé cukrářské kakao s 20–22 % kakaového másla z rodinné dílny Jůzlová v Kochánově na Vysočině. Balení 500 g stojí 270 Kč. Je bez přidaného cukru, veganské a neobsahuje žádný ze 14 alergenů EU.",
             "price": "500 g / 270 Kč",
             "title": "Kakao holandského typu 21 % tuku — 500 g / 270 Kč",
             "desc": "Tmavé cukrářské kakao holandského typu s 20–22 % kakaového másla. Bez přidaného cukru, veganské, bez 14 alergenů EU. 500 g / 270 Kč.",
@@ -261,6 +265,7 @@ LANG = {
         "vanilkovy_cukr": {
             "name": "Vanilínový cukr",
             "short": "Jemně mletý cukr s vanilínovým aroma. Do těsta i na posyp cukroví.",
+            "lede": "Vanilínový cukr je jemně mletý cukr s vanilínovým aroma z rodinné dílny Jůzlová v Kochánově na Vysočině. Balení 1 kg stojí 60 Kč. Používá se do těsta i na posyp cukroví a moučníků.",
             "price": "1 kg / 60 Kč",
             "title": "Vanilínový cukr — 1 kg / 60 Kč",
             "desc": "Vanilínový cukr z jemně mletého cukru s vanilínovým aroma. Na koláče, zákusky i vánoční cukroví — do těsta i na posyp. 1 kg / 60 Kč.",
