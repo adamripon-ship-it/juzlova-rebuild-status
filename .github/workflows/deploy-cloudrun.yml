@@ -1,0 +1,91 @@
+name: Deploy to Cloud Run
+
+# Deploys main to the live Cloud Run service that serves www.juzlova.cz.
+#
+# Until this existed, nothing in the repo deployed production: juzlova-web was
+# updated by someone running `gcloud run deploy` by hand, so merging a change
+# did not ship it. The price correction in #24 sat on main for an hour while
+# the site still quoted the 2017 prices.
+#
+# Required repository secrets:
+#   GCP_SA_KEY   — service account JSON with Cloud Run Admin, Service Account
+#                  User, and Cloud Build Editor (--source builds with Cloud Build)
+#   GCP_PROJECT  — the Google Cloud project id
+#
+# Without them the job stops at the first step and says so loudly, rather than
+# reporting a green tick for a deploy that never happened.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-cloudrun
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      SERVICE: juzlova-web
+      REGION: europe-west3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check credentials
+        id: creds
+        run: |
+          if [ -n "${{ secrets.GCP_SA_KEY }}" ] && [ -n "${{ secrets.GCP_PROJECT }}" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::warning title=Not deployed::GCP_SA_KEY and GCP_PROJECT are not set, so www.juzlova.cz still serves the previous revision. Anything merged since the last manual deploy is NOT live."
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.creds.outputs.ok == 'true'
+        with:
+          python-version: '3.12'
+
+      # The committed HTML is already built with SITE_BASE=https://juzlova.cz,
+      # but rebuild anyway so a stale commit cannot ship pointing at github.io.
+      - name: Rebuild with the production domain
+        if: steps.creds.outputs.ok == 'true'
+        env:
+          SITE_BASE: https://juzlova.cz
+        run: |
+          python scripts/build_site.py
+          python scripts/verify_refs.py
+
+      - uses: google-github-actions/auth@v2
+        if: steps.creds.outputs.ok == 'true'
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+        if: steps.creds.outputs.ok == 'true'
+
+      - name: Deploy
+        if: steps.creds.outputs.ok == 'true'
+        run: |
+          gcloud config set project "${{ secrets.GCP_PROJECT }}"
+          # --source builds the repo Dockerfile with Cloud Build. Existing
+          # service settings (env vars, service account, the ratings bucket)
+          # are preserved; only the image changes.
+          gcloud run deploy "$SERVICE" \
+            --source . \
+            --region "$REGION" \
+            --allow-unauthenticated \
+            --quiet
+
+      - name: Smoke test the new revision
+        if: steps.creds.outputs.ok == 'true'
+        run: |
+          url=$(gcloud run services describe "$SERVICE" \
+            --region "$REGION" --format='value(status.url)')
+          echo "Service URL: $url"
+          code=$(curl -sS -o /dev/null -w '%{http_code}' --retry 3 --retry-delay 5 "$url/")
+          echo "GET / -> $code"
+          [ "$code" = "200" ] || { echo "::error::New revision does not serve 200"; exit 1; }
