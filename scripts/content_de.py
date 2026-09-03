@@ -136,6 +136,7 @@ LANG = {
             "h1": "Preisliste",
             "sub": "Qualität zu Preisen unter Supermarktniveau. Die Preise gelten bei Abholung in Kochánov oder Humpolec.",
             "body": [("pricetable", None),
+                     ("p", "Die angegebenen Preise gelten bei Abholung der Ware in der Betriebsstätte."),
                      ("p", "Für Restaurants, Kantinen und Konditoreien erstellen wir individuelle Angebote je nach Abnahmemenge — sprechen Sie uns an.")],
         },
     },
