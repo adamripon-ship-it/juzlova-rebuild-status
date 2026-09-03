@@ -136,6 +136,7 @@ LANG = {
             "h1": "Price list",
             "sub": "Quality priced below the supermarket. Prices apply to pick-up in Kochánov or Humpolec.",
             "body": [("pricetable", None),
+                     ("p", "These prices apply when you pick up the goods at our premises."),
                      ("p", "For restaurants, canteens and pastry shops we prepare individual offers based on volume — get in touch.")],
         },
     },

@@ -136,6 +136,7 @@ LANG = {
             "h1": "Ceník",
             "sub": "Kvalita za cenu pod úrovní supermarketu. Ceny platí při odběru v Kochánově či Humpolci.",
             "body": [("pricetable", None),
+                     ("p", "Uvedené ceny jsou platné při vyzvednutí zboží v provozovně."),
                      ("p", "Pro restaurace, jídelny a cukrárny připravíme individuální nabídku podle odebíraného množství — ozvěte se nám.")],
         },
     },
