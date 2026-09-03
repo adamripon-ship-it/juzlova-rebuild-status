@@ -12,9 +12,12 @@ name: Deploy to Google Cloud Storage
 # This job rebuilds with that domain before every sync so canonicals stay
 # on the real host.
 
+# Dispatch-only. This targets a GCS bucket that is not what serves
+# www.juzlova.cz — production is the Cloud Run service juzlova-web, deployed by
+# deploy-cloudrun.yml. Running on every push made this report a green "Deploy"
+# tick while skipping every step, which is how a merged price correction looked
+# shipped for an hour while the site still showed the old prices.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:

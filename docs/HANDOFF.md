@@ -89,13 +89,20 @@ production is today. It and `gcp_domain_mapping.sh` refuse to run unless
 
 | Workflow | Target | State |
 |---|---|---|
-| `deploy-gcp.yml` | GCS bucket, europe-central2 (Warsaw) | skips itself until `GCP_SA_KEY`, `GCP_PROJECT`, `GCS_BUCKET` exist |
+| `deploy-cloudrun.yml` | **Cloud Run `juzlova-web`, europe-west3 — this is production** | runs on push to `main`; needs `GCP_SA_KEY` + `GCP_PROJECT` |
+| `deploy-gcp.yml` | GCS bucket, europe-central2 (Warsaw) | dispatch-only; not what serves the domain |
 | `deploy-cloudrun-preview.yml` | Cloud Run `juzlova-main-preview`, europe-west3 | dispatch-only; deliberately not the live `juzlova-web` |
 | `cutover-pages-dns.yml` | points `www` at GitHub Pages | needs `CLOUDFLARE_API_TOKEN` |
 
 Warsaw is nearer Czechia than Frankfurt, but both are one hop away and no
-visitor will notice. Do not deploy to the Cloud Run service named `juzlova-web`
-— that is production.
+visitor will notice.
+
+`juzlova-web` is production. Until 2026-09-03 nothing in the repo deployed it —
+it was updated by hand with `gcloud run deploy`, so merging a change did not
+ship it, and `deploy-gcp.yml` reported a green "Deploy" on every push while
+skipping every step. A corrected price list sat on `main` for an hour while the
+site still quoted the 2017 prices. `deploy-cloudrun.yml` now owns that deploy.
+It is the one production deploy path: change it rather than adding a second.
 
 ## Known limits
 
