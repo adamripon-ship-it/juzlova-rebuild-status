@@ -14,17 +14,17 @@ Canonical English index: https://juzlova.cz/llms.txt
 - [Home](https://juzlova.cz/en/): Family production of food mixes since 2004: potato and hairy dumpling mixes, gluten-free vanilla pudding, vanilla sugar and Dutch-process cocoa. Kochánov, Vysočina, Czech Republic.
 - [About](https://juzlova.cz/en/kdo_jsme/): We started making food mixes in 2004 in a small workshop in Kochánov, Vysočina. Today we supply households, restaurants, canteens and pastry shops across Bohemia and Moravia.
 - [Delivery](https://juzlova.cz/en/kde-nas-najdete/): Free pick-up in Kochánov or Humpolec, free delivery around Havlíčkův Brod, Světlá nad Sázavou and Jihlava, or shipping by a carrier of your choice.
-- [Prices](https://juzlova.cz/en/ceny/): Current prices: potato dumplings 5 kg / 165 CZK, hairy dumplings 5 kg / 185 CZK, vanilla pudding from 17 CZK, vanilla sugar 38 CZK, cocoa 100 CZK.
+- [Prices](https://juzlova.cz/en/ceny/): Current prices: potato dumplings 5 kg / 250 CZK, hairy dumplings 5 kg / 260 CZK, vanilla pudding from 30 CZK, vanilla sugar 60 CZK, cocoa 270 CZK.
 - [FAQ](https://juzlova.cz/en/faq/): Answers about Jůzlová: where we are, how to order, prices, gluten-free pudding, Dutch-process cocoa and Vysočina delivery.
 - [Contact](https://juzlova.cz/en/kontakt/): Jiřina Jůzlová (+420 728 466 141) and Jiří Jůzl (+420 607 629 931), Kochánov 40, 582 53. E-mail juzlj@seznam.cz. Pick-up also available in Humpolec.
 - [Recipes](https://juzlova.cz/en/recepty/): Try proven recipes from our mixes — from Sunday dumplings to no-bake desserts.
 
 ## Products
-- [Potato dumpling mix](https://juzlova.cz/en/bramborove_knedliky/): Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough. | 5 kg | 165 Kč
-- [Hairy dumpling mix (bosáky)](https://juzlova.cz/en/chlupate-knedliky/): Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made. | 5 kg | 185 Kč
-- [Gluten-free vanilla pudding](https://juzlova.cz/en/vanilkovy_pudink/): Gluten-free corn starch, natural vanilla taste. For desserts and baking. | 1 kg / 400 g | 34 Kč / 17 Kč
-- [Dutch-process cocoa](https://juzlova.cz/en/kakao-holandskeho-typu/): Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar. | 500 g | 100 Kč
-- [Vanilla sugar](https://juzlova.cz/en/vanilkovy-cukr/): Finely ground sugar with vanillin aroma. For dough and for dusting pastries. | 1 kg | 38 Kč
+- [Potato dumpling mix](https://juzlova.cz/en/bramborove_knedliky/): Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough. | 5 kg | 250 Kč
+- [Hairy dumpling mix (bosáky)](https://juzlova.cz/en/chlupate-knedliky/): Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made. | 5 kg | 260 Kč
+- [Gluten-free vanilla pudding](https://juzlova.cz/en/vanilkovy_pudink/): Gluten-free corn starch, natural vanilla taste. For desserts and baking. | 1 kg / 400 g | 60 Kč / 30 Kč
+- [Dutch-process cocoa](https://juzlova.cz/en/kakao-holandskeho-typu/): Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar. | 500 g | 270 Kč
+- [Vanilla sugar](https://juzlova.cz/en/vanilkovy-cukr/): Finely ground sugar with vanillin aroma. For dough and for dusting pastries. | 1 kg | 60 Kč
 
 ## Recipes
 - [Poppy-seed rolls (šišky s mákem)](https://juzlova.cz/en/sisky-s-makem-recept/): A traditional sweet supper from potato dough: rolls coated in poppy seeds and sugar, drizzled with melted butter. | rating 4.7/5 (87)

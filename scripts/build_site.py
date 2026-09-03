@@ -155,11 +155,11 @@ RECIPE_IMG = {
     "irsky-sticky-toffee-pudding-recept": "irsky-sticky-toffee-pudding.webp",
 }
 PRICE_ROWS = [  # (product key, package, price CZK)
-    ("bramborove_knedliky", "5 kg", "165 Kč"),
-    ("chlupate_knedliky", "5 kg", "185 Kč"),
-    ("vanilkovy_pudink", "1 kg / 400 g", "34 Kč / 17 Kč"),
-    ("kakao_holandskeho_typu", "500 g", "100 Kč"),
-    ("vanilkovy_cukr", "1 kg", "38 Kč"),
+    ("bramborove_knedliky", "5 kg", "250 Kč"),
+    ("chlupate_knedliky", "5 kg", "260 Kč"),
+    ("vanilkovy_pudink", "1 kg / 400 g", "60 Kč / 30 Kč"),
+    ("kakao_holandskeho_typu", "500 g", "270 Kč"),
+    ("vanilkovy_cukr", "1 kg", "60 Kč"),
 ]
 LEGACY_REDIRECTS = {
     "kakao": "kakao-holandskeho-typu", "kakaovy_puding": "vanilkovy_pudink",
