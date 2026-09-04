@@ -8,6 +8,7 @@ hours: daily 08:00-19:00 by phone | pickup: Kochánov, Humpolec (free)
 delivery_free: Havlíčkův Brod, Humpolec, Světlá nad Sázavou, Jihlava
 
 currency: CZK (Czech koruna). All prices on this site are CZK, VAT included.
+profiles: Facebook https://www.facebook.com/juzlova/ | Firmy.cz https://en.firmy.cz/company/12906730-juzlova-kochanov.html
 b2b: yes — restaurants, canteens, patisseries and bakeries are quoted individually by volume. Ask by phone or email. See https://juzlova.cz/de/ceny/
 
 ## Retrieval path

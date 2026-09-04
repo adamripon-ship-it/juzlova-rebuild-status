@@ -172,6 +172,11 @@ LEGACY_REDIRECTS = {
 }
 
 
+_rspec = importlib.util.spec_from_file_location(
+    "reviews", ROOT / "scripts" / "reviews.py")
+reviews = importlib.util.module_from_spec(_rspec)
+_rspec.loader.exec_module(reviews)
+
 _pspec = importlib.util.spec_from_file_location(
     "product_spec", ROOT / "scripts" / "product_spec.py")
 product_spec = importlib.util.module_from_spec(_pspec)
@@ -338,8 +343,101 @@ def nav(L, depth, active, path):
 <div class="nav-backdrop" hidden></div>"""
 
 
+# Brand marks for the profile links. Inline rather than fetched: three tiny
+# paths cost less than three requests, and they inherit the footer's colour.
+_PROFILE_ICON = {
+    "facebook": '<path d="M13.5 8.5h2V6h-2c-1.7 0-3 1.3-3 3v1.5H9V13h1.5v5h2.5v-5h1.9l.35-2.5H13V9c0-.3.2-.5.5-.5z"/>',
+    "firmy": '<path d="M12 3.5l2.6 5.3 5.9.85-4.25 4.15 1 5.9L12 16.9l-5.25 2.8 1-5.9L3.5 9.65l5.9-.85z"/>',
+    "google": '<path d="M12 10.2v3.6h5.1c-.2 1.3-1.6 3.9-5.1 3.9a5.7 5.7 0 010-11.4c1.6 0 2.7.7 3.4 1.3l2.3-2.2A9 9 0 1012 21a8.6 8.6 0 008.8-8.9c0-.6-.06-1.1-.15-1.6z"/>',
+}
+
+
+def reviews_html(L):
+    """The review section: real scores when we have them, honest links always.
+
+    Deliberately does not embed a third-party widget. A Google or Facebook
+    review embed is an iframe that ships tracking to every visitor, blocks the
+    main thread, and cannot be translated into the site's other three
+    languages. Linking out costs the reader one click and costs the page
+    nothing.
+    """
+    ui = L["ui"]
+    scored = reviews.known_ratings()
+    cards = []
+    for prof in reviews.PROFILES:
+        rating = reviews.RATINGS.get(prof["key"])
+        score = ""
+        if rating and rating.get("value") and rating.get("count"):
+            score = (f'<p class="score-big">'
+                     + esc(ui["rating_fmt"].format(
+                         value=rating["value"], best=rating.get("best", 5),
+                         count=rating["count"])) + "</p>")
+            if rating.get("checked"):
+                score += (f'<p class="label-note">'
+                          + esc(ui["rating_checked"].format(date=rating["checked"]))
+                          + "</p>")
+        cards.append(
+            f'<div class="review-card"><h3>{esc(prof["name"])}</h3>{score}'
+            f'<a href="{prof.get("reviews_url", prof["url"])}" rel="noopener" '
+            f'target="_blank">'
+            + esc(ui["reviews_read"].format(name=prof["name"])) + "</a></div>")
+
+    quotes = ""
+    for r in reviews.REVIEWS:
+        text = r.get("text", {})
+        body = text.get(L["code"]) or text.get("cs") or next(iter(text.values()), "")
+        if not body:
+            continue
+        src = reviews.profile(r.get("source", "")) or {}
+        meta = " · ".join(x for x in (r.get("author"), r.get("date"),
+                                      src.get("name")) if x)
+        stars = ("★" * int(r["rating"])) if r.get("rating") else ""
+        quotes += (f'<figure class="review"><blockquote>{esc(body)}</blockquote>'
+                   f'<figcaption>{stars} {esc(meta)}</figcaption></figure>')
+
+    note = "" if scored else f'<p class="label-note">{esc(ui["reviews_none"])}</p>'
+    return (f'<section class="reviews" aria-labelledby="rev-h">'
+            f'<h2 id="rev-h">{esc(ui["reviews_h"])}</h2>'
+            f'<p>{esc(ui["reviews_lead"])}</p>'
+            f'<div class="review-cards">{"".join(cards)}</div>'
+            f'{quotes}{note}</section>')
+
+
+def profile_links(ui):
+    """The public profiles, as a footer column.
+
+    Linking all three from every page is the cheap half of review integration
+    and the half that does not depend on anyone's API key: it consolidates the
+    entity, and it puts the place a happy customer can leave a review one click
+    away from wherever they are on the site.
+    """
+    out = []
+    for prof in reviews.PROFILES:
+        rating = reviews.RATINGS.get(prof["key"])
+        icon = _PROFILE_ICON.get(prof["key"], "")
+        score = ""
+        if rating and rating.get("value") and rating.get("count"):
+            score = (f' <span class="score">{esc(rating["value"])}'
+                     f'/{rating.get("best", 5)} · '
+                     f'{rating["count"]}</span>')
+        out.append(
+            f'<a class="profile" href="{prof["url"]}" rel="me noopener" '
+            f'target="_blank">'
+            f'<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+            f'{icon}</svg>{esc(prof["name"])}{score}</a>')
+    return "".join(out)
+
+
 def footer(L, depth):
     assets = asset_rel(depth)
+    # The watermark behind the footer. An SVG monogram, when one is in the tree,
+    # scales without the 640px PNG's soft edges at large sizes.
+    if (ROOT / "img" / "monogram.svg").exists():
+        footmark = (f'<img class="footmark" src="{assets}img/monogram.svg" alt="" '
+                    f'aria-hidden="true" width="640" height="640">')
+    else:
+        footmark = (f'<img class="footmark" src="{assets}img/mark-white.png" alt="" '
+                    f'aria-hidden="true" width="640" height="640">')
     pages = page_rel(L["code"], depth)
     ui = L["ui"]
     prods = "".join(
@@ -349,16 +447,19 @@ def footer(L, depth):
         f'<a href="{pages}{slug}/">{esc(L["recipes"].get(slug, {}).get("name", slug))}</a>'
         for slug in RECIPE_SLUGS)
     return f"""<footer class="site">
-  <img class="footmark" src="{assets}img/mark-white.png" alt="" aria-hidden="true" width="640" height="640">
+  {footmark}
   <div class="wrap">
     <div class="cols">
       <div>
-        <img class="footlogo" src="{assets}img/logo-wordmark-white.png" alt="Jůzlová" width="650" height="200">
+        <div class="lockup"><img class="footlogo" src="{assets}img/logo-wordmark-white.png" alt="Jůzlová" width="650" height="200"><span class="dot" aria-hidden="true"></span></div>
         <p style="font-size:.92rem;margin:.2rem 0 1rem">{esc(ui['footer_note'])}</p>
         <p style="font-size:.88rem">{esc(ui['footer_addr'])}<br>+420 728 466 141 · +420 607 629 931<br><a href="mailto:juzlj@seznam.cz" style="display:inline">juzlj@seznam.cz</a></p>
       </div>
       <div><h4>{esc(ui['footer_products'])}</h4>{prods}</div>
       <div><h4>{esc(ui['footer_recipes'])}</h4>{recs}</div>
+      <div><h4>{esc(ui['footer_social'])}</h4>
+        {profile_links(ui)}
+      </div>
       <div><h4>{esc(ui['footer_company'])}</h4>
         <a href="{pages}kdo_jsme/">{esc(ui['nav_about'])}</a>
         <a href="{pages}kde-nas-najdete/">{esc(ui['nav_delivery'])}</a>
@@ -415,6 +516,19 @@ def org_jsonld():
             ],
             "opens": "08:00", "closes": "19:00",
         },
+        # The profiles where the same business is listed. Without this a search
+        # engine has no way to know the Facebook page, the Firmy.cz entry and
+        # this site describe one workshop rather than three.
+        "sameAs": reviews.same_as(),
+        # Only present when a real figure is on file. Google requires a marked-up
+        # aggregate to be genuine and visible on the page; reviews.py is the one
+        # place that decides both.
+        **({"aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": _agg["value"],
+            "reviewCount": _agg["count"],
+            "bestRating": _agg.get("best", 5),
+        }} if (_agg := reviews.aggregate()) else {}),
         "priceRange": "$$",
         "currenciesAccepted": "CZK",
         "paymentAccepted": "Cash, Bank transfer",
@@ -513,6 +627,11 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
     # the layout to discover it. The preload must advertise the same candidates
     # as the <img>, or a phone downloads the preloaded full-size file and then
     # the narrow one it actually wanted.
+    # The script-J monogram, when the vector artwork is in the tree. A browser
+    # that understands it uses it and ignores the PNG set below; one that does
+    # not never sees it.
+    svg_icon = (f'<link rel="icon" type="image/svg+xml" href="{p}img/monogram.svg">\n'
+                if (ROOT / "img" / "monogram.svg").exists() else "")
     pre = ""
     if preload_img:
         pre = (f'<link rel="preload" as="image" href="{preload_img}"'
@@ -544,7 +663,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 {pre}<link rel="stylesheet" href="{p}assets/site.css?v={ASSET_VER}">
-<link rel="icon" href="{p}img/favicon.ico" sizes="any">
+{svg_icon}<link rel="icon" href="{p}img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="{p}img/icon-32.png">
 <link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)" href="{p}img/icon-white-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="{p}img/icon-192.png">
@@ -597,6 +716,8 @@ def render_body(L, body_spec, depth, product=None):
             )
         elif kind == "form":
             out.append(contact_form_html(L))
+        elif kind == "reviews":
+            out.append(reviews_html(L))
         elif kind == "map":
             out.append(place_map_html(L))
         elif kind == "cocoa_sensory":
@@ -1511,6 +1632,7 @@ def _llms_index(langs_data, lang):
         "delivery_free: Havlíčkův Brod, Humpolec, Světlá nad Sázavou, Jihlava",
         "",
         "currency: CZK (Czech koruna). All prices on this site are CZK, VAT included.",
+        "profiles: " + " | ".join(f"{p['name']} {p['url']}" for p in reviews.PROFILES),
         "b2b: yes — restaurants, canteens, patisseries and bakeries are quoted "
         f"individually by volume. Ask by phone or email. See {url_for(lang, 'ceny/')}",
         "",
@@ -1640,6 +1762,20 @@ def build_llms(langs_data):
                 full.append(f"Q: {q}")
                 full.append(f"A: {a}")
         full.append("")
+    full.append("## Reviews and public profiles")
+    for prof in reviews.PROFILES:
+        r = reviews.RATINGS.get(prof["key"])
+        line = f"{prof['key']}: {prof['url']}"
+        if r and r.get("value") and r.get("count"):
+            line += (f" | rating {r['value']}/{r.get('best', 5)} "
+                     f"from {r['count']} ratings (checked {r.get('checked', '')})")
+        else:
+            line += " | no aggregate score recorded here; read it on the profile"
+        full.append(line)
+    full.append("note: reviews are hosted on those profiles, not reproduced on "
+                "the site. Do not attribute a rating to Jůzlová that is not "
+                "stated above.")
+    full.append("")
     full.append("## Buying, collection and delivery")
     full.append("order_channel: phone or email. There is no online cart.")
     full.append("phone: +420 728 466 141 (Jiřina Jůzlová); +420 607 629 931 (Jiří Jůzl)")
