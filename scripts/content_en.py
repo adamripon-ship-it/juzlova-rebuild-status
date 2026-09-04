@@ -53,6 +53,15 @@ LANG = {
         "footer_addr": "Jůzlová · Kochánov 40, 582 53 · Vysočina, Czech Republic",
         "open_hours": "Open daily by phone arrangement, 8:00–19:00 (weekends included)",
         "lang_label": "Language",
+        "footer_social": "Where to find us",
+        "reviews_h": "Customer reviews",
+        "reviews_kicker": "References",
+        "reviews_lead": "Customers write their reviews on our own profiles. Read them there — and if you liked the mixes, a few lines would mean a lot.",
+        "reviews_read": "Read reviews on {name}",
+        "reviews_write": "Write a review",
+        "reviews_none": "We do not publish a combined score here. The current ratings are on the profiles above.",
+        "rating_fmt": "{value} out of {best} · {count} ratings",
+        "rating_checked": "As of {date}.",
         "recipe_meta": "A recipe from the Jůzlová workshop",
         "uses_product": "Mix used",
         "more_recipes": "If you like this recipe",
@@ -124,6 +133,7 @@ LANG = {
             "body": [
                 ("contacts", None),
                 ("form", None),
+                ("reviews", None),
                 ("h2", "Where to find us"),
                 ("map", None),
                 ("p", "Premises: Kochánov 40, 582 53, Vysočina Region, Czech Republic — 12 km from Havlíčkův Brod. By prior arrangement, pick-up is also possible in Humpolec."),
@@ -144,6 +154,7 @@ LANG = {
         "bramborove_knedliky": {
             "name": "Potato dumpling mix",
             "short": "Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough.",
+            "lede": "Potato dumpling mix is an instant potato dough made by the Jůzlová family workshop in Kochánov, Vysočina, Czech Republic. A 5 kg sack costs 250 CZK. One dough makes classic and filled dumplings, poppy-seed rolls, croquettes and gnocchi.",
             "price": "5 kg / 250 CZK",
             "title": "Potato dumpling mix — 5 kg / 250 CZK",
             "desc": "Potato dough powder made with KLASA-awarded flour and dried potato flakes. For classic and filled dumplings, poppy-seed rolls, croquettes and gnocchi.",
@@ -156,13 +167,14 @@ LANG = {
                 ("p", "The natural taste tells you there’s nothing extra in the dough — only what belongs in a potato dumpling."),
             ],
             "faq": [
-                ("How long does preparation take?", "Just mix the powder with water, shape and boil — dumplings are on the table within 20 minutes."),
+                ("How long does preparation take?", "Just mix the powder with water, shape and boil — dumplings are on the table in about 20 minutes (2–3 minutes resting, 15–20 minutes boiling)."),
                 ("How many servings per 5 kg bag?", "One 5 kg bag makes a side dish for roughly 60–70 servings."),
             ],
         },
         "chlupate_knedliky": {
             "name": "Hairy dumpling mix (bosáky)",
             "short": "Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made.",
+            "lede": "Hairy dumpling mix, known in Czech as bosáky, is an instant potato mix made by the Jůzlová family workshop in Kochánov, Vysočina, Czech Republic. A 5 kg sack costs 260 CZK. It is ready in 15 minutes and tastes like dumplings made from raw potatoes.",
             "price": "5 kg / 260 CZK",
             "title": "Hairy dumpling mix (bosáky) — 5 kg / 260 CZK",
             "desc": "Hairy dumplings made to a traditional recipe: ready in 15 minutes, popular with canteens and restaurants. 5 kg bag for 260 CZK.",
@@ -177,6 +189,7 @@ LANG = {
         "vanilkovy_pudink": {
             "name": "Gluten-free vanilla pudding",
             "short": "Gluten-free corn starch, natural vanilla taste. For desserts and baking.",
+            "lede": "Gluten-free vanilla pudding is an instant dessert mix made by the Jůzlová family workshop in Kochánov, Vysočina, Czech Republic. A 1 kg pack costs 60 CZK and a 400 g pack costs 30 CZK. It is based on corn starch, so it suits a gluten-free diet.",
             "price": "1 kg / 60 CZK · 400 g / 30 CZK",
             "title": "Gluten-free vanilla pudding — 1 kg / 60 CZK",
             "desc": "Instant vanilla pudding based on gluten-free corn starch. Natural taste with no chemical off-notes, suitable for a gluten-free diet. 1 kg / 60 CZK, 400 g / 30 CZK.",
@@ -192,6 +205,7 @@ LANG = {
         "kakao_holandskeho_typu": {
             "name": "Dutch-process cocoa",
             "short": "Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar.",
+            "lede": "Dutch-process cocoa is a dark confectionery cocoa with 20–22% cocoa butter, supplied by the Jůzlová family workshop in Kochánov, Vysočina, Czech Republic. A 500 g pack costs 270 CZK. It has no added sugar, is vegan, and contains none of the 14 EU allergens.",
             "price": "500 g / 270 CZK",
             "title": "Dutch-process cocoa, 21% fat — 500 g / 270 CZK",
             "desc": "Dark Dutch-process confectionery cocoa with 20–22% cocoa butter. No added sugar, vegan, free of the 14 EU allergens. 500 g / 270 CZK.",
@@ -261,6 +275,7 @@ LANG = {
         "vanilkovy_cukr": {
             "name": "Vanilla sugar",
             "short": "Finely ground sugar with vanillin aroma. For dough and for dusting pastries.",
+            "lede": "Vanilla sugar is finely ground sugar with vanillin aroma from the Jůzlová family workshop in Kochánov, Vysočina, Czech Republic. A 1 kg pack costs 60 CZK. It goes into dough and onto baked pastries as a dusting.",
             "price": "1 kg / 60 CZK",
             "title": "Vanilla sugar — 1 kg / 60 CZK",
             "desc": "Vanilla sugar made of finely ground sugar with vanillin aroma. For cakes, desserts and Christmas cookies — in the dough and as a dusting. 1 kg / 60 CZK.",

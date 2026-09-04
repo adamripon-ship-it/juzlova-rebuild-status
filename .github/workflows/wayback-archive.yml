@@ -59,6 +59,13 @@ jobs:
           grab_big produkt-chlupate-knedliky.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054811_a83fed3b-8b76-4b80-baba-4ec174861692.png"
           grab_big produkt-vanilkovy-puding.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054811_a89b40ec-fff2-43e5-95e6-7f2c48727641.png"
           grab_big produkt-kakao.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260831_054811_e16c6445-cc9a-44c1-9c5a-7789b3d234e7.png"
+          # The workshop photographed two real 5 kg sacks in their own
+          # kitchen; these are those photographs with the tea towel, wall
+          # socket and cardboard box taken out and the lighting matched to
+          # the rest of the product grid. The printed label is unchanged,
+          # so the ingredients and cooking instructions on it are theirs.
+          grab_big pytel-chlupate-knedliky.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260903_083953_932b824d-708d-4079-bcd1-413f825d7226.png"
+          grab_big pytel-bramborove-knedliky.png "https://d8j0ntlcm91z4.cloudfront.net/user_3Bj5jSbouMgBXvv0eqo1wQl5cMI/hf_20260903_083953_9bdf037e-35e0-4a4c-93bc-b452355c9e43.png"
           ls -la img/ | sed -n '1,40p'
       - name: Resize anything oversized to web-sized WebP
         if: always()

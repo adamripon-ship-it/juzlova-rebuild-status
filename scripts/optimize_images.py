@@ -31,6 +31,8 @@ TARGETS = {
     "produkt-chlupate-knedliky": 1200,
     "produkt-vanilkovy-puding": 1200,
     "produkt-kakao": 1200,
+    "pytel-bramborove-knedliky": 1200,
+    "pytel-chlupate-knedliky": 1200,
 }
 
 # Hero stills also get narrow copies, so a phone is not sent a 2200px file for a

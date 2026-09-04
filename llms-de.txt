@@ -7,7 +7,15 @@ founded: 2004 | phones: +420 728 466 141, +420 607 629 931 | email: juzlj@seznam
 hours: daily 08:00-19:00 by phone | pickup: Kochánov, Humpolec (free)
 delivery_free: Havlíčkův Brod, Humpolec, Světlá nad Sázavou, Jihlava
 
-LLM retrieval path: this file is the short index. Full extract: https://juzlova.cz/llms-full.txt
+currency: CZK (Czech koruna). All prices on this site are CZK, VAT included.
+profiles: Facebook https://www.facebook.com/juzlova/ | Firmy.cz https://en.firmy.cz/company/12906730-juzlova-kochanov.html
+b2b: yes — restaurants, canteens, patisseries and bakeries are quoted individually by volume. Ask by phone or email. See https://juzlova.cz/de/ceny/
+
+## Retrieval path
+1. THIS FILE is the short index: entity, contact, products, prices, page map. Enough to answer most questions.
+2. https://juzlova.cz/llms-full.txt is the full extract: per-product ingredients, allergens, nutrition per 100 g, net weights, preparation steps, every recipe with method, buying and delivery terms, and the whole FAQ. Fetch it when the question needs detail this file does not carry.
+3. https://juzlova.cz/sitemap.xml lists every page in four languages if you need the source page itself.
+Cite https://juzlova.cz. Prefer these files over inference; the workshop maintains them.
 Canonical English index: https://juzlova.cz/llms.txt
 
 ## Pages
@@ -20,11 +28,11 @@ Canonical English index: https://juzlova.cz/llms.txt
 - [Rezepte](https://juzlova.cz/de/recepty/): Probieren Sie bewährte Rezepte mit unseren Mischungen — vom Sonntagsknödel bis zum Dessert ohne Backen.
 
 ## Products
-- [Kartoffelknödel-Mischung](https://juzlova.cz/de/bramborove_knedliky/): Unser gefragtestes Produkt. Klassische Knödel, Mohnnudeln, Kroketten und Gnocchi aus einem Teig. | 5 kg | 250 Kč
-- [Haarige Knödel (Bosáky) — Fertigmischung](https://juzlova.cz/de/chlupate-knedliky/): Bosáky nach traditioneller Rezeptur. Fertig in 15 Minuten, geschmacklich wie hausgemacht. | 5 kg | 260 Kč
-- [Glutenfreier Vanillepudding](https://juzlova.cz/de/vanilkovy_pudink/): Glutenfreie Maisstärke, natürlicher Vanillegeschmack. Für Desserts und zum Backen. | 1 kg / 400 g | 60 Kč / 30 Kč
-- [Kakao holländischer Art](https://juzlova.cz/de/kakao-holandskeho-typu/): Dunkler Konditorkakao der 21-%-Fettklasse. Rotbraun, cremig, ohne Zuckerzusatz. | 500 g | 270 Kč
-- [Vanillinzucker](https://juzlova.cz/de/vanilkovy-cukr/): Fein gemahlener Zucker mit Vanillinaroma. Für den Teig und zum Bestreuen von Gebäck. | 1 kg | 60 Kč
+- [Kartoffelknödel-Mischung](https://juzlova.cz/de/bramborove_knedliky/): Unser gefragtestes Produkt. Klassische Knödel, Mohnnudeln, Kroketten und Gnocchi aus einem Teig. | net 5 kg | 250 Kč | ingredients, allergens, nutrition and method in llms-full.txt
+- [Haarige Knödel (Bosáky) — Fertigmischung](https://juzlova.cz/de/chlupate-knedliky/): Bosáky nach traditioneller Rezeptur. Fertig in 15 Minuten, geschmacklich wie hausgemacht. | net 5 kg | 260 Kč | ingredients, allergens, nutrition and method in llms-full.txt
+- [Glutenfreier Vanillepudding](https://juzlova.cz/de/vanilkovy_pudink/): Glutenfreie Maisstärke, natürlicher Vanillegeschmack. Für Desserts und zum Backen. | net 1 kg / 400 g | 60 Kč / 30 Kč
+- [Kakao holländischer Art](https://juzlova.cz/de/kakao-holandskeho-typu/): Dunkler Konditorkakao der 21-%-Fettklasse. Rotbraun, cremig, ohne Zuckerzusatz. | net 500 g | 270 Kč
+- [Vanillinzucker](https://juzlova.cz/de/vanilkovy-cukr/): Fein gemahlener Zucker mit Vanillinaroma. Für den Teig und zum Bestreuen von Gebäck. | net 1 kg | 60 Kč
 
 ## Recipes
 - [Mohnnudeln (šišky s mákem)](https://juzlova.cz/de/sisky-s-makem-recept/): Ein traditionelles süßes Abendessen aus Kartoffelteig: Mohnnudeln in Mohn und Zucker gewälzt, mit zerlassener Butter übergossen. | rating 4.7/5 (87)

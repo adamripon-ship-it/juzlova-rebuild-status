@@ -53,6 +53,15 @@ LANG = {
         "footer_addr": "Jůzlová · Kochánov 40, 582 53 · Vysočina, Tschechien",
         "open_hours": "Täglich geöffnet nach telefonischer Absprache, 8:00–19:00 Uhr (auch am Wochenende)",
         "lang_label": "Sprache",
+        "footer_social": "Wo Sie uns finden",
+        "reviews_h": "Kundenbewertungen",
+        "reviews_kicker": "Referenzen",
+        "reviews_lead": "Bewertungen schreiben unsere Kunden direkt auf unseren Profilen. Dort können Sie sie lesen — und wenn Ihnen unsere Mischungen geschmeckt haben, freuen wir uns über ein paar Zeilen.",
+        "reviews_read": "Bewertungen auf {name} lesen",
+        "reviews_write": "Bewertung schreiben",
+        "reviews_none": "Eine Gesamtnote veröffentlichen wir hier nicht. Die aktuellen Bewertungen stehen auf den Profilen oben.",
+        "rating_fmt": "{value} von {best} · {count} Bewertungen",
+        "rating_checked": "Stand {date}.",
         "recipe_meta": "Ein Rezept aus der Werkstatt Jůzlová",
         "uses_product": "Verwendete Mischung",
         "more_recipes": "Wenn Ihnen dieses Rezept gefällt",
@@ -124,6 +133,7 @@ LANG = {
             "body": [
                 ("contacts", None),
                 ("form", None),
+                ("reviews", None),
                 ("h2", "So finden Sie uns"),
                 ("map", None),
                 ("p", "Betriebsstätte: Kochánov 40, 582 53, Region Vysočina, Tschechien — 12 km von Havlíčkův Brod entfernt. Nach vorheriger Absprache ist die Abholung auch in Humpolec möglich."),
@@ -144,6 +154,7 @@ LANG = {
         "bramborove_knedliky": {
             "name": "Kartoffelknödel-Mischung",
             "short": "Unser gefragtestes Produkt. Klassische Knödel, Mohnnudeln, Kroketten und Gnocchi aus einem Teig.",
+            "lede": "Die Kartoffelknödel-Mischung ist ein Kartoffelteig-Fertigpulver aus der Familienwerkstatt Jůzlová in Kochánov, Vysočina, Tschechien. Ein 5-kg-Sack kostet 250 Kč. Aus einem Teig entstehen klassische und gefüllte Knödel, Mohnnudeln, Kroketten und Gnocchi.",
             "price": "5 kg / 250 Kč",
             "title": "Kartoffelknödel-Mischung — 5 kg / 250 Kč",
             "desc": "Kartoffelteig-Pulver aus KLASA-Mehl (tschechisches Gütesiegel) und Kartoffelflocken. Für klassische und gefüllte Knödel, Mohnnudeln, Kroketten und Gnocchi.",
@@ -156,13 +167,14 @@ LANG = {
                 ("p", "Am natürlichen Geschmack erkennen Sie: In diesem Teig steckt nichts Überflüssiges — nur das, was in einen Kartoffelknödel gehört."),
             ],
             "faq": [
-                ("Wie lange dauert die Zubereitung?", "Einfach das Pulver mit Wasser vermengen, formen und kochen — die Knödel stehen in 20 Minuten auf dem Tisch."),
+                ("Wie lange dauert die Zubereitung?", "Einfach das Pulver mit Wasser vermengen, formen und kochen — die Knödel stehen in etwa 20 Minuten auf dem Tisch (2–3 Minuten ruhen, 15–20 Minuten kochen)."),
                 ("Wie viele Portionen ergibt der 5-kg-Beutel?", "Aus einem 5-kg-Beutel bereiten Sie eine Beilage für etwa 60–70 Portionen zu."),
             ],
         },
         "chlupate_knedliky": {
             "name": "Haarige Knödel (Bosáky) — Fertigmischung",
             "short": "Bosáky nach traditioneller Rezeptur. Fertig in 15 Minuten, geschmacklich wie hausgemacht.",
+            "lede": "Die haarigen Knödel, auf Tschechisch Bosáky, sind eine Kartoffel-Fertigmischung aus der Familienwerkstatt Jůzlová in Kochánov, Vysočina, Tschechien. Ein 5-kg-Sack kostet 260 Kč. Sie sind in 15 Minuten fertig und schmecken wie aus rohen Kartoffeln zubereitet.",
             "price": "5 kg / 260 Kč",
             "title": "Haarige Knödel (Bosáky) — Mischung, 5 kg / 260 Kč",
             "desc": "Haarige Kartoffelknödel (Bosáky) nach traditioneller Rezeptur: in 15 Minuten fertig, beliebt in Kantinen und Restaurants. 5-kg-Beutel für 260 Kč.",
@@ -177,6 +189,7 @@ LANG = {
         "vanilkovy_pudink": {
             "name": "Glutenfreier Vanillepudding",
             "short": "Glutenfreie Maisstärke, natürlicher Vanillegeschmack. Für Desserts und zum Backen.",
+            "lede": "Der glutenfreie Vanillepudding ist eine Dessert-Fertigmischung aus der Familienwerkstatt Jůzlová in Kochánov, Vysočina, Tschechien. Die 1-kg-Packung kostet 60 Kč, die 400-g-Packung 30 Kč. Grundlage ist Maisstärke, daher eignet er sich für eine glutenfreie Ernährung.",
             "price": "1 kg / 60 Kč · 400 g / 30 Kč",
             "title": "Glutenfreier Vanillepudding — 1 kg / 60 Kč",
             "desc": "Instant-Vanillepudding aus glutenfreier Maisstärke. Natürlicher Geschmack ohne chemische Noten, für glutenfreie Ernährung geeignet. 1 kg / 60 Kč, 400 g / 30 Kč.",
@@ -192,6 +205,7 @@ LANG = {
         "kakao_holandskeho_typu": {
             "name": "Kakao holländischer Art",
             "short": "Dunkler Konditorkakao der 21-%-Fettklasse. Rotbraun, cremig, ohne Zuckerzusatz.",
+            "lede": "Kakao holländischer Art ist ein dunkler Konditorkakao mit 20–22 % Kakaobutter aus der Familienwerkstatt Jůzlová in Kochánov, Vysočina, Tschechien. Die 500-g-Packung kostet 270 Kč. Er ist ohne Zuckerzusatz, vegan und enthält keines der 14 EU-Allergene.",
             "price": "500 g / 270 Kč",
             "title": "Kakao holländischer Art, 21 % Fett — 500 g / 270 Kč",
             "desc": "Dunkler Konditorkakao holländischer Art mit 20–22 % Kakaobutter. Ohne Zuckerzusatz, vegan, ohne die 14 EU-Allergene. 500 g / 270 Kč.",
@@ -261,6 +275,7 @@ LANG = {
         "vanilkovy_cukr": {
             "name": "Vanillinzucker",
             "short": "Fein gemahlener Zucker mit Vanillinaroma. Für den Teig und zum Bestreuen von Gebäck.",
+            "lede": "Vanillinzucker ist fein gemahlener Zucker mit Vanillinaroma aus der Familienwerkstatt Jůzlová in Kochánov, Vysočina, Tschechien. Die 1-kg-Packung kostet 60 Kč. Er kommt in den Teig und als Bestreuung auf Gebäck.",
             "price": "1 kg / 60 Kč",
             "title": "Vanillinzucker — 1 kg / 60 Kč",
             "desc": "Vanillinzucker aus fein gemahlenem Zucker mit Vanillinaroma. Für Kuchen, Desserts und Weihnachtsgebäck — im Teig und zum Bestreuen. 1 kg / 60 Kč.",

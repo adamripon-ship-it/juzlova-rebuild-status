@@ -6,6 +6,7 @@
   --cream: #f3ecdf;
   --card: #fffdf8;
   --gold: #b08d3c;
+  --gold-soft: #d9ac7c;  /* the dot in the J monogram */
   --gold-deep: #8a6d2c;
   --rust: #9c4a21;
   --line: #e6dcc8;
@@ -221,6 +222,28 @@ table.tbl th, table.tbl td { text-align: left; padding: .65rem .8rem; border-bot
 table.tbl th { font-family: var(--sans); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
 table.tbl tr:hover td { background: var(--cream); }
 
+/* Provenance line under a transcribed label table. */
+.label-note { font-size: .82rem; color: var(--ink-soft); margin-top: -.8rem; }
+.prep ol { margin: 1rem 0 0; padding-left: 1.2rem; }
+.prep ol li { margin-bottom: .5rem; }
+
+/* ═══ profiles and reviews ═══ */
+/* Footer profile links: the icon inherits the link colour so the row picks up
+   the same hover as every other footer link. */
+footer.site a.profile { display: flex; align-items: center; gap: .5rem; }
+footer.site a.profile svg { width: 15px; height: 15px; fill: currentColor; flex: none; opacity: .85; }
+footer.site a.profile .score { color: var(--gold); font-family: var(--sans); font-size: .78rem; }
+
+.reviews { margin-top: 2.4rem; }
+.review-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
+.review-card { border: 1px solid var(--line); border-radius: 3px; padding: 1rem 1.1rem; background: var(--cream); }
+.review-card h3 { font-family: var(--sans); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); margin: 0 0 .5rem; }
+.review-card .score-big { font-size: 1.05rem; margin: 0 0 .35rem; }
+.review-card a { display: inline-block; font-size: .9rem; }
+figure.review { margin: 1.2rem 0; padding-left: 1rem; border-left: 2px solid var(--gold); }
+figure.review blockquote { margin: 0; font-size: 1.02rem; }
+figure.review figcaption { font-family: var(--sans); font-size: .8rem; color: var(--ink-soft); margin-top: .4rem; }
+
 .faq details { border-bottom: 1px solid var(--line); padding: .7rem 0; }
 .faq summary {
   cursor: pointer; font-weight: 700; font-size: 1.02rem;
@@ -392,7 +415,12 @@ footer.site .footmark {
   opacity: .05; pointer-events: none; user-select: none;
 }
 footer.site .cols, footer.site .fine { position: relative; }
-footer.site .footlogo { height: 40px; width: auto; display: block; margin-bottom: .9rem; }
+footer.site .lockup { display: flex; align-items: flex-end; gap: .5rem; margin-bottom: .9rem; }
+footer.site .footlogo { height: 40px; width: auto; display: block; }
+/* The dot from the J monogram, carried into the footer as the brand's one
+   accent. Kept as an element rather than baked into the logo file so it can
+   sit on the baseline whatever the wordmark's height. */
+footer.site .lockup .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold-soft); margin-bottom: .45rem; flex: none; }
 @media (max-width: 760px) {
   footer.site .footmark { width: 220px; right: -50px; bottom: -80px; }
 }
