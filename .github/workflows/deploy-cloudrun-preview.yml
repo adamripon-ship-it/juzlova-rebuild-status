@@ -35,7 +35,7 @@ jobs:
       - name: Rebuild with production SITE_BASE
         if: steps.creds.outputs.ok == 'true'
         env:
-          SITE_BASE: https://juzlova.cz
+          SITE_BASE: https://www.juzlova.cz
         run: python scripts/build_site.py
       - uses: google-github-actions/auth@v2
         if: steps.creds.outputs.ok == 'true'

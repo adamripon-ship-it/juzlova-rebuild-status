@@ -1,0 +1,18 @@
+{
+  "google": {
+    "rating": 5.0,
+    "count": 7,
+    "url": "https://www.google.com/maps/search/?api=1&query=Juzlova%20-%20Potravinarske%20smesi%2C%20Koch%C3%A1nov%2040%2C%20582%2053",
+    "source": "public scan 2026-02-27 (Orlové); confirm on Google Maps",
+    "live": false
+  },
+  "seznam": {
+    "rating": 4.8,
+    "count": 3,
+    "url": "https://www.firmy.cz/detail/12906730-juzlova-kochanov.html",
+    "source": "Seznam Mapy / Firmy.cz (live at build)",
+    "live": true,
+    "review_percentage": 95
+  },
+  "updated": true
+}

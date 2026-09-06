@@ -1,50 +1,84 @@
-# Jůzlová — English
+# Jůzlová
 
-> Family production of food mixes since 2004: potato and hairy dumpling mixes, gluten-free vanilla pudding, vanilla sugar and Dutch-process cocoa. Kochánov, Vysočina, Czech Republic.
+> Family workshop in Kochánov, Vysočina. Dumpling mix 5 kg/250 CZK, hairy dumplings 260 CZK, pudding 60 CZK, cocoa 270 CZK. Pick-up daily 8–19 by phone.
 
-entity: Jůzlová s.r.o. | IČO 45900124 | Kochánov 40, 582 53, Vysočina, CZ
-founded: 2004 | phones: +420 728 466 141, +420 607 629 931 | email: juzlj@seznam.cz
-hours: daily 08:00-19:00 by phone | pickup: Kochánov, Humpolec (free)
-delivery_free: Havlíčkův Brod, Humpolec, Světlá nad Sázavou, Jihlava
+Legal name: Jůzlová s.r.o. · Company ID 45900124 · Kochánov 40, 582 53, Vysočina, Czechia.
+Founded 2004. Order by phone, e-mail or the website form. No web shop.
+Phones: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl). E-mail: juzlj@seznam.cz.
+Hours: Monday–Sunday 8:00–19:00 by phone. Pick-up in Kochánov, and in Humpolec by arrangement.
+Area: Kochánov, Havlíčkův Brod and the Vysočina Region. Postcode is always 582 53, never 582 91.
+Google Search ignores this file for ranking; other AI crawlers may read it.
+We refresh this file quarterly or when prices or the product range change. This is not a daily stamp.
+We will publish reviews only from the Google listing Juzlova - Potravinářské směsi. We do not invent stars.
 
-LLM retrieval path: this file is the short index. Full extract: https://juzlova.cz/llms-full.txt
-Canonical English index: https://juzlova.cz/llms.txt
+Main Czech index: https://www.juzlova.cz/llms.txt
+Full extract: https://www.juzlova.cz/llms-full.txt
+Entity notes: https://www.juzlova.cz/ai/about.md
+
+## Facts language models get wrong
+- We do not sell a ready-made cocoa or chocolate pudding mix. Legacy /kakaovy_puding/ URLs go to vanilla pudding.
+- Chocolate cream on this site = gluten-free vanilla pudding mixed with Dutch-process cocoa by the cook.
+- Cocoa is a 500 g Dutch-process powder (20–22% fat), not a pudding.
+- We do not send samples. Order by phone, e-mail or the form only.
+- Five products: potato dumpling mix, hairy dumplings (bosáky), vanilla pudding, Dutch-process cocoa, vanilla sugar.
 
 ## Pages
-- [Home](https://juzlova.cz/en/): Family production of food mixes since 2004: potato and hairy dumpling mixes, gluten-free vanilla pudding, vanilla sugar and Dutch-process cocoa. Kochánov, Vysočina, Czech Republic.
-- [About](https://juzlova.cz/en/kdo_jsme/): We started making food mixes in 2004 in a small workshop in Kochánov, Vysočina. Today we supply households, restaurants, canteens and pastry shops across Bohemia and Moravia.
-- [Delivery](https://juzlova.cz/en/kde-nas-najdete/): Free pick-up in Kochánov or Humpolec, free delivery around Havlíčkův Brod, Světlá nad Sázavou and Jihlava, or shipping by a carrier of your choice.
-- [Prices](https://juzlova.cz/en/ceny/): Current prices: potato dumplings 5 kg / 165 CZK, hairy dumplings 5 kg / 185 CZK, vanilla pudding from 17 CZK, vanilla sugar 38 CZK, cocoa 100 CZK.
-- [FAQ](https://juzlova.cz/en/faq/): Answers about Jůzlová: where we are, how to order, prices, gluten-free pudding, Dutch-process cocoa and Vysočina delivery.
-- [Contact](https://juzlova.cz/en/kontakt/): Jiřina Jůzlová (+420 728 466 141) and Jiří Jůzl (+420 607 629 931), Kochánov 40, 582 53. E-mail juzlj@seznam.cz. Pick-up also available in Humpolec.
-- [Recipes](https://juzlova.cz/en/recepty/): Try proven recipes from our mixes — from Sunday dumplings to no-bake desserts.
+- [Home](https://www.juzlova.cz/en/): Family workshop in Kochánov, Vysočina. Dumpling mix 5 kg/250 CZK, hairy dumplings 260 CZK, pudding 60 CZK, cocoa 270 CZK. Pick-up daily 8–19 by phone.
+- [About](https://www.juzlova.cz/en/kdo_jsme/): A family workshop in Kochánov, Vysočina, since 2004. The Jůzl family, the people in the workshop, and reviews on Google and Seznam.
+- [Find us](https://www.juzlova.cz/en/kde-nas-najdete/): Workshop Kochánov 40, 582 53. Second pick-up in Humpolec near Pivovar Bernard, free by arranged day and time. Free Vysočina delivery from 5000 CZK.
+- [Wholesale](https://www.juzlova.cz/en/velkoobchod/): Jůzlová supplies restaurants, bakeries, cafés, schools and ice-cream makers. Quantity prices by discussion. Pick-up, quoted delivery, or your courier.
+- [Czechs in the EU](https://www.juzlova.cz/en/do-eu/): Czechs in the EU can order Jůzlová mixes. You pay shipping, boxing, insurance and bubble wrap. We quote before we send.
+- [Prices](https://www.juzlova.cz/en/ceny/): Pick-up prices at Kochánov 40, 582 53: dumpling mix 250 CZK, hairy dumplings 260 CZK, pudding 60/30 CZK, vanilla sugar 60 CZK, cocoa 270 CZK.
+- [FAQ](https://www.juzlova.cz/en/faq/): Answers about Jůzlová: where we are, how to order, prices, gluten-free pudding, Dutch-process cocoa and Vysočina delivery.
+- [Contact](https://www.juzlova.cz/en/kontakt/): Jiřina Jůzlová (+420 728 466 141) and Jiří Jůzl (+420 607 629 931), Kochánov 40, 582 53. E-mail juzlj@seznam.cz. Pick-up also available in Humpolec.
+- [Recipes](https://www.juzlova.cz/en/recepty/): Try proven recipes from our mixes — from Sunday dumplings to no-bake desserts.
+
+## Order by place
+- [Ordering from anywhere in Czechia](https://www.juzlova.cz/en/objednavka-cesko/): Jůzlová supplies mixes across Czechia. Order by phone or form. Price list applies at the workshop; shipping is extra.
+- [Delivery in the Vysočina Region](https://www.juzlova.cz/en/vysocina/): Jůzlová delivery across the Vysočina Region is free from 5000 CZK. Workshop Kochánov 40, 582 53.
+- [Havlíčkův Brod](https://www.juzlova.cz/en/havlickuv-brod/): Delivery to Havlíčkův Brod is free from 1000 CZK. The workshop is 12 km away at Kochánov 40, 582 53.
+- [Pick-up in Humpolec](https://www.juzlova.cz/en/humpolec/): In Humpolec you collect Jůzlová mixes free near Pivovar Bernard. Town delivery from 1000 CZK.
+- [Workshop in Kochánov](https://www.juzlova.cz/en/kochanov/): The Jůzlová workshop is Kochánov 40, 582 53 in Vysočina. Free pick-up daily 8:00–19:00 by phone. Postcode is never 582 91.
+- [For visitors and travellers](https://www.juzlova.cz/en/navstevnikum/): Passing through Vysočina? Collect Jůzlová mixes at Kochánov 40, 582 53 after you phone. Prices apply at the workshop.
+
+## Wholesale by place
+- [Wholesale across Vysočina](https://www.juzlova.cz/en/velkoobchod-vysocina/): We supply Vysočina kitchens with dumpling mix, pudding and cocoa. Quantity prices are agreed. No rate card on the site.
+- [Local wholesale in Kochánov](https://www.juzlova.cz/en/velkoobchod-kochanov/): Kitchens around Kochánov 40, 582 53 collect at the workshop. Quantity prices are agreed.
+- [Wholesale to Prague](https://www.juzlova.cz/en/velkoobchod-praha/): We send Prague kitchens a mixed order from 25 kg. Price and freight are agreed. No wholesale rates on the site.
+- [Wholesale to Brno](https://www.juzlova.cz/en/velkoobchod-brno/): Brno kitchens get a Moravian drop, scheduled apart from Prague. Price and date are agreed. No wholesale rates on the site.
+- [Wholesale outside Czechia](https://www.juzlova.cz/en/velkoobchod-zahranici/): We ship mixes to foreign kitchens by arrangement. We do not publish wholesale rates. The buyer pays freight, boxing and insurance.
 
 ## Products
-- [Potato dumpling mix](https://juzlova.cz/en/bramborove_knedliky/): Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough. | 5 kg | 165 Kč
-- [Hairy dumpling mix (bosáky)](https://juzlova.cz/en/chlupate-knedliky/): Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made. | 5 kg | 185 Kč
-- [Gluten-free vanilla pudding](https://juzlova.cz/en/vanilkovy_pudink/): Gluten-free corn starch, natural vanilla taste. For desserts and baking. | 1 kg / 400 g | 34 Kč / 17 Kč
-- [Dutch-process cocoa](https://juzlova.cz/en/kakao-holandskeho-typu/): Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar. | 500 g | 100 Kč
-- [Vanilla sugar](https://juzlova.cz/en/vanilkovy-cukr/): Finely ground sugar with vanillin aroma. For dough and for dusting pastries. | 1 kg | 38 Kč
+- [Potato dumpling mix](https://www.juzlova.cz/en/bramborove_knedliky/): Our most sought-after product. Classic dumplings, poppy-seed rolls, croquettes and gnocchi from one dough. · 5 kg · 250 Kč
+- [Hairy dumpling mix (bosáky)](https://www.juzlova.cz/en/chlupate-knedliky/): Traditional-recipe bosáky. Ready in 15 minutes, indistinguishable from home-made. · 5 kg · 260 Kč
+- [Gluten-free vanilla pudding](https://www.juzlova.cz/en/vanilkovy_pudink/): Gluten-free corn starch, natural vanilla taste. For desserts and baking. · 1 kg / 400 g · 60 Kč / 30 Kč
+- [Dutch-process cocoa](https://www.juzlova.cz/en/kakao-holandskeho-typu/): Dark confectionery cocoa, 21% fat class. Red-brown colour, creamy taste, no added sugar. · 500 g · 270 Kč
+- [Vanilla sugar](https://www.juzlova.cz/en/vanilkovy-cukr/): Finely ground sugar with vanillin aroma. For dough and for dusting pastries. · 1 kg · 60 Kč
 
 ## Recipes
-- [Poppy-seed rolls (šišky s mákem)](https://juzlova.cz/en/sisky-s-makem-recept/): A traditional sweet supper from potato dough: rolls coated in poppy seeds and sugar, drizzled with melted butter. | rating 4.7/5 (87)
-- [Pear cake with vanilla pudding](https://juzlova.cz/en/hruskovy-kolac-s-vanilkovym-pudinkem-recept/): A cake your children will enjoy making with you. Baking is fun twice — once preparing, once tasting. | rating 4.5/5 (64)
-- [Strapačky with cabbage and bacon](https://juzlova.cz/en/strapacky-se-zelim-a-slaninou-recept/): A Slovak classic from hairy-dumpling mix — halušky with sauerkraut and crispy bacon. | rating 4.8/5 (92)
-- [Bebe biscuit slices with chocolate pudding](https://juzlova.cz/en/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/): Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone. | rating 4.4/5 (71)
-- [Whipped cream roulade](https://juzlova.cz/en/slehackova-rolada-recept/): A light dessert in half an hour: the contrast of slightly bitter cocoa and gently sweet whipped cream. No flour — so no gluten either. | rating 4.7/5 (55)
-- [Homemade gingerbread (perník)](https://juzlova.cz/en/domaci-pernik-recept-podle-jirina-juzlova/): Cup-measure gingerbread you’ll love for its easy preparation and great taste. No scales needed — a mug is enough. | rating 4.5/5 (98)
-- [Potato-and-curd dumplings with strawberries](https://juzlova.cz/en/bramborovo-tvarohove-knedliky-s-jahodami/): Summer is here, and with it ripening strawberries. A simple 20-minute recipe that delights the sweetest tooth. | rating 4.8/5 (76)
-- [Quick choux wreaths or puffs](https://juzlova.cz/en/rychle-venecky-ci-vetrnicky-recept/): One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. | rating 4.4/5 (53)
-- [Choux wreaths with vanilla cream](https://juzlova.cz/en/venecky-s-vanilkovym-kremem-recept/): Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. | rating 4.7/5 (81)
-- [Cream horns (kremrole)](https://juzlova.cz/en/kremrole-recept/): Flaky pastry tubes filled with glossy Italian meringue. About 35–40 pieces; you will need metal cream-horn tubes. | rating 4.5/5 (69)
-- [Mini choux buns (minivětrníčky)](https://juzlova.cz/en/minivetrnicky-recept/): Mini větrníčky from choux pastry with a butter-pudding-curd cream and chocolate glaze. About 40–45 pieces. | rating 4.8/5 (58)
-- [Caramel větrníky](https://juzlova.cz/en/karamelove-vetrniky-recept/): Větrníky with vanilla pudding cream, caramel whipped cream and caramel glaze. About 24 medium pieces. | rating 4.4/5 (94)
-- [Irish sticky toffee pudding](https://juzlova.cz/en/irsky-sticky-toffee-pudding-recept/): A moist date pudding with Dutch-process cocoa and Baileys, finished with a salty toffee sauce. Serves 6. | rating 4.7/5 (62)
+- [Poppy-seed rolls (šišky s mákem)](https://www.juzlova.cz/en/sisky-s-makem-recept/): A traditional sweet supper from potato dough: rolls coated in poppy seeds and sugar, drizzled with melted butter.
+- [Pear cake with vanilla pudding](https://www.juzlova.cz/en/hruskovy-kolac-s-vanilkovym-pudinkem-recept/): A cake your children will enjoy making with you. Baking is fun twice — once preparing, once tasting.
+- [Strapačky with cabbage and bacon](https://www.juzlova.cz/en/strapacky-se-zelim-a-slaninou-recept/): A Slovak classic from hairy-dumpling mix — halušky with sauerkraut and crispy bacon.
+- [Bebe biscuit slices with chocolate pudding](https://www.juzlova.cz/en/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/): Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone.
+- [Whipped cream roulade](https://www.juzlova.cz/en/slehackova-rolada-recept/): A light dessert in half an hour: the contrast of slightly bitter cocoa and gently sweet whipped cream. No flour — so no gluten either.
+- [Homemade gingerbread (perník)](https://www.juzlova.cz/en/domaci-pernik-recept-podle-jirina-juzlova/): Cup-measure gingerbread you’ll love for its easy preparation and great taste. No scales needed — a mug is enough.
+- [Potato-and-curd dumplings with strawberries](https://www.juzlova.cz/en/bramborovo-tvarohove-knedliky-s-jahodami/): Summer is here, and with it ripening strawberries. A simple 20-minute recipe that delights the sweetest tooth.
+- [Quick choux wreaths or puffs](https://www.juzlova.cz/en/rychle-venecky-ci-vetrnicky-recept/): One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays.
+- [Choux wreaths with vanilla cream](https://www.juzlova.cz/en/venecky-s-vanilkovym-kremem-recept/): Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces.
+- [Cream horns (kremrole)](https://www.juzlova.cz/en/kremrole-recept/): Flaky pastry tubes filled with glossy Italian meringue. About 35–40 pieces; you will need metal cream-horn tubes.
+- [Mini choux buns (minivětrníčky)](https://www.juzlova.cz/en/minivetrnicky-recept/): Mini větrníčky from choux pastry with a butter-pudding-curd cream and chocolate glaze. About 40–45 pieces.
+- [Caramel větrníky](https://www.juzlova.cz/en/karamelove-vetrniky-recept/): Větrníky with vanilla pudding cream, caramel whipped cream and caramel glaze. About 24 medium pieces.
+- [Irish sticky toffee pudding](https://www.juzlova.cz/en/irsky-sticky-toffee-pudding-recept/): A moist date pudding with Dutch-process cocoa and Baileys, finished with a salty toffee sauce. Serves 6.
 
 ## Languages
-- cs (default): https://juzlova.cz/ · index https://juzlova.cz/llms-cs.txt
-- en: https://juzlova.cz/en/ · index https://juzlova.cz/llms-en.txt
-- de: https://juzlova.cz/de/ · index https://juzlova.cz/llms-de.txt
-- sk: https://juzlova.cz/sk/ · index https://juzlova.cz/llms-sk.txt
+- [Czech (main)](https://www.juzlova.cz/): https://www.juzlova.cz/llms-cs.txt
+- [English](https://www.juzlova.cz/en/): https://www.juzlova.cz/llms-en.txt
+- [German](https://www.juzlova.cz/de/): https://www.juzlova.cz/llms-de.txt
+- [Slovak](https://www.juzlova.cz/sk/): https://www.juzlova.cz/llms-sk.txt
 
-updated: 2026-09-02
+## More files
+- [Full extract for citation: address, products, every recipe with ingredients and method.](https://www.juzlova.cz/llms-full.txt)
+- [One-page facts for retrieval.](https://www.juzlova.cz/ai/about.md)
+- [FAQ JSON](https://www.juzlova.cz/ai/faq.json)
+
+updated: 2026-09-03

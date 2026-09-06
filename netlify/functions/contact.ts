@@ -3,11 +3,12 @@ import type { Config, Context } from "@netlify/functions"
 const CONTACT_TO_DEFAULT = "juzlj@seznam.cz"
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const LANGS = ["cs", "en", "de", "sk"] as const
-const SUBJECT: Record<(typeof LANGS)[number], string> = {
-  cs: "Jůzlová — poptávka z webu",
-  en: "Jůzlová — website enquiry",
-  de: "Jůzlová — Anfrage über die Website",
-  sk: "Jůzlová — dopyt z webu",
+const OWNER_SUBJECT = "Jůzlová — nová poptávka z webu"
+const LANG_NAME_CS: Record<(typeof LANGS)[number], string> = {
+  cs: "čeština",
+  en: "angličtina",
+  de: "němčina",
+  sk: "slovenština",
 }
 
 interface ContactBody {
@@ -84,13 +85,14 @@ const parseBody = (raw: unknown): ValidPayload | { error: string } => {
 
 const formatMail = (payload: ValidPayload) => {
   const lines = [
-    SUBJECT[payload.lang],
+    "Nová poptávka z webu Jůzlová",
     "",
-    `Jméno / Name: ${payload.name}`,
-    payload.phone ? `Telefon / Phone: ${payload.phone}` : "",
+    `Jazyk webu: ${LANG_NAME_CS[payload.lang]}`,
+    `Jméno: ${payload.name}`,
+    payload.phone ? `Telefon: ${payload.phone}` : "",
     `E-mail: ${payload.email}`,
-    payload.products.length ? `Směsi / Mixes: ${payload.products.join(", ")}` : "",
-    payload.message ? `Zpráva / Message:\n${payload.message}` : "",
+    payload.products.length ? `Zájem o směsi: ${payload.products.join(", ")}` : "",
+    payload.message ? `Zpráva návštěvníka:\n${payload.message}` : "",
   ]
   return lines.filter((line, i) => line || i === 1).join("\n")
 }
@@ -153,7 +155,7 @@ const sendZapier = async (payload: ValidPayload) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         to,
-        subject: SUBJECT[payload.lang],
+        subject: OWNER_SUBJECT,
         name: payload.name,
         phone: payload.phone,
         email: payload.email,

@@ -3,6 +3,9 @@
 # Cloud Run marks the container ready when $PORT is bound — nginx must not
 # bind first or the first /api request after a cold start returns 502.
 set -eu
+if [ -f /opt/juzlova-api/inject-analytics.py ]; then
+  python3 /opt/juzlova-api/inject-analytics.py
+fi
 python3 /opt/juzlova-api/app.py &
 i=0
 while [ "$i" -lt 50 ]; do

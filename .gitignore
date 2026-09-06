@@ -1,7 +1,18 @@
 scripts/__pycache__/
 *.pyc
+.DS_Store
 .netlify
 .env
 .env.local
 node_modules/
+.agents/
+.carbon/
+juzlova.cz-audit/
+.forge-commit-ready
+.forge/project-id
+.forge/hook-version
+.forge/changed-files.log
+.cursor/hooks.json
+.cursor/hooks/
+.cursor/rules/forge-workflow.mdc
 

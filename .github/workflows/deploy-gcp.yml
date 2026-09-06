@@ -8,7 +8,7 @@ name: Deploy to Google Cloud Storage
 #   GCP_PROJECT     — the Google Cloud project id
 #   GCS_BUCKET      — bucket name (e.g. "juzlova-cz" or "www.juzlova.cz")
 #
-# SITE_BASE is https://juzlova.cz (owner chose the main build, 2026-08-31).
+# SITE_BASE is https://www.juzlova.cz (live host; apex redirects to www).
 # This job rebuilds with that domain before every sync so canonicals stay
 # on the real host.
 
@@ -39,7 +39,7 @@ jobs:
       - name: Rebuild with production SITE_BASE
         if: steps.creds.outputs.ok == 'true'
         env:
-          SITE_BASE: https://juzlova.cz
+          SITE_BASE: https://www.juzlova.cz
         run: python scripts/build_site.py
       - uses: google-github-actions/auth@v2
         if: steps.creds.outputs.ok == 'true'

@@ -1,5 +1,6 @@
 # AI crawler hint for Jůzlová
-llms.txt: https://juzlova.cz/llms.txt
-llms-full.txt: https://juzlova.cz/llms-full.txt
-sitemap: https://juzlova.cz/sitemap.xml
+llms.txt: https://www.juzlova.cz/llms.txt
+llms-full.txt: https://www.juzlova.cz/llms-full.txt
+entity: https://www.juzlova.cz/ai/about.md
+sitemap: https://www.juzlova.cz/sitemap.xml
 contact: juzlj@seznam.cz

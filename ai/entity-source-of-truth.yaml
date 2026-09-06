@@ -1,0 +1,28 @@
+entity:
+  name: Juzlova - Potravinářské směsi
+  legal_name: Jůzlová s.r.o.
+  ico: "45900124"
+  email: juzlj@seznam.cz
+  phones:
+    - +420728466141
+    - +420607629931
+  address:
+    street: Kochánov 40
+    postal_code: "582 53"
+    locality: Kochánov
+    region: Vysočina
+    country: CZ
+  maps:
+    google_listing: Juzlova - Potravinarske smesi
+    google_search: https://www.google.com/maps/search/?api=1&query=Juzlova%20-%20Potravinarske%20smesi%2C%20Koch%C3%A1nov%2040%2C%20582%2053
+    seznam_search_query: Juzlova
+    seznam_listing: https://mapy.cz/?source=firm&id=12906730
+    firmy_cz: https://www.firmy.cz/detail/12906730-juzlova-kochanov.html
+    note: Owner already has Google Maps and Seznam Mapy. Do not ask to claim or create.
+  pickup:
+    factory: Kochánov 40, 582 53
+    humpolec: Near Pivovar Bernard, by arranged day and time, no street number published
+  delivery:
+    vysocina_free_from_czk: 5000
+    humpolec_hb_free_from_czk: 1000
+  updated: "2026-09-03"

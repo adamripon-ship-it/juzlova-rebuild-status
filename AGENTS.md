@@ -34,6 +34,13 @@ Change the source, then rebuild:
 Czech is the source of truth; the other three languages are translations of it.
 A copy change in one language usually needs the same change in all four.
 
+## Editorial bans (owner)
+
+- **Never** name ingredient suppliers (cocoa or otherwise), and **never** add
+  FAQ/copy that says we refuse to name them (“Do you name the cocoa supplier?”
+  / “Uvádíme jen typ…”). Stay silent on suppliers; describe product type and
+  specs only.
+
 ## Build and verify
 
 ```sh

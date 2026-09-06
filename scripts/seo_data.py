@@ -20,19 +20,13 @@ RECIPE_SLUGS = [
     "irsky-sticky-toffee-pudding-recept",
 ]
 
-# Cycle requested: 4.7, 4.5, 4.8, 4.4. Counts 50–100.
-_RATING_CYCLE = (4.7, 4.5, 4.8, 4.4)
-_RATING_COUNTS = (87, 64, 92, 71, 55, 98, 76, 53, 81, 69, 58, 94, 62)
-
+# No invented scores. Widget starts empty until a real visitor rates.
 RECIPE_RATINGS = {}
-for _i, _slug in enumerate(RECIPE_SLUGS):
-    _rating = _RATING_CYCLE[_i % 4]
-    _count = _RATING_COUNTS[_i]
-    _tenths = int(round(_rating * 10))
+for _slug in RECIPE_SLUGS:
     RECIPE_RATINGS[_slug] = {
-        "rating": _rating,
-        "count": _count,
-        "sum_tenths": _tenths * _count,
+        "rating": 0,
+        "count": 0,
+        "sum_tenths": 0,
     }
 
 RECIPE_TIMES = {
@@ -160,65 +154,73 @@ KEYWORDS = {
     "cs": {
         "home": "Jůzlová, knedlíky v prášku, chlupaté knedlíky, bosáky, vanilkový puding bez lepku, kakao holandského typu, vanilínový cukr, Kochánov, Vysočina, potravinářské směsi",
         "kdo_jsme": "Jůzlová, kdo jsme, rodinná dílna, Kochánov, výroba od 2004, KLASA mouka",
-        "kde_nas_najdete": "odběr Kochánov, Humpolec, rozvoz Vysočina, Havlíčkův Brod, Jihlava, dodání zboží Jůzlová",
+        "kde_nas_najdete": "odběr Kochánov, rozvoz Vysočina od 5000 Kč, Humpolec Havlíčkův Brod od 1000 Kč",
+        "velkoobchod": "velkoobchod Jůzlová, restaurace, pekárny, kavárny, školy, zmrzlináři, cena podle množství",
+        "do_eu": "zásilky Čechům v EU, doprava balení pojištění, Německo Rakousko Slovensko Polsko",
         "kontakt": "kontakt Jůzlová, Jiřina Jůzlová, Jiří Jůzl, telefon, Kochánov 40, juzlj@seznam.cz",
-        "ceny": "ceník Jůzlová, cena knedlíků v prášku, puding 34 Kč, kakao 100 Kč",
+        "ceny": "ceník Jůzlová, cena knedlíků v prášku, puding 60 Kč, kakao 270 Kč",
         "recepty": "recepty Jůzlová, šišky s mákem, strapačky, perník, věnečky, pudinkové recepty",
         "faq": "Jůzlová FAQ, jak objednat knedlíky v prášku, bezlepkový puding, rozvoz Vysočina",
         "products": {
-            "bramborove_knedliky": "bramborové knedlíky v prášku, bramborové těsto, šišky, gnocchi, KLASA, 5 kg 165 Kč",
-            "chlupate_knedliky": "chlupaté knedlíky, bosáky, halušky, strapačky, 15 minut, 5 kg 185 Kč",
-            "vanilkovy_pudink": "vanilkový puding bez lepku, kukuřičný škrob, 1 kg 34 Kč, Jůzlová pudink",
-            "kakao_holandskeho_typu": "kakao holandského typu, 21 % tuku, cukrářské kakao, bez cukru, 500 g 100 Kč",
-            "vanilkovy_cukr": "vanilínový cukr, vanilin, posyp cukroví, 1 kg 38 Kč, Jůzlová",
+            "bramborove_knedliky": "bramborové knedlíky v prášku, bramborové těsto, šišky, gnocchi, KLASA, 5 kg 250 Kč",
+            "chlupate_knedliky": "chlupaté knedlíky, bosáky, halušky, strapačky, 15 minut, 5 kg 260 Kč",
+            "vanilkovy_pudink": "vanilkový puding bez lepku, kukuřičný škrob, 1 kg 60 Kč, Jůzlová pudink",
+            "kakao_holandskeho_typu": "kakao holandského typu, 21 % tuku, cukrářské kakao, bez cukru, 500 g 270 Kč",
+            "vanilkovy_cukr": "vanilínový cukr, vanilin, posyp cukroví, 1 kg 60 Kč, Jůzlová",
         },
     },
     "en": {
         "home": "Jůzlová, potato dumpling mix, hairy dumplings, gluten-free vanilla pudding, Dutch-process cocoa, vanilla sugar, Kochánov, Czech food mixes",
         "kdo_jsme": "Jůzlová about, family workshop, Kochánov, since 2004, KLASA flour",
-        "kde_nas_najdete": "Jůzlová pickup Kochánov Humpolec, Vysočina delivery, Havlíčkův Brod, Jihlava",
+        "kde_nas_najdete": "Jůzlová pickup Kochánov, free Vysočina delivery 5000 CZK, Humpolec Havlíčkův Brod 1000 CZK",
+        "velkoobchod": "Jůzlová wholesale, restaurants bakeries cafés schools ice cream, quantity pricing",
+        "do_eu": "Jůzlová parcels to Czechs in the EU, shipping boxing insurance Germany Austria Slovakia Poland",
         "kontakt": "Jůzlová contact, Jiřina Jůzlová, Jiří Jůzl, Kochánov 40, juzlj@seznam.cz",
-        "ceny": "Jůzlová price list, dumpling mix price, pudding 34 CZK, cocoa 100 CZK",
+        "ceny": "Jůzlová price list, dumpling mix price, pudding 60 CZK, cocoa 270 CZK",
         "recepty": "Jůzlová recipes, poppy-seed rolls, strapačky, gingerbread, cream puffs, pudding desserts",
         "faq": "Jůzlová FAQ, how to order dumpling mix, gluten-free pudding, Vysočina delivery",
         "products": {
-            "bramborove_knedliky": "potato dumpling mix, potato dough, gnocchi, KLASA flour, 5 kg 165 CZK",
-            "chlupate_knedliky": "hairy dumplings, bosáky, halušky, strapačky, 15 minutes, 5 kg 185 CZK",
-            "vanilkovy_pudink": "gluten-free vanilla pudding, corn starch, 1 kg 34 CZK",
-            "kakao_holandskeho_typu": "Dutch-process cocoa, 21% fat, unsweetened cocoa, 500 g 100 CZK",
-            "vanilkovy_cukr": "vanilla sugar, vanillin, dusting sugar, 1 kg 38 CZK",
+            "bramborove_knedliky": "potato dumpling mix, potato dough, gnocchi, KLASA flour, 5 kg 250 CZK",
+            "chlupate_knedliky": "hairy dumplings, bosáky, halušky, strapačky, 15 minutes, 5 kg 260 CZK",
+            "vanilkovy_pudink": "gluten-free vanilla pudding, corn starch, 1 kg 60 CZK",
+            "kakao_holandskeho_typu": "Dutch-process cocoa, 21% fat, unsweetened cocoa, 500 g 270 CZK",
+            "vanilkovy_cukr": "vanilla sugar, vanillin, dusting sugar, 1 kg 60 CZK",
         },
     },
     "de": {
         "home": "Jůzlová, Kartoffelknödelmischung, Haarige Knödel, glutenfreier Vanillepudding, Kakao holländischer Art, Vanillinzucker, Kochánov",
         "kdo_jsme": "Jůzlová über uns, Familienbetrieb, Kochánov, seit 2004, KLASA Mehl",
-        "kde_nas_najdete": "Abholung Kochánov Humpolec, Lieferung Vysočina, Havlíčkův Brod, Jihlava",
+        "kde_nas_najdete": "Abholung Kochánov, Lieferung Vysočina ab 5000 Kč, Humpolec Havlíčkův Brod ab 1000 Kč",
+        "velkoobchod": "Jůzlová Großhandel, Restaurants Bäckereien Cafés Schulen Speiseeis, Mengenpreis",
+        "do_eu": "Jůzlová Pakete an Tschechen in der EU, Versand Karton Versicherung DE AT SK PL",
         "kontakt": "Jůzlová Kontakt, Jiřina Jůzlová, Jiří Jůzl, Kochánov 40, juzlj@seznam.cz",
-        "ceny": "Jůzlová Preisliste, Knödelmischung Preis, Pudding 34 Kč, Kakao 100 Kč",
+        "ceny": "Jůzlová Preisliste, Knödelmischung Preis, Pudding 60 Kč, Kakao 270 Kč",
         "recepty": "Jůzlová Rezepte, Mohnnockerl, Strapačky, Lebkuchen, Brandteig, Puddingdesserts",
         "faq": "Jůzlová FAQ, Knödelmischung bestellen, glutenfreier Pudding, Lieferung Vysočina",
         "products": {
-            "bramborove_knedliky": "Kartoffelknödelmischung, Kartoffelteig, Gnocchi, KLASA, 5 kg 165 Kč",
-            "chlupate_knedliky": "Haarige Knödel, Bosáky, Halušky, Strapačky, 15 Minuten, 5 kg 185 Kč",
-            "vanilkovy_pudink": "glutenfreier Vanillepudding, Maisstärke, 1 kg 34 Kč",
-            "kakao_holandskeho_typu": "Kakao holländischer Art, 21 % Fett, ungesüßt, 500 g 100 Kč",
-            "vanilkovy_cukr": "Vanillinzucker, Vanillin, Puder, 1 kg 38 Kč",
+            "bramborove_knedliky": "Kartoffelknödelmischung, Kartoffelteig, Gnocchi, KLASA, 5 kg 250 Kč",
+            "chlupate_knedliky": "Haarige Knödel, Bosáky, Halušky, Strapačky, 15 Minuten, 5 kg 260 Kč",
+            "vanilkovy_pudink": "glutenfreier Vanillepudding, Maisstärke, 1 kg 60 Kč",
+            "kakao_holandskeho_typu": "Kakao holländischer Art, 21 % Fett, ungesüßt, 500 g 270 Kč",
+            "vanilkovy_cukr": "Vanillinzucker, Vanillin, Puder, 1 kg 60 Kč",
         },
     },
     "sk": {
         "home": "Jůzlová, zemiakové knedle v prášku, chlpaté knedle, vanilkový puding bez lepku, kakao holandského typu, vanilínový cukor, Kochánov",
         "kdo_jsme": "Jůzlová kto sme, rodinná dielňa, Kochánov, od 2004, KLASA múka",
-        "kde_nas_najdete": "odber Kochánov Humpolec, rozvoz Vysočina, Havlíčkův Brod, Jihlava",
+        "kde_nas_najdete": "odber Kochánov, rozvoz Vysočina od 5000 Kč, Humpolec Havlíčkův Brod od 1000 Kč",
+        "velkoobchod": "veľkoobchod Jůzlová, reštaurácie pekárne kaviarne školy zmrzlina, cena podľa množstva",
+        "do_eu": "zásielky Čechom v EÚ, doprava balenie poistenie, Nemecko Rakúsko Slovensko Poľsko",
         "kontakt": "kontakt Jůzlová, Jiřina Jůzlová, Jiří Jůzl, Kochánov 40, juzlj@seznam.cz",
-        "ceny": "cenník Jůzlová, cena knedieľ v prášku, puding 34 Kč, kakao 100 Kč",
+        "ceny": "cenník Jůzlová, cena knedieľ v prášku, puding 60 Kč, kakao 270 Kč",
         "recepty": "recepty Jůzlová, šišky s makom, strapačky, perník, venčeky, pudingové recepty",
         "faq": "Jůzlová FAQ, ako objednať knedle v prášku, bezlepkový puding, rozvoz Vysočina",
         "products": {
-            "bramborove_knedliky": "zemiakové knedle v prášku, zemiakové cesto, gnocchi, KLASA, 5 kg 165 Kč",
-            "chlupate_knedliky": "chlpaté knedle, bosáky, halušky, strapačky, 15 minút, 5 kg 185 Kč",
-            "vanilkovy_pudink": "vanilkový puding bez lepku, kukuričný škrob, 1 kg 34 Kč",
-            "kakao_holandskeho_typu": "kakao holandského typu, 21 % tuku, bez cukru, 500 g 100 Kč",
-            "vanilkovy_cukr": "vanilínový cukor, vanilín, posyp, 1 kg 38 Kč",
+            "bramborove_knedliky": "zemiakové knedle v prášku, zemiakové cesto, gnocchi, KLASA, 5 kg 250 Kč",
+            "chlupate_knedliky": "chlpaté knedle, bosáky, halušky, strapačky, 15 minút, 5 kg 260 Kč",
+            "vanilkovy_pudink": "vanilkový puding bez lepku, kukuričný škrob, 1 kg 60 Kč",
+            "kakao_holandskeho_typu": "kakao holandského typu, 21 % tuku, bez cukru, 500 g 270 Kč",
+            "vanilkovy_cukr": "vanilínový cukor, vanilín, posyp, 1 kg 60 Kč",
         },
     },
 }
@@ -293,11 +295,102 @@ SITEMAP_PRIORITY = {
     "ceny/": 0.8,
     "kdo_jsme/": 0.7,
     "kde-nas-najdete/": 0.7,
+    "velkoobchod/": 0.8,
+    "do-eu/": 0.7,
     "kontakt/": 0.7,
+    "objednavka-cesko/": 0.7,
+    "vysocina/": 0.7,
+    "havlickuv-brod/": 0.7,
+    "humpolec/": 0.7,
+    "kochanov/": 0.7,
+    "navstevnikum/": 0.6,
+    "velkoobchod-vysocina/": 0.7,
+    "velkoobchod-kochanov/": 0.7,
+    "velkoobchod-praha/": 0.7,
+    "velkoobchod-brno/": 0.7,
+    "velkoobchod-zahranici/": 0.6,
 }
 
 PRODUCT_PRIORITY = 0.9
 RECIPE_PRIORITY = 0.8
+
+# Same six intent clusters in all four languages. Localized terms, not
+# machine-translated junk. Used to improve titles/descriptions once, never
+# to stuff extra keywords.
+INTENT_CLUSTERS = {
+    "dumpling": {
+        "cs": "knedlíky v prášku",
+        "en": "potato dumpling mix",
+        "de": "Kartoffelknödelmischung",
+        "sk": "knedle v prášku",
+    },
+    "pudding": {
+        "cs": "vanilkový puding bez lepku",
+        "en": "gluten-free vanilla pudding",
+        "de": "glutenfreier Vanillepudding",
+        "sk": "vanilkový puding bez lepku",
+    },
+    "cocoa": {
+        "cs": "kakao holandského typu",
+        "en": "Dutch-process cocoa",
+        "de": "Kakao holländischer Art",
+        "sk": "kakao holandského typu",
+    },
+    "vanilla_sugar": {
+        "cs": "vanilínový cukr",
+        "en": "vanilla sugar",
+        "de": "Vanillinzucker",
+        "sk": "vanilínový cukor",
+    },
+    "recipes": {
+        "cs": "recepty z našich směsí",
+        "en": "recipes from our mixes",
+        "de": "Rezepte aus unseren Mischungen",
+        "sk": "recepty z našich zmesí",
+    },
+    "pickup": {
+        "cs": "odběr Kochánov a Humpolec",
+        "en": "pick-up in Kochánov and Humpolec",
+        "de": "Abholung in Kochánov und Humpolec",
+        "sk": "odber Kochánov a Humpolec",
+    },
+}
+
+_KIND_CLUSTER = {
+    "home": "dumpling",
+    "kdo_jsme": "dumpling",
+    "kde_nas_najdete": "pickup",
+    "velkoobchod": "dumpling",
+    "do_eu": "pickup",
+    "kontakt": "pickup",
+    "ceny": "dumpling",
+    "recepty": "recipes",
+    "faq": "pickup",
+}
+_PRODUCT_CLUSTER = {
+    "bramborove_knedliky": "dumpling",
+    "chlupate_knedliky": "dumpling",
+    "vanilkovy_pudink": "pudding",
+    "kakao_holandskeho_typu": "cocoa",
+    "vanilkovy_cukr": "vanilla_sugar",
+}
+
+TITLE_MAX = 60
+DESC_MAX = 160
+
+
+def _cluster_id(kind, key=""):
+    if kind == "product":
+        return _PRODUCT_CLUSTER.get(key, "dumpling")
+    if kind == "recipe":
+        return "recipes"
+    return _KIND_CLUSTER.get(kind, "dumpling")
+
+
+def intent_phrase(lang, kind, key=""):
+    cluster = _cluster_id(kind, key)
+    pack = INTENT_CLUSTERS[cluster]
+    return pack.get(lang) or pack["cs"]
 
 
 def keywords_for(lang, kind, key=""):
@@ -309,12 +402,39 @@ def keywords_for(lang, kind, key=""):
     return pack.get(kind, pack["home"])
 
 
+def _has_phrase(text, phrase):
+    return phrase.casefold() in (text or "").casefold()
+
+
+def compose_meta(lang, kind, key, title, desc):
+    """Keep existing copy when it already carries the intent. Add one phrase only."""
+    phrase = intent_phrase(lang, kind, key)
+    brand = "Jůzlová"
+    out_title = (title or "").strip()
+    out_desc = (desc or "").strip()
+    if not _has_phrase(out_title, brand) and len(out_title) + 10 <= TITLE_MAX:
+        out_title = f"{out_title} | {brand}" if out_title else brand
+    if out_title and not _has_phrase(out_title, phrase) and len(out_title) + len(phrase) + 3 <= TITLE_MAX:
+        out_title = f"{out_title} — {phrase}"
+    if out_desc and not _has_phrase(out_desc, phrase) and len(out_desc) + len(phrase) + 2 <= DESC_MAX:
+        out_desc = f"{out_desc} {phrase[0].upper() + phrase[1:]}."
+    return out_title, out_desc
+
+
 def rating_payload(slug):
     row = RECIPE_RATINGS[slug]
-    value = round(row["sum_tenths"] / 10 / row["count"], 1)
+    count = row["count"]
+    if not count:
+        return {
+            "ratingValue": 0,
+            "ratingCount": 0,
+            "bestRating": 5,
+            "worstRating": 1,
+        }
+    value = round(row["sum_tenths"] / 10 / count, 1)
     return {
         "ratingValue": value,
-        "ratingCount": row["count"],
+        "ratingCount": count,
         "bestRating": 5,
         "worstRating": 1,
     }

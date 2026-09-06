@@ -52,16 +52,49 @@ SLUGS = (
     "irsky-sticky-toffee-pudding-recept",
 )
 EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
+FORMSPREE_ID_RE = re.compile(r"^[A-Za-z0-9]{6,20}$")
+PHONE_DIGITS_RE = re.compile(r"\d")
 LANGS = ("cs", "en", "de", "sk")
-SUBJECT = {
-    "cs": "Jůzlová — poptávka z webu",
-    "en": "Jůzlová — website enquiry",
-    "de": "Jůzlová — Anfrage über die Website",
-    "sk": "Jůzlová — dopyt z webu",
+OWNER_SUBJECT = "Jůzlová — nová poptávka z webu"
+OWNER_SUBJECT_NL = "Jůzlová — nový odběr novinek"
+LANG_NAME_CS = {
+    "cs": "čeština",
+    "en": "angličtina",
+    "de": "němčina",
+    "sk": "slovenština",
+}
+BUYER_NAME_CS = {
+    "household": "domácnost",
+    "restaurant": "restaurace, jídelna nebo cukrárna",
+}
+FULFILL_NAME_CS = {
+    "factory": "vyzvednutí v dílně Kochánov 40, 582 53",
+    "humpolec": "vyzvednutí v Humpolci u Pivovaru Bernard",
+    "delivery": "rozvoz",
+}
+KIND_NAME_CS = {
+    "contact": "poptávka",
+    "b2b": "velkoobchod",
+    "newsletter": "odběr novinek",
+}
+TOPIC_OWNER_CS = {
+    "general": "obecná velkoobchodní poptávka",
+    "praha": "Praha (min. 25 kg mix)",
+    "brno": "Brno",
+    "vysocina": "Vysočina",
+    "international": "zahraniční velkoobchod",
+    "restaurant": "restaurace / jídelna",
+    "bakery": "pekárna / cukrárna",
+    "school": "škola",
+    "icecream": "výroba zmrzliny",
+    "other": "jiné",
 }
 
 _lock = threading.Lock()
 _token = {"value": "", "exp": 0.0}
+_rate: dict[str, list[float]] = {}
+RATE_WINDOW_SEC = 600
+RATE_MAX = 8
 
 
 def utc_now() -> str:
@@ -244,19 +277,79 @@ def save_contact(payload: dict) -> None:
     path.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def save_llms_hit(ua: str, uri: str) -> None:
+    """Store crawler user-agent and date only. No IP or extra personal data."""
+    record = {
+        "at": utc_now(),
+        "ua": clip(ua, 400),
+        "path": clip(uri, 80),
+    }
+    sys.stderr.write("llms-hit %s %s\n" % (record["at"], record["ua"][:160]))
+    stamp = utc_now().replace(":", "")
+    digest = hashlib.sha256(
+        f"{record['at']}|{record['ua']}|{record['path']}".encode("utf-8", "replace")
+    ).hexdigest()[:10]
+    name = f"llms-hits/{stamp}-{digest}.json"
+    try:
+        if IS_CLOUD_RUN:
+            gcs_put(name, record, "0")
+            return
+        path = local_path(name)
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+    except Exception as exc:
+        sys.stderr.write("llms-hit store failed: %s\n" % exc)
+
+
+def owner_subject(payload: dict) -> str:
+    if payload.get("kind") == "newsletter":
+        return OWNER_SUBJECT_NL
+    return OWNER_SUBJECT
+
+
 def format_mail(payload: dict) -> str:
+    """Owner inbox is Czech-only. Visitor answers stay as typed."""
+    lang = payload.get("lang") or "cs"
+    lang_cs = LANG_NAME_CS.get(lang, lang)
+    buyer_raw = payload.get("buyer") or ""
+    buyer_cs = BUYER_NAME_CS.get(buyer_raw, buyer_raw)
+    kind = payload.get("kind") or "contact"
+    kind_cs = KIND_NAME_CS.get(kind, kind)
+    fulfill_raw = payload.get("fulfillment") or ""
+    fulfill_cs = FULFILL_NAME_CS.get(fulfill_raw, fulfill_raw)
+    if kind == "newsletter":
+        return "\n".join([
+            "Nový odběr novinek z webu Jůzlová",
+            "",
+            f"Jazyk webu: {lang_cs}",
+            f"Jméno: {payload['name']}",
+            f"E-mail: {payload.get('email') or ''}",
+            "Souhlas s novinkami: ano",
+        ])
     lines = [
-        SUBJECT[payload["lang"]],
+        "Nová poptávka z webu Jůzlová",
         "",
-        f"Jméno / Name: {payload['name']}",
+        f"Typ zprávy: {kind_cs}",
+        f"Jazyk webu: {lang_cs}",
+        f"Jméno: {payload['name']}",
     ]
     if payload["phone"]:
-        lines.append(f"Telefon / Phone: {payload['phone']}")
-    lines.append(f"E-mail: {payload['email']}")
+        lines.append(f"Telefon: {payload['phone']}")
+    if payload["email"]:
+        lines.append(f"E-mail: {payload['email']}")
+    if buyer_cs:
+        lines.append(f"Odebírá pro: {buyer_cs}")
+    topic_raw = payload.get("topic") or ""
+    topic_cs = TOPIC_OWNER_CS.get(topic_raw, "")
+    if topic_cs:
+        lines.append(f"Téma: {topic_cs}")
     if payload["products"]:
-        lines.append(f"Směsi / Mixes: {', '.join(payload['products'])}")
+        lines.append(f"Zájem o směsi: {', '.join(payload['products'])}")
+    if payload.get("quantity"):
+        lines.append(f"Množství: {payload['quantity']}")
+    if fulfill_cs:
+        lines.append(f"Způsob odběru: {fulfill_cs}")
     if payload["message"]:
-        lines.append(f"Zpráva / Message:\n{payload['message']}")
+        lines.append(f"Zpráva návštěvníka:\n{payload['message']}")
     return "\n".join(lines)
 
 
@@ -271,36 +364,57 @@ def is_zapier_hook(url: str) -> bool:
     )
 
 
-def http_json(url: str, payload: dict, timeout: int = 10) -> bool:
-    data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(
-        url,
-        data=data,
-        method="POST",
-        headers={"Content-Type": "application/json", "Accept": "application/json"},
-    )
+def http_json(
+    url: str,
+    payload: dict,
+    timeout: int = 10,
+    extra_headers: dict | None = None,
+) -> tuple[bool, object]:
+    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    headers = {"Content-Type": "application/json", "Accept": "application/json"}
+    if extra_headers:
+        headers.update(extra_headers)
+    req = urllib.request.Request(url, data=data, method="POST", headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=timeout) as res:
-            return 200 <= res.status < 300
-    except (urllib.error.URLError, TimeoutError, OSError):
-        return False
+            raw = res.read().decode("utf-8", "replace")
+            try:
+                body: object = json.loads(raw) if raw.strip() else {}
+            except json.JSONDecodeError:
+                body = {"raw": raw[:400]}
+            return 200 <= res.status < 300, body
+    except urllib.error.HTTPError as exc:
+        raw = exc.read().decode("utf-8", "replace") if exc.fp else ""
+        try:
+            body = json.loads(raw) if raw.strip() else {"error": exc.code}
+        except json.JSONDecodeError:
+            body = {"raw": raw[:400], "error": exc.code}
+        return False, body
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        return False, {}
+
+
+def mail_fields(payload: dict) -> dict:
+    return {
+        "to": CONTACT_TO,
+        "subject": owner_subject(payload),
+        "name": payload["name"],
+        "phone": payload["phone"],
+        "email": payload["email"],
+        "message": payload["message"],
+        "buyer": payload.get("buyer") or "",
+        "products": ", ".join(payload["products"]),
+        "lang": payload["lang"],
+        "body": format_mail(payload),
+    }
 
 
 def send_zapier(payload: dict) -> bool:
     hook = (os.environ.get("ZAPIER_WEBHOOK_URL") or "").strip()
     if not is_zapier_hook(hook):
         return False
-    return http_json(hook, {
-        "to": CONTACT_TO,
-        "subject": SUBJECT[payload["lang"]],
-        "name": payload["name"],
-        "phone": payload["phone"],
-        "email": payload["email"],
-        "message": payload["message"],
-        "products": ", ".join(payload["products"]),
-        "lang": payload["lang"],
-        "body": format_mail(payload),
-    })
+    ok, _body = http_json(hook, mail_fields(payload))
+    return ok
 
 
 def send_smtp(payload: dict) -> bool:
@@ -312,10 +426,11 @@ def send_smtp(payload: dict) -> bool:
     port = int(os.environ.get("SMTP_PORT") or "465")
     mail_from = (os.environ.get("SMTP_FROM") or user).strip()
     msg = EmailMessage()
-    msg["Subject"] = SUBJECT[payload["lang"]]
+    msg["Subject"] = owner_subject(payload)
     msg["From"] = mail_from
     msg["To"] = CONTACT_TO
-    msg["Reply-To"] = payload["email"]
+    if payload["email"]:
+        msg["Reply-To"] = payload["email"]
     msg.set_content(format_mail(payload))
     context = ssl.create_default_context()
     try:
@@ -333,27 +448,153 @@ def send_smtp(payload: dict) -> bool:
         return False
 
 
+def formspree_url() -> str:
+    raw_url = (os.environ.get("FORMSPREE_ENDPOINT") or "").strip()
+    if raw_url:
+        try:
+            parsed = urllib.parse.urlparse(raw_url)
+        except ValueError:
+            return ""
+        host = (parsed.hostname or "").lower()
+        if parsed.scheme == "https" and host in ("formspree.io", "www.formspree.io"):
+            if parsed.path.startswith("/f/") and len(parsed.path) > 3:
+                return raw_url.split("?", 1)[0]
+        return ""
+    form_id = (os.environ.get("FORMSPREE_FORM_ID") or "").strip()
+    if not FORMSPREE_ID_RE.match(form_id):
+        return ""
+    return f"https://formspree.io/f/{form_id}"
+
+
+def send_formspree(payload: dict) -> bool:
+    url = formspree_url()
+    if not url:
+        return False
+    body = {
+        "name": payload["name"],
+        "phone": payload["phone"],
+        "email": payload["email"] or "noreply@juzlova.cz",
+        "message": format_mail(payload),
+        "buyer": payload.get("buyer") or "",
+        "products": ", ".join(payload["products"]),
+        "lang": payload["lang"],
+        "_subject": owner_subject(payload),
+    }
+    ok, data = http_json(url, body, extra_headers={"Origin": "https://www.juzlova.cz"})
+    if not ok:
+        return False
+    if isinstance(data, dict) and data.get("error"):
+        return False
+    return True
+
+
+def send_formsubmit(payload: dict) -> str:
+    """Post to FormSubmit so juzlj@seznam.cz gets the enquiry.
+
+    First use asks the inbox to click Activate Form once. After that,
+    later posts are delivered without Cursor.
+    """
+    to = CONTACT_TO
+    if not EMAIL_RE.match(to):
+        return ""
+    url = f"https://formsubmit.co/ajax/{urllib.parse.quote(to)}"
+    body = {
+        "name": payload["name"],
+        "phone": payload["phone"],
+        "email": payload["email"] or "noreply@juzlova.cz",
+        "buyer": payload.get("buyer") or "",
+        "products": ", ".join(payload["products"]),
+        "lang": payload["lang"],
+        "message": format_mail(payload),
+        "_subject": owner_subject(payload),
+        "_template": "box",
+        "_captcha": "false",
+        "_honey": payload.get("honeypot") or "",
+    }
+    ok, data = http_json(
+        url,
+        body,
+        timeout=12,
+        extra_headers={
+            "Origin": "https://www.juzlova.cz",
+            "Referer": "https://www.juzlova.cz/kontakt/",
+            "User-Agent": (
+                "Mozilla/5.0 (compatible; JuzlovaContact/1.0; "
+                "+https://www.juzlova.cz/kontakt/)"
+            ),
+        },
+    )
+    if not isinstance(data, dict):
+        return "formsubmit" if ok else ""
+    success = str(data.get("success") or "").lower()
+    text = str(data.get("message") or "")
+    if "activation" in text.lower() or "activate form" in text.lower():
+        return "formsubmit_activate"
+    if ok and success in ("true", "1", "yes"):
+        return "formsubmit"
+    return ""
+
+
 def deliver_contact(payload: dict) -> str:
     save_contact(payload)
     if send_zapier(payload):
         return "zapier"
     if send_smtp(payload):
         return "smtp"
+    if send_formspree(payload):
+        return "formspree"
+    formsubmit = send_formsubmit(payload)
+    if formsubmit:
+        return formsubmit
     if not IS_CLOUD_RUN:
         return "dev"
     return "stored"
 
 
+def rate_ok(ip: str) -> bool:
+    now = time.time()
+    hits = [t for t in _rate.get(ip, []) if now - t < RATE_WINDOW_SEC]
+    if len(hits) >= RATE_MAX:
+        _rate[ip] = hits
+        return False
+    hits.append(now)
+    _rate[ip] = hits
+    return True
+
+
+def public_config() -> dict:
+    key = (os.environ.get("TURNSTILE_SITE_KEY") or "").strip()
+    token = (os.environ.get("CLOUDFLARE_WEB_ANALYTICS_TOKEN") or "").strip()
+    maps = (
+        (os.environ.get("GOOGLE_MAPS_API_KEY") or "").strip()
+        or (os.environ.get("MAPS_API_KEY") or "").strip()
+    )
+    return {
+        "siteKey": key or None,
+        "analyticsToken": token or None,
+        "mapsKey": bool(maps) or None,
+    }
+
+
 def parse_contact(raw: object) -> dict | str:
     if not isinstance(raw, dict):
         return "invalid"
+    kind_raw = clip(raw.get("type"), 20).lower()
+    kind = kind_raw if kind_raw in KIND_NAME_CS else "contact"
     name = clip(raw.get("name"), 200)
     phone = clip(raw.get("phone"), 40)
     email = clip(raw.get("email"), 200)
     message = clip(raw.get("message"), 4000)
+    quantity = clip(raw.get("quantity"), 200)
     lang_raw = clip(raw.get("lang"), 8).lower()
     lang = lang_raw if lang_raw in LANGS else "cs"
     honeypot = clip(raw.get("honeypot"), 200)
+    buyer_raw = clip(raw.get("buyer"), 32).lower()
+    buyer = buyer_raw if buyer_raw in ("household", "restaurant") else ""
+    fulfill_raw = clip(raw.get("fulfillment"), 32).lower()
+    fulfillment = fulfill_raw if fulfill_raw in FULFILL_NAME_CS else ""
+    consent_raw = clip(raw.get("consent"), 8).lower()
+    has_consent = consent_raw in ("yes", "true", "1", "on")
     products_raw = raw.get("products")
     products = []
     if isinstance(products_raw, list):
@@ -361,16 +602,48 @@ def parse_contact(raw: object) -> dict | str:
             value = clip(item, 120)
             if value:
                 products.append(value)
-    if not name or not email or not message:
+    topic_raw = clip(raw.get("topic"), 40).lower()
+    topic = topic_raw if topic_raw in TOPIC_OWNER_CS else ""
+    if kind == "newsletter":
+        if not email or not EMAIL_RE.match(email):
+            return "need_contact"
+        if not has_consent:
+            return "consent"
+        return {
+            "kind": kind,
+            "name": name or "Odběratel novinek",
+            "phone": "",
+            "email": email,
+            "message": "",
+            "buyer": "",
+            "products": [],
+            "quantity": "",
+            "topic": "",
+            "fulfillment": "",
+            "lang": lang,
+            "honeypot": honeypot,
+        }
+    if not name:
         return "invalid"
-    if not EMAIL_RE.match(email):
+    if not phone and not email:
+        return "need_contact"
+    if email and not EMAIL_RE.match(email):
+        return "invalid"
+    if phone and len(PHONE_DIGITS_RE.findall(phone)) < 6:
+        return "invalid"
+    if kind == "b2b" and not topic:
         return "invalid"
     return {
+        "kind": kind,
         "name": name,
         "phone": phone,
         "email": email,
         "message": message,
+        "buyer": buyer,
         "products": products,
+        "quantity": quantity,
+        "topic": topic,
+        "fulfillment": fulfillment,
         "lang": lang,
         "honeypot": honeypot,
     }
@@ -439,11 +712,22 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.end_headers()
 
+    def _llms_log(self) -> None:
+        ua = self.headers.get("User-Agent") or ""
+        uri = self.headers.get("X-Original-URI") or "/llms.txt"
+        save_llms_hit(ua, uri)
+        self.send_response(204)
+        self.send_header("Cache-Control", "no-store")
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+
     def do_GET(self) -> None:
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
-        if path == "/api/contact":
-            key = (os.environ.get("TURNSTILE_SITE_KEY") or "").strip()
-            self._send(200, {"siteKey": key or None})
+        if path == "/api/llms-log":
+            self._llms_log()
+            return
+        if path in ("/api/contact", "/api/config"):
+            self._send(200, public_config())
             return
         if path == "/api/ratings":
             status, payload = handle_ratings_get(None)
@@ -458,6 +742,9 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
+        if path == "/api/llms-log":
+            self._llms_log()
+            return
         if path == "/api/contact":
             try:
                 raw = self._read_json()
@@ -471,12 +758,17 @@ class Handler(BaseHTTPRequestHandler):
             if parsed["honeypot"]:
                 self._send(200, {"ok": True})
                 return
+            if not rate_ok(self._client_ip()):
+                self._send(429, {"ok": False, "error": "rate"})
+                return
             try:
                 with _lock:
                     mode = deliver_contact(parsed)
-            except Exception:
+            except Exception as exc:
+                sys.stderr.write("contact deliver failed: %s\n" % exc)
                 self._send(502, {"ok": False, "error": "mail"})
                 return
+            sys.stderr.write("contact delivered mode=%s\n" % mode)
             self._send(200, {"ok": True, "mode": mode})
             return
         if path.startswith("/api/ratings/"):

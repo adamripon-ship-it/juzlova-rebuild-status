@@ -1,7 +1,8 @@
 # juzlova.cz — crawler policy
-# Human sitemap: https://juzlova.cz/sitemap.xml
-# LLM index (read this first): https://juzlova.cz/llms.txt
-# LLM full extract: https://juzlova.cz/llms-full.txt
+# Human sitemap: https://www.juzlova.cz/sitemap.xml
+# LLM index (read this first): https://www.juzlova.cz/llms.txt
+# LLM full extract: https://www.juzlova.cz/llms-full.txt
+# Google Search ignores llms.txt; keep it for non-Google AI crawlers.
 
 User-agent: *
 Allow: /
@@ -9,10 +10,20 @@ Disallow: /archive/
 Disallow: /status.html
 Disallow: /__forms.html
 
-User-agent: GPTBot
+# Citation bots — named Allow, not only the wildcard
+User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
@@ -24,10 +35,7 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
+User-agent: Bingbot
 Allow: /
 
 User-agent: anthropic-ai
@@ -54,4 +62,8 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://juzlova.cz/sitemap.xml
+Sitemap: https://www.juzlova.cz/sitemap.xml
+Sitemap: https://www.juzlova.cz/sitemap-cs.xml
+Sitemap: https://www.juzlova.cz/sitemap-en.xml
+Sitemap: https://www.juzlova.cz/sitemap-de.xml
+Sitemap: https://www.juzlova.cz/sitemap-sk.xml

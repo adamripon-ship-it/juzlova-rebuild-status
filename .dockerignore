@@ -6,6 +6,7 @@ docs
 brand
 status.html
 *.md
+!ai/about.md
 .dockerignore
 .gcloudignore
 .gitignore
