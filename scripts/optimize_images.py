@@ -33,6 +33,13 @@ TARGETS = {
     "produkt-kakao": 1200,
 }
 
+# Hero stills also get narrow copies, so a phone is not sent a 2200px file for a
+# 400px screen. build_site.py picks these up automatically via srcset when they
+# exist, and ships the full image alone when they do not.
+VARIANTS = {
+    "kochanov-letecky": (900, 1400),
+}
+
 
 def optimize(src, width, quality=82):
     """Resize to at most `width` and write a sibling .webp. Returns its path."""
@@ -72,9 +79,29 @@ def warm(src, out, width=1200):
     return out
 
 
+def variants(stem, widths):
+    """Write narrow copies of img/<stem>.webp beside it, skipping any upscale."""
+    src = IMG / f"{stem}.webp"
+    if not src.exists():
+        return
+    with Image.open(src) as im:
+        base = im.convert("RGB")
+        for w in widths:
+            if base.width <= w:
+                continue
+            out = IMG / f"{stem}-{w}.webp"
+            if out.exists():
+                continue
+            base.resize((w, round(base.height * w / base.width)),
+                        Image.LANCZOS).save(out, "WEBP", quality=82, method=6)
+            print(f"  {out.name}: {out.stat().st_size // 1024} kB")
+
+
 def main():
     if not IMG.exists():
         return
+    for stem, widths in sorted(VARIANTS.items()):
+        variants(stem, widths)
     packets = IMG / "vanilkovy-cukr-pytliky.png"
     if packets.exists():
         out = warm(packets, IMG / "vanilkovy-cukr-pytliky.webp")
@@ -82,13 +109,27 @@ def main():
     for stem, width in sorted(TARGETS.items()):
         out = IMG / f"{stem}.webp"
         srcs = [p for p in IMG.glob(f"{stem}.*") if p != out]
-        if out.exists() and not srcs:
-            continue
-        src = srcs[0] if srcs else out
+
+        # A finished .webp is left alone unless it is genuinely too big. Without
+        # this the script re-derives it from whatever sibling it finds — which,
+        # once the huge originals are gone, means the small recovered archive
+        # file — and replaces a good 1200px asset with a 300px one before
+        # deleting the archive file it came from. Re-encoding a webp from a
+        # webp also loses quality on every run.
+        if out.exists():
+            with Image.open(out) as done:
+                if done.width <= width:
+                    continue
+            src, drop = out, []
+        else:
+            if not srcs:
+                continue
+            src, drop = srcs[0], srcs
+
         before = src.stat().st_size
         out = optimize(src, width)
         print(f"  {out.name}: {before // 1024} kB -> {out.stat().st_size // 1024} kB")
-        for p in srcs:  # drop the oversized original
+        for p in drop:  # the oversized original we just replaced
             p.unlink()
 
 
