@@ -4,147 +4,189 @@ Used on the FAQ page (full set), homepage (first HOME_COUNT items),
 and recipe pages (two questions each) in all four languages.
 """
 
+from cocoa_faq import b2b_cocoa_faq
+
 HOME_COUNT = 6
 
 # D2C only — never put kitchen/wholesale questions here.
 SITE_FAQ = {
     "cs": [
-        ("Kde sídlí Jůzlová a jak objednat?",
-         "Provozovna je Kochánov 40, 582 53, 12 km od Havlíčkova Brodu. Objednávky po telefonu +420 728 466 141 (Jiřina Jůzlová) nebo +420 607 629 931 (Jiří Jůzl), e-mailem juzlj@seznam.cz. Otevřeno denně 8:00–19:00 po telefonické domluvě."),
-        ("Dovážíte zboží a kde je odběr zdarma?",
-         "Vyzvednutí v dílně Kochánov 40, 582 53 je zdarma. Druhý odběr v Humpolci u Pivovaru Bernard je také zdarma, den a hodinu domluvíme. Rozvoz po Vysočině je zdarma od 5000 Kč. Do Humpolce a Havlíčkova Brodu zdarma od 1000 Kč. Do Jihlavy zdarma od 3000 Kč. Jinde dopravu naceníme; můžete použít i vlastního dopravce."),
-        ("Jaké jsou aktuální ceny směsí Jůzlová?",
-         "Bramborové knedlíky v prášku 5 kg / 250 Kč. Chlupaté knedlíky (bosáky) 5 kg / 260 Kč. Vanilkový puding bez lepku 1 kg / 60 Kč nebo 400 g / 30 Kč. Kakao holandského typu 500 g / 270 Kč. Vanilínový cukr 1 kg / 60 Kč. Ceny platí při vyzvednutí v dílně. Uvedená cena je jen za zboží."),
-        ("Je vanilkový puding Jůzlová bez lepku?",
-         "Ano. Základem je kukuřičný škrob, který lepek neobsahuje. Čokoládovou chuť mu dáte kakaem holandského typu — kakaový puding jako hotovou směs nevedeme."),
-        ("Jaký je rozdíl mezi bramborovými a chlupatými knedlíky?",
-         "Bramborové knedlíky v prášku jsou klasické těsto z mouky KLASA a sušených bramborových vloček — na knedlíky, šišky, krokety i gnocchi. Chlupaté knedlíky (bosáky) jsou podle tradiční receptury, hotové za 15 minut, typicky se zelím, uzeným nebo jako strapačky/halušky."),
-        ("Co je kakao holandského typu 21 % tuku?",
-         "Alkalizovaný cukrářský kakaový prášek s 20–22 % kakaového másla. Je tmavší, méně kyselý a krémovější než přírodní kakao. Bez přidaného cukru (přirozené cukry 0,9 g / 100 g), veganské, bez 14 alergenů EU, lepek pod 20 ppm. Balení 500 g / 270 Kč."),
-        ("Kolik porcí je z 5 kg knedlíků v prášku?",
-         "Z pětikilogramového balení bramborových knedlíků připravíte přílohu zhruba pro 60–70 porcí. Chlupaté knedlíky z 5 kg pokryjí rodinné vaření na více dnů."),
-        ("Jsou recepty na webu volně k použití?",
-         "Ano. Třináct receptů z našich směsí — od šišek s mákem po věnečky a sticky toffee pudding — je na webu zdarma, ve čtyřech jazycích, se surovinami, postupem a fotografiemi."),
-        ("Kde najdu hodnocení zákazníků?",
-         "Na této stránce ukazujeme hvězdičky z Google Maps a Seznam Firmy.cz — čísla bereme z těchto profilů a odkazujeme přímo na ně."),
+        ("Objednání a odběr", [
+            ("Jak u vás objednám, když nemáte e-shop?",
+             "Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz, nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme."),
+            ("Kde si zboží vyzvednu zdarma?",
+             "V dílně Kochánov 40, 582 53, nebo v Humpolci v okolí Pivovaru Bernard. Vždy po telefonické domluvě, denně 8:00–19:00."),
+            ("Dáváte vzorky nebo ochutnávky?",
+             "Ne. Objednáváte hotová balení. Na první vyzkoušení je puding ve 400g balení za 30 Kč."),
+            ("Platím předem, nebo při převzetí?",
+             "Při vyzvednutí a rozvozu platíte při převzetí. U balíků a zásilek do EU pošleme celkovou částku předem a odešleme po jejím odsouhlasení."),
+        ]),
+        ("Doprava", [
+            ("Kdy je rozvoz zdarma?",
+             "Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč. Pro kuchyně do Brna od 5000 Kč."),
+            ("Posíláte balíky po celém Česku?",
+             "Ano. Dopravu naceníme předem podle váhy a místa; můžete použít i vlastního dopravce."),
+            ("Posíláte do zahraničí?",
+             "Ano, do Německa, Rakouska, na Slovensko, do Polska a jinam v EU. Platíte dopravu, krabici, pojištění a bublinkovou fólii; částku vidíte před odesláním."),
+        ]),
+        ("Složení a alergeny", [
+            ("Z čeho jsou knedlíky v prášku?",
+             "Z pšeničné mouky z mlýna v Havlíčkově Brodě, který vede naše širší rodina, a ze sušených bramborových vloček. Zaděláváte jen vodou; vejce, mléko nebo strouhanou bramboru přidáte podle zvyku."),
+            ("Je vanilkový puding opravdu bez lepku?",
+             "Ano. Základem je kukuřičný škrob, který lepek neobsahuje. Kakaový puding jako hotovou směs nevedeme — čokoládový krém vznikne zamícháním našeho kakaa."),
+            ("Kolik tuku má vaše kakao?",
+             "20–22 % kakaového másla. Podle práva EU musí mít kakaový prášek nejméně 20 %; pod tím je to kakao se sníženým obsahem tuku. Bez přidaného cukru, bez 14 alergenů EU, lepek pod 20 ppm."),
+            ("Je vanilínový cukr pravá vanilka?",
+             "Ne. Je to jemně mletý cukr s vanilínovým aroma. Říkáme to rovnou v názvu."),
+        ]),
+        ("Balení a skladování", [
+            ("Kolik porcí je z 5 kg knedlíků?",
+             "Zhruba 60–70 porcí přílohy. Jeden pytel vystačí na sezónu nedělních obědů."),
+            ("Kolik pudingu dát místo sáčku z obchodu?",
+             "Běžný sáček je zhruba 40 g na 500 ml mléka. Z kila uvaříte asi 25 pudingů."),
+            ("Jak směsi skladovat?",
+             "V suchu a zavřené. Kakao mimo silné pachy, ideálně při 15–20 °C."),
+        ]),
     ],
     "en": [
-        ("Where is Jůzlová and how do I order?",
-         "The workshop is Kochánov 40, 582 53, 12 km from Havlíčkův Brod. Order by phone +420 728 466 141 (Jiřina Jůzlová) or +420 607 629 931 (Jiří Jůzl), or e-mail juzlj@seznam.cz. Open daily 8:00–19:00 by phone arrangement."),
-        ("Do you deliver, and where is pick-up free?",
-         "Pick-up at Kochánov 40, 582 53 is free. A second pick-up in Humpolec near Pivovar Bernard is also free; we agree the day and time. Vysočina delivery is free from 5000 CZK. Delivery to Humpolec and Havlíčkův Brod is free from 1000 CZK. Delivery to Jihlava is free from 3000 CZK. Elsewhere we quote delivery; you may use your own courier."),
-        ("What are the current Jůzlová prices?",
-         "Potato dumpling mix 5 kg / 250 CZK. Hairy dumplings (bosáky) 5 kg / 260 CZK. Gluten-free vanilla pudding 1 kg / 60 CZK or 400 g / 30 CZK. Dutch-process cocoa 500 g / 270 CZK. Vanilla sugar 1 kg / 60 CZK. Prices apply at workshop pick-up. The listed price is for the goods only."),
-        ("Is Jůzlová vanilla pudding gluten-free?",
-         "Yes. It is based on corn starch, which contains no gluten. For a chocolate taste, stir in our Dutch-process cocoa — we do not sell a ready-made chocolate pudding mix."),
-        ("What is the difference between potato dumplings and hairy dumplings?",
-         "Potato dumpling mix is classic dough from KLASA-awarded wheat flour and dried potato flakes — for dumplings, poppy-seed rolls, croquettes and gnocchi. Hairy dumplings (bosáky) follow a traditional recipe, ready in 15 minutes, typically served with cabbage and smoked meat or as strapačky/halušky."),
-        ("What is Dutch-process cocoa with 21% fat?",
-         "Alkalised confectionery cocoa powder with 20–22% cocoa butter. It is darker, less acidic and creamier than natural cocoa. No added sugar (naturally occurring sugars 0.9 g / 100 g), vegan, free of the 14 EU allergens, gluten under 20 ppm. Pack 500 g / 270 CZK."),
-        ("How many portions from a 5 kg dumpling mix bag?",
-         "A 5 kg bag of potato dumpling mix makes a side dish for about 60–70 portions. Hairy dumplings from 5 kg cover several family meals."),
-        ("Are the website recipes free to use?",
-         "Yes. Thirteen recipes using our mixes — from poppy-seed rolls to cream puffs and sticky toffee pudding — are free on the site, in four languages, with ingredients, method and photographs."),
-        ("Where can I see customer ratings?",
-         "This site shows star ratings from Google Maps and Seznam Firmy.cz — we take the numbers from those profiles and link straight to them."),
+        ("Ordering and pick-up", [
+            ("How do I order without a web shop?",
+             "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), e-mail juzlj@seznam.cz, or use the form. Say what and how much you want and where you are; we arrange the rest."),
+            ("Where can I collect for free?",
+             "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by phone arrangement, daily 8:00–19:00."),
+            ("Do you give samples or tastings?",
+             "No. You order finished packs. For a first try, the pudding comes in a 400 g pack for 30 CZK."),
+            ("Do I pay in advance or on collection?",
+             "Pick-up and delivery: on hand-over. Parcels and EU shipments: we send the total first and ship once you approve it."),
+        ]),
+        ("Delivery", [
+            ("When is delivery free?",
+             "To Humpolec and Havlíčkův Brod from 1000 CZK, to Jihlava from 3000 CZK, across the rest of Vysočina from 5000 CZK. Kitchens in Brno from 5000 CZK."),
+            ("Do you send parcels across Czechia?",
+             "Yes. We quote shipping first by weight and place; you may also use your own courier."),
+            ("Do you ship abroad?",
+             "Yes: Germany, Austria, Slovakia, Poland and elsewhere in the EU. You pay shipping, box, insurance and bubble wrap; you see the total before we send."),
+        ]),
+        ("Ingredients and allergens", [
+            ("What is the dumpling mix made of?",
+             "Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato if that is how you like them."),
+            ("Is the vanilla pudding really gluten-free?",
+             "Yes. It is based on corn starch, which contains no gluten. We do not sell a cocoa pudding mix — stir in our cocoa for a chocolate cream."),
+            ("How much fat is in your cocoa?",
+             "20–22 % cocoa butter. Under EU law cocoa powder needs at least 20 %; below that it is fat-reduced cocoa. No added sugar, none of the 14 EU allergens, gluten under 20 ppm."),
+            ("Is the vanilla sugar real vanilla?",
+             "No. It is finely ground sugar with vanillin aroma. We say so in the product name."),
+        ]),
+        ("Packs and storage", [
+            ("How many portions from 5 kg of dumpling mix?",
+             "About 60–70 side portions. One bag covers a season of Sunday lunches."),
+            ("How much pudding replaces a shop sachet?",
+             "A sachet is about 40 g per 500 ml of milk. One kilo makes about 25 puddings."),
+            ("How do I store the mixes?",
+             "Dry and closed. Keep cocoa away from strong smells, ideally at 15–20 °C."),
+        ]),
     ],
     "de": [
-        ("Wo sitzt Jůzlová und wie bestelle ich?",
-         "Die Werkstatt ist Kochánov 40, 582 53, 12 km von Havlíčkův Brod. Bestellung telefonisch +420 728 466 141 (Jiřina Jůzlová) oder +420 607 629 931 (Jiří Jůzl), E-Mail juzlj@seznam.cz. Täglich 8:00–19:00 Uhr nach telefonischer Absprache."),
-        ("Liefern Sie, und wo ist die Abholung kostenlos?",
-         "Abholung in der Werkstatt Kochánov 40, 582 53 ist kostenlos. Eine zweite Abholung in Humpolec bei Pivovar Bernard ist ebenfalls kostenlos; Tag und Uhrzeit vereinbaren wir. Lieferung in der Vysočina ist ab 5000 Kč kostenlos. Nach Humpolec und Havlíčkův Brod ab 1000 Kč. Nach Jihlava ab 3000 Kč. Anderswo nennen wir die Lieferkosten; Sie können einen eigenen Kurier nutzen."),
-        ("Was kosten die Mischungen von Jůzlová?",
-         "Kartoffelknödelmischung 5 kg / 250 Kč. Haarige Knödel (Bosáky) 5 kg / 260 Kč. Glutenfreier Vanillepudding 1 kg / 60 Kč oder 400 g / 30 Kč. Kakao holländischer Art 500 g / 270 Kč. Vanillinzucker 1 kg / 60 Kč. Preise gelten bei Abholung in der Werkstatt. Der angegebene Preis gilt nur für die Ware."),
-        ("Ist der Vanillepudding von Jůzlová glutenfrei?",
-         "Ja. Grundlage ist Maisstärke ohne Gluten. Schokoladengeschmack geben Sie mit Kakao holländischer Art — eine fertige Schokopuddingmischung führen wir nicht."),
-        ("Worin unterscheiden sich Kartoffelknödel und haarige Knödel?",
-         "Die Kartoffelknödelmischung ist klassischer Teig aus KLASA-Weizenmehl und getrockneten Kartoffelflocken — für Knödel, Mohnnockerl, Kroketten und Gnocchi. Haarige Knödel (Bosáky) folgen einem traditionellen Rezept, fertig in 15 Minuten, typisch mit Kraut und Rauchfleisch oder als Strapačky/Halušky."),
-        ("Was ist Kakao holländischer Art mit 21 % Fett?",
-         "Alkalisierter Konditor-Kakaopulver mit 20–22 % Kakaobutter. Dunkler, weniger sauer und cremiger als Naturkakao. Ohne Zuckerzusatz (natürliche Zucker 0,9 g / 100 g), vegan, ohne die 14 EU-Allergene, Gluten unter 20 ppm. Packung 500 g / 270 Kč."),
-        ("Wie viele Portionen aus 5 kg Knödelmischung?",
-         "Aus 5 kg Kartoffelknödelmischung bereiten Sie Beilage für etwa 60–70 Portionen. Haarige Knödel aus 5 kg reichen für mehrere Familientage."),
-        ("Sind die Rezepte auf der Website frei nutzbar?",
-         "Ja. Dreizehn Rezepte mit unseren Mischungen — von Mohnnockerl bis Windbeutel und Sticky-Toffee-Pudding — stehen kostenlos in vier Sprachen mit Zutaten, Zubereitung und Fotos."),
-        ("Wo sehe ich Kundenbewertungen?",
-         "Auf dieser Website zeigen wir Sterne von Google Maps und Seznam Firmy.cz — die Zahlen kommen von diesen Profilen, mit Direktlink dorthin."),
+        ("Bestellen und Abholen", [
+            ("Wie bestelle ich ohne Onlineshop?",
+             "Rufen Sie Jiřina (+420 728 466 141) oder Jiří (+420 607 629 931) an, schreiben Sie an juzlj@seznam.cz oder nutzen Sie das Formular. Sie sagen, was und wie viel Sie möchten und wo Sie sind; den Rest klären wir."),
+            ("Wo kann ich kostenlos abholen?",
+             "In der Werkstatt, Kochánov 40, 582 53, oder in Humpolec nahe der Brauerei Bernard. Immer nach telefonischer Absprache, täglich 8:00–19:00 Uhr."),
+            ("Gibt es Muster oder Verkostung?",
+             "Nein. Sie bestellen fertige Packungen. Zum Ausprobieren gibt es den Pudding als 400-g-Packung für 30 Kč."),
+            ("Zahle ich vorab oder bei Übergabe?",
+             "Abholung und Lieferung: bei Übergabe. Pakete und EU-Sendungen: wir nennen die Summe vorab und versenden nach Ihrer Zusage."),
+        ]),
+        ("Lieferung", [
+            ("Wann ist die Lieferung kostenlos?",
+             "Nach Humpolec und Havlíčkův Brod ab 1000 Kč, nach Jihlava ab 3000 Kč, in der übrigen Vysočina ab 5000 Kč. Für Küchen in Brünn ab 5000 Kč."),
+            ("Versenden Sie Pakete in ganz Tschechien?",
+             "Ja. Die Versandkosten nennen wir vorab nach Gewicht und Ort; Sie können auch einen eigenen Spediteur schicken."),
+            ("Versenden Sie ins Ausland?",
+             "Ja: Deutschland, Österreich, Slowakei, Polen und weitere EU-Länder. Sie zahlen Versand, Karton, Versicherung und Luftpolsterfolie; die Summe sehen Sie vor dem Versand."),
+        ]),
+        ("Zutaten und Allergene", [
+            ("Woraus besteht die Knödelmischung?",
+             "Aus Weizenmehl der Mühle in Havlíčkův Brod, die unsere erweiterte Familie führt, und getrockneten Kartoffelflocken. Sie geben nur Wasser dazu; Ei, Milch oder geriebene Kartoffel nach Belieben."),
+            ("Ist der Vanillepudding wirklich glutenfrei?",
+             "Ja. Grundlage ist Maisstärke, die kein Gluten enthält. Eine Kakaopuddingmischung führen wir nicht — für Schokocreme rühren Sie unseren Kakao ein."),
+            ("Wie viel Fett hat Ihr Kakao?",
+             "20–22 % Kakaobutter. Nach EU-Recht braucht Kakaopulver mindestens 20 %; darunter ist es fettreduzierter Kakao. Ohne Zuckerzusatz, ohne die 14 EU-Allergene, Gluten unter 20 ppm."),
+            ("Ist der Vanillinzucker echte Vanille?",
+             "Nein. Fein gemahlener Zucker mit Vanillinaroma. Das steht schon im Produktnamen."),
+        ]),
+        ("Packung und Lagerung", [
+            ("Wie viele Portionen aus 5 kg Knödelmischung?",
+             "Etwa 60–70 Beilagenportionen. Ein Beutel reicht für eine Saison Sonntagsessen."),
+            ("Wie viel Pudding ersetzt ein Päckchen?",
+             "Ein Päckchen sind etwa 40 g auf 500 ml Milch. Aus einem Kilo werden rund 25 Puddings."),
+            ("Wie lagere ich die Mischungen?",
+             "Trocken und verschlossen. Kakao fern von starken Gerüchen, ideal bei 15–20 °C."),
+        ]),
     ],
     "sk": [
-        ("Kde sídli Jůzlová a ako objednať?",
-         "Prevádzka je Kochánov 40, 582 53, 12 km od Havlíčkovho Brodu. Objednávky na +420 728 466 141 (Jiřina Jůzlová) alebo +420 607 629 931 (Jiří Jůzl), e-mail juzlj@seznam.cz. Otvorené denne 8:00–19:00 po telefonickom dohovore."),
-        ("Dovážate tovar a kde je odber zadarmo?",
-         "Vyzdvihnutie v dielni Kochánov 40, 582 53 je zadarmo. Druhý odber v Humpolci pri Pivovare Bernard je tiež zadarmo, deň a hodinu dohodneme. Rozvoz po Vysočine je zadarmo od 5000 Kč. Do Humpolca a Havlíčkovho Brodu zadarmo od 1000 Kč. Do Jihlavy zadarmo od 3000 Kč. Inde dopravu naceníme; môžete použiť aj vlastného dopravcu."),
-        ("Aké sú aktuálne ceny zmesí Jůzlová?",
-         "Zemiakové knedle v prášku 5 kg / 250 Kč. Chlpaté knedle (bosáky) 5 kg / 260 Kč. Vanilkový puding bez lepku 1 kg / 60 Kč alebo 400 g / 30 Kč. Kakao holandského typu 500 g / 270 Kč. Vanilínový cukor 1 kg / 60 Kč. Ceny platia pri vyzdvihnutí v dielni. Uvedená cena je len za tovar."),
-        ("Je vanilkový puding Jůzlová bez lepku?",
-         "Áno. Základom je kukuričný škrob, ktorý lepok neobsahuje. Čokoládovú chuť mu dáte kakaom holandského typu — kakaový puding ako hotovú zmes nevedieme."),
-        ("Aký je rozdiel medzi zemiakovými a chlpatými knedľami?",
-         "Zemiakové knedle v prášku sú klasické cesto z múky KLASA a sušených zemiakových vločiek — na knedle, šišky, krokety aj gnocchi. Chlpaté knedle (bosáky) sú podľa tradičnej receptúry, hotové za 15 minút, typicky so zelím, údeným alebo ako strapačky/halušky."),
-        ("Čo je kakao holandského typu 21 % tuku?",
-         "Alkalizovaný cukrársky kakaový prášok s 20–22 % kakaového masla. Je tmavšie, menej kyslé a krémovejšie než prírodné kakao. Bez pridaného cukru (prirodzené cukry 0,9 g / 100 g), vegánske, bez 14 alergénov EÚ, lepok pod 20 ppm. Balenie 500 g / 270 Kč."),
-        ("Koľko porcií je z 5 kg knedieľ v prášku?",
-         "Z päťkilogramového balenia zemiakových knedieľ pripravíte prílohu zhruba pre 60–70 porcií. Chlpaté knedle z 5 kg pokryjú rodinné varenie na viac dní."),
-        ("Sú recepty na webe voľne na použitie?",
-         "Áno. Trinásť receptov z našich zmesí — od šišiek s makom po venčeky a sticky toffee pudding — je na webe zadarmo, v štyroch jazykoch, so surovinami, postupom a fotografiami."),
-        ("Kde nájdem hodnotenia zákazníkov?",
-         "Na tejto stránke ukazujeme hviezdičky z Google Maps a Seznam Firmy.cz — čísla berieme z týchto profilov a odkazujeme priamo na ne."),
+        ("Objednanie a odber", [
+            ("Ako objednám, keď nemáte e-shop?",
+             "Zavoláte Jiřine (+420 728 466 141) alebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz, alebo vyplníte formulár. Poviete, čo a koľko chcete a kde ste; zvyšok dohodneme."),
+            ("Kde si tovar vyzdvihnem zadarmo?",
+             "V dielni Kochánov 40, 582 53, alebo v Humpolci v okolí Pivovaru Bernard. Vždy po telefonickej dohode, denne 8:00–19:00."),
+            ("Dávate vzorky alebo ochutnávky?",
+             "Nie. Objednávate hotové balenia. Na prvé vyskúšanie je puding v 400 g balení za 30 Kč."),
+            ("Platím vopred, alebo pri prevzatí?",
+             "Pri vyzdvihnutí a rozvoze platíte pri prevzatí. Pri balíkoch a zásielkach na Slovensko pošleme celkovú sumu vopred a odošleme po jej odsúhlasení."),
+        ]),
+        ("Doprava", [
+            ("Kedy je rozvoz zadarmo?",
+             "Do Humpolca a Havlíčkovho Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zvyšku Vysočiny od 5000 Kč. Pre kuchyne do Brna od 5000 Kč."),
+            ("Posielate balíky na Slovensko?",
+             "Áno. Dopravu, krabicu, poistenie a bublinkovú fóliu nacíníme vopred; sumu vidíte pred odoslaním."),
+            ("Môžem poslať vlastného dopravcu?",
+             "Áno. Často to vyjde lacnejšie."),
+        ]),
+        ("Zloženie a alergény", [
+            ("Z čoho sú knedle v prášku?",
+             "Z pšeničnej múky z mlyna v Havlíčkovom Brode, ktorý vedie naša širšia rodina, a zo sušených zemiakových vločiek. Zamiešate len vodou; vajce, mlieko alebo strúhaný zemiak pridáte podľa zvyku."),
+            ("Je vanilkový puding naozaj bez lepku?",
+             "Áno. Základom je kukuričný škrob, ktorý lepok neobsahuje. Kakaový puding ako hotovú zmes nevedieme — čokoládový krém vznikne zamiešaním nášho kakaa."),
+            ("Koľko tuku má vaše kakao?",
+             "20–22 % kakaového masla. Podľa práva EÚ musí mať kakaový prášok najmenej 20 %; pod tým je to kakao so zníženým obsahom tuku. Bez pridaného cukru, bez 14 alergénov EÚ, lepok pod 20 ppm."),
+            ("Je vanilínový cukor pravá vanilka?",
+             "Nie. Je to jemne mletý cukor s vanilínovou arómou. Hovoríme to rovno v názve."),
+        ]),
+        ("Balenie a skladovanie", [
+            ("Koľko porcií je z 5 kg knedieľ?",
+             "Zhruba 60–70 porcií prílohy. Jedno vrece vystačí na sezónu nedeľných obedov."),
+            ("Koľko pudingu dať namiesto vrecúška z obchodu?",
+             "Bežné vrecúško je zhruba 40 g na 500 ml mlieka. Z kila uvaríte asi 25 pudingov."),
+            ("Ako zmesi skladovať?",
+             "V suchu a zatvorené. Kakao mimo silných pachov, ideálne pri 15–20 °C."),
+        ]),
     ],
 }
 
 # B2B only — wholesale pages. Keep kitchens off D2C FAQs.
 B2B_FAQ = {
     "cs": [
-        ("Dodáváte restauracím, jídelnám a cukrárnám?",
-         "Ano. Restauracím, pekárnám, kavárnám, školám i výrobcům zmrzliny. Značky zákazníků nejmenujeme. Cenu podle množství domluvíme."),
-        ("Jak provozovna objedná?",
-         "Samostatným velkoobchodním formulářem na stránce Velkoobchod, nebo na +420 728 466 141 a +420 607 629 931."),
-        ("Zveřejňujete velkoobchodní ceník?",
-         "Ne. Cenu podle množství domluvíme. Mezinárodní sazby na webu nejsou."),
         ("Jaká je minimální objednávka v Praze?",
          "Do Prahy bereme smíšenou objednávku od 25 kg. Cenu podle množství řekneme po telefonu nebo e-mailu."),
-        ("Je rozvoz do Brna zdarma?",
-         "Do Brna je rozvoz zdarma od objednávky nad 5000 Kč, po domluvě termínu. Pod touto částkou dopravu naceníme, nebo pošlete vlastního dopravce."),
         ("Můžu poslat vlastního dopravce?",
          "Ano. Často to vyjde levněji než náš rozvoz mimo bezplatné zóny."),
     ],
     "en": [
-        ("Do you supply restaurants, canteens and pastry shops?",
-         "Yes. Restaurants, bakeries, cafés, schools and ice-cream makers. We do not name customer brands. Quantity prices are agreed case by case."),
-        ("How does a kitchen order?",
-         "The separate wholesale form on the Wholesale page, or +420 728 466 141 and +420 607 629 931."),
-        ("Do you publish wholesale rates?",
-         "No. We agree the price by quantity. International rates are not on the site."),
         ("What is the Prague minimum?",
          "A mixed order from 25 kg. We quote the quantity price by phone or e-mail."),
-        ("Is delivery to Brno free?",
-         "Delivery to Brno is free for orders over 5000 CZK, by arrangement. Below that we quote freight, or you send your own courier."),
         ("Can I send my own courier?",
          "Yes. That is often cheaper than our delivery outside the free zones."),
     ],
     "de": [
-        ("Liefern Sie an Restaurants, Kantinen und Konditoreien?",
-         "Ja. Restaurants, Bäckereien, Cafés, Schulen und Speiseeishersteller. Kundennamen nennen wir nicht. Mengenpreise vereinbaren wir."),
-        ("Wie bestellt ein Betrieb?",
-         "Über das separate Großhandelsformular auf der Großhandelsseite oder unter +420 728 466 141 und +420 607 629 931."),
-        ("Veröffentlichen Sie Großhandelspreise?",
-         "Nein. Den Preis vereinbaren wir nach Menge. Internationale Sätze stehen nicht auf der Website."),
         ("Was ist das Prager Minimum?",
          "Eine gemischte Bestellung ab 25 kg. Den Mengenpreis nennen wir telefonisch oder per E-Mail."),
-        ("Ist die Lieferung nach Brünn kostenlos?",
-         "Nach Brünn ist die Lieferung ab Bestellungen über 5000 Kč kostenlos, nach Terminabsprache. Darunter nennen wir die Fracht, oder Sie schicken einen eigenen Kurier."),
         ("Kann ich einen eigenen Kurier schicken?",
          "Ja. Das ist oft günstiger als unsere Lieferung außerhalb der Gratiszonen."),
     ],
     "sk": [
-        ("Dodávate reštauráciám, jedálňam a cukrárňam?",
-         "Áno. Reštauráciám, pekárňam, kaviarňam, školám aj výrobcom zmrzliny. Značky zákazníkov nemenujeme. Cenu podľa množstva dohodneme."),
-        ("Ako prevádzka objedná?",
-         "Samostatným veľkoobchodným formulárom na stránke Veľkoobchod, alebo na +420 728 466 141 a +420 607 629 931."),
-        ("Zverejňujete veľkoobchodný cenník?",
-         "Nie. Cenu podľa množstva dohodneme. Medzinárodné sadzby na webe nie sú."),
         ("Aká je minimálna objednávka v Prahe?",
          "Do Prahy berieme zmiešanú objednávku od 25 kg. Cenu podľa množstva povieme po telefóne alebo e-maile."),
-        ("Je rozvoz do Brna zadarmo?",
-         "Do Brna je rozvoz zadarmo od objednávky nad 5000 Kč, po dohode termínu. Pod touto sumou dopravu naceníme, alebo pošlete vlastného dopravcu."),
         ("Môžem poslať vlastného dopravcu?",
          "Áno. Často to vyjde lacnejšie než náš rozvoz mimo bezplatných zón."),
     ],
@@ -478,17 +520,19 @@ RECIPE_FAQ = {
 
 
 def site_faq(lang):
-    items = SITE_FAQ.get(lang) or SITE_FAQ["cs"]
-    return [(q, a) for q, a in items]
+    """Grouped FAQ page content: [(heading, [(q, a), ...]), ...]."""
+    groups = SITE_FAQ.get(lang) or SITE_FAQ["cs"]
+    return [(h, list(qas)) for h, qas in groups]
 
 
 def b2b_faq(lang):
-    items = B2B_FAQ.get(lang) or B2B_FAQ["cs"]
-    return [(q, a) for q, a in items]
-
-
-def home_faq(lang):
-    return site_faq(lang)[:HOME_COUNT]
+    items = list(B2B_FAQ.get(lang) or B2B_FAQ["cs"])
+    seen = {q for q, _a in items}
+    for q, a in b2b_cocoa_faq(lang):
+        if q not in seen:
+            items.append((q, a))
+            seen.add(q)
+    return items
 
 
 def recipe_faq(lang, slug):

@@ -3,6 +3,7 @@ FROM nginx:1.27-alpine
 RUN apk add --no-cache python3
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY redirects.conf /etc/nginx/juzlova-redirects.conf
 COPY . /usr/share/nginx/html/
 COPY server/ /opt/juzlova-api/
 COPY data/ratings-seed.json /opt/juzlova-api/ratings-seed.json

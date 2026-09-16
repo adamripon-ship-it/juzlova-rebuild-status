@@ -19,7 +19,8 @@ def main() -> int:
     missing: set[str] = set()
     pages = 0
     for path in ROOT.rglob("index.html"):
-        if "archive" in path.parts or ".git" in path.parts:
+        skip = {"archive", ".git", ".carbon", "node_modules", "juzlova.cz-audit", ".venv"}
+        if skip & set(path.parts):
             continue
         pages += 1
         text = path.read_text(encoding="utf-8")

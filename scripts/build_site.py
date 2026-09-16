@@ -26,12 +26,12 @@ if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 from aeo_pages import (
     AEO_PAGE_KEYS, AEO_PAGES, B2B_SLUGS, GEO_SLUGS, TOPIC_KEYS,
-    apply_aeo_ui, merge_product_faq, page_faq,
+    apply_aeo_ui, page_faq,
 )
 from cocoa_blocks import (
     cocoa_apps_html, cocoa_facts_html, cocoa_nutrition_html, cocoa_sensory_html,
 )
-from geo_faq import b2b_faq, home_faq, recipe_faq, site_faq
+from geo_faq import b2b_faq, recipe_faq, site_faq
 from reviews_data import load_reviews, stars_html
 from seo_data import (
     CUISINE, PRODUCT_PRIORITY, RECIPE_CATEGORY, RECIPE_PRIORITY, RECIPE_TIMES,
@@ -59,26 +59,138 @@ def _load_dotenv():
 
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
-TODAY = "2026-09-03"
-ASSET_VER = "20260906a"
+TODAY = "2026-09-16"
+ASSET_VER = "20260916a"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
+# hreflang codes per language directory. German serves DE and AT from one URL.
+HREFLANG_CODES = [("cs", "cs-CZ"), ("sk", "sk-SK"), ("de", "de-DE"), ("de", "de-AT"), ("en", "en")]
+# Product keys (stable ids). Output slugs are per language, see SLUGS below.
 PRODUCT_SLUGS = {
-    "bramborove_knedliky": "bramborove_knedliky",
-    "chlupate_knedliky": "chlupate-knedliky",
-    "vanilkovy_pudink": "vanilkovy_pudink",
+    "bramborove_knedliky": "bramborove-knedliky-v-prasku",
+    "chlupate_knedliky": "chlupate-knedliky-v-prasku",
+    "vanilkovy_pudink": "vanilkovy-puding-bez-lepku",
     "kakao_holandskeho_typu": "kakao-holandskeho-typu",
-    "vanilkovy_cukr": "vanilkovy-cukr",
+    "vanilkovy_cukr": "vanilinovy-cukr",
 }
 PAGE_SLUGS = {
-    "kdo_jsme": "kdo_jsme",
+    "kdo_jsme": "kdo-jsme",
     "kde_nas_najdete": "kde-nas-najdete",
     "velkoobchod": "velkoobchod",
-    "do_eu": "do-eu",
+    "do_eu": "zasilky-do-eu",
     "kontakt": "kontakt",
-    "ceny": "ceny",
+    "ceny": "cenik",
 }
+# Translated slugs: exact keyword translations, hyphens only, no brand names.
+# Keys are stable page ids; recipe ids are the historical Czech slugs.
+SLUGS = {
+    "cs": {
+        "home": "", "recepty": "recepty", "faq": "caste-dotazy",
+        **PAGE_SLUGS, **PRODUCT_SLUGS,
+        "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "bebe-rezy-s-cokoladovym-pudinkem-recept",
+        "domaci-pernik-recept-podle-jirina-juzlova": "hrnickovy-pernik-recept",
+        "bramborovo-tvarohove-knedliky-s-jahodami": "tvarohove-knedliky-s-jahodami-recept",
+    },
+    "en": {
+        "home": "", "recepty": "recipes", "faq": "faq",
+        "kdo_jsme": "about-us", "kde_nas_najdete": "where-to-find-us",
+        "velkoobchod": "wholesale", "do_eu": "shipping-to-eu",
+        "kontakt": "contact", "ceny": "prices",
+        "bramborove_knedliky": "potato-dumpling-mix",
+        "chlupate_knedliky": "hairy-potato-dumpling-mix",
+        "vanilkovy_pudink": "gluten-free-vanilla-pudding-powder",
+        "kakao_holandskeho_typu": "dutch-process-cocoa-powder",
+        "vanilkovy_cukr": "vanilla-sugar",
+        "sisky-s-makem-recept": "poppy-seed-potato-rolls",
+        "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "pear-cake-with-vanilla-pudding",
+        "strapacky-se-zelim-a-slaninou-recept": "strapacky-cabbage-and-bacon",
+        "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "no-bake-biscuit-pudding-slices",
+        "slehackova-rolada-recept": "whipped-cream-roulade",
+        "domaci-pernik-recept-podle-jirina-juzlova": "cup-measure-gingerbread",
+        "bramborovo-tvarohove-knedliky-s-jahodami": "strawberry-curd-dumplings",
+        "rychle-venecky-ci-vetrnicky-recept": "quick-choux-rings-and-puffs",
+        "venecky-s-vanilkovym-kremem-recept": "choux-rings-with-vanilla-cream",
+        "kremrole-recept": "cream-horns",
+        "minivetrnicky-recept": "mini-cream-puffs",
+        "karamelove-vetrniky-recept": "caramel-cream-puffs",
+        "irsky-sticky-toffee-pudding-recept": "sticky-toffee-pudding",
+    },
+    "de": {
+        "home": "", "recepty": "rezepte", "faq": "haeufige-fragen",
+        "kdo_jsme": "ueber-uns", "kde_nas_najdete": "anfahrt",
+        "velkoobchod": "grosshandel", "do_eu": "versand-in-die-eu",
+        "kontakt": "kontakt", "ceny": "preisliste",
+        "bramborove_knedliky": "kartoffelknoedel-mischung",
+        "chlupate_knedliky": "rohe-kartoffelknoedel-mischung",
+        "vanilkovy_pudink": "glutenfreies-vanillepuddingpulver",
+        "kakao_holandskeho_typu": "kakaopulver-hollaendischer-art",
+        "vanilkovy_cukr": "vanillinzucker",
+        "sisky-s-makem-recept": "mohnnudeln-aus-kartoffelteig",
+        "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "birnenkuchen-mit-vanillepudding",
+        "strapacky-se-zelim-a-slaninou-recept": "strapacky-mit-kraut-und-speck",
+        "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "keksschnitten-mit-schokopudding",
+        "slehackova-rolada-recept": "sahnerolle",
+        "domaci-pernik-recept-podle-jirina-juzlova": "tassen-lebkuchen",
+        "bramborovo-tvarohove-knedliky-s-jahodami": "topfenknoedel-mit-erdbeeren",
+        "rychle-venecky-ci-vetrnicky-recept": "schnelle-brandteigkraenze",
+        "venecky-s-vanilkovym-kremem-recept": "brandteigkraenze-mit-vanillecreme",
+        "kremrole-recept": "schaumrollen",
+        "minivetrnicky-recept": "mini-windbeutel",
+        "karamelove-vetrniky-recept": "karamell-windbeutel",
+        "irsky-sticky-toffee-pudding-recept": "sticky-toffee-pudding",
+    },
+    "sk": {
+        "home": "", "recepty": "recepty", "faq": "caste-otazky",
+        "kdo_jsme": "kto-sme", "kde_nas_najdete": "kde-nas-najdete",
+        "velkoobchod": "velkoobchod", "do_eu": "zasielky-do-eu",
+        "kontakt": "kontakt", "ceny": "cennik",
+        "bramborove_knedliky": "zemiakove-knedle-v-prasku",
+        "chlupate_knedliky": "chlpate-knedle-v-prasku",
+        "vanilkovy_pudink": "vanilkovy-puding-bez-lepku",
+        "kakao_holandskeho_typu": "kakao-holandskeho-typu",
+        "vanilkovy_cukr": "vanilinovy-cukor",
+        "sisky-s-makem-recept": "sulance-s-makom",
+        "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac-s-vanilkovym-pudingom",
+        "strapacky-se-zelim-a-slaninou-recept": "strapacky-s-kapustou-a-slaninou",
+        "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem": "bebe-rezy-s-cokoladovym-pudingom",
+        "slehackova-rolada-recept": "slahackova-rolada",
+        "domaci-pernik-recept-podle-jirina-juzlova": "hrncekovy-pernik",
+        "bramborovo-tvarohove-knedliky-s-jahodami": "tvarohove-knedle-s-jahodami",
+        "rychle-venecky-ci-vetrnicky-recept": "rychle-venceky-a-veterniky",
+        "venecky-s-vanilkovym-kremem-recept": "venceky-s-vanilkovym-kremom",
+        "kremrole-recept": "kremrole",
+        "minivetrnicky-recept": "mini-veterniky",
+        "karamelove-vetrniky-recept": "karamelove-veterniky",
+        "irsky-sticky-toffee-pudding-recept": "sticky-toffee-pudding",
+    },
+}
+
+
+def slug_of(lang, pid):
+    """Output slug for a page id in a language. Recipe ids default to themselves."""
+    table = SLUGS[lang]
+    if pid in table:
+        return table[pid]
+    if pid in GEO_SLUGS:
+        return GEO_SLUGS[pid]
+    if pid in B2B_SLUGS:
+        return B2B_SLUGS[pid]
+    return pid
+
+
+def path_of(lang, pid):
+    s = slug_of(lang, pid)
+    return f"{s}/" if s else ""
+
+
+def url_of(lang, pid):
+    return url_for(lang, path_of(lang, pid))
+
+
+def is_local_page(pid):
+    """Czech-only local landing pages: no translations, no hreflang set."""
+    return pid in GEO_SLUGS or pid in B2B_SLUGS
 RECIPE_SLUGS = [
     "sisky-s-makem-recept",
     "hruskovy-kolac-s-vanilkovym-pudinkem-recept",
@@ -165,8 +277,6 @@ PRICE_ROWS = [  # (product key, package, price CZK)
     ("kakao_holandskeho_typu", "500 g", "270 Kč"),
     ("vanilkovy_cukr", "1 kg", "60 Kč"),
 ]
-# General averaged supermarket estimate for same quantity / higher quality.
-SUPERMARKET_PRICE_FACTOR = 4
 
 
 def price_amounts_czk(price_str):
@@ -178,19 +288,15 @@ def format_czk_parts(amounts):
 
 
 def price_board_html(L, depth):
-    """Visual pick-up prices + averaged supermarket comparison (~4×)."""
+    """Pick-up price tiles plus a unit-price table (per kg, per portion)."""
     ui = L["ui"]
     pages = page_rel(L["code"], depth)
     tiles = []
-    compares = []
+    rows = []
     for i, (key, pack, price) in enumerate(PRICE_ROWS):
-        name = L["products"][key]["name"]
-        href = f"{pages}{PRODUCT_SLUGS[key]}/"
-        amounts = price_amounts_czk(price)
-        shop_amounts = [n * SUPERMARKET_PRICE_FACTOR for n in amounts]
-        save_amounts = [s - u for u, s in zip(amounts, shop_amounts)]
-        shop_label = format_czk_parts(shop_amounts)
-        save_label = format_czk_parts(save_amounts)
+        pr = L["products"][key]
+        name = pr["name"]
+        href = f"{pages}{slug_of(L['code'], key)}/"
         tiles.append(
             f"""<article class="price-tile" style="--i:{i}">
 <a class="price-tile-link" href="{href}" aria-label="{esc(name)} — {esc(price)}">
@@ -201,50 +307,55 @@ def price_board_html(L, depth):
 </a>
 </article>"""
         )
-        # Bar widths: workshop = 25% (1/4), supermarket = 100%
-        compares.append(
-            f"""<div class="compare-row" style="--i:{i}">
-<div class="compare-meta">
-<a class="compare-name" href="{href}">{esc(name)}</a>
-<span class="compare-pack">{esc(pack)}</span>
-</div>
-<div class="compare-bars" role="img" aria-label="{esc(ui.get('compare_us', 'Workshop'))}: {esc(price)}; {esc(ui.get('compare_shop', 'Supermarket'))}: {esc(shop_label)}">
-<div class="compare-bar compare-bar--us" style="--w:25%">
-<span class="compare-bar-label">{esc(ui.get('compare_us', 'Workshop'))}</span>
-<span class="compare-bar-val">{esc(price)}</span>
-</div>
-<div class="compare-bar compare-bar--shop" style="--w:100%">
-<span class="compare-bar-label">{esc(ui.get('compare_shop', 'Supermarket'))}</span>
-<span class="compare-bar-val">≈ {esc(shop_label)}</span>
-</div>
-</div>
-<p class="compare-save">{esc(ui.get('compare_factor', 'About 4×'))} · {esc(ui.get('compare_keep', 'you keep roughly'))} {esc(save_label)}</p>
-</div>"""
+        rows.append(
+            f'<tr><td><a href="{href}">{esc(name)}</a></td><td>{esc(pack)}</td>'
+            f'<td>{esc(price)}</td><td>{esc(pr.get("per_unit", ""))}</td></tr>'
         )
     board = (
         f'<div class="price-board" aria-label="{esc(ui.get("price_board_label", ui["price_label"]))}">'
         + "".join(tiles)
         + "</div>"
     )
-    compare = (
-        f'<section class="price-compare" aria-labelledby="price-compare-h">'
-        f'<p class="kicker">{esc(ui.get("compare_kicker", ""))}</p>'
-        f'<h2 id="price-compare-h">{esc(ui.get("compare_h2", "Comparing price with supermarket?"))}</h2>'
-        f'<p class="lead">{esc(ui.get("compare_lead", ""))}</p>'
-        f'<div class="compare-list">{"".join(compares)}</div>'
-        f'<p class="compare-note">{esc(ui.get("compare_note", ""))}</p>'
-        f"</section>"
+    table = (
+        f'<h2>{esc(ui.get("unit_h2", ""))}</h2>'
+        f'<div class="tbl-wrap"><table class="tbl price-units"><thead><tr>'
+        f'<th>{esc(ui.get("unit_col_product", ""))}</th><th>{esc(ui["package_label"])}</th>'
+        f'<th>{esc(ui["price_label"])}</th><th>{esc(ui.get("unit_col_unit", ""))}</th>'
+        f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+        f'<p class="price-note">{esc(ui.get("unit_note", ""))}</p>'
     )
-    return board + compare
+    return board + table
+
+
+# Old paths (any language directory) -> page id. Resolved to the new localized
+# URL of the same language. Covers the WordPress era, the 2026 rebuild slugs and
+# the Czech-slug foreign pages that existed before translated slugs.
 LEGACY_REDIRECTS = {
-    "kakao": "kakao-holandskeho-typu", "kakaovy_puding": "vanilkovy_pudink",
-    "kakaovy_pudink": "vanilkovy_pudink",
-    "vanilkovy_puding": "vanilkovy_pudink", "jiri-juzl": "kontakt",
-    "jirina-juzlova": "kontakt", "jirina-juzlova-praha": "kontakt",
-    "dotaz-na-produkty": "kontakt", "kdo-jsme": "kdo_jsme",
+    "kakao": "kakao_holandskeho_typu", "kakaovy_puding": "vanilkovy_pudink",
+    "kakaovy_pudink": "vanilkovy_pudink", "vanilkovy_puding": "vanilkovy_pudink",
+    "vanilkovy_pudink": "vanilkovy_pudink", "vanilkovy-cukr": "vanilkovy_cukr",
+    "bramborove_knedliky": "bramborove_knedliky", "chlupate-knedliky": "chlupate_knedliky",
+    "kakao-holandskeho-typu": "kakao_holandskeho_typu",
+    "jiri-juzl": "kontakt", "jirina-juzlova": "kontakt", "jirina-juzlova-praha": "kontakt",
+    "dotaz-na-produkty": "kontakt", "kdo-jsme": "kdo_jsme", "kdo_jsme": "kdo_jsme",
     "potravinarske-smesi-kontact-praha-ceske-republiky": "kontakt",
-    "recepty-index": "recepty",
+    "recepty-index": "recepty", "recepty": "recepty", "faq": "faq",
+    "ceny": "ceny", "do-eu": "do_eu", "kde-nas-najdete": "kde_nas_najdete",
+    "velkoobchod": "velkoobchod", "kontakt": "kontakt",
+    "objednavka-cesko": "objednavka_cesko", "navstevnikum": "navstevnikum",
+    "vysocina": "vysocina", "havlickuv-brod": "havlickuv_brod", "humpolec": "humpolec",
+    "kochanov": "kochanov",
+    "velkoobchod-vysocina": "velkoobchod_vysocina", "velkoobchod-kochanov": "velkoobchod_kochanov",
+    "velkoobchod-praha": "velkoobchod_praha", "velkoobchod-brno": "velkoobchod_brno",
+    "velkoobchod-zahranici": "velkoobchod_zahranici",
 }
+# Local pages exist only in Czech; foreign visitors of the old copies land here.
+LOCAL_FALLBACK = {"objednavka_cesko": "kontakt", "navstevnikum": "kde_nas_najdete",
+                  "vysocina": "kde_nas_najdete", "havlickuv_brod": "kde_nas_najdete",
+                  "humpolec": "kde_nas_najdete", "kochanov": "kde_nas_najdete",
+                  "velkoobchod_vysocina": "velkoobchod", "velkoobchod_kochanov": "velkoobchod",
+                  "velkoobchod_praha": "velkoobchod", "velkoobchod_brno": "velkoobchod",
+                  "velkoobchod_zahranici": "velkoobchod"}
 
 
 def load(lang):
@@ -390,6 +501,13 @@ def reviews_html(L, depth=0):
         rating = data["rating"]
         count = data["count"]
         url = data["url"]
+        # Stars only from a live profile with enough reviews; otherwise a plain link.
+        show = bool(data.get("live")) and int(count or 0) >= 5
+        if not show:
+            return f"""<a class="reviews-card reviews-card--{key} reviews-card--link" href="{esc(url)}" rel="noopener noreferrer" target="_blank">
+<span class="reviews-brand">{esc(brand)}</span>
+<span class="reviews-cta">{esc(ui.get('reviews_open', 'Open reviews'))} →</span>
+</a>"""
         rating_lbl = ui.get("reviews_rating_of", "{rating} / 5").format(rating=rating)
         count_lbl = ui.get("reviews_count", "{n} reviews").format(n=count)
         score = str(rating).replace(".", ",")
@@ -409,7 +527,6 @@ def reviews_html(L, depth=0):
 {card('google', g, ui.get('reviews_google', 'Google'))}
 {card('seznam', s, ui.get('reviews_seznam', 'Seznam'))}
 </div>
-<p class="reviews-note">{esc(ui.get('reviews_note', ''))}</p>
 </section>"""
 
 
@@ -441,7 +558,6 @@ def team_html(L, depth=0):
 <h2 id="team-h">{esc(ui.get('team_h2', 'The family'))}</h2>
 <p class="lead">{esc(ui.get('team_lead', ''))}</p>
 <div class="team-grid">{"".join(cards)}</div>
-<p class="team-note">{esc(ui.get('team_photo_note', ''))}</p>
 </section>"""
 
 
@@ -466,7 +582,6 @@ def b2b_showcase_html(L, depth=0):
     )
     return f"""<div class="b2b-showcase">
 <div class="b2b-tiles">{cards}</div>
-<p class="b2b-brno-callout">{esc(ui.get('b2b_brno_free', ''))}</p>
 <div class="b2b-chip-row" aria-label="{esc(ui.get('b2b_hub', 'Wholesale by place'))}">{links}</div>
 </div>"""
 
@@ -590,28 +705,32 @@ def page_rel(lang, depth):
     return rel(max(depth - extra, 0))
 
 
-def lang_href(other, path, depth):
-    """Relative language-switcher URL (works on file:// and preview hosts)."""
+def lang_href(other, pid, depth):
+    """Relative language-switcher URL (works on file:// and preview hosts).
+
+    Czech-only local pages send other languages to their home page.
+    """
     root = asset_rel(depth)
+    path = path_of("cs", "home") if (is_local_page(pid) and other != "cs") else path_of(other, pid)
     if other == "cs":
         return (root if root else "./") + path
     return root + other + "/" + path
 
 
-def hreflangs(path):
+def hreflangs(pid):
+    """Full-mesh hreflang set. Local (Czech-only) pages carry no set at all."""
+    if is_local_page(pid):
+        return ""
     out = []
-    for lg in LANGS:
-        out.append(f'<link rel="alternate" hreflang="{lg}" href="{url_for(lg, path)}">')
-    out.append(f'<link rel="alternate" hreflang="x-default" href="{url_for("cs", path)}">')
+    for lg, code in HREFLANG_CODES:
+        out.append(f'<link rel="alternate" hreflang="{code}" href="{url_of(lg, pid)}">')
+    out.append(f'<link rel="alternate" hreflang="x-default" href="{url_of("cs", pid)}">')
     return "\n".join(out)
 
 
-def lang_switcher_html(L, path, depth):
+def lang_switcher_html(L, pid, depth):
     ui = L["ui"]
     lg = L["code"]
-    tip = ui.get("de_tooltip") or ""
-    more_label = ui.get("lang_more") or "More"
-    other_note = ui.get("lang_other") or ""
     names = {
         "cs": ui.get("lang_cs") or "Čeština",
         "en": ui.get("lang_en") or "English",
@@ -620,43 +739,22 @@ def lang_switcher_html(L, path, depth):
     }
     flags = {"cs": FLAG_CZ, "en": FLAG_IE, "de": FLAG_DE, "sk": FLAG_SK}
 
-    def chip(other, extra_class=""):
+    def chip(other):
         on = " on" if other == lg else ""
-        href = lang_href(other, path, depth)
-        if other == "de":
-            return (
-                f'<a class="lang-opt lang-de is-dim{on}{extra_class}" lang="de" hreflang="de" '
-                f'href="{href}" aria-label="{esc(names["de"])}. {esc(tip)}" '
-                f'title="{esc(tip)}" data-de-tip>'
-                f'{FLAG_DE}<span class="lang-code">DE</span>'
-                f'<span class="lang-de-bubble" role="tooltip">{esc(tip)}</span></a>'
-            )
+        href = lang_href(other, pid, depth)
         return (
-            f'<a class="lang-opt{on}{extra_class}" lang="{other}" hreflang="{other}" '
+            f'<a class="lang-opt{on}" lang="{other}" hreflang="{other}" '
             f'href="{href}" aria-label="{esc(names[other])}">'
             f'{flags[other]}<span class="lang-code">{other.upper()}</span></a>'
         )
 
-    primary = chip("cs") + chip("en") + chip("de")
-    extra = (
-        f'{chip("sk")}'
-        f'<p class="lang-other">{esc(other_note)}</p>'
-    )
-    return f"""<div class="langs" data-langs>
-  <div class="lang-primary" role="group" aria-label="{esc(ui['lang_label'])}">{primary}</div>
-  <div class="lang-more">
-    <button type="button" class="lang-more-btn" aria-expanded="false" aria-controls="lang-more-panel" data-lang-more>
-      {ICON_GLOBE}<span class="lang-code">+</span><span class="visually-hidden">{esc(more_label)}</span>
-    </button>
-    <div class="lang-more-panel" id="lang-more-panel" hidden data-lang-panel>
-      <p class="lang-more-label">{esc(more_label)}</p>
-      {extra}
-    </div>
-  </div>
+    chips = "".join(chip(o) for o in LANGS)
+    return f"""<div class="langs">
+  <div class="lang-primary" role="group" aria-label="{esc(ui['lang_label'])}">{chips}</div>
 </div>"""
 
 
-def nav(L, depth, active, path):
+def nav(L, depth, active, pid):
     """Return (header_inner_html, backdrop_html).
 
     Header keeps logo + toggle + nav. Backdrop is a body sibling.
@@ -668,14 +766,17 @@ def nav(L, depth, active, path):
     ui = L["ui"]
     home = pages if pages else "./"
 
-    def a(slug, label, key):
+    lg = L["code"]
+
+    def a(key, label):
         cls = ' class="active"' if active == key else ""
-        href = home if slug == "" else f"{pages}{slug}"
+        p = path_of(lg, key)
+        href = home if p == "" else f"{pages}{p}"
         return f'<a href="{href}"{cls}>{esc(label)}</a>'
     prods = "".join(
-        f'<a href="{pages}{PRODUCT_SLUGS[k]}/">{esc(L["products"][k]["name"])}</a>'
+        f'<a href="{pages}{slug_of(lg, k)}/">{esc(L["products"][k]["name"])}</a>'
         for k in PRODUCT_SLUGS)
-    langsel = lang_switcher_html(L, path, depth)
+    langsel = lang_switcher_html(L, pid, depth)
     header_inner = f"""<div class="bar">
   <a class="brand" href="{home}" aria-label="Jůzlová.cz">
     <img class="wordmark on-light" src="{assets}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200">
@@ -686,18 +787,16 @@ def nav(L, depth, active, path):
   </button>
 </div>
 <nav class="main" id="site-nav" aria-label="{esc(ui['nav_aria'])}">
-  {a('', ui['nav_home'], 'home')}
-  {a('kdo_jsme/', ui['nav_about'], 'kdo_jsme')}
-  {a('kde-nas-najdete/', ui['nav_delivery'], 'kde_nas_najdete')}
-  {a('velkoobchod/', ui['nav_b2b'], 'velkoobchod')}
+  {a('home', ui['nav_home'])}
   <span class="navgroup">
     <button type="button" class="nav-products" aria-expanded="false" aria-controls="nav-products-list">{esc(ui['nav_products'])} ▾</button>
     <span class="drop" id="nav-products-list">{prods}</span>
   </span>
-  {a('ceny/', ui['nav_prices'], 'ceny')}
-  {a('recepty/', ui['nav_recipes'], 'recepty')}
-  {a('faq/', ui['nav_faq'], 'faq')}
-  {a('kontakt/', ui['nav_contact'], 'kontakt')}
+  {a('ceny', ui['nav_prices'])}
+  {a('recepty', ui['nav_recipes'])}
+  {a('velkoobchod', ui['nav_b2b'])}
+  {a('do_eu', ui['nav_d2c'])}
+  {a('kontakt', ui['nav_contact'])}
   {langsel}
 </nav>"""
     backdrop = '<div class="nav-backdrop" hidden></div>'
@@ -708,12 +807,21 @@ def footer(L, depth):
     assets = asset_rel(depth)
     pages = page_rel(L["code"], depth)
     ui = L["ui"]
+    lg = L["code"]
     prods = "".join(
-        f'<a href="{pages}{PRODUCT_SLUGS[k]}/">{esc(L["products"][k]["name"])}</a>'
+        f'<a href="{pages}{slug_of(lg, k)}/">{esc(L["products"][k]["name"])}</a>'
         for k in PRODUCT_SLUGS)
     recs = "".join(
-        f'<a href="{pages}{slug}/">{esc(L["recipes"].get(slug, {}).get("name", slug))}</a>'
+        f'<a href="{pages}{slug_of(lg, slug)}/">{esc(L["recipes"].get(slug, {}).get("name", slug))}</a>'
         for slug in RECIPE_SLUGS)
+    local = ""
+    if lg == "cs":
+        geo = "".join(
+            f'<a href="{pages}{GEO_SLUGS[k]}/">{esc(AEO_PAGES["cs"][k]["h1"])}</a>' for k in GEO_SLUGS)
+        b2b = "".join(
+            f'<a href="{pages}{B2B_SLUGS[k]}/">{esc(AEO_PAGES["cs"][k]["h1"])}</a>' for k in B2B_SLUGS)
+        local = (f"<h4>{esc(ui.get('geo_hub') or '')}</h4>{geo}"
+                 f"<h4>{esc(ui.get('b2b_hub') or '')}</h4>{b2b}")
     return f"""<footer class="site">
   <img class="footmark" src="{assets}img/mark-white.png" alt="" aria-hidden="true" width="640" height="640">
   <div class="wrap">
@@ -726,26 +834,14 @@ def footer(L, depth):
       <div><h4>{esc(ui['footer_products'])}</h4>{prods}</div>
       <div><h4>{esc(ui['footer_recipes'])}</h4>{recs}</div>
       <div><h4>{esc(ui['footer_company'])}</h4>
-        <a href="{pages}kdo_jsme/">{esc(ui['nav_about'])}</a>
-        <a href="{pages}kde-nas-najdete/">{esc(ui['nav_delivery'])}</a>
-        <a href="{pages}velkoobchod/">{esc(ui['nav_b2b'])}</a>
-        <a href="{pages}do-eu/">{esc(ui['nav_d2c'])}</a>
-        <a href="{pages}ceny/">{esc(ui['nav_prices'])}</a>
-        <a href="{pages}faq/">{esc(ui['nav_faq'])}</a>
-        <a href="{pages}kontakt/">{esc(ui['nav_contact'])}</a>
-        <h4>{esc(ui.get('geo_hub') or '')}</h4>
-        <a href="{pages}objednavka-cesko/">{esc(AEO_PAGES[L['code']]['objednavka_cesko']['h1'])}</a>
-        <a href="{pages}vysocina/">{esc(AEO_PAGES[L['code']]['vysocina']['h1'])}</a>
-        <a href="{pages}havlickuv-brod/">{esc(AEO_PAGES[L['code']]['havlickuv_brod']['h1'])}</a>
-        <a href="{pages}humpolec/">{esc(AEO_PAGES[L['code']]['humpolec']['h1'])}</a>
-        <a href="{pages}kochanov/">{esc(AEO_PAGES[L['code']]['kochanov']['h1'])}</a>
-        <a href="{pages}navstevnikum/">{esc(AEO_PAGES[L['code']]['navstevnikum']['h1'])}</a>
-        <h4>{esc(ui.get('b2b_hub') or '')}</h4>
-        <a href="{pages}velkoobchod-vysocina/">{esc(AEO_PAGES[L['code']]['velkoobchod_vysocina']['h1'])}</a>
-        <a href="{pages}velkoobchod-kochanov/">{esc(AEO_PAGES[L['code']]['velkoobchod_kochanov']['h1'])}</a>
-        <a href="{pages}velkoobchod-praha/">{esc(AEO_PAGES[L['code']]['velkoobchod_praha']['h1'])}</a>
-        <a href="{pages}velkoobchod-brno/">{esc(AEO_PAGES[L['code']]['velkoobchod_brno']['h1'])}</a>
-        <a href="{pages}velkoobchod-zahranici/">{esc(AEO_PAGES[L['code']]['velkoobchod_zahranici']['h1'])}</a>
+        <a href="{pages}{path_of(lg, 'kdo_jsme')}">{esc(ui['nav_about'])}</a>
+        <a href="{pages}{path_of(lg, 'kde_nas_najdete')}">{esc(ui['nav_delivery'])}</a>
+        <a href="{pages}{path_of(lg, 'velkoobchod')}">{esc(ui['nav_b2b'])}</a>
+        <a href="{pages}{path_of(lg, 'do_eu')}">{esc(ui['nav_d2c'])}</a>
+        <a href="{pages}{path_of(lg, 'ceny')}">{esc(ui['nav_prices'])}</a>
+        <a href="{pages}{path_of(lg, 'faq')}">{esc(ui['nav_faq'])}</a>
+        <a href="{pages}{path_of(lg, 'kontakt')}">{esc(ui['nav_contact'])}</a>
+        {local}
       </div>
     </div>
     <div class="fine"><span>© 2004–2026 Jůzlová s.r.o. · IČO 45900124 · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span><span>{esc(ui['open_hours'])}</span></div>
@@ -859,7 +955,7 @@ def org_jsonld():
                     },
                     "priceCurrency": "CZK",
                     "price": price.split()[0] if price.split() else price,
-                    "url": url_for("cs", PRODUCT_SLUGS[key] + "/"),
+                    "url": url_of("cs", key),
                 }
                 for key, name, price in (
                     ("bramborove_knedliky", "Bramborové knedlíky v prášku", "250"),
@@ -979,9 +1075,10 @@ def people_jsonld():
     ]
 
 
-def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None, body_class="", keywords="", meta_kind="home", meta_key="", extra_head=""):
+def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None, body_class="", keywords="", meta_kind="home", meta_key="", extra_head=""):
     lg = L["code"]
     title, desc = compose_meta(lg, meta_kind, meta_key, title, desc)
+    path = path_of(lg, pid)
     canonical = url_for(lg, path)
     blocks = [org_jsonld(), website_jsonld(), webpage_jsonld(L, path, title, desc)]
     blocks += (jsonld or [])
@@ -997,7 +1094,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
         for code, loc in (("cs", "cs_CZ"), ("en", "en_US"), ("de", "de_DE"), ("sk", "sk_SK"))
         if code != lg
     )
-    header_inner, nav_backdrop = nav(L, depth, active, path)
+    header_inner, nav_backdrop = nav(L, depth, active, pid)
     return f"""<!doctype html>
 <html lang="{lg}">
 <head>
@@ -1006,7 +1103,7 @@ def shell(L, *, title, desc, path, depth, active, body, jsonld=None, og_img=None
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 {kw}<link rel="canonical" href="{canonical}">
-{hreflangs(path)}
+{hreflangs(pid)}
 <link rel="describedby" type="text/plain" title="llms.txt" href="{BASE}/llms.txt">
 <link rel="alternate" type="text/plain" title="llms-full.txt" href="{BASE}/llms-full.txt">
 <meta property="og:type" content="website">
@@ -1051,6 +1148,25 @@ def price_note_html(L):
     return f'<p class="price-note">{esc(note)}</p>'
 
 
+TEL_JIRINA = "tel:+420728466141"
+
+
+def cta_html(L, depth, spec=None):
+    """One primary action (call Jiřina) and one optional secondary link.
+
+    spec: None | (primary_label_key, secondary_pid, secondary_label_key)
+    """
+    ui = L["ui"]
+    pages = page_rel(L["code"], depth)
+    primary_key, sec_pid, sec_key = (spec or ("cta_call", None, None))
+    primary = f'<a class="btn gold" href="{TEL_JIRINA}">{esc(ui[primary_key])}</a>'
+    secondary = ""
+    if sec_pid:
+        href = f"{pages}{path_of(L['code'], sec_pid)}" if sec_pid != "home" else (pages or "./")
+        secondary = f'<a class="btn ghost dark" href="{href}">{esc(ui[sec_key])}</a>'
+    return f'<p class="cta-row">{primary}{secondary}</p>'
+
+
 def aeo_slug(key):
     if key in GEO_SLUGS:
         return GEO_SLUGS[key]
@@ -1061,16 +1177,17 @@ def aeo_links_html(L, kind, depth):
     pages = page_rel(L["code"], depth)
     pack = AEO_PAGES.get(L["code"]) or AEO_PAGES["cs"]
     ui = L["ui"]
+    lg = L["code"]
     if kind == "b2b":
         slugs = B2B_SLUGS
         heading = ui.get("b2b_hub") or ""
-        extra = [("velkoobchod/", ui.get("nav_b2b") or "")]
+        extra = [(path_of(lg, "velkoobchod"), ui.get("nav_b2b") or "")]
     else:
         slugs = GEO_SLUGS
         heading = ui.get("geo_hub") or ""
         extra = [
-            ("kde-nas-najdete/", ui.get("nav_delivery") or ""),
-            ("do-eu/", ui.get("nav_d2c") or ""),
+            (path_of(lg, "kde_nas_najdete"), ui.get("nav_delivery") or ""),
+            (path_of(lg, "do_eu"), ui.get("nav_d2c") or ""),
         ]
     items = []
     for key, slug in slugs.items():
@@ -1106,9 +1223,10 @@ def render_body(L, body_spec, depth, product=None):
 </dl></div>""")
         elif kind == "pricetable":
             out.append(price_board_html(L, depth))
-            note = price_note_html(L)
-            if note:
-                out.append(note)
+        elif kind == "cta":
+            out.append(cta_html(L, depth, val))
+        elif kind == "tip":
+            out.append(f'<p class="tip">{esc(val)}</p>')
         elif kind == "links":
             out.append(aeo_links_html(L, val or "geo", depth))
         elif kind == "price_note":
@@ -1201,7 +1319,7 @@ def build_home(L):
         im = product_img_src(depth, k)
         imtag = f'<img class="thumb" src="{im}" alt="{esc(pr["name"])}" loading="lazy">' if im else ""
         prod_cards += f"""<li class="card rv">{imtag}<div class="pad">
-<h3><a href="{pages}{PRODUCT_SLUGS[k]}/">{esc(pr['name'])}</a></h3>
+<h3><a href="{pages}{slug_of(lg, k)}/">{esc(pr['name'])}</a></h3>
 <p>{esc(pr['short'])}</p><p class="price">{esc(pr['price'])}</p></div></li>"""
     rec_slides = ""
     for slug in HOME_RECIPE_SLUGS:
@@ -1214,7 +1332,7 @@ def build_home(L):
             if im else ""
         )
         rec_slides += f"""<li class="recipes-carousel-slide" aria-label="{esc(r['name'])}">
-<a class="card recipes-carousel-card" href="{pages}{slug}/">{imtag}<div class="pad">
+<a class="card recipes-carousel-card" href="{pages}{slug_of(lg, slug)}/">{imtag}<div class="pad">
 <h3>{esc(r['name'])}</h3><p>{esc(r.get('teaser',''))}</p></div></a>
 </li>"""
     rec_carousel = f"""<div class="recipes-carousel" data-recipes-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="{esc(ui['carousel_label'])}" data-status="{esc(ui['carousel_status'])}" data-goto="{esc(ui['carousel_goto'])}">
@@ -1262,8 +1380,8 @@ def build_home(L):
     <h1>{esc(ui['hero_h1'])}</h1>
     <p class="lead">{esc(ui['hero_lead'])}</p>
     <p class="hero-actions">
-      <a class="btn gold" href="#produkty">{esc(ui['hero_cta2'])}</a>
-      <a class="btn ghost" href="{pages}kontakt/">{esc(ui['hero_cta'])}</a>
+      <a class="btn gold" href="{TEL_JIRINA}">{esc(ui['hero_cta'])}</a>
+      <a class="btn ghost" href="{pages}{path_of(lg, 'ceny')}">{esc(ui['hero_cta2'])}</a>
     </p>
   </div>
 </section>
@@ -1284,57 +1402,56 @@ def build_home(L):
 </section>"""
     else:
         why_band = f'<section class="band cream"><div class="wrap">{why_inner}</div></section>'
+    deliver_items = "".join(f"<li>{esc(ui[k])}</li>" for k in ("deliver_1", "deliver_2", "deliver_3"))
     body = f"""<main id="main">
 {hero_html}
 <section class="band" id="produkty"><div class="wrap">
   <p class="kicker">{esc(ui['sec_products_kicker'])}</p>
   <h2 class="sec">{esc(ui['sec_products'])}</h2>
-  <p class="lead">{esc(ui['sec_products_lead'])}</p>
   <ul class="grid products" style="list-style:none;padding:0">{prod_cards}</ul>
-  <p><a href="{pages}ceny/">{esc(ui['full_price_list'])} →</a></p>
+  <p class="price-note">{esc(ui['sec_products_lead'])} <a href="{pages}{path_of(lg, 'ceny')}">{esc(ui['full_price_list'])} →</a></p>
 </div></section>
 {why_band}
+<section class="band cream" id="doprava"><div class="wrap">
+  <p class="kicker">{esc(ui['deliver_kicker'])}</p>
+  <h2 class="sec">{esc(ui['deliver_h2'])}</h2>
+  <ul class="deliver-list">{deliver_items}</ul>
+  {cta_html(L, depth, ("deliver_btn", "kde_nas_najdete", "nav_delivery"))}
+</div></section>
 <section class="band"><div class="wrap">
   <p class="kicker">{esc(ui['sec_recipes_kicker'])}</p>
   <h2 class="sec">{esc(ui['sec_recipes'])}</h2>
   <p class="lead">{esc(ui['sec_recipes_lead'])}</p>
   {rec_carousel}
-  <p><a href="{pages}recepty/">{esc(ui['all_recipes'])} →</a></p>
+  <p><a href="{pages}{path_of(lg, 'recepty')}">{esc(ui['all_recipes'])} →</a></p>
 </div></section>
 <section class="band cream" id="recenze"><div class="wrap">
   {reviews_html(L, depth)}
 </div></section>
-<section class="band" id="faq"><div class="wrap">
-  <p class="kicker">{esc(ui['sec_faq_kicker'])}</p>
-  <h2 class="sec">{esc(ui['sec_faq'])}</h2>
-  <p class="lead">{esc(ui['sec_faq_lead'])}</p>
-  {faq_html(home_faq(lg))}
-  <p style="margin-top:1.4rem"><a href="{pages}faq/">{esc(ui['all_faq'])} →</a></p>
-</div></section>
-<section class="band cream" id="velkoobchod-teaser"><div class="wrap">
+<section class="band" id="velkoobchod-teaser"><div class="wrap">
   <p class="kicker">{esc(ui['sec_b2b_kicker'])}</p>
   <h2 class="sec">{esc(ui['sec_b2b'])}</h2>
   <p class="lead">{esc(ui['sec_b2b_lead'])}</p>
-  <p><a class="btn gold" href="{pages}velkoobchod/">{esc(ui['sec_b2b_btn'])}</a></p>
+  <p><a class="btn gold" href="{pages}{path_of(lg, 'velkoobchod')}">{esc(ui['sec_b2b_btn'])}</a></p>
 </div></section>
-<section class="band" id="do-eu"><div class="wrap">
+<section class="band cream" id="do-eu"><div class="wrap">
   <p class="kicker">{esc(ui['sec_d2c_kicker'])}</p>
   <h2 class="sec">{esc(ui['sec_d2c'])}</h2>
   <p class="lead">{esc(ui['sec_d2c_lead'])}</p>
-  <p><a class="btn ghost" href="{pages}do-eu/">{esc(ui['sec_d2c_btn'])}</a></p>
+  <p><a class="btn gold" href="{pages}{path_of(lg, 'do_eu')}">{esc(ui['sec_d2c_btn'])}</a></p>
 </div></section>
-<section class="band cream" id="novinky"><div class="wrap">
+<section class="band" id="novinky"><div class="wrap">
   <p class="kicker">{esc(ui['nl_kicker'])}</p>
   {newsletter_form_html(L)}
 </div></section>
 <section class="band cream center"><div class="wrap">
   <h2 class="sec" style="display:inline-block">{esc(ui['cta_sample_h'])}</h2>
   <p class="lead" style="max-width:560px;margin:.6rem auto 1.4rem">{esc(ui['cta_sample_p'])}</p>
-  <a class="btn gold" href="{pages}kontakt/">{esc(ui['cta_sample_btn'])}</a>
+  {cta_html(L, depth, ("cta_call", "kontakt", "cta_write"))}
 </div></section>
 </main>"""
     html_out = shell(L, title=L["meta"]["home_title"], desc=L["meta"]["home_desc"],
-                     path="", depth=depth, active="home", body=body,
+                     pid="home", depth=depth, active="home", body=body,
                      keywords=keywords_for(lg, "home"), meta_kind="home",
                      extra_head=hero_preload,
                      jsonld=[
@@ -1348,28 +1465,25 @@ def build_home(L):
                                  {
                                      "@type": "ListItem",
                                      "position": i + 1,
-                                     "url": url_for(lg, PRODUCT_SLUGS[key] + "/"),
+                                     "url": url_of(lg, key),
                                      "name": L["products"][key]["name"],
                                  }
                                  for i, key in enumerate(PRODUCT_SLUGS)
                              ],
                          },
-                         faq_jsonld(home_faq(lg)),
                      ])
     write(([lg] if lg != "cs" else []) + ["index.html"], html_out)
 
 
 def build_page(L, key):
     lg = L["code"]
-    slug = PAGE_SLUGS[key]
+    slug = slug_of(lg, key)
     depth = (0 if lg == "cs" else 1) + 1
     pg = L["pages"][key]
     path = f"{slug}/"
     crumbs = [(L["ui"]["breadcrumb_home"], url_for(lg, "")), (pg["h1"], url_for(lg, path))]
     fig = ""
     if key == "kdo_jsme":
-        # Their own production room — sacks, scale and bag sealer — recovered
-        # from the archive, in preference to a generic workshop picture.
         w = (img_or_none(depth, "dilna-panorama.webp")
              or img_or_none(depth, "workshop.webp") or img_or_none(depth, "workshop.jpg"))
         if w:
@@ -1381,17 +1495,14 @@ def build_page(L, key):
     faqs = page_faq(lg, key)
     if key == "velkoobchod":
         faqs = b2b_faq(lg)
-    price_bit = ""
-    if key in ("kde_nas_najdete", "do_eu"):
-        price_bit = price_note_html(L)
     page_cls = "page page--prices" if key == "ceny" else "page"
     body = f"""<main id="main" class="wrap"><article class="{page_cls}">
-<nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pg['h1'])}</nav>
+<nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pg.get('nav') or pg['h1'])}</nav>
 <h1>{esc(pg['h1'])}</h1>
 <p class="sub">{esc(pg['sub'])}</p>
+{cta_html(L, depth, pg.get('cta'))}
 {fig}
 {render_body(L, pg['body'], depth)}
-{price_bit}
 {faq_html(faqs, L['ui'].get('sec_faq', 'FAQ'))}
 </article></main>"""
     extra_ld = [breadcrumb_jsonld(L, crumbs)]
@@ -1399,7 +1510,7 @@ def build_page(L, key):
         extra_ld.append(faq_jsonld(faqs))
     if key == "kontakt":
         extra_ld.extend(people_jsonld())
-    html_out = shell(L, title=pg["title"], desc=pg["desc"], path=path, depth=depth,
+    html_out = shell(L, title=pg["title"], desc=pg["desc"], pid=key, depth=depth,
                      active=key, body=body, jsonld=extra_ld,
                      keywords=keywords_for(lg, key), meta_kind=key)
     write(([lg] if lg != "cs" else []) + [slug, "index.html"], html_out)
@@ -1407,12 +1518,13 @@ def build_page(L, key):
 
 def build_product(L, key):
     lg = L["code"]
-    slug = PRODUCT_SLUGS[key]
+    slug = slug_of(lg, key)
     depth = (0 if lg == "cs" else 1) + 1
     pr = L["products"][key]
     path = f"{slug}/"
     pages = page_rel(lg, depth)
     home = pages if pages else "./"
+    ui = L["ui"]
     im = product_img_src(depth, key)
     figure = (f'<figure><img src="{im}" alt="{esc(pr["name"])} — Jůzlová"></figure>' if im else "")
     price_num = re.search(r"(\d+)\s*(?:Kč|CZK)", pr["price"])
@@ -1444,25 +1556,27 @@ def build_product(L, key):
         },
         "keywords": keywords_for(lg, "product", key),
     }
-    faqs = merge_product_faq(lg, key, list(pr.get("faq") or []))
+    # Each product page owns its own three questions; no shared extras.
+    faqs = list(pr.get("faq") or [])
     lds = [product_ld, breadcrumb_jsonld(L, [
-        (L["ui"]["breadcrumb_home"], url_for(lg, "")),
+        (ui["breadcrumb_home"], url_for(lg, "")),
         (pr["name"], url_for(lg, path))])]
     if faqs:
         lds.append(faq_jsonld(faqs))
     body = f"""<main id="main" class="wrap"><article class="page">
-<nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › {esc(pr['name'])}</nav>
-<h1>{esc(pr['name'])}</h1>
+<nav class="breadcrumb"><a href="{home}">{esc(ui['breadcrumb_home'])}</a> › {esc(pr['name'])}</nav>
+<h1>{esc(pr.get('h1') or pr['name'])}</h1>
 <p class="sub">{esc(pr['short'])}</p>
-<div class="factbox"><dl><dt>{esc(L['ui']['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong></dd>
-<dt>{esc(L['ui']['order_info'])}</dt><dd><a href="{pages}kontakt/">{esc(L['ui']['nav_contact'])}</a> · +420 728 466 141 · juzlj@seznam.cz</dd></dl></div>
-{price_note_html(L)}
+<div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong> · {esc(ui['price_pickup_badge'])}</dd>
+<dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a> · {esc(ui['open_hours_short'])}</dd></dl>
+{price_note_html(L)}</div>
+{cta_html(L, depth, ("cta_order", "kde_nas_najdete", "cta_pickup"))}
 {figure}
 {render_body(L, pr['body'], depth, product=pr)}
-{faq_html(faqs, L['ui'].get('sec_faq', 'FAQ'))}
-<p style="margin-top:2rem"><a class="btn gold" href="{pages}kontakt/">{esc(L['ui']['cta_sample_btn'])}</a></p>
+{faq_html(faqs, ui.get('sec_faq', 'FAQ'))}
+{cta_html(L, depth, ("cta_order", "kontakt", "cta_write"))}
 </article></main>"""
-    html_out = shell(L, title=pr["title"], desc=pr["desc"], path=path, depth=depth,
+    html_out = shell(L, title=pr["title"], desc=pr["desc"], pid=key, depth=depth,
                      active=None, body=body, jsonld=lds,
                      keywords=keywords_for(lg, "product", key),
                      meta_kind="product", meta_key=key,
@@ -1482,37 +1596,37 @@ def build_recipes_index(L):
             continue
         im = img_or_none(depth, RECIPE_IMG.get(slug))
         imtag = f'<img class="thumb" src="{im}" alt="{esc(r["name"])}" loading="lazy">' if im else ""
-        cards += f"""<li class="card rv">{imtag}<div class="pad"><h3><a href="{pages}{slug}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
+        cards += f"""<li class="card rv">{imtag}<div class="pad"><h3><a href="{pages}{slug_of(lg, slug)}/">{esc(r['name'])}</a></h3><p>{esc(r.get('teaser',''))}</p></div></li>"""
     ui = L["ui"]
     body = f"""<main id="main" class="wrap"><article class="page" style="max-width:none">
 <nav class="breadcrumb"><a href="{home}">{esc(ui['breadcrumb_home'])}</a> › {esc(ui['nav_recipes'])}</nav>
-<h1>{esc(ui['nav_recipes'])}</h1>
+<h1>{esc(ui.get('recipes_h1') or ui['nav_recipes'])}</h1>
 <p class="sub">{esc(L['recipes_intro'])}</p>
 <ul class="grid c3" style="list-style:none;padding:0">{cards}</ul>
 </article></main>"""
-    title = {"cs": "Recepty z našich směsí — knedlíky, dezerty, pudingy",
-             "en": "Recipes from our mixes — dumplings, desserts, puddings",
-             "de": "Rezepte aus unseren Mischungen — Knödel, Desserts, Pudding",
-             "sk": "Recepty z našich zmesí — knedle, dezerty, pudingy"}[lg]
-    html_out = shell(L, title=title, desc=L["recipes_intro"], path="recepty/",
+    title = {"cs": "Recepty z knedlíků v prášku, pudingu a kakaa",
+             "en": "Recipes with potato dumpling mix, pudding and cocoa",
+             "de": "Rezepte mit Knödelmischung, Pudding und Kakao",
+             "sk": "Recepty z knedieľ v prášku, pudingu a kakaa"}[lg]
+    html_out = shell(L, title=title, desc=L.get("recipes_desc") or L["recipes_intro"], pid="recepty",
                      depth=depth, active="recepty", body=body,
                      keywords=keywords_for(lg, "recepty"), meta_kind="recepty",
                      jsonld=[breadcrumb_jsonld(L, [
                          (ui["breadcrumb_home"], url_for(lg, "")),
-                         (ui["nav_recipes"], url_for(lg, "recepty/")),
+                         (ui["nav_recipes"], url_of(lg, "recepty")),
                      ]), {
                          "@context": "https://schema.org",
                          "@type": "ItemList",
                          "name": title,
                          "itemListElement": [
                              {"@type": "ListItem", "position": i + 1,
-                              "url": url_for(lg, f"{slug}/"),
+                              "url": url_of(lg, slug),
                               "name": L["recipes"][slug]["name"]}
                              for i, slug in enumerate(RECIPE_SLUGS)
                              if slug in L["recipes"]
                          ],
                      }])
-    write(([lg] if lg != "cs" else []) + ["recepty", "index.html"], html_out)
+    write(([lg] if lg != "cs" else []) + [slug_of(lg, "recepty"), "index.html"], html_out)
 
 
 def recipe_family(slug):
@@ -1556,7 +1670,7 @@ def more_recipes_html(L, current_slug, depth):
             continue
         name = rec["name"]
         teaser = rec.get("teaser", "")
-        href = f"{pages}{other}/"
+        href = f"{pages}{slug_of(L['code'], other)}/"
         label = ui["more_recipe_open"].replace("{name}", name)
         im = img_or_none(depth, RECIPE_IMG.get(other))
         media = ""
@@ -1607,7 +1721,7 @@ def build_recipe(L, slug):
     prod_link = ""
     if prod_key and prod_key in L["products"]:
         prod_link = (f'<div class="factbox"><dl><dt>{esc(L["ui"]["uses_product"])}</dt>'
-                     f'<dd><a href="{pages}{PRODUCT_SLUGS[prod_key]}/">'
+                     f'<dd><a href="{pages}{slug_of(lg, prod_key)}/">'
                      f'{esc(L["products"][prod_key]["name"])}</a></dd></dl></div>')
     recipe_ld = {
         "@context": "https://schema.org", "@type": "Recipe",
@@ -1619,8 +1733,8 @@ def build_recipe(L, slug):
         "inLanguage": lg,
         "author": {"@type": "Organization", "name": "Jůzlová", "@id": BASE + "/#org"},
         "publisher": {"@id": BASE + "/#org"},
-        "url": url_for(lg, f"{slug}/"),
-        "mainEntityOfPage": url_for(lg, f"{slug}/"),
+        "url": url_of(lg, slug),
+        "mainEntityOfPage": url_of(lg, slug),
         **({"image": [{
             "@type": "ImageObject",
             "url": f"{BASE}/img/{RECIPE_IMG[slug]}",
@@ -1649,13 +1763,13 @@ def build_recipe(L, slug):
     more = more_recipes_html(L, slug, depth)
     lds = [recipe_ld, breadcrumb_jsonld(L, [
         (L["ui"]["breadcrumb_home"], url_for(lg, "")),
-        (L["ui"]["nav_recipes"], url_for(lg, "recepty/")),
-        (r["name"], url_for(lg, f"{slug}/"))])]
+        (L["ui"]["nav_recipes"], url_of(lg, "recepty")),
+        (r["name"], url_of(lg, slug))])]
     if rec_faqs:
         lds.append(faq_jsonld(rec_faqs))
     body = f"""<main id="main">
 <div class="wrap"><article class="page">
-<nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › <a href="{pages}recepty/">{esc(L['ui']['nav_recipes'])}</a> › {esc(r['name'])}</nav>
+<nav class="breadcrumb"><a href="{home}">{esc(L['ui']['breadcrumb_home'])}</a> › <a href="{pages}{path_of(lg, 'recepty')}">{esc(L['ui']['nav_recipes'])}</a> › {esc(r['name'])}</nav>
 <h1>{esc(r['name'])}</h1>
 <p class="sub">{esc(r.get('teaser',''))}</p>
 {rating_widget_html(L, slug)}
@@ -1669,11 +1783,11 @@ def build_recipe(L, slug):
 {more}
 </main>"""
     html_out = shell(L, title=r.get("title", r["name"]), desc=r.get("desc", r.get("teaser", "")),
-                     path=f"{slug}/", depth=depth, active="recepty", body=body,
+                     pid=slug, depth=depth, active="recepty", body=body,
                      jsonld=lds, meta_kind="recipe", meta_key=slug,
                      keywords=keywords_for(lg, "recipe", slug),
                      og_img=f"{BASE}/img/{RECIPE_IMG[slug]}" if RECIPE_IMG.get(slug) else None)
-    write(([lg] if lg != "cs" else []) + [slug, "index.html"], html_out)
+    write(([lg] if lg != "cs" else []) + [slug_of(lg, slug), "index.html"], html_out)
 
 
 def build_faq_page(L):
@@ -1683,28 +1797,30 @@ def build_faq_page(L):
     home = pages if pages else "./"
     ui = L["ui"]
     pg = L["faq_page"]
-    items = site_faq(lg)
+    groups = site_faq(lg)  # list of (heading, [(q, a), ...])
+    items = [qa for _h, qas in groups for qa in qas]
+    sections = "".join(faq_html(qas, heading) for heading, qas in groups)
     body = f"""<main id="main" class="wrap"><article class="page">
-<nav class="breadcrumb"><a href="{home}">{esc(ui['breadcrumb_home'])}</a> › {esc(pg['h1'])}</nav>
+<nav class="breadcrumb"><a href="{home}">{esc(ui['breadcrumb_home'])}</a> › {esc(ui['nav_faq'])}</nav>
 <h1>{esc(pg['h1'])}</h1>
 <p class="sub">{esc(pg['sub'])}</p>
-{faq_html(items)}
-<p style="margin-top:1.6rem">{esc(ui.get('faq_b2b_hint', 'Kitchens and shops: see Wholesale.'))} <a href="{pages}velkoobchod/">{esc(ui['nav_b2b'])} →</a></p>
-<p style="margin-top:1.2rem"><a class="btn gold" href="{pages}kontakt/">{esc(ui['cta_sample_btn'])}</a></p>
+{sections}
+<p style="margin-top:1.6rem">{esc(ui.get('faq_b2b_hint', ''))} <a href="{pages}{path_of(lg, 'velkoobchod')}">{esc(ui['nav_b2b'])} →</a></p>
+{cta_html(L, depth, ("cta_call", "kontakt", "cta_write"))}
 </article></main>"""
     html_out = shell(
-        L, title=pg["title"], desc=pg["desc"], path="faq/", depth=depth,
+        L, title=pg["title"], desc=pg["desc"], pid="faq", depth=depth,
         active="faq", body=body, keywords=keywords_for(lg, "faq"),
         meta_kind="faq",
         jsonld=[
             breadcrumb_jsonld(L, [
                 (ui["breadcrumb_home"], url_for(lg, "")),
-                (pg["h1"], url_for(lg, "faq/")),
+                (pg["h1"], url_of(lg, "faq")),
             ]),
             faq_jsonld(items),
         ],
     )
-    write(([lg] if lg != "cs" else []) + ["faq", "index.html"], html_out)
+    write(([lg] if lg != "cs" else []) + [slug_of(lg, "faq"), "index.html"], html_out)
 
 
 def build_aeo_page(L, key):
@@ -1741,55 +1857,87 @@ def build_aeo_page(L, key):
 {faq_html(faqs, L['ui'].get('sec_faq', 'FAQ'))}
 </article></main>"""
     html_out = shell(
-        L, title=pack["title"], desc=pack["desc"], path=path, depth=depth,
+        L, title=pack["title"], desc=pack["desc"], pid=key, depth=depth,
         active=active, body=body, jsonld=extra_ld,
         keywords=pack.get("keywords") or "", meta_kind=meta_kind,
     )
     write(([lg] if lg != "cs" else []) + [slug, "index.html"], html_out)
 
 
-def build_redirects():
-    for old, new in LEGACY_REDIRECTS.items():
-        for lg in LANGS:
-            target = url_for(lg, f"{new}/")
-            parts = [old, "index.html"] if lg == "cs" else [lg, old, "index.html"]
-            write(parts, f"""<!doctype html>
+def page_ids(lang, langs_data):
+    """Every page id that exists in a language, in sitemap order."""
+    ids = ["home"] + list(PAGE_SLUGS) + list(PRODUCT_SLUGS) + ["recepty", "faq"]
+    if lang == "cs":
+        ids += list(GEO_SLUGS) + list(B2B_SLUGS)
+    cs = langs_data["cs"]
+    ids += [slug for slug in RECIPE_SLUGS if slug in cs["recipes"]]
+    return ids
+
+
+def redirect_map(langs_data):
+    """{(lang, old_path): new_path} for every URL that used to exist."""
+    out = {}
+    for lg in LANGS:
+        live = {path_of(lg, pid) for pid in page_ids(lg, langs_data)}
+        for old, pid in LEGACY_REDIRECTS.items():
+            if lg != "cs" and is_local_page(pid):
+                pid = LOCAL_FALLBACK[pid]
+            new = path_of(lg, pid)
+            old_path = f"{old}/"
+            if old_path in live or old_path == new:
+                continue
+            out[(lg, old_path)] = new
+        # Recipes whose slug changed (any language).
+        for rid in RECIPE_SLUGS:
+            old_path = f"{rid}/"
+            new = path_of(lg, rid)
+            if old_path != new and old_path not in live:
+                out[(lg, old_path)] = new
+    return out
+
+
+def build_redirects(langs_data):
+    """Meta-refresh stubs (any static host) + nginx and Netlify 301 rules."""
+    rules = redirect_map(langs_data)
+    nginx = ["# Generated by scripts/build_site.py — old URLs -> new localized URLs (301)."]
+    netlify = ["# Generated by scripts/build_site.py"]
+    for (lg, old_path), new in sorted(rules.items()):
+        target = url_for(lg, new)
+        old_abs = "/" + lang_prefix(lg) + old_path
+        parts = old_path.rstrip("/").split("/")
+        parts = ([lg] if lg != "cs" else []) + parts + ["index.html"]
+        write(parts, f"""<!doctype html>
 <html lang="{lg}"><head><meta charset="utf-8"><title>Jůzlová.cz</title>
 <link rel="canonical" href="{target}">
+<meta name="robots" content="noindex">
 <meta http-equiv="refresh" content="0;url={target}">
 </head><body><p><a href="{target}">→ {target}</a></p></body></html>
 """)
+        nginx.append(f"rewrite ^{re.escape(old_abs.rstrip('/'))}/?$ {target} permanent;")
+        netlify.append(f"{old_abs.rstrip('/')}  {target}  301!")
+        netlify.append(f"{old_abs}  {target}  301!")
+    write(["redirects.conf"], "\n".join(nginx) + "\n")
+    write(["_redirects"], "\n".join(netlify) + "\n")
 
 
 def all_paths(langs_data):
-    paths = [""]
-    paths += [f"{slug}/" for slug in PAGE_SLUGS.values()]
-    paths += [f"{slug}/" for slug in PRODUCT_SLUGS.values()]
-    paths.append("recepty/")
-    paths.append("faq/")
-    paths += [f"{slug}/" for slug in GEO_SLUGS.values()]
-    paths += [f"{slug}/" for slug in B2B_SLUGS.values()]
-    cs = langs_data["cs"]
-    paths += [f"{slug}/" for slug in RECIPE_SLUGS if slug in cs["recipes"]]
-    return paths
+    return [path_of("cs", pid) for pid in page_ids("cs", langs_data)]
 
 
-def _path_priority(path):
-    if path in SITEMAP_PRIORITY:
-        return SITEMAP_PRIORITY[path]
-    slug = path.rstrip("/")
-    if slug in PRODUCT_SLUGS.values():
+def _path_priority(pid):
+    if pid in SITEMAP_PRIORITY:
+        return SITEMAP_PRIORITY[pid]
+    if pid in PRODUCT_SLUGS:
         return PRODUCT_PRIORITY
-    if slug in RECIPE_SLUGS:
+    if pid in RECIPE_SLUGS:
         return RECIPE_PRIORITY
     return 0.6
 
 
-def _image_tag(langs_data, path, lg):
-    slug = path.rstrip("/")
-    inv_prod = {v: k for k, v in PRODUCT_SLUGS.items()}
-    if slug in inv_prod:
-        key = inv_prod[slug]
+def _image_tag(langs_data, pid, lg):
+    slug = pid
+    if pid in PRODUCT_SLUGS:
+        key = pid
         img = PRODUCT_IMG.get(key)
         name = langs_data[lg]["products"][key]["name"]
         if img:
@@ -1842,26 +1990,27 @@ def _llms_sitemap_entries():
     return entries
 
 
-def _page_sitemap_entry(langs_data, path, lg):
-    pri = f"{_path_priority(path):.1f}"
-    freq = "daily" if path == "" else "weekly"
-    alts = "".join(
-        f'<xhtml:link rel="alternate" hreflang="{o}" href="{url_for(o, path)}"/>'
-        for o in LANGS)
-    alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{url_for("cs", path)}"/>'
-    img = _image_tag(langs_data, path, lg)
+def _page_sitemap_entry(langs_data, pid, lg):
+    pri = f"{_path_priority(pid):.1f}"
+    freq = "daily" if pid == "home" else "weekly"
+    alts = ""
+    if not is_local_page(pid):
+        alts = "".join(
+            f'<xhtml:link rel="alternate" hreflang="{code}" href="{url_of(o, pid)}"/>'
+            for o, code in HREFLANG_CODES)
+        alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{url_of("cs", pid)}"/>'
+    img = _image_tag(langs_data, pid, lg)
     return (
-        f"<url><loc>{url_for(lg, path)}</loc>{alts}{img}"
+        f"<url><loc>{url_of(lg, pid)}</loc>{alts}{img}"
         f"<lastmod>{TODAY}</lastmod><changefreq>{freq}</changefreq>"
         f"<priority>{pri}</priority></url>"
     )
 
 
 def build_sitemap(langs_data):
-    paths = all_paths(langs_data)
     for lg in LANGS:
         entries = _llms_sitemap_entries() if lg == "cs" else []
-        entries += [_page_sitemap_entry(langs_data, path, lg) for path in paths]
+        entries += [_page_sitemap_entry(langs_data, pid, lg) for pid in page_ids(lg, langs_data)]
         write([f"sitemap-{lg}.xml"], _urlset_xml(entries))
     index = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -2155,28 +2304,25 @@ def _llms_index(langs_data, lang):
         "",
         f"## {c['pages']}",
         f"- [{ui['nav_home']}]({url_for(lang, '')}): {L['meta']['home_desc']}",
-        f"- [{ui['nav_about']}]({url_for(lang, 'kdo_jsme/')}): {L['pages']['kdo_jsme']['desc']}",
-        f"- [{ui['nav_delivery']}]({url_for(lang, 'kde-nas-najdete/')}): {L['pages']['kde_nas_najdete']['desc']}",
-        f"- [{ui['nav_b2b']}]({url_for(lang, 'velkoobchod/')}): {L['pages']['velkoobchod']['desc']}",
-        f"- [{ui['nav_d2c']}]({url_for(lang, 'do-eu/')}): {L['pages']['do_eu']['desc']}",
-        f"- [{ui['nav_prices']}]({url_for(lang, 'ceny/')}): {L['pages']['ceny']['desc']}",
-        f"- [{ui['nav_faq']}]({url_for(lang, 'faq/')}): {L['faq_page']['desc']}",
-        f"- [{ui['nav_contact']}]({url_for(lang, 'kontakt/')}): {L['pages']['kontakt']['desc']}",
-        f"- [{ui['nav_recipes']}]({url_for(lang, 'recepty/')}): {L['recipes_intro']}",
-        "",
-        f"## {c['places']}",
+        f"- [{ui['nav_about']}]({url_of(lang, 'kdo_jsme')}): {L['pages']['kdo_jsme']['desc']}",
+        f"- [{ui['nav_delivery']}]({url_of(lang, 'kde_nas_najdete')}): {L['pages']['kde_nas_najdete']['desc']}",
+        f"- [{ui['nav_b2b']}]({url_of(lang, 'velkoobchod')}): {L['pages']['velkoobchod']['desc']}",
+        f"- [{ui['nav_d2c']}]({url_of(lang, 'do_eu')}): {L['pages']['do_eu']['desc']}",
+        f"- [{ui['nav_prices']}]({url_of(lang, 'ceny')}): {L['pages']['ceny']['desc']}",
+        f"- [{ui['nav_faq']}]({url_of(lang, 'faq')}): {L['faq_page']['desc']}",
+        f"- [{ui['nav_contact']}]({url_of(lang, 'kontakt')}): {L['pages']['kontakt']['desc']}",
+        f"- [{ui['nav_recipes']}]({url_of(lang, 'recepty')}): {L['recipes_intro']}",
     ]
-    pack = AEO_PAGES[lang]
-    for key, slug in GEO_SLUGS.items():
-        pg = pack[key]
-        lines.append(f"- [{pg['h1']}]({url_for(lang, slug + '/')}): {pg['desc']}")
-    lines += [
-        "",
-        f"## {c['wholesale']}",
-    ]
-    for key, slug in B2B_SLUGS.items():
-        pg = pack[key]
-        lines.append(f"- [{pg['h1']}]({url_for(lang, slug + '/')}): {pg['desc']}")
+    if lang == "cs":
+        pack = AEO_PAGES["cs"]
+        lines += ["", f"## {c['places']}"]
+        for key, slug in GEO_SLUGS.items():
+            pg = pack[key]
+            lines.append(f"- [{pg['h1']}]({url_for('cs', slug + '/')}): {pg['desc']}")
+        lines += ["", f"## {c['wholesale']}"]
+        for key, slug in B2B_SLUGS.items():
+            pg = pack[key]
+            lines.append(f"- [{pg['h1']}]({url_for('cs', slug + '/')}): {pg['desc']}")
     lines += [
         "",
         f"## {c['products']}",
@@ -2184,7 +2330,7 @@ def _llms_index(langs_data, lang):
     for key, pack, price in PRICE_ROWS:
         pr = L["products"][key]
         lines.append(
-            f"- [{pr['name']}]({url_for(lang, PRODUCT_SLUGS[key] + '/')}): "
+            f"- [{pr['name']}]({url_of(lang, key)}): "
             f"{pr['short']} · {pack} · {price}"
         )
     lines += ["", f"## {c['recipes']}"]
@@ -2193,7 +2339,7 @@ def _llms_index(langs_data, lang):
         if not rec:
             continue
         lines.append(
-            f"- [{rec['name']}]({url_for(lang, slug + '/')}): {rec.get('teaser', '')}"
+            f"- [{rec['name']}]({url_of(lang, slug)}): {rec.get('teaser', '')}"
         )
     lines += [
         "",
@@ -2244,8 +2390,8 @@ def build_llms(langs_data):
         "delivery_free_jihlava: nad 3000 Kč (Jihlava)",
         "eu_shipping: DE/AT/SK/PL a Češi v EU — dopravu, balení a pojištění platí zákazník",
         "b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; cena podle množství; bez jmen zákazníků",
-        "newsletter: přihláška na webu, až 7 receptů týdně, inbox juzlj@seznam.cz",
-        "price_story: vlastní dílna, jednoduché obaly, přímý prodej cca −40 % proti překupníkům",
+        "newsletter: přihláška na webu; nové recepty občas a sezónní tipy před Vánoci a Velikonocemi",
+        "price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo, ne za sáček",
         "local_share: cca 90 % zakázek kolem Kochánova 40, 582 53",
         "area_served: Kochánov; Havlíčkův Brod; kraj Vysočina",
         "samples: žádné",
@@ -2264,14 +2410,14 @@ def build_llms(langs_data):
         "PSČ je 582 53. Nikoli 582 91 (jiný Kochánov u Světlé).",
         "",
         "## Čím se lišíme",
-        "Pšeničná mouka KLASA z mlýna v Havlíčkově Brodě (12 km), který vlastní a vede naše širší rodina. Instantní směsi s chutí domácí kuchyně. Ceny pod běžnými supermarketovými směsmi nejistého původu.",
+        "Pšeničná mouka z mlýna v Havlíčkově Brodě (12 km), který vlastní a vede naše širší rodina. Těsto se zadělává jen vodou; vejce, mléko nebo strouhanou bramboru přidá kuchař podle zvyku. Prodáváme přímo z dílny, po kilech.",
         "",
         "## Výrobky",
     ]
     for key, pack, price in PRICE_ROWS:
         pr_cs = cs["products"][key]
         full.append(f"### {pr_cs['name']}")
-        full.append(f"url: {url_for('cs', PRODUCT_SLUGS[key] + '/')}")
+        full.append(f"url: {url_of('cs', key)}")
         full.append(f"package: {pack}")
         full.append(f"price_czk: {price}")
         full.append(f"fact: {pr_cs['short']}")
@@ -2289,7 +2435,7 @@ def build_llms(langs_data):
         times = RECIPE_TIMES.get(slug) or {}
         img = RECIPE_IMG.get(slug, "")
         full.append(f"### {rec['name']}")
-        full.append(f"url: {url_for('cs', slug + '/')}")
+        full.append(f"url: {url_of('cs', slug)}")
         if img:
             full.append(f"image: {BASE}/img/{img}")
         if times.get("prepTime"):
@@ -2319,10 +2465,11 @@ def build_llms(langs_data):
             full.append(f"A: {a}")
         full.append("")
     full.append("## FAQ")
-    for q, a in site_faq("cs"):
-        full.append(f"Q: {q}")
-        full.append(f"A: {a}")
-        full.append("")
+    for _h, qas in site_faq("cs"):
+        for q, a in qas:
+            full.append(f"Q: {q}")
+            full.append(f"A: {a}")
+            full.append("")
     full.append("Obsah obnovujeme každé čtvrtletí nebo při změně cen a sortimentu.")
     full.append(f"updated: {TODAY}")
     full.append("")
@@ -2346,15 +2493,13 @@ def build_llms(langs_data):
         f"- Aktualizováno: {TODAY}\n"
     ))
 
-    en_faqs = [{"question": q, "answer": a} for q, a in site_faq("en")]
+    def flat(lg):
+        return [{"question": q, "answer": a} for _h, qas in site_faq(lg) for q, a in qas]
     write(["ai", "faq.json"], json.dumps({
         "name": "Jůzlová FAQ",
         "updated": TODAY,
-        "faqs": en_faqs,
-        "byLanguage": {
-            lg: [{"question": q, "answer": a} for q, a in site_faq(lg)]
-            for lg in LANGS
-        },
+        "faqs": flat("en"),
+        "byLanguage": {lg: flat(lg) for lg in LANGS},
     }, ensure_ascii=False, indent=2) + "\n")
     write(["ai", "summary.json"], json.dumps({
         "name": "Jůzlová",
@@ -2372,12 +2517,12 @@ def build_llms(langs_data):
         "email": "juzlj@seznam.cz",
         "products": [
             {"id": k, "name": langs_data["en"]["products"][k]["name"],
-             "price": p, "url": url_for("en", PRODUCT_SLUGS[k] + "/")}
+             "price": p, "url": url_of("en", k)}
             for k, _, p in PRICE_ROWS
         ],
         "recipes": [
             {"slug": s, "name": langs_data["en"]["recipes"][s]["name"],
-             "url": url_for("en", s + "/")}
+             "url": url_of("en", s)}
             for s in RECIPE_SLUGS if s in langs_data["en"]["recipes"]
         ],
         "updated": TODAY,
@@ -2485,9 +2630,10 @@ def main():
         build_faq_page(L)
         for slug in RECIPE_SLUGS:
             build_recipe(L, slug)
-        for key in AEO_PAGE_KEYS:
-            build_aeo_page(L, key)
-    build_redirects()
+        if lg == "cs":
+            for key in AEO_PAGE_KEYS:
+                build_aeo_page(L, key)
+    build_redirects(langs_data)
     build_sitemap(langs_data)
     build_robots()
     build_forms_skeleton()

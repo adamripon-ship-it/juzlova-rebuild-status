@@ -21,8 +21,8 @@ delivery_free_humpolec_hb: nad 1000 Kč (Humpolec, Havlíčkův Brod)
 delivery_free_jihlava: nad 3000 Kč (Jihlava)
 eu_shipping: DE/AT/SK/PL a Češi v EU — dopravu, balení a pojištění platí zákazník
 b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; cena podle množství; bez jmen zákazníků
-newsletter: přihláška na webu, až 7 receptů týdně, inbox juzlj@seznam.cz
-price_story: vlastní dílna, jednoduché obaly, přímý prodej cca −40 % proti překupníkům
+newsletter: přihláška na webu; nové recepty občas a sezónní tipy před Vánoci a Velikonocemi
+price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo, ne za sáček
 local_share: cca 90 % zakázek kolem Kochánova 40, 582 53
 area_served: Kochánov; Havlíčkův Brod; kraj Vysočina
 samples: žádné
@@ -41,65 +41,71 @@ Pět výrobků. Staré adresy kakaovy_puding vedou na vanilkový puding.
 PSČ je 582 53. Nikoli 582 91 (jiný Kochánov u Světlé).
 
 ## Čím se lišíme
-Pšeničná mouka KLASA z mlýna v Havlíčkově Brodě (12 km), který vlastní a vede naše širší rodina. Instantní směsi s chutí domácí kuchyně. Ceny pod běžnými supermarketovými směsmi nejistého původu.
+Pšeničná mouka z mlýna v Havlíčkově Brodě (12 km), který vlastní a vede naše širší rodina. Těsto se zadělává jen vodou; vejce, mléko nebo strouhanou bramboru přidá kuchař podle zvyku. Prodáváme přímo z dílny, po kilech.
 
 ## Výrobky
 ### Bramborové knedlíky v prášku
-url: https://www.juzlova.cz/bramborove_knedliky/
+url: https://www.juzlova.cz/bramborove-knedliky-v-prasku/
 package: 5 kg
 price_czk: 250 Kč
-fact: Náš nejvyhledávanější výrobek. Klasické knedlíky, šišky, krokety i gnocchi z jednoho těsta.
-detail: Bramborové těsto v prášku z mouky oceněné značkou KLASA a sušených bramborových vloček. Na knedlíky klasické i plněné, šišky s mákem, krokety a gnocchi.
-Q: Jak dlouho trvá příprava?
-A: Těsto stačí smíchat s vodou, vytvarovat a povařit — knedlíky máte na stole do 20 minut.
-Q: Kolik porcí je z 5kg balení?
-A: Z pětikilogramového balení připravíte přílohu zhruba pro 60–70 porcí.
+fact: Mouka z mlýna v Havlíčkově Brodě a sušené bramborové vločky. Nic dalšího. Vejce nebo strouhanou bramboru přidáte, jak jste zvyklí.
+detail: Bramborové těsto v prášku z mouky z mlýna v Havlíčkově Brodě a bramborových vloček. Zaděláte vodou, nerozvaří se. 5 kg / 250 Kč, vyzvednutí Kochánov a Humpolec.
+Q: Musím přidat vejce?
+A: Ne. Těsto funguje jen s vodou. Vejce nebo mléko přidejte, chcete-li bohatší chuť.
+Q: Vydrží knedlíky plnění ovocem?
+A: Ano, těsto drží tvar; zákazníci z něj dělají i plněné knedlíky.
+Q: Máte menší balení než 5 kg?
+A: Ne. 5 kg je jediné balení; vystačí na sezónu.
 
 ### Chlupaté knedlíky v prášku
-url: https://www.juzlova.cz/chlupate-knedliky/
+url: https://www.juzlova.cz/chlupate-knedliky-v-prasku/
 package: 5 kg
 price_czk: 260 Kč
-fact: Bosáky podle tradiční receptury. Hotové za 15 minut, chutí k nerozeznání od domácích.
-detail: Chlupaté knedlíky podle tradiční receptury: za 15 minut hotové, oblíbené v jídelnách i restauracích. Balení 5 kg za 260 Kč.
-Q: K čemu se chlupaté knedlíky hodí?
-A: Tradičně se podávají se zelím a uzeným masem, s cibulkou a škvarky, nebo sladce s mákem a cukrem.
+fact: Podle tradiční receptury z naší dílny. Smícháte s vodou, vytvarujete, povaříte. Hodí se i na strapačky a halušky.
+detail: Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. Ke zelí a uzenému, na halušky i strapačky, hotové za 15 minut. 5 kg / 260 Kč, Kochánov a Humpolec.
+Q: Jsou chlupaté knedlíky a bosáky totéž?
+A: Ano, jsou to dva názvy pro jedno jídlo.
+Q: Dají se z toho dělat halušky?
+A: Ano; těsto protlačíte cedníkem do vroucí vody. Recept na strapačky se zelím a slaninou je na webu.
+Q: Máte menší balení než 5 kg?
+A: Ne. 5 kg je jediné balení.
 
 ### Vanilkový puding bez lepku
-url: https://www.juzlova.cz/vanilkovy_pudink/
+url: https://www.juzlova.cz/vanilkovy-puding-bez-lepku/
 package: 1 kg / 400 g
 price_czk: 60 Kč / 30 Kč
-fact: Kukuřičný škrob bez lepku, přirozená vanilková chuť. Na dezerty i pečení.
-detail: Instantní vanilkový puding z kukuřičného škrobu bez lepku. Přirozená chuť bez chemických odstínů, vhodný i pro bezlepkovou dietu. 1 kg / 60 Kč, 400 g / 30 Kč.
-Q: Je puding opravdu bez lepku?
-A: Ano. Základem je čistý kukuřičný škrob, který lepek neobsahuje.
+fact: Základ je kukuřičný škrob, který lepek neobsahuje. Vaříte ho jako každý puding; do krému na věnečky, do hruškového koláče, do hrníčkového perníku.
+detail: Vanilkový puding z kukuřičného škrobu bez lepku. Kilo vystačí na cca 25 pudingů nebo krémy na věnečky a větrníky. 1 kg / 60 Kč, 400 g / 30 Kč, Kochánov a Humpolec.
+Q: Lze puding použít místo pudingu z obchodu 1 : 1?
+A: Ano. Zhruba 40 g na 500 ml mléka, jako běžný sáček.
+Q: Vydrží otevřený kilový pytlík?
+A: Ano, v suchu a zavřený. Na první vyzkoušení je 400 g balení za 30 Kč.
 Q: Vyrábíte i čokoládovou variantu?
-A: Kakaový puding jako hotovou směs nevedeme. Čokoládovou chuť dáte vanilkovému pudingu kakaem holandského typu, které prodáváme samostatně.
+A: Ne. Čokoládovou chuť dáte vanilkovému pudingu kakaem holandského typu, které prodáváme samostatně.
 
 ### Kakao holandského typu
 url: https://www.juzlova.cz/kakao-holandskeho-typu/
 package: 500 g
 price_czk: 270 Kč
-fact: Tmavé cukrářské kakao třídy 21 % tuku. Červenohnědá barva, krémová chuť, bez přidaného cukru.
-detail: Tmavé cukrářské kakao holandského typu s 20–22 % kakaového másla. Bez přidaného cukru, veganské, bez 14 alergenů EU. 500 g / 270 Kč.
-Q: Čím se liší kakao holandského typu?
-A: Alkalizací — je tmavší, méně kyselé a lépe se rozpouští než přírodní kakao. S 20–22 % tuku patří k nejkvalitnějším cukrářským kakaům.
-Q: Přidáváte cukr?
-A: Ne. Přidaný cukr je 0 g. Přirozené cukry z bobu jsou 0,9 g na 100 g.
-Q: Je kakao bez lepku a alergenů?
-A: Ano. Neobsahuje žádný ze 14 alergenů EU. Lepek je pod 20 ppm. Je veganské a vegetariánské — bez surovin živočišného původu.
-Q: Jak kakao skladovat?
-A: V suchu, mimo silné pachy, ideálně při 15–20 °C a vlhkosti pod 50 %.
+fact: Alkalizovaný prášek z kakaové hmoty, bez přidaného cukru, bez 14 alergenů EU. Do perníku, krémů, kakaa na pití a zmrzliny. Certifikát k šarži pošleme na vyžádání.
+detail: Tmavé cukrářské kakao holandského typu s 20–22 % kakaového másla, bez přidaného cukru, bez 14 alergenů EU. Barva, která v pečení a zmrzlině drží. Certifikát k šarži na vyžádání.
+Q: Proč se cena kakaa mění?
+A: Kakao je burzovní komodita: cenu hýbe počasí, poptávka a nové limity EU na těžké kovy. Ceník upravujeme, když se změní náš nákup.
+Q: Je to raw kakao?
+A: Ne. Je alkalizované (holandské) a pražené. Raw kakao je nepražené a chutná hořce a travnatě; to naše je jemné a kulaté, s praženými tóny.
+Q: Hodí se do zmrzliny?
+A: Ano. Vyšší podíl kakaového másla dává zmrzlině hladkou texturu a tmavou barvu, která v mrazu nevybledne.
 
 ### Vanilínový cukr
-url: https://www.juzlova.cz/vanilkovy-cukr/
+url: https://www.juzlova.cz/vanilinovy-cukr/
 package: 1 kg
 price_czk: 60 Kč
-fact: Jemně mletý cukr s vanilínovým aroma. Do těsta i na posyp cukroví.
-detail: Vanilínový cukr z jemně mletého cukru s vanilínovým aroma. Na koláče, zákusky i vánoční cukroví — do těsta i na posyp. 1 kg / 60 Kč.
-Q: Hodí se vanilínový cukr do vánočního cukroví?
-A: Ano. Do těsta i na posyp hotového cukroví. Balení 1 kg / 60 Kč.
-Q: Je to vanilka, nebo vanilin?
-A: Vanilínový cukr: jemně mletý cukr s vanilínovým aroma, ne lusk vanilky.
+fact: Není to vanilka z lusku — je to jemně mletý cukr s vanilínovým aroma. Říkáme to rovnou.
+detail: Jemně mletý cukr s vanilínovým aroma v kilovém balení. Do koláčů, cukroví, šlehačky i na posyp. Vyzvednutí Kochánov a Humpolec, rozvoz po Vysočině.
+Q: Je to totéž co vanilkový cukr z obchodu?
+A: Ano, je to vanilínový cukr — cukr s vanilínovým aroma, ne mletý vanilkový lusk.
+Q: Prodáváte i pravou vanilku?
+A: Ne.
 
 ## Recepty
 ### Šišky s mákem
@@ -169,7 +175,7 @@ Q: Jak dlouho trvá příprava strapaček?
 A: Asi 30 minut: těsto podle návodu, halušky vařit než vyplavou, zelí 10 minut povařit, slaninu osmažit.
 
 ### Bebe řezy s čokoládovým pudingem
-url: https://www.juzlova.cz/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/
+url: https://www.juzlova.cz/bebe-rezy-s-cokoladovym-pudinkem-recept/
 image: https://www.juzlova.cz/img/bebe-rezy.webp
 prep: PT25M cook: PT0M total: PT25M yield: 12
 summary: Rádi byste pohostili návštěvu, ale nejste zrovna Jamie Oliver? Nepečené bebe řezy zvládne opravdu každý.
@@ -215,7 +221,7 @@ Q: Na kolik stupňů péct šlehačkovou roládu?
 A: 8 minut na 180 °C, troubu neotevírejte. Po vychladnutí potřete šlehačkou a srolujte.
 
 ### Domácí perník
-url: https://www.juzlova.cz/domaci-pernik-recept-podle-jirina-juzlova/
+url: https://www.juzlova.cz/hrnickovy-pernik-recept/
 image: https://www.juzlova.cz/img/domaci-pernik.webp
 prep: PT10M cook: PT25M total: PT35M yield: 28
 summary: Hrníčkový perník, který si zamilujete pro snadnou přípravu i výbornou chuť. Nepotřebujete váhu — vystačíte si s hrnečkem.
@@ -240,7 +246,7 @@ Q: Jak poznám, že je perník upečený?
 A: Dřevěným párátkem — po zapíchnutí musí zůstat čisté, bez přilepeného těsta.
 
 ### Bramborovo-tvarohové knedlíky s jahodami
-url: https://www.juzlova.cz/bramborovo-tvarohove-knedliky-s-jahodami/
+url: https://www.juzlova.cz/tvarohove-knedliky-s-jahodami-recept/
 image: https://www.juzlova.cz/img/bramborovo-tvarohove-knedliky.webp
 prep: PT15M cook: PT5M total: PT20M yield: 4
 summary: Léto je tady a s ním i dozrávání jahod. Jednoduchý a rychlý recept, kterým za 20 minut potěšíte i největší mlsouny.
@@ -453,9 +459,9 @@ Q: Proč se Baileys přidává až po povaření datlí?
 A: Mimo plotnu — delší var by vyhnal alkohol a ztlumil chuť likéru. Vody je 180 ml (o 100 ml méně než v původním receptu), právě o množství Baileys.
 
 ## Místa a velkoobchod
-### Objednávka po celé České republice
-url: https://www.juzlova.cz/objednavka-cesko/
-fact: Jůzlová posílá směsi po celé České republice. Objednávka telefonem nebo formulářem. Ceník platí v dílně; doprava zvlášť.
+### Objednávka po celém Česku: zavoláte nebo napíšete, my domluvíme vyzvednutí, rozvoz nebo balík
+url: https://www.juzlova.cz/objednavka/
+fact: Objednáte telefonem, e-mailem nebo formulářem. Vyzvednutí Kochánov a Humpolec zdarma, rozvoz po Vysočině, balík kamkoli po Česku. Ceny jako v dílně, doprava zvlášť.
 Q: Objednáváte po celém Česku?
 A: Ano. Dílna je na Vysočině; zásilku nebo rozvoz domluvíme. Cena na webu je jen za zboží.
 Q: Máte e-shop?
@@ -523,9 +529,9 @@ A: Ne. Vzorky ani ochutnávky nenabízíme.
 Q: Kde vás najdu na mapě?
 A: Google: Juzlova - Potravinářské směsi. Seznam: mapy.cz firma 12906730.
 
-### Pro návštěvníky a cestující
-url: https://www.juzlova.cz/navstevnikum/
-fact: Jedete přes Vysočinu? Směsi Jůzlová vyzvednete v Kochánově 40, 582 53 po telefonu. Ceny platí v dílně.
+### Jedete přes Vysočinu? Zavolejte a vyzvedněte si 5 kg knedlíků v Kochánově cestou
+url: https://www.juzlova.cz/pro-navstevniky/
+fact: Cestujete přes Vysočinu? Po telefonu si v Kochánově 40 nebo v Humpolci vyzvednete knedlíky v prášku, puding a kakao za ceníkové ceny. Vzorky nenabízíme.
 Q: Můžu přijet bez ohlášení?
 A: Ne. Nejdřív zavolejte +420 728 466 141 nebo +420 607 629 931.
 Q: Prodáváte u silnice?
@@ -610,32 +616,47 @@ Q: Je to totéž co zásilka Čechům v EU?
 A: Ne. Češi v EU mají vlastní stránku pro domácnosti. Tady jsou provozovny.
 
 ## FAQ
-Q: Kde sídlí Jůzlová a jak objednat?
-A: Provozovna je Kochánov 40, 582 53, 12 km od Havlíčkova Brodu. Objednávky po telefonu +420 728 466 141 (Jiřina Jůzlová) nebo +420 607 629 931 (Jiří Jůzl), e-mailem juzlj@seznam.cz. Otevřeno denně 8:00–19:00 po telefonické domluvě.
+Q: Jak u vás objednám, když nemáte e-shop?
+A: Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz, nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme.
 
-Q: Dovážíte zboží a kde je odběr zdarma?
-A: Vyzvednutí v dílně Kochánov 40, 582 53 je zdarma. Druhý odběr v Humpolci u Pivovaru Bernard je také zdarma, den a hodinu domluvíme. Rozvoz po Vysočině je zdarma od 5000 Kč. Do Humpolce a Havlíčkova Brodu zdarma od 1000 Kč. Do Jihlavy zdarma od 3000 Kč. Jinde dopravu naceníme; můžete použít i vlastního dopravce.
+Q: Kde si zboží vyzvednu zdarma?
+A: V dílně Kochánov 40, 582 53, nebo v Humpolci v okolí Pivovaru Bernard. Vždy po telefonické domluvě, denně 8:00–19:00.
 
-Q: Jaké jsou aktuální ceny směsí Jůzlová?
-A: Bramborové knedlíky v prášku 5 kg / 250 Kč. Chlupaté knedlíky (bosáky) 5 kg / 260 Kč. Vanilkový puding bez lepku 1 kg / 60 Kč nebo 400 g / 30 Kč. Kakao holandského typu 500 g / 270 Kč. Vanilínový cukr 1 kg / 60 Kč. Ceny platí při vyzvednutí v dílně. Uvedená cena je jen za zboží.
+Q: Dáváte vzorky nebo ochutnávky?
+A: Ne. Objednáváte hotová balení. Na první vyzkoušení je puding ve 400g balení za 30 Kč.
 
-Q: Je vanilkový puding Jůzlová bez lepku?
-A: Ano. Základem je kukuřičný škrob, který lepek neobsahuje. Čokoládovou chuť mu dáte kakaem holandského typu — kakaový puding jako hotovou směs nevedeme.
+Q: Platím předem, nebo při převzetí?
+A: Při vyzvednutí a rozvozu platíte při převzetí. U balíků a zásilek do EU pošleme celkovou částku předem a odešleme po jejím odsouhlasení.
 
-Q: Jaký je rozdíl mezi bramborovými a chlupatými knedlíky?
-A: Bramborové knedlíky v prášku jsou klasické těsto z mouky KLASA a sušených bramborových vloček — na knedlíky, šišky, krokety i gnocchi. Chlupaté knedlíky (bosáky) jsou podle tradiční receptury, hotové za 15 minut, typicky se zelím, uzeným nebo jako strapačky/halušky.
+Q: Kdy je rozvoz zdarma?
+A: Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč. Pro kuchyně do Brna od 5000 Kč.
 
-Q: Co je kakao holandského typu 21 % tuku?
-A: Alkalizovaný cukrářský kakaový prášek s 20–22 % kakaového másla. Je tmavší, méně kyselý a krémovější než přírodní kakao. Bez přidaného cukru (přirozené cukry 0,9 g / 100 g), veganské, bez 14 alergenů EU, lepek pod 20 ppm. Balení 500 g / 270 Kč.
+Q: Posíláte balíky po celém Česku?
+A: Ano. Dopravu naceníme předem podle váhy a místa; můžete použít i vlastního dopravce.
 
-Q: Kolik porcí je z 5 kg knedlíků v prášku?
-A: Z pětikilogramového balení bramborových knedlíků připravíte přílohu zhruba pro 60–70 porcí. Chlupaté knedlíky z 5 kg pokryjí rodinné vaření na více dnů.
+Q: Posíláte do zahraničí?
+A: Ano, do Německa, Rakouska, na Slovensko, do Polska a jinam v EU. Platíte dopravu, krabici, pojištění a bublinkovou fólii; částku vidíte před odesláním.
 
-Q: Jsou recepty na webu volně k použití?
-A: Ano. Třináct receptů z našich směsí — od šišek s mákem po věnečky a sticky toffee pudding — je na webu zdarma, ve čtyřech jazycích, se surovinami, postupem a fotografiemi.
+Q: Z čeho jsou knedlíky v prášku?
+A: Z pšeničné mouky z mlýna v Havlíčkově Brodě, který vede naše širší rodina, a ze sušených bramborových vloček. Zaděláváte jen vodou; vejce, mléko nebo strouhanou bramboru přidáte podle zvyku.
 
-Q: Kde najdu hodnocení zákazníků?
-A: Na této stránce ukazujeme hvězdičky z Google Maps a Seznam Firmy.cz — čísla bereme z těchto profilů a odkazujeme přímo na ně.
+Q: Je vanilkový puding opravdu bez lepku?
+A: Ano. Základem je kukuřičný škrob, který lepek neobsahuje. Kakaový puding jako hotovou směs nevedeme — čokoládový krém vznikne zamícháním našeho kakaa.
+
+Q: Kolik tuku má vaše kakao?
+A: 20–22 % kakaového másla. Podle práva EU musí mít kakaový prášek nejméně 20 %; pod tím je to kakao se sníženým obsahem tuku. Bez přidaného cukru, bez 14 alergenů EU, lepek pod 20 ppm.
+
+Q: Je vanilínový cukr pravá vanilka?
+A: Ne. Je to jemně mletý cukr s vanilínovým aroma. Říkáme to rovnou v názvu.
+
+Q: Kolik porcí je z 5 kg knedlíků?
+A: Zhruba 60–70 porcí přílohy. Jeden pytel vystačí na sezónu nedělních obědů.
+
+Q: Kolik pudingu dát místo sáčku z obchodu?
+A: Běžný sáček je zhruba 40 g na 500 ml mléka. Z kila uvaříte asi 25 pudingů.
+
+Q: Jak směsi skladovat?
+A: V suchu a zavřené. Kakao mimo silné pachy, ideálně při 15–20 °C.
 
 Obsah obnovujeme každé čtvrtletí nebo při změně cen a sortimentu.
-updated: 2026-09-03
+updated: 2026-09-16

@@ -62,6 +62,27 @@ in this codebase were invisible in the markup and only showed up on screen: the
 hero headline sat at opacity 0 on load, and an invisible scroll-film act was
 swallowing clicks meant for the button beneath it.
 
+## URLs, slugs and redirects (2026-09-16)
+
+- Every page has a stable **page id** (`kdo_jsme`, `bramborove_knedliky`, a
+  recipe's historical Czech slug…). The public slug is looked up per language in
+  `SLUGS` in `scripts/build_site.py` — exact keyword translations, hyphens only,
+  no brand or personal names (`/de/kartoffelknoedel-mischung/`,
+  `/en/potato-dumpling-mix/`, `/sk/zemiakove-knedle-v-prasku/`).
+- hreflang uses region codes (`cs-CZ`, `sk-SK`, `de-DE` + `de-AT` on the same
+  URL, `en`, `x-default` → Czech). Canonical, hreflang and sitemap URLs are the
+  same string by construction (`url_of(lang, pid)`).
+- Local landing pages (`vysocina`, `humpolec`, `velkoobchod-*`…) are **Czech
+  only**: not built for en/de/sk, no hreflang set, not in the foreign sitemaps.
+- Renaming a slug: change `SLUGS`, add the old slug to `LEGACY_REDIRECTS`,
+  rebuild. The build writes meta-refresh stubs at every old path plus
+  `redirects.conf` (nginx `rewrite … permanent`, included by `nginx.conf`) and
+  `_redirects` (Netlify). Never delete an old directory by hand.
+- Messaging rules and the copy rationale live in `docs/messaging/`. Keep one
+  H1 per page, one primary CTA (call Jiřina), each fact once per page, no
+  taste claims ("k nerozeznání"), no supermarket multipliers, no invented
+  scores. Each page owns its own FAQ; the home page has none.
+
 ## SITE_BASE
 
 `build_site.py` builds every absolute URL from `SITE_BASE`, which defaults to

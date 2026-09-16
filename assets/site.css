@@ -1267,3 +1267,18 @@ article.page--prices { max-width: 920px; }
 @media (prefers-reduced-motion: reduce) {
   .team-card, .b2b-tile { opacity: 1; transform: none; animation: none; }
 }
+
+/* ── 2026-09 messaging rewrite ── */
+.cta-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.2rem 0 1.6rem; }
+.cta-row .btn { margin: 0; }
+.btn.ghost.dark { border-color: var(--ink); color: var(--ink); }
+.btn.ghost.dark:hover { border-color: var(--gold-deep); color: var(--gold-deep); }
+.hero .btn.ghost.dark { border-color: rgba(245,239,228,.5); color: #f5efe4; }
+.deliver-list { list-style: none; padding: 0; margin: 1rem 0 1.4rem; display: grid; gap: .6rem; max-width: 60ch; }
+.deliver-list li { padding: .7rem 1rem; border-left: 3px solid var(--gold); background: #fff; }
+.price-card .price-note { margin: .6rem 0 0; }
+.tbl-wrap { overflow-x: auto; }
+table.price-units td:nth-child(3) { white-space: nowrap; font-weight: 600; }
+.tip { border-left: 3px solid var(--gold); padding: .6rem 1rem; background: var(--cream); color: var(--ink-soft); }
+.reviews-card--link { justify-content: center; }
+.faq h2 { margin-top: 1.6rem; }

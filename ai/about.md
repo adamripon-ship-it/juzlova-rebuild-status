@@ -12,4 +12,4 @@
 - Neprodáváme kakaový puding. Čokoládový krém = vanilkový puding + kakao.
 - Bez vzorků. Objednávka telefonem, e-mailem nebo formulářem.
 - Web: https://www.juzlova.cz/
-- Aktualizováno: 2026-09-03
+- Aktualizováno: 2026-09-16

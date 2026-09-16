@@ -16,99 +16,99 @@
       "id": "bramborove_knedliky",
       "name": "Potato dumpling mix",
       "price": "250 Kč",
-      "url": "https://www.juzlova.cz/en/bramborove_knedliky/"
+      "url": "https://www.juzlova.cz/en/potato-dumpling-mix/"
     },
     {
       "id": "chlupate_knedliky",
-      "name": "Hairy dumpling mix (bosáky)",
+      "name": "Raw-potato dumpling mix (chlupaté knedlíky)",
       "price": "260 Kč",
-      "url": "https://www.juzlova.cz/en/chlupate-knedliky/"
+      "url": "https://www.juzlova.cz/en/hairy-potato-dumpling-mix/"
     },
     {
       "id": "vanilkovy_pudink",
-      "name": "Gluten-free vanilla pudding",
+      "name": "Gluten-free vanilla pudding powder",
       "price": "60 Kč / 30 Kč",
-      "url": "https://www.juzlova.cz/en/vanilkovy_pudink/"
+      "url": "https://www.juzlova.cz/en/gluten-free-vanilla-pudding-powder/"
     },
     {
       "id": "kakao_holandskeho_typu",
       "name": "Dutch-process cocoa",
       "price": "270 Kč",
-      "url": "https://www.juzlova.cz/en/kakao-holandskeho-typu/"
+      "url": "https://www.juzlova.cz/en/dutch-process-cocoa-powder/"
     },
     {
       "id": "vanilkovy_cukr",
-      "name": "Vanilla sugar",
+      "name": "Vanillin sugar",
       "price": "60 Kč",
-      "url": "https://www.juzlova.cz/en/vanilkovy-cukr/"
+      "url": "https://www.juzlova.cz/en/vanilla-sugar/"
     }
   ],
   "recipes": [
     {
       "slug": "sisky-s-makem-recept",
       "name": "Poppy-seed rolls (šišky s mákem)",
-      "url": "https://www.juzlova.cz/en/sisky-s-makem-recept/"
+      "url": "https://www.juzlova.cz/en/poppy-seed-potato-rolls/"
     },
     {
       "slug": "hruskovy-kolac-s-vanilkovym-pudinkem-recept",
       "name": "Pear cake with vanilla pudding",
-      "url": "https://www.juzlova.cz/en/hruskovy-kolac-s-vanilkovym-pudinkem-recept/"
+      "url": "https://www.juzlova.cz/en/pear-cake-with-vanilla-pudding/"
     },
     {
       "slug": "strapacky-se-zelim-a-slaninou-recept",
       "name": "Strapačky with cabbage and bacon",
-      "url": "https://www.juzlova.cz/en/strapacky-se-zelim-a-slaninou-recept/"
+      "url": "https://www.juzlova.cz/en/strapacky-cabbage-and-bacon/"
     },
     {
       "slug": "podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem",
       "name": "Bebe biscuit slices with chocolate pudding",
-      "url": "https://www.juzlova.cz/en/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem/"
+      "url": "https://www.juzlova.cz/en/no-bake-biscuit-pudding-slices/"
     },
     {
       "slug": "slehackova-rolada-recept",
       "name": "Whipped cream roulade",
-      "url": "https://www.juzlova.cz/en/slehackova-rolada-recept/"
+      "url": "https://www.juzlova.cz/en/whipped-cream-roulade/"
     },
     {
       "slug": "domaci-pernik-recept-podle-jirina-juzlova",
       "name": "Homemade gingerbread (perník)",
-      "url": "https://www.juzlova.cz/en/domaci-pernik-recept-podle-jirina-juzlova/"
+      "url": "https://www.juzlova.cz/en/cup-measure-gingerbread/"
     },
     {
       "slug": "bramborovo-tvarohove-knedliky-s-jahodami",
       "name": "Potato-and-curd dumplings with strawberries",
-      "url": "https://www.juzlova.cz/en/bramborovo-tvarohove-knedliky-s-jahodami/"
+      "url": "https://www.juzlova.cz/en/strawberry-curd-dumplings/"
     },
     {
       "slug": "rychle-venecky-ci-vetrnicky-recept",
       "name": "Quick choux wreaths or puffs",
-      "url": "https://www.juzlova.cz/en/rychle-venecky-ci-vetrnicky-recept/"
+      "url": "https://www.juzlova.cz/en/quick-choux-rings-and-puffs/"
     },
     {
       "slug": "venecky-s-vanilkovym-kremem-recept",
       "name": "Choux wreaths with vanilla cream",
-      "url": "https://www.juzlova.cz/en/venecky-s-vanilkovym-kremem-recept/"
+      "url": "https://www.juzlova.cz/en/choux-rings-with-vanilla-cream/"
     },
     {
       "slug": "kremrole-recept",
       "name": "Cream horns (kremrole)",
-      "url": "https://www.juzlova.cz/en/kremrole-recept/"
+      "url": "https://www.juzlova.cz/en/cream-horns/"
     },
     {
       "slug": "minivetrnicky-recept",
       "name": "Mini choux buns (minivětrníčky)",
-      "url": "https://www.juzlova.cz/en/minivetrnicky-recept/"
+      "url": "https://www.juzlova.cz/en/mini-cream-puffs/"
     },
     {
       "slug": "karamelove-vetrniky-recept",
       "name": "Caramel větrníky",
-      "url": "https://www.juzlova.cz/en/karamelove-vetrniky-recept/"
+      "url": "https://www.juzlova.cz/en/caramel-cream-puffs/"
     },
     {
       "slug": "irsky-sticky-toffee-pudding-recept",
       "name": "Irish sticky toffee pudding",
-      "url": "https://www.juzlova.cz/en/irsky-sticky-toffee-pudding-recept/"
+      "url": "https://www.juzlova.cz/en/sticky-toffee-pudding/"
     }
   ],
-  "updated": "2026-09-03"
+  "updated": "2026-09-16"
 }

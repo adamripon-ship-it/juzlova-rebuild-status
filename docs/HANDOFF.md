@@ -3,6 +3,15 @@
 Last verified 2026-08-31 by fetching the live site. For how to work on the
 code, read [`AGENTS.md`](../AGENTS.md); this file is history and open questions.
 
+## 2026-09-16 — translated slugs and messaging rewrite
+
+All copy was rewritten from `docs/messaging/` (persona research, rules, page by
+page copy). URLs changed to per-language keyword slugs with region hreflang;
+every old URL 301s via `redirects.conf` (nginx) and meta-refresh stubs. Local
+pages are Czech-only. Open items for the owners are in
+`docs/messaging/06-needs-verification.md` (KLASA certificate for the flour,
+cocoa spec sheet, EU parcel payment method, wholesale lead time).
+
 ## The site is live, in four languages
 
 `https://www.juzlova.cz` serves the `main` build. Verified by fetching `/en/`:
