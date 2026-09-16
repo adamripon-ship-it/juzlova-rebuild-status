@@ -66,4 +66,4 @@ Firmennotizen: https://www.juzlova.cz/ai/about.md
 - [Eine Seite Fakten für Suche und Sprachmodelle.](https://www.juzlova.cz/ai/about.md)
 - [FAQ JSON](https://www.juzlova.cz/ai/faq.json)
 
-updated: 2026-09-16
+updated: 2026-09-17

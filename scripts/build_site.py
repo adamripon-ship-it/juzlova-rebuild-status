@@ -38,6 +38,7 @@ from seo_data import (
     SITEMAP_PRIORITY, compose_meta, keywords_for, rating_payload,
 )
 from team_data import TEAM
+import cocoa_origin
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -59,8 +60,8 @@ def _load_dotenv():
 
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
-TODAY = "2026-09-16"
-ASSET_VER = "20260916a"
+TODAY = "2026-09-17"
+ASSET_VER = "20260917a"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -255,6 +256,93 @@ PRODUCT_IMG = {
     "kakao_holandskeho_typu": "produkt-kakao.webp",
     "vanilkovy_cukr": "vanilkovy-cukr.webp",
 }
+# Product -> botanical object (docs/design/01-brand-identity.md §5): the
+# silhouette on the product panel and the mask that cuts its photo.
+PRODUCT_OBJECT = {
+    "bramborove_knedliky": "potato",
+    "chlupate_knedliky": "wheat",
+    "vanilkovy_pudink": "vanilla",
+    "kakao_holandskeho_typu": "cocoa",
+    "vanilkovy_cukr": "sugarcane",
+}
+# One external sprite for the white silhouettes (cached across pages); the
+# photo masks must live in the page, so each page inlines only the ones it uses.
+SPRITE_FILE = ROOT / "assets" / "botanicals" / "sprite.svg"
+MASKS_FILE = ROOT / "assets" / "botanicals" / "masks.svg"
+_SPRITE = SPRITE_FILE.read_text(encoding="utf-8")
+SYMBOL_VB = dict(re.findall(r'<symbol id="([^"]+)"[^>]*viewBox="([^"]+)"', _SPRITE))
+MASKS = {m.group(1): m.group(0)
+         for m in re.finditer(r'<clipPath id="(m-[^"]+)".*?</clipPath>', MASKS_FILE.read_text(encoding="utf-8"), re.S)}
+STICKER_FILTER = (
+    '<filter id="sticker" x="-10%" y="-10%" width="120%" height="120%">'
+    '<feMorphology in="SourceAlpha" operator="dilate" radius="6" result="d"/>'
+    '<feFlood flood-color="#ffffff" result="w"/>'
+    '<feComposite in="w" in2="d" operator="in" result="o"/>'
+    '<feMerge><feMergeNode in="o"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'
+)
+ARROW = ('<svg class="arrow" viewBox="0 0 22 14" aria-hidden="true">'
+         '<path d="M0,7 H20 M14,1 l6,6 -6,6"/></svg>')
+MORE_ARROW = ('<svg viewBox="0 0 72 12" aria-hidden="true">'
+              '<path d="M0,6 H70 M62,1 l8,5 -8,5"/></svg>')
+PIN_ICON = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13'
+            'a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>')
+
+
+def sprite_href(depth):
+    return f"{asset_rel(depth)}assets/botanicals/sprite.svg?v={ASSET_VER}"
+
+
+def defs_html(masks=(), sticker=False):
+    """Inline SVG defs: the masks this page uses plus the sticker outline filter."""
+    parts = [MASKS[m] for m in masks if m in MASKS]
+    if sticker:
+        parts.append(STICKER_FILTER)
+    if not parts:
+        return ""
+    return ('<svg class="visually-hidden" width="0" height="0" focusable="false" aria-hidden="true">'
+            f'<defs>{"".join(parts)}</defs></svg>')
+
+
+def sil(depth, symbol, style, cls="art", speed=None, rotate=None, origin=None):
+    """A white silhouette from the sprite, positioned by inline style.
+
+    rotate is emitted twice: in the style (no-JS state) and as data-rotate so
+    the parallax script keeps it when it rewrites transform.
+    """
+    vb = SYMBOL_VB.get(symbol, "0 0 1024 768")
+    st = style.rstrip(";")
+    if rotate:
+        st += f";transform:rotate({rotate})"
+    if origin:
+        st += f";--o:{origin}"
+    attrs = f' data-speed="{speed}"' if speed is not None else ""
+    if rotate:
+        attrs += f' data-rotate="{rotate}"'
+    return (f'<svg class="{cls}" style="{esc(st)}" viewBox="{vb}" aria-hidden="true" focusable="false"{attrs}>'
+            f'<use href="{sprite_href(depth)}#{symbol}"/></svg>')
+
+
+def shape_html(obj, img, alt, href=None, style="", width=1200, height=900):
+    """A photo cut to a product outline. Real <img> so it stays indexable."""
+    st = f' style="{esc(style)}"' if style else ""
+    tag = (f'<span class="shape {obj}"{st}><img src="{img}" alt="{esc(alt)}" width="{width}" height="{height}" '
+           f'loading="lazy" decoding="async"></span>')
+    if href:
+        return f'<a class="shape-link lift" href="{href}">{tag}</a>'
+    return f'<span class="lift">{tag}</span>'
+
+
+def cutout_html(assets, name, alt, cls="", width=1200, height=1200, speed=None, eager=False):
+    attrs = f' data-speed="{speed}"' if speed is not None else ""
+    load = 'fetchpriority="high"' if eager else 'loading="lazy"'
+    return (f'<figure class="cutout {cls}"{attrs}><img src="{assets}assets/botanicals/cutouts/{name}.webp" '
+            f'alt="{esc(alt)}" width="{width}" height="{height}" {load} decoding="async"></figure>')
+
+
+def more_link(href, label):
+    return f'<a class="more" href="{href}"><u>{esc(label)}</u>{MORE_ARROW}</a>'
+
+
 RECIPE_IMG = {
     "sisky-s-makem-recept": "sisky-s-makem.webp",
     "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac.webp",
@@ -782,6 +870,7 @@ def nav(L, depth, active, pid):
     <img class="wordmark on-light" src="{assets}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200">
     <img class="wordmark on-dark" src="{assets}img/logo-wordmark-white.png" alt="" aria-hidden="true" width="650" height="200">
   </a>
+  <a class="btn gold nav-cta" href="{TEL_JIRINA}"><span class="cta-long">{esc(ui['hero_cta'])}</span><span class="cta-short">{esc(ui['cta_short'])}</span></a>
   <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="{esc(ui['menu_open'])}" data-open-label="{esc(ui['menu_open'])}" data-close-label="{esc(ui['menu_close'])}">
     <span class="menu-toggle-bars" aria-hidden="true"></span>
   </button>
@@ -804,47 +893,61 @@ def nav(L, depth, active, pid):
 
 
 def footer(L, depth):
+    """Reference footer: hairline rule with the logo, link rows, phone, grey
+    marks, watermark, and the call-back form (posts to /api/contact)."""
     assets = asset_rel(depth)
     pages = page_rel(L["code"], depth)
     ui = L["ui"]
     lg = L["code"]
+    home = pages if pages else "./"
     prods = "".join(
         f'<a href="{pages}{slug_of(lg, k)}/">{esc(L["products"][k]["name"])}</a>'
         for k in PRODUCT_SLUGS)
-    recs = "".join(
-        f'<a href="{pages}{slug_of(lg, slug)}/">{esc(L["recipes"].get(slug, {}).get("name", slug))}</a>'
-        for slug in RECIPE_SLUGS)
+    company = [
+        ("kdo_jsme", ui["nav_about"]), ("ceny", ui["nav_prices"]), ("recepty", ui["nav_recipes"]),
+        ("kde_nas_najdete", ui["nav_delivery"]), ("velkoobchod", ui["nav_b2b"]), ("do_eu", ui["nav_d2c"]),
+        ("faq", ui["nav_faq"]), ("kontakt", ui["nav_contact"]),
+    ]
+    comp = "".join(f'<a href="{pages}{path_of(lg, k)}">{esc(lbl)}</a>' for k, lbl in company)
     local = ""
     if lg == "cs":
         geo = "".join(
             f'<a href="{pages}{GEO_SLUGS[k]}/">{esc(AEO_PAGES["cs"][k]["h1"])}</a>' for k in GEO_SLUGS)
         b2b = "".join(
             f'<a href="{pages}{B2B_SLUGS[k]}/">{esc(AEO_PAGES["cs"][k]["h1"])}</a>' for k in B2B_SLUGS)
-        local = (f"<h4>{esc(ui.get('geo_hub') or '')}</h4>{geo}"
-                 f"<h4>{esc(ui.get('b2b_hub') or '')}</h4>{b2b}")
+        local = f'<nav class="small" aria-label="{esc(ui.get("footer_kitchens") or "")}">{geo}{b2b}</nav>'
+    form = f"""<form class="callback" data-contact-form data-form-type="callback" data-lang="{lg}" data-i18n-success="{esc(ui['cb_ok'])}" data-i18n-error="{esc(ui['form_error'])}" data-i18n-captcha="{esc(ui['form_captcha'])}" data-i18n-sending="{esc(ui['form_sending'])}" data-i18n-need-contact="{esc(ui['cb_err'])}" action="/api/contact" method="post" novalidate>
+        <div class="form-top">
+          <h3>{esc(ui['cb_h'])}</h3>
+          <input class="field" type="text" name="name" placeholder="{esc(ui['cb_name'])}" aria-label="{esc(ui['cb_name'])}" autocomplete="name" maxlength="200" required>
+        </div>
+        <div class="form-mid"><input class="field" type="tel" name="phone" inputmode="tel" placeholder="{esc(ui['cb_tel'])}" aria-label="{esc(ui['cb_tel'])}" autocomplete="tel" maxlength="40" required></div>
+        <label class="hp" aria-hidden="true">{esc(ui['form_honeypot'])}<input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="message" value="{esc(ui['cb_message'])}">
+        <input type="hidden" name="buyer" value="household">
+        <div class="form-bot">
+          <p class="note">{esc(ui['cb_note'])}</p>
+          <button class="btn gold" type="submit"><span>{esc(ui['cb_btn'])}</span>{ARROW}</button>
+        </div>
+        <div class="turnstile-slot" data-turnstile-slot></div>
+        <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
+      </form>"""
     return f"""<footer class="site">
-  <img class="footmark" src="{assets}img/mark-white.png" alt="" aria-hidden="true" width="640" height="640">
+  <img class="wm" src="{assets}img/icon-512.png" alt="" aria-hidden="true" width="512" height="512" loading="lazy">
   <div class="wrap">
-    <div class="cols">
+    <div class="rule"><a href="{home}" aria-label="Jůzlová.cz"><img src="{assets}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200" loading="lazy"></a></div>
+    <div class="foot">
       <div>
-        <img class="footlogo" src="{assets}img/logo-wordmark-white.png" alt="Jůzlová" width="650" height="200">
-        <p style="font-size:.92rem;margin:.2rem 0 1rem">{esc(ui['footer_note'])}</p>
-        <p style="font-size:.88rem">{esc(ui['footer_addr'])}<br>+420 728 466 141 · +420 607 629 931<br><a href="mailto:juzlj@seznam.cz" style="display:inline">juzlj@seznam.cz</a></p>
-      </div>
-      <div><h4>{esc(ui['footer_products'])}</h4>{prods}</div>
-      <div><h4>{esc(ui['footer_recipes'])}</h4>{recs}</div>
-      <div><h4>{esc(ui['footer_company'])}</h4>
-        <a href="{pages}{path_of(lg, 'kdo_jsme')}">{esc(ui['nav_about'])}</a>
-        <a href="{pages}{path_of(lg, 'kde_nas_najdete')}">{esc(ui['nav_delivery'])}</a>
-        <a href="{pages}{path_of(lg, 'velkoobchod')}">{esc(ui['nav_b2b'])}</a>
-        <a href="{pages}{path_of(lg, 'do_eu')}">{esc(ui['nav_d2c'])}</a>
-        <a href="{pages}{path_of(lg, 'ceny')}">{esc(ui['nav_prices'])}</a>
-        <a href="{pages}{path_of(lg, 'faq')}">{esc(ui['nav_faq'])}</a>
-        <a href="{pages}{path_of(lg, 'kontakt')}">{esc(ui['nav_contact'])}</a>
+        <nav aria-label="{esc(ui['footer_company'])}">{comp}</nav>
+        <nav class="small" aria-label="{esc(ui['footer_products'])}">{prods}</nav>
         {local}
+        <a class="phone" href="{TEL_JIRINA}">+420 728 466 141</a><br>
+        <a class="mail" href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a>
+        <div class="marks"><span>{PIN_ICON}</span><span>Kochánov 40</span><span>Humpolec</span><span>{esc(ui['marks'])}</span></div>
       </div>
+      {form}
     </div>
-    <div class="fine"><span>© 2004–2026 Jůzlová s.r.o. · IČO 45900124 · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span><span>{esc(ui['open_hours'])}</span></div>
+    <div class="fine"><span>{esc(ui['footer_addr'])}</span><span>{esc(ui['open_hours'])}</span><span>© 2004–2026 Jůzlová s.r.o. · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span></div>
   </div>
 </footer>"""
 
@@ -1075,7 +1178,7 @@ def people_jsonld():
     ]
 
 
-def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None, body_class="", keywords="", meta_kind="home", meta_key="", extra_head=""):
+def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None, body_class="", keywords="", meta_kind="home", meta_key="", extra_head="", defs=""):
     lg = L["code"]
     title, desc = compose_meta(lg, meta_kind, meta_key, title, desc)
     path = path_of(lg, pid)
@@ -1116,6 +1219,8 @@ def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None,
 <meta property="og:image" content="{ogimg}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="preload" href="{p}assets/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{p}assets/fonts/geologica-var.woff2" as="font" type="font/woff2" crossorigin>
 {extra_head}<link rel="stylesheet" href="{p}assets/site.css?v={ASSET_VER}">
 <link rel="icon" href="{p}img/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="{p}img/icon-32.png">
@@ -1123,7 +1228,7 @@ def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None,
 <link rel="icon" type="image/png" sizes="192x192" href="{p}img/icon-192.png">
 <link rel="apple-touch-icon" href="{p}img/apple-touch-icon.png">
 <link rel="manifest" href="{p}site.webmanifest">
-<meta name="theme-color" content="#021536">
+<meta name="theme-color" content="#D4AF37">
 {ld}
 {analytics_html()}
 </head>
@@ -1132,6 +1237,7 @@ def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None,
   <div class="wrap">{header_inner}</div>
 </header>
 {nav_backdrop}
+{defs}
 {body}
 {footer(L, depth)}
 {consent_bar_html(L)}
@@ -1308,152 +1414,194 @@ def product_img_src(depth, key):
 HERO_STILLS = ["kochanov-letecky.webp", "hero.webp"]
 
 
+def _h1_with_num(text):
+    """Wrap the first number of the headline in the light numeral span."""
+    return re.sub(r"(\d+)", r'<span class="num">\1</span>', esc(text), count=1)
+
+
+def _stat(num, unit, label, start=None):
+    frm = f' data-from="{start}"' if start is not None else ""
+    unit_html = f" {unit}" if unit else ""
+    return (f'<div class="stat rv"><span class="n" data-count="{num}"{frm}>{num}</span>{unit_html}'
+            f'<small>{esc(label)}</small></div>')
+
+
 def build_home(L):
     lg = L["code"]
     depth = 0 if lg == "cs" else 1
     ui = L["ui"]
     pages = page_rel(lg, depth)
-    prod_cards = ""
+    assets = asset_rel(depth)
+    sprite = sprite_href(depth)
+    prices = f"{pages}{path_of(lg, 'ceny')}"
+
+    # 1 · hero: gold, tagline, display headline, two CTAs, cocoa-pod cut-out, price marquee
+    items = ""
     for k in PRODUCT_SLUGS:
         pr = L["products"][k]
-        im = product_img_src(depth, k)
-        imtag = f'<img class="thumb" src="{im}" alt="{esc(pr["name"])}" loading="lazy">' if im else ""
-        prod_cards += f"""<li class="card rv">{imtag}<div class="pad">
-<h3><a href="{pages}{slug_of(lg, k)}/">{esc(pr['name'])}</a></h3>
-<p>{esc(pr['short'])}</p><p class="price">{esc(pr['price'])}</p></div></li>"""
-    rec_slides = ""
-    for slug in HOME_RECIPE_SLUGS:
-        r = L["recipes"].get(slug)
-        if not r:
-            continue
-        im = img_or_none(depth, RECIPE_IMG.get(slug))
-        imtag = (
-            f'<img class="thumb" src="{im}" alt="{esc(r["name"])}" width="1200" height="800" loading="lazy">'
-            if im else ""
-        )
-        rec_slides += f"""<li class="recipes-carousel-slide" aria-label="{esc(r['name'])}">
-<a class="card recipes-carousel-card" href="{pages}{slug_of(lg, slug)}/">{imtag}<div class="pad">
-<h3>{esc(r['name'])}</h3><p>{esc(r.get('teaser',''))}</p></div></a>
-</li>"""
-    rec_carousel = f"""<div class="recipes-carousel" data-recipes-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="{esc(ui['carousel_label'])}" data-status="{esc(ui['carousel_status'])}" data-goto="{esc(ui['carousel_goto'])}">
-  <div class="recipes-carousel-scroller" data-carousel-scroller>
-    <ul class="recipes-carousel-track">{rec_slides}</ul>
+        obj = PRODUCT_OBJECT[k]
+        items += (f'<a class="item" href="{pages}{slug_of(lg, k)}/">{esc(pr["name"])} <b>{esc(pr["price"])}</b>'
+                  f'<svg viewBox="{SYMBOL_VB.get("sil-" + obj, "0 0 1024 768")}" aria-hidden="true">'
+                  f'<use href="{sprite}#sil-{obj}"/></svg></a>')
+    items += (f'<a class="item" href="{prices}">{esc(ui["ticker_pickup"])}'
+              f'<svg viewBox="{SYMBOL_VB.get("sil-beans", "0 0 1024 683")}" aria-hidden="true">'
+              f'<use href="{sprite}#sil-beans"/></svg></a>')
+    items_dup = items.replace('<a class="item"', '<a class="item" tabindex="-1" aria-hidden="true"')
+    hero = f"""<section class="band gold hero">
+  <div class="clip">
+    {sil(depth, "sil-leaf-banana", "left:-16%;bottom:-6%;width:clamp(460px,54vw,780px);opacity:.55", cls="art plx", speed=30, rotate="-10deg", origin="4% 55%")}
+    {sil(depth, "sil-leaf-cocoa", "left:8%;top:10%;width:clamp(150px,15vw,220px);opacity:.95", cls="art plx hide-phone", speed=-20, rotate="-24deg", origin="50% 95%")}
+    {sil(depth, "sil-beans", "right:2%;bottom:1%;width:clamp(150px,14vw,230px);opacity:.9", cls="art plx hide-phone", speed=50, rotate="12deg", origin="50% 90%")}
   </div>
-  <div class="recipes-carousel-bar">
-    <button type="button" class="recipes-carousel-btn" data-carousel-prev aria-label="{esc(ui['carousel_prev'])}">‹</button>
-    <div class="recipes-carousel-dots" data-carousel-dots></div>
-    <button type="button" class="recipes-carousel-btn" data-carousel-next aria-label="{esc(ui['carousel_next'])}">›</button>
-  </div>
-  <p class="visually-hidden" data-carousel-live aria-live="polite"></p>
-</div>"""
-    ticker_items = "".join(
-        f"<span>{esc(L['products'][k]['name'])} · <b>{esc(L['products'][k]['price'])}</b></span>"
-        for k in PRODUCT_SLUGS)
-    ticker_items += f"<span><b>{esc(ui['ticker_pickup'])}</b></span>"
-    still_name = None
-    still = None
-    for name in HERO_STILLS:
-        still = img_or_none(depth, name)
-        if still:
-            still_name = name
-            break
-    hero_preload = ""
-    if still and still_name:
-        phone = img_or_none(depth, "kochanov-letecky-960.webp")
-        srcset = f'{phone} 960w, {still} 2200w' if phone else still
-        sizes = "(max-width: 700px) 960px, 2200px"
-        media = (
-            f'<div class="media"><img src="{still}" srcset="{srcset}" sizes="{sizes}" '
-            f'alt="{esc(ui["hero_img_alt"])}" width="2200" height="1244" '
-            f'fetchpriority="high" decoding="async"></div>'
-        )
-        hero_preload = (
-            f'<link rel="preload" as="image" href="{still}" '
-            f'imagesrcset="{srcset}" imagesizes="{sizes}">\n'
-        )
-    else:
-        media = '<div class="media"><div class="hero-fallback"></div></div>'
-    hero_html = f"""<section class="hero convert">
-  {media}
-  <div class="inner">
-    <div class="est">{esc(ui['est'])}</div>
-    <h1>{esc(ui['hero_h1'])}</h1>
-    <p class="lead">{esc(ui['hero_lead'])}</p>
-    <p class="hero-actions">
-      <a class="btn gold" href="{TEL_JIRINA}">{esc(ui['hero_cta'])}</a>
-      <a class="btn ghost" href="{pages}{path_of(lg, 'ceny')}">{esc(ui['hero_cta2'])}</a>
+  <div class="wrap">
+    <p class="tagline rv">{esc(ui['est'])}</p>
+    <h1 class="display rv">{_h1_with_num(ui['h1_main'])}<span class="h1-sub">{esc(ui['h1_sub'])}</span></h1>
+    <p class="actions rv">
+      <a class="btn white" href="{TEL_JIRINA}"><span>{esc(ui['hero_cta'])}</span>{ARROW}</a>
+      <a class="btn outline" href="{prices}">{esc(ui['hero_cta2'])}</a>
     </p>
+    {cutout_html(assets, "cocoa-pod", ui['alt_cocoa_pod'], cls="hero-obj plx rv", width=1200, height=1174, speed=22, eager=True)}
+  </div>
+  <nav class="marquee" aria-label="{esc(ui['marquee_label'])}">
+    <div class="track">{items}{items_dup}</div>
+    <button type="button" class="marquee-toggle" aria-pressed="false" aria-label="{esc(ui['marquee_pause'])}" data-pause-label="{esc(ui['marquee_pause'])}" data-play-label="{esc(ui['marquee_play'])}"><svg class="ico-pause" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 1h3.5v12H2zM8.5 1H12v12H8.5z"/></svg><svg class="ico-play" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1l10 6-10 6z"/></svg></button>
+  </nav>
+</section>"""
+
+    # 2 · stats: numerals, three product photos in their object outlines, product links
+    def pimg(k):
+        return product_img_src(depth, k)
+    stack = "".join([
+        shape_html("cocoa", pimg("kakao_holandskeho_typu"), L["products"]["kakao_holandskeho_typu"]["name"],
+                   href=f"{pages}{slug_of(lg, 'kakao_holandskeho_typu')}/"),
+        shape_html("vanilla", pimg("vanilkovy_pudink"), L["products"]["vanilkovy_pudink"]["name"],
+                   href=f"{pages}{slug_of(lg, 'vanilkovy_pudink')}/"),
+        shape_html("potato", pimg("bramborove_knedliky"), L["products"]["bramborove_knedliky"]["name"],
+                   href=f"{pages}{slug_of(lg, 'bramborove_knedliky')}/"),
+    ])
+    prod_links = "".join(
+        f'<li><a href="{pages}{slug_of(lg, k)}/">{esc(L["products"][k]["name"])}<span>{esc(L["products"][k]["price"])}</span></a></li>'
+        for k in PRODUCT_SLUGS)
+    stats = f"""<section class="band stats" id="produkty">
+  <div class="wrap">
+    <h2 class="sec center rv">{esc(ui['sec_products'])}</h2>
+    <div class="five">
+      <p class="body bullet prose rv">{esc(ui['why_1_p'])}</p>
+      <div class="stats-left">
+        {_stat(5, "kg", ui['stat_1'])}
+        {_stat(15, "", ui['stat_2'])}
+        {_stat(2004, "", ui['stat_3'], start=1990)}
+      </div>
+      <div class="stack rv">{stack}</div>
+      <div class="stats-right">
+        {_stat(12, "km", ui['stat_4'])}
+        {_stat(21, "%", ui['stat_5'])}
+        {_stat(1, "kg", ui['stat_6'])}
+      </div>
+      <p class="body bullet prose rv">{esc(ui['why_3_p'])}</p>
+    </div>
+    <ul class="prod-links rv" aria-label="{esc(ui['nav_products'])}">{prod_links}</ul>
+    <p class="right rv">{more_link(prices, ui['full_price_list'])}</p>
+  </div>
+</section>"""
+
+    # 3 · journey: wave with leaves, five steps, vanilla cut-out bridging up
+    step_pos = ["left:0;top:66%", "left:20%;top:4%", "left:40%;top:62%", "left:58%;top:0", "left:80%;top:58%"]
+    steps = "".join(
+        f'<div class="step rv" style="{pos}"><b>{i + 1}</b><span>{esc(ui[f"step_{i + 1}"])}</span></div>'
+        for i, pos in enumerate(step_pos))
+    journey = f"""<section class="band gold journey">
+  <div class="clip">
+    {sil(depth, "sil-leaf-banana", "right:-12%;top:-2%;width:clamp(440px,56vw,820px);opacity:.42", cls="art plx", speed=35, rotate="14deg", origin="96% 50%")}
+    {sil(depth, "sil-vine-vanilla", "left:-4%;bottom:-4%;width:clamp(300px,34vw,520px);opacity:.55", cls="art plx", speed=-15, origin="0% 50%")}
+  </div>
+  <div class="wrap">
+    {cutout_html(assets, "vanilla", ui['alt_vanilla'], cls="bridge-up plx rv", width=806, height=1200, speed=28)}
+    <h2 class="sec rv">{esc(ui['journey_h2'])}</h2>
+    <div class="stage">
+      <svg class="wave draw" viewBox="0 0 1200 420" preserveAspectRatio="none" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" aria-hidden="true" focusable="false">
+        <path class="stroke" data-vine data-leaf-at="0.1,0.47,0.66,0.9" data-leaf="sil-leaf-single" data-leaf-size="140" data-leaf-ratio="0.65" data-sprite="{sprite}" d="M-10,300 C150,110 260,110 420,290 S660,470 820,290 S1060,110 1210,290"/>
+      </svg>
+      {steps}
+    </div>
+  </div>
+</section>"""
+
+    # 4 · recipes: three recipe photos in product outlines
+    rec_masks = {"sisky-s-makem-recept": ("potato", ""),
+                 "strapacky-se-zelim-a-slaninou-recept": ("potato", ""),
+                 "hruskovy-kolac-s-vanilkovym-pudinkem-recept": ("vanilla", "--pos:72% 44%")}
+    figs = ""
+    for slug in ("sisky-s-makem-recept", "strapacky-se-zelim-a-slaninou-recept",
+                 "hruskovy-kolac-s-vanilkovym-pudinkem-recept"):
+        r = L["recipes"].get(slug)
+        im = img_or_none(depth, RECIPE_IMG.get(slug))
+        if not r or not im:
+            continue
+        obj, st = rec_masks[slug]
+        href = f"{pages}{slug_of(lg, slug)}/"
+        figs += (f'<figure class="rv">{shape_html(obj, im, r["name"], href=href, style=st)}'
+                 f'<figcaption class="caption"><a href="{href}">{esc(r["name"])}</a></figcaption></figure>')
+    recipes = f"""<section class="band recipes">
+  <div class="wrap">
+    <h2 class="sec center rv">{esc(ui['sec_recipes'])}</h2>
+    <div class="recipes-row">
+      <p class="body bullet prose rv">{esc(ui['sec_recipes_lead'])}</p>
+      {figs}
+    </div>
+    <p class="right rv">{more_link(f"{pages}{path_of(lg, 'recepty')}", ui['all_recipes'])}</p>
+  </div>
+</section>"""
+
+    # 5 · why: three columns, vines with leaves, cocoa silhouette, banana-leaf cut-out
+    why = f"""<section class="band gold why">
+  <div class="wrap">
+    <h2 class="sec rv" style="max-width:16ch">{esc(ui['sec_why'])}</h2>
+    <div class="cols3">
+      <div class="rv"><h3>{esc(ui['why_1_h'])}</h3><p class="body bullet">{esc(ui['why_1_p'])}</p></div>
+      <div class="rv"><h3>{esc(ui['why_2_h'])}</h3><p class="body bullet">{esc(ui['why_2_p'])}</p></div>
+      <div class="rv"><h3>{esc(ui['why_3_h'])}</h3><p class="body bullet">{esc(ui['why_3_p'])}</p></div>
+    </div>
+    <p class="actions start rv"><a class="btn white" href="{pages}{path_of(lg, 'velkoobchod')}"><span>{esc(ui['nav_b2b'])}</span>{ARROW}</a><a class="btn outline" href="{pages}{path_of(lg, 'kde_nas_najdete')}">{esc(ui['nav_delivery'])}</a></p>
+  </div>
+  <svg class="art draw" style="left:0;right:0;bottom:0;width:100%;height:40%" viewBox="0 0 1600 300" preserveAspectRatio="none" fill="none" stroke="#fff" stroke-linecap="round" aria-hidden="true" focusable="false">
+    <path class="stroke" stroke-width="6" data-vine data-leaves="4" data-leaf="sil-leaf-single" data-leaf-size="170" data-leaf-ratio="0.65" data-sprite="{sprite}" d="M-20,180 C200,50 380,310 600,170 S980,30 1200,180 S1500,290 1640,140"/>
+    <path class="stroke" stroke-width="4" opacity=".8" data-vine data-leaves="3" data-leaf="sil-leaf-single" data-leaf-size="130" data-leaf-ratio="0.65" data-sprite="{sprite}" d="M-20,250 C240,140 420,330 700,230 S1050,120 1300,240 S1520,320 1640,210"/>
+  </svg>
+  {sil(depth, "sil-cocoa", "left:50%;bottom:-8%;width:clamp(300px,28vw,420px);transform:translateX(-50%)", cls="art plx", speed=18, origin="60% 5%")}
+  {sil(depth, "sil-sugarcane-leaves", "left:2%;bottom:0;width:clamp(240px,26vw,380px);opacity:.75", cls="art plx", speed=26, origin="50% 100%")}
+  {cutout_html(assets, "leaf-banana", ui['alt_leaf_banana'], cls="why-leaf plx rv", width=1200, height=740, speed=30)}
+</section>"""
+
+    # 6 · white: delivery + reviews, then the newsletter
+    deliver_items = "".join(f"<li>{esc(ui[k])}</li>" for k in ("deliver_1", "deliver_2", "deliver_3"))
+    white = f"""<section class="band split tight" id="doprava">
+  <div class="wrap">
+    <div class="rv">
+      <h2 class="sec">{esc(ui['deliver_h2'])}</h2>
+      <ul class="deliver-list">{deliver_items}</ul>
+      {cta_html(L, depth, ("deliver_btn", "kde_nas_najdete", "nav_delivery"))}
+      <p>{more_link(f"{pages}{path_of(lg, 'do_eu')}", ui['sec_d2c'])}</p>
+    </div>
+    <div class="rv" id="recenze">{reviews_html(L, depth)}</div>
   </div>
 </section>
-<div class="marquee" aria-hidden="true"><div class="track">{ticker_items}{ticker_items}</div></div>"""
-    wshop = img_or_none(depth, "workshop.webp") or img_or_none(depth, "workshop.jpg")
-    why_inner = f"""
-  <p class="kicker" style="color:var(--gold)">{esc(ui['sec_why_kicker'])}</p>
-  <h2 class="sec">{esc(ui['sec_why'])}</h2>
-  <div class="grid c3">
-    <div class="rv"><h3>{esc(ui['why_1_h'])}</h3><p>{esc(ui['why_1_p'])}</p></div>
-    <div class="rv"><h3>{esc(ui['why_2_h'])}</h3><p>{esc(ui['why_2_p'])}</p></div>
-    <div class="rv"><h3>{esc(ui['why_3_h'])}</h3><p>{esc(ui['why_3_p'])}</p></div>
-  </div>"""
-    if wshop:
-        why_band = f"""<section class="plx" data-plx>
-  <div class="plx-img"><img src="{wshop}" alt="" width="2752" height="1536" loading="lazy" decoding="async"></div>
-  <div class="inner"><div class="wrap">{why_inner}</div></div>
+<section class="band tight hairline" id="novinky">
+  <div class="wrap rv">{newsletter_form_html(L)}</div>
 </section>"""
-    else:
-        why_band = f'<section class="band cream"><div class="wrap">{why_inner}</div></section>'
-    deliver_items = "".join(f"<li>{esc(ui[k])}</li>" for k in ("deliver_1", "deliver_2", "deliver_3"))
+
     body = f"""<main id="main">
-{hero_html}
-<section class="band" id="produkty"><div class="wrap">
-  <p class="kicker">{esc(ui['sec_products_kicker'])}</p>
-  <h2 class="sec">{esc(ui['sec_products'])}</h2>
-  <ul class="grid products" style="list-style:none;padding:0">{prod_cards}</ul>
-  <p class="price-note">{esc(ui['sec_products_lead'])} <a href="{pages}{path_of(lg, 'ceny')}">{esc(ui['full_price_list'])} →</a></p>
-</div></section>
-{why_band}
-<section class="band cream" id="doprava"><div class="wrap">
-  <p class="kicker">{esc(ui['deliver_kicker'])}</p>
-  <h2 class="sec">{esc(ui['deliver_h2'])}</h2>
-  <ul class="deliver-list">{deliver_items}</ul>
-  {cta_html(L, depth, ("deliver_btn", "kde_nas_najdete", "nav_delivery"))}
-</div></section>
-<section class="band"><div class="wrap">
-  <p class="kicker">{esc(ui['sec_recipes_kicker'])}</p>
-  <h2 class="sec">{esc(ui['sec_recipes'])}</h2>
-  <p class="lead">{esc(ui['sec_recipes_lead'])}</p>
-  {rec_carousel}
-  <p><a href="{pages}{path_of(lg, 'recepty')}">{esc(ui['all_recipes'])} →</a></p>
-</div></section>
-<section class="band cream" id="recenze"><div class="wrap">
-  {reviews_html(L, depth)}
-</div></section>
-<section class="band" id="velkoobchod-teaser"><div class="wrap">
-  <p class="kicker">{esc(ui['sec_b2b_kicker'])}</p>
-  <h2 class="sec">{esc(ui['sec_b2b'])}</h2>
-  <p class="lead">{esc(ui['sec_b2b_lead'])}</p>
-  <p><a class="btn gold" href="{pages}{path_of(lg, 'velkoobchod')}">{esc(ui['sec_b2b_btn'])}</a></p>
-</div></section>
-<section class="band cream" id="do-eu"><div class="wrap">
-  <p class="kicker">{esc(ui['sec_d2c_kicker'])}</p>
-  <h2 class="sec">{esc(ui['sec_d2c'])}</h2>
-  <p class="lead">{esc(ui['sec_d2c_lead'])}</p>
-  <p><a class="btn gold" href="{pages}{path_of(lg, 'do_eu')}">{esc(ui['sec_d2c_btn'])}</a></p>
-</div></section>
-<section class="band" id="novinky"><div class="wrap">
-  <p class="kicker">{esc(ui['nl_kicker'])}</p>
-  {newsletter_form_html(L)}
-</div></section>
-<section class="band cream center"><div class="wrap">
-  <h2 class="sec" style="display:inline-block">{esc(ui['cta_sample_h'])}</h2>
-  <p class="lead" style="max-width:560px;margin:.6rem auto 1.4rem">{esc(ui['cta_sample_p'])}</p>
-  {cta_html(L, depth, ("cta_call", "kontakt", "cta_write"))}
-</div></section>
+{hero}
+{stats}
+{journey}
+{recipes}
+{why}
+{white}
 </main>"""
     html_out = shell(L, title=L["meta"]["home_title"], desc=L["meta"]["home_desc"],
                      pid="home", depth=depth, active="home", body=body,
                      keywords=keywords_for(lg, "home"), meta_kind="home",
-                     extra_head=hero_preload,
+                     defs=defs_html(("m-cocoa", "m-vanilla", "m-potato"), sticker=True),
                      jsonld=[
                          {
                              "@context": "https://schema.org",
@@ -1526,7 +1674,21 @@ def build_product(L, key):
     home = pages if pages else "./"
     ui = L["ui"]
     im = product_img_src(depth, key)
-    figure = (f'<figure><img src="{im}" alt="{esc(pr["name"])} — Jůzlová"></figure>' if im else "")
+    obj = PRODUCT_OBJECT[key]
+    panel = (f'<div class="obj-panel rv">{sil(depth, "sil-" + obj, "", cls="art")}'
+             + (shape_html(obj, im, f'{pr["name"]} — Jůzlová') if im else "") + "</div>")
+    body_blocks = list(pr["body"])
+    flower = ""
+    if key == "kakao_holandskeho_typu":
+        # Origin capsule replaces the paragraph under "Odkud je" (docs/messaging/07).
+        h2 = cocoa_origin.ORIGIN_H2[lg]
+        for i, blk in enumerate(body_blocks):
+            if blk[0] == "h2" and blk[1] == h2 and i + 1 < len(body_blocks) and body_blocks[i + 1][0] == "p":
+                body_blocks[i + 1] = ("p", cocoa_origin.CAPSULE[lg])
+                break
+        flower = (f'<figure class="cutout flower rv"><img src="{asset_rel(depth)}assets/botanicals/cutouts/flower-cocoa.webp" '
+                  f'alt="{esc(cocoa_origin.FLOWER_ALT[lg])}" width="1200" height="800" loading="lazy" decoding="async">'
+                  f'<figcaption>{esc(cocoa_origin.FLOWER_CAPTION[lg])}</figcaption></figure>')
     price_num = re.search(r"(\d+)\s*(?:Kč|CZK)", pr["price"])
     img_name = PRODUCT_IMG.get(key)
     product_ld = {
@@ -1556,8 +1718,10 @@ def build_product(L, key):
         },
         "keywords": keywords_for(lg, "product", key),
     }
-    # Each product page owns its own three questions; no shared extras.
+    # Each product page owns its own questions; the cocoa page adds origin and cadmium.
     faqs = list(pr.get("faq") or [])
+    if key == "kakao_holandskeho_typu":
+        faqs += cocoa_origin.FAQ[lg]
     lds = [product_ld, breadcrumb_jsonld(L, [
         (ui["breadcrumb_home"], url_for(lg, "")),
         (pr["name"], url_for(lg, path))])]
@@ -1567,12 +1731,17 @@ def build_product(L, key):
 <nav class="breadcrumb"><a href="{home}">{esc(ui['breadcrumb_home'])}</a> › {esc(pr['name'])}</nav>
 <h1>{esc(pr.get('h1') or pr['name'])}</h1>
 <p class="sub">{esc(pr['short'])}</p>
+<div class="product-hero">
+{panel}
+<div>
 <div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong> · {esc(ui['price_pickup_badge'])}</dd>
 <dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a> · {esc(ui['open_hours_short'])}</dd></dl>
 {price_note_html(L)}</div>
 {cta_html(L, depth, ("cta_order", "kde_nas_najdete", "cta_pickup"))}
-{figure}
-{render_body(L, pr['body'], depth, product=pr)}
+</div>
+</div>
+{flower}
+{render_body(L, body_blocks, depth, product=pr)}
 {faq_html(faqs, ui.get('sec_faq', 'FAQ'))}
 {cta_html(L, depth, ("cta_order", "kontakt", "cta_write"))}
 </article></main>"""
@@ -1580,6 +1749,7 @@ def build_product(L, key):
                      active=None, body=body, jsonld=lds,
                      keywords=keywords_for(lg, "product", key),
                      meta_kind="product", meta_key=key,
+                     defs=defs_html((f"m-{obj}",), sticker=(key == "kakao_holandskeho_typu")),
                      og_img=f"{BASE}/img/{PRODUCT_IMG[key]}" if PRODUCT_IMG.get(key) else None)
     write(([lg] if lg != "cs" else []) + [slug, "index.html"], html_out)
 
@@ -2424,6 +2594,11 @@ def build_llms(langs_data):
         full.append(f"detail: {pr_cs['desc']}")
         if pr_cs.get("faq"):
             for q, a in pr_cs["faq"]:
+                full.append(f"Q: {q}")
+                full.append(f"A: {a}")
+        if key == "kakao_holandskeho_typu":
+            full.append(f"origin: {cocoa_origin.LLMS_LINE['cs']}")
+            for q, a in cocoa_origin.FAQ["cs"]:
                 full.append(f"Q: {q}")
                 full.append(f"A: {a}")
         full.append("")

@@ -477,3 +477,40 @@ LANG = {
     },
     "recipes": {},  # filled from scripts/recipes_cs.py
 }
+
+
+# --- rev. 5 home, footer and marquee strings (2026-09-17) ---
+LANG["ui"].update({
+    'h1_main': 'Bramborové knedlíky na stole za 20 minut',
+    'h1_sub': 'z mouky z mlýna 12 km od naší dílny',
+    'stat_1': 'bramborové knedlíky · 250 Kč',
+    'stat_2': 'minut na chlupaté knedlíky',
+    'stat_3': 'rok, kdy jsme začali míchat',
+    'stat_4': 'od dílny k rodinnému mlýnu',
+    'stat_5': 'tuku v kakau holandského typu',
+    'stat_6': 'puding a cukr v kile, ne v sáčku',
+    'journey_h2': 'Jak se směs dostane na váš stůl',
+    'step_1': 'Pšenice z Vysočiny',
+    'step_2': 'Mlýn 12 km od dílny',
+    'step_3': 'Míchání v Kochánově',
+    'step_4': 'Vyzvednutí nebo rozvoz',
+    'step_5': 'Na talíři za 20 minut',
+    'marks': 'Vysočina · rozvoz',
+    'cta_short': 'Zavolat',
+    'cb_h': 'Potřebujete poradit s objednávkou?',
+    'cb_name': 'Vaše jméno',
+    'cb_tel': 'Váš telefon',
+    'cb_note': 'Zavoláme vám zpět ve všední den 8–19.',
+    'cb_btn': 'Zavolat mi zpět',
+    'cb_ok': 'Děkujeme. Zavoláme vám zpět ve všední den 8–19.',
+    'cb_err': 'Vyplňte jméno a telefon (aspoň 9 číslic).',
+    'cb_message': 'Prosím o zpětné zavolání (formulář v patičce).',
+    'marquee_label': 'Ceník',
+    'marquee_pause': 'Zastavit pohyb ceníku',
+    'marquee_play': 'Spustit pohyb ceníku',
+    'alt_cocoa_pod': 'Rozříznutý kakaový plod s boby',
+    'alt_vanilla': 'Květ vanilky s listy a dvěma vanilkovými lusky',
+    'alt_leaf_banana': 'Banánový list',
+    'footer_kitchens': 'Kde rozvážíme',
+    'sec_reviews_h': 'Co o nás říkají zákazníci',
+})

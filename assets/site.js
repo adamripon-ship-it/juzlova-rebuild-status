@@ -1,184 +1,163 @@
-/* Jůzlová.cz — motion engine: inertial scroll, scroll-film hero, parallax, reveals. */
+/* Jůzlová.cz — motion + behaviour. Progressive enhancement: pages are complete without it.
+   Rules: ease-out, no bounce, ≥ 450 ms; everything is off under prefers-reduced-motion. */
 (function () {
   'use strict';
-  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var params = new URLSearchParams(location.search);
+  var capture = params.get('static') === '1';                       // headless captures: final state, no motion
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches || capture;
+  var root = document.documentElement;
+  root.classList.add('js');
+  if (capture) root.classList.add('capture');
 
-  /* ── staggered reveal on scroll ── */
-  var io = 'IntersectionObserver' in window
-    ? new IntersectionObserver(function (es) {
-        es.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          var el = e.target;
-          var siblings = el.parentElement ? [].slice.call(el.parentElement.children).filter(function (c) { return c.classList && c.classList.contains('rv'); }) : [el];
-          var idx = siblings.indexOf(el);
-          el.style.transitionDelay = reduced ? '0s' : (Math.max(idx, 0) * 70) + 'ms';
-          el.classList.add('in');
-          io.unobserve(el);
-        });
-      }, { threshold: 0.12 })
-    : null;
-  document.querySelectorAll('.rv').forEach(function (el) {
-    if (io && !reduced) io.observe(el); else el.classList.add('in');
-  });
-
-  /* ── header: transparent over hero, solid after ── */
+  /* ── header shadow once the page scrolls ── */
   var header = document.querySelector('header.site');
-  function headerState() {
-    if (header) header.classList.toggle('scrolled', window.scrollY > 40);
-  }
+  function headerState() { if (header) header.classList.toggle('scrolled', window.scrollY > 24); }
   addEventListener('scroll', headerState, { passive: true });
   headerState();
 
-  /* ── inertial smooth scroll (lenis-lite) ── */
-  if (!reduced && matchMedia('(pointer: fine)').matches) {
-    var current = window.scrollY, target = current, raf = null;
-    function tick() {
-      current += (target - current) * 0.11;
-      if (Math.abs(target - current) < 0.5) { current = target; raf = null; }
-      else raf = requestAnimationFrame(tick);
-      window.scrollTo(0, current);
-      drive();
+  /* ── vines: attach leaves to the actual stroke (petiole on the line, rotated to the tangent) ── */
+  var SVG_NS = 'http://www.w3.org/2000/svg';
+  function attachLeaves(path) {
+    var svg = path.ownerSVGElement, L = path.getTotalLength();
+    if (!L) return;
+    var count = +path.dataset.leaves || 4, symbol = path.dataset.leaf || 'sil-leaf-single', size = +path.dataset.leafSize || 150;
+    var sprite = path.dataset.sprite || '';
+    var ratio = +path.dataset.leafRatio || 0.65;
+    var at = path.dataset.leafAt ? path.dataset.leafAt.split(',').map(parseFloat) : null;
+    if (at) count = at.length;
+    for (var i = 1; i <= count; i++) {
+      var tt = at ? at[i - 1] * L : (i / (count + 1)) * L + (i % 2 ? -L * 0.03 : L * 0.03);
+      var p = path.getPointAtLength(tt), q = path.getPointAtLength(Math.min(tt + 2, L));
+      var tangent = Math.atan2(q.y - p.y, q.x - p.x) * 180 / Math.PI, side = i % 2 ? -1 : 1;
+      var g = document.createElementNS(SVG_NS, 'g');
+      g.setAttribute('class', 'vine-leaf');
+      g.setAttribute('transform', 'translate(' + p.x.toFixed(1) + ' ' + p.y.toFixed(1) + ') rotate(' + (tangent + side * 46).toFixed(1) + ')');
+      var use = document.createElementNS(SVG_NS, 'use');
+      use.setAttribute('href', sprite + '#' + symbol);
+      use.setAttribute('width', size); use.setAttribute('height', size * ratio);
+      use.setAttribute('x', -size * 0.04); use.setAttribute('y', -(size * ratio) / 2);   // petiole (left-middle) sits on the vine
+      g.appendChild(use); svg.appendChild(g);
     }
-    addEventListener('wheel', function (e) {
-      if (e.ctrlKey) return;
-      e.preventDefault();
-      target = Math.max(0, Math.min(target + e.deltaY, document.documentElement.scrollHeight - innerHeight));
-      if (!raf) raf = requestAnimationFrame(tick);
-    }, { passive: false });
-    addEventListener('scroll', function () { if (!raf) { current = target = window.scrollY; } }, { passive: true });
+  }
+  document.querySelectorAll('path[data-vine]').forEach(attachLeaves);
+
+  /* ── wind: every swaying element gets its own period and phase ── */
+  document.querySelectorAll('.art use, .vine-leaf use, .cutout img').forEach(function (el) {
+    var big = el.closest('.art') !== null, dur = (big ? 8 : 5) + Math.random() * (big ? 5 : 3);
+    el.style.setProperty('--dur', dur.toFixed(2) + 's');
+    el.style.setProperty('--delay', (-Math.random() * dur).toFixed(2) + 's');
+  });
+
+  /* ── stroke-draw lengths ── */
+  document.querySelectorAll('.draw path').forEach(function (p) {
+    try { p.style.setProperty('--len', p.getTotalLength().toFixed(0)); } catch (e) {}
+  });
+
+  /* ── count-up numerals: from data-from (or 0) to data-count, 1.4 s, ease-out quart ── */
+  function easeOutQuart(x) { return 1 - Math.pow(1 - x, 4); }
+  function countUp(el) {
+    var target = parseFloat(el.dataset.count), from = el.dataset.from != null ? parseFloat(el.dataset.from) : 0;
+    if (reduced || isNaN(target)) { el.textContent = el.dataset.count; return; }
+    var dur = 1400, t0 = null;
+    function frame(ts) {
+      if (t0 === null) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      el.textContent = Math.round(from + (target - from) * easeOutQuart(p));
+      if (p < 1) requestAnimationFrame(frame); else el.textContent = el.dataset.count;
+    }
+    requestAnimationFrame(frame);
   }
 
-  /* ── scroll-film: pinned keyframe crossfade scrub ── */
-  var film = document.querySelector('[data-film]');
-  var frames = film ? [].slice.call(film.querySelectorAll('.frame')) : [];
-  var lines = film ? [].slice.call(film.querySelectorAll('.filmline')) : [];
-  function clamp(v) { return Math.min(Math.max(v, 0), 1); }
-  function filmScrub() {
-    if (!film || !frames.length) return;
-    var rect = film.getBoundingClientRect();
-    var total = rect.height - innerHeight;
-    var p = total > 0 ? clamp(-rect.top / total) : 0;
-    var n = frames.length;
-    frames.forEach(function (f, i) {
-      var start = i / n, end = (i + 1) / n;
-      var local = clamp((p - start) / (end - start));
-      var vis;
-      if (i === 0) vis = p < end ? 1 : clamp(1 - (p - end) * n * 2);
-      else vis = clamp((p - start) * n * 2);
-      if (i < n - 1 && p > end) vis = clamp(1 - (p - end) * n * 2);
-      f.style.opacity = vis;
-      f.style.transform = 'scale(' + (1 + local * 0.09) + ')';
+  /* ── reveals with sibling stagger; numerals count when their block reveals ── */
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target, parent = el.parentElement;
+      var sibs = parent ? [].filter.call(parent.children, function (c) { return c.classList.contains('rv'); }) : [el];
+      var idx = Math.max(sibs.indexOf(el), 0), delay = reduced ? 0 : idx * 90;
+      el.style.transitionDelay = delay + 'ms';
+      el.classList.add('is-in');
+      el.querySelectorAll('.n[data-count]').forEach(function (n) { setTimeout(function () { countUp(n); }, delay); });
+      io.unobserve(el);
     });
-    var last = lines.length - 1;
-    lines.forEach(function (l, i) {
-      var a = parseFloat(l.getAttribute('data-in') || 0);
-      var b = parseFloat(l.getAttribute('data-out') || 1);
-      // Trapezoid: hold the copy readable across its whole window, fading only
-      // at the edges. The opening act is already visible at rest, and the
-      // closing act stays up through the end of the film.
-      var fade = Math.min(0.1, (b - a) * 0.4);
-      var vis;
-      if (p <= a) vis = i === 0 ? 1 : 0;
-      else if (p >= b) vis = i === last ? 1 : 0;
-      else vis = Math.min(i === 0 ? 1 : clamp((p - a) / fade),
-                          i === last ? 1 : clamp((b - p) / fade));
-      l.style.opacity = vis;
-      l.style.transform = 'translateY(' + (1 - vis) * 26 + 'px)';
-      // Acts are stacked on top of each other, so only the visible one may
-      // take clicks — otherwise a faded act swallows the other's buttons.
-      l.style.pointerEvents = vis > 0.5 ? 'auto' : 'none';
-    });
-    if (hint) hint.style.opacity = clamp(1 - p * 5);
+  }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' }) : null;
+  document.querySelectorAll('.rv, .draw').forEach(function (el) {
+    if (io && !reduced) io.observe(el);
+    else { el.classList.add('is-in'); el.querySelectorAll('.n[data-count]').forEach(function (n) { n.textContent = n.dataset.count; }); }
+  });
+
+  /* ── parallax on silhouettes and cut-outs (fine pointers only) ── */
+  if (!reduced && matchMedia('(pointer: fine)').matches) {
+    var items = [].slice.call(document.querySelectorAll('.plx')), raf = 0;
+    var tick = function () {
+      raf = 0; var vh = innerHeight;
+      items.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.bottom < -vh || r.top > vh * 2) return;
+        var c = (r.top + r.height / 2 - vh / 2) / vh, speed = parseFloat(el.dataset.speed) || 40;
+        el.style.transform = 'translate3d(0,' + (-c * speed).toFixed(1) + 'px,0)' + (el.dataset.rotate ? ' rotate(' + el.dataset.rotate + ')' : '');
+      });
+    };
+    if (items.length) {
+      addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(tick); }, { passive: true });
+      addEventListener('resize', function () { if (!raf) raf = requestAnimationFrame(tick); });
+      tick();
+    }
   }
 
-  /* scroll hint retires once the film is under way */
-  var hint = film ? film.querySelector('.hint') : null;
-
-  /* ── parallax bands ── */
-  var plx = [].slice.call(document.querySelectorAll('[data-plx]'));
-  function parallax() {
-    plx.forEach(function (el) {
-      var r = el.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > innerHeight) return;
-      var mid = r.top + r.height / 2 - innerHeight / 2;
-      var img = el.querySelector('.plx-img');
-      if (img) img.style.transform = 'translateY(' + mid * -0.12 + 'px) scale(1.18)';
-    });
-  }
-
-  var driving = false;
-  function drive() {
-    if (reduced) return;
-    filmScrub();
-    parallax();
-  }
-  function onScroll() {
-    if (driving) return;
-    driving = true;
-    requestAnimationFrame(function () { driving = false; drive(); });
-  }
-  if (!reduced) {
-    addEventListener('scroll', onScroll, { passive: true });
-    addEventListener('resize', onScroll);
-    drive();
-  } else if (frames.length) {
-    frames.forEach(function (f, i) { f.style.opacity = i === 0 ? 1 : 0; });
-    lines.forEach(function (l) { l.style.opacity = 1; l.style.position = 'relative'; });
-  }
+  /* ── marquee: pauses on hover and focus; the button pauses it for everyone else (WCAG 2.2.2) ── */
+  document.querySelectorAll('.marquee').forEach(function (m) {
+    var btn = m.querySelector('.marquee-toggle'), held = false;
+    ['mouseenter', 'focusin'].forEach(function (ev) { m.addEventListener(ev, function () { m.classList.add('is-paused'); }); });
+    ['mouseleave', 'focusout'].forEach(function (ev) { m.addEventListener(ev, function () { if (!held) m.classList.remove('is-paused'); }); });
+    if (btn) {
+      btn.addEventListener('click', function () {
+        held = !held;
+        m.classList.toggle('is-paused', held);
+        btn.setAttribute('aria-pressed', held ? 'true' : 'false');
+        var label = btn.getAttribute(held ? 'data-play-label' : 'data-pause-label');
+        if (label) btn.setAttribute('aria-label', label);
+      });
+    }
+  });
 
   /* ── phone menu + products accordion ── */
-  var menuBtn = document.querySelector('.menu-toggle')
-  var navEl = document.querySelector('nav.main')
-  var backdrop = document.querySelector('.nav-backdrop')
-  var prodBtn = document.querySelector('.nav-products')
-  var prodGroup = prodBtn ? prodBtn.closest('.navgroup') : null
+  var menuBtn = document.querySelector('.menu-toggle');
+  var navEl = document.querySelector('nav.main');
+  var backdrop = document.querySelector('.nav-backdrop');
+  var prodBtn = document.querySelector('.nav-products');
+  var prodGroup = prodBtn ? prodBtn.closest('.navgroup') : null;
   function setMenu(open) {
-    if (!navEl || !menuBtn) return
-    navEl.classList.toggle('is-open', open)
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false')
-    var label = menuBtn.getAttribute(open ? 'data-close-label' : 'data-open-label')
-    if (label) menuBtn.setAttribute('aria-label', label)
-    document.body.classList.toggle('nav-open', open)
-    if (backdrop) {
-      backdrop.classList.toggle('is-open', open)
-      backdrop.hidden = !open
-    }
+    if (!navEl || !menuBtn) return;
+    navEl.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    var label = menuBtn.getAttribute(open ? 'data-close-label' : 'data-open-label');
+    if (label) menuBtn.setAttribute('aria-label', label);
+    document.body.classList.toggle('nav-open', open);
+    if (backdrop) { backdrop.classList.toggle('is-open', open); backdrop.hidden = !open; }
   }
-
-  if (menuBtn) {
-    menuBtn.addEventListener('click', function () {
-      setMenu(!navEl.classList.contains('is-open'))
-    })
-  }
-  if (backdrop) {
-    backdrop.addEventListener('click', function () { setMenu(false) })
-  }
-  if (navEl) {
-    navEl.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () { setMenu(false) })
-    })
-  }
+  if (menuBtn) menuBtn.addEventListener('click', function () { setMenu(!navEl.classList.contains('is-open')); });
+  if (backdrop) backdrop.addEventListener('click', function () { setMenu(false); });
+  if (navEl) navEl.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { setMenu(false); }); });
   if (prodBtn && prodGroup) {
     prodBtn.addEventListener('click', function () {
-      var open = !prodGroup.classList.contains('is-open')
-      prodGroup.classList.toggle('is-open', open)
-      prodBtn.setAttribute('aria-expanded', open ? 'true' : 'false')
-    })
+      var open = !prodGroup.classList.contains('is-open');
+      prodGroup.classList.toggle('is-open', open);
+      prodBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
   }
   addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      setMenu(false)
-      if (prodGroup) {
-        prodGroup.classList.remove('is-open')
-        if (prodBtn) prodBtn.setAttribute('aria-expanded', 'false')
-      }
+      setMenu(false);
+      if (prodGroup) { prodGroup.classList.remove('is-open'); if (prodBtn) prodBtn.setAttribute('aria-expanded', 'false'); }
     }
-  })
+  });
 
-  /* ── contact form posts to /api/contact (Turnstile + honeypot) ── */
+  /* ── forms post to /api/contact (Turnstile + honeypot); also the footer call-back form ── */
   document.querySelectorAll('[data-contact-form]').forEach(function (form) {
     var statusEl = form.querySelector('[data-form-status]');
     var submitBtn = form.querySelector('[type="submit"]');
+    var submitLabel = submitBtn ? (submitBtn.querySelector('span') || submitBtn) : null;
     var widgetId = null;
     var siteKey = (form.getAttribute('data-turnstile-key') || '').trim();
 
@@ -192,37 +171,21 @@
     var handleLoadTurnstile = function (key) {
       var slot = form.querySelector('[data-turnstile-slot]');
       if (!slot || !key) return;
-
       var handleRender = function () {
         if (!window.turnstile || widgetId != null) return;
         var renderWidget = function () {
           if (widgetId != null) return;
           widgetId = window.turnstile.render(slot, {
-            sitekey: key,
-            action: 'contact',
-            appearance: 'always',
-            theme: 'light',
+            sitekey: key, action: 'contact', appearance: 'always', theme: 'light',
             language: form.getAttribute('data-lang') || 'cs'
           });
         };
-        if (typeof window.turnstile.ready === 'function') {
-          window.turnstile.ready(renderWidget);
-          return;
-        }
+        if (typeof window.turnstile.ready === 'function') { window.turnstile.ready(renderWidget); return; }
         renderWidget();
       };
-
-      if (window.turnstile) {
-        handleRender();
-        return;
-      }
-
+      if (window.turnstile) { handleRender(); return; }
       var existing = document.querySelector('script[data-turnstile-api]');
-      if (existing) {
-        existing.addEventListener('load', handleRender);
-        return;
-      }
-
+      if (existing) { existing.addEventListener('load', handleRender); return; }
       var script = document.createElement('script');
       script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
       script.async = true;
@@ -237,48 +200,32 @@
         if (data && data.siteKey) siteKey = data.siteKey;
         if (siteKey) handleLoadTurnstile(siteKey);
       })
-      .catch(function () {
-        if (siteKey) handleLoadTurnstile(siteKey);
-      });
-
+      .catch(function () { if (siteKey) handleLoadTurnstile(siteKey); });
     if (siteKey) handleLoadTurnstile(siteKey);
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (form.classList.contains('is-success')) return;
-
       var honey = form.querySelector('[name="bot-field"]');
       if (honey && honey.value) {
         form.classList.add('is-success');
         handleSetStatus('success', form.getAttribute('data-i18n-success') || '');
         return;
       }
-
       var token = '';
-      if (siteKey && window.turnstile && widgetId != null) {
-        token = window.turnstile.getResponse(widgetId) || '';
-      }
-      if (siteKey && !token) {
-        handleSetStatus('error', form.getAttribute('data-i18n-captcha') || '');
-        return;
-      }
+      if (siteKey && window.turnstile && widgetId != null) token = window.turnstile.getResponse(widgetId) || '';
+      if (siteKey && !token) { handleSetStatus('error', form.getAttribute('data-i18n-captcha') || ''); return; }
 
-      var products = [].slice.call(form.querySelectorAll('[name="product"]:checked')).map(function (c) {
-        return c.value;
-      });
-
-      var buyerEl = form.querySelector('[name="buyer"]:checked') || form.querySelector('[name="buyer"]')
-      var fulfillEl = form.querySelector('[name="fulfillment"]:checked')
-      var consentEl = form.querySelector('[name="consent"]')
-      var topicEl = form.querySelector('[name="topic"]')
-      var formType = form.getAttribute('data-form-type') || 'contact'
+      var products = [].slice.call(form.querySelectorAll('[name="product"]:checked')).map(function (c) { return c.value; });
+      var buyerEl = form.querySelector('[name="buyer"]:checked') || form.querySelector('[name="buyer"]');
+      var fulfillEl = form.querySelector('[name="fulfillment"]:checked');
+      var consentEl = form.querySelector('[name="consent"]');
+      var topicEl = form.querySelector('[name="topic"]');
+      var formType = form.getAttribute('data-form-type') || 'contact';
+      var val = function (name) { var el = form.querySelector('[name="' + name + '"]'); return el ? (el.value || '').trim() : ''; };
       var payload = {
-        type: formType,
-        name: ((form.querySelector('[name="name"]') || {}).value || '').trim(),
-        phone: ((form.querySelector('[name="phone"]') || {}).value || '').trim(),
-        email: ((form.querySelector('[name="email"]') || {}).value || '').trim(),
-        message: ((form.querySelector('[name="message"]') || {}).value || '').trim(),
-        quantity: ((form.querySelector('[name="quantity"]') || {}).value || '').trim(),
+        type: formType === 'callback' ? 'contact' : formType,
+        name: val('name'), phone: val('phone'), email: val('email'), message: val('message'), quantity: val('quantity'),
         topic: topicEl ? (topicEl.value || '').trim() : '',
         fulfillment: fulfillEl ? fulfillEl.value : '',
         consent: consentEl && consentEl.checked ? 'yes' : '',
@@ -287,44 +234,33 @@
         lang: form.getAttribute('data-lang') || 'cs',
         turnstileToken: token,
         honeypot: honey ? honey.value : ''
-      }
+      };
 
       if (formType === 'newsletter') {
-        if (!payload.email || !payload.consent) {
-          handleSetStatus('error', form.getAttribute('data-i18n-need-contact') || form.getAttribute('data-i18n-error') || '');
+        if (!payload.email || !payload.consent) { handleSetStatus('error', form.getAttribute('data-i18n-need-contact') || form.getAttribute('data-i18n-error') || ''); return; }
+      } else if (formType === 'b2b' && !payload.topic) {
+        handleSetStatus('error', form.getAttribute('data-i18n-error') || ''); return;
+      } else if (formType === 'callback') {
+        var digits = payload.phone.replace(/\D/g, '');
+        if (digits.length < 9 || !payload.name) {
+          handleSetStatus('error', form.getAttribute('data-i18n-need-contact') || '');
+          var telEl = form.querySelector('[name="phone"]'); if (telEl && digits.length < 9) telEl.focus();
           return;
         }
-      } else if (formType === 'b2b' && !payload.topic) {
-        handleSetStatus('error', form.getAttribute('data-i18n-error') || '');
-        return;
       } else if (!payload.phone && !payload.email) {
-        handleSetStatus('error', form.getAttribute('data-i18n-need-contact') || form.getAttribute('data-i18n-error') || '');
-        return;
+        handleSetStatus('error', form.getAttribute('data-i18n-need-contact') || form.getAttribute('data-i18n-error') || ''); return;
       }
 
-      var defaultLabel = submitBtn ? submitBtn.textContent : '';
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = form.getAttribute('data-i18n-sending') || defaultLabel;
-      }
+      var defaultLabel = submitLabel ? submitLabel.textContent : '';
+      if (submitBtn) { submitBtn.disabled = true; if (submitLabel) submitLabel.textContent = form.getAttribute('data-i18n-sending') || defaultLabel; }
       handleSetStatus('', '');
 
-      fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload)
-      })
-        .then(function (res) {
-          return res.json().catch(function () { return {}; }).then(function (body) {
-            return { ok: res.ok && body && body.ok, body: body };
-          });
-        })
+      fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
+        .then(function (res) { return res.json().catch(function () { return {}; }).then(function (body) { return { ok: res.ok && body && body.ok, body: body }; }); })
         .then(function (result) {
           if (!result.ok) {
-            var err = result.body && result.body.error
-            var errKey = err === 'captcha'
-              ? 'data-i18n-captcha'
-              : ((err === 'need_contact' || err === 'consent') ? 'data-i18n-need-contact' : 'data-i18n-error');
+            var err = result.body && result.body.error;
+            var errKey = err === 'captcha' ? 'data-i18n-captcha' : ((err === 'need_contact' || err === 'consent') ? 'data-i18n-need-contact' : 'data-i18n-error');
             handleSetStatus('error', form.getAttribute(errKey) || '');
             if (window.turnstile && widgetId != null) window.turnstile.reset(widgetId);
             return;
@@ -338,453 +274,169 @@
           if (window.turnstile && widgetId != null) window.turnstile.reset(widgetId);
         })
         .then(function () {
-          if (submitBtn && !form.classList.contains('is-success')) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = defaultLabel;
-          }
+          if (submitBtn && !form.classList.contains('is-success')) { submitBtn.disabled = false; if (submitLabel) submitLabel.textContent = defaultLabel; }
         });
     });
   });
 
   /* ── cocoa radar + nutrition bars: animate when in view ── */
-  var cocoaBlocks = document.querySelectorAll('[data-cocoa-anim]')
+  var cocoaBlocks = document.querySelectorAll('[data-cocoa-anim]');
   if (cocoaBlocks.length) {
-    var handleCocoaOn = function (el) { el.classList.add('is-on') }
-    if (reduced || !('IntersectionObserver' in window)) {
-      cocoaBlocks.forEach(handleCocoaOn)
-    } else {
+    var handleCocoaOn = function (el) { el.classList.add('is-on'); };
+    if (reduced || !('IntersectionObserver' in window)) cocoaBlocks.forEach(handleCocoaOn);
+    else {
       var cocoaIo = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return
-          handleCocoaOn(entry.target)
-          cocoaIo.unobserve(entry.target)
-        })
-      }, { threshold: 0.22 })
-      cocoaBlocks.forEach(function (el) { cocoaIo.observe(el) })
+        entries.forEach(function (entry) { if (!entry.isIntersecting) return; handleCocoaOn(entry.target); cocoaIo.unobserve(entry.target); });
+      }, { threshold: 0.22 });
+      cocoaBlocks.forEach(function (el) { cocoaIo.observe(el); });
     }
   }
 
   /* ── recipe star ratings ── */
   document.querySelectorAll('[data-rating-slug]').forEach(function (box) {
-    var slug = box.getAttribute('data-rating-slug')
-    var api = box.getAttribute('data-api') || '/api/ratings'
-    var countTpl = box.getAttribute('data-count-tpl') || '{n}'
-    var thanks = box.getAttribute('data-thanks') || ''
-    var already = box.getAttribute('data-already') || ''
-    var errTxt = box.getAttribute('data-error') || ''
-    var votedKey = 'juzlova-rated:' + slug
-    var stars = box.querySelectorAll('[data-stars]')
-    var valueOut = box.querySelector('[data-rating-out]')
-    var countOut = box.querySelector('[data-count-out]')
-    var status = box.querySelector('.recipe-rating-status')
-    var voted = false
-    try { voted = localStorage.getItem(votedKey) === '1' } catch (e) { voted = false }
-
+    var slug = box.getAttribute('data-rating-slug');
+    var api = box.getAttribute('data-api') || '/api/ratings';
+    var countTpl = box.getAttribute('data-count-tpl') || '{n}';
+    var thanks = box.getAttribute('data-thanks') || '';
+    var already = box.getAttribute('data-already') || '';
+    var errTxt = box.getAttribute('data-error') || '';
+    var votedKey = 'juzlova-rated:' + slug;
+    var stars = box.querySelectorAll('[data-stars]');
+    var valueOut = box.querySelector('[data-rating-out]');
+    var countOut = box.querySelector('[data-count-out]');
+    var status = box.querySelector('.recipe-rating-status');
+    var voted = false;
+    try { voted = localStorage.getItem(votedKey) === '1'; } catch (e) { voted = false; }
     var handlePaint = function (value) {
-      var rounded = Math.round(Number(value) || 0)
-      stars.forEach(function (btn) {
-        var n = Number(btn.getAttribute('data-stars'))
-        btn.classList.toggle('is-on', n <= rounded)
-      })
-    }
-
+      var rounded = Math.round(Number(value) || 0);
+      stars.forEach(function (btn) { btn.classList.toggle('is-on', Number(btn.getAttribute('data-stars')) <= rounded); });
+    };
     var handleShow = function (data) {
-      if (!data) return
-      if (valueOut && data.ratingValue != null) valueOut.textContent = data.ratingValue
-      if (countOut && data.ratingCount != null) {
-        countOut.textContent = countTpl.replace('{n}', String(data.ratingCount))
-      }
-      if (data.ratingValue != null) {
-        box.setAttribute('data-rating-value', String(data.ratingValue))
-        handlePaint(data.ratingValue)
-      }
-    }
-
+      if (!data) return;
+      if (valueOut && data.ratingValue != null) valueOut.textContent = data.ratingValue;
+      if (countOut && data.ratingCount != null) countOut.textContent = countTpl.replace('{n}', String(data.ratingCount));
+      if (data.ratingValue != null) { box.setAttribute('data-rating-value', String(data.ratingValue)); handlePaint(data.ratingValue); }
+    };
     var handleLock = function (msg, ok) {
-      voted = true
-      box.classList.add('is-locked')
-      stars.forEach(function (btn) { btn.disabled = true })
-      if (status && msg) {
-        status.hidden = false
-        status.textContent = msg
-        status.classList.toggle('is-ok', !!ok)
-        status.classList.toggle('is-err', !ok)
-      }
-      try { localStorage.setItem(votedKey, '1') } catch (e) {}
-    }
-
-    handlePaint(box.getAttribute('data-rating-value'))
-    if (voted) {
-      box.classList.add('is-locked')
-      stars.forEach(function (btn) { btn.disabled = true })
-    }
-
-    fetch(api + '/' + encodeURIComponent(slug), { headers: { 'Accept': 'application/json' } })
-      .then(function (res) { return res.ok ? res.json() : null })
-      .then(handleShow)
-      .catch(function () {})
-
+      voted = true;
+      box.classList.add('is-locked');
+      stars.forEach(function (btn) { btn.disabled = true; });
+      if (status && msg) { status.hidden = false; status.textContent = msg; status.classList.toggle('is-ok', !!ok); status.classList.toggle('is-err', !ok); }
+      try { localStorage.setItem(votedKey, '1'); } catch (e) {}
+    };
+    handlePaint(box.getAttribute('data-rating-value'));
+    if (voted) { box.classList.add('is-locked'); stars.forEach(function (btn) { btn.disabled = true; }); }
+    fetch(api + '/' + encodeURIComponent(slug), { headers: { Accept: 'application/json' } })
+      .then(function (res) { return res.ok ? res.json() : null; }).then(handleShow).catch(function () {});
     stars.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        if (voted || box.classList.contains('is-busy')) return
-        var n = Number(btn.getAttribute('data-stars'))
-        if (!n) return
-        box.classList.add('is-busy')
-        handlePaint(n)
-        fetch(api + '/' + encodeURIComponent(slug), {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({ stars: n })
-        })
-          .then(function (res) {
-            return res.json().catch(function () { return {} }).then(function (body) {
-              return { ok: res.ok, body: body }
-            })
-          })
+        if (voted || box.classList.contains('is-busy')) return;
+        var n = Number(btn.getAttribute('data-stars'));
+        if (!n) return;
+        box.classList.add('is-busy');
+        handlePaint(n);
+        fetch(api + '/' + encodeURIComponent(slug), { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ stars: n }) })
+          .then(function (res) { return res.json().catch(function () { return {}; }).then(function (body) { return { ok: res.ok, body: body }; }); })
           .then(function (result) {
-            box.classList.remove('is-busy')
-            if (!result.ok) {
-              handlePaint(box.getAttribute('data-rating-value'))
-              if (status) {
-                status.hidden = false
-                status.textContent = errTxt
-                status.classList.add('is-err')
-              }
-              return
-            }
-            handleShow(result.body)
-            handleLock(result.body.already ? already : thanks, true)
+            box.classList.remove('is-busy');
+            if (!result.ok) { handlePaint(box.getAttribute('data-rating-value')); if (status) { status.hidden = false; status.textContent = errTxt; status.classList.add('is-err'); } return; }
+            handleShow(result.body);
+            handleLock(result.body.already ? already : thanks, true);
           })
-          .catch(function () {
-            box.classList.remove('is-busy')
-            handlePaint(box.getAttribute('data-rating-value'))
-            if (status) {
-              status.hidden = false
-              status.textContent = errTxt
-              status.classList.add('is-err')
-            }
-          })
-      })
-    })
-  })
+          .catch(function () { box.classList.remove('is-busy'); handlePaint(box.getAttribute('data-rating-value')); if (status) { status.hidden = false; status.textContent = errTxt; status.classList.add('is-err'); } });
+      });
+    });
+  });
 
-  /* ── homepage recipes carousel ── */
-  document.querySelectorAll('[data-recipes-carousel]').forEach(function (root) {
-    var scroller = root.querySelector('[data-carousel-scroller]')
-    var track = root.querySelector('.recipes-carousel-track')
-    var prevBtn = root.querySelector('[data-carousel-prev]')
-    var nextBtn = root.querySelector('[data-carousel-next]')
-    var dotsEl = root.querySelector('[data-carousel-dots]')
-    var liveEl = root.querySelector('[data-carousel-live]')
-    if (!scroller || !track) return
-
-    var slides = [].slice.call(track.children)
-    if (!slides.length) return
-
-    var statusTpl = root.getAttribute('data-status') || '{current} / {total}: {name}'
-    var gotoTpl = root.getAttribute('data-goto') || '{n}: {name}'
-    var prefersReduce = matchMedia('(prefers-reduced-motion: reduce)').matches
-    var current = 0
-    var AUTO_MS = 7000
-    var RESUME_MS = 12000
-    var autoTimer = null
-    var resumeTimer = null
-    var isProgrammatic = false
-    var userHeld = false
-    var pointerInside = false
-
-    var handleSlideName = function (slide) {
-      return (slide.getAttribute('aria-label') || '').trim()
-    }
-
-    var handleWrap = function (index) {
-      var last = slides.length - 1
-      if (index < 0) return last
-      if (index > last) return 0
-      return index
-    }
-
-    var handleNearestIndex = function () {
-      var left = scroller.scrollLeft
-      var best = 0
-      var bestDist = Infinity
+  /* ── recipes carousel (kept for pages that still render one) ── */
+  document.querySelectorAll('[data-recipes-carousel]').forEach(function (rootEl) {
+    var scroller = rootEl.querySelector('[data-carousel-scroller]');
+    var track = rootEl.querySelector('.recipes-carousel-track');
+    var prevBtn = rootEl.querySelector('[data-carousel-prev]');
+    var nextBtn = rootEl.querySelector('[data-carousel-next]');
+    var dotsEl = rootEl.querySelector('[data-carousel-dots]');
+    var liveEl = rootEl.querySelector('[data-carousel-live]');
+    if (!scroller || !track) return;
+    var slides = [].slice.call(track.children);
+    if (!slides.length) return;
+    var statusTpl = rootEl.getAttribute('data-status') || '{current} / {total}: {name}';
+    var gotoTpl = rootEl.getAttribute('data-goto') || '{n}: {name}';
+    var current = 0, autoTimer = null, resumeTimer = null, isProgrammatic = false, userHeld = false, pointerInside = false;
+    var name = function (slide) { return (slide.getAttribute('aria-label') || '').trim(); };
+    var wrap = function (i) { var last = slides.length - 1; return i < 0 ? last : (i > last ? 0 : i); };
+    var nearest = function () { var left = scroller.scrollLeft, best = 0, bestDist = Infinity; slides.forEach(function (s, i) { var d = Math.abs(s.offsetLeft - left); if (d < bestDist) { bestDist = d; best = i; } }); return best; };
+    var paint = function (index, announce) {
+      current = index;
       slides.forEach(function (slide, i) {
-        var dist = Math.abs(slide.offsetLeft - left)
-        if (dist < bestDist) {
-          bestDist = dist
-          best = i
-        }
-      })
-      return best
-    }
-
-    var handlePaint = function (index, announce) {
-      current = index
-      slides.forEach(function (slide, i) {
-        var isOn = i === index
-        slide.setAttribute('aria-hidden', isOn ? 'false' : 'true')
-        var link = slide.querySelector('a')
-        if (link) {
-          if (isOn) link.removeAttribute('tabindex')
-          else link.setAttribute('tabindex', '-1')
-        }
-      })
-      if (dotsEl) {
-        [].slice.call(dotsEl.children).forEach(function (dot, i) {
-          if (i === index) dot.setAttribute('aria-current', 'true')
-          else dot.removeAttribute('aria-current')
-        })
-      }
-      var oneSlide = slides.length < 2
-      if (prevBtn) prevBtn.disabled = oneSlide
-      if (nextBtn) nextBtn.disabled = oneSlide
-      if (announce && liveEl) {
-        liveEl.textContent = statusTpl
-          .replace('{current}', String(index + 1))
-          .replace('{total}', String(slides.length))
-          .replace('{name}', handleSlideName(slides[index]))
-      }
-    }
-
-    var handleGo = function (index, announce) {
-      index = handleWrap(index)
-      var slide = slides[index]
-      isProgrammatic = true
-      scroller.scrollTo({
-        left: slide.offsetLeft,
-        behavior: prefersReduce ? 'auto' : 'smooth'
-      })
-      handlePaint(index, announce)
-      setTimeout(function () { isProgrammatic = false }, 450)
-    }
-
-    var handleStopAuto = function () {
-      if (autoTimer) {
-        clearInterval(autoTimer)
-        autoTimer = null
-      }
-    }
-
-    var handleCanAuto = function () {
-      if (prefersReduce || userHeld || pointerInside || document.hidden) return false
-      if (root.matches && root.matches(':focus-within')) return false
-      return slides.length > 1
-    }
-
-    var handleStartAuto = function () {
-      handleStopAuto()
-      if (prefersReduce || slides.length < 2) return
-      autoTimer = setInterval(function () {
-        if (!handleCanAuto()) return
-        handleGo(current + 1, false)
-      }, AUTO_MS)
-    }
-
-    var handleUserControl = function () {
-      userHeld = true
-      handleStopAuto()
-      if (resumeTimer) clearTimeout(resumeTimer)
-      resumeTimer = setTimeout(function () {
-        userHeld = false
-        handleStartAuto()
-      }, RESUME_MS)
-    }
-
-    if (dotsEl) {
-      slides.forEach(function (slide, i) {
-        var dot = document.createElement('button')
-        dot.type = 'button'
-        dot.className = 'recipes-carousel-dot'
-        dot.setAttribute('aria-label', gotoTpl
-          .replace('{n}', String(i + 1))
-          .replace('{name}', handleSlideName(slide)))
-        dot.addEventListener('click', function () {
-          handleUserControl()
-          handleGo(i, true)
-        })
-        dotsEl.appendChild(dot)
-      })
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', function () {
-        handleUserControl()
-        handleGo(current - 1, true)
-      })
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', function () {
-        handleUserControl()
-        handleGo(current + 1, true)
-      })
-    }
-
-    scroller.addEventListener('scroll', function () {
-      handlePaint(handleNearestIndex(), false)
-      if (!isProgrammatic) handleUserControl()
-    }, { passive: true })
-
-    scroller.addEventListener('wheel', function (e) {
-      if (Math.abs(e.deltaX) >= Math.abs(e.deltaY) || e.shiftKey) {
-        e.stopPropagation()
-      }
-    }, { passive: true })
-
-    root.addEventListener('pointerenter', function () { pointerInside = true })
-    root.addEventListener('pointerleave', function () {
-      pointerInside = false
-      if (!userHeld) handleStartAuto()
-    })
-    root.addEventListener('focusin', function () { pointerInside = true })
-    root.addEventListener('focusout', function () {
-      pointerInside = false
-      if (!userHeld) handleStartAuto()
-    })
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) handleStopAuto()
-      else if (!userHeld) handleStartAuto()
-    })
-
-    root.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault()
-        handleUserControl()
-        handleGo(current - 1, true)
-        return
-      }
-      if (e.key === 'ArrowRight') {
-        e.preventDefault()
-        handleUserControl()
-        handleGo(current + 1, true)
-      }
-    })
-
-    handlePaint(0, false)
-    handleStartAuto()
-  })
-
-  /* ── language switcher: more panel (German tip via title/hover only — never blocks nav) ── */
-  var handleBindLangs = function () {
-    var root = document.querySelector('[data-langs]')
-    if (!root) return
-    var moreBtn = root.querySelector('[data-lang-more]')
-    var panel = root.querySelector('[data-lang-panel]')
-    var handleCloseMore = function () {
-      if (!moreBtn || !panel) return
-      moreBtn.setAttribute('aria-expanded', 'false')
-      panel.hidden = true
-    }
-    if (moreBtn && panel) {
-      moreBtn.addEventListener('click', function (e) {
-        e.stopPropagation()
-        var open = moreBtn.getAttribute('aria-expanded') === 'true'
-        moreBtn.setAttribute('aria-expanded', open ? 'false' : 'true')
-        panel.hidden = open
-      })
-      panel.addEventListener('click', function (e) { e.stopPropagation() })
-    }
-    document.addEventListener('click', function (e) {
-      if (!root.contains(e.target)) handleCloseMore()
-    })
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') handleCloseMore()
-    })
-  }
-  handleBindLangs()
+        var on = i === index; slide.setAttribute('aria-hidden', on ? 'false' : 'true');
+        var link = slide.querySelector('a'); if (link) { if (on) link.removeAttribute('tabindex'); else link.setAttribute('tabindex', '-1'); }
+      });
+      if (dotsEl) [].slice.call(dotsEl.children).forEach(function (dot, i) { if (i === index) dot.setAttribute('aria-current', 'true'); else dot.removeAttribute('aria-current'); });
+      var one = slides.length < 2; if (prevBtn) prevBtn.disabled = one; if (nextBtn) nextBtn.disabled = one;
+      if (announce && liveEl) liveEl.textContent = statusTpl.replace('{current}', String(index + 1)).replace('{total}', String(slides.length)).replace('{name}', name(slides[index]));
+    };
+    var go = function (index, announce) {
+      index = wrap(index); isProgrammatic = true;
+      scroller.scrollTo({ left: slides[index].offsetLeft, behavior: reduced ? 'auto' : 'smooth' });
+      paint(index, announce); setTimeout(function () { isProgrammatic = false; }, 450);
+    };
+    var stopAuto = function () { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } };
+    var canAuto = function () { if (reduced || userHeld || pointerInside || document.hidden) return false; if (rootEl.matches(':focus-within')) return false; return slides.length > 1; };
+    var startAuto = function () { stopAuto(); if (reduced || slides.length < 2) return; autoTimer = setInterval(function () { if (canAuto()) go(current + 1, false); }, 7000); };
+    var userControl = function () { userHeld = true; stopAuto(); if (resumeTimer) clearTimeout(resumeTimer); resumeTimer = setTimeout(function () { userHeld = false; startAuto(); }, 12000); };
+    if (dotsEl) slides.forEach(function (slide, i) {
+      var dot = document.createElement('button'); dot.type = 'button'; dot.className = 'recipes-carousel-dot';
+      dot.setAttribute('aria-label', gotoTpl.replace('{n}', String(i + 1)).replace('{name}', name(slide)));
+      dot.addEventListener('click', function () { userControl(); go(i, true); }); dotsEl.appendChild(dot);
+    });
+    if (prevBtn) prevBtn.addEventListener('click', function () { userControl(); go(current - 1, true); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { userControl(); go(current + 1, true); });
+    scroller.addEventListener('scroll', function () { paint(nearest(), false); if (!isProgrammatic) userControl(); }, { passive: true });
+    rootEl.addEventListener('pointerenter', function () { pointerInside = true; });
+    rootEl.addEventListener('pointerleave', function () { pointerInside = false; if (!userHeld) startAuto(); });
+    rootEl.addEventListener('focusin', function () { pointerInside = true; });
+    rootEl.addEventListener('focusout', function () { pointerInside = false; if (!userHeld) startAuto(); });
+    document.addEventListener('visibilitychange', function () { if (document.hidden) stopAuto(); else if (!userHeld) startAuto(); });
+    rootEl.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); userControl(); go(current - 1, true); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); userControl(); go(current + 1, true); }
+    });
+    paint(0, false); startAuto();
+  });
 
   /* ── Google Analytics: load gtag.js only after accept ── */
-  var gaId = typeof window.__GA_MEASUREMENT_ID === 'string' ? window.__GA_MEASUREMENT_ID : ''
-  var consentBar = document.querySelector('[data-consent-bar]')
-  var gaLoaded = false
-  var CONSENT_KEY = 'juzlova-ga-consent'
-
-  var handleGtagFn = function () {
-    window.dataLayer = window.dataLayer || []
-    if (typeof window.gtag !== 'function') {
-      window.gtag = function () { window.dataLayer.push(arguments) }
-    }
-    return window.gtag
-  }
-
-  var handleAiReferral = function (gtag) {
-    if (!gaId || typeof gtag !== 'function') return
-    var ref = document.referrer || ''
-    if (!ref) return
-    var host = ''
-    try { host = new URL(ref).hostname.toLowerCase() } catch (err) { return }
-    var sources = [
-      ['chatgpt.com', 'chatgpt'],
-      ['chat.openai.com', 'chatgpt'],
-      ['perplexity.ai', 'perplexity'],
-      ['claude.ai', 'claude'],
-      ['gemini.google.com', 'gemini'],
-      ['copilot.microsoft.com', 'copilot']
-    ]
-    var found = ''
-    sources.forEach(function (pair) {
-      if (found) return
-      if (host === pair[0] || host.slice(-(pair[0].length + 1)) === '.' + pair[0]) {
-        found = pair[1]
-      }
-    })
-    if (!found) return
-    gtag('event', 'ai_referral', { ai_source: found })
-  }
-
-  var handleHideConsent = function () {
-    if (!consentBar) return
-    consentBar.hidden = true
-    consentBar.setAttribute('aria-hidden', 'true')
-  }
-
-  var handleShowConsent = function () {
-    if (!consentBar) return
-    consentBar.hidden = false
-    consentBar.removeAttribute('aria-hidden')
-  }
-
-  var handleLoadGtag = function () {
-    if (gaLoaded || !gaId) return
-    gaLoaded = true
-    var gtag = handleGtagFn()
-    gtag('consent', 'update', { analytics_storage: 'granted' })
-    gtag('js', new Date())
-    gtag('config', gaId)
-    handleAiReferral(gtag)
-    var s = document.createElement('script')
-    s.async = true
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId)
-    document.head.appendChild(s)
-  }
-
-  var handleConsentAccept = function () {
-    try { localStorage.setItem(CONSENT_KEY, 'accept') } catch (e) {}
-    handleLoadGtag()
-    handleHideConsent()
-  }
-
-  var handleConsentEssential = function () {
-    try { localStorage.setItem(CONSENT_KEY, 'essential') } catch (e) {}
-    handleHideConsent()
-  }
-
-  if (!gaId) {
-    handleHideConsent()
-  } else {
-    handleGtagFn()
-    var stored = ''
-    try { stored = localStorage.getItem(CONSENT_KEY) || '' } catch (e) {}
-    if (stored === 'accept') {
-      handleLoadGtag()
-      handleHideConsent()
-    } else if (stored === 'essential') {
-      handleHideConsent()
-    } else {
-      handleShowConsent()
-    }
-    var acceptBtn = consentBar ? consentBar.querySelector('[data-consent-accept]') : null
-    var essentialBtn = consentBar ? consentBar.querySelector('[data-consent-essential]') : null
-    if (acceptBtn) acceptBtn.addEventListener('click', handleConsentAccept)
-    if (essentialBtn) essentialBtn.addEventListener('click', handleConsentEssential)
+  var gaId = typeof window.__GA_MEASUREMENT_ID === 'string' ? window.__GA_MEASUREMENT_ID : '';
+  var consentBar = document.querySelector('[data-consent-bar]');
+  var gaLoaded = false;
+  var CONSENT_KEY = 'juzlova-ga-consent';
+  var gtagFn = function () { window.dataLayer = window.dataLayer || []; if (typeof window.gtag !== 'function') window.gtag = function () { window.dataLayer.push(arguments); }; return window.gtag; };
+  var aiReferral = function (gtag) {
+    if (!gaId || typeof gtag !== 'function') return;
+    var ref = document.referrer || ''; if (!ref) return;
+    var host = ''; try { host = new URL(ref).hostname.toLowerCase(); } catch (err) { return; }
+    var sources = [['chatgpt.com', 'chatgpt'], ['chat.openai.com', 'chatgpt'], ['perplexity.ai', 'perplexity'], ['claude.ai', 'claude'], ['gemini.google.com', 'gemini'], ['copilot.microsoft.com', 'copilot']];
+    var found = '';
+    sources.forEach(function (pair) { if (found) return; if (host === pair[0] || host.slice(-(pair[0].length + 1)) === '.' + pair[0]) found = pair[1]; });
+    if (found) gtag('event', 'ai_referral', { ai_source: found });
+  };
+  var hideConsent = function () { if (consentBar) { consentBar.hidden = true; consentBar.setAttribute('aria-hidden', 'true'); } };
+  var showConsent = function () { if (consentBar) { consentBar.hidden = false; consentBar.removeAttribute('aria-hidden'); } };
+  var loadGtag = function () {
+    if (gaLoaded || !gaId) return; gaLoaded = true;
+    var gtag = gtagFn();
+    gtag('consent', 'update', { analytics_storage: 'granted' }); gtag('js', new Date()); gtag('config', gaId); aiReferral(gtag);
+    var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId); document.head.appendChild(s);
+  };
+  if (!gaId) hideConsent();
+  else {
+    gtagFn();
+    var stored = ''; try { stored = localStorage.getItem(CONSENT_KEY) || ''; } catch (e) {}
+    if (stored === 'accept') { loadGtag(); hideConsent(); }
+    else if (stored === 'essential') hideConsent();
+    else showConsent();
+    var acceptBtn = consentBar ? consentBar.querySelector('[data-consent-accept]') : null;
+    var essentialBtn = consentBar ? consentBar.querySelector('[data-consent-essential]') : null;
+    if (acceptBtn) acceptBtn.addEventListener('click', function () { try { localStorage.setItem(CONSENT_KEY, 'accept'); } catch (e) {} loadGtag(); hideConsent(); });
+    if (essentialBtn) essentialBtn.addEventListener('click', function () { try { localStorage.setItem(CONSENT_KEY, 'essential'); } catch (e) {} hideConsent(); });
   }
 })();

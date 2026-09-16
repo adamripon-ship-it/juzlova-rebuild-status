@@ -95,6 +95,13 @@ Q: Je to raw kakao?
 A: Ne. Je alkalizované (holandské) a pražené. Raw kakao je nepražené a chutná hořce a travnatě; to naše je jemné a kulaté, s praženými tóny.
 Q: Hodí se do zmrzliny?
 A: Ano. Vyšší podíl kakaového másla dává zmrzlině hladkou texturu a tmavou barvu, která v mrazu nevybledne.
+origin: Kakao Jůzlová: Theobroma cacao ze západní Afriky (Pobřeží slonoviny, Ghana, Kamerun, Nigérie), holandský typ, 20–22 % kakaového másla, půdy s nízkým kadmiem; limit EU pro kakaový prášek 0,60 mg/kg; certifikát k šarži na vyžádání.
+Q: Odkud pochází kakao Jůzlová?
+A: Ze západní Afriky — hlavně z Pobřeží slonoviny, Ghany, Kamerunu a Nigérie. Je to kakaovník Theobroma cacao. Boby se fermentují v banánových listech, suší na slunci a u nás se melou a alkalizují na holandský typ.
+Q: Proč má kakao Jůzlová nízký obsah kadmia?
+A: Kadmium se do bobů dostává z půdy. Vysoké hodnoty mívá kakao z vulkanických půd části Latinské Ameriky, například z Peru a Ekvádoru. Západoafrické půdy kadmia obsahují málo, a tak ho má málo i kakao odtud. Limit EU pro kakaový prášek je 0,60 mg/kg (nařízení (EU) 2023/915); hodnotu naší šarže máme v laboratorním certifikátu a pošleme ho na vyžádání.
+Q: A co olovo?
+A: V západní Africe je to hlavní sledovaný kov. Drží se na slupce bobu, ne v jádru, a odchází při loupání před mletím. I olovo je v certifikátu k šarži.
 
 ### Vanilínový cukr
 url: https://www.juzlova.cz/vanilinovy-cukr/
@@ -659,4 +666,4 @@ Q: Jak směsi skladovat?
 A: V suchu a zavřené. Kakao mimo silné pachy, ideálně při 15–20 °C.
 
 Obsah obnovujeme každé čtvrtletí nebo při změně cen a sortimentu.
-updated: 2026-09-16
+updated: 2026-09-17

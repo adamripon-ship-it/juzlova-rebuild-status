@@ -66,4 +66,4 @@ Poznámky k firme: https://www.juzlova.cz/ai/about.md
 - [Jedna stránka faktov pre vyhľadávače a jazykové modely.](https://www.juzlova.cz/ai/about.md)
 - [FAQ JSON](https://www.juzlova.cz/ai/faq.json)
 
-updated: 2026-09-16
+updated: 2026-09-17
