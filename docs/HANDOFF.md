@@ -17,6 +17,23 @@ europe-west3 service once the owner confirms nothing else uses it.
 `GCP_PROJECT`; without them it prints a warning and deploys nothing, while the
 run still shows a green tick. Verify a deploy by checking the live H1.
 
+## Follow-ups after the 2026-09-17 deploy (nginx, small)
+
+Both belong in `nginx.conf`; the design session is editing that file for
+security headers, so land them in the same change:
+
+1. Move `include /etc/nginx/juzlova-redirects.conf;` **above** the apex
+   `if ($http_host …) return 301` block. Today an old URL on the apex takes
+   two hops (apex → www old → www new); with the include first it is one.
+2. Add `absolute_redirect off;` (or `port_in_redirect off;`) in the server
+   block if a slash-less URL such as `/cenik` is ever seen redirecting to
+   `http://www.juzlova.cz:8080/cenik/` — nginx's directory redirect uses the
+   container's listen port and scheme unless told otherwise.
+
+Also still open: repository secrets `GCP_SA_KEY` / `GCP_PROJECT` for
+`deploy-cloudrun.yml`; resubmit the four sitemaps in Google Search Console
+after the URL change; delete the orphan `juzlova-web` service in europe-west3.
+
 ## 2026-09-16 — translated slugs and messaging rewrite
 
 All copy was rewritten from `docs/messaging/` (persona research, rules, page by
