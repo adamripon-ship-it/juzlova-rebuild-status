@@ -49,12 +49,12 @@ jobs:
         with:
           python-version: '3.12'
 
-      # The committed HTML is already built with SITE_BASE=https://juzlova.cz,
-      # but rebuild anyway so a stale commit cannot ship pointing at github.io.
+      # The committed HTML is built with SITE_BASE=https://www.juzlova.cz (the live host;
+      # the apex 301s to www), but rebuild anyway so a stale commit cannot ship pointing at github.io.
       - name: Rebuild with the production domain
         if: steps.creds.outputs.ok == 'true'
         env:
-          SITE_BASE: https://juzlova.cz
+          SITE_BASE: https://www.juzlova.cz
         run: |
           python scripts/build_site.py
           python scripts/verify_refs.py
