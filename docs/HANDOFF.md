@@ -3,6 +3,20 @@
 Last verified 2026-08-31 by fetching the live site. For how to work on the
 code, read [`AGENTS.md`](../AGENTS.md); this file is history and open questions.
 
+## 2026-09-17 — production is `juzlova-web` in **europe-west4**, not west3
+
+The Cloud Run domain mappings for `juzlova.cz` and `www.juzlova.cz` live in
+**europe-west4** and route to the `juzlova-web` service **in europe-west4**.
+A second service with the same name exists in europe-west3; it is an orphan
+copy that nothing routes to (its own run.app URL works, the domain does not
+reach it). `deploy-cloudrun.yml` now targets europe-west4. When deploying by
+hand, always pass `--region europe-west4`. Cleanup candidate: delete the
+europe-west3 service once the owner confirms nothing else uses it.
+
+`deploy-cloudrun.yml` still needs the repository secrets `GCP_SA_KEY` and
+`GCP_PROJECT`; without them it prints a warning and deploys nothing, while the
+run still shows a green tick. Verify a deploy by checking the live H1.
+
 ## 2026-09-16 — translated slugs and messaging rewrite
 
 All copy was rewritten from `docs/messaging/` (persona research, rules, page by
@@ -98,7 +112,7 @@ production is today. It and `gcp_domain_mapping.sh` refuse to run unless
 
 | Workflow | Target | State |
 |---|---|---|
-| `deploy-cloudrun.yml` | **Cloud Run `juzlova-web`, europe-west3 — this is production** | runs on push to `main`; needs `GCP_SA_KEY` + `GCP_PROJECT` |
+| `deploy-cloudrun.yml` | **Cloud Run `juzlova-web`, europe-west4 — this is production** (a same-named orphan exists in europe-west3) | runs on push to `main`; needs `GCP_SA_KEY` + `GCP_PROJECT` |
 | `deploy-gcp.yml` | GCS bucket, europe-central2 (Warsaw) | dispatch-only; not what serves the domain |
 | `deploy-cloudrun-preview.yml` | Cloud Run `juzlova-main-preview`, europe-west3 | dispatch-only; deliberately not the live `juzlova-web` |
 | `cutover-pages-dns.yml` | points `www` at GitHub Pages | needs `CLOUDFLARE_API_TOKEN` |

@@ -24,7 +24,7 @@ fi
 
 DOMAIN="juzlova.cz"
 SERVICE="${CLOUD_RUN_SERVICE:-juzlova-web}"
-REGION="${CLOUD_RUN_REGION:-europe-west3}"
+REGION="${CLOUD_RUN_REGION:-europe-west4}"
 PROJECT="${GCP_PROJECT:-${GCP_PROJECT_ID:-}}"
 API="https://api.cloudflare.com/client/v4"
 AUTH=(-H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" -H "Content-Type: application/json")

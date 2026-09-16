@@ -30,7 +30,7 @@ jobs:
     timeout-minutes: 25
     env:
       SERVICE: juzlova-web
-      REGION: europe-west3
+      REGION: europe-west4
     steps:
       - uses: actions/checkout@v4
 
