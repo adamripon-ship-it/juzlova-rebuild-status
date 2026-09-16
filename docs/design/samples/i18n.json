@@ -1,0 +1,298 @@
+{
+ "cs": {
+  "est": "Rodinná dílna · Kochánov · od roku 2004",
+  "hero_h1": "Bramborové knedlíky na stole za 20 minut — z mouky z mlýna 12 km od naší dílny",
+  "hero_cta": "Zavolat Jiřině a objednat",
+  "hero_cta2": "Podívat se na ceník",
+  "sec_products": "Pět směsí. Jedno místo výroby.",
+  "sec_recipes": "Co z toho uvaříte",
+  "sec_recipes_lead": "Každý recept říká, kolik směsi dát, na kolik stupňů péct a kolik porcí vyjde.",
+  "sec_why": "Víte, odkud je mouka. A komu voláte.",
+  "why_1_p": "Pšeničná mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dílny, se značkou KLASA. Mlýn vlastní a vede naše širší rodina.",
+  "why_2_p": "Objednávky bere Jiřina Jůzlová, denně 8–19. Žádný e-shop, žádné call centrum.",
+  "why_3_p": "Puding v kile, cukr v kile, knedlíky v pětikilovém pytli. Balíme jednoduše a prodáváme přímo z dílny, proto jsou ceny takové, jaké jsou.",
+  "nav_products": "Produkty",
+  "nav_recipes": "Recepty",
+  "nav_b2b": "Pro kuchyně",
+  "nav_about": "Kdo jsme",
+  "nav_delivery": "Kde nás najdete",
+  "ticker_pickup": "Ceny platí při vyzvednutí v dílně",
+  "full_price_list": "Celý ceník",
+  "all_recipes": "Všechny recepty",
+  "h1_main": "Bramborové knedlíky na stole za 20 minut",
+  "h1_sub": "z mouky z mlýna 12 km od naší dílny",
+  "stat_1": "bramborové knedlíky · 250 Kč",
+  "stat_2": "minut na chlupaté knedlíky",
+  "stat_3": "rok, kdy jsme začali míchat",
+  "stat_4": "od dílny k rodinnému mlýnu",
+  "stat_5": "tuku v kakau holandského typu",
+  "stat_6": "puding a cukr v kile, ne v sáčku",
+  "journey_h2": "Jak se směs dostane na váš stůl",
+  "step_1": "Pšenice z Vysočiny",
+  "step_2": "Mlýn 12 km od dílny",
+  "step_3": "Míchání v Kochánově",
+  "step_4": "Vyzvednutí nebo rozvoz",
+  "step_5": "Na talíři za 20 minut",
+  "marks": "Vysočina · rozvoz",
+  "form_h": "Potřebujete poradit s objednávkou?",
+  "form_name": "Vaše jméno",
+  "form_tel": "Váš telefon",
+  "form_note": "Zavoláme vám zpět ve všední den 8–19.",
+  "form_btn": "Zavolat mi zpět",
+  "form_ok": "Děkujeme. Zavoláme vám zpět ve všední den 8–19.",
+  "form_err": "Telefon chybí nebo je krátký. Zkontrolujte číslo a zkuste to znovu.",
+  "lang_label": "Jazyk",
+  "version": "verze",
+  "products": [
+   {
+    "name": "Bramborové knedlíky v prášku",
+    "price": "5 kg · 250 Kč"
+   },
+   {
+    "name": "Chlupaté knedlíky v prášku",
+    "price": "5 kg · 260 Kč"
+   },
+   {
+    "name": "Vanilkový puding bez lepku",
+    "price": "1 kg · 60 Kč · 400 g · 30 Kč"
+   },
+   {
+    "name": "Kakao holandského typu",
+    "price": "500 g · 270 Kč"
+   },
+   {
+    "name": "Vanilínový cukr",
+    "price": "1 kg · 60 Kč"
+   }
+  ],
+  "recipes": [
+   "Šišky s mákem",
+   "Strapačky se zelím a slaninou",
+   "Hruškový koláč s vanilkovým pudinkem"
+  ],
+  "hero_h1_full": "Bramborové knedlíky na stole za 20 minut — z mouky z mlýna 12 km od naší dílny",
+  "cta_short": "Zavolat"
+ },
+ "en": {
+  "est": "Family workshop · Kochánov, Czechia · since 2004",
+  "hero_h1": "Czech potato dumpling mix, gluten-free pudding and cocoa — shipped anywhere in the EU, shipping cost quoted before you pay",
+  "hero_cta": "Call Jiřina to order",
+  "hero_cta2": "See prices",
+  "sec_products": "Five mixes. One workshop.",
+  "sec_recipes": "What you can cook with them",
+  "sec_recipes_lead": "Every recipe says how much mix to use, the oven temperature and how many portions it makes.",
+  "sec_why": "You know where the flour is from. And who picks up the phone.",
+  "why_1_p": "The wheat flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km from the workshop, with the Czech KLASA quality mark. Our extended family owns and runs the mill.",
+  "why_2_p": "Jiřina Jůzlová takes orders daily 8–19. No web shop, no call centre. Replies are in Czech; for German and English we sometimes use a translator.",
+  "why_3_p": "Pudding by the kilo, sugar by the kilo, dumpling mix in a 5 kg bag. Simple packaging, sold straight from the workshop.",
+  "nav_products": "Products",
+  "nav_recipes": "Recipes",
+  "nav_b2b": "For kitchens",
+  "nav_about": "About us",
+  "nav_delivery": "Where to find us",
+  "ticker_pickup": "Prices apply at workshop pick-up",
+  "full_price_list": "Full price list",
+  "all_recipes": "All recipes",
+  "h1_main": "Czech potato dumplings on the table in 20 minutes",
+  "h1_sub": "from flour milled 12 km from our workshop",
+  "stat_1": "potato dumpling mix · 250 CZK",
+  "stat_2": "minutes for raw-potato dumplings",
+  "stat_3": "the year we started mixing",
+  "stat_4": "from the workshop to the family mill",
+  "stat_5": "cocoa butter in the Dutch-process cocoa",
+  "stat_6": "pudding and sugar by the kilo, not the sachet",
+  "journey_h2": "How the mix reaches your table",
+  "step_1": "Wheat from the Highlands",
+  "step_2": "The mill 12 km away",
+  "step_3": "Mixing in Kochánov",
+  "step_4": "Pick-up or delivery",
+  "step_5": "On the plate in 20 minutes",
+  "marks": "Vysočina · delivery",
+  "form_h": "Need help with your order?",
+  "form_name": "Your name",
+  "form_tel": "Your phone number",
+  "form_note": "We call back on weekdays 8–19.",
+  "form_btn": "Call me back",
+  "form_ok": "Thank you. We will call you back on a weekday between 8 and 19.",
+  "form_err": "The phone number is missing or too short. Check it and try again.",
+  "lang_label": "Language",
+  "version": "revision",
+  "products": [
+   {
+    "name": "Potato dumpling mix",
+    "price": "5 kg · 250 CZK"
+   },
+   {
+    "name": "Raw-potato dumpling mix (chlupaté knedlíky)",
+    "price": "5 kg · 260 CZK"
+   },
+   {
+    "name": "Gluten-free vanilla pudding powder",
+    "price": "1 kg · 60 CZK · 400 g · 30 CZK"
+   },
+   {
+    "name": "Dutch-process cocoa",
+    "price": "500 g · 270 CZK"
+   },
+   {
+    "name": "Vanillin sugar",
+    "price": "1 kg · 60 CZK"
+   }
+  ],
+  "recipes": [
+   "Poppy-seed rolls (šišky s mákem)",
+   "Strapačky with cabbage and bacon",
+   "Pear cake with vanilla pudding"
+  ],
+  "hero_h1_full": "Czech potato dumpling mix, gluten-free pudding and cocoa — shipped anywhere in the EU, shipping cost quoted before you pay",
+  "cta_short": "Call us"
+ },
+ "de": {
+  "est": "Familienwerkstatt · Kochánov, Tschechien · seit 2004",
+  "hero_h1": "Böhmische Kartoffelknödel-Mischung aus einer Familienwerkstatt in der Vysočina — Mehl aus der eigenen Mühle, nur Wasser dazu",
+  "hero_cta": "Jiřina anrufen und bestellen",
+  "hero_cta2": "Preisliste ansehen",
+  "sec_products": "Fünf Mischungen. Eine Werkstatt.",
+  "sec_recipes": "Was Sie daraus kochen",
+  "sec_recipes_lead": "Jedes Rezept nennt die Menge Mischung, die Backtemperatur und die Portionen.",
+  "sec_why": "Sie wissen, woher das Mehl kommt. Und wer ans Telefon geht.",
+  "why_1_p": "Das Weizenmehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt, mit dem tschechischen Gütesiegel KLASA. Unsere erweiterte Familie besitzt und führt die Mühle.",
+  "why_2_p": "Bestellungen nimmt Jiřina Jůzlová entgegen, täglich 8–19 Uhr. Kein Onlineshop, kein Callcenter. Antwort auf Tschechisch; für Deutsch nutzen wir manchmal eine Übersetzungshilfe.",
+  "why_3_p": "Pudding im Kilo, Zucker im Kilo, Knödelmischung im 5-kg-Beutel. Einfache Verpackung, Verkauf direkt aus der Werkstatt.",
+  "nav_products": "Produkte",
+  "nav_recipes": "Rezepte",
+  "nav_b2b": "Für Küchen",
+  "nav_about": "Über uns",
+  "nav_delivery": "Anfahrt",
+  "ticker_pickup": "Preise gelten bei Abholung in der Werkstatt",
+  "full_price_list": "Komplette Preisliste",
+  "all_recipes": "Alle Rezepte",
+  "h1_main": "Kartoffelknödel auf dem Tisch in 20 Minuten",
+  "h1_sub": "aus Mehl, gemahlen 12 km von unserer Werkstatt",
+  "stat_1": "Kartoffelknödel-Mischung · 250 Kč",
+  "stat_2": "Minuten für rohe Kartoffelknödel",
+  "stat_3": "das Jahr, in dem wir begannen",
+  "stat_4": "von der Werkstatt zur Familienmühle",
+  "stat_5": "Kakaobutter im Kakao holländischer Art",
+  "stat_6": "Pudding und Zucker im Kilo, nicht im Beutel",
+  "journey_h2": "Wie die Mischung auf Ihren Tisch kommt",
+  "step_1": "Weizen aus der Vysočina",
+  "step_2": "Die Mühle 12 km entfernt",
+  "step_3": "Mischen in Kochánov",
+  "step_4": "Abholung oder Lieferung",
+  "step_5": "In 20 Minuten auf dem Teller",
+  "marks": "Vysočina · Lieferung",
+  "form_h": "Brauchen Sie Hilfe bei der Bestellung?",
+  "form_name": "Ihr Name",
+  "form_tel": "Ihre Telefonnummer",
+  "form_note": "Wir rufen an Werktagen 8–19 Uhr zurück.",
+  "form_btn": "Rückruf anfordern",
+  "form_ok": "Danke. Wir rufen an einem Werktag zwischen 8 und 19 Uhr zurück.",
+  "form_err": "Die Telefonnummer fehlt oder ist zu kurz. Bitte prüfen und erneut senden.",
+  "lang_label": "Sprache",
+  "version": "Revision",
+  "products": [
+   {
+    "name": "Kartoffelknödel-Mischung",
+    "price": "5 kg · 250 Kč"
+   },
+   {
+    "name": "Rohe Kartoffelknödel-Mischung (chlupaté knedlíky)",
+    "price": "5 kg · 260 Kč"
+   },
+   {
+    "name": "Glutenfreies Vanillepuddingpulver",
+    "price": "1 kg · 60 Kč · 400 g · 30 Kč"
+   },
+   {
+    "name": "Kakaopulver holländischer Art",
+    "price": "500 g · 270 Kč"
+   },
+   {
+    "name": "Vanillinzucker",
+    "price": "1 kg · 60 Kč"
+   }
+  ],
+  "recipes": [
+   "Mohnnudeln (šišky s mákem)",
+   "Strapačky mit Kraut und Speck",
+   "Birnenkuchen mit Vanillepudding"
+  ],
+  "hero_h1_full": "Böhmische Kartoffelknödel-Mischung aus einer Familienwerkstatt in der Vysočina — Mehl aus der eigenen Mühle, nur Wasser dazu",
+  "cta_short": "Anrufen"
+ },
+ "sk": {
+  "est": "Rodinná dielňa · Kochánov, Česko · od roku 2004",
+  "hero_h1": "Cesto na halušky, strapačky a zemiakové knedle v prášku z rodinnej dielne na Vysočine — múka z vlastného mlyna, stačí voda",
+  "hero_cta": "Zavolať Jiřine a objednať",
+  "hero_cta2": "Pozrieť cenník",
+  "sec_products": "Päť zmesí. Jedno miesto výroby.",
+  "sec_recipes": "Čo z toho uvaríte",
+  "sec_recipes_lead": "Každý recept hovorí, koľko zmesi dať, na koľko stupňov piecť a koľko porcií vyjde.",
+  "sec_why": "Viete, odkiaľ je múka. A komu voláte.",
+  "why_1_p": "Pšeničná múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne, s českou značkou kvality KLASA. Mlyn vlastní a vedie naša širšia rodina.",
+  "why_2_p": "Objednávky berie Jiřina Jůzlová, denne 8–19. Žiadny e-shop, žiadne call centrum. Odpovedáme po česky.",
+  "why_3_p": "Puding v kile, cukor v kile, knedle v päťkilovom vreci. Balíme jednoducho a predávame priamo z dielne.",
+  "nav_products": "Produkty",
+  "nav_recipes": "Recepty",
+  "nav_b2b": "Pre kuchyne",
+  "nav_about": "Kto sme",
+  "nav_delivery": "Kde nás nájdete",
+  "ticker_pickup": "Ceny platia pri vyzdvihnutí v dielni",
+  "full_price_list": "Celý cenník",
+  "all_recipes": "Všetky recepty",
+  "h1_main": "Zemiakové knedle na stole za 20 minút",
+  "h1_sub": "z múky z mlyna 12 km od našej dielne",
+  "stat_1": "zemiakové knedle · 250 Kč",
+  "stat_2": "minút na chlpaté knedle",
+  "stat_3": "rok, keď sme začali miešať",
+  "stat_4": "od dielne k rodinnému mlynu",
+  "stat_5": "tuku v kakau holandského typu",
+  "stat_6": "puding a cukor v kile, nie vo vrecku",
+  "journey_h2": "Ako sa zmes dostane na váš stôl",
+  "step_1": "Pšenica z Vysočiny",
+  "step_2": "Mlyn 12 km od dielne",
+  "step_3": "Miešanie v Kochánove",
+  "step_4": "Vyzdvihnutie alebo rozvoz",
+  "step_5": "Na tanieri za 20 minút",
+  "marks": "Vysočina · rozvoz",
+  "form_h": "Potrebujete poradiť s objednávkou?",
+  "form_name": "Vaše meno",
+  "form_tel": "Váš telefón",
+  "form_note": "Zavoláme vám späť v pracovný deň 8–19.",
+  "form_btn": "Zavolať mi späť",
+  "form_ok": "Ďakujeme. Zavoláme vám späť v pracovný deň medzi 8. a 19. hodinou.",
+  "form_err": "Telefón chýba alebo je krátky. Skontrolujte číslo a skúste to znova.",
+  "lang_label": "Jazyk",
+  "version": "revízia",
+  "products": [
+   {
+    "name": "Zemiakové knedle v prášku",
+    "price": "5 kg · 250 Kč"
+   },
+   {
+    "name": "Chlpaté knedle v prášku",
+    "price": "5 kg · 260 Kč"
+   },
+   {
+    "name": "Vanilkový puding bez lepku",
+    "price": "1 kg · 60 Kč · 400 g · 30 Kč"
+   },
+   {
+    "name": "Kakao holandského typu",
+    "price": "500 g · 270 Kč"
+   },
+   {
+    "name": "Vanilínový cukor",
+    "price": "1 kg · 60 Kč"
+   }
+  ],
+  "recipes": [
+   "Šúľance s makom",
+   "Strapačky s kapustou a slaninou",
+   "Hruškový koláč s vanilkovým pudingom"
+  ],
+  "hero_h1_full": "Cesto na halušky, strapačky a zemiakové knedle v prášku z rodinnej dielne na Vysočine — múka z vlastného mlyna, stačí voda",
+  "cta_short": "Zavolať"
+ }
+}

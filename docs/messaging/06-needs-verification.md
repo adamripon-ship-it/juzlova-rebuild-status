@@ -26,3 +26,10 @@ Each item would strengthen the copy. Confirm with Jiřina / Jiří / Jířa (sur
 | 20 | Vanillin sugar "za cenu čtyř sáčků" | Vanillin sugar H1 | A named sachet price | Use "1 kg za 60 Kč" |
 
 Also flagged for **removal regardless** (cannot be verified in principle): "chutí k nerozeznání od domácích"; "4× dražší / ušetříte 750 Kč"; flavour-profile scores 92/88/78/94/86; "některé značky melou lusky a slupky"; "prémiová jakost".
+
+## Added 2026-09-16 (cocoa origin and cadmium, see 07-cocoa-origin-and-cadmium.md)
+
+| # | Claim | Where | Evidence needed | If unconfirmed |
+|---|---|---|---|---|
+| 21 | Beans mainly from Ivory Coast, Ghana, Cameroon, Nigeria (owner, chat 2026-09-16) | Cocoa page capsule + FAQ | Country of origin on the current batch's specification or certificate | Keep "západní Afrika" only, drop the country list |
+| 22 | Measured cadmium value of the current batch | Not printed; certificate on request | Latest certificate of analysis | Stay with "hodnota je v certifikátu"; never print a number without the certificate |
