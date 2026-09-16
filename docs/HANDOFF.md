@@ -25,10 +25,10 @@ security headers, so land them in the same change:
 1. Move `include /etc/nginx/juzlova-redirects.conf;` **above** the apex
    `if ($http_host …) return 301` block. Today an old URL on the apex takes
    two hops (apex → www old → www new); with the include first it is one.
-2. Add `absolute_redirect off;` (or `port_in_redirect off;`) in the server
-   block if a slash-less URL such as `/cenik` is ever seen redirecting to
-   `http://www.juzlova.cz:8080/cenik/` — nginx's directory redirect uses the
-   container's listen port and scheme unless told otherwise.
+2. Done 2026-09-17: `absolute_redirect off;` in the server block. Before it,
+   a slash-less URL such as `/cenik` redirected to
+   `http://www.juzlova.cz:8080/cenik/` because nginx's directory redirect
+   used the container's listen port and scheme. Keep the directive.
 
 Also still open: repository secrets `GCP_SA_KEY` / `GCP_PROJECT` for
 `deploy-cloudrun.yml`; resubmit the four sitemaps in Google Search Console
