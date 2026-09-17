@@ -9,6 +9,11 @@
   root.classList.add('js');
   if (capture) root.classList.add('capture');
 
+  /* ── the wordmark writes itself once per session (not in captures, not for reduced motion) ── */
+  try {
+    if (!reduced && !sessionStorage.getItem('juzlova-logo')) { root.classList.add('logo-write'); sessionStorage.setItem('juzlova-logo', '1'); }
+  } catch (e) {}
+
   /* ── header shadow once the page scrolls ── */
   var header = document.querySelector('header.site');
   function headerState() { if (header) header.classList.toggle('scrolled', window.scrollY > 24); }

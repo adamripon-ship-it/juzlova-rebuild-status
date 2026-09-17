@@ -58,8 +58,17 @@ header.site.scrolled { box-shadow: 0 10px 30px -18px rgba(26,26,26,.3); }
 header.site .wrap { width: 92%; max-width: 100rem; }
 .bar { display: flex; align-items: center; gap: .7rem; height: 4.75rem; position: relative; z-index: 80; }
 .brand { display: flex; align-items: center; margin-right: auto; text-decoration: none; min-width: 0; }
+.brand { position: relative; }
 .brand .wordmark { height: 1.9rem; width: auto; max-width: min(160px, 40vw); display: block; }
-.brand .wordmark.on-dark { display: none; }
+/* the signature writes itself once per session: a soft mask travels in the writing direction */
+@property --p { syntax: "<percentage>"; inherits: false; initial-value: 120%; }
+.logo-write .brand .wordmark { --p: -20%; -webkit-mask-image: linear-gradient(100deg, #000 calc(var(--p) - 14%), transparent var(--p)); mask-image: linear-gradient(100deg, #000 calc(var(--p) - 14%), transparent var(--p)); animation: logoWrite 1.3s cubic-bezier(.4, 0, .2, 1) .15s forwards; }
+@keyframes logoWrite { to { --p: 130%; } }
+.brand-leaf { position: absolute; right: -.55rem; top: -.35rem; width: 1.05rem; height: .7rem; overflow: visible; fill: var(--gold); pointer-events: none; opacity: 0; transform: rotate(-30deg) scale(.2); transform-origin: 0% 90%; transition: opacity .35s var(--ease), transform .7s var(--ease-expo); }
+.brand:hover .brand-leaf, .brand:focus-visible .brand-leaf { opacity: 1; transform: rotate(-30deg) scale(1); }
+.logo-write .brand-leaf { animation: leafSprout 2.6s var(--ease-expo) 1.25s; }
+@keyframes leafSprout { 0% { opacity: 0; transform: rotate(-30deg) scale(.2); } 18% { opacity: 1; transform: rotate(-30deg) scale(1); } 78% { opacity: 1; transform: rotate(-30deg) scale(1); } 100% { opacity: 0; transform: rotate(-30deg) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .logo-write .brand .wordmark { animation: none; mask-image: none; -webkit-mask-image: none; } .logo-write .brand-leaf { animation: none; } .brand-leaf { transition: none; } }
 .nav-cta { flex: 0 0 auto; }
 .nav-cta.btn { padding: .8rem 1.1rem; font-size: .95rem; }
 .cta-long { display: none; }

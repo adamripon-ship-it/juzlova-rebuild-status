@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917b"
+ASSET_VER = "20260917c"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -294,7 +294,7 @@ def sprite_href(depth):
 
 def defs_html(masks=(), sticker=False):
     """Inline SVG defs: the masks this page uses plus the sticker outline filter."""
-    parts = [MASKS[m] for m in masks if m in MASKS]
+    parts = [MASKS[m] for m in ("m-leaf-single", *masks) if m in MASKS]
     if sticker:
         parts.append(STICKER_FILTER)
     if not parts:
@@ -871,8 +871,8 @@ def nav(L, depth, active, pid):
     langsel = lang_switcher_html(L, pid, depth)
     header_inner = f"""<div class="bar">
   <a class="brand" href="{home}" aria-label="Jůzlová.cz">
-    <img class="wordmark on-light" src="{assets}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200">
-    <img class="wordmark on-dark" src="{assets}img/logo-wordmark-white.png" alt="" aria-hidden="true" width="650" height="200">
+    <img class="wordmark" src="{assets}assets/logo-wordmark.svg?v={ASSET_VER}" alt="Jůzlová" width="650" height="200" fetchpriority="high">
+    <svg class="brand-leaf" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true" focusable="false"><use href="#mp-leaf-single"/></svg>
   </a>
   <a class="btn gold nav-cta" href="{TEL_JIRINA}"><span class="cta-long">{esc(ui['hero_cta'])}</span><span class="cta-short">{esc(ui['cta_short'])}</span></a>
   <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="{esc(ui['menu_open'])}" data-open-label="{esc(ui['menu_open'])}" data-close-label="{esc(ui['menu_close'])}">
@@ -1182,7 +1182,7 @@ def people_jsonld():
     ]
 
 
-def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None, body_class="", keywords="", meta_kind="home", meta_key="", extra_head="", defs=""):
+def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None, body_class="", keywords="", meta_kind="home", meta_key="", extra_head="", defs=None):
     lg = L["code"]
     title, desc = compose_meta(lg, meta_kind, meta_key, title, desc)
     path = path_of(lg, pid)
@@ -1202,6 +1202,8 @@ def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None,
         if code != lg
     )
     header_inner, nav_backdrop = nav(L, depth, active, pid)
+    if defs is None:
+        defs = defs_html()
     return f"""<!doctype html>
 <html lang="{lg}">
 <head>
