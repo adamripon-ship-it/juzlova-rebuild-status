@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917c"
+ASSET_VER = "20260917d"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -338,7 +338,12 @@ def shape_html(obj, img, alt, href=None, style="", width=1200, height=900):
 def cutout_html(assets, name, alt, cls="", width=1200, height=1200, speed=None, eager=False):
     attrs = f' data-speed="{speed}"' if speed is not None else ""
     load = 'fetchpriority="high"' if eager else 'loading="lazy"'
-    return (f'<figure class="cutout {cls}"{attrs}><img src="{assets}assets/botanicals/cutouts/{name}.webp" '
+    src = f"{assets}assets/botanicals/cutouts/{name}.webp"
+    srcset = ""
+    if eager:  # the hero object is the phone LCP: serve a 640 px variant there
+        srcset = (f' srcset="{assets}assets/botanicals/cutouts/{name}-640.webp 640w, {src} 1200w" '
+                  f'sizes="(max-width: 1100px) min(300px, 60vw), 23vw"')
+    return (f'<figure class="cutout {cls}"{attrs}><img src="{src}"{srcset} '
             f'alt="{esc(alt)}" width="{width}" height="{height}" {load} decoding="async"></figure>')
 
 
@@ -836,7 +841,7 @@ def lang_switcher_html(L, pid, depth):
         href = lang_href(other, pid, depth)
         return (
             f'<a class="lang-opt{on}" lang="{other}" hreflang="{other}" '
-            f'href="{href}" aria-label="{esc(names[other])}">'
+            f'href="{href}" aria-label="{other.upper()} – {esc(names[other])}">'
             f'{flags[other]}<span class="lang-code">{other.upper()}</span></a>'
         )
 
