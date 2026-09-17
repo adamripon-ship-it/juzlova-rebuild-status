@@ -1764,7 +1764,7 @@ def product_recipes_html(L, key, depth):
                "de": "Rezepte mit diesem Produkt", "sk": "Recepty s týmto výrobkom"}[L["code"]]
     links = "".join(f'<li><a href="{page_rel(L["code"], depth)}{slug_of(L["code"], pid)}/">{esc(r["name"])}</a></li>'
                     for pid, r in recipes)
-    return f'<section><h2>{heading}</h2><ul>{links}</ul></section>'
+    return f'<section id="product-recipes"><h2>{heading}</h2><ul>{links}</ul></section>'
 
 
 def build_product(L, key):

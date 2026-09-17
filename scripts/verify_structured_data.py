@@ -22,6 +22,10 @@ for lg in site.LANGS:
         page = next(x for x in blocks if x.get('@type') == 'WebPage')
         assert 'dateModified' not in page, 'Do not assign a global date to every page'
         if pid not in expected: continue
+        if pid == 'vanilkovy_pudink':
+            assert text.count('id="product-recipes"') == 1
+            for old in ['Recepty s pudingem', 'Recipes with the pudding', 'Rezepte mit dem Pudding', 'Recepty s pudingom']:
+                assert old not in text, 'Duplicate recipe section'
         product = next(x for x in blocks if x.get('@type') == 'Product')
         actual = []
         for offer in product['offers']:
