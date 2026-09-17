@@ -378,9 +378,6 @@ LANG = {
                 ("p", "Dávkování: zhruba 40 g na 500 ml mléka. Z kila uvaříte asi 25 pudingů nebo krém na několik plechů větrníků."),
                 ("h2", "Čokoládový?"),
                 ("p", "Kakaový puding nevyrábíme. Do uvařeného vanilkového pudingu zamíchejte lžíci našeho kakaa holandského typu a máte čokoládový krém."),
-                ("h2", "Recepty s pudingem"),
-                ("ul", ["hruškový koláč s vanilkovým pudingem", "věnečky s vanilkovým krémem",
-                        "minivětrníčky", "karamelové větrníky", "hrníčkový perník"]),
             ],
             "faq": [
                 ("Lze puding použít místo pudingu z obchodu 1 : 1?", "Ano. Zhruba 40 g na 500 ml mléka."),

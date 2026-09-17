@@ -34,3 +34,14 @@ jobs:
           echo "Committed build is up to date."
       - name: Verify local references resolve
         run: python scripts/verify_refs.py
+      - name: Verify sitemap coverage and language alternates
+        run: python scripts/verify_sitemaps.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify product markup and conversion tracking
+        run: |
+          python scripts/verify_structured_data.py
+          python -m unittest discover -s tests -p 'test_*.py'
+          node --check assets/site.js
+          node tests/measurement.test.cjs

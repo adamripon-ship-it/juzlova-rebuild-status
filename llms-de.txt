@@ -65,5 +65,7 @@ Firmennotizen: https://www.juzlova.cz/ai/about.md
 - [Vollständiger Auszug: Adresse, Produkte, jedes Rezept mit Zutaten und Zubereitung.](https://www.juzlova.cz/llms-full.txt)
 - [Eine Seite Fakten für Suche und Sprachmodelle.](https://www.juzlova.cz/ai/about.md)
 - [FAQ JSON](https://www.juzlova.cz/ai/faq.json)
+- [XML sitemap](https://www.juzlova.cz/sitemap.xml)
+- [XML sitemap (de)](https://www.juzlova.cz/sitemap-de.xml)
 
 updated: 2026-09-17

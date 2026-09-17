@@ -377,9 +377,6 @@ LANG = {
                 ("p", "Dosierung: etwa 40 g auf 500 ml Milch. Aus einem Kilo werden rund 25 Puddings oder Creme für mehrere Bleche Windbeutel."),
                 ("h2", "Schokolade?"),
                 ("p", "Kakaopudding stellen wir nicht her. Rühren Sie einen Löffel unseres Kakaos holländischer Art in den gekochten Vanillepudding — fertig ist die Schokocreme."),
-                ("h2", "Rezepte mit dem Pudding"),
-                ("ul", ["Birnenkuchen mit Vanillepudding", "Brandteigkränze mit Vanillecreme",
-                        "Mini-Windbeutel", "Karamell-Windbeutel", "Tassen-Lebkuchen"]),
             ],
             "faq": [
                 ("Kann ich ihn 1:1 statt Puddingpulver aus dem Laden verwenden?", "Ja. Etwa 40 g auf 500 ml Milch."),

@@ -80,5 +80,7 @@ Poznámky k firmě: https://www.juzlova.cz/ai/about.md
 - [Úplný výpis k citaci: adresa, výrobky, každý recept se surovinami a postupem.](https://www.juzlova.cz/llms-full.txt)
 - [Jedna stránka faktů pro vyhledávače a jazykové modely.](https://www.juzlova.cz/ai/about.md)
 - [FAQ JSON](https://www.juzlova.cz/ai/faq.json)
+- [XML sitemap](https://www.juzlova.cz/sitemap.xml)
+- [XML sitemap (cs)](https://www.juzlova.cz/sitemap-cs.xml)
 
 updated: 2026-09-17

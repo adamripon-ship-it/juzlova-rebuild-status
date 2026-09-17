@@ -377,9 +377,6 @@ LANG = {
                 ("p", "Dosage: about 40 g per 500 ml of milk. One kilo makes about 25 puddings, or cream for several trays of cream puffs."),
                 ("h2", "Chocolate?"),
                 ("p", "We don't make a cocoa pudding. Stir a spoonful of our Dutch-process cocoa into the cooked vanilla pudding and you have a chocolate cream."),
-                ("h2", "Recipes with the pudding"),
-                ("ul", ["pear cake with vanilla pudding", "choux rings with vanilla cream",
-                        "mini cream puffs", "caramel cream puffs", "cup-measure gingerbread"]),
             ],
             "faq": [
                 ("Can I use it 1:1 in place of a shop-bought pudding?", "Yes. About 40 g per 500 ml of milk."),

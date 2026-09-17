@@ -308,6 +308,8 @@
     var submitBtn = form.querySelector('[type="submit"]');
     var submitLabel = submitBtn ? (submitBtn.querySelector('span') || submitBtn) : null;
     var widgetId = null;
+    var requestId = window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : '';
+    var submitting = false;
     var siteKey = (form.getAttribute('data-turnstile-key') || '').trim();
 
     var handleSetStatus = function (kind, text) {
@@ -354,7 +356,7 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (form.classList.contains('is-success')) return;
+      if (submitting || form.classList.contains('is-success')) return;
       var honey = form.querySelector('[name="bot-field"]');
       if (honey && honey.value) {
         form.classList.add('is-success');
@@ -373,6 +375,8 @@
       var formType = form.getAttribute('data-form-type') || 'contact';
       var val = function (name) { var el = form.querySelector('[name="' + name + '"]'); return el ? (el.value || '').trim() : ''; };
       var payload = {
+        requestId: requestId,
+        attribution: window.JuzlovaMeasurement ? window.JuzlovaMeasurement.attribution() : null,
         type: formType === 'callback' ? 'contact' : formType,
         name: val('name'), phone: val('phone'), email: val('email'), message: val('message'), quantity: val('quantity'),
         topic: topicEl ? (topicEl.value || '').trim() : '',
@@ -400,6 +404,7 @@
         handleSetStatus('error', form.getAttribute('data-i18n-need-contact') || form.getAttribute('data-i18n-error') || ''); return;
       }
 
+      submitting = true;
       var defaultLabel = submitLabel ? submitLabel.textContent : '';
       if (submitBtn) { submitBtn.disabled = true; if (submitLabel) submitLabel.textContent = form.getAttribute('data-i18n-sending') || defaultLabel; }
       handleSetStatus('', '');
@@ -415,6 +420,7 @@
             return;
           }
           form.classList.add('is-success');
+          if (window.JuzlovaMeasurement) window.JuzlovaMeasurement.lead(result.body.lead_id, formType);
           form.reset();
           handleSetStatus('success', form.getAttribute('data-i18n-success') || '');
         })
@@ -423,6 +429,7 @@
           if (window.turnstile && widgetId != null) window.turnstile.reset(widgetId);
         })
         .then(function () {
+          submitting = false;
           if (submitBtn && !form.classList.contains('is-success')) { submitBtn.disabled = false; if (submitLabel) submitLabel.textContent = defaultLabel; }
         });
     });
@@ -559,23 +566,22 @@
   var gaLoaded = false;
   var CONSENT_KEY = 'juzlova-ga-consent';
   var gtagFn = function () { window.dataLayer = window.dataLayer || []; if (typeof window.gtag !== 'function') window.gtag = function () { window.dataLayer.push(arguments); }; return window.gtag; };
-  var aiReferral = function (gtag) {
-    if (!gaId || typeof gtag !== 'function') return;
-    var ref = document.referrer || ''; if (!ref) return;
-    var host = ''; try { host = new URL(ref).hostname.toLowerCase(); } catch (err) { return; }
-    var sources = [['chatgpt.com', 'chatgpt'], ['chat.openai.com', 'chatgpt'], ['perplexity.ai', 'perplexity'], ['claude.ai', 'claude'], ['gemini.google.com', 'gemini'], ['copilot.microsoft.com', 'copilot']];
-    var found = '';
-    sources.forEach(function (pair) { if (found) return; if (host === pair[0] || host.slice(-(pair[0].length + 1)) === '.' + pair[0]) found = pair[1]; });
-    if (found) gtag('event', 'ai_referral', { ai_source: found });
-  };
   var hideConsent = function () { if (consentBar) { consentBar.hidden = true; consentBar.setAttribute('aria-hidden', 'true'); } };
   var showConsent = function () { if (consentBar) { consentBar.hidden = false; consentBar.removeAttribute('aria-hidden'); } };
   var loadGtag = function () {
     if (gaLoaded || !gaId) return; gaLoaded = true;
     var gtag = gtagFn();
-    gtag('consent', 'update', { analytics_storage: 'granted' }); gtag('js', new Date()); gtag('config', gaId); aiReferral(gtag);
+    gtag('consent', 'update', { analytics_storage: 'granted' }); gtag('js', new Date()); gtag('config', gaId, { page_location: location.origin + location.pathname, page_referrer: document.referrer ? (function () { try { return new URL(document.referrer).origin; } catch (_) { return ''; } }()) : '' });
+    if (window.JuzlovaMeasurement) window.JuzlovaMeasurement.activate(gtag);
     var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId); document.head.appendChild(s);
   };
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href]');
+    if (!link || !window.JuzlovaMeasurement) return;
+    var href = link.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) window.JuzlovaMeasurement.contact('phone');
+    if (href.indexOf('mailto:') === 0) window.JuzlovaMeasurement.contact('email');
+  });
   if (!gaId) hideConsent();
   else {
     gtagFn();
