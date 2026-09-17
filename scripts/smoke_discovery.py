@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 parser = argparse.ArgumentParser()
 parser.add_argument('--base', required=True)
 parser.add_argument('--expected-revision', required=True)
+parser.add_argument('--preview', action='store_true')
 args = parser.parse_args()
 base = args.base.rstrip('/')
 root = Path(__file__).resolve().parents[1]
@@ -19,6 +20,8 @@ def get(path):
     req = urllib.request.Request(base + path, headers={'User-Agent': 'JuzlovaDeploymentCheck/1.0'})
     with urllib.request.urlopen(req, timeout=30) as r:
         assert r.status == 200 and r.url == base + path, f'Unexpected status/redirect: {path}'
+        if args.preview:
+            assert 'noindex' in r.headers.get('X-Robots-Tag', ''), f'Preview indexable: {path}'
         return r.read()
 
 config = json.loads(get('/api/config'))
