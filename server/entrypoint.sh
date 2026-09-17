@@ -16,4 +16,7 @@ while [ "$i" -lt 50 ]; do
   sleep 0.1
 done
 sed -i "s/listen 8080/listen ${PORT}/" /etc/nginx/conf.d/default.conf
+if [ "${PREVIEW_READ_ONLY:-0}" = "1" ]; then
+  sed -i '/server_name _;/a\    add_header X-Robots-Tag "noindex, nofollow" always;' /etc/nginx/conf.d/default.conf
+fi
 exec nginx -g "daemon off;"

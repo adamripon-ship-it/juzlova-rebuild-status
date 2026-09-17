@@ -1,60 +1,46 @@
-name: Cloud Run preview of main
-
-# Deploys the main build to a *separate* Cloud Run service so it can be
-# checked on a *.run.app URL. Does not run on push, does not touch DNS,
-# and must not be named juzlova-web (that is almost certainly production).
-#
-# Required repository secrets (same names as the GCS workflow):
-#   GCP_SA_KEY   — JSON key of a service account with Cloud Run Admin
-#   GCP_PROJECT  — the Google Cloud project id
-#
-# Optional: CLOUD_RUN_REGION (default europe-west3, matching live).
-
+name: Cloud Run candidate preview
+# Separate service; no production writes, no indexing, no form delivery.
 on:
   workflow_dispatch:
-
+concurrency:
+  group: discovery-preview
+  cancel-in-progress: false
 jobs:
   preview:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
-      - name: Check credentials
-        id: creds
-        run: |
-          if [ -n "${{ secrets.GCP_SA_KEY }}" ] && [ -n "${{ secrets.GCP_PROJECT }}" ]; then
-            echo "ok=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-            echo "GCP secrets not configured — skipping Cloud Run preview."
-          fi
       - uses: actions/setup-python@v5
-        if: steps.creds.outputs.ok == 'true'
         with:
           python-version: '3.12'
-      - name: Rebuild with production SITE_BASE
-        if: steps.creds.outputs.ok == 'true'
-        env:
-          SITE_BASE: https://www.juzlova.cz
-        run: python scripts/build_site.py
-      - uses: google-github-actions/auth@v2
-        if: steps.creds.outputs.ok == 'true'
+      - uses: actions/setup-node@v4
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-      - uses: google-github-actions/setup-gcloud@v2
-        if: steps.creds.outputs.ok == 'true'
-      - name: Deploy preview service
-        if: steps.creds.outputs.ok == 'true'
-        env:
-          PROJECT: ${{ secrets.GCP_PROJECT }}
-          REGION: europe-west3
+          node-version: '22'
+      - name: Build and verify candidate
         run: |
-          gcloud config set project "$PROJECT"
-          gcloud run deploy juzlova-main-preview \
-            --source . \
-            --region "$REGION" \
-            --allow-unauthenticated \
-            --quiet
-          echo "Preview URL:"
-          gcloud run services describe juzlova-main-preview \
-            --region "$REGION" --format='value(status.url)'
+          python scripts/build_site.py
+          git diff --exit-code
+          python scripts/verify_refs.py
+          python scripts/verify_sitemaps.py
+          python scripts/verify_structured_data.py
+          python -m unittest discover -s tests -p 'test_*.py'
+          node tests/measurement.test.cjs
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOY_SA }}
+      - uses: google-github-actions/setup-gcloud@v2
+      - name: Deploy isolated preview
+        env:
+          PROJECT: ${{ vars.GCP_PROJECT }}
+        run: |
+          gcloud run deploy juzlova-discovery-preview --source . --project "$PROJECT" \
+            --region europe-west4 --allow-unauthenticated \
+            --update-env-vars "PREVIEW_READ_ONLY=1,SITE_REVISION=$GITHUB_SHA" --quiet
+          url=$(gcloud run services describe juzlova-discovery-preview --project "$PROJECT" --region europe-west4 --format='value(status.url)')
+          python scripts/smoke_discovery.py --base "$url" --expected-revision "$GITHUB_SHA"
+          echo "Preview: $url" >> "$GITHUB_STEP_SUMMARY"

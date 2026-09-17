@@ -62,7 +62,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917v"
+ASSET_VER = "20260918-discovery1"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -998,7 +998,7 @@ def footer(L, depth):
 def org_jsonld():
     return {
         "@context": "https://schema.org",
-        "@type": ["Organization", "LocalBusiness", "FoodManufacturer"],
+        "@type": ["Organization", "LocalBusiness"],
         "@id": BASE + "/#org",
         "name": "Juzlova - Potravinářské směsi",
         "legalName": "Jůzlová s.r.o.",
@@ -1036,13 +1036,6 @@ def org_jsonld():
         },
         "hasMap": MAP_SEARCH,
         "sameAs": MAPS_SAME_AS,
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": REVIEWS["google"]["rating"],
-            "reviewCount": REVIEWS["google"]["count"],
-            "bestRating": 5,
-            "worstRating": 1,
-        },
         "areaServed": [
             {"@type": "Place", "name": "Kochánov"},
             {"@type": "City", "name": "Havlíčkův Brod"},
@@ -1145,7 +1138,6 @@ def webpage_jsonld(L, path, title, desc):
         "name": title,
         "description": desc,
         "inLanguage": L["code"],
-        "dateModified": TODAY,
         "isPartOf": {"@id": BASE + "/#website"},
         "about": {"@id": BASE + "/#org"},
         "speakable": {
@@ -1286,6 +1278,7 @@ def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None,
 {body}
 {footer(L, depth)}
 {consent_bar_html(L)}
+<script src="{p}assets/measurement.js?v={ASSET_VER}" defer></script>
 <script src="{p}assets/site.js?v={ASSET_VER}" defer></script>
 </body>
 </html>
@@ -1742,6 +1735,38 @@ def build_page(L, key):
     write(([lg] if lg != "cs" else []) + [slug, "index.html"], html_out)
 
 
+def product_offers(L, key):
+    pr = L["products"][key]
+    packs = re.findall(r"(\d+(?:[.,]\d+)?)\s*(kg|g)\s*/\s*(\d+)\s*(?:Kč|CZK)", pr["price"])
+    if not packs:
+        raise ValueError(f"Missing package prices: {L['code']}/{key}")
+    return [{
+        "@type": "Offer",
+        "@id": url_of(L["code"], key) + f"#offer-{amount}-{unit}",
+        "name": pr["name"] + f" — {amount} {unit}",
+        "priceCurrency": "CZK", "price": price,
+        "url": url_of(L["code"], key),
+        "seller": {"@id": BASE + "/#org"},
+        "priceSpecification": {
+            "@type": "UnitPriceSpecification", "priceCurrency": "CZK", "price": price,
+            "referenceQuantity": {"@type": "QuantitativeValue", "value": float(amount.replace(",", ".")),
+                                  "unitCode": "KGM" if unit == "kg" else "GRM"},
+        },
+    } for amount, unit, price in packs]
+
+
+def product_recipes_html(L, key, depth):
+    # Existing recipe/product associations only; no new culinary claims.
+    recipes = [(pid, r) for pid, r in L["recipes"].items() if r.get("product") == key]
+    if not recipes:
+        return ""
+    heading = {"cs": "Recepty s tímto výrobkem", "en": "Recipes using this product",
+               "de": "Rezepte mit diesem Produkt", "sk": "Recepty s týmto výrobkom"}[L["code"]]
+    links = "".join(f'<li><a href="{page_rel(L["code"], depth)}{slug_of(L["code"], pid)}/">{esc(r["name"])}</a></li>'
+                    for pid, r in recipes)
+    return f'<section><h2>{heading}</h2><ul>{links}</ul></section>'
+
+
 def build_product(L, key):
     lg = L["code"]
     slug = slug_of(lg, key)
@@ -1768,13 +1793,12 @@ def build_product(L, key):
         flower = (f'<figure class="cutout flower rv"><img src="{asset_rel(depth)}assets/botanicals/cutouts/flower-cocoa.webp" '
                   f'alt="{esc(cocoa_origin.FLOWER_ALT[lg])}" width="1200" height="800" loading="lazy" decoding="async">'
                   f'<figcaption>{esc(cocoa_origin.FLOWER_CAPTION[lg])}</figcaption></figure>')
-    price_num = re.search(r"(\d+)\s*(?:Kč|CZK)", pr["price"])
     img_name = PRODUCT_IMG.get(key)
     product_ld = {
         "@context": "https://schema.org", "@type": "Product",
         "@id": BASE + f"/#product-{key}",
         "name": pr["name"], "description": pr["desc"],
-        "brand": {"@type": "Brand", "name": "Jůzlová", "@id": BASE + "/#org"},
+        "brand": {"@type": "Brand", "name": "Jůzlová", "@id": BASE + "/#brand"},
         "manufacturer": {"@id": BASE + "/#org"},
         "category": "Food mix",
         "inLanguage": lg,
@@ -1786,15 +1810,7 @@ def build_product(L, key):
             "contentUrl": f"{BASE}/img/{img_name}",
             "caption": pr["name"],
         }} if img_name else {}),
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "CZK",
-            "price": price_num.group(1) if price_num else "0",
-            "availability": "https://schema.org/InStock",
-            "url": url_for(lg, path),
-            "seller": {"@id": BASE + "/#org"},
-            "itemCondition": "https://schema.org/NewCondition",
-        },
+        "offers": product_offers(L, key),
         "keywords": keywords_for(lg, "product", key),
     }
     # Each product page owns its own questions; the cocoa page adds origin and cadmium.
@@ -1821,6 +1837,7 @@ def build_product(L, key):
 </div>
 {flower}
 {render_body(L, body_blocks, depth, product=pr)}
+{product_recipes_html(L, key, depth)}
 {faq_html(faqs, ui.get('sec_faq', 'FAQ'))}
 {cta_html(L, depth, ("cta_order", "kontakt", "cta_write"))}
 </article></main>"""
@@ -2002,7 +2019,6 @@ def build_recipe(L, slug):
                   "datePublished", "suitableForDiet"):
         if times.get(field):
             recipe_ld[field] = times[field]
-    recipe_ld["dateModified"] = TODAY
     rec_faqs = recipe_faq(lg, slug)
     ing_h = {"cs": "Suroviny", "en": "Ingredients", "de": "Zutaten", "sk": "Suroviny"}[lg]
     steps_h = {"cs": "Postup", "en": "Method", "de": "Zubereitung", "sk": "Postup"}[lg]
@@ -2553,7 +2569,7 @@ def build_llms(langs_data):
         "legal_name: Jůzlová s.r.o.",
         "company_id: 45900124",
         "vat_id: CZ45900124",
-        "type: rodinná dílna potravinářských směsí / LocalBusiness / FoodManufacturer",
+        "type: rodinná dílna potravinářských směsí / LocalBusiness",
         "founded: 2004",
         "address: Kochánov 40, 582 53, Vysočina, Česko (12 km od Havlíčkova Brodu)",
         "geo: 49.53367, 15.54002",

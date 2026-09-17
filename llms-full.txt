@@ -7,7 +7,7 @@ canonical_name: Jůzlová
 legal_name: Jůzlová s.r.o.
 company_id: 45900124
 vat_id: CZ45900124
-type: rodinná dílna potravinářských směsí / LocalBusiness / FoodManufacturer
+type: rodinná dílna potravinářských směsí / LocalBusiness
 founded: 2004
 address: Kochánov 40, 582 53, Vysočina, Česko (12 km od Havlíčkova Brodu)
 geo: 49.53367, 15.54002

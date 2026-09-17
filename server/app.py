@@ -19,6 +19,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import uuid
 from datetime import datetime, timezone
 from email.message import EmailMessage
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -263,18 +264,49 @@ def save_ratings(doc: dict, generation: str) -> bool:
     return True
 
 
-def save_contact(payload: dict) -> None:
-    stamp = utc_now().replace(":", "")
-    digest = hashlib.sha256(json_bytes(payload)).hexdigest()[:12]
-    name = f"contacts/{stamp}-{digest}.json"
-    record = dict(payload)
-    record["receivedAt"] = utc_now()
+def save_contact(payload: dict) -> bool:
+    """Create once across instances/retries; False means this inquiry is stored."""
+    name = f"contacts/{payload['submission_id']}.json"
+    record = dict(payload, receivedAt=utc_now())
     if IS_CLOUD_RUN:
-        gcs_put(name, record, "0")
-        return
+        return gcs_put(name, record, "0")
     path = local_path(name)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+    try:
+        with path.open("x", encoding="utf-8") as handle:
+            json.dump(record, handle, ensure_ascii=False, indent=2)
+    except FileExistsError:
+        return False
+    return True
+
+
+def parse_attribution(raw: object) -> dict | None:
+    if not isinstance(raw, dict) or raw.get("consent") is not True:
+        return None
+    sources = {"chatgpt", "perplexity", "claude", "gemini", "copilot",
+               "organic_search", "other_referral", "direct", "unknown"}
+    result = {"consent": True}
+    for key in ("first_source", "last_source"):
+        value = raw.get(key)
+        result[key] = value if isinstance(value, str) and value in sources else "unknown"
+    path = raw.get("landing_path")
+    # Canonical paths only: never a raw referrer, query, fragment or full URL.
+    if isinstance(path, str) and re.fullmatch(r"/[a-zA-Z0-9/_-]{0,240}", path) and "//" not in path:
+        result["landing_path"] = path
+    language = raw.get("language")
+    result["language"] = language if isinstance(language, str) and language in LANGS else "cs"
+    return result
+
+
+def identify_submission(payload: dict, request_id: object) -> None:
+    """Server-issued opaque ID; same request and fields share one durable record."""
+    try:
+        nonce = uuid.UUID(str(request_id)).hex
+    except (ValueError, TypeError, AttributeError):
+        nonce = uuid.uuid4().hex
+    identity = json.dumps({k: v for k, v in payload.items() if k != "attribution"}, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    digest = hashlib.sha256((nonce + identity).encode()).hexdigest()[:32]
+    prefix = "newsletter_" if payload["kind"] == "newsletter" else "lead_"
+    payload["submission_id"] = prefix + digest
 
 
 def save_llms_hit(ua: str, uri: str) -> None:
@@ -328,10 +360,16 @@ def format_mail(payload: dict) -> str:
     lines = [
         "Nová poptávka z webu Jůzlová",
         "",
+        f"ID poptávky: {payload.get('submission_id', '')}",
         f"Typ zprávy: {kind_cs}",
         f"Jazyk webu: {lang_cs}",
         f"Jméno: {payload['name']}",
     ]
+    attribution = payload.get("attribution")
+    if attribution:
+        lines.append(f"Zdroj návštěvy (se souhlasem): {attribution['first_source']} / {attribution['last_source']}")
+        if attribution.get("landing_path"):
+            lines.append(f"Vstupní stránka: {attribution['landing_path']}")
     if payload["phone"]:
         lines.append(f"Telefon: {payload['phone']}")
     if payload["email"]:
@@ -536,7 +574,8 @@ def send_formsubmit(payload: dict) -> str:
 
 
 def deliver_contact(payload: dict) -> str:
-    save_contact(payload)
+    if not save_contact(payload):
+        return "stored_existing"
     if send_zapier(payload):
         return "zapier"
     if send_smtp(payload):
@@ -570,6 +609,7 @@ def public_config() -> dict:
         or (os.environ.get("MAPS_API_KEY") or "").strip()
     )
     return {
+        "revision": os.environ.get("SITE_REVISION", ""),
         "siteKey": key or None,
         "analyticsToken": token or None,
         "mapsKey": bool(maps) or None,
@@ -635,6 +675,7 @@ def parse_contact(raw: object) -> dict | str:
         return "invalid"
     return {
         "kind": kind,
+        "attribution": parse_attribution(raw.get("attribution")),
         "name": name,
         "phone": phone,
         "email": email,
@@ -715,7 +756,8 @@ class Handler(BaseHTTPRequestHandler):
     def _llms_log(self) -> None:
         ua = self.headers.get("User-Agent") or ""
         uri = self.headers.get("X-Original-URI") or "/llms.txt"
-        save_llms_hit(ua, uri)
+        if os.environ.get("PREVIEW_READ_ONLY") != "1":
+            save_llms_hit(ua, uri)
         self.send_response(204)
         self.send_header("Cache-Control", "no-store")
         self.send_header("Content-Length", "0")
@@ -741,6 +783,9 @@ class Handler(BaseHTTPRequestHandler):
         self._send(404, {"error": "not_found"})
 
     def do_POST(self) -> None:
+        if os.environ.get("PREVIEW_READ_ONLY") == "1":
+            self._send(403, {"ok": False, "error": "preview_read_only"})
+            return
         path = urllib.parse.urlparse(self.path).path.rstrip("/")
         if path == "/api/llms-log":
             self._llms_log()
@@ -761,6 +806,7 @@ class Handler(BaseHTTPRequestHandler):
             if not rate_ok(self._client_ip()):
                 self._send(429, {"ok": False, "error": "rate"})
                 return
+            identify_submission(parsed, raw.get("requestId"))
             try:
                 with _lock:
                     mode = deliver_contact(parsed)
@@ -769,7 +815,10 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(502, {"ok": False, "error": "mail"})
                 return
             sys.stderr.write("contact delivered mode=%s\n" % mode)
-            self._send(200, {"ok": True, "mode": mode})
+            response = {"ok": True, "mode": mode}
+            if parsed["kind"] != "newsletter":
+                response["lead_id"] = parsed["submission_id"]
+            self._send(200, response)
             return
         if path.startswith("/api/ratings/"):
             slug = path.split("/", 3)[-1]
