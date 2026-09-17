@@ -146,9 +146,9 @@ nav.main > a.active { color: var(--ink); box-shadow: inset 0 -3px 0 var(--gold);
 
 /* ── type helpers ── */
 .tagline { font: 400 1.1rem/1 var(--serif); letter-spacing: .3em; text-align: center; margin: 0 0 2rem; text-transform: lowercase; }
-h1.display { font: 400 clamp(2.4rem, 6vw, 5.6rem)/1.02 var(--serif); font-variation-settings: "opsz" 144; letter-spacing: -.015em; margin: 0 auto; max-width: 16ch; text-align: center; text-wrap: balance; }
-h1.display .num { font-weight: 300; }
-h1.display .h1-sub { display: block; font: 400 clamp(1rem, 1.4vw, 1.25rem)/1.4 var(--sans); letter-spacing: 0; margin: 1.2rem auto 0; max-width: 34em; color: var(--ink); }
+.display { font: 400 clamp(2.4rem, 6vw, 5.6rem)/1.02 var(--serif); font-variation-settings: "opsz" 144; letter-spacing: -.015em; margin: 0 auto; max-width: 16ch; text-align: center; text-wrap: balance; }
+.display .num { font-weight: 300; }
+.display .h1-sub { display: block; font: 400 clamp(1rem, 1.4vw, 1.25rem)/1.4 var(--sans); letter-spacing: 0; margin: 1.2rem auto 0; max-width: 34em; color: var(--ink); }
 h2.sec { font: 300 clamp(1.9rem, 3.8vw, 3.4rem)/1.1 var(--sans); letter-spacing: .04em; text-transform: uppercase; margin: 0 0 1.2rem; text-wrap: balance; }
 .center { text-align: center; }
 .kicker { font: 500 .78rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--grey); margin: 0 0 .6rem; }
@@ -283,8 +283,28 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
 /* ── home: hero ── */
 .hero { padding-bottom: 0; }
 .hero .wrap { padding-bottom: clamp(3rem, 6vw, 5rem); }
-.hero-obj { position: absolute; right: -9%; top: -16%; width: clamp(200px, 23vw, 360px); z-index: 3; }
-@media (max-width: 1100px) { .hero-obj { position: static; width: min(300px, 60%); margin: 2.5rem auto 0; } }
+.hero-obj { position: absolute; right: -9%; top: -16%; width: clamp(200px, 23vw, 360px); aspect-ratio: 1; z-index: 3; pointer-events: none; }
+.hero-obj img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .6s var(--ease); }
+.hero-obj img.is-on { opacity: 1; }
+/* hero product slides: native scroll-snap track (the browser owns the gesture), thin white arrows, thin progress line */
+.hero-slider { position: relative; z-index: 4; }
+.hero-track { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; align-items: start; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; touch-action: pan-x pan-y; scrollbar-width: none; -webkit-overflow-scrolling: touch; outline: none; }
+.hero-track::-webkit-scrollbar { display: none; }
+.hero-track:focus-visible { outline: 2px solid #fff; outline-offset: 8px; border-radius: 12px; }
+.hero-track .slide { scroll-snap-align: start; scroll-snap-stop: always; min-width: 0; -webkit-tap-highlight-color: transparent; }
+.hero-track .display { position: relative; left: 0; }
+.hero-nav { display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: 1.4rem; }
+.hero-arrow { width: 48px; height: 48px; padding: 0; border: 0; background: none; color: #fff; cursor: pointer; display: grid; place-items: center; flex: 0 0 auto; opacity: .9; transition: transform .45s var(--ease), opacity .3s; -webkit-tap-highlight-color: transparent; }
+.hero-arrow svg { width: 34px; height: 14px; stroke: currentColor; stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.hero-arrow:hover, .hero-arrow:focus-visible { opacity: 1; outline: none; }
+.hero-arrow.prev:hover { transform: translateX(-4px); } .hero-arrow.next:hover { transform: translateX(4px); }
+.hero-arrow:active { transform: scale(.94); }
+.hero-arrow:focus-visible svg { outline: 2px solid #fff; outline-offset: 10px; border-radius: 4px; }
+.hero-progress { width: 9rem; height: 2px; background: rgba(255,255,255,.35); border-radius: 1px; overflow: hidden; flex: 0 0 auto; }
+.hero-progress i { display: block; height: 100%; width: var(--p, 20%); background: #fff; transition: width .7s var(--ease-expo); }
+@media (max-width: 700px) { .hero-progress { width: 7rem; } .hero-nav { margin-top: 1rem; } }
+@media (prefers-reduced-motion: reduce) { .hero-track { scroll-behavior: auto; } .hero-progress i, .hero-obj img, .hero-arrow { transition: none; } }
+@media (max-width: 1100px) { .hero-obj { position: relative; width: min(300px, 60%); margin: 2.5rem auto 0; } }
 @media (max-width: 700px) { .art.hide-phone { display: none; } .tagline { letter-spacing: .18em; } }
 
 /* price marquee */

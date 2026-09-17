@@ -513,3 +513,27 @@ LANG["ui"].update({
     'footer_kitchens': 'Kde rozvážame',
     'sec_reviews_h': 'Čo o nás hovoria zákazníci',
 })
+
+
+# --- hero product slides (2026-09-17) ---
+LANG["ui"].update({
+    'slide_h1_kakao_holandskeho_typu': 'Kakao holandského typu, ktoré v bábovke nevybledne',
+    'slide_sub_kakao_holandskeho_typu': 'Alkalizovaný prášok bez pridaného cukru: do perníka, krémov, kakaa na pitie aj zmrzliny.',
+    'slide_btn_kakao_holandskeho_typu': 'Všetko o kakau',
+    'slide_h1_bramborove_knedliky': 'Zemiakové knedle na stole za 20 minút',
+    'slide_sub_bramborove_knedliky': 'z múky z mlyna 12 km od našej dielne',
+    'slide_btn_bramborove_knedliky': 'Všetko o zmesi',
+    'slide_h1_chlupate_knedliky': 'Chlpaté knedle bez šúpania a strúhania',
+    'slide_sub_chlupate_knedliky': 'Zamiešať s vodou, vytvarovať, uvariť. Bosáky, halušky aj strapačky bez roboty so zemiakmi.',
+    'slide_btn_chlupate_knedliky': 'Všetko o bosákoch',
+    'slide_h1_vanilkovy_pudink': 'Vanilkový puding bez lepku, po kilách',
+    'slide_sub_vanilkovy_pudink': 'Kukuričný škrob do krémov, veterníkov aj hruškového koláča. Jedno balenie na celú sezónu.',
+    'slide_btn_vanilkovy_pudink': 'Všetko o pudingu',
+    'slide_h1_vanilkovy_cukr': 'Vanilínový cukor v kilovom vreci',
+    'slide_sub_vanilkovy_cukr': 'Do cesta, do šľahačky aj na posyp koláčikov. Jedno vrece vydrží celú sezónu pečenia.',
+    'slide_btn_vanilkovy_cukr': 'Všetko o cukre',
+    'hero_prev': 'Predchádzajúci produkt',
+    'hero_next': 'Ďalší produkt',
+    'hero_slides': 'Naše zmesi',
+    'hero_slide_of': '{n} z {total}',
+})

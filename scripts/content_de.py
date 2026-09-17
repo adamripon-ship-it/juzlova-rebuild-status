@@ -514,3 +514,27 @@ LANG["ui"].update({
     'footer_kitchens': 'Wo wir liefern',
     'sec_reviews_h': 'Was Kunden sagen',
 })
+
+
+# --- hero product slides (2026-09-17) ---
+LANG["ui"].update({
+    'slide_h1_kakao_holandskeho_typu': 'Kakao holländischer Art, der im Kuchen dunkel bleibt',
+    'slide_sub_kakao_holandskeho_typu': 'Alkalisiert, ohne Zuckerzusatz: für Lebkuchen, Cremes, Trinkkakao und Eis.',
+    'slide_btn_kakao_holandskeho_typu': 'Alles zum Kakao',
+    'slide_h1_bramborove_knedliky': 'Kartoffelknödel auf dem Tisch in 20 Minuten',
+    'slide_sub_bramborove_knedliky': 'aus Mehl, gemahlen 12 km von unserer Werkstatt entfernt',
+    'slide_btn_bramborove_knedliky': 'Alles zur Mischung',
+    'slide_h1_chlupate_knedliky': 'Rohe Kartoffelknödel ohne Schälen und Reiben',
+    'slide_sub_chlupate_knedliky': 'Mit Wasser anrühren, formen, kochen. Bosáky, Halušky und Strapačky ohne Kartoffelarbeit.',
+    'slide_btn_chlupate_knedliky': 'Alles zu Bosáky',
+    'slide_h1_vanilkovy_pudink': 'Glutenfreier Vanillepudding im Kilo',
+    'slide_sub_vanilkovy_pudink': 'Maisstärke für Cremes, Windbeutel und Birnenkuchen. Ein Beutel reicht für eine ganze Saison.',
+    'slide_btn_vanilkovy_pudink': 'Alles zum Pudding',
+    'slide_h1_vanilkovy_cukr': 'Vanillinzucker im Kilobeutel',
+    'slide_sub_vanilkovy_cukr': 'Für Teig, Sahne und zum Bestreuen von Plätzchen. Ein Beutel für die ganze Backsaison.',
+    'slide_btn_vanilkovy_cukr': 'Alles zum Zucker',
+    'hero_prev': 'Vorheriges Produkt',
+    'hero_next': 'Nächstes Produkt',
+    'hero_slides': 'Unsere Mischungen',
+    'hero_slide_of': '{n} von {total}',
+})

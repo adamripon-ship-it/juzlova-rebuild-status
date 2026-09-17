@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917m"
+ASSET_VER = "20260917q"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -1491,6 +1491,31 @@ def build_home(L):
               f'<svg viewBox="{SYMBOL_VB.get("sil-beans", "0 0 1024 683")}" aria-hidden="true">'
               f'<use href="{sprite}#sil-beans"/></svg></a>')
     items_dup = items.replace('<a class="item"', '<a class="item" tabindex="-1" aria-hidden="true"')
+    # Hero slides: cocoa first, one story per product; slide 1 carries the page's H1.
+    HERO_ORDER = ["kakao_holandskeho_typu", "bramborove_knedliky", "chlupate_knedliky", "vanilkovy_pudink", "vanilkovy_cukr"]
+    HERO_CUTOUT = {"kakao_holandskeho_typu": ("cocoa-pod", 923, 902), "bramborove_knedliky": ("potato", 922, 961), "chlupate_knedliky": ("wheat", 688, 1024), "vanilkovy_pudink": ("vanilla", 646, 981), "vanilkovy_cukr": ("sugarcane", 664, 1024)}
+    slides = ""
+    for i, k in enumerate(HERO_ORDER):
+        tag = "h1" if i == 0 else "h2"
+        label = ui["hero_slide_of"].replace("{n}", str(i + 1)).replace("{total}", str(len(HERO_ORDER)))
+        slides += f"""<div class="slide" role="group" aria-roledescription="slide" aria-label="{esc(label)}"{'' if i == 0 else ' aria-hidden="true"'}>
+      <{tag} class="display">{_h1_with_num(ui[f"slide_h1_{k}"])}<span class="h1-sub">{esc(ui[f"slide_sub_{k}"])}</span></{tag}>
+      <p class="actions">
+        <a class="btn white" href="{TEL_JIRINA}"><span>{esc(ui['hero_cta'])}</span>{ARROW}</a>
+        <a class="btn outline" href="{pages}{slug_of(lg, k)}/">{esc(ui[f"slide_btn_{k}"])}</a>
+      </p>
+    </div>"""
+    objs = ""
+    for i, k in enumerate(HERO_ORDER):
+        name, w, h = HERO_CUTOUT[k]
+        src = f"{assets}assets/botanicals/cutouts/{name}.webp"
+        alt = ui.get(f"alt_{name.replace('-', '_')}", L["products"][k]["name"])
+        if i == 0:
+            objs += f'<img class="is-on" src="{src}" alt="{esc(alt)}" width="{w}" height="{h}" fetchpriority="high" decoding="async">'
+        else:
+            objs += f'<img data-src="{src}" alt="{esc(alt)}" width="{w}" height="{h}" decoding="async">'
+    prev_arrow = '<svg viewBox="0 0 34 14" aria-hidden="true"><path d="M34,7 H3 M9,1 l-6,6 6,6"/></svg>'
+    next_arrow = '<svg viewBox="0 0 34 14" aria-hidden="true"><path d="M0,7 H31 M25,1 l6,6 -6,6"/></svg>'
     hero = f"""<section class="band gold hero">
   <div class="clip">
     {sil(depth, "sil-leaf-banana", "left:-16%;bottom:-6%;width:clamp(460px,54vw,780px);opacity:.55", cls="art plx", speed=30, rotate="-10deg", origin="4% 55%")}
@@ -1499,12 +1524,15 @@ def build_home(L):
   </div>
   <div class="wrap">
     <p class="tagline">{esc(ui['est'])}</p>
-    <h1 class="display">{_h1_with_num(ui['h1_main'])}<span class="h1-sub">{esc(ui['h1_sub'])}</span></h1>
-    <p class="actions">
-      <a class="btn white" href="{TEL_JIRINA}"><span>{esc(ui['hero_cta'])}</span>{ARROW}</a>
-      <a class="btn outline" href="{prices}">{esc(ui['hero_cta2'])}</a>
-    </p>
-    {cutout_html(assets, "cocoa-pod", ui['alt_cocoa_pod'], cls="hero-obj plx", width=1200, height=1174, speed=22, eager=True)}
+    <div class="hero-slider" data-hero-slider aria-roledescription="carousel" aria-label="{esc(ui['hero_slides'])}">
+      <div class="hero-track" tabindex="0">{slides}</div>
+      <div class="hero-nav">
+        <button type="button" class="hero-arrow prev" data-hero-prev aria-label="{esc(ui['hero_prev'])}">{prev_arrow}</button>
+        <div class="hero-progress" aria-hidden="true"><i style="--p:{100 // len(HERO_ORDER)}%"></i></div>
+        <button type="button" class="hero-arrow next" data-hero-next aria-label="{esc(ui['hero_next'])}">{next_arrow}</button>
+      </div>
+    </div>
+    <figure class="cutout hero-obj plx" data-speed="22" data-hero-objects>{objs}</figure>
   </div>
   <nav class="marquee" aria-label="{esc(ui['marquee_label'])}">
     <div class="track">{items}{items_dup}</div>

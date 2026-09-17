@@ -514,3 +514,27 @@ LANG["ui"].update({
     'footer_kitchens': 'Where we deliver',
     'sec_reviews_h': 'What customers say',
 })
+
+
+# --- hero product slides (2026-09-17) ---
+LANG["ui"].update({
+    'slide_h1_kakao_holandskeho_typu': 'Dutch-process cocoa that stays dark in the cake',
+    'slide_sub_kakao_holandskeho_typu': 'Alkalised, no added sugar: for gingerbread, creams, drinking cocoa and ice cream.',
+    'slide_btn_kakao_holandskeho_typu': 'All about the cocoa',
+    'slide_h1_bramborove_knedliky': 'Czech potato dumplings on the table in 20 minutes',
+    'slide_sub_bramborove_knedliky': 'from flour milled 12 km from our workshop',
+    'slide_btn_bramborove_knedliky': 'All about the mix',
+    'slide_h1_chlupate_knedliky': 'Raw-potato dumplings with no peeling or grating',
+    'slide_sub_chlupate_knedliky': 'Mix with water, shape, boil. Bosáky, halušky and strapačky without the potato work.',
+    'slide_btn_chlupate_knedliky': 'All about bosáky',
+    'slide_h1_vanilkovy_pudink': 'Gluten-free vanilla pudding, by the kilo',
+    'slide_sub_vanilkovy_pudink': 'Corn starch for creams, cream puffs and pear cake. One bag lasts a whole season.',
+    'slide_btn_vanilkovy_pudink': 'All about the pudding',
+    'slide_h1_vanilkovy_cukr': 'Vanilla sugar in a kilo bag',
+    'slide_sub_vanilkovy_cukr': 'For doughs, whipped cream and dusting biscuits. One bag lasts the baking season.',
+    'slide_btn_vanilkovy_cukr': 'All about the sugar',
+    'hero_prev': 'Previous product',
+    'hero_next': 'Next product',
+    'hero_slides': 'Our mixes',
+    'hero_slide_of': '{n} of {total}',
+})

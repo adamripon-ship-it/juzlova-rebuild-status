@@ -133,6 +133,44 @@
     }
   })();
 
+  /* ── hero product slides: the track is a native scroll-snap row; script adds arrows, progress line,
+     the matching cut-out, keyboard, and aria state. No autoplay. ── */
+  document.querySelectorAll('[data-hero-slider]').forEach(function (root) {
+    var track = root.querySelector('.hero-track'), slides = [].slice.call(track.children);
+    var bar = root.querySelector('.hero-progress i'), objs = [].slice.call(document.querySelectorAll('[data-hero-objects] img'));
+    var current = 0, raf = 0;
+    function show(i) {
+      current = i;
+      if (bar) bar.style.setProperty('--p', ((i + 1) / slides.length * 100).toFixed(1) + '%');
+      slides.forEach(function (s, n) { s.setAttribute('aria-hidden', n === i ? 'false' : 'true'); });
+      objs.forEach(function (im, n) {
+        if (n === i && im.dataset.src) { im.src = im.dataset.src; delete im.dataset.src; }
+        im.classList.toggle('is-on', n === i);
+      });
+    }
+    function nearest() { var w = track.clientWidth || 1; return Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / w))); }
+    var lockUntil = 0;   // while an arrow-driven scroll settles, the scroll listener must not report the slides it passes
+    function go(i) {
+      i = (i + slides.length) % slides.length;
+      lockUntil = Date.now() + 900;
+      track.scrollTo({ left: slides[i].offsetLeft, behavior: reduced ? 'auto' : 'smooth' });
+      show(i);
+    }
+    track.addEventListener('scroll', function () {
+      if (Date.now() < lockUntil || raf) return;
+      raf = requestAnimationFrame(function () { raf = 0; var n = nearest(); if (n !== current) show(n); });
+    }, { passive: true });
+    if ('onscrollend' in window) track.addEventListener('scrollend', function () { lockUntil = 0; var n = nearest(); if (n !== current) show(n); });
+    var prev = root.querySelector('[data-hero-prev]'), next = root.querySelector('[data-hero-next]');
+    if (prev) prev.addEventListener('click', function () { go(current - 1); });
+    if (next) next.addEventListener('click', function () { go(current + 1); });
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+    });
+    addEventListener('resize', function () { track.scrollTo({ left: slides[current].offsetLeft, behavior: 'auto' }); });
+  });
+
   /* ── hover lens rings: dash length = the outline's on-screen length (non-scaling stroke measures in px) ── */
   function sizeRings() {
     document.querySelectorAll('.ring use').forEach(function (u) {
