@@ -21,10 +21,10 @@ TEAM = [
             "sk": "Majiteľka · výroba a objednávky",
         },
         "wiifm": {
-            "cs": "Voláte přímo tomu, kdo směsi míchá — ne call-centrum. Domluvíte se česky, denně 8:00–19:00.",
-            "en": "You speak to the person who makes the mixes — not a call centre. Czech, daily 8:00–19:00.",
-            "de": "Sie sprechen mit der Person, die die Mischungen herstellt — kein Callcenter. Tschechisch, täglich 8:00–19:00.",
-            "sk": "Voláte priamo tomu, kto zmesi mieša — nie call-centrum. Dohodnete sa po česky, denne 8:00–19:00.",
+            "cs": "Voláte přímo tomu, kdo směsi míchá — ne do call centra. Domluvíte se česky, denně 8:00–19:00.",
+            "en": "You speak directly to the person who mixes the blends — not to a call centre. Calls are in Czech, daily 8:00–19:00.",
+            "de": "Sie sprechen direkt mit der Person, die die Mischungen herstellt — nicht mit einem Callcenter. Auf Tschechisch, täglich 8:00–19:00 Uhr.",
+            "sk": "Voláte priamo tomu, kto zmesi mieša — nie do call centra. Dohodnete sa po česky, denne 8:00–19:00.",
         },
     },
     {
@@ -44,8 +44,8 @@ TEAM = [
         },
         "wiifm": {
             "cs": "Druhý telefon do dílny. Pomůže s vyzvednutím, závozem a tím, aby balení dorazilo v pořádku.",
-            "en": "Second workshop phone. Helps with pick-up, delivery and getting packs to you in good order.",
-            "de": "Zweites Werkstatt-Telefon. Hilft bei Abholung, Lieferung und sauberer Zustellung.",
+            "en": "The second phone line to the workshop. Helps with pick-up and delivery, and makes sure your packs arrive in good order.",
+            "de": "Die zweite Telefonnummer der Werkstatt. Hilft bei Abholung und Lieferung und sorgt dafür, dass Ihre Packungen unbeschädigt ankommen.",
             "sk": "Druhý telefón do dielne. Pomôže s vyzdvihnutím, závozom a tým, aby balenie dorazilo v poriadku.",
         },
     },
@@ -66,8 +66,8 @@ TEAM = [
         },
         "wiifm": {
             "cs": "Často vyřídí vaši poptávku i na Facebooku. Hlídá, aby zboží odešlo zabalené a včas.",
-            "en": "Often answers your enquiry on Facebook too. Makes sure goods leave packed and on time.",
-            "de": "Beantwortet Ihre Anfrage oft auch auf Facebook. Sorgt dafür, dass Ware rechtzeitig und sauber gepackt geht.",
+            "en": "Often answers your enquiry on Facebook as well. Makes sure the goods leave well packed and on time.",
+            "de": "Beantwortet Ihre Anfrage oft auch auf Facebook. Sorgt dafür, dass die Ware gut verpackt und pünktlich das Haus verlässt.",
             "sk": "Často vybaví váš dopyt aj na Facebooku. Stráži, aby tovar odišiel zabalený a včas.",
         },
     },
@@ -88,7 +88,7 @@ TEAM = [
         },
         "wiifm": {
             "cs": "Pomáhá s dopravou a odběrem — aby cesta zboží od dílny k vám byla jednoduchá.",
-            "en": "Helps with delivery and collection — so the path from workshop to you stays simple.",
+            "en": "Helps with delivery and collection — so the journey from the workshop to you stays simple.",
             "de": "Hilft bei Lieferung und Abholung — damit der Weg von der Werkstatt zu Ihnen einfach bleibt.",
             "sk": "Pomáha s dopravou a odberom — aby cesta tovaru od dielne k vám bola jednoduchá.",
         },
@@ -109,10 +109,10 @@ TEAM = [
             "sk": "Suroviny, kvalita a certifikácie",
         },
         "wiifm": {
-            "cs": "Hlídá suroviny a papíry od farmy po kuchyni — aby chuť a kvalita držely v každém balení.",
-            "en": "Watches ingredients and paperwork from farm to kitchen — so taste and quality hold in every pack.",
-            "de": "Prüft Rohstoffe und Papiere vom Hof bis in die Küche — damit Geschmack und Qualität in jeder Packung halten.",
-            "sk": "Stráži suroviny a papiere od farmy po kuchyňu — aby chuť a kvalita držali v každom balení.",
+            "cs": "Hlídá suroviny a papíry od farmy po kuchyni — aby každé balení chutnalo stejně a mělo dokumentaci v pořádku.",
+            "en": "Watches over ingredients and paperwork from farm to kitchen — so every pack tastes the same and the documents are in order.",
+            "de": "Prüft Rohstoffe und Papiere vom Hof bis in die Küche — damit jede Packung gleich schmeckt und die Unterlagen stimmen.",
+            "sk": "Stráži suroviny a papiere od farmy po kuchyňu — aby každé balenie chutilo rovnako a malo dokumentáciu v poriadku.",
         },
     },
     {
@@ -132,7 +132,7 @@ TEAM = [
         },
         "wiifm": {
             "cs": "Stará se o to, abyste nás snadno našli, prohlédli produkty a věděli, jak objednat.",
-            "en": "Makes it easy to find us, see the products and know how to order.",
+            "en": "Makes sure you can find us easily, see the products and know how to order.",
             "de": "Sorgt dafür, dass Sie uns leicht finden, Produkte ansehen und wissen, wie Sie bestellen.",
             "sk": "Stará sa o to, aby ste nás ľahko našli, prezreli produkty a vedeli, ako objednať.",
         },

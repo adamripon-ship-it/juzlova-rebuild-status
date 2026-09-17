@@ -1,6 +1,6 @@
 {
   "name": "Jůzlová",
-  "description": "Czech family food-mix workshop since 2004 in Kochánov, Vysočina: potato dumpling mix, hairy dumpling mix (bosáky), gluten-free vanilla pudding, Dutch-process cocoa and vanilla sugar. Orders by phone or email.",
+  "description": "Czech family food-mix workshop since 2004 in Kochánov, Vysočina: potato dumpling mix, raw-potato dumpling mix (bosáky), gluten-free vanilla pudding, Dutch-process cocoa and vanilla sugar. Orders by phone or email.",
   "url": "https://www.juzlova.cz/",
   "llms": "https://www.juzlova.cz/llms.txt",
   "llmsFull": "https://www.juzlova.cz/llms-full.txt",
@@ -22,7 +22,7 @@
       "id": "chlupate_knedliky",
       "name": "Raw-potato dumpling mix (chlupaté knedlíky)",
       "price": "260 Kč",
-      "url": "https://www.juzlova.cz/en/hairy-potato-dumpling-mix/"
+      "url": "https://www.juzlova.cz/en/raw-potato-dumpling-mix/"
     },
     {
       "id": "vanilkovy_pudink",
@@ -38,7 +38,7 @@
     },
     {
       "id": "vanilkovy_cukr",
-      "name": "Vanillin sugar",
+      "name": "Vanilla sugar",
       "price": "60 Kč",
       "url": "https://www.juzlova.cz/en/vanilla-sugar/"
     }

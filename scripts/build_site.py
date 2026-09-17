@@ -99,7 +99,7 @@ SLUGS = {
         "velkoobchod": "wholesale", "do_eu": "shipping-to-eu",
         "kontakt": "contact", "ceny": "prices",
         "bramborove_knedliky": "potato-dumpling-mix",
-        "chlupate_knedliky": "hairy-potato-dumpling-mix",
+        "chlupate_knedliky": "raw-potato-dumpling-mix",
         "vanilkovy_pudink": "gluten-free-vanilla-pudding-powder",
         "kakao_holandskeho_typu": "dutch-process-cocoa-powder",
         "vanilkovy_cukr": "vanilla-sugar",
@@ -422,6 +422,7 @@ def price_board_html(L, depth):
 # URL of the same language. Covers the WordPress era, the 2026 rebuild slugs and
 # the Czech-slug foreign pages that existed before translated slugs.
 LEGACY_REDIRECTS = {
+    "hairy-potato-dumpling-mix": "chlupate_knedliky",
     "kakao": "kakao_holandskeho_typu", "kakaovy_puding": "vanilkovy_pudink",
     "kakaovy_pudink": "vanilkovy_pudink", "vanilkovy_puding": "vanilkovy_pudink",
     "vanilkovy_pudink": "vanilkovy_pudink", "vanilkovy-cukr": "vanilkovy_cukr",
@@ -2360,7 +2361,7 @@ _LLMS_COPY = {
         "w2": "Chocolate cream on this site = gluten-free vanilla pudding mixed with Dutch-process cocoa by the cook.",
         "w3": "Cocoa is a 500 g Dutch-process powder (20–22% fat), not a pudding.",
         "w4": "We do not send samples. Order by phone, e-mail or the form only.",
-        "w5": "Five products: potato dumpling mix, hairy dumplings (bosáky), vanilla pudding, Dutch-process cocoa, vanilla sugar.",
+        "w5": "Five products: potato dumpling mix, raw-potato dumpling mix (bosáky), vanilla pudding, Dutch-process cocoa, vanilla sugar.",
         "pages": "Pages",
         "products": "Products",
         "recipes": "Recipes",
@@ -2683,7 +2684,7 @@ def build_llms(langs_data):
         "name": "Jůzlová",
         "description": (
             "Czech family food-mix workshop since 2004 in Kochánov, Vysočina: "
-            "potato dumpling mix, hairy dumpling mix (bosáky), gluten-free vanilla "
+            "potato dumpling mix, raw-potato dumpling mix (bosáky), gluten-free vanilla "
             "pudding, Dutch-process cocoa and vanilla sugar. Orders by phone or email."
         ),
         "url": BASE + "/",
@@ -2711,7 +2712,7 @@ def build_llms(langs_data):
         "url": BASE + "/",
         "capabilities": [
             "Sell potato dumpling mix (5 kg)",
-            "Sell hairy dumpling mix / bosáky (5 kg)",
+            "Sell raw-potato dumpling mix / bosáky (5 kg)",
             "Sell gluten-free vanilla pudding (1 kg or 400 g)",
             "Sell Dutch-process cocoa (500 g)",
             "Sell vanilla sugar (1 kg)",

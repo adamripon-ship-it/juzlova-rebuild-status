@@ -11,22 +11,22 @@ CAPSULE = {
     "cs": ("Boby jsou z kakaovníku Theobroma cacao ze západní Afriky — hlavně z Pobřeží slonoviny, "
            "Ghany, Kamerunu a Nigérie. Fermentují se v banánových listech a suší na slunci. Půdy v této "
            "oblasti mají přirozeně nízký obsah kadmia, proto ho má nízký i naše kakao; hodnotu k šarži "
-           "najdete v laboratorním certifikátu, který pošleme na vyžádání. Alkalizujeme přírodními solemi "
+           "najdete v laboratorním certifikátu, který pošleme na vyžádání. Kakao je alkalizované přírodními solemi "
            "na pH 7,8–8,2 — proto je barva sytě červenohnědá a chuť kulatá, bez kyselosti."),
     "en": ("The beans are Theobroma cacao from West Africa, mainly Ivory Coast, Ghana, Cameroon and Nigeria. "
            "They are fermented in banana leaves and dried in the sun. Soils in this region are naturally low "
-           "in cadmium, so our cocoa is too; the value for your batch is in the certificate of analysis, sent "
-           "on request. We alkalise with natural salts to pH 7.8–8.2, which gives the deep red-brown colour "
+           "in cadmium, and so is our cocoa; the value for your batch is in the certificate of analysis, sent "
+           "on request. The powder is alkalised with natural salts to pH 7.8–8.2, which gives the deep red-brown colour "
            "and a round taste without acidity."),
     "de": ("Die Bohnen stammen vom Kakaobaum Theobroma cacao aus Westafrika, vor allem aus der Elfenbeinküste, "
            "Ghana, Kamerun und Nigeria. Sie werden in Bananenblättern fermentiert und an der Sonne getrocknet. "
            "Die Böden dieser Region enthalten von Natur aus wenig Cadmium, deshalb auch unser Kakao; den Wert "
-           "Ihrer Charge finden Sie im Laborzertifikat, das wir auf Anfrage senden. Alkalisiert wird mit "
+           "Ihrer Charge finden Sie im Laborzertifikat, das wir auf Anfrage senden. Alkalisiert wird es mit "
            "natürlichen Salzen auf pH 7,8–8,2 — daher die tief rotbraune Farbe und der runde Geschmack ohne Säure."),
     "sk": ("Bôby sú z kakaovníka Theobroma cacao zo západnej Afriky — najmä z Pobrežia Slonoviny, Ghany, "
            "Kamerunu a Nigérie. Fermentujú sa v banánových listoch a sušia na slnku. Pôdy v tejto oblasti majú "
            "prirodzene nízky obsah kadmia, preto ho má nízky aj naše kakao; hodnotu k šarži nájdete v "
-           "laboratórnom certifikáte, ktorý pošleme na vyžiadanie. Alkalizujeme prírodnými soľami na pH 7,8–8,2 — "
+           "laboratórnom certifikáte, ktorý pošleme na vyžiadanie. Kakao je alkalizované prírodnými soľami na pH 7,8–8,2 — "
            "preto je farba sýto červenohnedá a chuť okrúhla, bez kyslosti."),
 }
 
@@ -36,57 +36,57 @@ ORIGIN_H2 = {"cs": "Odkud je", "en": "Where it comes from", "de": "Woher er komm
 # Three FAQ pairs appended to the cocoa page (FAQPage JSON-LD follows automatically).
 FAQ = {
     "cs": [
-        ("Odkud pochází kakao Jůzlová?",
+        ("Odkud pochází naše kakao?",
          "Ze západní Afriky — hlavně z Pobřeží slonoviny, Ghany, Kamerunu a Nigérie. Je to kakaovník Theobroma cacao. "
          "Boby se fermentují v banánových listech, suší na slunci a u nás se melou a alkalizují na holandský typ."),
-        ("Proč má kakao Jůzlová nízký obsah kadmia?",
+        ("Proč má kakao z dílny Jůzlová nízký obsah kadmia?",
          "Kadmium se do bobů dostává z půdy. Vysoké hodnoty mívá kakao z vulkanických půd části Latinské Ameriky, "
-         "například z Peru a Ekvádoru. Západoafrické půdy kadmia obsahují málo, a tak ho má málo i kakao odtud. "
+         "například z Peru a Ekvádoru. Západoafrické půdy obsahují kadmia málo, a tak ho má málo i kakao, které odtud pochází. "
          "Limit EU pro kakaový prášek je 0,60 mg/kg (nařízení (EU) 2023/915); hodnotu naší šarže máme v laboratorním "
          "certifikátu a pošleme ho na vyžádání."),
         ("A co olovo?",
-         "V západní Africe je to hlavní sledovaný kov. Drží se na slupce bobu, ne v jádru, a odchází při loupání před "
-         "mletím. I olovo je v certifikátu k šarži."),
+         "V západní Africe je to hlavní sledovaný kov. Drží se na slupce bobu, ne v jádru, a odchází se slupkou při loupání "
+         "před mletím. I olovo najdete v certifikátu k šarži."),
     ],
     "en": [
-        ("Where does Jůzlová cocoa come from?",
+        ("Where does our cocoa come from?",
          "West Africa, mainly Ivory Coast, Ghana, Cameroon and Nigeria. The tree is Theobroma cacao. The beans are "
          "fermented in banana leaves, sun-dried, then ground and alkalised to Dutch-process cocoa."),
-        ("Why is the cadmium content of Jůzlová cocoa low?",
+        ("Why is the cadmium content of the Jůzlová workshop's cocoa low?",
          "Cadmium enters the beans from the soil. High values are typical of cocoa grown on volcanic soils in parts of "
          "Latin America, for example Peru and Ecuador. West African soils hold little cadmium, so cocoa from there is "
-         "low too. The EU limit for cocoa powder is 0.60 mg/kg (Regulation (EU) 2023/915); the value for our batch is "
+         "low in cadmium too. The EU limit for cocoa powder is 0.60 mg/kg (Regulation (EU) 2023/915); the value for our batch is "
          "in the certificate of analysis, sent on request."),
         ("What about lead?",
-         "In West Africa lead is the metal that is watched. It stays on the bean's husk, not in the nib, and leaves "
-         "with the shell before grinding. Lead is in the batch certificate as well."),
+         "In West Africa, lead is the metal that is monitored. It stays on the husk of the bean, not in the nib, and is "
+         "removed with the shell before grinding. Lead is listed in the batch certificate as well."),
     ],
     "de": [
-        ("Woher kommt der Kakao von Jůzlová?",
+        ("Woher kommt unser Kakao?",
          "Aus Westafrika, vor allem aus der Elfenbeinküste, Ghana, Kamerun und Nigeria. Der Baum ist Theobroma cacao. "
          "Die Bohnen werden in Bananenblättern fermentiert, an der Sonne getrocknet, dann gemahlen und zu Kakao "
          "holländischer Art alkalisiert."),
-        ("Warum ist der Cadmiumgehalt im Kakao von Jůzlová niedrig?",
+        ("Warum ist der Cadmiumgehalt in unserem Kakao niedrig?",
          "Cadmium gelangt aus dem Boden in die Bohne. Hohe Werte sind typisch für Kakao von vulkanischen Böden in Teilen "
-         "Lateinamerikas, etwa aus Peru und Ecuador. Westafrikanische Böden enthalten wenig Cadmium, also auch der Kakao "
+         "Lateinamerikas, etwa aus Peru und Ecuador. Westafrikanische Böden enthalten wenig Cadmium, und damit auch der Kakao "
          "von dort. Der EU-Grenzwert für Kakaopulver liegt bei 0,60 mg/kg (Verordnung (EU) 2023/915); den Wert unserer "
          "Charge finden Sie im Laborzertifikat, das wir auf Anfrage senden."),
         ("Und Blei?",
          "In Westafrika ist Blei das Metall, auf das geachtet wird. Es bleibt auf der Schale der Bohne, nicht im Kern, "
-         "und geht beim Schälen vor dem Mahlen ab. Auch Blei steht im Chargenzertifikat."),
+         "und wird beim Schälen vor dem Mahlen mit der Schale entfernt. Auch Blei steht im Chargenzertifikat."),
     ],
     "sk": [
-        ("Odkiaľ pochádza kakao Jůzlová?",
+        ("Odkiaľ pochádza naše kakao?",
          "Zo západnej Afriky — najmä z Pobrežia Slonoviny, Ghany, Kamerunu a Nigérie. Je to kakaovník Theobroma cacao. "
          "Bôby sa fermentujú v banánových listoch, sušia na slnku a potom sa melú a alkalizujú na holandský typ."),
-        ("Prečo má kakao Jůzlová nízky obsah kadmia?",
+        ("Prečo má kakao z dielne Jůzlová nízky obsah kadmia?",
          "Kadmium sa do bôbov dostáva z pôdy. Vysoké hodnoty máva kakao z vulkanických pôd časti Latinskej Ameriky, "
-         "napríklad z Peru a Ekvádoru. Západoafrické pôdy kadmia obsahujú málo, a tak ho má málo aj kakao odtiaľ. "
+         "napríklad z Peru a Ekvádoru. Západoafrické pôdy obsahujú kadmia málo, a tak ho má málo aj kakao, ktoré odtiaľ pochádza. "
          "Limit EÚ pre kakaový prášok je 0,60 mg/kg (nariadenie (EÚ) 2023/915); hodnotu našej šarže máme v "
          "laboratórnom certifikáte a pošleme ho na vyžiadanie."),
         ("A čo olovo?",
-         "V západnej Afrike je to hlavný sledovaný kov. Drží sa na šupke bôbu, nie v jadre, a odchádza pri lúpaní pred "
-         "mletím. Aj olovo je v certifikáte k šarži."),
+         "V západnej Afrike je to hlavný sledovaný kov. Drží sa na šupke bôbu, nie v jadre, a odchádza so šupkou pri lúpaní "
+         "pred mletím. Aj olovo nájdete v certifikáte k šarži."),
     ],
 }
 
@@ -106,8 +106,8 @@ FLOWER_ALT = {
 
 # One-line fact for llms.txt (answer engines).
 LLMS_LINE = {
-    "cs": "Kakao Jůzlová: Theobroma cacao ze západní Afriky (Pobřeží slonoviny, Ghana, Kamerun, Nigérie), holandský typ, 20–22 % kakaového másla, půdy s nízkým kadmiem; limit EU pro kakaový prášek 0,60 mg/kg; certifikát k šarži na vyžádání.",
-    "en": "Jůzlová cocoa: Theobroma cacao from West Africa (Ivory Coast, Ghana, Cameroon, Nigeria), Dutch-process, 20–22 % cocoa butter, low-cadmium soils; EU limit for cocoa powder 0.60 mg/kg; batch certificate on request.",
-    "de": "Jůzlová Kakao: Theobroma cacao aus Westafrika (Elfenbeinküste, Ghana, Kamerun, Nigeria), holländische Art, 20–22 % Kakaobutter, cadmiumarme Böden; EU-Grenzwert für Kakaopulver 0,60 mg/kg; Chargenzertifikat auf Anfrage.",
-    "sk": "Kakao Jůzlová: Theobroma cacao zo západnej Afriky (Pobrežie Slonoviny, Ghana, Kamerun, Nigéria), holandský typ, 20–22 % kakaového masla, pôdy s nízkym kadmiom; limit EÚ pre kakaový prášok 0,60 mg/kg; certifikát k šarži na vyžiadanie.",
+    "cs": "Kakao z dílny Jůzlová: Theobroma cacao ze západní Afriky (Pobřeží slonoviny, Ghana, Kamerun, Nigérie), holandský typ, 20–22 % kakaového másla, půdy s nízkým kadmiem; limit EU pro kakaový prášek 0,60 mg/kg; certifikát k šarži na vyžádání.",
+    "en": "Cocoa from the Jůzlová workshop: Theobroma cacao from West Africa (Ivory Coast, Ghana, Cameroon, Nigeria), Dutch-process, 20–22 % cocoa butter, low-cadmium soils; EU limit for cocoa powder 0.60 mg/kg; batch certificate on request.",
+    "de": "Kakao aus der Werkstatt Jůzlová: Theobroma cacao aus Westafrika (Elfenbeinküste, Ghana, Kamerun, Nigeria), holländische Art, 20–22 % Kakaobutter, cadmiumarme Böden; EU-Grenzwert für Kakaopulver 0,60 mg/kg; Chargenzertifikat auf Anfrage.",
+    "sk": "Kakao z dielne Jůzlová: Theobroma cacao zo západnej Afriky (Pobrežie Slonoviny, Ghana, Kamerun, Nigéria), holandský typ, 20–22 % kakaového masla, pôdy s nízkym kadmiom; limit EÚ pre kakaový prášok 0,60 mg/kg; certifikát k šarži na vyžiadanie.",
 }

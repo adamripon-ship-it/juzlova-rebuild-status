@@ -4,27 +4,27 @@
   "faqs": [
     {
       "question": "How do I order without a web shop?",
-      "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), e-mail juzlj@seznam.cz, or use the form. Say what and how much you want and where you are; we arrange the rest."
+      "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), e-mail juzlj@seznam.cz or use the form. Tell us what you want, how much and where you are; we arrange the rest."
     },
     {
       "question": "Where can I collect for free?",
-      "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by phone arrangement, daily 8:00–19:00."
+      "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00."
     },
     {
       "question": "Do you give samples or tastings?",
-      "answer": "No. You order finished packs. For a first try, the pudding comes in a 400 g pack for 30 CZK."
+      "answer": "No. You order finished packs. For a first try, the pudding comes in a 400 g pack for 30 Kč (CZK)."
     },
     {
       "question": "Do I pay in advance or on collection?",
-      "answer": "Pick-up and delivery: on hand-over. Parcels and EU shipments: we send the total first and ship once you approve it."
+      "answer": "For pick-up and delivery you pay on hand-over. For parcels and EU shipments we send the total first and ship once you approve it."
     },
     {
       "question": "When is delivery free?",
-      "answer": "To Humpolec and Havlíčkův Brod from 1000 CZK, to Jihlava from 3000 CZK, across the rest of Vysočina from 5000 CZK. Kitchens in Brno from 5000 CZK."
+      "answer": "To Humpolec and Havlíčkův Brod from 1000 Kč, to Jihlava from 3000 Kč, across the rest of Vysočina from 5000 Kč."
     },
     {
       "question": "Do you send parcels across Czechia?",
-      "answer": "Yes. We quote shipping first by weight and place; you may also use your own courier."
+      "answer": "Yes. We quote shipping in advance by weight and destination; you may also use your own courier."
     },
     {
       "question": "Do you ship abroad?",
@@ -32,38 +32,38 @@
     },
     {
       "question": "What is the dumpling mix made of?",
-      "answer": "Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato if that is how you like them."
+      "answer": "Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato go in if that is how you like them."
     },
     {
       "question": "Is the vanilla pudding really gluten-free?",
-      "answer": "Yes. It is based on corn starch, which contains no gluten. We do not sell a cocoa pudding mix — stir in our cocoa for a chocolate cream."
+      "answer": "Yes. It is based on corn starch, which contains no gluten. We do not sell a cocoa pudding mix; for a chocolate cream, stir in our cocoa."
     },
     {
       "question": "How much fat is in your cocoa?",
-      "answer": "20–22 % cocoa butter. Under EU law cocoa powder needs at least 20 %; below that it is fat-reduced cocoa. No added sugar, none of the 14 EU allergens, gluten under 20 ppm."
+      "answer": "20–22 % cocoa butter. Under EU law, cocoa powder must contain at least 20 %; below that it counts as fat-reduced cocoa. No added sugar, none of the 14 EU allergens, gluten under 20 ppm."
     },
     {
       "question": "Is the vanilla sugar real vanilla?",
-      "answer": "No. It is finely ground sugar with vanillin aroma. We say so in the product name."
+      "answer": "No. It is finely ground sugar flavoured with vanillin, not with vanilla pods."
     },
     {
       "question": "How many portions from 5 kg of dumpling mix?",
-      "answer": "About 60–70 side portions. One bag covers a season of Sunday lunches."
+      "answer": "About 60–70 side-dish portions. One bag covers a whole season of Sunday lunches."
     },
     {
       "question": "How much pudding replaces a shop sachet?",
-      "answer": "A sachet is about 40 g per 500 ml of milk. One kilo makes about 25 puddings."
+      "answer": "A shop sachet is about 40 g for 500 ml of milk. One kilo makes about 25 puddings."
     },
     {
       "question": "How do I store the mixes?",
-      "answer": "Dry and closed. Keep cocoa away from strong smells, ideally at 15–20 °C."
+      "answer": "Dry and sealed. Keep the cocoa away from strong smells, ideally at 15–20 °C."
     }
   ],
   "byLanguage": {
     "cs": [
       {
         "question": "Jak u vás objednám, když nemáte e-shop?",
-        "answer": "Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz, nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme."
+        "answer": "Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme."
       },
       {
         "question": "Kde si zboží vyzvednu zdarma?",
@@ -71,7 +71,7 @@
       },
       {
         "question": "Dáváte vzorky nebo ochutnávky?",
-        "answer": "Ne. Objednáváte hotová balení. Na první vyzkoušení je puding ve 400g balení za 30 Kč."
+        "answer": "Ne. Objednáváte hotová balení. Na první vyzkoušení se hodí puding ve 400 g balení za 30 Kč."
       },
       {
         "question": "Platím předem, nebo při převzetí?",
@@ -79,7 +79,7 @@
       },
       {
         "question": "Kdy je rozvoz zdarma?",
-        "answer": "Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč. Pro kuchyně do Brna od 5000 Kč."
+        "answer": "Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč."
       },
       {
         "question": "Posíláte balíky po celém Česku?",
@@ -91,7 +91,7 @@
       },
       {
         "question": "Z čeho jsou knedlíky v prášku?",
-        "answer": "Z pšeničné mouky z mlýna v Havlíčkově Brodě, který vede naše širší rodina, a ze sušených bramborových vloček. Zaděláváte jen vodou; vejce, mléko nebo strouhanou bramboru přidáte podle zvyku."
+        "answer": "Z pšeničné mouky z mlýna v Havlíčkově Brodě, který vede naše širší rodina, a ze sušených bramborových vloček. Zaděláváte jen vodou; vejce, mléko nebo strouhané brambory přidáte podle zvyku."
       },
       {
         "question": "Je vanilkový puding opravdu bez lepku?",
@@ -103,7 +103,7 @@
       },
       {
         "question": "Je vanilínový cukr pravá vanilka?",
-        "answer": "Ne. Je to jemně mletý cukr s vanilínovým aroma. Říkáme to rovnou v názvu."
+        "answer": "Ne. Je to jemně mletý cukr s vanilínovým aromatem. Říkáme to rovnou v názvu."
       },
       {
         "question": "Kolik porcí je z 5 kg knedlíků?",
@@ -121,27 +121,27 @@
     "en": [
       {
         "question": "How do I order without a web shop?",
-        "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), e-mail juzlj@seznam.cz, or use the form. Say what and how much you want and where you are; we arrange the rest."
+        "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), e-mail juzlj@seznam.cz or use the form. Tell us what you want, how much and where you are; we arrange the rest."
       },
       {
         "question": "Where can I collect for free?",
-        "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by phone arrangement, daily 8:00–19:00."
+        "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00."
       },
       {
         "question": "Do you give samples or tastings?",
-        "answer": "No. You order finished packs. For a first try, the pudding comes in a 400 g pack for 30 CZK."
+        "answer": "No. You order finished packs. For a first try, the pudding comes in a 400 g pack for 30 Kč (CZK)."
       },
       {
         "question": "Do I pay in advance or on collection?",
-        "answer": "Pick-up and delivery: on hand-over. Parcels and EU shipments: we send the total first and ship once you approve it."
+        "answer": "For pick-up and delivery you pay on hand-over. For parcels and EU shipments we send the total first and ship once you approve it."
       },
       {
         "question": "When is delivery free?",
-        "answer": "To Humpolec and Havlíčkův Brod from 1000 CZK, to Jihlava from 3000 CZK, across the rest of Vysočina from 5000 CZK. Kitchens in Brno from 5000 CZK."
+        "answer": "To Humpolec and Havlíčkův Brod from 1000 Kč, to Jihlava from 3000 Kč, across the rest of Vysočina from 5000 Kč."
       },
       {
         "question": "Do you send parcels across Czechia?",
-        "answer": "Yes. We quote shipping first by weight and place; you may also use your own courier."
+        "answer": "Yes. We quote shipping in advance by weight and destination; you may also use your own courier."
       },
       {
         "question": "Do you ship abroad?",
@@ -149,31 +149,31 @@
       },
       {
         "question": "What is the dumpling mix made of?",
-        "answer": "Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato if that is how you like them."
+        "answer": "Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato go in if that is how you like them."
       },
       {
         "question": "Is the vanilla pudding really gluten-free?",
-        "answer": "Yes. It is based on corn starch, which contains no gluten. We do not sell a cocoa pudding mix — stir in our cocoa for a chocolate cream."
+        "answer": "Yes. It is based on corn starch, which contains no gluten. We do not sell a cocoa pudding mix; for a chocolate cream, stir in our cocoa."
       },
       {
         "question": "How much fat is in your cocoa?",
-        "answer": "20–22 % cocoa butter. Under EU law cocoa powder needs at least 20 %; below that it is fat-reduced cocoa. No added sugar, none of the 14 EU allergens, gluten under 20 ppm."
+        "answer": "20–22 % cocoa butter. Under EU law, cocoa powder must contain at least 20 %; below that it counts as fat-reduced cocoa. No added sugar, none of the 14 EU allergens, gluten under 20 ppm."
       },
       {
         "question": "Is the vanilla sugar real vanilla?",
-        "answer": "No. It is finely ground sugar with vanillin aroma. We say so in the product name."
+        "answer": "No. It is finely ground sugar flavoured with vanillin, not with vanilla pods."
       },
       {
         "question": "How many portions from 5 kg of dumpling mix?",
-        "answer": "About 60–70 side portions. One bag covers a season of Sunday lunches."
+        "answer": "About 60–70 side-dish portions. One bag covers a whole season of Sunday lunches."
       },
       {
         "question": "How much pudding replaces a shop sachet?",
-        "answer": "A sachet is about 40 g per 500 ml of milk. One kilo makes about 25 puddings."
+        "answer": "A shop sachet is about 40 g for 500 ml of milk. One kilo makes about 25 puddings."
       },
       {
         "question": "How do I store the mixes?",
-        "answer": "Dry and closed. Keep cocoa away from strong smells, ideally at 15–20 °C."
+        "answer": "Dry and sealed. Keep the cocoa away from strong smells, ideally at 15–20 °C."
       }
     ],
     "de": [
@@ -207,7 +207,7 @@
       },
       {
         "question": "Woraus besteht die Knödelmischung?",
-        "answer": "Aus Weizenmehl der Mühle in Havlíčkův Brod, die unsere erweiterte Familie führt, und getrockneten Kartoffelflocken. Sie geben nur Wasser dazu; Ei, Milch oder geriebene Kartoffel nach Belieben."
+        "answer": "Aus Weizenmehl der Mühle in Havlíčkův Brod, die unsere erweiterte Familie führt, und getrockneten Kartoffelflocken. Sie geben nur Wasser dazu; Ei, Milch oder geriebene Kartoffeln nach Belieben."
       },
       {
         "question": "Ist der Vanillepudding wirklich glutenfrei?",
@@ -219,15 +219,15 @@
       },
       {
         "question": "Ist der Vanillinzucker echte Vanille?",
-        "answer": "Nein. Fein gemahlener Zucker mit Vanillinaroma. Das steht schon im Produktnamen."
+        "answer": "Nein. Es ist fein gemahlener Zucker mit Vanillinaroma. Das steht schon im Produktnamen."
       },
       {
         "question": "Wie viele Portionen aus 5 kg Knödelmischung?",
-        "answer": "Etwa 60–70 Beilagenportionen. Ein Beutel reicht für eine Saison Sonntagsessen."
+        "answer": "Etwa 60–70 Beilagenportionen. Ein Beutel reicht für eine ganze Saison Sonntagsessen."
       },
       {
         "question": "Wie viel Pudding ersetzt ein Päckchen?",
-        "answer": "Ein Päckchen sind etwa 40 g auf 500 ml Milch. Aus einem Kilo werden rund 25 Puddings."
+        "answer": "Ein Päckchen enthält etwa 40 g für 500 ml Milch. Aus einem Kilo werden rund 25 Puddings."
       },
       {
         "question": "Wie lagere ich die Mischungen?",
@@ -237,7 +237,7 @@
     "sk": [
       {
         "question": "Ako objednám, keď nemáte e-shop?",
-        "answer": "Zavoláte Jiřine (+420 728 466 141) alebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz, alebo vyplníte formulár. Poviete, čo a koľko chcete a kde ste; zvyšok dohodneme."
+        "answer": "Zavoláte Jiřine (+420 728 466 141) alebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz alebo vyplníte formulár. Poviete, čo a koľko chcete a kde ste; zvyšok dohodneme."
       },
       {
         "question": "Kde si tovar vyzdvihnem zadarmo?",
@@ -245,7 +245,7 @@
       },
       {
         "question": "Dávate vzorky alebo ochutnávky?",
-        "answer": "Nie. Objednávate hotové balenia. Na prvé vyskúšanie je puding v 400 g balení za 30 Kč."
+        "answer": "Nie. Objednávate hotové balenia. Na prvé vyskúšanie sa hodí puding v 400 g balení za 30 Kč."
       },
       {
         "question": "Platím vopred, alebo pri prevzatí?",
@@ -253,11 +253,11 @@
       },
       {
         "question": "Kedy je rozvoz zadarmo?",
-        "answer": "Do Humpolca a Havlíčkovho Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zvyšku Vysočiny od 5000 Kč. Pre kuchyne do Brna od 5000 Kč."
+        "answer": "Do Humpolca a Havlíčkovho Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zvyšku Vysočiny od 5000 Kč."
       },
       {
         "question": "Posielate balíky na Slovensko?",
-        "answer": "Áno. Dopravu, krabicu, poistenie a bublinkovú fóliu nacíníme vopred; sumu vidíte pred odoslaním."
+        "answer": "Áno. Dopravu, krabicu, poistenie a bublinkovú fóliu naceníme vopred; sumu vidíte pred odoslaním."
       },
       {
         "question": "Môžem poslať vlastného dopravcu?",
@@ -265,7 +265,7 @@
       },
       {
         "question": "Z čoho sú knedle v prášku?",
-        "answer": "Z pšeničnej múky z mlyna v Havlíčkovom Brode, ktorý vedie naša širšia rodina, a zo sušených zemiakových vločiek. Zamiešate len vodou; vajce, mlieko alebo strúhaný zemiak pridáte podľa zvyku."
+        "answer": "Z pšeničnej múky z mlyna v Havlíčkovom Brode, ktorý vedie naša širšia rodina, a zo sušených zemiakových vločiek. Zamiešate len s vodou; vajce, mlieko alebo strúhané zemiaky pridáte podľa zvyku."
       },
       {
         "question": "Je vanilkový puding naozaj bez lepku?",

@@ -62,7 +62,7 @@ url: https://www.juzlova.cz/chlupate-knedliky-v-prasku/
 package: 5 kg
 price_czk: 260 Kč
 fact: Podle tradiční receptury z naší dílny. Smícháte s vodou, vytvarujete, povaříte. Hodí se i na strapačky a halušky.
-detail: Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. Ke zelí a uzenému, na halušky i strapačky, hotové za 15 minut. 5 kg / 260 Kč, Kochánov a Humpolec.
+detail: Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. K zelí a uzenému, na halušky i strapačky, hotové za 15 minut. 5 kg / 260 Kč, Kochánov a Humpolec.
 Q: Jsou chlupaté knedlíky a bosáky totéž?
 A: Ano, jsou to dva názvy pro jedno jídlo.
 Q: Dají se z toho dělat halušky?
@@ -75,7 +75,7 @@ url: https://www.juzlova.cz/vanilkovy-puding-bez-lepku/
 package: 1 kg / 400 g
 price_czk: 60 Kč / 30 Kč
 fact: Základ je kukuřičný škrob, který lepek neobsahuje. Vaříte ho jako každý puding; do krému na věnečky, do hruškového koláče, do hrníčkového perníku.
-detail: Vanilkový puding z kukuřičného škrobu bez lepku. Kilo vystačí na cca 25 pudingů nebo krémy na věnečky a větrníky. 1 kg / 60 Kč, 400 g / 30 Kč, Kochánov a Humpolec.
+detail: Vanilkový puding z kukuřičného škrobu bez lepku. Kilo vystačí asi na 25 pudingů nebo krém na věnečky a větrníky. 1 kg / 60 Kč, 400 g / 30 Kč, Kochánov a Humpolec.
 Q: Lze puding použít místo pudingu z obchodu 1 : 1?
 A: Ano. Zhruba 40 g na 500 ml mléka, jako běžný sáček.
 Q: Vydrží otevřený kilový pytlík?
@@ -88,20 +88,20 @@ url: https://www.juzlova.cz/kakao-holandskeho-typu/
 package: 500 g
 price_czk: 270 Kč
 fact: Alkalizovaný prášek z kakaové hmoty, bez přidaného cukru, bez 14 alergenů EU. Do perníku, krémů, kakaa na pití a zmrzliny. Certifikát k šarži pošleme na vyžádání.
-detail: Tmavé cukrářské kakao holandského typu s 20–22 % kakaového másla, bez přidaného cukru, bez 14 alergenů EU. Barva, která v pečení a zmrzlině drží. Certifikát k šarži na vyžádání.
+detail: Tmavé kakao holandského typu s 20–22 % kakaového másla, bez přidaného cukru a bez 14 alergenů EU. Barva v pečení i zmrzlině drží. Certifikát k šarži na vyžádání.
 Q: Proč se cena kakaa mění?
 A: Kakao je burzovní komodita: cenu hýbe počasí, poptávka a nové limity EU na těžké kovy. Ceník upravujeme, když se změní náš nákup.
 Q: Je to raw kakao?
 A: Ne. Je alkalizované (holandské) a pražené. Raw kakao je nepražené a chutná hořce a travnatě; to naše je jemné a kulaté, s praženými tóny.
 Q: Hodí se do zmrzliny?
 A: Ano. Vyšší podíl kakaového másla dává zmrzlině hladkou texturu a tmavou barvu, která v mrazu nevybledne.
-origin: Kakao Jůzlová: Theobroma cacao ze západní Afriky (Pobřeží slonoviny, Ghana, Kamerun, Nigérie), holandský typ, 20–22 % kakaového másla, půdy s nízkým kadmiem; limit EU pro kakaový prášek 0,60 mg/kg; certifikát k šarži na vyžádání.
-Q: Odkud pochází kakao Jůzlová?
+origin: Kakao z dílny Jůzlová: Theobroma cacao ze západní Afriky (Pobřeží slonoviny, Ghana, Kamerun, Nigérie), holandský typ, 20–22 % kakaového másla, půdy s nízkým kadmiem; limit EU pro kakaový prášek 0,60 mg/kg; certifikát k šarži na vyžádání.
+Q: Odkud pochází naše kakao?
 A: Ze západní Afriky — hlavně z Pobřeží slonoviny, Ghany, Kamerunu a Nigérie. Je to kakaovník Theobroma cacao. Boby se fermentují v banánových listech, suší na slunci a u nás se melou a alkalizují na holandský typ.
-Q: Proč má kakao Jůzlová nízký obsah kadmia?
-A: Kadmium se do bobů dostává z půdy. Vysoké hodnoty mívá kakao z vulkanických půd části Latinské Ameriky, například z Peru a Ekvádoru. Západoafrické půdy kadmia obsahují málo, a tak ho má málo i kakao odtud. Limit EU pro kakaový prášek je 0,60 mg/kg (nařízení (EU) 2023/915); hodnotu naší šarže máme v laboratorním certifikátu a pošleme ho na vyžádání.
+Q: Proč má kakao z dílny Jůzlová nízký obsah kadmia?
+A: Kadmium se do bobů dostává z půdy. Vysoké hodnoty mívá kakao z vulkanických půd části Latinské Ameriky, například z Peru a Ekvádoru. Západoafrické půdy obsahují kadmia málo, a tak ho má málo i kakao, které odtud pochází. Limit EU pro kakaový prášek je 0,60 mg/kg (nařízení (EU) 2023/915); hodnotu naší šarže máme v laboratorním certifikátu a pošleme ho na vyžádání.
 Q: A co olovo?
-A: V západní Africe je to hlavní sledovaný kov. Drží se na slupce bobu, ne v jádru, a odchází při loupání před mletím. I olovo je v certifikátu k šarži.
+A: V západní Africe je to hlavní sledovaný kov. Drží se na slupce bobu, ne v jádru, a odchází se slupkou při loupání před mletím. I olovo najdete v certifikátu k šarži.
 
 ### Vanilínový cukr
 url: https://www.juzlova.cz/vanilinovy-cukr/
@@ -109,7 +109,7 @@ package: 1 kg
 price_czk: 60 Kč
 fact: Není to vanilka z lusku — je to jemně mletý cukr s vanilínovým aroma. Říkáme to rovnou.
 detail: Jemně mletý cukr s vanilínovým aroma v kilovém balení. Do koláčů, cukroví, šlehačky i na posyp. Vyzvednutí Kochánov a Humpolec, rozvoz po Vysočině.
-Q: Je to totéž co vanilkový cukr z obchodu?
+Q: Je to totéž jako vanilkový cukr z obchodu?
 A: Ano, je to vanilínový cukr — cukr s vanilínovým aroma, ne mletý vanilkový lusk.
 Q: Prodáváte i pravou vanilku?
 A: Ne.
@@ -123,42 +123,42 @@ summary: Tradiční sladká večeře z bramborového těsta: šišky obalené v 
 suroviny:
 - 400 g bramborových knedlíků v prášku
 - 100 g mletého máku
-- 2 polévkové lžíce moučkového cukru (může být více)
+- 2 polévkové lžíce moučkového cukru (nebo více)
 - 2 polévkové lžíce rozpuštěného másla
 postup:
-1. Bramborové knedlíky v prášku smíchejte s vodou dle návodu a z těsta vytvarujte malé šišky.
-2. Pečte na vymaštěném plechu uprostřed trouby předehřáté na 200 °C; v průběhu pečení šišky jednou otočte, aby měly zlatavou barvu z obou stran.
+1. Bramborové knedlíky v prášku smíchejte s vodou podle návodu a z těsta vytvarujte malé šišky.
+2. Pečte na vymaštěném plechu uprostřed trouby předehřáté na 200 °C; během pečení šišky jednou otočte, aby měly zlatavou barvu z obou stran.
 3. Po upečení šišky vhoďte do vroucí vody a na 5 minut spařte.
 4. Vložte je do velké mísy, posypte mákem a cukrem, polijte máslem, promíchejte a ještě teplé podávejte.
-Q: Jak se dělají šišky s mákem z těsta Jůzlová?
-A: Bramborové knedlíky v prášku smíchejte s vodou dle návodu, vytvarujte šišky, pečte na 200 °C dozlatova z obou stran, 5 minut spařte ve vroucí vodě a obalte v máku, cukru a másle.
+Q: Jak se dělají šišky s mákem z knedlíků v prášku?
+A: Bramborové knedlíky v prášku smíchejte s vodou podle návodu, vytvarujte šišky, pečte na 200 °C dozlatova z obou stran, 5 minut spařte ve vroucí vodě a obalte v máku, cukru a másle.
 Q: Na kolik stupňů péct šišky s mákem?
 A: Na 200 °C uprostřed trouby, na vymaštěném plechu, s jedním otočením, aby měly zlatavou kůrku z obou stran.
 
-### Hruškový koláč s vanilkovým pudinkem
+### Hruškový koláč s vanilkovým pudingem
 url: https://www.juzlova.cz/hruskovy-kolac-s-vanilkovym-pudinkem-recept/
 image: https://www.juzlova.cz/img/hruskovy-kolac.webp
 prep: PT20M cook: PT45M total: PT65M yield: 8
-summary: Koláč, jehož přípravu si užijí i děti. Pečení baví dvakrát — při přípravě i při ochutnávání.
+summary: Křehký spodek, plátky hrušek a krém ze zakysané smetany s pudingem. Zvládnou ho upéct i děti.
 suroviny:
 - 2 vejce
-- 80 g rozehřátého másla
+- 80 g rozpuštěného másla
 - 150 g krystalového cukru
 - 200 g hladké mouky (lze kombinovat s celozrnnou nebo špaldovou)
 - 1 kypřicí prášek
 - 2 zakysané smetany
 - 1 smetana ke šlehání (30 %)
-- 40 g vanilkového pudinku v prášku
+- 40 g vanilkového pudingu v prášku
 - 5 hrušek (lze nahradit jablky, malinami, broskvemi — čerstvým i mraženým ovocem)
 postup:
 1. Smíchejte jedno vejce, máslo, 50 g cukru, mouku a kypřicí prášek. Těsto rukama vypracujte a vtlačte do koláčové formy vyložené pečicím papírem (drolivé těsto nevadí — vymačkejte je do formy).
-2. Okrájené hrušky nakrájejte na plátky a rozprostřete na těsto.
-3. V misce promíchejte zakysanou smetanu, šlehačku, pudink v prášku, 100 g cukru a druhé vejce; směs nalijte na koláč.
-4. Pečte uprostřed vyhřáté trouby na 180 °C asi 45 minut.
-Q: Jak dlouho se peče hruškový koláč s vanilkovým pudinkem?
+2. Oloupané hrušky nakrájejte na plátky a rozprostřete na těsto.
+3. V misce promíchejte zakysanou smetanu, šlehačku, puding v prášku, 100 g cukru a druhé vejce; směs nalijte na koláč.
+4. Pečte uprostřed trouby předehřáté na 180 °C asi 45 minut.
+Q: Jak dlouho se peče hruškový koláč s vanilkovým pudingem?
 A: 20 minut přípravy a cca 45 minut pečení na 180 °C. Recept je na 8 porcí a funguje i s jablky, malinami nebo broskvemi.
-Q: Kolik pudinku patří do hruškového koláče?
-A: 40 g vanilkového pudinku v prášku Jůzlová do lité vrstvy se zakysanou smetanou, šlehačkou, cukrem a vejcem.
+Q: Kolik pudingu patří do hruškového koláče?
+A: 40 g našeho vanilkového pudingu v prášku do lité vrstvy se zakysanou smetanou, šlehačkou, cukrem a vejcem.
 
 ### Strapačky se zelím a slaninou
 url: https://www.juzlova.cz/strapacky-se-zelim-a-slaninou-recept/
@@ -172,14 +172,14 @@ suroviny:
 - 100 g slaniny
 - lžíce sádla
 postup:
-1. Chlupaté knedlíky v prášku smíchejte s vodou dle návodu. Nabobtnalé těsto protlačte cedníkem na halušky přímo do vroucí vody a vařte, dokud nevyplavou.
-2. Kysané zelí povařte v hrnci s vodou asi 10 minut; nevyvařenou vodu slijte.
-3. Na pánvi na sádle osmažte slaninu nakrájenou na menší kousky; když je lehce vysmažená, přidejte na kolečka nakrájenou jarní cibulku a po minutě odstavte.
+1. Chlupaté knedlíky v prášku smíchejte s vodou podle návodu. Nabobtnalé těsto protlačte cedníkem na halušky přímo do vroucí vody a vařte, dokud nevyplavou.
+2. Kysané zelí povařte v hrnci s vodou asi 10 minut; zbylou vodu slijte.
+3. Na pánvi na sádle osmažte slaninu nakrájenou na menší kousky; když je lehce vypečená, přidejte na kolečka nakrájenou jarní cibulku a po minutě odstavte.
 4. Halušky smíchejte se zelím a na talíři posypte slaninou s cibulkou.
-Q: Z čeho se dělají strapačky Jůzlová?
+Q: Z čeho se dělají naše strapačky?
 A: Z chlupatých knedlíků v prášku protlačených na halušky do vroucí vody, s kysaným zelím, slaninou a jarní cibulkou.
 Q: Jak dlouho trvá příprava strapaček?
-A: Asi 30 minut: těsto podle návodu, halušky vařit než vyplavou, zelí 10 minut povařit, slaninu osmažit.
+A: Asi 30 minut: těsto podle návodu, halušky vařit, než vyplavou, zelí 10 minut povařit, slaninu osmažit.
 
 ### Bebe řezy s čokoládovým pudingem
 url: https://www.juzlova.cz/bebe-rezy-s-cokoladovym-pudinkem-recept/
@@ -187,7 +187,7 @@ image: https://www.juzlova.cz/img/bebe-rezy.webp
 prep: PT25M cook: PT0M total: PT25M yield: 12
 summary: Rádi byste pohostili návštěvu, ale nejste zrovna Jamie Oliver? Nepečené bebe řezy zvládne opravdu každý.
 suroviny:
-- 4 balíčky sušenek BEBE: 2 světlé, 2 tmavé
+- 4 balíčky sušenek bebe (2 světlé, 2 tmavé)
 - 2 zakysané smetany
 - 1 smetana ke šlehání
 - 40 g vanilkového cukru
@@ -195,15 +195,15 @@ suroviny:
 - 1 litr mléka
 - kakao holandského typu na posyp
 postup:
-1. Na plech poklaďte světlé bebe sušenky.
-2. Uvařte čokoládový puding dle návodu na obalu a nalijte jej na sušenky tak, aby se rovnoměrně rozprostřel.
-3. Na vrstvu pudingu poklaďte tmavé bebe sušenky.
+1. Na plech vyskládejte světlé bebe sušenky.
+2. Uvařte čokoládový puding podle návodu na obalu a nalijte jej na sušenky tak, aby se rovnoměrně rozprostřel.
+3. Na vrstvu pudingu vyskládejte tmavé bebe sušenky.
 4. V míse vyšlehejte smetanu s vanilkovým cukrem do tuha, vmíchejte zakysanou smetanu a směs rozetřete na sušenky.
-5. Řez posypte tmavým kakaem a nechte v lednici odležet, nejlépe přes noc.
+5. Řezy posypte kakaem a nechte v lednici odležet, nejlépe přes noc.
 Q: Pečou se bebe řezy s čokoládovým pudingem?
 A: Ne. Jsou nepečené: vrstva světlých sušenek, uvařený puding, tmavé sušenky, šlehačka se zakysanou smetanou a kakao. Nejlépe přes noc v lednici.
 Q: Lze místo čokoládového pudingu použít vanilkový?
-A: Ano. Řez chutná výborně i s vanilkovým pudinkem Jůzlová a skořicovým posypem.
+A: Ano. Řez chutná výborně i s naším vanilkovým pudingem a skořicovým posypem.
 
 ### Šlehačková roláda
 url: https://www.juzlova.cz/slehackova-rolada-recept/
@@ -214,14 +214,14 @@ suroviny:
 - 5 vajec
 - 100 g moučkového cukru
 - 1 lžíce kakaa holandského typu
-- 1 smetana ke šlehání (případně ztužovač smetany)
+- 1 smetana ke šlehání (případně i ztužovač šlehačky)
 postup:
 1. Z bílků ušlehejte tuhý sníh, pak přidejte žloutky a moučkový cukr. Opatrným mísením vznikne hladké těsto.
 2. Nakonec přidejte kakao holandského typu — dodá sytou čokoládovou barvu a výraznou chuť.
 3. Připravte si pečicí papír lehce vymaštěný sádlem (poslouží i olej), aby šla roláda po upečení dobře sbalit.
 4. Pečte v troubě předehřáté na 180 °C asi 8 minut; troubu po celou dobu neotevírejte.
 5. Roládu nechte na plechu vychladnout a opatrně ji sejměte z papíru.
-6. Ušlehejte tuhou šlehačku, roládu potřete a zabalte. Zbylou šlehačkou ozdobte hřbet, na efekt přidejte čokoládové hobliny.
+6. Ušlehejte tuhou šlehačku, roládu jí potřete a stočte. Zbylou šlehačkou ozdobte vršek a posypte čokoládovými hoblinami.
 Q: Je šlehačková roláda bez lepku?
 A: Ano. Těsto je jen z vajec, moučkového cukru a kakaa holandského typu — bez mouky, tedy bez lepku. Hotová je za cca 30 minut.
 Q: Na kolik stupňů péct šlehačkovou roládu?
@@ -231,24 +231,24 @@ A: 8 minut na 180 °C, troubu neotevírejte. Po vychladnutí potřete šlehačko
 url: https://www.juzlova.cz/hrnickovy-pernik-recept/
 image: https://www.juzlova.cz/img/domaci-pernik.webp
 prep: PT10M cook: PT25M total: PT35M yield: 28
-summary: Hrníčkový perník, který si zamilujete pro snadnou přípravu i výbornou chuť. Nepotřebujete váhu — vystačíte si s hrnečkem.
+summary: Hrníčkový perník bez vážení: vystačíte si s hrnečkem a jednou mísou. S vanilkovým pudingem a kakaem holandského typu.
 suroviny:
 - 3 hrnečky hladké mouky (hrneček = 200 ml)
 - 2 hrnečky cukru krystal
 - 1 hrneček oleje
 - 2 středně velká vejce
-- 2 vrchovaté polévkové lžíce vanilkového pudinku v prášku
+- 2 vrchovaté polévkové lžíce vanilkového pudingu v prášku
 - 1 prášek do perníku
 - ½ prášku do pečiva
 - 250 ml mléka (1¼ hrnečku)
-- kakao holandského typu dle chuti
+- kakao holandského typu podle chuti
 postup:
-1. Všechny ingredience nasypte do jedné nádoby a důkladně promíchejte mixérem, aby se netvořily hrudky.
+1. Všechny suroviny nasypte do jedné mísy a důkladně promíchejte mixérem, aby se netvořily hrudky.
 2. Těsto nalijte na vymaštěný plech vysypaný hrubou moukou.
 3. Pečte v troubě předehřáté na 180 °C 20 až 25 minut (podle výšky plechu).
 4. Hotový perník poznáte dřevěným párátkem — po zapíchnutí musí zůstat čisté, bez přilepeného těsta.
 Q: Potřebuji k domácímu perníku váhu?
-A: Ne. Je to hrníčkový recept Jiřiny Jůzlové: 10 minut mísení, 20–25 minut pečení na 180 °C, 25–30 porcí. Do těsta patří vanilkový pudink v prášku a kakao holandského typu.
+A: Ne. Je to hrníčkový recept Jiřiny Jůzlové: 10 minut mísení, 20–25 minut pečení na 180 °C, 25–30 porcí. Do těsta patří vanilkový puding v prášku a kakao holandského typu.
 Q: Jak poznám, že je perník upečený?
 A: Dřevěným párátkem — po zapíchnutí musí zůstat čisté, bez přilepeného těsta.
 
@@ -256,22 +256,22 @@ A: Dřevěným párátkem — po zapíchnutí musí zůstat čisté, bez přilep
 url: https://www.juzlova.cz/tvarohove-knedliky-s-jahodami-recept/
 image: https://www.juzlova.cz/img/bramborovo-tvarohove-knedliky.webp
 prep: PT15M cook: PT5M total: PT20M yield: 4
-summary: Léto je tady a s ním i dozrávání jahod. Jednoduchý a rychlý recept, kterým za 20 minut potěšíte i největší mlsouny.
+summary: Rychlé ovocné knedlíky na jahodovou sezónu: bramborové těsto s tvarohem, hotové za 20 minut.
 suroviny:
 - 250 g bramborových knedlíků v prášku
 - 250 g měkkého tvarohu (v kostce, ne ve vaničce)
 - jahody (jako náplň i na ozdobu)
 - cukr, máslo a tvaroh na ozdobu
 postup:
-1. Bramborové knedlíky v prášku smíchejte s vodou dle návodu a připravte vláčné těsto; zapracujte měkký tvaroh (lepivé těsto nevadí).
+1. Bramborové knedlíky v prášku smíchejte s vodou podle návodu a připravte vláčné těsto; zapracujte měkký tvaroh (lepivé těsto nevadí).
 2. Z těsta vytvarujte válec a nakrájejte jej na stejně velké části, aby se knedlíky vařily rovnoměrně.
 3. Každou část zakulaťte, dlaněmi vytvořte placičku, doprostřed zatlačte jahodu a zabalte.
-4. Knedlíky vařte v páře 5 minut — těsto se krásně uvaří a nerozvaří.
+4. Knedlíky vařte v páře 5 minut — těsto se uvaří a nerozvaří.
 5. Mezitím můžete povařit kousky jahod na ozdobu. Na talíři knedlíky dozdobte máslem, cukrem, jahodami nebo tvarohem.
 Q: Jak rychle jsou bramborovo-tvarohové knedlíky s jahodami hotové?
 A: Za 20 minut: těsto z bramborových knedlíků v prášku a tvarohu, jahoda dovnitř, 5 minut v páře.
 Q: Jaký tvaroh do ovocných knedlíků?
-A: Měkký tvaroh v kostce, ne ve vaničce — 250 g na 250 g směsi Jůzlová.
+A: Měkký tvaroh v kostce, ne ve vaničce — 250 g na 250 g naší směsi.
 
 ### Rychlé věnečky či větrníčky
 url: https://www.juzlova.cz/rychle-venecky-ci-vetrnicky-recept/
@@ -287,15 +287,15 @@ suroviny:
 - tuk na vymazání plechů
 postup:
 1. Vodu, sůl a máslo přiveďte k varu.
-2. Stáhněte plamen a vmíchejte mouku najednou; míchejte, dokud se těsto neodlepí od stěn hrnce a nebude lepit.
+2. Stáhněte plamen a vmíchejte mouku najednou; míchejte, dokud se těsto neodlepí od stěn hrnce a nepřestane lepit.
 3. Odstavte a nechte mírně zchladnout.
 4. Troubu předehřejte na 250 °C.
 5. Po jednom zašlehejte vejce a stále míchejte, až je těsto hladké a mírně pružné.
 6. Na vymaštěné plechy stříkejte věnečky jako dva naskládané kroužky, nebo větrníčky jako malé kopečky.
-7. Pečte 5 minut na 250 °C, pak snižte na 200 °C a pečte dozlatova — zhruba dalších 5 minut na vyšší a 5 na střední teplotě. Troubu během pečení neotevírejte.
+7. Pečte 5 minut na 250 °C, pak snižte na 200 °C a pečte dalších zhruba 5 minut. Posledních asi 5 minut dopečte dozlatova na střední teplotě. Troubu během pečení neotevírejte.
 8. Ještě horké ihned rozřízněte (skořápky se pak netrhají). Před plněním úplně vychlaďte.
 Q: Proč pečete věnečky na 250 °C?
-A: Horký start 250 °C a vyšší podíl másla (90 g na 140 g mouky) těsto rychle vykynou. Po 5 minutách snižte na 200 °C. Asi 80 kousků na dvou plechách.
+A: Horký start na 250 °C a vyšší podíl másla (90 g na 140 g mouky) těsto rychle nafouknou. Po 5 minutách snižte na 200 °C. Asi 80 kousků na dvou plechách.
 Q: Hodí se jedno těsto na věnečky i větrníčky?
 A: Ano. Stejné odpalované těsto: věnečky jako dva kroužky, větrníčky jako kopečky. Náplň volte podle chuti — šlehačka, vanilkový krém nebo karamel.
 
@@ -311,7 +311,7 @@ suroviny:
 - 235 g mouky
 - 4–5 vajec, přidávaných postupně
 - Vanilkový máslový krém: 500 ml mléka
-- 2 sáčky vanilkového pudinku v prášku
+- 2 sáčky vanilkového pudingu v prášku
 - 5 žloutků
 - 150 g cukru
 - 250 g změklého másla
@@ -321,15 +321,15 @@ suroviny:
 - 3 lžíce horkého mléka
 postup:
 1. Vodu, máslo a sůl přiveďte k varu. Odstavte, vmíchejte všechnu mouku a na mírném plameni 2–3 minuty vařte, dokud se těsto nesrazí do koule.
-2. Nechte zchladnout, až je jen vlažné. Postupně zašlehejte vejce, až těsto z lžíce padá v husté stuze.
-3. Na pečicí papír stříkejte kroužky o průměru 6–7 cm. Pečte 10 minut na 200 °C bez otevírání dvířek, pak snižte na 180 °C a pečte dalších 15–25 minut, až jsou věnečky sytě zlatavé a na omak suché.
+2. Nechte zchladnout, až je jen vlažné. Postupně zašlehejte vejce, až těsto ze lžíce padá v husté stuze.
+3. Na pečicí papír stříkejte kroužky o průměru 6–7 cm. Pečte 10 minut na 200 °C bez otevírání dvířek. Pak snižte na 180 °C a pečte dalších 15–25 minut, až jsou věnečky sytě zlatavé a na omak suché.
 4. Úplně vychlaďte a ideálně nechte několik hodin nebo přes noc odkryté, aby skořápky zůstaly křupavé.
-5. Puding uvařte s mlékem, cukrem a žloutky za stálého míchání, dokud zhoustne (po přidání žloutků už nevařte naplno). Vychlaďte, na povrch přitiskněte fólii.
+5. Puding uvařte s mlékem, cukrem a žloutky za stálého míchání, dokud nezhoustne (po přidání žloutků už nevařte naplno). Vychlaďte, na povrch přitiskněte fólii.
 6. Změklé máslo vyšlehejte do pěny, po lžících přidávejte vychladlý puding a šlehejte dohladka. Nakonec vmíchejte rum.
 7. Moučkový cukr, rum a horké mléko vyšlehejte do hladké, lité polevy.
 8. Věnečky rozřízněte vodorovně. Do spodní poloviny nastříkejte vydatně krém, přiklopte a vršek namočte do rumové polevy. Nechte ztuhnout.
 Q: Čím se plní věnečky s vanilkovým krémem?
-A: Vanilkovým máslovým krémem z pudinku Jůzlová, žloutků a másla, navrch rumová poleva. Asi 20 kousků.
+A: Vanilkovým máslovým krémem z našeho pudingu, žloutků a másla, navrch rumová poleva. Asi 20 kousků.
 Q: Jak péct skořápky věnečků, aby nespadly?
 A: 10 minut na 200 °C bez otevírání dvířek, pak 15–25 minut na 180 °C, až jsou sytě zlatavé a suché. Před plněním úplně vychladit.
 
@@ -348,7 +348,7 @@ suroviny:
 - 40 ml vody
 - moučkový cukr na posyp
 postup:
-1. Mouku, máslo a smetanu zpracujte v hladké těsto — nepřehánějte to. Zabalte a nechte v lednici nejméně hodinu, klidně přes noc.
+1. Mouku, máslo a smetanu zpracujte v hladké těsto, ale nehněťte příliš dlouho. Zabalte a nechte v lednici nejméně hodinu, klidně přes noc.
 2. Vyválejte na tenký plát, nakrájejte proužky 2 × 20 cm a každý oviňte kolem vymaštěné kovové trubičky, okraje mírně překládejte.
 3. Pečte na 180–200 °C dozlatova, asi 12–15 minut. Nechte mírně zchladnout a opatrně stáhněte z trubiček.
 4. Cukr s vodou zahřejte bez míchání na 115–120 °C (teploměr pomůže). Mezitím ušlehejte bílky do tuha.
@@ -362,7 +362,7 @@ A: 12–15 minut na 180–200 °C dozlatova. Sníh: cukr s vodou na 115–120 °
 url: https://www.juzlova.cz/minivetrnicky-recept/
 image: https://www.juzlova.cz/img/minivetrnicky.webp
 prep: PT50M cook: PT20M total: PT70M yield: 42
-summary: Malé větrníčky z odpalovaného těsta s máslovo-pudinkovým krémem s tvarohem a čokoládovou polevou. Asi 40–45 kousků.
+summary: Malé větrníčky z odpalovaného těsta s máslovo-pudingovým krémem s tvarohem a čokoládovou polevou. Asi 40–45 kousků.
 suroviny:
 - Odpalované těsto: 250 ml vody
 - špetka soli
@@ -371,7 +371,7 @@ suroviny:
 - 1 lžička kypřicího prášku
 - 4 vejce
 - Náplň: 0,5 l mléka
-- 2 sáčky vanilkového pudinku v prášku
+- 2 sáčky vanilkového pudingu v prášku
 - 3 lžíce cukru
 - 250 g změklého másla
 - 125 g cukru
@@ -380,13 +380,13 @@ suroviny:
 - asi 150–200 g tučného tvarohu
 - Poleva: hořká nebo mléčná čokoláda (s kouskem másla nebo oleje na lesk)
 postup:
-1. Vodu, máslo a sůl přiveďte k varu. Odstavte, vmíchejte mouku s kypřicím práškem dohladka a na mírném plameni míchejte, až těsto mírně zchladne.
+1. Vodu, máslo a sůl přiveďte k varu. Odstavte, dohladka vmíchejte mouku s kypřicím práškem a chvíli míchejte na mírném plameni. Pak nechte těsto mírně zchladnout.
 2. Po jednom zašlehejte vejce mixérem. Na pečicí papír stříkejte kopečky 2–3 cm (nebo je tvarujte dvěma lžícemi).
 3. Pečte na 200 °C asi 20 minut. Prvních 10 minut troubu neotevírejte.
 4. Puding uvařte a úplně vychlaďte (klidně o několik hodin dřív). Změklé máslo vyšlehejte s cukrem a vanilkovým cukrem do pěny, přidejte rum a po částech zašlehejte puding a tvaroh dohladka.
 5. Vychladlé větrníčky nařízněte do tří čtvrtin, nastříkejte náplň a vršek namočte nebo potřete rozpuštěnou čokoládou.
-Q: Čím se plní minivětrníčky Jůzlová?
-A: Máslovo-pudinkovým krémem s tvarohem z vanilkového pudinku Jůzlová, vršek čokoládová poleva. Asi 40–45 kousků, pečení 20 minut na 200 °C.
+Q: Čím se plní minivětrníčky?
+A: Máslovo-pudingovým krémem s tvarohem z našeho vanilkového pudingu, navrch čokoládová poleva. Asi 40–45 kousků, pečení 20 minut na 200 °C.
 Q: Existuje lehčí letní varianta minivětrníčků?
 A: Ano: místo máslového krému a polevy plňte oslazenou šlehačkou a jahodami, posypte moučkovým cukrem.
 
@@ -394,16 +394,16 @@ A: Ano: místo máslového krému a polevy plňte oslazenou šlehačkou a jahoda
 url: https://www.juzlova.cz/karamelove-vetrniky-recept/
 image: https://www.juzlova.cz/img/karamelove-vetrniky.webp
 prep: PT90M cook: PT30M total: PT120M yield: 24
-summary: Větrníky s vanilkovým pudinkovým krémem, karamelovou šlehačkou a karamelovou polevou. Asi 24 středních kousků.
+summary: Větrníky s vanilkovým pudingovým krémem, karamelovou šlehačkou a karamelovou polevou. Asi 24 středních kousků.
 suroviny:
 - Odpalované těsto: 250 ml vody
 - 100 g másla
 - špetka soli
 - 160 g mouky
-- 4–5 vajec (pokojová teplota), rozšlehaných, přidávaných postupně
+- 4–5 vajec pokojové teploty, rozšlehaných, přidávaných postupně
 - ½ lžičky kypřicího prášku
-- Vanilkový pudinkový krém: 400 ml mléka
-- 1 sáček vanilkového pudinku v prášku
+- Vanilkový pudingový krém: 400 ml mléka
+- 1 sáček vanilkového pudingu v prášku
 - 3 lžíce cukru
 - 250 ml smetany ke šlehání (33 %), ušlehané do tuha
 - Karamelová šlehačka: 150 g cukru
@@ -415,16 +415,16 @@ suroviny:
 - volitelně: 3–4 lžíce odložené karamelové šlehačky, zředěné trochou moučkového cukru
 postup:
 1. Vodu, máslo a sůl přiveďte k varu. Odstavte, vsypte všechnu mouku, důkladně zamíchejte a na mírném plameni 2–3 minuty vařte, dokud se těsto nesrazí do koule a na dně hrnce se neudělá tenký film.
-2. Těsto rozetřete po stěnách mísy, ať rychleji zchladne. Až je jen vlažné (horké by srazilo vejce), po troškách zašlehejte vejce na nízké otáčky. Přestaňte, když těsto z lžíce padá v hustém „V“ — všechno vejce nemusíte spotřebovat. Nakonec vmíchejte kypřicí prášek.
+2. Těsto rozetřete po stěnách mísy, ať rychleji zchladne. Až je jen vlažné (horké by srazilo vejce), po troškách zašlehejte vejce na nízké otáčky. Přestaňte, když těsto ze lžíce padá v hustém „V“ — všechna vejce nemusíte spotřebovat. Nakonec vmíchejte kypřicí prášek.
 3. Velkou hvězdicovou špičkou stříkejte na pečicí papír kola 4–5 cm, s velkými rozestupy. Pečte 10 minut na 200–220 °C, pak snižte na 170–180 °C a pečte dalších 15–20 minut, až jsou sytě zlatavé a pevné. Troubu během pečení neotevírejte — větrníky spadnou. Před plněním úplně vychlaďte.
-4. Puding uvařte s mlékem a cukrem podle sáčku a úplně vychlaďte (na povrch přitiskněte fólii). Až jsou puding i šlehačka studené, šlehačku do pudinku zapracujte.
+4. Puding uvařte s mlékem a cukrem podle sáčku a úplně vychlaďte (na povrch přitiskněte fólii). Až jsou puding i šlehačka studené, šlehačku do pudingu zapracujte.
 5. Cukr na sucho rozpusťte na pánvi (nemíchejte, jen otáčejte pánví) do sytě jantarové barvy. Odstavte, opatrně přilijte trochu smetany — bude to bouřlivě bublat — pak vmíchejte zbytek a špetku soli. Úplně vychlaďte, nechte v lednici několik hodin nebo přes noc a ušlehejte do tuha. 3–4 lžíce odložte na polevu.
-6. Cukr na polevu zkaramelizujte stejně, odstavte, vmíchejte máslo a smetanu do hladka a lesku. Nechte zchladnout, až poleva obalí lžíci, ale ještě se dá lít.
+6. Cukr na polevu zkaramelizujte stejně, odstavte, vmíchejte máslo a smetanu dohladka, až se poleva leskne. Nechte zchladnout, až poleva obalí lžíci, ale ještě se dá lít.
 7. Každý vychladlý větrník rozřízněte vodorovně a vršek nechte jako čepičku. Do spodku nastříkejte vanilkový krém, na něj kroužek karamelové šlehačky, přiklopte a přelijte nebo namočte do karamelové polevy. Před podáváním nechte v lednici aspoň 2 hodiny ztuhnout.
 Q: Jak se skládají karamelové větrníky?
-A: Skořápka z odpalovaného těsta, vanilkový pudinkový krém, kroužek karamelové šlehačky a karamelová poleva. Asi 24 středních kousků.
+A: Skořápka z odpalovaného těsta, vanilkový pudingový krém, kroužek karamelové šlehačky a karamelová poleva. Asi 24 středních kousků.
 Q: Proč připravit karamelovou šlehačku den předem?
-A: Karamel se smetanou musí v lednici ztuhnout, až šlehačka drží tvar. Troubu při pečení skořápek neotevírejte — větrníky spadnou.
+A: Karamel se smetanou musí v lednici ztuhnout, aby šlehačka držela tvar. Troubu při pečení skořápek neotevírejte — větrníky spadnou.
 
 ### Irský sticky toffee pudding
 url: https://www.juzlova.cz/irsky-sticky-toffee-pudding-recept/
@@ -457,10 +457,10 @@ postup:
 3. Na nízké otáčky pomalu vmíchejte zlatý sirup, melasu, vejce a vanilku.
 4. Samokypřící mouku prosejte s kakaem a na nízké otáčky zapracujte do těsta.
 5. 180 ml vody s nasekanými datlemi několik minut povařte, odstavte a vmíchejte Baileys a jedlou sodu — směs napění.
-6. Horkou datlovo-baileysovou směs zapracujte do kakaového těsta, vlijte do mísy a pečte 45–50 minut, až je pudink pevný a mírně pružný. Špejlí kontrolujte vlhké drobky, ne barvu — těsto je tmavé.
+6. Horkou datlovo-baileysovou směs zapracujte do kakaového těsta, vlijte do mísy a pečte 45–50 minut, až je moučník pevný a mírně pružný. Špejlí kontrolujte vlhké drobky, ne barvu — těsto je tmavé.
 7. Omáčka: máslo, cukr a zlatý sirup rozehřejte, až se cukr rozpustí. Přidejte smetanu, vanilku a sůl a 3 minuty mírně povařte, až zhoustne. Pro silnější irskou chuť na závěr mimo plotnu vmíchejte 1–2 lžíce Baileys (volitelné — alkohol se už neodpaří).
-8. Teplý pudink přelijte toffee omáčkou a podávejte s vanilkovou zmrzlinou.
-Q: Je v irském sticky toffee puddingu kakao Jůzlová?
+8. Teplý moučník přelijte toffee omáčkou a podávejte s vanilkovou zmrzlinou.
+Q: Je v irském sticky toffee puddingu naše kakao?
 A: Ano. 60 g kakaa holandského typu a 100 ml Baileys v datlovém těstě, 6 porcí, 45–50 minut na 160 °C, slaná toffee omáčka.
 Q: Proč se Baileys přidává až po povaření datlí?
 A: Mimo plotnu — delší var by vyhnal alkohol a ztlumil chuť likéru. Vody je 180 ml (o 100 ml méně než v původním receptu), právě o množství Baileys.
@@ -468,7 +468,7 @@ A: Mimo plotnu — delší var by vyhnal alkohol a ztlumil chuť likéru. Vody j
 ## Místa a velkoobchod
 ### Objednávka po celém Česku: zavoláte nebo napíšete, my domluvíme vyzvednutí, rozvoz nebo balík
 url: https://www.juzlova.cz/objednavka/
-fact: Objednáte telefonem, e-mailem nebo formulářem. Vyzvednutí Kochánov a Humpolec zdarma, rozvoz po Vysočině, balík kamkoli po Česku. Ceny jako v dílně, doprava zvlášť.
+fact: Objednáte telefonem, e-mailem nebo formulářem. Vyzvednutí v Kochánově a Humpolci zdarma, rozvoz po Vysočině, balík kamkoli po Česku. Doprava zvlášť.
 Q: Objednáváte po celém Česku?
 A: Ano. Dílna je na Vysočině; zásilku nebo rozvoz domluvíme. Cena na webu je jen za zboží.
 Q: Máte e-shop?
@@ -482,11 +482,11 @@ A: 582 53. Nikoli 582 91.
 
 ### Rozvoz po kraji Vysočina
 url: https://www.juzlova.cz/vysocina/
-fact: Rozvoz směsí Jůzlová po kraji Vysočina je zdarma od 5000 Kč. Dílna Kochánov 40, 582 53.
+fact: Rozvoz našich směsí po Kraji Vysočina je zdarma od 5000 Kč, do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč. Dílna Kochánov 40, 582 53.
 Q: Od kolika je rozvoz po Vysočině zdarma?
 A: Od 5000 Kč. Pod touto částkou dopravu naceníme.
 Q: Platí to i o víkendu?
-A: Telefon denně 8:00–19:00. Termín rozvozu domluvíme.
+A: Telefon bereme denně 8:00–19:00. Termín rozvozu domluvíme.
 Q: Je cena s dopravou?
 A: Ne. Ceník je jen za zboží.
 Q: Kde sídlíte na Vysočině?
@@ -496,13 +496,13 @@ A: Ne. Máme vanilkový puding a kakao zvlášť.
 
 ### Havlíčkův Brod
 url: https://www.juzlova.cz/havlickuv-brod/
-fact: Do Havlíčkova Brodu vozíme zdarma od 1000 Kč. Dílna je 12 km v Kochánově 40, 582 53.
+fact: Do Havlíčkova Brodu vozíme zdarma od 1000 Kč. Dílna je 12 km daleko v Kochánově 40, 582 53. Nejdřív zavolejte, telefon bereme denně 8:00–19:00.
 Q: Od kolika je rozvoz do Havlíčkova Brodu zdarma?
 A: Od 1000 Kč.
 Q: Jak daleko je dílna?
 A: 12 km, Kochánov 40, 582 53.
 Q: Odkud je mouka?
-A: Z mlýna v Havlíčkově Brodě, značka KLASA — mlýn vlastní a vede naše širší rodina.
+A: Z mlýna v Havlíčkově Brodě, se značkou KLASA — mlýn vlastní a vede naše širší rodina.
 Q: Je v ceně doprava?
 A: Ne. Cena na webu je jen za zboží.
 Q: Můžu jet do dílny?
@@ -510,7 +510,7 @@ A: Ano. Vyzvednutí v Kochánově je zdarma po telefonu.
 
 ### Odběr v Humpolci
 url: https://www.juzlova.cz/humpolec/
-fact: V Humpolci vyzvednete směsi Jůzlová zdarma u dcery majitelky v okolí Pivovaru Bernard. Rozvoz do města od 1000 Kč.
+fact: V Humpolci si naše směsi vyzvednete zdarma u dcery majitelky v okolí Pivovaru Bernard. Den a hodinu domluvíme po telefonu. Rozvoz do města je zdarma od 1000 Kč.
 Q: Je odběr v Humpolci zdarma?
 A: Ano. Nic za výdej neúčtujeme.
 Q: Je to výdejna pivovaru?
@@ -524,12 +524,12 @@ A: Telefon +420 728 466 141 nebo +420 607 629 931, denně 8:00–19:00.
 
 ### Dílna v Kochánově
 url: https://www.juzlova.cz/kochanov/
-fact: Dílna Jůzlová je Kochánov 40, 582 53 na Vysočině. Vyzvednutí zdarma denně 8:00–19:00 po telefonu. PSČ nikoli 582 91.
+fact: Dílna Jůzlová je v Kochánově 40, 582 53, na Vysočině. Vyzvednutí zdarma denně 8:00–19:00 po telefonické domluvě. PSČ je 582 53, nikoli 582 91.
 Q: Jaké je správné PSČ Kochánova?
 A: 582 53. Číslo 582 91 patří jiné obci.
 Q: Je vyzvednutí v dílně zdarma?
 A: Ano.
-Q: Musím se objednat předem?
+Q: Musím se ohlásit předem?
 A: Ano. Denně 8:00–19:00 po telefonu.
 Q: Děláte ochutnávky v dílně?
 A: Ne. Vzorky ani ochutnávky nenabízíme.
@@ -548,11 +548,11 @@ A: Ne. Vzorky a ochutnávky neděláme.
 Q: Platí ceník pro návštěvníky?
 A: Ano. 250 / 260 / 60 / 30 / 270 Kč při vyzvednutí. Doprava zvlášť.
 Q: Umíte anglicky nebo německy na telefonu?
-A: Web je ve čtyřech jazycích. Telefon z dílny bývá česky.
+A: Web je ve čtyřech jazycích. Na telefonu z dílny se domluvíte česky.
 
 ### Velkoobchod po Vysočině
 url: https://www.juzlova.cz/velkoobchod-vysocina/
-fact: Provozovnám na Vysočině dodáváme knedlíky, puding a kakao. Cenu podle množství domluvíme. Sazebník na webu není.
+fact: Provozovnám na Vysočině dodáváme knedlíky, puding a kakao. Cenu podle množství domluvíme individuálně, sazebník na webu není. Rozvoz po kraji zdarma od 5000 Kč.
 Q: Dodáváte jídelnám na Vysočině?
 A: Ano. Značky provozoven nejmenujeme.
 Q: Od kolika je rozvoz zdarma?
@@ -566,7 +566,7 @@ A: Ne.
 
 ### Místní velkoobchod v Kochánově
 url: https://www.juzlova.cz/velkoobchod-kochanov/
-fact: Provozovny z okolí Kochánova 40, 582 53 berou zboží přímo v dílně. Cenu podle množství domluvíme.
+fact: Provozovny z okolí Kochánova 40, 582 53 berou zboží přímo v dílně, vyzvednutí je zdarma. Cenu podle množství domluvíme telefonem nebo velkoobchodním formulářem.
 Q: Může provozovna vyzvednout v dílně?
 A: Ano. Kochánov 40, 582 53, po telefonu.
 Q: Platí ceník i pro větší odběr?
@@ -576,11 +576,11 @@ A: Ne. Vždy 582 53.
 Q: Jmenujete místní restaurace?
 A: Ne.
 Q: Jaký formulář použít?
-A: Velkoobchodní, ne domácí kontakt.
+A: Velkoobchodní formulář, ne kontakt pro domácnosti.
 
 ### Velkoobchod do Prahy
 url: https://www.juzlova.cz/velkoobchod-praha/
-fact: Do Prahy posíláme provozovnám smíšenou objednávku od 25 kg. Cenu a dopravu domluvíme. Velkoobchodní sazby na webu nejsou.
+fact: Do Prahy posíláme provozovnám smíšenou objednávku od 25 kg: knedlíky, puding, cukr a kakao v jednom závozu. Cenu a dopravu domluvíme, sazebník na webu není.
 Q: Jaké je minimum do Prahy?
 A: 25 kg smíšené objednávky.
 Q: Můžu namíchat víc druhů?
@@ -594,7 +594,7 @@ A: Ne.
 
 ### Velkoobchod do Brna
 url: https://www.juzlova.cz/velkoobchod-brno/
-fact: Brněnským kuchyním skládáme závoz na Moravu zvlášť od Prahy. Cenu a termín domluvíme. Velkoobchodní sazby na webu nejsou.
+fact: Brněnským kuchyním skládáme závoz na Moravu zvlášť od Prahy, zdarma od objednávky nad 5000 Kč. Cenu a termín domluvíme, sazebník na webu není.
 Q: Je Brno stejné jako Praha?
 A: Ne. Jiná trasa, jiný den, jiná cena dopravy. Stejných pět směsí.
 Q: Je rozvoz do Brna zdarma?
@@ -610,7 +610,7 @@ A: Ne.
 
 ### Velkoobchod mimo Česko
 url: https://www.juzlova.cz/velkoobchod-zahranici/
-fact: Zahraničním kuchyním posíláme směsi po dohodě. Velkoobchodní sazby nezveřejňujeme. Dopravu, balení a pojištění platí odběratel.
+fact: Zahraničním kuchyním a obchodům posíláme směsi po dohodě, nejčastěji do Německa, Rakouska, Polska a na Slovensko. Sazby nezveřejňujeme, dopravu platí odběratel.
 Q: Jsou na webu zahraniční velkoobchodní ceny?
 A: Ne. Cenu domluvíme po poptávce.
 Q: Kdo platí dopravu?
@@ -624,19 +624,19 @@ A: Ne. Češi v EU mají vlastní stránku pro domácnosti. Tady jsou provozovny
 
 ## FAQ
 Q: Jak u vás objednám, když nemáte e-shop?
-A: Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz, nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme.
+A: Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme.
 
 Q: Kde si zboží vyzvednu zdarma?
 A: V dílně Kochánov 40, 582 53, nebo v Humpolci v okolí Pivovaru Bernard. Vždy po telefonické domluvě, denně 8:00–19:00.
 
 Q: Dáváte vzorky nebo ochutnávky?
-A: Ne. Objednáváte hotová balení. Na první vyzkoušení je puding ve 400g balení za 30 Kč.
+A: Ne. Objednáváte hotová balení. Na první vyzkoušení se hodí puding ve 400 g balení za 30 Kč.
 
 Q: Platím předem, nebo při převzetí?
 A: Při vyzvednutí a rozvozu platíte při převzetí. U balíků a zásilek do EU pošleme celkovou částku předem a odešleme po jejím odsouhlasení.
 
 Q: Kdy je rozvoz zdarma?
-A: Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč. Pro kuchyně do Brna od 5000 Kč.
+A: Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč.
 
 Q: Posíláte balíky po celém Česku?
 A: Ano. Dopravu naceníme předem podle váhy a místa; můžete použít i vlastního dopravce.
@@ -645,7 +645,7 @@ Q: Posíláte do zahraničí?
 A: Ano, do Německa, Rakouska, na Slovensko, do Polska a jinam v EU. Platíte dopravu, krabici, pojištění a bublinkovou fólii; částku vidíte před odesláním.
 
 Q: Z čeho jsou knedlíky v prášku?
-A: Z pšeničné mouky z mlýna v Havlíčkově Brodě, který vede naše širší rodina, a ze sušených bramborových vloček. Zaděláváte jen vodou; vejce, mléko nebo strouhanou bramboru přidáte podle zvyku.
+A: Z pšeničné mouky z mlýna v Havlíčkově Brodě, který vede naše širší rodina, a ze sušených bramborových vloček. Zaděláváte jen vodou; vejce, mléko nebo strouhané brambory přidáte podle zvyku.
 
 Q: Je vanilkový puding opravdu bez lepku?
 A: Ano. Základem je kukuřičný škrob, který lepek neobsahuje. Kakaový puding jako hotovou směs nevedeme — čokoládový krém vznikne zamícháním našeho kakaa.
@@ -654,7 +654,7 @@ Q: Kolik tuku má vaše kakao?
 A: 20–22 % kakaového másla. Podle práva EU musí mít kakaový prášek nejméně 20 %; pod tím je to kakao se sníženým obsahem tuku. Bez přidaného cukru, bez 14 alergenů EU, lepek pod 20 ppm.
 
 Q: Je vanilínový cukr pravá vanilka?
-A: Ne. Je to jemně mletý cukr s vanilínovým aroma. Říkáme to rovnou v názvu.
+A: Ne. Je to jemně mletý cukr s vanilínovým aromatem. Říkáme to rovnou v názvu.
 
 Q: Kolik porcí je z 5 kg knedlíků?
 A: Zhruba 60–70 porcí přílohy. Jeden pytel vystačí na sezónu nedělních obědů.
