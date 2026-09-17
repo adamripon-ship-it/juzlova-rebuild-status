@@ -130,7 +130,7 @@ RECIPES = {
             '2 zakysané smetany',
             '1 smetana ke šlehání',
             '40 g vanilkového cukru',
-            '150 g čokoládového pudingu (3 balení)',
+            '150 g našeho vanilkového pudingu a 2 lžíce kakaa holandského typu',
             '1 litr mléka',
             'kakao holandského typu na posyp',
         ],

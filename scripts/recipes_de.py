@@ -130,7 +130,7 @@ RECIPES = {
             "2 Becher saure Sahne",
             "1 Becher Schlagsahne",
             "40 g Vanillinzucker",
-            "150 g Schokoladenpuddingpulver (3 Päckchen)",
+            "150 g unser Vanillepuddingpulver und 2 EL Kakaopulver holländischer Art",
             "1 Liter Milch",
             "Kakao holländischer Art zum Bestäuben",
         ],

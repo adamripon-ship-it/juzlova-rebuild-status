@@ -130,7 +130,7 @@ RECIPES = {
             "2 kyslé smotany",
             "1 smotana na šľahanie",
             "40 g vanilkového cukru",
-            "150 g čokoládového pudingu (3 balenia)",
+            "150 g nášho vanilkového pudingu a 2 lyžice kakaa holandského typu",
             "1 liter mlieka",
             "kakao holandského typu na posypanie",
         ],

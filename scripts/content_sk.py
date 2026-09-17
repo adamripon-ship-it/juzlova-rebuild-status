@@ -358,6 +358,7 @@ LANG = {
                 ("Sú chlpaté knedle a bosáky to isté?", "Áno, sú to dva názvy pre jedno jedlo."),
                 ("Dajú sa z toho robiť halušky?", "Áno; cesto pretlačíte cez cedník do vriacej vody. Recept na strapačky s kapustou a slaninou nájdete na našom webe."),
                 ("Máte menšie balenie ako 5 kg?", "Nie. 5 kg je jediné balenie."),
+                ("Dodávate jedálňam?", "Áno. Názvy prevádzok neuvádzame. Objednávka telefónom alebo veľkoobchodným formulárom."),
             ],
         },
         "vanilkovy_pudink": {

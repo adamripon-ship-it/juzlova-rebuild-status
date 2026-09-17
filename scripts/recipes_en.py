@@ -130,7 +130,7 @@ RECIPES = {
             '2 cartons sour cream',
             '1 carton whipping cream',
             '40 g vanilla sugar',
-            '150 g chocolate pudding powder (3 sachets)',
+            '150 g of our vanilla pudding powder and 2 tablespoons Dutch-process cocoa',
             '1 litre milk',
             'Dutch-process cocoa for dusting',
         ],

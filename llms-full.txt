@@ -69,6 +69,8 @@ Q: Dají se z toho dělat halušky?
 A: Ano; těsto protlačíte cedníkem do vroucí vody. Recept na strapačky se zelím a slaninou je na webu.
 Q: Máte menší balení než 5 kg?
 A: Ne. 5 kg je jediné balení.
+Q: Dodáváte jídelnám?
+A: Ano. Názvy provozoven neuvádíme. Objednávka telefonem nebo velkoobchodním formulářem.
 
 ### Vanilkový puding bez lepku
 url: https://www.juzlova.cz/vanilkovy-puding-bez-lepku/
@@ -191,7 +193,7 @@ suroviny:
 - 2 zakysané smetany
 - 1 smetana ke šlehání
 - 40 g vanilkového cukru
-- 150 g čokoládového pudingu (3 balení)
+- 150 g našeho vanilkového pudingu a 2 lžíce kakaa holandského typu
 - 1 litr mléka
 - kakao holandského typu na posyp
 postup:

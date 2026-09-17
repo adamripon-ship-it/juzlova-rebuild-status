@@ -359,6 +359,7 @@ LANG = {
                 ("Sind chlupaté knedlíky und bosáky dasselbe?", "Ja, zwei Namen für dasselbe Gericht."),
                 ("Kann ich daraus Halušky machen?", "Ja. Den Teig durch ein Sieb ins kochende Wasser drücken. Das Strapačky-Rezept finden Sie unter Rezepte."),
                 ("Gibt es eine kleinere Packung als 5 kg?", "Nein. 5 kg ist die einzige Packung."),
+                ("Beliefern Sie Kantinen?", "Ja. Die Namen der Betriebe nennen wir nicht. Bestellung per Telefon oder über das Großhandelsformular."),
             ],
         },
         "vanilkovy_pudink": {

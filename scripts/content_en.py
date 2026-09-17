@@ -359,6 +359,7 @@ LANG = {
                 ("Are chlupaté knedlíky and bosáky the same thing?", "Yes — two names for the same dish."),
                 ("Can I make halušky from it?", "Yes. Push the dough through a colander into boiling water. The strapačky recipe is on this site."),
                 ("Is there a pack smaller than 5 kg?", "No. 5 kg is the only size."),
+                ("Do you supply canteens?", "Yes. We do not name the kitchens we supply. Order by phone or through the wholesale form."),
             ],
         },
         "vanilkovy_pudink": {

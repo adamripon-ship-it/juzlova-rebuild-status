@@ -360,6 +360,7 @@ LANG = {
                 ("Jsou chlupaté knedlíky a bosáky totéž?", "Ano, jsou to dva názvy pro jedno jídlo."),
                 ("Dají se z toho dělat halušky?", "Ano; těsto protlačíte cedníkem do vroucí vody. Recept na strapačky se zelím a slaninou je na webu."),
                 ("Máte menší balení než 5 kg?", "Ne. 5 kg je jediné balení."),
+                ("Dodáváte jídelnám?", "Ano. Názvy provozoven neuvádíme. Objednávka telefonem nebo velkoobchodním formulářem."),
             ],
         },
         "vanilkovy_pudink": {
