@@ -142,7 +142,8 @@
     function show(i) {
       current = i;
       if (bar) bar.style.setProperty('--p', ((i + 1) / slides.length * 100).toFixed(1) + '%');
-      slides.forEach(function (s, n) { s.setAttribute('aria-hidden', n === i ? 'false' : 'true'); });
+      // off-screen slides leave the focus order and the accessibility tree; without script every slide stays usable
+      slides.forEach(function (s, n) { if (n === i) s.removeAttribute('inert'); else s.setAttribute('inert', ''); });
       objs.forEach(function (im, n) {
         if (n === i && im.dataset.src) { im.src = im.dataset.src; delete im.dataset.src; }
         im.classList.toggle('is-on', n === i);
@@ -161,6 +162,7 @@
       raf = requestAnimationFrame(function () { raf = 0; var n = nearest(); if (n !== current) show(n); });
     }, { passive: true });
     if ('onscrollend' in window) track.addEventListener('scrollend', function () { lockUntil = 0; var n = nearest(); if (n !== current) show(n); });
+    show(0);
     var prev = root.querySelector('[data-hero-prev]'), next = root.querySelector('[data-hero-next]');
     if (prev) prev.addEventListener('click', function () { go(current - 1); });
     if (next) next.addEventListener('click', function () { go(current + 1); });

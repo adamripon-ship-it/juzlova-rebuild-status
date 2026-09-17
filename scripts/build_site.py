@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917q"
+ASSET_VER = "20260917r"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -1498,7 +1498,7 @@ def build_home(L):
     for i, k in enumerate(HERO_ORDER):
         tag = "h1" if i == 0 else "h2"
         label = ui["hero_slide_of"].replace("{n}", str(i + 1)).replace("{total}", str(len(HERO_ORDER)))
-        slides += f"""<div class="slide" role="group" aria-roledescription="slide" aria-label="{esc(label)}"{'' if i == 0 else ' aria-hidden="true"'}>
+        slides += f"""<div class="slide" role="group" aria-roledescription="slide" aria-label="{esc(label)}">
       <{tag} class="display">{_h1_with_num(ui[f"slide_h1_{k}"])}<span class="h1-sub">{esc(ui[f"slide_sub_{k}"])}</span></{tag}>
       <p class="actions">
         <a class="btn white" href="{TEL_JIRINA}"><span>{esc(ui['hero_cta'])}</span>{ARROW}</a>
