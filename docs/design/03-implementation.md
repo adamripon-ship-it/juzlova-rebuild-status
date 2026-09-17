@@ -53,3 +53,17 @@ Captures in `qa/` (headless Chrome, `?static=1`, halved for the repo):
 | Sitemaps, redirects, robots | Changed only by `lastmod`; redirect rules identical |
 
 Defects found and fixed before the commit: the external sprite lacked an `<svg>` root (every `<use>` failed silently); article heading rules outranked component headings (fixed with `:where()`); rotated art lost its rotation under parallax (`data-rotate`); phone hero accents collided with the tagline and the pause button (hidden below 700 px).
+
+**Production, 2026-09-17** — commit `6eb67df` pushed to GitHub (build-check green) and deployed by hand to Cloud Run `juzlova-web`, europe-west4, revision `juzlova-web-00045-kgn` (the GitHub deploy job still skips: `GCP_SA_KEY` / `GCP_PROJECT` are not set).
+
+| Live check | Result |
+|---|---|
+| Statuses | `/`, `/en/`, `/de/`, `/sk/`, price list, product, recipe index, FAQ, sitemaps, robots, llms.txt, llms-full.txt, CSS, JS, sprite, fonts, cut-outs, product photos: all 200 with `charset=utf-8` |
+| Redirects | `/en/bramborove_knedliky/` → 301 → `/en/potato-dumpling-mix/`; `/bramborove_knedliky/` → 301 → `/bramborove-knedliky-v-prasku/` |
+| Headers | `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, HSTS on every response; fonts `max-age=31536000, immutable` |
+| Home HTML | `site.css?v=20260917a`; hreflang cs-CZ, sk-SK, de-DE, de-AT, en, x-default; JSON-LD Organization/LocalBusiness/FoodManufacturer, WebSite, WebPage, ItemList with five Products and Offers; three inline masks; 12 marquee links; none of the banned words |
+| Cocoa page | Six FAQ entries, origin capsule, flower figure; `llms-full.txt` carries the origin line |
+| Rendering | Real Chrome on the live host: Fraunces and Geologica loaded, all sprite `<use>` elements have a bounding box, 11 leaves attached to vines; captures `qa/2026-09-17-live-*.png` |
+| Lighthouse (home, `qa/2026-09-17-lighthouse-*.json`) | Desktop 98 / 100 / 100 / 100, LCP 1.0 s, CLS 0. Mobile 90 / 100 / 100 / 100, LCP 3.7 s, CLS 0.014 (performance, accessibility, best practices, SEO) |
+
+Follow-ups, not blocking: a lighter phone-size variant of the hero cut-out would pull the mobile LCP under 2.5 s; `http://juzlova.cz/` still takes two hops (Cloudflare 302 to https, then nginx 301 to www), which is a Cloudflare rule the owner controls; the language switcher's `aria-label` (full language name) differs from its visible text (code), flagged by Lighthouse as informative.
