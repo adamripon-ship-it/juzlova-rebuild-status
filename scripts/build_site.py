@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917t"
+ASSET_VER = "20260917u"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -1515,7 +1515,9 @@ def build_home(L):
         sizes = "(max-width: 1100px) min(300px, 60vw), 23vw"
         if i == 0:
             objs += (f'<img class="is-on" src="{src}" srcset="{sset}" sizes="{sizes}" alt="{esc(alt)}" width="{w}" height="{h}" '
-                     f'fetchpriority="high" decoding="async">')
+                     f'fetchpriority="high">')
+            hero_preload = (f'<link rel="preload" as="image" href="{src}" imagesrcset="{sset}" imagesizes="{sizes}" '
+                            f'fetchpriority="high">\n')
         else:
             objs += f'<img data-src="{src}" data-srcset="{sset}" sizes="{sizes}" alt="{esc(alt)}" width="{w}" height="{h}" decoding="async">'
     prev_arrow = '<svg viewBox="0 0 34 14" aria-hidden="true"><path d="M34,7 H3 M9,1 l-6,6 6,6"/></svg>'
@@ -1675,7 +1677,7 @@ def build_home(L):
 </main>"""
     html_out = shell(L, title=L["meta"]["home_title"], desc=L["meta"]["home_desc"],
                      pid="home", depth=depth, active="home", body=body,
-                     keywords=keywords_for(lg, "home"), meta_kind="home",
+                     keywords=keywords_for(lg, "home"), meta_kind="home", extra_head=hero_preload,
                      defs=defs_html(("m-cocoa", "m-vanilla", "m-potato"), sticker=True),
                      jsonld=[
                          {
