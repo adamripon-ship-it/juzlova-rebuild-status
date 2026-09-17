@@ -44,6 +44,8 @@
       g.appendChild(use); svg.appendChild(g);
     }
   }
+  // Below-the-fold decoration and the video wiring run when the main thread is idle, so the hero paints first.
+  function lateDecor() {
   document.querySelectorAll('path[data-vine]').forEach(attachLeaves);
 
   /* ── wind: every swaying element gets its own period and phase ── */
@@ -58,10 +60,12 @@
     try { p.style.setProperty('--len', p.getTotalLength().toFixed(0)); } catch (e) {}
   });
 
+  }
+
   /* ── moving photos: the same picture, animated, inside the outline.
      Desktop: plays while the card is hovered. Touch: plays once when the card is centred/in view.
      Off for reduced motion, captures and data-saver; clips load only when first needed. ── */
-  (function () {
+  function lateVideos() {
     var saveData = navigator.connection && navigator.connection.saveData;
     if (reduced || saveData) return;
     var canHover = matchMedia('(hover: hover)').matches;
@@ -131,7 +135,7 @@
       }, { threshold: [0, 0.5] });
       loose.forEach(function (v) { io.observe(shapeOf(v)); });
     }
-  })();
+  }
 
   /* ── hero product slides: the track is a native scroll-snap row; script adds arrows, progress line,
      the matching cut-out, keyboard, and aria state. No autoplay. ── */
@@ -184,8 +188,8 @@
       } catch (e) {}
     });
   }
-  sizeRings();
-  addEventListener('resize', sizeRings);
+  var idle = window.requestIdleCallback || function (f) { return setTimeout(f, 200); };
+  idle(function () { lateDecor(); lateVideos(); sizeRings(); addEventListener('resize', sizeRings); }, { timeout: 2000 });
 
   /* ── count-up numerals: from data-from (or 0) to data-count, 1.4 s, ease-out quart ── */
   function easeOutQuart(x) { return 1 - Math.pow(1 - x, 4); }
