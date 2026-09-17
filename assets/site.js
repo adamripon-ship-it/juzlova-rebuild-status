@@ -53,6 +53,20 @@
     try { p.style.setProperty('--len', p.getTotalLength().toFixed(0)); } catch (e) {}
   });
 
+  /* ── hover lens rings: dash length = the outline's on-screen length (non-scaling stroke measures in px) ── */
+  function sizeRings() {
+    document.querySelectorAll('.ring use').forEach(function (u) {
+      var id = (u.getAttribute('href') || '').slice(1), path = id && document.getElementById(id), box = u.closest('.ring');
+      if (!path || !box) return;
+      try {
+        var r = box.getBoundingClientRect(), len = path.getTotalLength() * (r.width + r.height) / 2 * 1.08;
+        box.style.setProperty('--len', len.toFixed(0));
+      } catch (e) {}
+    });
+  }
+  sizeRings();
+  addEventListener('resize', sizeRings);
+
   /* ── count-up numerals: from data-from (or 0) to data-count, 1.4 s, ease-out quart ── */
   function easeOutQuart(x) { return 1 - Math.pow(1 - x, 4); }
   function countUp(el) {

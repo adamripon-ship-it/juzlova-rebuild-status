@@ -326,7 +326,10 @@ def shape_html(obj, img, alt, href=None, style="", width=1200, height=900):
     """A photo cut to a product outline. Real <img> so it stays indexable."""
     st = f' style="{esc(style)}"' if style else ""
     tag = (f'<span class="shape {obj}"{st}><img src="{img}" alt="{esc(alt)}" width="{width}" height="{height}" '
-           f'loading="lazy" decoding="async"></span>')
+           f'loading="lazy" decoding="async"></span>'
+           # hover "lens": a gold hand-drawn line of the same outline draws itself around the photo
+           f'<svg class="ring" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
+           f'<use href="#mp-{obj}"/></svg>')
     if href:
         return f'<a class="shape-link lift" href="{href}">{tag}</a>'
     return f'<span class="lift">{tag}</span>'
