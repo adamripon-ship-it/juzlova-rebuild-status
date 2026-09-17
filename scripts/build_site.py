@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917r"
+ASSET_VER = "20260917s"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -1510,10 +1510,14 @@ def build_home(L):
         name, w, h = HERO_CUTOUT[k]
         src = f"{assets}assets/botanicals/cutouts/{name}.webp"
         alt = ui.get(f"alt_{name.replace('-', '_')}", L["products"][k]["name"])
+        small = src[:-5] + "-640.webp"
+        sset = f'{small} 640w, {src} 1200w'
+        sizes = "(max-width: 1100px) min(300px, 60vw), 23vw"
         if i == 0:
-            objs += f'<img class="is-on" src="{src}" alt="{esc(alt)}" width="{w}" height="{h}" fetchpriority="high" decoding="async">'
+            objs += (f'<img class="is-on" src="{src}" srcset="{sset}" sizes="{sizes}" alt="{esc(alt)}" width="{w}" height="{h}" '
+                     f'fetchpriority="high" decoding="async">')
         else:
-            objs += f'<img data-src="{src}" alt="{esc(alt)}" width="{w}" height="{h}" decoding="async">'
+            objs += f'<img data-src="{src}" data-srcset="{sset}" sizes="{sizes}" alt="{esc(alt)}" width="{w}" height="{h}" decoding="async">'
     prev_arrow = '<svg viewBox="0 0 34 14" aria-hidden="true"><path d="M34,7 H3 M9,1 l-6,6 6,6"/></svg>'
     next_arrow = '<svg viewBox="0 0 34 14" aria-hidden="true"><path d="M0,7 H31 M25,1 l6,6 -6,6"/></svg>'
     hero = f"""<section class="band gold hero">

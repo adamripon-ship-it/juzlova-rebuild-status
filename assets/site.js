@@ -145,7 +145,7 @@
       // off-screen slides leave the focus order and the accessibility tree; without script every slide stays usable
       slides.forEach(function (s, n) { if (n === i) s.removeAttribute('inert'); else s.setAttribute('inert', ''); });
       objs.forEach(function (im, n) {
-        if (n === i && im.dataset.src) { im.src = im.dataset.src; delete im.dataset.src; }
+        if (n === i && im.dataset.src) { if (im.dataset.srcset) { im.srcset = im.dataset.srcset; delete im.dataset.srcset; } im.src = im.dataset.src; delete im.dataset.src; }
         im.classList.toggle('is-on', n === i);
       });
     }
