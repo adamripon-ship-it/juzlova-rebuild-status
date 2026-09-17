@@ -211,7 +211,10 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
 
 /* product-shaped photo masks (outer outline of the generated silhouettes) */
 .shape { display: block; position: relative; aspect-ratio: 4/3; overflow: hidden; }
-.shape img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); transform: scale(var(--zoom, 1)); transform-origin: var(--pos, 50% 50%); display: block; }
+.shape img, .shape video { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); transform: scale(var(--zoom, 1)); transform-origin: var(--pos, 50% 50%); display: block; }
+/* the moving version of the same photo sits over the still and fades in while it plays */
+.shape video { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity .7s var(--ease); }
+.shape.is-playing video { opacity: 1; }
 .shape.potato { clip-path: url(#m-potato); --zoom: 1.1; }
 .shape.wheat { clip-path: url(#m-wheat); --zoom: 1.2; }
 .shape.cocoa { clip-path: url(#m-cocoa); --zoom: 1.18; --pos: 38% 46%; }
@@ -231,7 +234,7 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
 .caption a:hover, figure:hover .caption a, figure:focus-within .caption a { background-size: 100% 2px; }
 @media (hover: hover) {
   .shape-link:hover .shape, .shape-link:focus-visible .shape, .obj-panel:hover .shape { transform: scale(1.06); transition-duration: .9s; }
-  .shape-link:hover .shape img, .shape-link:focus-visible .shape img, .obj-panel:hover .shape img { transform: scale(var(--zoom-open, 1)) rotate(-2.5deg); transition-duration: .9s; }
+  .shape-link:hover .shape img, .shape-link:focus-visible .shape img, .obj-panel:hover .shape img, .shape-link:hover .shape video, .shape-link:focus-visible .shape video, .obj-panel:hover .shape video { transform: scale(var(--zoom-open, 1)) rotate(-2.5deg); transition-duration: .9s; }
   .shape-link:hover .ring, .shape-link:focus-visible .ring, .obj-panel:hover .ring { opacity: 1; transform: scale(1.08) rotate(0deg); transition-duration: .5s, .9s; }
   .shape-link:hover .ring use, .shape-link:focus-visible .ring use, .obj-panel:hover .ring use { stroke-dashoffset: 0; transition-duration: 1.1s; }
 }
@@ -241,7 +244,8 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
 @media (prefers-reduced-motion: reduce) {
   .lift .shape, .shape img, .ring, .ring use, .caption a { transition: none; }
   .shape-link:hover .shape, .shape-link:focus-visible .shape, .obj-panel:hover .shape { transform: none; }
-  .shape-link:hover .shape img, .shape-link:focus-visible .shape img, .obj-panel:hover .shape img { transform: scale(var(--zoom, 1)); }
+  .shape-link:hover .shape img, .shape-link:focus-visible .shape img, .obj-panel:hover .shape img, .shape-link:hover .shape video, .obj-panel:hover .shape video { transform: scale(var(--zoom, 1)); }
+  .shape video { display: none; }
   .shape-link:hover .ring, .shape-link:focus-visible .ring, .obj-panel:hover .ring { transform: none; }
   .ring use { stroke-dashoffset: 0; }
 }

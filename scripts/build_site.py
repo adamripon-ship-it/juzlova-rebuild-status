@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917g"
+ASSET_VER = "20260917k"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -271,6 +271,22 @@ PRODUCT_OBJECT = {
 # cut with the solid forms of the same plants (tied sheaf, cut cane bundle).
 PRODUCT_MASK = {**PRODUCT_OBJECT, "chlupate_knedliky": "sheaf", "vanilkovy_cukr": "cane"}
 PRODUCT_MASK_STYLE = {}
+# Moving version of the same photo (image-to-video from the still), shown inside
+# the outline on hover (desktop) or when the card is centred (phone shelf).
+VIDEO_DIR = ROOT / "assets" / "video"
+PRODUCT_VIDEO = {
+    "kakao_holandskeho_typu": "kakao", "vanilkovy_pudink": "puding", "bramborove_knedliky": "bramborove",
+    "chlupate_knedliky": "chlupate", "vanilkovy_cukr": "cukr",
+}
+RECIPE_VIDEO = {"sisky-s-makem-recept": "sisky", "strapacky-se-zelim-a-slaninou-recept": "strapacky",
+                "hruskovy-kolac-s-vanilkovym-pudinkem-recept": "hruskovy-kolac"}
+
+
+def video_src(depth, name):
+    """Relative URL of a clip if it has been produced, else None."""
+    if name and (VIDEO_DIR / f"{name}.mp4").is_file():
+        return f"{asset_rel(depth)}assets/video/{name}.mp4?v={ASSET_VER}"
+    return None
 # One external sprite for the white silhouettes (cached across pages); the
 # photo masks must live in the page, so each page inlines only the ones it uses.
 SPRITE_FILE = ROOT / "assets" / "botanicals" / "sprite.svg"
@@ -328,15 +344,17 @@ def sil(depth, symbol, style, cls="art", speed=None, rotate=None, origin=None):
             f'<use href="{sprite_href(depth)}#{symbol}"/></svg>')
 
 
-def shape_html(obj, img, alt, href=None, style="", width=1200, height=900, caption=None, cls=""):
+def shape_html(obj, img, alt, href=None, style="", width=1200, height=900, caption=None, cls="", video=None):
     """A photo cut to a product outline. Real <img> so it stays indexable.
 
     With a caption the whole card is one link: shadowed shape + ring, then the
     caption outside the shadow (the phone shelf shows it, desktop hides it).
     """
     st = f' style="{esc(style)}"' if style else ""
-    tag = (f'<span class="shape {obj}"{st}><img src="{img}" alt="{esc(alt)}" width="{width}" height="{height}" '
-           f'loading="lazy" decoding="async"></span>'
+    vid = (f'<video class="shape-video" src="{video}" muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>'
+           if video else "")
+    tag = (f'<span class="shape {obj}{" has-video" if video else ""}"{st}><img src="{img}" alt="{esc(alt)}" width="{width}" height="{height}" '
+           f'loading="lazy" decoding="async">{vid}</span>'
            # hover "lens": a gold hand-drawn line of the same outline draws itself around the photo
            f'<svg class="ring" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
            f'<use href="#mp-{obj}"/></svg>')
@@ -1499,7 +1517,7 @@ def build_home(L):
     # illustration between the numerals) and the whole shelf on phones.
     stack = "".join(
         shape_html(PRODUCT_MASK[k], pimg(k), L["products"][k]["name"], href=f"{pages}{slug_of(lg, k)}/",
-                   style=PRODUCT_MASK_STYLE.get(k, ""), caption=f'{esc(L["products"][k]["name"])}<b>{esc(L["products"][k]["price"])}</b>',
+                   style=PRODUCT_MASK_STYLE.get(k, ""), video=video_src(depth, PRODUCT_VIDEO.get(k)), caption=f'{esc(L["products"][k]["name"])}<b>{esc(L["products"][k]["price"])}</b>',
                    cls=f"p-{PRODUCT_OBJECT[k]}")
         for k in PRODUCT_SLUGS if pimg(k))
     prod_links = "".join(
@@ -1563,7 +1581,7 @@ def build_home(L):
             continue
         obj, st = rec_masks[slug]
         href = f"{pages}{slug_of(lg, slug)}/"
-        figs += (f'<figure class="rv">{shape_html(obj, im, r["name"], href=href, style=st)}'
+        figs += (f'<figure class="rv">{shape_html(obj, im, r["name"], href=href, style=st, video=video_src(depth, RECIPE_VIDEO.get(slug)))}'
                  f'<figcaption class="caption"><a href="{href}">{esc(r["name"])}</a></figcaption></figure>')
     recipes = f"""<section class="band recipes">
   <div class="wrap">
@@ -1699,7 +1717,8 @@ def build_product(L, key):
     im = product_img_src(depth, key)
     obj = PRODUCT_OBJECT[key]
     panel = (f'<div class="obj-panel rv">{sil(depth, "sil-" + obj, "", cls="art")}'
-             + (shape_html(PRODUCT_MASK[key], im, f'{pr["name"]} — Jůzlová', style=PRODUCT_MASK_STYLE.get(key, "")) if im else "") + "</div>")
+             + (shape_html(PRODUCT_MASK[key], im, f'{pr["name"]} — Jůzlová', style=PRODUCT_MASK_STYLE.get(key, ""),
+                           video=video_src(depth, PRODUCT_VIDEO.get(key))) if im else "") + "</div>")
     body_blocks = list(pr["body"])
     flower = ""
     if key == "kakao_holandskeho_typu":

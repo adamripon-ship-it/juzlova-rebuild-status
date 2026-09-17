@@ -58,6 +58,81 @@
     try { p.style.setProperty('--len', p.getTotalLength().toFixed(0)); } catch (e) {}
   });
 
+  /* ── moving photos: the same picture, animated, inside the outline.
+     Desktop: plays while the card is hovered. Touch: plays once when the card is centred/in view.
+     Off for reduced motion, captures and data-saver; clips load only when first needed. ── */
+  (function () {
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (reduced || saveData) return;
+    var canHover = matchMedia('(hover: hover)').matches;
+    var videos = [].slice.call(document.querySelectorAll('.shape video'));
+    if (!videos.length) return;
+    function shapeOf(v) { return v.closest('.shape'); }
+    function start(v, loop) {
+      v.loop = !!loop;
+      if (v.preload === 'none') v.preload = 'auto';
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+      shapeOf(v).classList.add('is-playing');
+    }
+    function stop(v) {
+      shapeOf(v).classList.remove('is-playing');
+      setTimeout(function () { if (!shapeOf(v).classList.contains('is-playing')) { v.pause(); try { v.currentTime = 0; } catch (e) {} } }, 700);
+    }
+    videos.forEach(function (v) {
+      v.addEventListener('ended', function () { stop(v); });
+      var host = v.closest('.shape-link') || v.closest('.obj-panel') || shapeOf(v);
+      if (canHover) {
+        host.addEventListener('mouseenter', function () { start(v, true); });
+        host.addEventListener('mouseleave', function () { stop(v); });
+        host.addEventListener('focusin', function () { start(v, true); });
+        host.addEventListener('focusout', function () { stop(v); });
+      }
+    });
+    // Touch (and the product panel on any device): play once when the card is the one in view.
+    // Inside the phone shelf the centred card wins (thresholds alone are unreliable during snap scrolling).
+    function playOnce(v) { if (!v.dataset.played) { v.dataset.played = '1'; start(v, false); } }
+    function reset(v) { stop(v); v.dataset.played = ''; }
+    function centred(stack) {
+      var r = stack.getBoundingClientRect(), cx = r.left + r.width / 2, best = null, bd = 1e9;
+      stack.querySelectorAll('.shape video').forEach(function (v) {
+        var b = shapeOf(v).getBoundingClientRect(), d = Math.abs(b.left + b.width / 2 - cx);
+        if (d < bd) { bd = d; best = v; }
+      });
+      return best;
+    }
+    if ('IntersectionObserver' in window) {
+      var stacks = [].slice.call(document.querySelectorAll('.stack'));
+      stacks.forEach(function (stack) {
+        var inView = false, timer = 0;
+        function update() {
+          if (!inView || canHover) return;
+          var best = centred(stack);
+          stack.querySelectorAll('.shape video').forEach(function (v) { if (v !== best) reset(v); });
+          if (best) playOnce(best);
+        }
+        new IntersectionObserver(function (es) {
+          inView = es[0].isIntersecting && es[0].intersectionRatio >= 0.5;
+          if (!inView) stack.querySelectorAll('.shape video').forEach(reset); else update();
+        }, { threshold: [0, 0.5] }).observe(stack);
+        stack.addEventListener('scroll', function () { clearTimeout(timer); timer = setTimeout(update, 150); }, { passive: true });
+      });
+      var loose = videos.filter(function (v) { return !v.closest('.stack'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target.querySelector('video');
+          if (!v) return;
+          var inPanel = !!v.closest('.obj-panel');
+          if (!canHover || inPanel) {
+            if (e.isIntersecting && e.intersectionRatio >= 0.5) playOnce(v);
+            else if (!e.isIntersecting) reset(v);
+          }
+        });
+      }, { threshold: [0, 0.5] });
+      loose.forEach(function (v) { io.observe(shapeOf(v)); });
+    }
+  })();
+
   /* ── hover lens rings: dash length = the outline's on-screen length (non-scaling stroke measures in px) ── */
   function sizeRings() {
     document.querySelectorAll('.ring use').forEach(function (u) {

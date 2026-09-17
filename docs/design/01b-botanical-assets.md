@@ -99,3 +99,18 @@ Higgsfield-generated assets belong to the account holder under Higgsfield's
 terms; keep the job ids above as provenance. The photoreal cut-outs are
 decorative objects, not product photography, so the "photos stay whole" rule
 in `01-brand-identity.md` §5 is not affected.
+
+## Moving photos (2026-09-17, Seedance 2.5 image-to-video)
+
+Each product and home-recipe photo has a five-second moving version generated from the exact still (`mode=omni_reference`, start image = the photo, 720p, no audio, locked camera, only the subject moves: cocoa haze, flour dust, steam, a pudding wobble, trickling sugar, drifting icing sugar). Encoded with ffmpeg to H.264, 720 px wide, CRF 28, 80–140 KB each, in `assets/video/`. Shown inside the product outline on hover (desktop) or when the card is centred (phone shelf) or in view (product panel); see `03-implementation.md`.
+
+| clip | photo | job |
+|---|---|---|
+| kakao | produkt-kakao | 402d59ed |
+| puding | produkt-vanilkovy-puding | 2c6e4cef |
+| bramborove | produkt-bramborove-knedliky | de4d82ab |
+| chlupate | produkt-chlupate-knedliky | d79b09a1 |
+| cukr | vanilkovy-cukr-kilo (gpt_image_2_5 job 777e1579) | 3f2ca9b3 |
+| sisky | sisky-s-makem | f2115023 |
+| strapacky | strapacky | 2cd5cd18 |
+| hruskovy-kolac | hruskovy-kolac | 7848fd2d |
