@@ -7,10 +7,12 @@ name: Deploy to Cloud Run
 # did not ship it. The price correction in #24 sat on main for an hour while
 # the site still quoted the 2017 prices.
 #
-# Required repository secrets:
-#   GCP_SA_KEY   — service account JSON with Cloud Run Admin, Service Account
-#                  User, and Cloud Build Editor (--source builds with Cloud Build)
-#   GCP_PROJECT  — the Google Cloud project id
+# Keyless auth (Workload Identity Federation): GitHub's OIDC token is exchanged
+# for the deploy service account; no JSON key exists anywhere. Repository
+# variables (not secrets, none of these are sensitive):
+#   GCP_PROJECT        — the Google Cloud project id
+#   GCP_WIF_PROVIDER   — projects/<number>/locations/global/workloadIdentityPools/github/providers/github-oidc
+#   GCP_DEPLOY_SA      — github-deploy@<project>.iam.gserviceaccount.com
 #
 # Without them the job stops at the first step and says so loudly, rather than
 # reporting a green tick for a deploy that never happened.
@@ -28,6 +30,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    permissions:
+      contents: read
+      id-token: write
     env:
       SERVICE: juzlova-web
       REGION: europe-west4
@@ -37,11 +42,11 @@ jobs:
       - name: Check credentials
         id: creds
         run: |
-          if [ -n "${{ secrets.GCP_SA_KEY }}" ] && [ -n "${{ secrets.GCP_PROJECT }}" ]; then
+          if [ -n "${{ vars.GCP_WIF_PROVIDER }}" ] && [ -n "${{ vars.GCP_DEPLOY_SA }}" ] && [ -n "${{ vars.GCP_PROJECT }}" ]; then
             echo "ok=true" >> "$GITHUB_OUTPUT"
           else
             echo "ok=false" >> "$GITHUB_OUTPUT"
-            echo "::warning title=Not deployed::GCP_SA_KEY and GCP_PROJECT are not set, so www.juzlova.cz still serves the previous revision. Anything merged since the last manual deploy is NOT live."
+            echo "::warning title=Not deployed::GCP_WIF_PROVIDER, GCP_DEPLOY_SA and GCP_PROJECT variables are not set, so www.juzlova.cz still serves the previous revision. Anything merged since the last manual deploy is NOT live."
           fi
 
       - uses: actions/setup-python@v5
@@ -62,7 +67,8 @@ jobs:
       - uses: google-github-actions/auth@v2
         if: steps.creds.outputs.ok == 'true'
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOY_SA }}
 
       - uses: google-github-actions/setup-gcloud@v2
         if: steps.creds.outputs.ok == 'true'
@@ -70,7 +76,7 @@ jobs:
       - name: Deploy
         if: steps.creds.outputs.ok == 'true'
         run: |
-          gcloud config set project "${{ secrets.GCP_PROJECT }}"
+          gcloud config set project "${{ vars.GCP_PROJECT }}"
           # --source builds the repo Dockerfile with Cloud Build. Existing
           # service settings (env vars, service account, the ratings bucket)
           # are preserved; only the image changes.
