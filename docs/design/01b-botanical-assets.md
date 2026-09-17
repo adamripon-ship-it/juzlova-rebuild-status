@@ -114,3 +114,5 @@ Each product and home-recipe photo has a five-second moving version generated fr
 | sisky | sisky-s-makem | f2115023 |
 | strapacky | strapacky | 2cd5cd18 |
 | hruskovy-kolac | hruskovy-kolac | 7848fd2d |
+
+Cut-out added 2026-09-17: **potato** (two potatoes with a potato-plant sprig; gpt_image_2_5 job 6452cf3a → background removal 31faeb76), used as the hero object of the potato-dumpling slide.
