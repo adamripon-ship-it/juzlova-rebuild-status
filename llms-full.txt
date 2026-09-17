@@ -22,7 +22,7 @@ delivery_free_jihlava: nad 3000 Kč (Jihlava)
 eu_shipping: DE/AT/SK/PL a Češi v EU — dopravu, balení a pojištění platí zákazník
 b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; cena podle množství; bez jmen zákazníků
 newsletter: přihláška na webu; nové recepty občas a sezónní tipy před Vánoci a Velikonocemi
-price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo, ne za sáček
+price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo
 local_share: cca 90 % zakázek kolem Kochánova 40, 582 53
 area_served: Kochánov; Havlíčkův Brod; kraj Vysočina
 samples: žádné
@@ -79,7 +79,7 @@ price_czk: 60 Kč / 30 Kč
 fact: Základ je kukuřičný škrob, který lepek neobsahuje. Vaříte ho jako každý puding; do krému na věnečky, do hruškového koláče, do hrníčkového perníku.
 detail: Vanilkový puding z kukuřičného škrobu bez lepku. Kilo vystačí asi na 25 pudingů nebo krém na věnečky a větrníky. 1 kg / 60 Kč, 400 g / 30 Kč, Kochánov a Humpolec.
 Q: Lze puding použít místo pudingu z obchodu 1 : 1?
-A: Ano. Zhruba 40 g na 500 ml mléka, jako běžný sáček.
+A: Ano. Zhruba 40 g na 500 ml mléka.
 Q: Vydrží otevřený kilový pytlík?
 A: Ano, v suchu a zavřený. Na první vyzkoušení je 400 g balení za 30 Kč.
 Q: Vyrábíte i čokoládovou variantu?
@@ -313,7 +313,7 @@ suroviny:
 - 235 g mouky
 - 4–5 vajec, přidávaných postupně
 - Vanilkový máslový krém: 500 ml mléka
-- 2 sáčky vanilkového pudingu v prášku
+- 80 g našeho vanilkového pudingu v prášku
 - 5 žloutků
 - 150 g cukru
 - 250 g změklého másla
@@ -373,7 +373,7 @@ suroviny:
 - 1 lžička kypřicího prášku
 - 4 vejce
 - Náplň: 0,5 l mléka
-- 2 sáčky vanilkového pudingu v prášku
+- 80 g našeho vanilkového pudingu v prášku
 - 3 lžíce cukru
 - 250 g změklého másla
 - 125 g cukru
@@ -405,7 +405,7 @@ suroviny:
 - 4–5 vajec pokojové teploty, rozšlehaných, přidávaných postupně
 - ½ lžičky kypřicího prášku
 - Vanilkový pudingový krém: 400 ml mléka
-- 1 sáček vanilkového pudingu v prášku
+- 40 g našeho vanilkového pudingu v prášku
 - 3 lžíce cukru
 - 250 ml smetany ke šlehání (33 %), ušlehané do tuha
 - Karamelová šlehačka: 150 g cukru
@@ -419,7 +419,7 @@ postup:
 1. Vodu, máslo a sůl přiveďte k varu. Odstavte, vsypte všechnu mouku, důkladně zamíchejte a na mírném plameni 2–3 minuty vařte, dokud se těsto nesrazí do koule a na dně hrnce se neudělá tenký film.
 2. Těsto rozetřete po stěnách mísy, ať rychleji zchladne. Až je jen vlažné (horké by srazilo vejce), po troškách zašlehejte vejce na nízké otáčky. Přestaňte, když těsto ze lžíce padá v hustém „V“ — všechna vejce nemusíte spotřebovat. Nakonec vmíchejte kypřicí prášek.
 3. Velkou hvězdicovou špičkou stříkejte na pečicí papír kola 4–5 cm, s velkými rozestupy. Pečte 10 minut na 200–220 °C, pak snižte na 170–180 °C a pečte dalších 15–20 minut, až jsou sytě zlatavé a pevné. Troubu během pečení neotevírejte — větrníky spadnou. Před plněním úplně vychlaďte.
-4. Puding uvařte s mlékem a cukrem podle sáčku a úplně vychlaďte (na povrch přitiskněte fólii). Až jsou puding i šlehačka studené, šlehačku do pudingu zapracujte.
+4. Puding uvařte s mlékem a cukrem podle návodu na obalu a úplně vychlaďte (na povrch přitiskněte fólii). Až jsou puding i šlehačka studené, šlehačku do pudingu zapracujte.
 5. Cukr na sucho rozpusťte na pánvi (nemíchejte, jen otáčejte pánví) do sytě jantarové barvy. Odstavte, opatrně přilijte trochu smetany — bude to bouřlivě bublat — pak vmíchejte zbytek a špetku soli. Úplně vychlaďte, nechte v lednici několik hodin nebo přes noc a ušlehejte do tuha. 3–4 lžíce odložte na polevu.
 6. Cukr na polevu zkaramelizujte stejně, odstavte, vmíchejte máslo a smetanu dohladka, až se poleva leskne. Nechte zchladnout, až poleva obalí lžíci, ale ještě se dá lít.
 7. Každý vychladlý větrník rozřízněte vodorovně a vršek nechte jako čepičku. Do spodku nastříkejte vanilkový krém, na něj kroužek karamelové šlehačky, přiklopte a přelijte nebo namočte do karamelové polevy. Před podáváním nechte v lednici aspoň 2 hodiny ztuhnout.
@@ -661,8 +661,8 @@ A: Ne. Je to jemně mletý cukr s vanilínovým aromatem. Říkáme to rovnou v 
 Q: Kolik porcí je z 5 kg knedlíků?
 A: Zhruba 60–70 porcí přílohy. Jeden pytel vystačí na sezónu nedělních obědů.
 
-Q: Kolik pudingu dát místo sáčku z obchodu?
-A: Běžný sáček je zhruba 40 g na 500 ml mléka. Z kila uvaříte asi 25 pudingů.
+Q: Kolik pudingu dát na půl litru mléka?
+A: Zhruba 40 g na 500 ml mléka. Z kila uvaříte asi 25 pudingů.
 
 Q: Jak směsi skladovat?
 A: V suchu a zavřené. Kakao mimo silné pachy, ideálně při 15–20 °C.

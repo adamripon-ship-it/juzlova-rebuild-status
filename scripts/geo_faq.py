@@ -42,8 +42,8 @@ SITE_FAQ = {
         ("Balení a skladování", [
             ("Kolik porcí je z 5 kg knedlíků?",
              "Zhruba 60–70 porcí přílohy. Jeden pytel vystačí na sezónu nedělních obědů."),
-            ("Kolik pudingu dát místo sáčku z obchodu?",
-             "Běžný sáček je zhruba 40 g na 500 ml mléka. Z kila uvaříte asi 25 pudingů."),
+            ("Kolik pudingu dát na půl litru mléka?",
+             "Zhruba 40 g na 500 ml mléka. Z kila uvaříte asi 25 pudingů."),
             ("Jak směsi skladovat?",
              "V suchu a zavřené. Kakao mimo silné pachy, ideálně při 15–20 °C."),
         ]),
@@ -80,8 +80,8 @@ SITE_FAQ = {
         ("Packs and storage", [
             ("How many portions from 5 kg of dumpling mix?",
              "About 60–70 side-dish portions. One bag covers a whole season of Sunday lunches."),
-            ("How much pudding replaces a shop sachet?",
-             "A shop sachet is about 40 g for 500 ml of milk. One kilo makes about 25 puddings."),
+            ("How much pudding powder per half litre of milk?",
+             "About 40 g for 500 ml of milk. One kilo makes about 25 puddings."),
             ("How do I store the mixes?",
              "Dry and sealed. Keep the cocoa away from strong smells, ideally at 15–20 °C."),
         ]),
@@ -118,8 +118,8 @@ SITE_FAQ = {
         ("Packung und Lagerung", [
             ("Wie viele Portionen aus 5 kg Knödelmischung?",
              "Etwa 60–70 Beilagenportionen. Ein Beutel reicht für eine ganze Saison Sonntagsessen."),
-            ("Wie viel Pudding ersetzt ein Päckchen?",
-             "Ein Päckchen enthält etwa 40 g für 500 ml Milch. Aus einem Kilo werden rund 25 Puddings."),
+            ("Wie viel Puddingpulver auf einen halben Liter Milch?",
+             "Etwa 40 g auf 500 ml Milch. Aus einem Kilo werden rund 25 Puddings."),
             ("Wie lagere ich die Mischungen?",
              "Trocken und verschlossen. Kakao fern von starken Gerüchen, ideal bei 15–20 °C."),
         ]),
@@ -156,8 +156,8 @@ SITE_FAQ = {
         ("Balenie a skladovanie", [
             ("Koľko porcií je z 5 kg knedieľ?",
              "Zhruba 60–70 porcií prílohy. Jedno vrece vystačí na sezónu nedeľných obedov."),
-            ("Koľko pudingu dať namiesto vrecúška z obchodu?",
-             "Bežné vrecúško je zhruba 40 g na 500 ml mlieka. Z kila uvaríte asi 25 pudingov."),
+            ("Koľko pudingu dať na pol litra mlieka?",
+             "Zhruba 40 g na 500 ml mlieka. Z kila uvaríte asi 25 pudingov."),
             ("Ako zmesi skladovať?",
              "V suchu a zatvorené. Kakao mimo silných pachov, ideálne pri 15–20 °C."),
         ]),

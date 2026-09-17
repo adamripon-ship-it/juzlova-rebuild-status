@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917f"
+ASSET_VER = "20260917g"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -254,7 +254,7 @@ PRODUCT_IMG = {
     "chlupate_knedliky": "produkt-chlupate-knedliky.webp",
     "vanilkovy_pudink": "produkt-vanilkovy-puding.webp",
     "kakao_holandskeho_typu": "produkt-kakao.webp",
-    "vanilkovy_cukr": "vanilkovy-cukr.webp",
+    "vanilkovy_cukr": "vanilkovy-cukr-kilo.webp",
 }
 # Product -> botanical object (docs/design/01-brand-identity.md §5): the
 # silhouette on the product panel and the mask that cuts its photo.
@@ -2584,7 +2584,7 @@ def build_llms(langs_data):
         "eu_shipping: DE/AT/SK/PL a Češi v EU — dopravu, balení a pojištění platí zákazník",
         "b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; cena podle množství; bez jmen zákazníků",
         "newsletter: přihláška na webu; nové recepty občas a sezónní tipy před Vánoci a Velikonocemi",
-        "price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo, ne za sáček",
+        "price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo",
         "local_share: cca 90 % zakázek kolem Kochánova 40, 582 53",
         "area_served: Kochánov; Havlíčkův Brod; kraj Vysočina",
         "samples: žádné",
@@ -2756,8 +2756,9 @@ def copy_images():
     dst.mkdir(exist_ok=True)
     if src.exists():
         skip_if_brand = {
-            "vanilkovy-cukr-pytliky.png": "vanilkovy-cukr.webp",
-            "vanilkovy-cukr.png": "vanilkovy-cukr.webp",
+            "vanilkovy-cukr-pytliky.png": "vanilkovy-cukr-kilo.webp",
+            "vanilkovy-cukr.png": "vanilkovy-cukr-kilo.webp",
+            "vanilkovy-cukr.webp": "vanilkovy-cukr-kilo.webp",
             "sisky-s-makem.png": "sisky-s-makem.webp",
         }
         for a_name, pub in IMAGE_MAP.items():

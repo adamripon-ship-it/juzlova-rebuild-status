@@ -218,7 +218,7 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
 .shape.vanilla { clip-path: url(#m-vanilla); --zoom: 2.3; --zoom-open: 1.35; --pos: 64% 56%; }
 .shape.sugarcane { clip-path: url(#m-sugarcane); aspect-ratio: 1/1; --zoom: 1.6; --zoom-open: 1.15; --pos: 50% 40%; }
 .shape.sheaf { clip-path: url(#m-sheaf); --zoom: 1.2; --zoom-open: 1; --pos: 50% 55%; }
-.shape.cane { clip-path: url(#m-cane); --zoom: 1.35; --zoom-open: 1.05; --pos: 50% 50%; }
+.shape.cane { clip-path: url(#m-cane); --zoom: 1.02; --zoom-open: 1; --pos: 52% 62%; }
 .lift { display: block; position: relative; filter: drop-shadow(var(--shadow)); }
 /* hover "lens": the photo pulls back inside the outline and turns against it, the outline swells and lifts,
    and a gold hand-drawn line of the same object draws itself around the shape. Exit is faster than entry. */
