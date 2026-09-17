@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917k"
+ASSET_VER = "20260917l"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -353,7 +353,9 @@ def shape_html(obj, img, alt, href=None, style="", width=1200, height=900, capti
     st = f' style="{esc(style)}"' if style else ""
     vid = (f'<video class="shape-video" src="{video}" muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>'
            if video else "")
-    tag = (f'<span class="shape {obj}{" has-video" if video else ""}"{st}><img src="{img}" alt="{esc(alt)}" width="{width}" height="{height}" '
+    small = img[:-5] + "-640.webp" if img.endswith(".webp") else ""
+    srcset = f' srcset="{small} 640w, {img} 1200w" sizes="(max-width: 760px) 62vw, (max-width: 1100px) 40vw, 24vw"' if small and (ROOT / small.split("img/", 1)[-1].join(["img/", ""])).is_file() else ""
+    tag = (f'<span class="shape {obj}{" has-video" if video else ""}"{st}><img src="{img}"{srcset} alt="{esc(alt)}" width="{width}" height="{height}" '
            f'loading="lazy" decoding="async">{vid}</span>'
            # hover "lens": a gold hand-drawn line of the same outline draws itself around the photo
            f'<svg class="ring" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
