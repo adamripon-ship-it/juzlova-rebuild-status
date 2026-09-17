@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917u"
+ASSET_VER = "20260917v"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -373,8 +373,8 @@ def cutout_html(assets, name, alt, cls="", width=1200, height=1200, speed=None, 
     load = 'fetchpriority="high"' if eager else 'loading="lazy"'
     src = f"{assets}assets/botanicals/cutouts/{name}.webp"
     srcset = ""
-    if eager:  # the hero object is the phone LCP: serve a 640 px variant there
-        srcset = (f' srcset="{assets}assets/botanicals/cutouts/{name}-640.webp 640w, {src} 1200w" '
+    if eager:  # the hero object is the phone LCP: serve 400/640 px variants there
+        srcset = (f' srcset="{src[:-5]}-400.webp 400w, {src[:-5]}-640.webp 640w, {src} 1200w" '
                   f'sizes="(max-width: 1100px) min(300px, 60vw), 23vw"')
     return (f'<figure class="cutout {cls}"{attrs}><img src="{src}"{srcset} '
             f'alt="{esc(alt)}" width="{width}" height="{height}" {load} decoding="async"></figure>')
@@ -1511,7 +1511,7 @@ def build_home(L):
         src = f"{assets}assets/botanicals/cutouts/{name}.webp"
         alt = ui.get(f"alt_{name.replace('-', '_')}", L["products"][k]["name"])
         small = src[:-5] + "-640.webp"
-        sset = f'{small} 640w, {src} 1200w'
+        sset = f'{src[:-5]}-400.webp 400w, {small} 640w, {src} 1200w'
         sizes = "(max-width: 1100px) min(300px, 60vw), 23vw"
         if i == 0:
             objs += (f'<img class="is-on" src="{src}" srcset="{sset}" sizes="{sizes}" alt="{esc(alt)}" width="{w}" height="{h}" '
