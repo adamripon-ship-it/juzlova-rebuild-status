@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917d"
+ASSET_VER = "20260917e"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -265,6 +265,11 @@ PRODUCT_OBJECT = {
     "kakao_holandskeho_typu": "cocoa",
     "vanilkovy_cukr": "sugarcane",
 }
+# Photo masks: thin outlines (wheat ears, sugarcane leaves) cannot hold a photo,
+# so those two products cut their photo with a solid outline instead.
+PRODUCT_MASK = {**PRODUCT_OBJECT, "chlupate_knedliky": "potato", "vanilkovy_cukr": "vanilla"}
+# Per-product framing inside a borrowed mask (the vanilla outline is tuned for the pudding photo).
+PRODUCT_MASK_STYLE = {"vanilkovy_cukr": "--zoom:1.4;--zoom-open:1.05;--pos:50% 55%"}
 # One external sprite for the white silhouettes (cached across pages); the
 # photo masks must live in the page, so each page inlines only the ones it uses.
 SPRITE_FILE = ROOT / "assets" / "botanicals" / "sprite.svg"
@@ -322,16 +327,23 @@ def sil(depth, symbol, style, cls="art", speed=None, rotate=None, origin=None):
             f'<use href="{sprite_href(depth)}#{symbol}"/></svg>')
 
 
-def shape_html(obj, img, alt, href=None, style="", width=1200, height=900):
-    """A photo cut to a product outline. Real <img> so it stays indexable."""
+def shape_html(obj, img, alt, href=None, style="", width=1200, height=900, caption=None, cls=""):
+    """A photo cut to a product outline. Real <img> so it stays indexable.
+
+    With a caption the whole card is one link: shadowed shape + ring, then the
+    caption outside the shadow (the phone shelf shows it, desktop hides it).
+    """
     st = f' style="{esc(style)}"' if style else ""
     tag = (f'<span class="shape {obj}"{st}><img src="{img}" alt="{esc(alt)}" width="{width}" height="{height}" '
            f'loading="lazy" decoding="async"></span>'
            # hover "lens": a gold hand-drawn line of the same outline draws itself around the photo
            f'<svg class="ring" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
            f'<use href="#mp-{obj}"/></svg>')
+    if href and caption is not None:
+        return (f'<a class="shape-link {cls}" href="{href}"><span class="lift">{tag}</span>'
+                f'<span class="caption">{caption}</span></a>')
     if href:
-        return f'<a class="shape-link lift" href="{href}">{tag}</a>'
+        return f'<a class="shape-link lift {cls}" href="{href}">{tag}</a>'
     return f'<span class="lift">{tag}</span>'
 
 
@@ -1482,14 +1494,13 @@ def build_home(L):
     # 2 · stats: numerals, three product photos in their object outlines, product links
     def pimg(k):
         return product_img_src(depth, k)
-    stack = "".join([
-        shape_html("cocoa", pimg("kakao_holandskeho_typu"), L["products"]["kakao_holandskeho_typu"]["name"],
-                   href=f"{pages}{slug_of(lg, 'kakao_holandskeho_typu')}/"),
-        shape_html("vanilla", pimg("vanilkovy_pudink"), L["products"]["vanilkovy_pudink"]["name"],
-                   href=f"{pages}{slug_of(lg, 'vanilkovy_pudink')}/"),
-        shape_html("potato", pimg("bramborove_knedliky"), L["products"]["bramborove_knedliky"]["name"],
-                   href=f"{pages}{slug_of(lg, 'bramborove_knedliky')}/"),
-    ])
+    # All five products in price-list order; CSS shows three on desktop (the
+    # illustration between the numerals) and the whole shelf on phones.
+    stack = "".join(
+        shape_html(PRODUCT_MASK[k], pimg(k), L["products"][k]["name"], href=f"{pages}{slug_of(lg, k)}/",
+                   style=PRODUCT_MASK_STYLE.get(k, ""), caption=f'{esc(L["products"][k]["name"])}<b>{esc(L["products"][k]["price"])}</b>',
+                   cls=f"p-{PRODUCT_OBJECT[k]}")
+        for k in PRODUCT_SLUGS if pimg(k))
     prod_links = "".join(
         f'<li><a href="{pages}{slug_of(lg, k)}/">{esc(L["products"][k]["name"])}<span>{esc(L["products"][k]["price"])}</span></a></li>'
         for k in PRODUCT_SLUGS)
@@ -1503,7 +1514,7 @@ def build_home(L):
         {_stat(15, "", ui['stat_2'])}
         {_stat(2004, "", ui['stat_3'], start=1990)}
       </div>
-      <div class="stack rv">{stack}</div>
+      <div class="stack rv" aria-label="{esc(ui['nav_products'])}">{stack}</div>
       <div class="stats-right">
         {_stat(12, "km", ui['stat_4'])}
         {_stat(21, "%", ui['stat_5'])}
@@ -1687,7 +1698,7 @@ def build_product(L, key):
     im = product_img_src(depth, key)
     obj = PRODUCT_OBJECT[key]
     panel = (f'<div class="obj-panel rv">{sil(depth, "sil-" + obj, "", cls="art")}'
-             + (shape_html(obj, im, f'{pr["name"]} — Jůzlová') if im else "") + "</div>")
+             + (shape_html(PRODUCT_MASK[key], im, f'{pr["name"]} — Jůzlová', style=PRODUCT_MASK_STYLE.get(key, "")) if im else "") + "</div>")
     body_blocks = list(pr["body"])
     flower = ""
     if key == "kakao_holandskeho_typu":
@@ -1760,7 +1771,7 @@ def build_product(L, key):
                      active=None, body=body, jsonld=lds,
                      keywords=keywords_for(lg, "product", key),
                      meta_kind="product", meta_key=key,
-                     defs=defs_html((f"m-{obj}",), sticker=(key == "kakao_holandskeho_typu")),
+                     defs=defs_html((f"m-{PRODUCT_MASK[key]}",), sticker=(key == "kakao_holandskeho_typu")),
                      og_img=f"{BASE}/img/{PRODUCT_IMG[key]}" if PRODUCT_IMG.get(key) else None)
     write(([lg] if lg != "cs" else []) + [slug, "index.html"], html_out)
 
