@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917l"
+ASSET_VER = "20260917m"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -1498,13 +1498,13 @@ def build_home(L):
     {sil(depth, "sil-beans", "right:2%;bottom:1%;width:clamp(150px,14vw,230px);opacity:.9", cls="art plx hide-phone", speed=50, rotate="12deg", origin="50% 90%")}
   </div>
   <div class="wrap">
-    <p class="tagline rv">{esc(ui['est'])}</p>
-    <h1 class="display rv">{_h1_with_num(ui['h1_main'])}<span class="h1-sub">{esc(ui['h1_sub'])}</span></h1>
-    <p class="actions rv">
+    <p class="tagline">{esc(ui['est'])}</p>
+    <h1 class="display">{_h1_with_num(ui['h1_main'])}<span class="h1-sub">{esc(ui['h1_sub'])}</span></h1>
+    <p class="actions">
       <a class="btn white" href="{TEL_JIRINA}"><span>{esc(ui['hero_cta'])}</span>{ARROW}</a>
       <a class="btn outline" href="{prices}">{esc(ui['hero_cta2'])}</a>
     </p>
-    {cutout_html(assets, "cocoa-pod", ui['alt_cocoa_pod'], cls="hero-obj plx rv", width=1200, height=1174, speed=22, eager=True)}
+    {cutout_html(assets, "cocoa-pod", ui['alt_cocoa_pod'], cls="hero-obj plx", width=1200, height=1174, speed=22, eager=True)}
   </div>
   <nav class="marquee" aria-label="{esc(ui['marquee_label'])}">
     <div class="track">{items}{items_dup}</div>

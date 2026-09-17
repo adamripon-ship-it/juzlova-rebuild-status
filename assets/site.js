@@ -176,6 +176,13 @@
     });
   }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' }) : null;
   document.querySelectorAll('.rv, .draw').forEach(function (el) {
+    // anything already inside the first viewport paints at once (no reveal, no LCP delay)
+    if (io && !reduced && el.getBoundingClientRect().top < innerHeight * 0.9) {
+      el.style.transition = 'none'; el.classList.add('is-in');
+      el.querySelectorAll('.n[data-count]').forEach(function (n) { countUp(n); });
+      requestAnimationFrame(function () { el.style.transition = ''; });
+      return;
+    }
     if (io && !reduced) io.observe(el);
     else { el.classList.add('is-in'); el.querySelectorAll('.n[data-count]').forEach(function (n) { n.textContent = n.dataset.count; }); }
   });
