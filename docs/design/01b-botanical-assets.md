@@ -3,7 +3,7 @@
 Generated 2026-09-16 evening on the owner's Higgsfield account (plan: ultra).
 Credits before 1875.37, after 1722.37: **153 credits** for the whole set,
 including one discarded black-on-white test and the cacao-flower pair added
-from the owner's botanical references.
+from the owner's botanical references. On 2026-09-17 two more silhouettes (sheaf, cane; 20 credits) were added because the thin wheat and sugarcane outlines cannot hold a photograph.
 
 ## Two asset families
 
@@ -36,6 +36,8 @@ white and gold, no gradients, no shadow, no outline stroke, no text."*
 | beans | motif | 3:2 | Fan of four vanilla beans tied with string, hooked tips, gold seam line | 0d337aea |
 | sugarcane-leaves | motif | 16:9 | Cluster of arching sugarcane leaves fanning from one point, no stalk | 4a3e3ec8 |
 | leaf-single | vine leaf (attached along the wave and vines) | 3:2 | A single cacao leaf, petiole left, tip right, midrib and six vein pairs as gold lines that stay inside the leaf | 3cbbe4b9 |
+| sheaf | Chlupaté knedlíky photo mask (solid form of the wheat) | 4:3 | Tied wheat sheaf: about twelve ears bunched into one dense head, stalks bound with a twisted band, fanning below; reads as one filled shape | a09e2b15 |
+| cane | Vanilínový cukr photo mask (solid form of the sugarcane) | 4:3 | Bundle of three cut cane stalk sections standing together, nodes as gold lines, small leaf crown | daadc280 |
 | flower-cocoa | motif (cocoa page) | 3:2 | Three small cacao flowers hanging on short stalks from a knobbly horizontal branch, five long narrow sepals, tiny cup petals, five fine staminodes as gold lines, one round bud (from the owner's botanical references, 2026-09-16) | 15527d20 (first try f776b620 rejected: read as lilies on a block) |
 
 Result: the ten original motifs accepted on the first pass; the cacao flower needed one re-roll with a tighter prompt (stalks on a branch instead of "a piece of bark").

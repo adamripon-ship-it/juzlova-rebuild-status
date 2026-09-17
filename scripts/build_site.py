@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917e"
+ASSET_VER = "20260917f"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -267,9 +267,10 @@ PRODUCT_OBJECT = {
 }
 # Photo masks: thin outlines (wheat ears, sugarcane leaves) cannot hold a photo,
 # so those two products cut their photo with a solid outline instead.
-PRODUCT_MASK = {**PRODUCT_OBJECT, "chlupate_knedliky": "potato", "vanilkovy_cukr": "vanilla"}
-# Per-product framing inside a borrowed mask (the vanilla outline is tuned for the pudding photo).
-PRODUCT_MASK_STYLE = {"vanilkovy_cukr": "--zoom:1.4;--zoom-open:1.05;--pos:50% 55%"}
+# Photo masks: the thin ear/leaf silhouettes stay as backdrop art; the photos are
+# cut with the solid forms of the same plants (tied sheaf, cut cane bundle).
+PRODUCT_MASK = {**PRODUCT_OBJECT, "chlupate_knedliky": "sheaf", "vanilkovy_cukr": "cane"}
+PRODUCT_MASK_STYLE = {}
 # One external sprite for the white silhouettes (cached across pages); the
 # photo masks must live in the page, so each page inlines only the ones it uses.
 SPRITE_FILE = ROOT / "assets" / "botanicals" / "sprite.svg"

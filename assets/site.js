@@ -129,6 +129,10 @@
     var btn = m.querySelector('.marquee-toggle'), held = false;
     ['mouseenter', 'focusin'].forEach(function (ev) { m.addEventListener(ev, function () { m.classList.add('is-paused'); }); });
     ['mouseleave', 'focusout'].forEach(function (ev) { m.addEventListener(ev, function () { if (!held) m.classList.remove('is-paused'); }); });
+    // a finger on the ticker pauses it, so a moving link can be tapped; it resumes a moment after release
+    var touchTimer = 0;
+    m.addEventListener('touchstart', function () { clearTimeout(touchTimer); m.classList.add('is-paused'); }, { passive: true });
+    m.addEventListener('touchend', function () { touchTimer = setTimeout(function () { if (!held) m.classList.remove('is-paused'); }, 1500); }, { passive: true });
     if (btn) {
       btn.addEventListener('click', function () {
         held = !held;
