@@ -34,3 +34,5 @@ jobs:
           echo "Committed build is up to date."
       - name: Verify local references resolve
         run: python scripts/verify_refs.py
+      - name: Verify sitemap coverage and language alternates
+        run: python scripts/verify_sitemaps.py

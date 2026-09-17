@@ -11,6 +11,7 @@ BreadcrumbList), plus sitemap.xml, robots.txt, llms.txt, llms-full.txt
 and legacy-URL redirect stubs.
 """
 import hashlib
+from datetime import date
 import html as H
 import importlib.util
 import json
@@ -34,8 +35,8 @@ from cocoa_blocks import (
 from geo_faq import b2b_faq, recipe_faq, site_faq
 from reviews_data import load_reviews, stars_html
 from seo_data import (
-    CUISINE, PRODUCT_PRIORITY, RECIPE_CATEGORY, RECIPE_PRIORITY, RECIPE_TIMES,
-    SITEMAP_PRIORITY, compose_meta, keywords_for, rating_payload,
+    CUISINE, RECIPE_CATEGORY, RECIPE_TIMES,
+    compose_meta, keywords_for, rating_payload,
 )
 from team_data import TEAM
 import cocoa_origin
@@ -2172,34 +2173,13 @@ def all_paths(langs_data):
     return [path_of("cs", pid) for pid in page_ids("cs", langs_data)]
 
 
-def _path_priority(pid):
-    if pid in SITEMAP_PRIORITY:
-        return SITEMAP_PRIORITY[pid]
-    if pid in PRODUCT_SLUGS:
-        return PRODUCT_PRIORITY
-    if pid in RECIPE_SLUGS:
-        return RECIPE_PRIORITY
-    return 0.6
-
-
 def _image_tag(langs_data, pid, lg):
-    slug = pid
-    if pid in PRODUCT_SLUGS:
-        key = pid
-        img = PRODUCT_IMG.get(key)
-        name = langs_data[lg]["products"][key]["name"]
-        if img:
-            return (f"<image:image><image:loc>{BASE}/img/{img}</image:loc>"
-                    f"<image:title>{esc(name)}</image:title></image:image>")
-    if slug in RECIPE_SLUGS:
-        img = RECIPE_IMG.get(slug)
-        rec = langs_data[lg]["recipes"].get(slug) or {}
-        name = rec.get("name", slug)
-        if img:
-            cap = rec.get("teaser", name)
-            return (f"<image:image><image:loc>{BASE}/img/{img}</image:loc>"
-                    f"<image:title>{esc(name)}</image:title>"
-                    f"<image:caption>{esc(cap)}</image:caption></image:image>")
+    # Google supports image:loc; title/caption are deprecated sitemap fields.
+    img = PRODUCT_IMG.get(pid) or RECIPE_IMG.get(pid)
+    if img:
+        if not (ROOT / "img" / img).is_file():
+            raise ValueError(f"Missing sitemap image: {img}")
+        return f"<image:image><image:loc>{esc(BASE + '/img/' + img)}</image:loc></image:image>"
     return ""
 
 
@@ -2215,60 +2195,65 @@ def _urlset_xml(entries):
     )
 
 
-def _llms_sitemap_entries():
-    entries = [
-        "<!-- Language-model discovery: short index then full extract (https://llmstxt.org) -->",
-        (
-            f"<url><loc>{BASE}/llms.txt</loc>"
-            f"<lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq>"
-            f"<priority>0.95</priority></url>"
-        ),
-        (
-            f"<url><loc>{BASE}/llms-full.txt</loc>"
-            f"<lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq>"
-            f"<priority>0.9</priority></url>"
-        ),
-    ]
-    for lg in LANGS:
-        loc = f"{BASE}/llms-{lg}.txt"
-        entries.append(
-            f"<url><loc>{loc}</loc><lastmod>{TODAY}</lastmod>"
-            f"<changefreq>weekly</changefreq><priority>0.7</priority></url>"
-        )
-    return entries
+def sitemap_content_dates(langs_data):
+    """Optional, editor-verified dates keyed by language and stable page id.
+
+    Unknown dates are omitted. A build, deploy or crawl is not a content edit.
+    Reject stale keys so a removed page cannot keep unnoticed metadata.
+    """
+    dates = json.loads((ROOT / "scripts" / "content_dates.json").read_text(encoding="utf-8"))
+    for lg, pages in dates.items():
+        if lg not in LANGS or not isinstance(pages, dict):
+            raise ValueError(f"Invalid content-date language: {lg}")
+        for pid, stamp in pages.items():
+            if pid not in page_ids(lg, langs_data):
+                raise ValueError(f"Unknown content-date page: {lg}/{pid}")
+            if not isinstance(stamp, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", stamp):
+                raise ValueError(f"Expected YYYY-MM-DD content date: {lg}/{pid}")
+            if date.fromisoformat(stamp) > date.today():
+                raise ValueError(f"Future content date: {lg}/{pid}")
+    return dates
 
 
-def _page_sitemap_entry(langs_data, pid, lg):
-    pri = f"{_path_priority(pid):.1f}"
-    freq = "daily" if pid == "home" else "weekly"
+def _page_sitemap_entry(langs_data, pid, lg, dates):
     alts = ""
     if not is_local_page(pid):
-        alts = "".join(
-            f'<xhtml:link rel="alternate" hreflang="{code}" href="{url_of(o, pid)}"/>'
-            for o, code in HREFLANG_CODES)
-        alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{url_of("cs", pid)}"/>'
+        for other, code in HREFLANG_CODES:
+            if pid not in page_ids(other, langs_data):
+                raise ValueError(f"Missing translation: {other}/{pid}")
+            alts += f'<xhtml:link rel="alternate" hreflang="{code}" href="{esc(url_of(other, pid))}"/>'
+        alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{esc(url_of("cs", pid))}"/>'
     img = _image_tag(langs_data, pid, lg)
-    return (
-        f"<url><loc>{url_of(lg, pid)}</loc>{alts}{img}"
-        f"<lastmod>{TODAY}</lastmod><changefreq>{freq}</changefreq>"
-        f"<priority>{pri}</priority></url>"
-    )
+    stamp = dates.get(lg, {}).get(pid)
+    lastmod = f"<lastmod>{stamp}</lastmod>" if stamp else ""
+    return f"<url><loc>{esc(url_of(lg, pid))}</loc>{lastmod}{alts}{img}</url>"
 
 
 def build_sitemap(langs_data):
+    dates = sitemap_content_dates(langs_data)
+    children = []
     for lg in LANGS:
-        entries = _llms_sitemap_entries() if lg == "cs" else []
-        entries += [_page_sitemap_entry(langs_data, pid, lg) for pid in page_ids(lg, langs_data)]
-        write([f"sitemap-{lg}.xml"], _urlset_xml(entries))
+        ids = page_ids(lg, langs_data)
+        if len(ids) != len(set(ids)):
+            raise ValueError(f"Duplicate page id in {lg}")
+        entries = [_page_sitemap_entry(langs_data, pid, lg, dates) for pid in ids]
+        name = f"sitemap-{lg}.xml"
+        write([name], _urlset_xml(entries))
+        children.append(name)
+    # Retain the existing text-resource coverage, separate from Czech HTML.
+    resources = ["llms.txt", "llms-full.txt"] + [f"llms-{lg}.txt" for lg in LANGS]
+    write(["sitemap-resources.xml"], _urlset_xml([
+        f"<url><loc>{esc(BASE + '/' + name)}</loc></url>" for name in resources
+    ]))
+    children.append("sitemap-resources.xml")
     index = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
-    for lg in LANGS:
-        index.append(
-            f"<sitemap><loc>{BASE}/sitemap-{lg}.xml</loc>"
-            f"<lastmod>{TODAY}</lastmod></sitemap>"
-        )
+    # Index lastmod describes child-file modification, not page dates. Omit it
+    # until the build has a trustworthy per-child modification history.
+    for name in children:
+        index.append(f"<sitemap><loc>{esc(BASE + '/' + name)}</loc></sitemap>")
     index.append("</sitemapindex>")
     write(["sitemap.xml"], "\n".join(index) + "\n")
 
@@ -2316,75 +2301,17 @@ def build_forms_skeleton():
 
 
 def build_robots():
-    write(["robots.txt"], f"""# juzlova.cz — crawler policy
-# Human sitemap: {BASE}/sitemap.xml
-# LLM index (read this first): {BASE}/llms.txt
-# LLM full extract: {BASE}/llms-full.txt
-# Google Search ignores llms.txt; keep it for non-Google AI crawlers.
-
+    write(["robots.txt"], f"""# juzlova.cz — public crawler policy
+# Optional AI summaries (comments, not crawler directives):
+# {BASE}/llms.txt
+# {BASE}/llms-full.txt
+# One group keeps exclusions consistent for search and AI crawlers.
 User-agent: *
-Allow: /
 Disallow: /archive/
 Disallow: /status.html
 Disallow: /__forms.html
 
-# Citation bots — named Allow, not only the wildcard
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-SearchBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: meta-externalagent
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
 Sitemap: {BASE}/sitemap.xml
-Sitemap: {BASE}/sitemap-cs.xml
-Sitemap: {BASE}/sitemap-en.xml
-Sitemap: {BASE}/sitemap-de.xml
-Sitemap: {BASE}/sitemap-sk.xml
 """)
 
 
@@ -2601,6 +2528,8 @@ def _llms_index(langs_data, lang):
         f"- [{c['full_note']}]({BASE}/llms-full.txt)",
         f"- [{c['entity_note']}]({BASE}/ai/about.md)",
         f"- [FAQ JSON]({BASE}/ai/faq.json)",
+        f"- [XML sitemap]({BASE}/sitemap.xml)",
+        f"- [XML sitemap ({lang})]({BASE}/sitemap-{lang}.xml)",
         "",
         f"updated: {TODAY}",
         "",
@@ -2648,6 +2577,7 @@ def build_llms(langs_data):
         "languages: cs (hlavní), en, de, sk",
         "site: https://www.juzlova.cz",
         "index: " + BASE + "/llms.txt",
+        "sitemap: " + BASE + "/sitemap.xml",
         "",
         "## Co si neplést",
         "Neprodáváme kakaový puding ani čokoládovou pudingovou směs.",

@@ -31,6 +31,7 @@ freshness: obnovujeme čtvrtletně nebo při změně cen a sortimentu
 languages: cs (hlavní), en, de, sk
 site: https://www.juzlova.cz
 index: https://www.juzlova.cz/llms.txt
+sitemap: https://www.juzlova.cz/sitemap.xml
 
 ## Co si neplést
 Neprodáváme kakaový puding ani čokoládovou pudingovou směs.

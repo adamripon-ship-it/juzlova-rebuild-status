@@ -63,6 +63,7 @@ jobs:
         run: |
           python scripts/build_site.py
           python scripts/verify_refs.py
+          python scripts/verify_sitemaps.py
 
       - uses: google-github-actions/auth@v2
         if: steps.creds.outputs.ok == 'true'
