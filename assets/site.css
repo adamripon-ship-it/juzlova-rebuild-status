@@ -449,6 +449,9 @@ table.price-units td:nth-child(3) { white-space: nowrap; font-weight: 600; }
 .obj-panel .shape { width: 100%; position: relative; z-index: 2; }
 .product-hero .factbox { margin: 0; }
 .product-hero .cta-row { margin: 1.2rem 0 0; }
+.pack-photo { margin: 2.4rem 0; }
+.pack-photo h2 { margin: 0 0 1rem; }
+.pack-photo img { width: 100%; height: auto; display: block; border-radius: 28px; }
 /* phones: a shorter panel so the price and the call button sit near the top; buttons full width */
 @media (max-width: 760px) {
   .product-hero { gap: 1.4rem; }
