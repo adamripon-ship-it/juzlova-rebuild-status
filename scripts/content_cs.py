@@ -13,7 +13,7 @@ LANG = {
         "nav_home": "Úvod", "nav_about": "Kdo jsme", "nav_delivery": "Kde nás najdete",
         "nav_products": "Produkty", "nav_prices": "Ceník", "nav_recipes": "Recepty",
         "nav_faq": "Časté dotazy", "nav_contact": "Kontakt",
-        "nav_b2b": "Pro kuchyně", "nav_d2c": "Češi v EU",
+        "nav_b2b": "Pro kuchyně", "nav_d2c": "Balík do zahraničí",
         "nav_aria": "Hlavní navigace",
         "menu_open": "Otevřít menu",
         "menu_close": "Zavřít menu",
@@ -282,7 +282,7 @@ LANG = {
         "do_eu": {
             "title": "Zásilka do zahraničí jen po domluvě | Jůzlová, Kochánov",
             "desc": "Jsme malá dílna v Kochánově a většina lidí si směsi vyzvedne. Do zahraničí pošleme po domluvě, dopravu, balení a pojištění platíte vy.",
-            "nav": "Češi v EU",
+            "nav": "Balík do zahraničí",
             "h1": "Bydlíte v zahraničí? Jsme malá místní dílna a balík posíláme jen po domluvě",
             "sub": "Většina zákazníků si pro směsi přijede do Kochánova nebo do Humpolce. Poslat do zahraničí můžeme: zboží za ceny z dílny, dopravu, balení a pojištění platíte celé vy. Celkovou částku domluvíme před odesláním.",
             "cta": ("cta_call", "kontakt", "cta_write"),

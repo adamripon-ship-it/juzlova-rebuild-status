@@ -618,8 +618,6 @@ Q: Kdo platí dopravu?
 A: Odběratel, celou částku. Dopravu, balení a pojištění řekneme předem.
 Q: Posíláte vzorky do zahraničí?
 A: Ne.
-Q: Je to totéž co zásilka Čechům v EU?
-A: Ne. Češi v EU mají vlastní stránku pro domácnosti. Tady jsou provozovny.
 
 ## FAQ
 Q: Jak u vás objednám, když nemáte e-shop?
