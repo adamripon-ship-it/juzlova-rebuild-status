@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260923d"
+ASSET_VER = "20260923e"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -1831,7 +1831,8 @@ def build_product(L, key):
 <div class="product-hero">
 {panel}
 <div>
-<div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong> · {esc(ui['price_pickup_badge'])}</dd>
+<div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{' · '.join(f'<span>{esc(x)}</span>' for x in pr['price'].split(' · '))}</strong>
+<span class="price-sub">{esc(ui['price_pickup_badge'])}{(' · ' + esc(pr['per_unit'])) if pr.get('per_unit') else ''}</span></dd>
 <dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · {esc(ui['open_hours_short'])}</dd></dl>
 {price_note_html(L)}</div>
 {cta_html(L, depth, ("cta_order", "kde_nas_najdete", "cta_pickup"))}
