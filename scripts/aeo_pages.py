@@ -553,10 +553,10 @@ def _build_pages(lang):
               "Päť zmesí z Kochánova 40, 582 53. Objednáte telefónom alebo formulárom. E-shop nemáme."),
             [
                 ("p", t(
-                    "Jůzlová vyrábí v Kochánově na Vysočině a zásobuje domácnosti v Čechách i na Moravě. Objednáte telefonem +420 728 466 141 nebo +420 607 629 931 nebo formulářem. Telefon bereme denně 8:00–19:00.",
-                    "Jůzlová makes its mixes in Kochánov in the Vysočina Region and supplies households across Bohemia and Moravia. Order by phone on +420 728 466 141 or +420 607 629 931 or through the form. We take calls daily 8:00–19:00.",
-                    "Jůzlová stellt die Mischungen in Kochánov in der Vysočina her und beliefert Haushalte in Böhmen und Mähren. Bestellung unter +420 728 466 141 oder +420 607 629 931 oder über das Formular. Telefonisch täglich 8:00–19:00 Uhr.",
-                    "Jůzlová vyrába v Kochánove na Vysočine a zásobuje domácnosti v Čechách aj na Morave. Objednáte telefónom +420 728 466 141 alebo +420 607 629 931 alebo formulárom. Telefón berieme denne 8:00–19:00.",
+                    "Jůzlová vyrábí v Kochánově na Vysočině a zásobuje domácnosti v Čechách i na Moravě. Objednáte telefonem +420 728 466 141 nebo +420 607 629 931, nebo formulářem. Telefon bereme denně 8:00–19:00.",
+                    "Jůzlová makes its mixes in Kochánov in the Vysočina Region and supplies households across Bohemia and Moravia. Order by phone on +420 728 466 141 or +420 607 629 931, or through the form. We take calls daily 8:00–19:00.",
+                    "Jůzlová stellt die Mischungen in Kochánov in der Vysočina her und beliefert Haushalte in Böhmen und Mähren. Bestellung unter +420 728 466 141 oder +420 607 629 931 – oder über das Formular. Telefonisch täglich 8:00–19:00 Uhr.",
+                    "Jůzlová vyrába v Kochánove na Vysočine a zásobuje domácnosti v Čechách aj na Morave. Objednáte telefónom +420 728 466 141 alebo +420 607 629 931, alebo formulárom. Telefón berieme denne 8:00–19:00.",
                 )),
                 ("h2", t("Jak to probíhá", "How it works", "So läuft es", "Ako to prebieha")),
                 ("ol", [

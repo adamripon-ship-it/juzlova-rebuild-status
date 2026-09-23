@@ -13,7 +13,7 @@ SITE_FAQ = {
     "cs": [
         ("Objednání a odběr", [
             ("Jak u vás objednám, když nemáte e-shop?",
-             "Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931) nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme."),
+             "Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme."),
             ("Kde si zboží vyzvednu zdarma?",
              "V dílně Kochánov 40, 582 53, nebo v Humpolci v okolí Pivovaru Bernard. Vždy po telefonické domluvě, denně 8:00–19:00."),
             ("Dáváte vzorky nebo ochutnávky?",
@@ -51,7 +51,7 @@ SITE_FAQ = {
     "en": [
         ("Ordering and pick-up", [
             ("How do I order without a web shop?",
-             "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931) or use the form. Tell us what you want, how much and where you are; we arrange the rest."),
+             "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we arrange the rest."),
             ("Where can I collect for free?",
              "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00."),
             ("Do you give samples or tastings?",
@@ -127,7 +127,7 @@ SITE_FAQ = {
     "sk": [
         ("Objednanie a odber", [
             ("Ako objednám, keď nemáte e-shop?",
-             "Zavoláte Jiřine (+420 728 466 141) alebo Jiřímu (+420 607 629 931) alebo vyplníte formulár. Poviete, čo a koľko chcete a kde ste; zvyšok dohodneme."),
+             "Zavoláte Jiřine (+420 728 466 141) alebo Jiřímu (+420 607 629 931), alebo vyplníte formulár. Poviete, čo a koľko chcete a kde ste; zvyšok dohodneme."),
             ("Kde si tovar vyzdvihnem zadarmo?",
              "V dielni Kochánov 40, 582 53, alebo v Humpolci v okolí Pivovaru Bernard. Vždy po telefonickej dohode, denne 8:00–19:00."),
             ("Dávate vzorky alebo ochutnávky?",
