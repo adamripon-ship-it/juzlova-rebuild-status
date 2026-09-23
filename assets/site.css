@@ -510,11 +510,13 @@ footer.site .rule:before, footer.site .rule:after { content: ""; position: absol
 footer.site .rule:before { left: 0; } footer.site .rule:after { right: 0; }
 footer.site .rule img { height: 2.6rem; width: auto; position: relative; background: #fff; padding: 0 1rem; }
 footer.site .wm { position: absolute; left: -2%; bottom: -14%; width: 240px; height: auto; filter: grayscale(1); opacity: .1; pointer-events: none; user-select: none; }
-.foot { display: grid; grid-template-columns: 1fr 1.25fr; gap: 4rem; margin-top: 2.5rem; align-items: start; position: relative; }
-.foot nav { display: flex; gap: .4rem 2.2rem; margin-bottom: 1.6rem; flex-wrap: wrap; }
-.foot nav a { color: var(--ink); text-decoration: none; font-size: 1.05rem; padding: .3rem 0; border-bottom: 3px solid transparent; transition: border-color .35s var(--ease); }
-.foot nav a.on, .foot nav a:hover, .foot nav a:focus-visible { border-color: var(--gold); outline: none; }
-.foot nav.small a { font-size: .92rem; color: var(--ink-soft); }
+/* link groups: one headed column each, one link per line, never a wrapping row */
+.foot-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 2rem 3rem; margin-top: 2.5rem; position: relative; }
+.foot-links .fh { font: 600 .78rem/1.2 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--grey); margin: 0 0 .6rem; }
+.foot-links nav { display: flex; flex-direction: column; align-items: flex-start; }
+.foot-links nav a { color: var(--ink); text-decoration: none; font-size: .98rem; line-height: 1.35; padding: .35rem 0; border-bottom: 2px solid transparent; transition: border-color .35s var(--ease); }
+.foot-links nav a:hover, .foot-links nav a:focus-visible { border-color: var(--gold); outline: none; }
+.foot { display: grid; grid-template-columns: 1fr 1.25fr; gap: 4rem; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--line); align-items: start; position: relative; }
 .foot .phone { font: 500 1.9rem/1.2 var(--sans); margin: .6rem 0 .3rem; color: var(--ink); text-decoration: none; display: inline-block; }
 .foot .phone:hover { text-decoration: underline; text-decoration-color: var(--gold); }
 .foot .mail { display: inline-block; color: var(--ink); text-decoration: none; font-size: 1.1rem; }
@@ -537,6 +539,18 @@ footer.site .fine { position: relative; border-top: 1px solid var(--line); margi
 footer.site .fine a { color: var(--grey); text-decoration-color: transparent; }
 footer.site .fine a:hover { color: var(--ink); text-decoration-color: var(--gold); }
 @media (max-width: 900px) { .foot { grid-template-columns: 1fr; gap: 3rem; } .callback .form-top { grid-template-columns: 1fr; } footer.site .rule:before, footer.site .rule:after { width: calc(50% - 6rem); } }
+/* phones: smaller logo rule, two link columns, 44px tap rows */
+@media (max-width: 640px) {
+  footer.site .rule { height: 4rem; }
+  footer.site .rule img { height: 2rem; }
+  footer.site .rule:before, footer.site .rule:after { width: calc(50% - 5rem); }
+  .foot-links { grid-template-columns: 1fr 1fr; gap: 1.8rem 1.2rem; margin-top: 1rem; }
+  .foot-links nav a { display: flex; align-items: center; min-height: 44px; padding: .25rem 0; font-size: .95rem; }
+  .foot { gap: 2.5rem; margin-top: 2rem; padding-top: 2rem; }
+  .foot .phone { font-size: 1.6rem; }
+  .marks { margin-top: 1.4rem; }
+}
+@media (max-width: 340px) { .foot-links { grid-template-columns: 1fr; } }
 
 /* ── consent (Google Analytics only) ── */
 .consent-bar { position: fixed; z-index: 60; left: 0; right: 0; bottom: 0; padding: 1rem 1rem 1.15rem; background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -10px 40px rgba(26,26,26,.1); }
