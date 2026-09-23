@@ -20,6 +20,16 @@
   addEventListener('scroll', headerState, { passive: true });
   headerState();
 
+  /* ── footer link groups: tap-to-open rows on phones, always open on desktop ── */
+  var footPhone = matchMedia('(max-width: 640px)');
+  var footGroups = document.querySelectorAll('footer.site details.fgroup');
+  function footState() { footGroups.forEach(function (d) { d.open = !footPhone.matches; }); }
+  footGroups.forEach(function (d) {
+    d.querySelector('summary').addEventListener('click', function (e) { if (!footPhone.matches) e.preventDefault(); });
+  });
+  footPhone.addEventListener('change', footState);
+  footState();
+
   /* ── vines: attach leaves to the actual stroke (petiole on the line, rotated to the tangent) ── */
   var SVG_NS = 'http://www.w3.org/2000/svg';
   function attachLeaves(path) {

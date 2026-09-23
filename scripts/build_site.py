@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260923c"
+ASSET_VER = "20260923d"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -958,14 +958,13 @@ def footer(L, depth, pid="home"):
         ("kde_nas_najdete", ui["nav_delivery"]), ("velkoobchod", ui["nav_b2b"]), ("do_eu", ui["nav_d2c"]),
         ("faq", ui["nav_faq"]), ("kontakt", ui["nav_contact"]),
     ]
-    if lg == "cs":
-        company = [c for c in company if c[0] != "velkoobchod"]
     comp = "".join(f'<a href="{pages}{path_of(lg, k)}">{esc(lbl)}</a>' for k, lbl in company)
 
-    def group(gid, heading, links, href=None):
-        label = f'<a href="{href}">{esc(heading)}</a>' if href else esc(heading)
-        return (f'<div class="fgroup"><h2 class="fh" id="fh-{gid}">{label}</h2>'
-                f'<nav aria-labelledby="fh-{gid}">{links}</nav></div>')
+    # Open by default (desktop, no-JS); site.js folds them into tap-to-open
+    # rows on phones so the footer stays short.
+    def group(gid, heading, links):
+        return (f'<details class="fgroup" open><summary class="fh" id="fh-{gid}">{esc(heading)}</summary>'
+                f'<nav aria-labelledby="fh-{gid}">{links}</nav></details>')
 
     groups = [group("products", ui["footer_products"], prods), group("company", ui["footer_company"], comp)]
     if lg == "cs":
@@ -975,7 +974,7 @@ def footer(L, depth, pid="home"):
         b2b = "".join(
             f'<a href="{pages}{B2B_SLUGS[k]}/">{esc(FOOTER_LABELS.get(k) or AEO_PAGES["cs"][k]["h1"])}</a>'
             for k in B2B_SLUGS)
-        groups += [group("local", ui["footer_kitchens"], geo), group("b2b", ui["nav_b2b"], b2b, f"{pages}{path_of(lg, 'velkoobchod')}")]
+        groups += [group("local", ui["footer_kitchens"], geo), group("b2b", ui["footer_b2b"], b2b)]
     links = "".join(groups)
     current = ' aria-current="page"'
     langs = "".join(
@@ -1004,8 +1003,7 @@ def footer(L, depth, pid="home"):
     <div class="rule"><a href="{home}" aria-label="Jůzlová.cz"><img src="{assets}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200" loading="lazy"></a></div>
     <div class="foot">
       <div class="foot-contact">
-        <a class="phone" href="{TEL_JIRINA}">+420 728 466 141</a>
-        <p class="hours">{esc(ui['open_hours_short'])}</p>
+        <p class="call"><a class="phone" href="{TEL_JIRINA}">+420 728 466 141</a> <span class="hours">{esc(ui['open_hours_short'])}</span></p>
         <a class="mail" href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a>
         <div class="marks"><a class="addr" href="{MAP_DIR}" target="_blank" rel="noopener">{PIN_ICON}<span>Kochánov 40, Humpolec</span></a><span>{esc(ui['marks'])}</span></div>
       </div>
@@ -1013,7 +1011,7 @@ def footer(L, depth, pid="home"):
       {form}
     </div>
     <nav class="foot-langs" aria-label="{esc(ui['lang_label'])}">{langs}</nav>
-    <div class="fine"><span>{esc(ui['footer_addr'])}</span><span>{esc(ui['open_hours'])}</span><span>© 2004–2026 Jůzlová s.r.o. · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span></div>
+    <div class="fine"><span>{esc(ui['footer_addr'])}</span><span class="fine-hours">{esc(ui['open_hours'])}</span><span>© 2004–2026 Jůzlová s.r.o. · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span></div>
   </div>
 </footer>"""
 
