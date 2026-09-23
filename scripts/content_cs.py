@@ -513,6 +513,7 @@ LANG["ui"].update({
     'alt_vanilla': 'Květ vanilky s listy a dvěma vanilkovými lusky',
     'alt_leaf_banana': 'Banánový list',
     'footer_kitchens': 'Kde rozvážíme',
+    'footer_b2b': 'Velkoobchod',
     'sec_reviews_h': 'Co o nás říkají zákazníci',
 })
 
