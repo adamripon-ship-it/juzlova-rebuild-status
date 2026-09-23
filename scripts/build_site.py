@@ -2649,7 +2649,7 @@ def build_llms(langs_data):
         "geo: 49.53367, 15.54002",
         "people: Jiřina Jůzlová +420 728 466 141; Jiří Jůzl +420 607 629 931",
         "hours: pondělí–neděle 08:00–19:00 po telefonické domluvě",
-        "order: telefon, e-mail nebo formulář na webu; bez e-shopu",
+        "order: telefon nebo formulář na webu; bez e-shopu",
         "pickup_free: Kochánov 40, 582 53; Humpolec u Pivovaru Bernard po dohodě",
         "delivery_free_vysocina: nad 5000 Kč",
         "delivery_free_humpolec_hb: nad 1000 Kč (Humpolec, Havlíčkův Brod)",
