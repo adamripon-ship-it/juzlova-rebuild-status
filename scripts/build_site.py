@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260923d"
+ASSET_VER = "20260923e"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -926,7 +926,6 @@ def nav(L, depth, active, pid):
   {a('ceny', ui['nav_prices'])}
   {a('recepty', ui['nav_recipes'])}
   {a('velkoobchod', ui['nav_b2b'])}
-  {a('do_eu', ui['nav_d2c'])}
   {a('kontakt', ui['nav_contact'])}
   {langsel}
 </nav>"""
@@ -955,7 +954,7 @@ def footer(L, depth, pid="home"):
         for k in PRODUCT_SLUGS)
     company = [
         ("kdo_jsme", ui["nav_about"]), ("ceny", ui["nav_prices"]), ("recepty", ui["nav_recipes"]),
-        ("kde_nas_najdete", ui["nav_delivery"]), ("velkoobchod", ui["nav_b2b"]), ("do_eu", ui["nav_d2c"]),
+        ("kde_nas_najdete", ui["nav_delivery"]), ("velkoobchod", ui["nav_b2b"]),
         ("faq", ui["nav_faq"]), ("kontakt", ui["nav_contact"]),
     ]
     comp = "".join(f'<a href="{pages}{path_of(lg, k)}">{esc(lbl)}</a>' for k, lbl in company)
@@ -1356,7 +1355,6 @@ def aeo_links_html(L, kind, depth):
         heading = ui.get("geo_hub") or ""
         extra = [
             (path_of(lg, "kde_nas_najdete"), ui.get("nav_delivery") or ""),
-            (path_of(lg, "do_eu"), ui.get("nav_d2c") or ""),
         ]
     items = []
     for key, slug in slugs.items():
@@ -1677,7 +1675,6 @@ def build_home(L):
       <h2 class="sec">{esc(ui['deliver_h2'])}</h2>
       <ul class="deliver-list">{deliver_items}</ul>
       {cta_html(L, depth, ("deliver_btn", "kde_nas_najdete", "nav_delivery"))}
-      <p>{more_link(f"{pages}{path_of(lg, 'do_eu')}", ui['sec_d2c'])}</p>
     </div>
     <div class="rv" id="recenze">{reviews_html(L, depth)}</div>
   </div>
@@ -1831,7 +1828,8 @@ def build_product(L, key):
 <div class="product-hero">
 {panel}
 <div>
-<div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong> · {esc(ui['price_pickup_badge'])}</dd>
+<div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{' · '.join(f'<span>{esc(x)}</span>' for x in pr['price'].split(' · '))}</strong>
+<span class="price-sub">{esc(ui['price_pickup_badge'])}{(' · ' + esc(pr['per_unit'])) if pr.get('per_unit') else ''}</span></dd>
 <dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · {esc(ui['open_hours_short'])}</dd></dl>
 {price_note_html(L)}</div>
 {cta_html(L, depth, ("cta_order", "kde_nas_najdete", "cta_pickup"))}

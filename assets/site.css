@@ -51,7 +51,7 @@ p { text-wrap: pretty; }
 
 /* ── header ── */
 header.site {
-  position: sticky; top: 0; z-index: 70; background: rgba(255,255,255,.97);
+  position: sticky; top: 0; z-index: 70; background: #fff;
   border-bottom: 1px solid var(--line); transition: box-shadow .35s var(--ease);
 }
 header.site.scrolled { box-shadow: 0 10px 30px -18px rgba(26,26,26,.3); }
@@ -411,6 +411,8 @@ article.page--prices { max-width: 60rem; }
 .factbox dd { margin: .25rem 0 0; }
 .price-card strong { font: 500 1.7rem/1 var(--serif); letter-spacing: -.01em; }
 .price-card .price-note { margin: .8rem 0 0; }
+.price-card strong span { white-space: nowrap; }
+.price-card .price-sub { display: block; margin-top: .45rem; color: var(--ink-soft); font-size: .95rem; }
 .price-note { font-size: .92rem; color: var(--ink-soft); margin: .7rem 0 1.1rem; }
 .tbl-wrap { overflow-x: auto; }
 table.tbl { width: 100%; border-collapse: collapse; margin: 1.4rem 0; font-size: .96rem; }
@@ -438,9 +440,16 @@ table.price-units td:nth-child(3) { white-space: nowrap; font-weight: 600; }
 @media (max-width: 760px) { .product-hero { grid-template-columns: 1fr; } }
 .obj-panel { position: relative; background: var(--gold); border-radius: 28px; aspect-ratio: 1; overflow: hidden; display: grid; place-items: center; padding: 6%; }
 .obj-panel .art { inset: -8%; width: 116%; height: 116%; opacity: .32; }
+.obj-panel .lift { width: 100%; position: relative; z-index: 2; }
 .obj-panel .shape { width: 100%; position: relative; z-index: 2; }
 .product-hero .factbox { margin: 0; }
 .product-hero .cta-row { margin: 1.2rem 0 0; }
+/* phones: a shorter panel so the price and the call button sit near the top; buttons full width */
+@media (max-width: 760px) {
+  .product-hero { gap: 1.4rem; }
+  .obj-panel { aspect-ratio: 4/3; padding: 4% 14%; }
+  .product-hero .cta-row .btn { flex: 1 1 100%; }
+}
 .flower { margin: 2.2rem 0 1rem; max-width: 24rem; }
 .flower img { border-radius: 0; }
 .flower img { animation: none; }

@@ -154,13 +154,13 @@ KEYWORDS = {
     "cs": {
         "home": "Jůzlová, knedlíky v prášku, chlupaté knedlíky, bosáky, vanilkový puding bez lepku, kakao holandského typu, vanilínový cukr, Kochánov, Vysočina, potravinářské směsi",
         "kdo_jsme": "Jůzlová, kdo jsme, rodinná dílna, Kochánov, výroba od 2004, KLASA mouka",
-        "kde_nas_najdete": "odběr Kochánov, rozvoz Vysočina od 5000 Kč, Humpolec Havlíčkův Brod od 1000 Kč",
+        "kde_nas_najdete": "odběr Kochánov, dílna Kochánov 40, vyzvednutí Humpolec, Vysočina",
         "velkoobchod": "velkoobchod Jůzlová, restaurace, pekárny, kavárny, školy, zmrzlináři, cena podle množství",
-        "do_eu": "zásilky Čechům v EU, doprava balení pojištění, Německo Rakousko Slovensko Polsko",
+        "do_eu": "Jůzlová, knedlíky v prášku, rodinná dílna Kochánov, Vysočina",
         "kontakt": "kontakt Jůzlová, Jiřina Jůzlová, Jiří Jůzl, telefon, Kochánov 40",
         "ceny": "ceník Jůzlová, cena knedlíků v prášku, puding 60 Kč, kakao 270 Kč",
         "recepty": "recepty Jůzlová, šišky s mákem, strapačky, perník, věnečky, pudingové recepty",
-        "faq": "Jůzlová FAQ, jak objednat knedlíky v prášku, bezlepkový puding, rozvoz Vysočina",
+        "faq": "Jůzlová FAQ, jak objednat knedlíky v prášku, bezlepkový puding, vyzvednutí Kochánov",
         "products": {
             "bramborove_knedliky": "bramborové knedlíky v prášku, bramborové těsto, šišky, gnocchi, KLASA, 5 kg 250 Kč",
             "chlupate_knedliky": "chlupaté knedlíky, bosáky, halušky, strapačky, 15 minut, 5 kg 260 Kč",
@@ -172,13 +172,13 @@ KEYWORDS = {
     "en": {
         "home": "Jůzlová, potato dumpling mix, hairy dumplings, gluten-free vanilla pudding, Dutch-process cocoa, vanilla sugar, Kochánov, Czech food mixes",
         "kdo_jsme": "Jůzlová about, family workshop, Kochánov, since 2004, KLASA flour",
-        "kde_nas_najdete": "Jůzlová pick-up Kochánov, free Vysočina delivery from 5000 Kč, Humpolec Havlíčkův Brod from 1000 Kč",
+        "kde_nas_najdete": "Jůzlová pick-up Kochánov, workshop Kochánov 40, collect in Humpolec, Vysočina",
         "velkoobchod": "Jůzlová wholesale, restaurants bakeries cafés schools ice cream, quantity pricing",
-        "do_eu": "Jůzlová parcels to Czechs in the EU, shipping boxing insurance Germany Austria Slovakia Poland",
+        "do_eu": "Jůzlová, Czech dumpling mix, family workshop Kochánov, Vysočina",
         "kontakt": "Jůzlová contact, Jiřina Jůzlová, Jiří Jůzl, Kochánov 40",
         "ceny": "Jůzlová price list, dumpling mix price, pudding 60 Kč, cocoa 270 Kč",
         "recepty": "Jůzlová recipes, poppy-seed rolls, strapačky, gingerbread, cream puffs, pudding desserts",
-        "faq": "Jůzlová FAQ, how to order dumpling mix, gluten-free pudding, Vysočina delivery",
+        "faq": "Jůzlová FAQ, how to order dumpling mix, gluten-free pudding, collect in Kochánov",
         "products": {
             "bramborove_knedliky": "potato dumpling mix, potato dough, gnocchi, KLASA flour, 5 kg 250 Kč",
             "chlupate_knedliky": "hairy dumplings, bosáky, halušky, strapačky, 15 minutes, 5 kg 260 Kč",
@@ -190,13 +190,13 @@ KEYWORDS = {
     "de": {
         "home": "Jůzlová, Kartoffelknödelmischung, Haarige Knödel, glutenfreier Vanillepudding, Kakao holländischer Art, Vanillinzucker, Kochánov",
         "kdo_jsme": "Jůzlová über uns, Familienbetrieb, Kochánov, seit 2004, KLASA Mehl",
-        "kde_nas_najdete": "Abholung Kochánov, Lieferung Vysočina ab 5000 Kč, Humpolec Havlíčkův Brod ab 1000 Kč",
+        "kde_nas_najdete": "Abholung Kochánov, Werkstatt Kochánov 40, Abholung Humpolec, Vysočina",
         "velkoobchod": "Jůzlová Großhandel, Restaurants Bäckereien Cafés Schulen Speiseeis, Mengenpreis",
-        "do_eu": "Jůzlová Pakete an Tschechen in der EU, Versand Karton Versicherung Deutschland Österreich Slowakei Polen",
+        "do_eu": "Jůzlová, tschechische Knödelmischung, Familienwerkstatt Kochánov, Vysočina",
         "kontakt": "Jůzlová Kontakt, Jiřina Jůzlová, Jiří Jůzl, Kochánov 40",
         "ceny": "Jůzlová Preisliste, Knödelmischung Preis, Pudding 60 Kč, Kakao 270 Kč",
         "recepty": "Jůzlová Rezepte, Mohnnockerl, Strapačky, Lebkuchen, Brandteig, Puddingdesserts",
-        "faq": "Jůzlová FAQ, Knödelmischung bestellen, glutenfreier Pudding, Lieferung Vysočina",
+        "faq": "Jůzlová FAQ, Knödelmischung bestellen, glutenfreier Pudding, Abholung Kochánov",
         "products": {
             "bramborove_knedliky": "Kartoffelknödelmischung, Kartoffelteig, Gnocchi, KLASA, 5 kg 250 Kč",
             "chlupate_knedliky": "Haarige Knödel, Bosáky, Halušky, Strapačky, 15 Minuten, 5 kg 260 Kč",
@@ -208,13 +208,13 @@ KEYWORDS = {
     "sk": {
         "home": "Jůzlová, zemiakové knedle v prášku, chlpaté knedle, vanilkový puding bez lepku, kakao holandského typu, vanilínový cukor, Kochánov",
         "kdo_jsme": "Jůzlová kto sme, rodinná dielňa, Kochánov, od 2004, KLASA múka",
-        "kde_nas_najdete": "odber Kochánov, rozvoz Vysočina od 5000 Kč, Humpolec Havlíčkův Brod od 1000 Kč",
+        "kde_nas_najdete": "odber Kochánov, dielňa Kochánov 40, vyzdvihnutie Humpolec, Vysočina",
         "velkoobchod": "veľkoobchod Jůzlová, reštaurácie pekárne kaviarne školy zmrzlina, cena podľa množstva",
-        "do_eu": "zásielky Čechom v EÚ, doprava balenie poistenie, Nemecko Rakúsko Slovensko Poľsko",
+        "do_eu": "Jůzlová, knedle v prášku, rodinná dielňa Kochánov, Vysočina",
         "kontakt": "kontakt Jůzlová, Jiřina Jůzlová, Jiří Jůzl, Kochánov 40",
         "ceny": "cenník Jůzlová, cena knedieľ v prášku, puding 60 Kč, kakao 270 Kč",
         "recepty": "recepty Jůzlová, šišky s makom, strapačky, perník, venčeky, pudingové recepty",
-        "faq": "Jůzlová FAQ, ako objednať knedle v prášku, bezlepkový puding, rozvoz Vysočina",
+        "faq": "Jůzlová FAQ, ako objednať knedle v prášku, bezlepkový puding, vyzdvihnutie Kochánov",
         "products": {
             "bramborove_knedliky": "zemiakové knedle v prášku, zemiakové cesto, gnocchi, KLASA, 5 kg 250 Kč",
             "chlupate_knedliky": "chlpaté knedle, bosáky, halušky, strapačky, 15 minút, 5 kg 260 Kč",
@@ -296,7 +296,7 @@ SITEMAP_PRIORITY = {
     "kdo_jsme": 0.7,
     "kde_nas_najdete": 0.7,
     "velkoobchod": 0.8,
-    "do_eu": 0.7,
+    "do_eu": 0.5,
     "kontakt": 0.7,
     "objednavka_cesko": 0.7,
     "vysocina": 0.7,
@@ -308,7 +308,7 @@ SITEMAP_PRIORITY = {
     "velkoobchod_kochanov": 0.7,
     "velkoobchod_praha": 0.7,
     "velkoobchod_brno": 0.7,
-    "velkoobchod_zahranici": 0.6,
+    "velkoobchod_zahranici": 0.5,
 }
 
 PRODUCT_PRIORITY = 0.9
