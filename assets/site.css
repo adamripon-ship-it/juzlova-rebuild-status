@@ -439,7 +439,12 @@ table.price-units td:nth-child(3) { white-space: nowrap; font-weight: 600; }
 .product-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; align-items: center; margin: 1.6rem 0 2.2rem; }
 @media (max-width: 760px) { .product-hero { grid-template-columns: 1fr; } }
 .obj-panel { position: relative; background: var(--gold); border-radius: 28px; aspect-ratio: 1; overflow: hidden; display: grid; place-items: center; padding: 6%; }
-.obj-panel .art { inset: -8%; width: 116%; height: 116%; opacity: .32; }
+/* product pages show the whole photo: the botanical outlines sliced the product (sugar bag in strips) and the
+   pale copy of the outline behind it read as a ghost double. The shaped cut-outs stay on the home page. */
+.obj-panel { padding: 0; background: var(--cream, #f4efe4); }
+.obj-panel .art, .obj-panel .ring { display: none; }
+.obj-panel .lift, .obj-panel .shape { height: 100%; filter: none; }
+.obj-panel .shape { clip-path: none !important; aspect-ratio: auto; --zoom: 1 !important; --zoom-open: 1 !important; }
 .obj-panel .lift { width: 100%; position: relative; z-index: 2; }
 .obj-panel .shape { width: 100%; position: relative; z-index: 2; }
 .product-hero .factbox { margin: 0; }
@@ -447,7 +452,7 @@ table.price-units td:nth-child(3) { white-space: nowrap; font-weight: 600; }
 /* phones: a shorter panel so the price and the call button sit near the top; buttons full width */
 @media (max-width: 760px) {
   .product-hero { gap: 1.4rem; }
-  .obj-panel { aspect-ratio: 4/3; padding: 4% 14%; }
+  .obj-panel { aspect-ratio: 4/3; }
   .product-hero .cta-row .btn { flex: 1 1 100%; }
 }
 .flower { margin: 2.2rem 0 1rem; max-width: 24rem; }
