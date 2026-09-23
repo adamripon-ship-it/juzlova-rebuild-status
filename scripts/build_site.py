@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260917v"
+ASSET_VER = "20260923a"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
