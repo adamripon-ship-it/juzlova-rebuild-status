@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260923a"
+ASSET_VER = "20260923b"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -934,6 +934,14 @@ def nav(L, depth, active, pid):
     return header_inner, backdrop
 
 
+# Footer anchors for Czech local pages whose H1 is a full sentence. The page
+# keeps its H1; the footer only needs a label that fits one line on a phone.
+FOOTER_LABELS = {
+    "objednavka_cesko": "Objednávka po celém Česku",
+    "navstevnikum": "Vyzvednutí po cestě",
+}
+
+
 def footer(L, depth):
     """Reference footer: hairline rule with the logo, link rows, phone, grey
     marks, watermark, and the call-back form (posts to /api/contact)."""
@@ -951,13 +959,21 @@ def footer(L, depth):
         ("faq", ui["nav_faq"]), ("kontakt", ui["nav_contact"]),
     ]
     comp = "".join(f'<a href="{pages}{path_of(lg, k)}">{esc(lbl)}</a>' for k, lbl in company)
-    local = ""
+
+    def group(gid, heading, links):
+        return (f'<div class="fgroup"><h2 class="fh" id="fh-{gid}">{esc(heading)}</h2>'
+                f'<nav aria-labelledby="fh-{gid}">{links}</nav></div>')
+
+    groups = [group("products", ui["footer_products"], prods), group("company", ui["footer_company"], comp)]
     if lg == "cs":
         geo = "".join(
-            f'<a href="{pages}{GEO_SLUGS[k]}/">{esc(AEO_PAGES["cs"][k]["h1"])}</a>' for k in GEO_SLUGS)
+            f'<a href="{pages}{GEO_SLUGS[k]}/">{esc(FOOTER_LABELS.get(k) or AEO_PAGES["cs"][k]["h1"])}</a>'
+            for k in GEO_SLUGS)
         b2b = "".join(
-            f'<a href="{pages}{B2B_SLUGS[k]}/">{esc(AEO_PAGES["cs"][k]["h1"])}</a>' for k in B2B_SLUGS)
-        local = f'<nav class="small" aria-label="{esc(ui.get("footer_kitchens") or "")}">{geo}{b2b}</nav>'
+            f'<a href="{pages}{B2B_SLUGS[k]}/">{esc(FOOTER_LABELS.get(k) or AEO_PAGES["cs"][k]["h1"])}</a>'
+            for k in B2B_SLUGS)
+        groups += [group("local", ui["footer_kitchens"], geo), group("b2b", ui["nav_b2b"], b2b)]
+    links = "".join(groups)
     form = f"""<form class="callback" data-contact-form data-form-type="callback" data-lang="{lg}" data-i18n-success="{esc(ui['cb_ok'])}" data-i18n-error="{esc(ui['form_error'])}" data-i18n-captcha="{esc(ui['form_captcha'])}" data-i18n-sending="{esc(ui['form_sending'])}" data-i18n-need-contact="{esc(ui['cb_err'])}" action="/api/contact" method="post" novalidate>
         <div class="form-top">
           <h3>{esc(ui['cb_h'])}</h3>
@@ -978,11 +994,9 @@ def footer(L, depth):
   <img class="wm" src="{assets}img/icon-512.png" alt="" aria-hidden="true" width="512" height="512" loading="lazy">
   <div class="wrap">
     <div class="rule"><a href="{home}" aria-label="Jůzlová.cz"><img src="{assets}img/logo-wordmark-black.png" alt="Jůzlová" width="650" height="200" loading="lazy"></a></div>
+    <div class="foot-links">{links}</div>
     <div class="foot">
-      <div>
-        <nav aria-label="{esc(ui['footer_company'])}">{comp}</nav>
-        <nav class="small" aria-label="{esc(ui['footer_products'])}">{prods}</nav>
-        {local}
+      <div class="foot-contact">
         <a class="phone" href="{TEL_JIRINA}">+420 728 466 141</a><br>
         <a class="mail" href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a>
         <div class="marks"><span>{PIN_ICON}</span><span>Kochánov 40</span><span>Humpolec</span><span>{esc(ui['marks'])}</span></div>

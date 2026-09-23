@@ -10,9 +10,8 @@
     "rating": 4.8,
     "count": 3,
     "url": "https://www.firmy.cz/detail/12906730-juzlova-kochanov.html",
-    "source": "Seznam Mapy / Firmy.cz (live at build)",
-    "live": true,
-    "review_percentage": 95
+    "source": "cache after fetch error: <urlopen error Tunnel connection failed: 403 Forbidden>",
+    "live": false
   },
   "updated": true
 }
