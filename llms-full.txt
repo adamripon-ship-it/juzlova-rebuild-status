@@ -427,6 +427,42 @@ A: Skořápka z odpalovaného těsta, vanilkový pudingový krém, kroužek kara
 Q: Proč připravit karamelovou šlehačku den předem?
 A: Karamel se smetanou musí v lednici ztuhnout, aby šlehačka držela tvar. Troubu při pečení skořápek neotevírejte — větrníky spadnou.
 
+### Větrníčky s vanilkovým krémem
+url: https://www.juzlova.cz/vetrnicky-s-vanilkovym-kremem-recept/
+prep: PT60M cook: PT30M total: PT90M yield: 30
+summary: Malé větrníčky stříkané hvězdičkou, plněné vanilkovým máslovým krémem a namáčené v bílé cukrové polevě. Asi 30 kousků.
+suroviny:
+- Odpalované těsto: 125 ml mléka
+- 125 ml vody
+- 100 g másla
+- špetka soli
+- 150 g hladké mouky
+- 4–5 vajec pokojové teploty, rozšlehaných
+- Vanilkový máslový krém: 500 ml mléka
+- 80 g našeho vanilkového pudingu v prášku
+- 2 žloutky
+- 80 g cukru krupice
+- 200 g změklého másla
+- 1–2 lžíce rumu (podle chuti)
+- Cukrová poleva: 250 g moučkového cukru
+- 1 lžíce citronové šťávy
+- 1 lžíce rumu
+- 2–3 lžíce horké vody
+postup:
+1. Krém začněte jako první, musí úplně vychladnout. Puding rozmíchejte ve 100 ml studeného mléka se žloutky. Zbylé mléko s cukrem přiveďte k varu, za stálého míchání vlijte pudingovou směs a vařte na mírném ohni 1–2 minuty, až je hustý. Přelijte do mísy, na povrch přitiskněte fólii a nechte vychladnout na pokojovou teplotu.
+2. Mléko, vodu, máslo a sůl přiveďte k varu. Stáhněte plamen, vsypte všechnu mouku najednou a míchejte 2–3 minuty, až se těsto spojí do hladké koule a na dně hrnce zůstane tenký povlak.
+3. Těsto přendejte do mísy a nechte 5–10 minut zchladnout, až je jen vlažné. Po jednom zašlehejte vejce. Poslední vejce přidávejte po troškách: těsto je hotové, když ze stěrky padá v hustém, lesklém „V“. Všechna vejce spotřebovat nemusíte.
+4. Troubu předehřejte na 220 °C (horní a spodní ohřev). Těsto dejte do sáčku s velkou hvězdicovou špičkou a na plech s pečicím papírem stříkejte růžice o průměru 4–5 cm s rozestupy asi 3 cm.
+5. Pečte 10 minut na 220 °C, pak snižte na 180 °C a pečte ještě 15–20 minut, až jsou větrníčky sytě zlatavé a lehké. Troubu prvních 20 minut neotvírejte, jinak větrníčky spadnou.
+6. Ještě teplé větrníčky rozřízněte vodorovně nožem se zoubky a nechte úplně vychladnout na mřížce.
+7. Změklé máslo šlehejte 3–4 minuty do světlé pěny. Po lžících přidávejte vychladlý puding stejné teploty a šlehejte dohladka. Nakonec vmíchejte rum.
+8. Moučkový cukr prosejte a vymíchejte s citronovou šťávou, rumem a horkou vodou do husté polevy, která pomalu stéká ze lžíce.
+9. Do spodních polovin nastříkejte krém hvězdicovou špičkou tak, aby přesahoval okraj. Vršky namočte do polevy, nechte okapat a přiklopte. Před podáváním nechte v chladu aspoň hodinu ztuhnout.
+Q: Jaký je rozdíl mezi větrníčky a věnečky?
+A: Těsto je stejné, odpalované. Větrníčky se stříkají hvězdičkou jako kulaté růžice 4–5 cm, věnečky jako kroužky. Tyto větrníčky plníme vanilkovým máslovým krémem z našeho pudingu a namáčíme v bílé cukrové polevě.
+Q: Proč větrníčky po upečení spadnou?
+A: Nejčastěji kvůli otevřené troubě nebo krátkému pečení. Pečte 10 minut na 220 °C, pak 15–20 minut na 180 °C, a prvních 20 minut troubu neotvírejte. Hotové jsou sytě zlatavé a lehké.
+
 ### Irský sticky toffee pudding
 url: https://www.juzlova.cz/irsky-sticky-toffee-pudding-recept/
 image: https://www.juzlova.cz/img/irsky-sticky-toffee-pudding.webp
