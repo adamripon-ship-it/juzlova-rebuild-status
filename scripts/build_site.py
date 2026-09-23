@@ -1678,7 +1678,7 @@ def build_home(L):
     html_out = shell(L, title=L["meta"]["home_title"], desc=L["meta"]["home_desc"],
                      pid="home", depth=depth, active="home", body=body,
                      keywords=keywords_for(lg, "home"), meta_kind="home", extra_head=hero_preload,
-                     defs=defs_html(("m-cocoa", "m-vanilla", "m-potato"), sticker=True),
+                     defs=defs_html(tuple(f"m-{m}" for m in PRODUCT_MASK.values()), sticker=True),
                      jsonld=[
                          {
                              "@context": "https://schema.org",
