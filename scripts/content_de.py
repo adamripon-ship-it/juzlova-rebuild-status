@@ -50,7 +50,7 @@ LANG = {
         "nl_h": "Rezepte und Neuigkeiten per E-Mail",
         "nl_kicker": "Newsletter",
         "nl_lead": "Gelegentlich ein neues Rezept mit unseren Mischungen und saisonale Tipps vor Weihnachten und Ostern. Abmeldung mit einem Klick.",
-        "nl_consent": "Ich stimme dem Erhalt von Neuigkeiten per E-Mail zu. Die Werkstatt Jůzlová (juzlj@seznam.cz) erhält meine E-Mail-Adresse. Widerruf jederzeit per E-Mail.",
+        "nl_consent": "Ich stimme dem Erhalt von Neuigkeiten per E-Mail zu. Die Werkstatt Jůzlová erhält meine E-Mail-Adresse. Widerruf jederzeit per E-Mail.",
         "nl_submit": "Rezepte abonnieren",
         "nl_success": "Danke. Sie sind angemeldet.",
         "nl_need_email": "Bitte E-Mail-Adresse eintragen und die Zustimmung ankreuzen.",
@@ -178,7 +178,7 @@ LANG = {
                 ("p", "Das Weizenmehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt, und trägt das tschechische Gütesiegel KLASA. Die Mühle gehört unserer weiteren Familie, die sie auch führt — wir wissen, was in den Beutel kommt."),
                 ("h2", "Was wir nicht tun"),
                 ("ul", [
-                    "Kein Onlineshop. Sie bestellen telefonisch, per E-Mail oder Formular.",
+                    "Kein Onlineshop. Sie bestellen telefonisch oder über das Formular.",
                     "Keine Muster, keine Verkostung.",
                     "Keine erfundenen Sterne: Die Bewertungen stammen aus unseren öffentlichen Profilen bei Google und Firmy.cz.",
                     "Wir antworten auf Tschechisch; für Deutsch nutzen wir bei Bedarf eine Übersetzungshilfe.",
@@ -212,7 +212,7 @@ LANG = {
         },
         "kontakt": {
             "title": "Kontakt Jůzlová — Kochánov 40, Tschechien, täglich 8–19 Uhr",
-            "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931, juzlj@seznam.cz. Werkstatt Kochánov 40, 582 53, Tschechien. Abholung nach Absprache; Pakete nach DE/AT.",
+            "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931. Werkstatt Kochánov 40, 582 53, Tschechien. Abholung nach Absprache; Pakete nach DE/AT.",
             "nav": "Kontakt",
             "h1": "Rufen Sie Jiřina oder Jiří an — täglich 8–19 Uhr klären wir Bestellung und Abholung",
             "sub": "Auch samstags und sonntags, immer nach Absprache. Wir antworten auf Tschechisch; für Deutsch nutzen wir bei Bedarf eine Übersetzungshilfe.",

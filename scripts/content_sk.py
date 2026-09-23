@@ -49,7 +49,7 @@ LANG = {
         "nl_h": "Recepty a novinky e-mailom",
         "nl_kicker": "Novinky",
         "nl_lead": "Občas pošleme nový recept z našich zmesí a sezónne tipy pred Vianocami a Veľkou nocou. Odhlásite sa jedným kliknutím.",
-        "nl_consent": "Súhlasím so zasielaním noviniek e-mailom. Adresu dostane Jůzlová s.r.o. (juzlj@seznam.cz). Súhlas odvoláte e-mailom.",
+        "nl_consent": "Súhlasím so zasielaním noviniek e-mailom. Adresu dostane Jůzlová s.r.o. Súhlas odvoláte e-mailom.",
         "nl_submit": "Prihlásiť sa na odber receptov",
         "nl_success": "Ďakujeme. Ste prihlásení.",
         "nl_need_email": "Vyplňte e-mail a zaškrtnite súhlas.",
@@ -177,7 +177,7 @@ LANG = {
                 ("p", "Pšeničná múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne, s českou značkou kvality KLASA. Mlyn vlastní a vedie naša širšia rodina, takže vieme, čo do vreca sypeme."),
                 ("h2", "Čo nerobíme"),
                 ("ul", [
-                    "Nemáme e-shop. Objednávate telefónom, e-mailom alebo formulárom.",
+                    "Nemáme e-shop. Objednávate telefónom alebo formulárom.",
                     "Neposkytujeme vzorky ani ochutnávky.",
                     "Nevymýšľame si hviezdičky — hodnotenia berieme zo živých profilov Google a Firmy.cz.",
                     "Odpovedáme po česky.",
@@ -211,7 +211,7 @@ LANG = {
         },
         "kontakt": {
             "title": "Kontakt Jůzlová — Kochánov 40, Česko, denne 8–19",
-            "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931, juzlj@seznam.cz. Dielňa Kochánov 40, 582 53, Vysočina. Odber po dohode; zásielky na Slovensko.",
+            "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931. Dielňa Kochánov 40, 582 53, Vysočina. Odber po dohode; zásielky na Slovensko.",
             "nav": "Kontakt",
             "h1": "Zavolajte Jiřine alebo Jiřímu — denne 8–19, dohodneme objednávku aj odber",
             "sub": "Vrátane sobôt a nedieľ, vždy po predchádzajúcej dohode. Odpovedáme po česky.",

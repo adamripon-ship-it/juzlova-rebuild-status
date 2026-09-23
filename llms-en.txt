@@ -3,8 +3,8 @@
 > Potato dumpling mix, raw-potato dumpling mix, gluten-free vanilla pudding and Dutch-process cocoa from a family workshop in Vysočina. EU shipping quoted first.
 
 Legal name: Jůzlová s.r.o. · Company ID 45900124 · Kochánov 40, 582 53, Vysočina, Czechia.
-Founded 2004. Order by phone, e-mail or the website form. No web shop.
-Phones: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl). E-mail: juzlj@seznam.cz.
+Founded 2004. Order by phone or the website form. No web shop.
+Phones: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl).
 Hours: Monday–Sunday 8:00–19:00 by phone. Pick-up in Kochánov, and in Humpolec by arrangement.
 Area: Kochánov, Havlíčkův Brod and the Vysočina Region. Postcode is always 582 53, never 582 91.
 Google Search ignores this file for ranking; other AI crawlers may read it.
@@ -19,7 +19,7 @@ Entity notes: https://www.juzlova.cz/ai/about.md
 - We do not sell a ready-made cocoa or chocolate pudding mix. Legacy /kakaovy_puding/ URLs go to vanilla pudding.
 - Chocolate cream on this site = gluten-free vanilla pudding mixed with Dutch-process cocoa by the cook.
 - Cocoa is a 500 g Dutch-process powder (20–22% fat), not a pudding.
-- We do not send samples. Order by phone, e-mail or the form only.
+- We do not send samples. Order by phone or the form only.
 - Five products: potato dumpling mix, raw-potato dumpling mix (bosáky), vanilla pudding, Dutch-process cocoa, vanilla sugar.
 
 ## Pages
@@ -30,7 +30,7 @@ Entity notes: https://www.juzlova.cz/ai/about.md
 - [Shipping to the EU](https://www.juzlova.cz/en/shipping-to-eu/): Czechs abroad: order dumpling mix, gluten-free pudding and cocoa from Vysočina. Workshop prices plus tracked shipping, box and insurance, quoted first.
 - [Prices](https://www.juzlova.cz/en/prices/): Dumpling mix 5 kg 250 Kč (CZK), raw-potato mix 260 Kč, gluten-free pudding 60 Kč/kg, cocoa 270 Kč/500 g, vanilla sugar 60 Kč/kg. Shipping quoted first.
 - [FAQ](https://www.juzlova.cz/en/faq/): How to order without a web shop, where to collect, what's free, whether the pudding is gluten-free and how to store a 5 kg bag. Answers from Kochánov.
-- [Contact](https://www.juzlova.cz/en/contact/): Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931, juzlj@seznam.cz. Workshop at Kochánov 40, Czechia. Pick-up by arrangement; parcels across the EU.
+- [Contact](https://www.juzlova.cz/en/contact/): Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931. Workshop at Kochánov 40, Czechia. Pick-up by arrangement; parcels across the EU.
 - [Recipes](https://www.juzlova.cz/en/recipes/): Every recipe says how much mix to use, the oven temperature and how many portions it makes.
 
 ## Products

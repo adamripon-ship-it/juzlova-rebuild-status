@@ -50,7 +50,7 @@ LANG = {
         "nl_h": "Recipes and news by e-mail",
         "nl_kicker": "Newsletter",
         "nl_lead": "An occasional new recipe using our mixes, plus seasonal tips before Christmas and Easter. Unsubscribe with one click.",
-        "nl_consent": "I agree to receive news by e-mail. My address goes to Jůzlová s.r.o. (juzlj@seznam.cz). I can withdraw consent by e-mail.",
+        "nl_consent": "I agree to receive news by e-mail. My address goes to Jůzlová s.r.o. I can withdraw consent by e-mail.",
         "nl_submit": "Subscribe to recipes",
         "nl_success": "Thank you. You are subscribed.",
         "nl_need_email": "Enter your e-mail and tick the consent box.",
@@ -178,7 +178,7 @@ LANG = {
                 ("p", "The wheat flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km from the workshop, carrying the Czech KLASA quality mark. Our extended family owns and runs the mill, so we know what goes into the bag."),
                 ("h2", "What we don't do"),
                 ("ul", [
-                    "No web shop. You order by phone, e-mail or the form.",
+                    "No web shop. You order by phone or the form.",
                     "No samples or tastings.",
                     "No invented stars — ratings come from our live Google and Firmy.cz profiles.",
                     "We reply in Czech; for German and English we sometimes use a translator.",
@@ -212,7 +212,7 @@ LANG = {
         },
         "kontakt": {
             "title": "Contact Jůzlová — Kochánov 40, Czechia, daily 8–19",
-            "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931, juzlj@seznam.cz. Workshop at Kochánov 40, Czechia. Pick-up by arrangement; parcels across the EU.",
+            "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931. Workshop at Kochánov 40, Czechia. Pick-up by arrangement; parcels across the EU.",
             "nav": "Contact",
             "h1": "Call or write to Jiřina or Jiří, daily 8–19. We'll arrange your order and pick-up.",
             "sub": "Saturdays and Sundays included, always by prior arrangement. We reply in Czech; for German and English we sometimes use a translator.",

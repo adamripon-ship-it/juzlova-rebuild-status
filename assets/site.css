@@ -524,8 +524,6 @@ footer.site .wm { position: absolute; left: -2%; bottom: -14%; width: 240px; hei
 .foot .phone { font: 500 1.9rem/1.2 var(--sans); color: var(--ink); text-decoration: none; }
 .foot .phone:hover { text-decoration: underline; text-decoration-thickness: 2px; }
 .foot .hours { color: var(--f-soft); font-size: .95rem; }
-.foot .mail { display: inline-block; color: var(--ink); text-decoration: none; font-size: 1.1rem; }
-.foot .mail:hover { text-decoration: underline; }
 .marks { display: flex; gap: .2rem 1.4rem; margin-top: .6rem; color: var(--f-soft); font-weight: 500; letter-spacing: .02em; align-items: center; flex-wrap: wrap; }
 .marks svg { width: 1.3rem; height: 1.3rem; fill: var(--ink); display: block; }
 .marks .addr { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; color: var(--ink); text-decoration: underline; text-decoration-color: var(--f-line); text-underline-offset: 4px; }
@@ -559,7 +557,6 @@ footer.site .fine a:hover { color: var(--ink); text-decoration-color: var(--ink)
   .foot { margin-top: 0; gap: 1.4rem; }
   .foot .phone { font-size: 1.5rem; }
   .foot .call { margin: 0 0 .2rem; }
-  .foot .mail { font-size: 1rem; }
   .marks { margin-top: 0; font-size: .9rem; }
   .foot-links { display: block; padding: 0; border-bottom: 1px solid var(--f-line); }
   .foot-links .fgroup { border-top: 1px solid var(--f-line); }

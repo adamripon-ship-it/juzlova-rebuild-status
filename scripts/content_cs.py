@@ -51,7 +51,7 @@ LANG = {
         "nl_h": "Recepty a novinky e-mailem",
         "nl_kicker": "Novinky",
         "nl_lead": "Občas pošleme nový recept ze směsí a sezónní tipy před Vánoci a Velikonocemi. Odhlásíte se jedním kliknutím.",
-        "nl_consent": "Souhlasím se zasíláním novinek e-mailem. Adresu dostane Jůzlová s.r.o., juzlj@seznam.cz. Souhlas odvoláte e-mailem.",
+        "nl_consent": "Souhlasím se zasíláním novinek e-mailem. Adresu dostane Jůzlová s.r.o. Souhlas odvoláte e-mailem.",
         "nl_submit": "Přihlásit se k receptům",
         "nl_success": "Děkujeme. Jste přihlášeni k novinkám.",
         "nl_need_email": "Vyplňte e-mail a zaškrtněte souhlas.",
@@ -179,7 +179,7 @@ LANG = {
                 ("p", "Pšeničná mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dílny, se značkou KLASA. Mlýn vlastní a vede naše širší rodina, takže víme, co do pytle sypeme."),
                 ("h2", "Co neděláme"),
                 ("ul", [
-                    "Nemáme e-shop. Objednáváte telefonem, e-mailem nebo formulářem.",
+                    "Nemáme e-shop. Objednáváte telefonem nebo formulářem.",
                     "Nedáváme vzorky ani ochutnávky.",
                     "Nevymýšlíme si hvězdičky — hodnocení bereme z živých profilů Google a Firmy.cz.",
                     "Odpovídáme česky; s němčinou si pomáháme překladačem.",
@@ -213,7 +213,7 @@ LANG = {
         },
         "kontakt": {
             "title": "Kontakt Jůzlová — Kochánov 40, telefon denně 8–19",
-            "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931, juzlj@seznam.cz. Dílna Kochánov 40, 582 53, 12 km od Havlíčkova Brodu. Odběr i v Humpolci po domluvě.",
+            "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931. Dílna Kochánov 40, 582 53, 12 km od Havlíčkova Brodu. Odběr i v Humpolci po domluvě.",
             "nav": "Kontakt",
             "h1": "Zavolejte Jiřině nebo Jiřímu — denně 8–19, domluvíme objednávku i odběr",
             "sub": "Včetně sobot a nedělí, vždy po předchozí domluvě. Odpovídáme česky.",
