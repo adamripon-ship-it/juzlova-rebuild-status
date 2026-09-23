@@ -926,7 +926,6 @@ def nav(L, depth, active, pid):
   {a('ceny', ui['nav_prices'])}
   {a('recepty', ui['nav_recipes'])}
   {a('velkoobchod', ui['nav_b2b'])}
-  {a('do_eu', ui['nav_d2c'])}
   {a('kontakt', ui['nav_contact'])}
   {langsel}
 </nav>"""
@@ -955,7 +954,7 @@ def footer(L, depth, pid="home"):
         for k in PRODUCT_SLUGS)
     company = [
         ("kdo_jsme", ui["nav_about"]), ("ceny", ui["nav_prices"]), ("recepty", ui["nav_recipes"]),
-        ("kde_nas_najdete", ui["nav_delivery"]), ("velkoobchod", ui["nav_b2b"]), ("do_eu", ui["nav_d2c"]),
+        ("kde_nas_najdete", ui["nav_delivery"]), ("velkoobchod", ui["nav_b2b"]),
         ("faq", ui["nav_faq"]), ("kontakt", ui["nav_contact"]),
     ]
     comp = "".join(f'<a href="{pages}{path_of(lg, k)}">{esc(lbl)}</a>' for k, lbl in company)
@@ -1356,7 +1355,6 @@ def aeo_links_html(L, kind, depth):
         heading = ui.get("geo_hub") or ""
         extra = [
             (path_of(lg, "kde_nas_najdete"), ui.get("nav_delivery") or ""),
-            (path_of(lg, "do_eu"), ui.get("nav_d2c") or ""),
         ]
     items = []
     for key, slug in slugs.items():
@@ -1677,7 +1675,6 @@ def build_home(L):
       <h2 class="sec">{esc(ui['deliver_h2'])}</h2>
       <ul class="deliver-list">{deliver_items}</ul>
       {cta_html(L, depth, ("deliver_btn", "kde_nas_najdete", "nav_delivery"))}
-      <p>{more_link(f"{pages}{path_of(lg, 'do_eu')}", ui['sec_d2c'])}</p>
     </div>
     <div class="rv" id="recenze">{reviews_html(L, depth)}</div>
   </div>

@@ -16,19 +16,15 @@
     },
     {
       "question": "Do I pay in advance or on collection?",
-      "answer": "For pick-up and delivery you pay on hand-over. For parcels and EU shipments we send the total first and ship once you approve it."
+      "answer": "For pick-up and delivery you pay on hand-over. If we post a parcel, we give you the total first and send it only once you agree."
     },
     {
       "question": "When is delivery free?",
       "answer": "To Humpolec and Havlíčkův Brod from 1000 Kč, to Jihlava from 3000 Kč, across the rest of Vysočina from 5000 Kč."
     },
     {
-      "question": "Do you send parcels across Czechia?",
-      "answer": "Yes. We quote shipping in advance by weight and destination; you may also use your own courier."
-    },
-    {
-      "question": "Do you ship abroad?",
-      "answer": "Yes: Germany, Austria, Slovakia, Poland and elsewhere in the EU. You pay shipping, box, insurance and bubble wrap; you see the total before we send."
+      "question": "Can you post a parcel?",
+      "answer": "On request, within Czechia or abroad, though most customers come and collect. You pay the full postage, box and insurance, and we agree the total first. You may also send your own courier."
     },
     {
       "question": "What is the dumpling mix made of?",
@@ -75,19 +71,15 @@
       },
       {
         "question": "Platím předem, nebo při převzetí?",
-        "answer": "Při vyzvednutí a rozvozu platíte při převzetí. U balíků a zásilek do EU pošleme celkovou částku předem a odešleme po jejím odsouhlasení."
+        "answer": "Při vyzvednutí a rozvozu platíte při převzetí. Když zboží posíláme balíkem, řekneme celkovou částku předem a odešleme až po vašem souhlasu."
       },
       {
         "question": "Kdy je rozvoz zdarma?",
         "answer": "Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč."
       },
       {
-        "question": "Posíláte balíky po celém Česku?",
-        "answer": "Ano. Dopravu naceníme předem podle váhy a místa; můžete použít i vlastního dopravce."
-      },
-      {
-        "question": "Posíláte do zahraničí?",
-        "answer": "Ano, do Německa, Rakouska, na Slovensko, do Polska a jinam v EU. Platíte dopravu, krabici, pojištění a bublinkovou fólii; částku vidíte před odesláním."
+        "question": "Posíláte i balíkem?",
+        "answer": "Na požádání ano, po Česku i do zahraničí. Většina zákazníků si ale pro zboží přijede. Poštovné, krabici a pojištění platíte celé vy a celkovou částku domluvíme předem. Můžete poslat i vlastního dopravce."
       },
       {
         "question": "Z čeho jsou knedlíky v prášku?",
@@ -133,19 +125,15 @@
       },
       {
         "question": "Do I pay in advance or on collection?",
-        "answer": "For pick-up and delivery you pay on hand-over. For parcels and EU shipments we send the total first and ship once you approve it."
+        "answer": "For pick-up and delivery you pay on hand-over. If we post a parcel, we give you the total first and send it only once you agree."
       },
       {
         "question": "When is delivery free?",
         "answer": "To Humpolec and Havlíčkův Brod from 1000 Kč, to Jihlava from 3000 Kč, across the rest of Vysočina from 5000 Kč."
       },
       {
-        "question": "Do you send parcels across Czechia?",
-        "answer": "Yes. We quote shipping in advance by weight and destination; you may also use your own courier."
-      },
-      {
-        "question": "Do you ship abroad?",
-        "answer": "Yes: Germany, Austria, Slovakia, Poland and elsewhere in the EU. You pay shipping, box, insurance and bubble wrap; you see the total before we send."
+        "question": "Can you post a parcel?",
+        "answer": "On request, within Czechia or abroad, though most customers come and collect. You pay the full postage, box and insurance, and we agree the total first. You may also send your own courier."
       },
       {
         "question": "What is the dumpling mix made of?",
@@ -191,19 +179,15 @@
       },
       {
         "question": "Zahle ich vorab oder bei Übergabe?",
-        "answer": "Abholung und Lieferung: bei Übergabe. Pakete und EU-Sendungen: wir nennen die Summe vorab und versenden nach Ihrer Zusage."
+        "answer": "Abholung und Lieferung: bei Übergabe. Beim Paket nennen wir die Gesamtsumme vorab und versenden erst nach Ihrer Zusage."
       },
       {
         "question": "Wann ist die Lieferung kostenlos?",
-        "answer": "Nach Humpolec und Havlíčkův Brod ab 1000 Kč, nach Jihlava ab 3000 Kč, in der übrigen Vysočina ab 5000 Kč. Für Küchen in Brünn ab 5000 Kč."
+        "answer": "Nach Humpolec und Havlíčkův Brod ab 1000 Kč, nach Jihlava ab 3000 Kč, in der übrigen Vysočina ab 5000 Kč."
       },
       {
-        "question": "Versenden Sie Pakete in ganz Tschechien?",
-        "answer": "Ja. Die Versandkosten nennen wir vorab nach Gewicht und Ort; Sie können auch einen eigenen Spediteur schicken."
-      },
-      {
-        "question": "Versenden Sie ins Ausland?",
-        "answer": "Ja: Deutschland, Österreich, Slowakei, Polen und weitere EU-Länder. Sie zahlen Versand, Karton, Versicherung und Luftpolsterfolie; die Summe sehen Sie vor dem Versand."
+        "question": "Verschicken Sie auch Pakete?",
+        "answer": "Auf Wunsch ja, innerhalb Tschechiens oder ins Ausland; die meisten Kunden holen aber ab. Porto, Karton und Versicherung zahlen Sie vollständig, die Gesamtsumme vereinbaren wir vorab. Sie können auch einen eigenen Spediteur schicken."
       },
       {
         "question": "Woraus besteht die Knödelmischung?",
@@ -249,15 +233,15 @@
       },
       {
         "question": "Platím vopred, alebo pri prevzatí?",
-        "answer": "Pri vyzdvihnutí a rozvoze platíte pri prevzatí. Pri balíkoch a zásielkach na Slovensko pošleme celkovú sumu vopred a odošleme po jej odsúhlasení."
+        "answer": "Pri vyzdvihnutí a rozvoze platíte pri prevzatí. Keď tovar posielame balíkom, povieme celkovú sumu vopred a odošleme až po vašom súhlase."
       },
       {
         "question": "Kedy je rozvoz zadarmo?",
         "answer": "Do Humpolca a Havlíčkovho Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zvyšku Vysočiny od 5000 Kč."
       },
       {
-        "question": "Posielate balíky na Slovensko?",
-        "answer": "Áno. Dopravu, krabicu, poistenie a bublinkovú fóliu naceníme vopred; sumu vidíte pred odoslaním."
+        "question": "Posielate aj balíkom, napríklad na Slovensko?",
+        "answer": "Na požiadanie áno, hoci väčšina zákazníkov si pre tovar príde. Poštovné, krabicu a poistenie platíte celé vy a celkovú sumu dohodneme vopred."
       },
       {
         "question": "Môžem poslať vlastného dopravcu?",
