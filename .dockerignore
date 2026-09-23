@@ -22,3 +22,4 @@ package.json
 package-lock.json
 deno.lock
 __forms.html
+Dockerfile

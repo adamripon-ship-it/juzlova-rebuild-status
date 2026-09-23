@@ -12,7 +12,6 @@ founded: 2004
 address: Kochánov 40, 582 53, Vysočina, Česko (12 km od Havlíčkova Brodu)
 geo: 49.53367, 15.54002
 people: Jiřina Jůzlová +420 728 466 141; Jiří Jůzl +420 607 629 931
-email: juzlj@seznam.cz
 hours: pondělí–neděle 08:00–19:00 po telefonické domluvě
 order: telefon, e-mail nebo formulář na webu; bez e-shopu
 pickup_free: Kochánov 40, 582 53; Humpolec u Pivovaru Bernard po dohodě
@@ -470,11 +469,11 @@ A: Mimo plotnu — delší var by vyhnal alkohol a ztlumil chuť likéru. Vody j
 ## Místa a velkoobchod
 ### Objednávka po celém Česku: zavoláte nebo napíšete, my domluvíme vyzvednutí, rozvoz nebo balík
 url: https://www.juzlova.cz/objednavka/
-fact: Objednáte telefonem, e-mailem nebo formulářem. Vyzvednutí v Kochánově a Humpolci zdarma, rozvoz po Vysočině, balík kamkoli po Česku. Doprava zvlášť.
+fact: Objednáte telefonem nebo formulářem. Vyzvednutí v Kochánově a Humpolci zdarma, rozvoz po Vysočině, balík kamkoli po Česku. Doprava zvlášť.
 Q: Objednáváte po celém Česku?
 A: Ano. Dílna je na Vysočině; zásilku nebo rozvoz domluvíme. Cena na webu je jen za zboží.
 Q: Máte e-shop?
-A: Ne. Objednávka telefonem, e-mailem nebo formulářem.
+A: Ne. Objednávka telefonem nebo formulářem.
 Q: Kdy je rozvoz zdarma?
 A: Po Vysočině od 5000 Kč. Do Humpolce a Havlíčkova Brodu od 1000 Kč. Do Jihlavy od 3000 Kč.
 Q: Posíláte vzorky?
@@ -626,7 +625,7 @@ A: Ne. Češi v EU mají vlastní stránku pro domácnosti. Tady jsou provozovny
 
 ## FAQ
 Q: Jak u vás objednám, když nemáte e-shop?
-A: Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), napíšete na juzlj@seznam.cz nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme.
+A: Zavoláte Jiřině (+420 728 466 141) nebo Jiřímu (+420 607 629 931), nebo vyplníte formulář. Řeknete, co a kolik chcete a kde jste; zbytek domluvíme.
 
 Q: Kde si zboží vyzvednu zdarma?
 A: V dílně Kochánov 40, 582 53, nebo v Humpolci v okolí Pivovaru Bernard. Vždy po telefonické domluvě, denně 8:00–19:00.

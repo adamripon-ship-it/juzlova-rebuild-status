@@ -1004,7 +1004,6 @@ def footer(L, depth, pid="home"):
     <div class="foot">
       <div class="foot-contact">
         <p class="call"><a class="phone" href="{TEL_JIRINA}">+420 728 466 141</a> <span class="hours">{esc(ui['open_hours_short'])}</span></p>
-        <a class="mail" href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a>
         <div class="marks"><a class="addr" href="{MAP_DIR}" target="_blank" rel="noopener">{PIN_ICON}<span>Kochánov 40, Humpolec</span></a><span>{esc(ui['marks'])}</span></div>
       </div>
       <div class="foot-links">{links}</div>
@@ -1038,7 +1037,6 @@ def org_jsonld():
         },
         "image": BASE + "/img/dilna-panorama.webp",
         "foundingDate": "2004",
-        "email": "juzlj@seznam.cz",
         "telephone": ["+420728466141", "+420607629931"],
         "vatID": "CZ45900124",
         "taxID": "45900124",
@@ -1095,8 +1093,7 @@ def org_jsonld():
                 "@type": "ContactPoint",
                 "contactType": "sales",
                 "telephone": "+420728466141",
-                "email": "juzlj@seznam.cz",
-                "availableLanguage": ["cs", "en", "de", "sk"],
+                        "availableLanguage": ["cs", "en", "de", "sk"],
                 "areaServed": "CZ",
                 "hoursAvailable": {
                     "@type": "OpeningHoursSpecification",
@@ -1137,7 +1134,7 @@ def org_jsonld():
             "Rodinná dílna potravinářských směsí od roku 2004 v Kochánově na Vysočině: "
             "bramborové knedlíky v prášku, chlupaté knedlíky (bosáky), vanilkový puding "
             "bez lepku, vanilínový cukr a kakao holandského typu (20–22 % tuku). "
-            "Objednávky telefonem, e-mailem nebo formulářem. Vyzvednutí v Kochánově a Humpolci."
+            "Objednávky telefonem nebo formulářem. Vyzvednutí v Kochánově a Humpolci."
         ),
     }
 
@@ -1390,8 +1387,8 @@ def render_body(L, body_spec, depth, product=None):
             out.append("<ol>" + "".join(f"<li>{esc(x)}</li>" for x in val) + "</ol>")
         elif kind == "contacts":
             out.append("""<div class="factbox"><dl>
-<dt>Jiřina Jůzlová</dt><dd>Kochánov 40, 582 53 · <a href="tel:+420728466141">+420 728 466 141</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a></dd>
-<dt>Jiří Jůzl</dt><dd>Kochánov 40, 582 53 · <a href="tel:+420607629931">+420 607 629 931</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a></dd>
+<dt>Jiřina Jůzlová</dt><dd>Kochánov 40, 582 53 · <a href="tel:+420728466141">+420 728 466 141</a></dd>
+<dt>Jiří Jůzl</dt><dd>Kochánov 40, 582 53 · <a href="tel:+420607629931">+420 607 629 931</a></dd>
 </dl></div>""")
         elif kind == "pricetable":
             out.append(price_board_html(L, depth))
@@ -1835,7 +1832,7 @@ def build_product(L, key):
 {panel}
 <div>
 <div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{esc(pr['price'])}</strong> · {esc(ui['price_pickup_badge'])}</dd>
-<dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · <a href="mailto:juzlj@seznam.cz">juzlj@seznam.cz</a> · {esc(ui['open_hours_short'])}</dd></dl>
+<dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · {esc(ui['open_hours_short'])}</dd></dl>
 {price_note_html(L)}</div>
 {cta_html(L, depth, ("cta_order", "kde_nas_najdete", "cta_pickup"))}
 </div>
@@ -2413,8 +2410,8 @@ Sitemap: {BASE}/sitemap-sk.xml
 _LLMS_COPY = {
     "cs": {
         "legal": "Právní název: Jůzlová s.r.o. · IČO 45900124 · Kochánov 40, 582 53, Vysočina, Česko.",
-        "order": "Založeno 2004. Objednávka telefonem, e-mailem nebo formulářem na webu. Bez e-shopu.",
-        "phones": "Telefony: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl). E-mail: juzlj@seznam.cz.",
+        "order": "Založeno 2004. Objednávka telefonem nebo formulářem na webu. Bez e-shopu.",
+        "phones": "Telefony: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl).",
         "hours": "Otevírací doba: pondělí–neděle 8:00–19:00 po telefonu. Vyzvednutí v Kochánově, po dohodě i v Humpolci.",
         "area": "Oblast: Kochánov, Havlíčkův Brod a kraj Vysočina. PSČ vždy 582 53, nikoli 582 91.",
         "index": "Hlavní český přehled:",
@@ -2424,7 +2421,7 @@ _LLMS_COPY = {
         "w1": "Neprodáváme hotovou kakaovou ani čokoládovou pudingovou směs. Staré adresy /kakaovy_puding/ vedou na vanilkový puding.",
         "w2": "Čokoládový krém na webu = vanilkový puding bez lepku smíchaný s kakaem holandského typu.",
         "w3": "Kakao je 500 g prášek holandského typu (20–22 % tuku), ne puding.",
-        "w4": "Nevydáváme vzorky. Objednávka jen telefonem, e-mailem nebo formulářem.",
+        "w4": "Nevydáváme vzorky. Objednávka jen telefonem nebo formulářem.",
         "w5": "Pět výrobků: bramborové knedlíky v prášku, chlupaté knedlíky (bosáky), vanilkový puding, kakao holandského typu, vanilínový cukr.",
         "pages": "Stránky",
         "products": "Výrobky",
@@ -2445,8 +2442,8 @@ _LLMS_COPY = {
     },
     "en": {
         "legal": "Legal name: Jůzlová s.r.o. · Company ID 45900124 · Kochánov 40, 582 53, Vysočina, Czechia.",
-        "order": "Founded 2004. Order by phone, e-mail or the website form. No web shop.",
-        "phones": "Phones: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl). E-mail: juzlj@seznam.cz.",
+        "order": "Founded 2004. Order by phone or the website form. No web shop.",
+        "phones": "Phones: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl).",
         "hours": "Hours: Monday–Sunday 8:00–19:00 by phone. Pick-up in Kochánov, and in Humpolec by arrangement.",
         "area": "Area: Kochánov, Havlíčkův Brod and the Vysočina Region. Postcode is always 582 53, never 582 91.",
         "index": "Main Czech index:",
@@ -2456,7 +2453,7 @@ _LLMS_COPY = {
         "w1": "We do not sell a ready-made cocoa or chocolate pudding mix. Legacy /kakaovy_puding/ URLs go to vanilla pudding.",
         "w2": "Chocolate cream on this site = gluten-free vanilla pudding mixed with Dutch-process cocoa by the cook.",
         "w3": "Cocoa is a 500 g Dutch-process powder (20–22% fat), not a pudding.",
-        "w4": "We do not send samples. Order by phone, e-mail or the form only.",
+        "w4": "We do not send samples. Order by phone or the form only.",
         "w5": "Five products: potato dumpling mix, raw-potato dumpling mix (bosáky), vanilla pudding, Dutch-process cocoa, vanilla sugar.",
         "pages": "Pages",
         "products": "Products",
@@ -2477,8 +2474,8 @@ _LLMS_COPY = {
     },
     "de": {
         "legal": "Rechtsname: Jůzlová s.r.o. · IČO 45900124 · Kochánov 40, 582 53, Vysočina, Tschechien.",
-        "order": "Gegründet 2004. Bestellung telefonisch, per E-Mail oder über das Formular. Kein Onlineshop.",
-        "phones": "Telefone: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl). E-Mail: juzlj@seznam.cz.",
+        "order": "Gegründet 2004. Bestellung telefonisch oder über das Formular. Kein Onlineshop.",
+        "phones": "Telefone: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl).",
         "hours": "Öffnungszeiten: Montag–Sonntag 8:00–19:00 Uhr telefonisch. Abholung in Kochánov, nach Absprache auch in Humpolec.",
         "area": "Gebiet: Kochánov, Havlíčkův Brod und Region Vysočina. PLZ immer 582 53, niemals 582 91.",
         "index": "Tschechischer Hauptindex:",
@@ -2488,7 +2485,7 @@ _LLMS_COPY = {
         "w1": "Wir verkaufen keine fertige Kakao- oder Schokoladenpuddingmischung. Alte /kakaovy_puding/-Adressen führen zum Vanillepudding.",
         "w2": "Schokoladencreme auf dieser Website = glutenfreier Vanillepudding, vom Koch mit Kakao holländischer Art gemischt.",
         "w3": "Kakao ist 500 g Pulver holländischer Art (20–22 % Fett), kein Pudding.",
-        "w4": "Wir versenden keine Muster. Bestellung nur telefonisch, per E-Mail oder Formular.",
+        "w4": "Wir versenden keine Muster. Bestellung nur telefonisch oder über das Formular.",
         "w5": "Fünf Produkte: Kartoffelknödelmischung, Haarige Knödel (Bosáky), Vanillepudding, Kakao holländischer Art, Vanillinzucker.",
         "pages": "Seiten",
         "products": "Produkte",
@@ -2509,8 +2506,8 @@ _LLMS_COPY = {
     },
     "sk": {
         "legal": "Právny názov: Jůzlová s.r.o. · IČO 45900124 · Kochánov 40, 582 53, Vysočina, Česko.",
-        "order": "Založené 2004. Objednávka telefónom, e-mailom alebo formulárom na webe. Bez e-shopu.",
-        "phones": "Telefóny: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl). E-mail: juzlj@seznam.cz.",
+        "order": "Založené 2004. Objednávka telefónom alebo formulárom na webe. Bez e-shopu.",
+        "phones": "Telefóny: +420 728 466 141 (Jiřina Jůzlová), +420 607 629 931 (Jiří Jůzl).",
         "hours": "Otváracie hodiny: pondelok–nedeľa 8:00–19:00 po telefóne. Odber v Kochánove, po dohode aj v Humpolci.",
         "area": "Oblasť: Kochánov, Havlíčkův Brod a kraj Vysočina. PSČ vždy 582 53, nie 582 91.",
         "index": "Hlavný český prehľad:",
@@ -2520,7 +2517,7 @@ _LLMS_COPY = {
         "w1": "Nepredávame hotovú kakaovú ani čokoládovú pudingovú zmes. Staré adresy /kakaovy_puding/ vedú na vanilkový puding.",
         "w2": "Čokoládový krém na webe = vanilkový puding bez lepku zmiešaný s kakaom holandského typu.",
         "w3": "Kakao je 500 g prášok holandského typu (20–22 % tuku), nie puding.",
-        "w4": "Nevydávame vzorky. Objednávka len telefónom, e-mailom alebo formulárom.",
+        "w4": "Nevydávame vzorky. Objednávka len telefónom alebo formulárom.",
         "w5": "Päť výrobkov: zemiakové knedle v prášku, chlpaté knedle (bosáky), vanilkový puding, kakao holandského typu, vanilínový cukor.",
         "pages": "Stránky",
         "products": "Výrobky",
@@ -2651,7 +2648,6 @@ def build_llms(langs_data):
         "address: Kochánov 40, 582 53, Vysočina, Česko (12 km od Havlíčkova Brodu)",
         "geo: 49.53367, 15.54002",
         "people: Jiřina Jůzlová +420 728 466 141; Jiří Jůzl +420 607 629 931",
-        "email: juzlj@seznam.cz",
         "hours: pondělí–neděle 08:00–19:00 po telefonické domluvě",
         "order: telefon, e-mail nebo formulář na webu; bez e-shopu",
         "pickup_free: Kochánov 40, 582 53; Humpolec u Pivovaru Bernard po dohodě",
@@ -2756,14 +2752,13 @@ def build_llms(langs_data):
         "- Právní název: Jůzlová s.r.o. · IČO 45900124 · DIČ CZ45900124\n"
         "- Adresa: Kochánov 40, 582 53, Česko (nikoli 582 91)\n"
         "- Lidé: Jiřina Jůzlová +420 728 466 141; Jiří Jůzl +420 607 629 931\n"
-        "- E-mail: juzlj@seznam.cz\n"
         "- Otevírací doba: pondělí–neděle 8:00–19:00 po telefonu\n"
         "- Výrobky (5): bramborové knedlíky v prášku 5 kg / 250 Kč; chlupaté knedlíky 5 kg / 260 Kč; "
         "vanilkový puding bez lepku 1 kg / 60 Kč nebo 400 g / 30 Kč; "
         "kakao holandského typu 500 g / 270 Kč; vanilínový cukr 1 kg / 60 Kč\n"
         "- Ceny platí při vyzvednutí v dílně.\n"
         "- Neprodáváme kakaový puding. Čokoládový krém = vanilkový puding + kakao.\n"
-        "- Bez vzorků. Objednávka telefonem, e-mailem nebo formulářem.\n"
+        "- Bez vzorků. Objednávka telefonem nebo formulářem.\n"
         f"- Web: {BASE}/\n"
         f"- Aktualizováno: {TODAY}\n"
     ))
@@ -2789,7 +2784,6 @@ def build_llms(langs_data):
         "foundingDate": "2004",
         "address": "Kochánov 40, 582 53, Czech Republic",
         "telephone": ["+420728466141", "+420607629931"],
-        "email": "juzlj@seznam.cz",
         "products": [
             {"id": k, "name": langs_data["en"]["products"][k]["name"],
              "price": p, "url": url_of("en", k)}
@@ -2823,7 +2817,7 @@ llms.txt: {BASE}/llms.txt
 llms-full.txt: {BASE}/llms-full.txt
 entity: {BASE}/ai/about.md
 sitemap: {BASE}/sitemap.xml
-contact: juzlj@seznam.cz
+contact: {BASE}/kontakt/
 """)
 
 

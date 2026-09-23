@@ -3,4 +3,4 @@ llms.txt: https://www.juzlova.cz/llms.txt
 llms-full.txt: https://www.juzlova.cz/llms-full.txt
 entity: https://www.juzlova.cz/ai/about.md
 sitemap: https://www.juzlova.cz/sitemap.xml
-contact: juzlj@seznam.cz
+contact: https://www.juzlova.cz/kontakt/
