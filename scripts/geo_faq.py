@@ -263,6 +263,12 @@ RECIPE_FAQ = {
             ("Proč připravit karamelovou šlehačku den předem?",
              "Karamel se smetanou musí v lednici ztuhnout, aby šlehačka držela tvar. Troubu při pečení skořápek neotevírejte — větrníky spadnou."),
         ],
+        "vetrnicky-s-vanilkovym-kremem-recept": [
+            ("Jaký je rozdíl mezi větrníčky a věnečky?",
+             "Těsto je stejné, odpalované. Větrníčky se stříkají hvězdičkou jako kulaté růžice 4–5 cm, věnečky jako kroužky. Tyto větrníčky plníme vanilkovým máslovým krémem z našeho pudingu a namáčíme v bílé cukrové polevě."),
+            ("Proč větrníčky po upečení spadnou?",
+             "Nejčastěji kvůli otevřené troubě nebo krátkému pečení. Pečte 10 minut na 220 °C, pak 15–20 minut na 180 °C, a prvních 20 minut troubu neotvírejte. Hotové jsou sytě zlatavé a lehké."),
+        ],
         "irsky-sticky-toffee-pudding-recept": [
             ("Je v irském sticky toffee puddingu naše kakao?",
              "Ano. 60 g kakaa holandského typu a 100 ml Baileys v datlovém těstě, 6 porcí, 45–50 minut na 160 °C, slaná toffee omáčka."),
@@ -342,6 +348,12 @@ RECIPE_FAQ = {
              "A choux shell, vanilla pudding cream, a ring of caramel whipped cream and a caramel glaze. About 24 medium puffs."),
             ("Why make the caramel cream the day before?",
              "The caramel-and-cream mixture must chill until it whips stiff. Do not open the oven while the shells bake, or they will collapse."),
+        ],
+        "vetrnicky-s-vanilkovym-kremem-recept": [
+            ("What is the difference between větrníčky and věnečky?",
+             "Same choux pastry. Větrníčky are piped with a star nozzle as round 4–5 cm rosettes, věnečky as rings. These větrníčky are filled with vanilla buttercream made from our pudding and dipped in a white sugar glaze."),
+            ("Why do my cream puffs collapse after baking?",
+             "Usually an opened oven door or too short a bake. Bake 10 minutes at 220 °C, then 15–20 minutes at 180 °C, and keep the oven shut for the first 20 minutes. They are done when deep golden and light."),
         ],
         "irsky-sticky-toffee-pudding-recept": [
             ("Does the sticky toffee pudding use our cocoa?",
@@ -423,6 +435,12 @@ RECIPE_FAQ = {
             ("Warum die Karamellsahne am Vortag zubereiten?",
              "Die Karamell-Sahne-Mischung muss durchkühlen, bis sie sich steif schlagen lässt. Den Ofen beim Backen der Schalen nicht öffnen, sonst fallen die Windbeutel zusammen."),
         ],
+        "vetrnicky-s-vanilkovym-kremem-recept": [
+            ("Was unterscheidet větrníčky von věnečky?",
+             "Der Brandteig ist derselbe. Větrníčky werden mit der Sterntülle als runde Rosetten von 4–5 cm gespritzt, věnečky als Ringe. Diese větrníčky füllen wir mit Vanille-Buttercreme aus unserem Pudding und tauchen sie in weiße Zuckerglasur."),
+            ("Warum fallen die Windbeutel nach dem Backen zusammen?",
+             "Meist wurde der Ofen geöffnet oder zu kurz gebacken. 10 Minuten bei 220 °C, dann 15–20 Minuten bei 180 °C backen und den Ofen in den ersten 20 Minuten geschlossen lassen. Fertig sind sie kräftig goldbraun und leicht."),
+        ],
         "irsky-sticky-toffee-pudding-recept": [
             ("Ist unser Kakao im Sticky-Toffee-Pudding?",
              "Ja. 60 g Kakao holländischer Art und 100 ml Baileys im Dattelteig, 6 Portionen, 45–50 Minuten bei 160 °C, gesalzene Toffeesauce."),
@@ -502,6 +520,12 @@ RECIPE_FAQ = {
              "Škrupina z odpaľovaného cesta, vanilkový pudingový krém, krúžok karamelovej šľahačky a karamelová poleva. Asi 24 stredných kúskov."),
             ("Prečo pripraviť karamelovú šľahačku deň vopred?",
              "Karamel so smotanou musí v chladničke stuhnúť, aby šľahačka držala tvar. Rúru pri pečení škrupín neotvárajte — vetrníky by spadli."),
+        ],
+        "vetrnicky-s-vanilkovym-kremem-recept": [
+            ("Aký je rozdiel medzi veterníčkami a venčekmi?",
+             "Cesto je rovnaké, odpaľované. Veterníčky sa striekajú hviezdičkou ako okrúhle ružice 4–5 cm, venčeky ako krúžky. Tieto veterníčky plníme vanilkovým maslovým krémom z nášho pudingu a namáčame v bielej cukrovej poleve."),
+            ("Prečo veterníčky po upečení spadnú?",
+             "Najčastejšie pre otvorenú rúru alebo krátke pečenie. Pečte 10 minút na 220 °C, potom 15–20 minút na 180 °C a prvých 20 minút rúru neotvárajte. Hotové sú sýto zlatisté a ľahké."),
         ],
         "irsky-sticky-toffee-pudding-recept": [
             ("Je v írskom sticky toffee puddingu naše kakao?",

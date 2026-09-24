@@ -115,6 +115,7 @@ SLUGS = {
         "kremrole-recept": "cream-horns",
         "minivetrnicky-recept": "mini-cream-puffs",
         "karamelove-vetrniky-recept": "caramel-cream-puffs",
+        "vetrnicky-s-vanilkovym-kremem-recept": "cream-puffs-with-vanilla-cream",
         "irsky-sticky-toffee-pudding-recept": "sticky-toffee-pudding",
     },
     "de": {
@@ -139,6 +140,7 @@ SLUGS = {
         "kremrole-recept": "schaumrollen",
         "minivetrnicky-recept": "mini-windbeutel",
         "karamelove-vetrniky-recept": "karamell-windbeutel",
+        "vetrnicky-s-vanilkovym-kremem-recept": "windbeutel-mit-vanillecreme",
         "irsky-sticky-toffee-pudding-recept": "sticky-toffee-pudding",
     },
     "sk": {
@@ -163,6 +165,7 @@ SLUGS = {
         "kremrole-recept": "kremrole",
         "minivetrnicky-recept": "mini-veterniky",
         "karamelove-vetrniky-recept": "karamelove-veterniky",
+        "vetrnicky-s-vanilkovym-kremem-recept": "veterniky-s-vanilkovym-kremom",
         "irsky-sticky-toffee-pudding-recept": "sticky-toffee-pudding",
     },
 }
@@ -205,6 +208,7 @@ RECIPE_SLUGS = [
     "kremrole-recept",
     "minivetrnicky-recept",
     "karamelove-vetrniky-recept",
+    "vetrnicky-s-vanilkovym-kremem-recept",
     "irsky-sticky-toffee-pudding-recept",
 ]
 CHOUX_SLUGS = frozenset({
@@ -213,6 +217,7 @@ CHOUX_SLUGS = frozenset({
     "kremrole-recept",
     "minivetrnicky-recept",
     "karamelove-vetrniky-recept",
+    "vetrnicky-s-vanilkovym-kremem-recept",
 })
 DUMPLING_SLUGS = frozenset({
     "sisky-s-makem-recept",
@@ -397,8 +402,12 @@ RECIPE_IMG = {
     "kremrole-recept": "kremrole.webp",
     "minivetrnicky-recept": "minivetrnicky.webp",
     "karamelove-vetrniky-recept": "karamelove-vetrniky.webp",
+    "vetrnicky-s-vanilkovym-kremem-recept": "vetrnicky-s-vanilkovym-kremem.webp",
     "irsky-sticky-toffee-pudding-recept": "irsky-sticky-toffee-pudding.webp",
 }
+# A recipe whose photo is not in img/ yet gets no image anywhere (page, JSON-LD,
+# og:image, sitemap, llms) instead of a broken absolute URL.
+RECIPE_IMG = {k: v for k, v in RECIPE_IMG.items() if (ROOT / "img" / v).exists()}
 PRICE_ROWS = [  # (product key, package, price CZK)
     ("bramborove_knedliky", "5 kg", "250 Kč"),
     ("chlupate_knedliky", "5 kg", "260 Kč"),
@@ -2040,7 +2049,13 @@ def build_recipe(L, slug):
     steps_h = {"cs": "Postup", "en": "Method", "de": "Zubereitung", "sk": "Postup"}[lg]
     ing_block = f"<h2>{ing_h}</h2><ul>{ing}</ul>" if ing else ""
     steps_block = f"<h2>{steps_h}</h2><ol>{steps}</ol>" if steps else ""
-    extra = "".join(f"<p>{esc(x)}</p>" for x in r.get("notes", []))
+    gallery = "".join(
+        f'<figure><img src="{src}" alt="{esc(alt)}" width="1200" height="800" '
+        f'loading="lazy" decoding="async"></figure>'
+        for name, alt in r.get("gallery", [])
+        if (src := img_or_none(depth, name))
+    )
+    extra ="".join(f"<p>{esc(x)}</p>" for x in r.get("notes", []))
     more = more_recipes_html(L, slug, depth)
     lds = [recipe_ld, breadcrumb_jsonld(L, [
         (L["ui"]["breadcrumb_home"], url_for(lg, "")),
@@ -2057,7 +2072,7 @@ def build_recipe(L, slug):
 {prod_link}
 {figure}
 {ing_block}
-{steps_block}
+{steps_block}{gallery}
 {extra}
 {faq_html(rec_faqs, L['ui'].get('sec_faq', 'FAQ'))}
 </article></div>

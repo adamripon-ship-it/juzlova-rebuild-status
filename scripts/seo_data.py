@@ -17,6 +17,7 @@ RECIPE_SLUGS = [
     "kremrole-recept",
     "minivetrnicky-recept",
     "karamelove-vetrniky-recept",
+    "vetrnicky-s-vanilkovym-kremem-recept",
     "irsky-sticky-toffee-pudding-recept",
 ]
 
@@ -79,6 +80,10 @@ RECIPE_TIMES = {
         "prepTime": "PT90M", "cookTime": "PT30M", "totalTime": "PT120M",
         "recipeYield": "24", "datePublished": "2026-09-02",
     },
+    "vetrnicky-s-vanilkovym-kremem-recept": {
+        "prepTime": "PT60M", "cookTime": "PT30M", "totalTime": "PT90M",
+        "recipeYield": "30", "datePublished": "2026-09-23",
+    },
     "irsky-sticky-toffee-pudding-recept": {
         "prepTime": "PT25M", "cookTime": "PT50M", "totalTime": "PT75M",
         "recipeYield": "6", "datePublished": "2026-09-02",
@@ -99,6 +104,7 @@ RECIPE_CATEGORY = {
         "kremrole-recept": "Cukrářské pečivo",
         "minivetrnicky-recept": "Cukrářské pečivo",
         "karamelove-vetrniky-recept": "Cukrářské pečivo",
+        "vetrnicky-s-vanilkovym-kremem-recept": "Cukrářské pečivo",
         "irsky-sticky-toffee-pudding-recept": "Dezerty",
     },
     "en": {
@@ -114,6 +120,7 @@ RECIPE_CATEGORY = {
         "kremrole-recept": "Pastry",
         "minivetrnicky-recept": "Pastry",
         "karamelove-vetrniky-recept": "Pastry",
+        "vetrnicky-s-vanilkovym-kremem-recept": "Pastry",
         "irsky-sticky-toffee-pudding-recept": "Dessert",
     },
     "de": {
@@ -129,6 +136,7 @@ RECIPE_CATEGORY = {
         "kremrole-recept": "Konditorei",
         "minivetrnicky-recept": "Konditorei",
         "karamelove-vetrniky-recept": "Konditorei",
+        "vetrnicky-s-vanilkovym-kremem-recept": "Konditorei",
         "irsky-sticky-toffee-pudding-recept": "Dessert",
     },
     "sk": {
@@ -144,6 +152,7 @@ RECIPE_CATEGORY = {
         "kremrole-recept": "Cukrárske pečivo",
         "minivetrnicky-recept": "Cukrárske pečivo",
         "karamelove-vetrniky-recept": "Cukrárske pečivo",
+        "vetrnicky-s-vanilkovym-kremem-recept": "Cukrárske pečivo",
         "irsky-sticky-toffee-pudding-recept": "Dezerty",
     },
 }
@@ -239,6 +248,7 @@ RECIPE_KEYWORDS = {
         "kremrole-recept": "kremrole, italský sníh, máslové těsto, trubičky",
         "minivetrnicky-recept": "minivětrníčky, pudingový krém, čokoládová poleva",
         "karamelove-vetrniky-recept": "karamelové větrníky, karamelová šlehačka, vanilkový puding",
+        "vetrnicky-s-vanilkovym-kremem-recept": "větrníčky, vanilkový máslový krém, cukrová poleva, odpalované těsto",
         "irsky-sticky-toffee-pudding-recept": "sticky toffee pudding, Baileys, kakao holandského typu, datle",
     },
     "en": {
@@ -254,6 +264,7 @@ RECIPE_KEYWORDS = {
         "kremrole-recept": "kremrole, Italian meringue, cream horns",
         "minivetrnicky-recept": "mini cream puffs, pudding cream, chocolate glaze",
         "karamelove-vetrniky-recept": "caramel cream puffs, caramel whipped cream",
+        "vetrnicky-s-vanilkovym-kremem-recept": "větrníčky, Czech cream puffs, vanilla buttercream, sugar glaze",
         "irsky-sticky-toffee-pudding-recept": "sticky toffee pudding, Baileys, Dutch-process cocoa",
     },
     "de": {
@@ -269,6 +280,7 @@ RECIPE_KEYWORDS = {
         "kremrole-recept": "Schaumrollen, italienische Meringue",
         "minivetrnicky-recept": "Mini-Windbeutel, Puddingcreme, Schokoglasur",
         "karamelove-vetrniky-recept": "Karamell-Windbeutel, Karamellsahne",
+        "vetrnicky-s-vanilkovym-kremem-recept": "Windbeutel, Vanillecreme, Zuckerglasur, Brandteig",
         "irsky-sticky-toffee-pudding-recept": "Sticky Toffee Pudding, Baileys, Kakao",
     },
     "sk": {
@@ -284,6 +296,7 @@ RECIPE_KEYWORDS = {
         "kremrole-recept": "kremrole, taliansky sneh, trubičky",
         "minivetrnicky-recept": "minivetrníčky, pudingový krém, čokoládová poleva",
         "karamelove-vetrniky-recept": "karamelové vetrníky, karamelová šľahačka",
+        "vetrnicky-s-vanilkovym-kremem-recept": "veterníčky, vanilkový maslový krém, cukrová poleva",
         "irsky-sticky-toffee-pudding-recept": "sticky toffee pudding, Baileys, kakao holandského typu",
     },
 }
