@@ -429,6 +429,7 @@ A: Karamel se smetanou musí v lednici ztuhnout, aby šlehačka držela tvar. Tr
 
 ### Větrníčky s vanilkovým krémem
 url: https://www.juzlova.cz/vetrnicky-s-vanilkovym-kremem-recept/
+image: https://www.juzlova.cz/img/vetrnicky-s-vanilkovym-kremem.webp
 prep: PT60M cook: PT30M total: PT90M yield: 30
 summary: Malé větrníčky stříkané hvězdičkou, plněné vanilkovým máslovým krémem a namáčené v bílé cukrové polevě. Asi 30 kousků.
 suroviny:
