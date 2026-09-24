@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260923f"
+ASSET_VER = "20260924a"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -1476,6 +1476,21 @@ def img_or_none(depth, name):
     return None
 
 
+# Real packaging photos (the owner's own bags and labels), shown under the hero.
+# The section appears only once img/baleni-<product>.webp exists.
+PACK_HEADING = {"cs": "Takhle vypadá balení", "en": "What the pack looks like",
+                "de": "So sieht die Packung aus", "sk": "Takto vyzerá balenie"}
+
+
+def pack_html(L, depth, key):
+    src = img_or_none(depth, f"baleni-{key}.webp")
+    if not src:
+        return ""
+    name = L["products"][key]["name"]
+    return (f'<figure class="pack-photo rv"><h2>{esc(PACK_HEADING[L["code"]])}</h2>'
+            f'<img src="{src}" alt="{esc(name)}" width="1600" height="1200" loading="lazy" decoding="async"></figure>')
+
+
 def product_img_src(depth, key):
     return img_or_none(depth, PRODUCT_IMG.get(key))
 
@@ -1844,6 +1859,7 @@ def build_product(L, key):
 {cta_html(L, depth, ("cta_order", "kde_nas_najdete", "cta_pickup"))}
 </div>
 </div>
+{pack_html(L, depth, key)}
 {flower}
 {render_body(L, body_blocks, depth, product=pr)}
 {faq_html(faqs, ui.get('sec_faq', 'FAQ'))}
