@@ -1,13 +1,14 @@
 """Family team cards for the About (kdo_jsme) page.
 
-Photos are placeholders under img/team/ until real portraits are added.
+Portraits live under img/team/ as 640×800 (4:5) WebP; members without a real
+photo yet use the placeholder SVG of the same size.
 WIIFM = what each person means for the customer.
 """
 
 TEAM = [
     {
         "id": "jirina-juzlova",
-        "photo": "team/jirina-juzlova.svg",
+        "photo": "team/jirina-juzlova.webp",
         "name": {
             "cs": "Jiřina Jůzlová",
             "en": "Jiřina Jůzlová",
