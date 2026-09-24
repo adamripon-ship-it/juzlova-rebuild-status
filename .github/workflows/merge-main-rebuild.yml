@@ -1,0 +1,48 @@
+name: Merge main and rebuild (one-off)
+
+# One-off helper for PR #36: merges main into this branch and regenerates the
+# site so the committed output matches the merged scripts. Removed right after.
+
+on:
+  push:
+    branches: [claude/juzlova-czech-desert-recipe-ndr2ai]
+    paths: [.github/workflows/merge-main-rebuild.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/juzlova-czech-desert-recipe-ndr2ai
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Merge main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          # Generated HTML is rebuilt below, so keep this branch's side of any
+          # conflicting hunk; the sources in scripts/ merge cleanly.
+          git merge --no-edit -X ours origin/main
+      - name: Rebuild and verify
+        env:
+          SITE_BASE: https://www.juzlova.cz
+        run: |
+          python scripts/build_site.py
+          git checkout -- data/reviews.json
+          python scripts/verify_refs.py
+          python scripts/build_site.py
+          git checkout -- data/reviews.json
+      - name: Commit and push
+        run: |
+          git add -A
+          git diff --cached --quiet || git commit -m "Rebuild site after merging main"
+          git push origin HEAD:claude/juzlova-czech-desert-recipe-ndr2ai
