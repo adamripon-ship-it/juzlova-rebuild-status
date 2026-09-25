@@ -780,3 +780,11 @@ footer.site .fine a:hover { color: var(--ink); text-decoration-color: var(--ink)
 
 /* ── hero image fallback pages (none use the old film now) ── */
 .film, .scrub, .hero-fallback, .ticker { display: none; }
+
+/* ── mobile QA 2026-09-25: comfortable tap targets without shifting layout ── */
+.breadcrumb a { display: inline-block; padding: .8rem .15rem; margin: -.8rem -.15rem; }
+.price-card dd a[href^="tel:"] { display: inline-block; padding: .75rem 0; margin: -.75rem 0; }
+footer.site .fine a { display: inline-block; padding: .7rem .1rem; margin: -.7rem -.1rem; }
+a.more { padding-block: .45rem; }
+.chk input[type="checkbox"] { width: 1.35rem; height: 1.35rem; flex: 0 0 auto; accent-color: var(--gold); }
+.price-tile-badge { font-size: .78rem; }
