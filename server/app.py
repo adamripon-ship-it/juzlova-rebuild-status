@@ -50,6 +50,7 @@ SLUGS = (
     "minivetrnicky-recept",
     "karamelove-vetrniky-recept",
     "irsky-sticky-toffee-pudding-recept",
+    "vetrnicky-s-vanilkovym-kremem-recept",
 )
 EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
 FORMSPREE_ID_RE = re.compile(r"^[A-Za-z0-9]{6,20}$")
