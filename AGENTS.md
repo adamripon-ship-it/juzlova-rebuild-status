@@ -78,6 +78,12 @@ swallowing clicks meant for the button beneath it.
   rebuild. The build writes meta-refresh stubs at every old path plus
   `redirects.conf` (nginx `rewrite … permanent`, included by `nginx.conf`) and
   `_redirects` (Netlify). Never delete an old directory by hand.
+- WordPress-era URLs that never had a localized page go in `WP_REDIRECTS`
+  (root only, nginx + Netlify rules, no stubs). Dead WordPress machinery, theme
+  demo posts, feeds, `/archive/` and `status.html` are in `GONE_PREFIXES` /
+  `GONE_PATHS` and answer **410**. Do not add them back to robots.txt as
+  `Disallow` — Google would stop seeing the 410 and list them as "Blocked by
+  robots.txt" forever. `WORDPRESS/feed/` of any page 301s to that page.
 - Messaging rules and the copy rationale live in `docs/messaging/`. Keep one
   H1 per page, one primary CTA (call Jiřina), each fact once per page, no
   taste claims ("k nerozeznání"), no supermarket multipliers, no invented
