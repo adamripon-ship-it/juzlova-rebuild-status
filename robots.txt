@@ -4,11 +4,10 @@
 # LLM full extract: https://www.juzlova.cz/llms-full.txt
 # Google Search ignores llms.txt; keep it for non-Google AI crawlers.
 
+# No Disallow: the old /archive/ and /status.html answer 410 Gone, and a
+# robots.txt block would hide that from Google.
 User-agent: *
 Allow: /
-Disallow: /archive/
-Disallow: /status.html
-Disallow: /__forms.html
 
 # Citation bots — named Allow, not only the wildcard
 User-agent: OAI-SearchBot
