@@ -118,6 +118,8 @@ LANG = {
         "footer_products": "Products", "footer_recipes": "Recipes", "footer_company": "Company",
         "footer_note": "Family workshop making food mixes since 2004.",
         "footer_addr": "Jůzlová s.r.o. · Company ID 45900124 · Kochánov 40, 582 53 · Vysočina, Czech Republic",
+        "credit_by": "Made by",
+        "credit_where": "Switzerland | Ireland",
         "open_hours": "Daily 8:00–19:00 by phone, weekends included",
         "lang_label": "Language",
         "lang_cs": "Čeština", "lang_en": "English", "lang_de": "Deutsch", "lang_sk": "Slovenčina",

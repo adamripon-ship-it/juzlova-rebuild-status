@@ -118,6 +118,8 @@ LANG = {
         "footer_products": "Produkte", "footer_recipes": "Rezepte", "footer_company": "Firma",
         "footer_note": "Familienwerkstatt für Lebensmittelmischungen seit 2004.",
         "footer_addr": "Jůzlová s.r.o. · IČO 45900124 · Kochánov 40, 582 53 · Vysočina, Tschechien",
+        "credit_by": "Website von",
+        "credit_where": "Schweiz | Irland",
         "open_hours": "Telefonisch täglich 8:00–19:00 Uhr, auch am Wochenende",
         "lang_label": "Sprache",
         "lang_cs": "Čeština", "lang_en": "English", "lang_de": "Deutsch", "lang_sk": "Slovenčina",

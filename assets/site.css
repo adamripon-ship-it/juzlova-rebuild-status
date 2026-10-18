@@ -566,6 +566,9 @@ footer.site .btn.gold { background: var(--ink); color: #fff; --fill-hover: #000;
 footer.site .fine { position: relative; margin-top: .4rem; padding-top: .4rem; font-size: .82rem; color: var(--f-soft); display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; justify-content: space-between; }
 footer.site .fine a { color: var(--f-soft); text-decoration-color: transparent; }
 footer.site .fine a:hover { color: var(--ink); text-decoration-color: var(--ink); }
+footer.site .credit { margin: .5rem 0 0; font-size: .75rem; color: var(--f-soft); }
+footer.site .credit a { color: var(--f-soft); text-decoration-color: currentColor; text-underline-offset: 2px; }
+footer.site .credit a:hover { color: var(--ink); }
 @media (max-width: 900px) { .foot { grid-template-columns: 1fr; grid-template-areas: "contact" "links" "form"; gap: 2.5rem; } .foot-links { padding-top: 2.5rem; border-top: 1px solid var(--f-line); } .callback .form-top { grid-template-columns: 1fr; } footer.site .rule:before, footer.site .rule:after { width: calc(50% - 6rem); } }
 /* phones: no second logo (the header has it), folded link groups, compact form */
 @media (max-width: 640px) {
@@ -784,7 +787,7 @@ footer.site .fine a:hover { color: var(--ink); text-decoration-color: var(--ink)
 /* ── mobile QA 2026-09-25: comfortable tap targets without shifting layout ── */
 .breadcrumb a { display: inline-block; padding: .8rem .15rem; margin: -.8rem -.15rem; }
 .price-card dd a[href^="tel:"] { display: inline-block; padding: .75rem 0; margin: -.75rem 0; }
-footer.site .fine a { display: inline-block; padding: .7rem .1rem; margin: -.7rem -.1rem; }
+footer.site .fine a, footer.site .credit a { display: inline-block; padding: .7rem .1rem; margin: -.7rem -.1rem; }
 a.more { padding-block: .45rem; }
 .chk input[type="checkbox"] { width: 1.35rem; height: 1.35rem; flex: 0 0 auto; accent-color: var(--gold); }
 .price-tile-badge { font-size: .78rem; }

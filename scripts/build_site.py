@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20260925b"
+ASSET_VER = "20261018a"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -978,6 +978,16 @@ FOOTER_LABELS = {
 }
 
 
+def credit_html(ui):
+    """Web-agency credit under the fine print. nofollow: a sitewide footer link
+    is a template link, not an editorial one, and Google treats those with
+    suspicion. Kept out of JSON-LD and llms.txt so the site's entity stays
+    Jůzlová s.r.o."""
+    return (f'<p class="credit">{esc(ui["credit_by"])} Surfstr Marketing Agency (Surfstr Limited)'
+            f' · {esc(ui["credit_where"])} · <a href="https://www.surfstr.ch" rel="nofollow noopener"'
+            f' target="_blank">www.surfstr.ch</a></p>')
+
+
 def footer(L, depth, pid="home"):
     """Reference footer: hairline rule with the logo, link rows, phone, grey
     marks, watermark, and the call-back form (posts to /api/contact)."""
@@ -1047,6 +1057,7 @@ def footer(L, depth, pid="home"):
     </div>
     <nav class="foot-langs" aria-label="{esc(ui['lang_label'])}">{langs}</nav>
     <div class="fine"><span>{esc(ui['footer_addr'])}</span><span class="fine-hours">{esc(ui['open_hours'])}</span><span>© 2004–2026 Jůzlová s.r.o. · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span></div>
+    {credit_html(ui)}
   </div>
 </footer>"""
 
