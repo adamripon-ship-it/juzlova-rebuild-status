@@ -117,6 +117,8 @@ LANG = {
         "footer_products": "Produkty", "footer_recipes": "Recepty", "footer_company": "Firma",
         "footer_note": "Rodinná dielňa potravinárskych zmesí od roku 2004.",
         "footer_addr": "Jůzlová s.r.o. · IČO 45900124 · Kochánov 40, 582 53 · Vysočina, Česko",
+        "credit_by": "Tvorba webu:",
+        "credit_where": "Švajčiarsko | Írsko",
         "open_hours": "Denne 8:00–19:00 po telefóne, vrátane víkendov",
         "lang_label": "Jazyk",
         "lang_cs": "Čeština", "lang_en": "English", "lang_de": "Deutsch", "lang_sk": "Slovenčina",
