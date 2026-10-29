@@ -3,6 +3,18 @@
 Entry point for coding agents (Cursor, Claude Code, and friends). Read this
 before touching anything. `docs/HANDOFF.md` has the longer history.
 
+## Before anything else: read `TODO.md`
+
+**[`TODO.md`](TODO.md) is the current to-do list. Read it at the start of
+every task, before planning or changing anything.**
+
+- Check whether your task is already listed, done, or blocked. Don't redo
+  finished work.
+- Never attempt an item marked **👤 owner**: those need the owner's Google,
+  GitHub-settings or registrar logins. Remind the person instead.
+- When you finish or change an item, update `TODO.md` in the same pull
+  request: tick it and link the PR.
+
 ## What this is
 
 A static site for Jůzlová, a Czech family food-mix workshop in Kochánov,

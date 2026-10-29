@@ -52,6 +52,7 @@ date, so they always match the site.
 
 | Document | Purpose |
 |---|---|
+| [`TODO.md`](../../TODO.md) | **The current to-do list.** Read first, before any work |
 | [`AGENTS.md`](../../AGENTS.md) | Rules for developers and AI coding assistants (read before editing) |
 | [`docs/HANDOFF.md`](../HANDOFF.md) | History of the rebuild and open questions |
 | [`docs/messaging/`](../messaging/) | Research and reasoning behind the copy, page by page |
