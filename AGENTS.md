@@ -188,9 +188,9 @@ replaced.
   site ran as its background video. The scroll-film's opening frame.
 - `dilna-panorama.webp` — their real production room: flour sacks, the scale,
   the bagging line. On the "Kdo jsme" page.
-- `vanilkovy-cukr-pytliky.webp` — their 2012 photograph of labelled vanilla
-  sugar packets, warm-toned to sit in the page palette. The `.png` beside it is
-  the untoned original.
+- The 2012 photograph of labelled vanilla-sugar sachets is retired: the
+  workshop sells kilo bags only, so `vanilkovy-cukr-kilo.webp` replaced it and
+  nginx 301s the old `vanilkovy-cukr-pytliky.*` paths there.
 - `sisky-s-makem.png`, `strapacky.jpg`, `bebe-rezy.gif` — recipe thumbnails.
 
 **Generated, because no usable original survived.** The recovered "product"

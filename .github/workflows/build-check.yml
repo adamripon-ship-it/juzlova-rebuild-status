@@ -23,12 +23,14 @@ jobs:
       - name: Rebuild the site
         env:
           SITE_BASE: https://www.juzlova.cz
-        run: python scripts/build_site.py
+        run: |
+          python scripts/build_site.py
+          python scripts/export_docs.py
       - name: Fail if the committed build is out of date
         run: |
-          if ! git diff --quiet; then
-            echo "::error::Committed site output is out of sync with scripts/. Run 'python scripts/build_site.py' and commit the result."
-            git --no-pager diff --stat
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Committed site output is out of sync with scripts/. Run 'python scripts/build_site.py && python scripts/export_docs.py' and commit the result."
+            git status --short | head -40
             exit 1
           fi
           echo "Committed build is up to date."
