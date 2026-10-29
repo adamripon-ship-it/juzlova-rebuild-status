@@ -62,6 +62,45 @@ in this codebase were invisible in the markup and only showed up on screen: the
 hero headline sat at opacity 0 on load, and an invisible scroll-film act was
 swallowing clicks meant for the button beneath it.
 
+## How a change goes live
+
+GitHub is the whole workflow. Nobody needs Google Cloud, Cloudflare or server
+access to change the site.
+
+1. Branch off `main`, edit the sources, run `build_site.py`, commit the
+   sources **and** the regenerated HTML together.
+2. Open a pull request. `build-check.yml` rebuilds from scratch and fails if
+   the committed HTML is stale or a local reference is broken.
+3. Merge to `main`. `deploy-cloudrun.yml` rebuilds with
+   `SITE_BASE=https://www.juzlova.cz`, deploys Cloud Run `juzlova-web`
+   (europe-west4) and smoke-tests it. Live in about two minutes.
+4. Check the live page. The run summary shows a `Not deployed` warning if the
+   repository variables `GCP_PROJECT`, `GCP_WIF_PROVIDER` and `GCP_DEPLOY_SA`
+   were ever removed; it can still look green in that case.
+
+Live HTML differs from the repo by exactly one line: the server injects the
+Cloudflare analytics `<script>` at container start
+(`server/inject-analytics.py`). Everything else is byte-identical to `main`.
+
+Bump `ASSET_VER` in `build_site.py` whenever `site.css` or `site.js` changes,
+or returning visitors keep the cached old file.
+
+### What is not in the repository
+
+Only runtime secrets, held as environment variables on the Cloud Run service
+and never committed. `.env.example` lists every name. Site edits need none of
+them; locally the contact and ratings API fall back to a directory and the
+optional extras switch themselves off.
+
+| Variable | Feeds |
+|---|---|
+| `ZAPIER_WEBHOOK_URL`, `SMTP_*` or `FORMSPREE_*` | delivery of contact-form messages to `CONTACT_TO` |
+| `TURNSTILE_SITE_KEY` | optional captcha on the contact form |
+| `CLOUDFLARE_WEB_ANALYTICS_TOKEN`, `GOOGLE_ANALYTICS_MEASUREMENT_ID` | visitor analytics |
+| `DATA_BUCKET` | GCS bucket for ratings and the contact inbox |
+
+The owner manages those in Google Cloud; changing them is not a code change.
+
 ## URLs, slugs and redirects (2026-09-16)
 
 - Every page has a stable **page id** (`kdo_jsme`, `bramborove_knedliky`, a
@@ -92,7 +131,7 @@ swallowing clicks meant for the button beneath it.
 ## SITE_BASE
 
 `build_site.py` builds every absolute URL from `SITE_BASE`, which defaults to
-`https://juzlova.cz`. It feeds canonical links, hreflang alternates,
+`https://www.juzlova.cz`, the production host (the apex 301s there). It feeds canonical links, hreflang alternates,
 `x-default`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, `site.webmanifest`,
 JSON-LD `url` fields, **and the legacy redirect stubs** — which are
 `<meta http-equiv="refresh">` pages carrying hardcoded absolute URLs. Get it
@@ -123,8 +162,14 @@ img/                       web assets (see provenance below)
 brand/                     the owner's four supplied source files
 archive/                   full Wayback mirror: 40 pages, 56 images, CDX index
 docs/HANDOFF.md            history, decisions, what is still open
+docs/messaging/            copy rules and page-by-page copy rationale
 index.html, en/, de/, sk/  GENERATED — do not edit
-status.html                old recovery status board, unrelated to the site
+redirects.conf, _redirects GENERATED — nginx and Netlify redirect rules
+server/                    contact + ratings API and analytics injection (Cloud Run)
+data/                      ratings seed and review data for the API
+Dockerfile, nginx.conf     the production image deployed by deploy-cloudrun.yml
+netlify/, netlify.toml     unused Netlify fallback; not what serves the domain
+status.html                old recovery status board; answers 410 in production
 ```
 
 Directories like `kakao/`, `kdo-jsme/`, `vanilkovy_puding/`, `jirina-juzlova/`
@@ -143,9 +188,9 @@ replaced.
   site ran as its background video. The scroll-film's opening frame.
 - `dilna-panorama.webp` — their real production room: flour sacks, the scale,
   the bagging line. On the "Kdo jsme" page.
-- `vanilkovy-cukr-pytliky.webp` — their 2012 photograph of labelled vanilla
-  sugar packets, warm-toned to sit in the page palette. The `.png` beside it is
-  the untoned original.
+- The 2012 photograph of labelled vanilla-sugar sachets is retired: the
+  workshop sells kilo bags only, so `vanilkovy-cukr-kilo.webp` replaced it and
+  nginx 301s the old `vanilkovy-cukr-pytliky.*` paths there.
 - `sisky-s-makem.png`, `strapacky.jpg`, `bebe-rezy.gif` — recipe thumbnails.
 
 **Generated, because no usable original survived.** The recovered "product"
@@ -181,9 +226,9 @@ history of how it got there.
 - There is exactly one supported cutover mechanism,
   `.github/workflows/cutover-pages-dns.yml`. Do not add a competing one; two
   earlier attempts were closed as duplicates.
-- Do not deploy to the Cloud Run service named `juzlova-web` — that is
-  production. `deploy-cloudrun-preview.yml` exists for previews and uses a
-  different service name.
+- Do not deploy to the Cloud Run service named `juzlova-web` by hand — that is
+  production, and merging to `main` already deploys it. `deploy-cloudrun-preview.yml`
+  exists for previews and uses a different service name.
 - `PR #3` carries a whole parallel site — its own `assets/`, fonts, stylesheet,
   `404.html`. Do not merge it; it would collide across most of the tree.
 

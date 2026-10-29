@@ -4,9 +4,10 @@ Static rebuild of **juzlova.cz**, the Czech food-mix workshop in Kochánov,
 Vysočina, recovered from the Wayback Machine after the original WordPress site
 went down.
 
-**Start here if you are picking this up: [`docs/HANDOFF.md`](docs/HANDOFF.md).**
-It covers what is deployed where, how the live domain differs from this repo,
-and what is left to do.
+**Start here if you are picking this up: [`AGENTS.md`](AGENTS.md)** — how to
+edit, build, and ship (merging to `main` deploys `www.juzlova.cz`
+automatically). [`docs/HANDOFF.md`](docs/HANDOFF.md) has the history and the
+open questions.
 
 ## Building
 
@@ -16,10 +17,12 @@ python scripts/build_site.py
 
 No dependencies outside the standard library. Output is written into the repo
 root — `index.html` plus one directory per original URL slug, so old links keep
-working — and committed, because GitHub Pages serves the repo directly.
+working — and committed. CI fails a pull request whose committed output is
+stale. Production is the Docker image in `Dockerfile` on Cloud Run, deployed
+by `.github/workflows/deploy-cloudrun.yml` on every push to `main`.
 
-Canonical URLs default to `https://juzlova.cz`. Override only for a staging
-copy:
+Canonical URLs default to `https://www.juzlova.cz`. Override only for a
+staging copy:
 
 ```sh
 SITE_BASE=https://adamripon-ship-it.github.io/juzlova-rebuild-status python3 scripts/build_site.py
