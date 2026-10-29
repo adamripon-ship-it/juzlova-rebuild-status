@@ -4,7 +4,7 @@ Static rebuild of **juzlova.cz**, the Czech food-mix workshop in Kochánov,
 Vysočina, recovered from the Wayback Machine after the original WordPress site
 went down.
 
-**Start here if you are picking this up: [`AGENTS.md`](AGENTS.md)** — how to
+**Open work is in [`TODO.md`](TODO.md).** **Start here if you are picking this up: [`AGENTS.md`](AGENTS.md)** — how to
 edit, build, and ship (merging to `main` deploys `www.juzlova.cz`
 automatically). [`docs/HANDOFF.md`](docs/HANDOFF.md) has the history and the
 open questions.
