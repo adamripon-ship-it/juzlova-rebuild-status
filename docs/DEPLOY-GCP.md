@@ -1,5 +1,10 @@
 # Deploying juzlova.cz to Google Cloud
 
+> **Outdated — kept for history.** Production is Cloud Run `juzlova-web` in
+> europe-west4, deployed automatically by `.github/workflows/deploy-cloudrun.yml`
+> on every push to `main`. PR #3 is not live, and the GCS workflow is
+> dispatch-only. For the current process read [`AGENTS.md`](../AGENTS.md).
+
 The site is a static build (no server code). Two paths sit in this repo.
 Neither one should touch DNS until issues #7 and #9 are decided.
 

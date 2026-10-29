@@ -1,7 +1,22 @@
 # juzlova.cz — where things stand
 
-Last verified 2026-08-31 by fetching the live site. For how to work on the
-code, read [`AGENTS.md`](../AGENTS.md); this file is history and open questions.
+Last verified 2026-10-29: every file the live site serves is byte-identical to
+`main` at `0bfd84f` (#45), apart from the Cloudflare analytics tag the server
+injects. For how to work on the code and ship it, read
+[`AGENTS.md`](../AGENTS.md); this file is history and open questions.
+
+## 2026-10-29 — deploys run from GitHub alone
+
+`deploy-cloudrun.yml` authenticates with Workload Identity Federation through
+the repository *variables* `GCP_PROJECT`, `GCP_WIF_PROVIDER` and
+`GCP_DEPLOY_SA`; no JSON key or secret is involved. Every push to `main` since
+#40 has run the real Deploy and smoke-test steps. The `GCP_SA_KEY` /
+`GCP_PROJECT` secrets mentioned below are only for the dispatch-only preview
+and GCS workflows, not for production.
+
+The canonical-host question further down is settled: `SITE_BASE` defaults to
+`https://www.juzlova.cz`, so canonicals, hreflang and sitemaps name the host
+that serves the site.
 
 ## 2026-09-17 — production is `juzlova-web` in **europe-west4**, not west3
 
@@ -13,9 +28,10 @@ reach it). `deploy-cloudrun.yml` now targets europe-west4. When deploying by
 hand, always pass `--region europe-west4`. Cleanup candidate: delete the
 europe-west3 service once the owner confirms nothing else uses it.
 
-`deploy-cloudrun.yml` still needs the repository secrets `GCP_SA_KEY` and
-`GCP_PROJECT`; without them it prints a warning and deploys nothing, while the
-run still shows a green tick. Verify a deploy by checking the live H1.
+*(Superseded 2026-10-29: `deploy-cloudrun.yml` uses keyless WIF variables and
+deploys on every push to `main`. If those variables go missing it prints a
+`Not deployed` warning while still showing green, so verify a deploy on the
+live site.)*
 
 ## Follow-ups after the 2026-09-17 deploy (nginx, small)
 
@@ -30,8 +46,7 @@ security headers, so land them in the same change:
    `http://www.juzlova.cz:8080/cenik/` because nginx's directory redirect
    used the container's listen port and scheme. Keep the directive.
 
-Also still open: repository secrets `GCP_SA_KEY` / `GCP_PROJECT` for
-`deploy-cloudrun.yml`; resubmit the four sitemaps in Google Search Console
+Also still open: resubmit the four sitemaps in Google Search Console
 after the URL change; delete the orphan `juzlova-web` service in europe-west3.
 
 ## 2026-09-16 — translated slugs and messaging rewrite
@@ -72,7 +87,10 @@ would collide across most of the tree.
 `scripts/build_site.py` now defaults `SITE_BASE` to `https://juzlova.cz`, and
 the committed HTML, sitemap, `llms.txt` and redirect stubs all use it.
 
-## Open: canonical URLs point at a redirect
+## Resolved: canonical URLs pointed at a redirect
+
+*(Settled in favour of option 1 — `SITE_BASE` now defaults to
+`https://www.juzlova.cz`. Kept for the reasoning.)*
 
 Every canonical link, hreflang alternate and sitemap entry points at the apex:
 
@@ -129,7 +147,7 @@ production is today. It and `gcp_domain_mapping.sh` refuse to run unless
 
 | Workflow | Target | State |
 |---|---|---|
-| `deploy-cloudrun.yml` | **Cloud Run `juzlova-web`, europe-west4 — this is production** (a same-named orphan exists in europe-west3) | runs on push to `main`; needs `GCP_SA_KEY` + `GCP_PROJECT` |
+| `deploy-cloudrun.yml` | **Cloud Run `juzlova-web`, europe-west4 — this is production** (a same-named orphan exists in europe-west3) | runs on push to `main`; keyless WIF via repo variables, working |
 | `deploy-gcp.yml` | GCS bucket, europe-central2 (Warsaw) | dispatch-only; not what serves the domain |
 | `deploy-cloudrun-preview.yml` | Cloud Run `juzlova-main-preview`, europe-west3 | dispatch-only; deliberately not the live `juzlova-web` |
 | `cutover-pages-dns.yml` | points `www` at GitHub Pages | needs `CLOUDFLARE_API_TOKEN` |
