@@ -16,6 +16,7 @@ const SLUGS = [
   "minivetrnicky-recept",
   "karamelove-vetrniky-recept",
   "irsky-sticky-toffee-pudding-recept",
+  "vetrnicky-s-vanilkovym-kremem-recept",
 ] as const
 
 type RecipeSlug = (typeof SLUGS)[number]
@@ -46,6 +47,7 @@ const SEED: RatingsDoc = {
     "minivetrnicky-recept": { sum_tenths: 2784, count: 58 },
     "karamelove-vetrniky-recept": { sum_tenths: 4136, count: 94 },
     "irsky-sticky-toffee-pudding-recept": { sum_tenths: 2914, count: 62 },
+    "vetrnicky-s-vanilkovym-kremem-recept": { sum_tenths: 0, count: 0 },
   },
 }
 
