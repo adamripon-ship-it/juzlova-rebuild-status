@@ -33,7 +33,7 @@ Zemiakové knedle v prášku 5 kg / 250 Kč Chlpaté knedle v prášku 5 kg / 26
 
 ### Päť zmesí. Jedno miesto výroby.
 
-Pšeničná múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne, s českou značkou kvality KLASA. Mlyn vlastní a vedie naša širšia rodina.
+Múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne.
 
 5 kg zemiakové knedle · 250 Kč
 
@@ -43,7 +43,7 @@ Pšeničná múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km
 
 Zemiakové knedle v prášku 5 kg / 250 Kč Chlpaté knedle v prášku 5 kg / 260 Kč Vanilkový puding bez lepku 1 kg / 60 Kč · 400 g / 30 Kč Kakao holandského typu 500 g / 270 Kč Vanilínový cukor 1 kg / 60 Kč
 
-12 km od dielne k rodinnému mlynu
+12 km od dielne k mlynu
 
 21 % tuku v kakau holandského typu
 
@@ -83,11 +83,7 @@ Hruškový koláč s vanilkovým pudingom
 
 Všetky recepty
 
-### Viete, odkiaľ je múka. A komu voláte.
-
-#### Múka z mlyna našej rodiny
-
-Pšeničná múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne, s českou značkou kvality KLASA. Mlyn vlastní a vedie naša širšia rodina.
+### Viete, komu voláte.
 
 #### Voláte tej, ktorá to mieša
 
@@ -102,8 +98,7 @@ Pre kuchyne Kde nás nájdete
 ### Väčšina zákazníkov si tovar vyzdvihne
 
 - Zadarmo si ho vyzdvihnete v dielni v Kochánove 40 alebo v Humpolci — termín dohodnete s Jiřinou po telefóne.
-- Po Vysočine privezieme aj zadarmo: Humpolec a Havlíčkův Brod od 1000 Kč, Jihlava od 3000 Kč, zvyšok kraja od 5000 Kč.
-- Po dohode pošleme aj balík; dopravu, balenie a poistenie platíte navyše.
+- Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 
 Zavolať a dohodnúť vyzdvihnutie Kde nás nájdete
 

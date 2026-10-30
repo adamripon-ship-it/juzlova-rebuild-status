@@ -3,21 +3,21 @@
 # Velkoobchod: knedlíky v prášku, puding, kakao | Jůzlová
 
 - **URL:** `/velkoobchod/`
-- **Meta description:** Směsi pro jídelny, restaurace, pekárny a zmrzlináře od výrobce z Vysočiny. Množstevní cena, odběr v Kochánově, rozvoz nebo váš dopravce, certifikát ke kakau.
+- **Meta description:** Směsi pro jídelny, restaurace, pekárny a zmrzlináře od výrobce z Vysočiny. Odběr v Kochánově, rozvoz do Humpolce a Havlíčkova Brodu nebo váš dopravce.
 
 ---
 
 Úvod › Pro kuchyně
 
-## Knedlíky, puding a kakao pro jídelny a restaurace: množstevní cena, odběr v Kochánově, certifikát k šarži
+## Knedlíky, puding a kakao pro jídelny a restaurace: odběr v Kochánově
 
-Zásobujeme jídelny, restaurace, pekárny, kavárny, školy a zmrzlináře. Cenu podle množství řekneme po telefonu; jména zákazníků na web nedáváme.
+Zásobujeme jídelny, restaurace, pekárny, kavárny, školy a zmrzlináře. Jména zákazníků na web nedáváme.
 
 Zavolat Jiřině
 
 ### Proč kuchyně berou směs
 
-Bramborové těsto na 500 porcí bez třiceti kil brambor k loupání. Stejná konzistence každý den. Na etiketě mouka a sušené bramborové vločky — a co k tomu přidáte, je vaše věc.
+Bramborové těsto na 500 porcí bez třiceti kil brambor k loupání. Stejná konzistence každý den.
 
 #### 500 porcí, tři lidi
 
@@ -25,17 +25,17 @@ Bramborové těsto na vodu: odpadá loupání a strouhání třiceti kil brambor
 
 #### Krátká etiketa
 
-Mouka a sušené bramborové vločky. Složení a etikety pošleme e-mailem — argument pro ředitelku i pro hygienu.
+Složení a etikety pošleme e-mailem.
 
 #### Tři cesty dodání
 
-Vyzvednutí v Kochánově, náš rozvoz (Brno zdarma od 5000 Kč, Praha od 25 kg) nebo váš dopravce — ten často vyjde levněji.
+Vyzvednutí v Kochánově, rozvoz do Humpolce a Havlíčkova Brodu nebo váš dopravce.
 
 #### Papíry ke kakau
 
 Ke kakau pošleme laboratorní certifikát k vaší šarži. Bez 14 alergenů EU, lepek pod 20 ppm.
 
-Velkoobchod po Vysočině Místní velkoobchod v Kochánově Velkoobchod do Prahy Velkoobchod do Brna Velkoobchod mimo Česko
+Velkoobchod Místní velkoobchod v Kochánově Velkoobchod pro Prahu Velkoobchod pro Brno Velkoobchod mimo Česko
 
 ### Co dodáváme komu
 
@@ -48,10 +48,8 @@ Velkoobchod po Vysočině Místní velkoobchod v Kochánově Velkoobchod do Prah
 ### Jak to dostanete
 
 - Vyzvednutí v dílně v Kochánově
-- Náš rozvoz — dopravu naceníme; do Brna zdarma od 5000 Kč, do Prahy smíšená objednávka od 25 kg
-- Váš vlastní dopravce — často vyjde levněji
-
-Do zahraničí posíláme jen po domluvě a na náklady odběratele.
+- Rozvoz do Humpolce a Havlíčkova Brodu
+- Váš vlastní dopravce
 
 ### Poptávka pro kuchyni
 
@@ -63,7 +61,7 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 
 *label:* E-mail
 
-*label:* Téma poptávkyVyberte témaObecná velkoobchodní poptávkaPraha — od 25 kg mixBrnoVysočinaZahraniční velkoobchodRestaurace nebo jídelnaPekárna nebo cukrárnaŠkolní kuchyněVýroba zmrzlinyJiné
+*label:* Téma poptávkyVyberte témaObecná velkoobchodní poptávkaPrahaBrnoVysočinaZahraniční velkoobchodRestaurace nebo jídelnaPekárna nebo cukrárnaŠkolní kuchyněVýroba zmrzlinyJiné
 
 *label:* Množství (balení nebo kg)
 
@@ -83,9 +81,7 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 
@@ -93,17 +89,13 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 
 ### Časté dotazy
 
-*summary:* Jaká je minimální objednávka v Praze?
-
-Do Prahy bereme smíšenou objednávku od 25 kg. Cenu podle množství řekneme po telefonu nebo e-mailu.
-
 *summary:* Můžu poslat vlastního dopravce?
 
-Ano. Často to vyjde levněji než náš rozvoz mimo bezplatné zóny.
+Ano. Zboží si vyzvedne v dílně v Kochánově.
 
 *summary:* Hodí se kakao výrobcům zmrzliny?
 
-Ano. Vysoký obsah kakaového másla zmrzlině svědčí: silná kakaová chuť, hladká textura a sytá barva, která nevybledne. Cenu podle množství domluvíme. Ozvěte se a napište, co potřebujete.
+Ano. Vysoký obsah kakaového másla zmrzlině svědčí: silná kakaová chuť, hladká textura a sytá barva, která nevybledne. Ozvěte se a napište, co potřebujete.
 
 *summary:* Poskytujete certifikát analýzy (CoA)?
 

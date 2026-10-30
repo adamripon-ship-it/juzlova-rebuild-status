@@ -21,7 +21,7 @@ Order
 
 - +420 728 466 141 · daily 8–19
 
-Delivery by arrangement; posting costs extra.
+We deliver to Humpolec and Havlíčkův Brod.
 
 Order from Jiřina Where to collect
 
@@ -102,10 +102,6 @@ Values per 100 g, as required by EU Regulation 1169/2011. You use cocoa by the s
 ### Storage
 
 Keep it dry and away from strong smells, ideally at 15–20 °C and below 50 % humidity.
-
-### For pastry shops and gelato makers
-
-Quantity pricing, batch certificate, pick-up or delivery. Ask on the For kitchens page.
 
 ### Frequently asked questions
 

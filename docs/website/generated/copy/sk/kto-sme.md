@@ -3,7 +3,7 @@
 # Kto sme — rodinná dielňa Jůzlová, Kochánov, od roku 2004
 
 - **URL:** `/sk/kto-sme/`
-- **Meta description:** Rodina Jůzlových mieša knedle v prášku, puding a kakao v Kochánove na Vysočine od roku 2004. Múka z rodinného mlyna v Havlíčkovom Brode. Bez e-shopu.
+- **Meta description:** Rodina Jůzlových mieša knedle v prášku, puding a kakao v Kochánove na Vysočine od roku 2004. Bez e-shopu.
 
 ---
 
@@ -11,7 +11,7 @@
 
 ## Jůzlovci z Kochánova: od roku 2004 miešame zmesi, z ktorých sami varíme
 
-Dielňa je v Kochánove 40, dvanásť kilometrov od Havlíčkovho Brodu. Múku berieme z mlyna, ktorý vedie naša širšia rodina. Objednávky prijíma Jiřina.
+Dielňa je v Kochánove 40, dvanásť kilometrov od Havlíčkovho Brodu. Objednávky prijíma Jiřina.
 
 Zavolať Jiřine Napísať e-mail
 
@@ -65,7 +65,7 @@ Stará sa o to, aby ste nás ľahko našli, prezreli produkty a vedeli, ako obje
 
 ### Odkiaľ je múka
 
-Pšeničná múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne, s českou značkou kvality KLASA. Mlyn vlastní a vedie naša širšia rodina, takže vieme, čo do vreca sypeme.
+Múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne.
 
 ### Čo nerobíme
 

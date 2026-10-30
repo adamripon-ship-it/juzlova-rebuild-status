@@ -30,7 +30,7 @@
 | [Zemiakovo-tvarohové knedle s jahodami — recept za 20 minút](tvarohove-knedle-s-jahodami.md) | `/sk/tvarohove-knedle-s-jahodami/` |
 | [Vanilínový cukor 1 kg / 60 Kč — do cesta, na posyp \| Jůzlová](vanilinovy-cukor.md) | `/sk/vanilinovy-cukor/` |
 | [Vanilkový puding bez lepku 1 kg / 60 Kč \| Jůzlová](vanilkovy-puding-bez-lepku.md) | `/sk/vanilkovy-puding-bez-lepku/` |
-| [Veľkoobchod: knedle v prášku, puding, kakao \| Jůzlová](velkoobchod.md) | `/sk/velkoobchod/` |
+| [Knedle v prášku, puding a kakao pre kuchyne \| Jůzlová](velkoobchod.md) | `/sk/velkoobchod/` |
 | [Venčeky s vanilkovým krémom a rumovou polevou — recept](venceky-s-vanilkovym-kremom.md) | `/sk/venceky-s-vanilkovym-kremom/` |
 | [Veterníčky s vanilkovým krémom a cukrovou polevou — recept](veterniky-s-vanilkovym-kremom.md) | `/sk/veterniky-s-vanilkovym-kremom/` |
-| [Zaslanie po dohode — rodinná dielňa z Vysočiny \| Jůzlová](zasielky-do-eu.md) | `/sk/zasielky-do-eu/` |
+| [Bývate v zahraničí? Vyzdvihnutie v dielni \| Jůzlová](zasielky-do-eu.md) | `/sk/zasielky-do-eu/` |

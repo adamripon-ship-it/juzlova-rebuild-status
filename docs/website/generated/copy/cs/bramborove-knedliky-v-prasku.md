@@ -3,7 +3,7 @@
 # Bramborové knedlíky v prášku 5 kg — za 20 minut | Jůzlová
 
 - **URL:** `/bramborove-knedliky-v-prasku/`
-- **Meta description:** Bramborové těsto v prášku z mouky z mlýna v Havlíčkově Brodě a bramborových vloček. Zaděláte vodou, nerozvaří se. 5 kg / 250 Kč, vyzvednutí Kochánov a Humpolec.
+- **Meta description:** Bramborové těsto v prášku. Zaděláte vodou, nerozvaří se. 5 kg / 250 Kč, vyzvednutí Kochánov a Humpolec. Knedlíky v prášku.
 
 ---
 
@@ -11,7 +11,7 @@
 
 ## Bramborové knedlíky v prášku: zaděláte vodou, za 20 minut jsou na stole a nerozvaří se
 
-Mouka z mlýna v Havlíčkově Brodě a sušené bramborové vločky. Nic dalšího. Vejce nebo strouhanou bramboru přidáte, jak jste zvyklí.
+Mouka z mlýna v Havlíčkově Brodě. Celé složení najdete níže.
 
 Cena
 
@@ -21,13 +21,13 @@ Objednávka
 
 - +420 728 466 141 · denně 8–19
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Vyzvednete na provozovně. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 Objednat u Jiřiny Kde vyzvednout
 
 ### Co v tom je
 
-Pšeničná mouka se značkou KLASA z mlýna v Havlíčkově Brodě, který vlastní a vede naše širší rodina, a sušené bramborové vločky. Vločky dávají těstu chuť brambor a drží ho při vaření pohromadě.
+Mouka, sušené bramborové vločky, sušená vejce, sůl, prášek do pečiva, bramborový škrob
 
 ### Jak to připravíte
 
@@ -35,7 +35,7 @@ Pšeničná mouka se značkou KLASA z mlýna v Havlíčkově Brodě, který vlas
 - Vytvarujete knedlíky, šišky nebo krokety.
 - Povaříte. Od otevření pytle po talíř zhruba 20 minut.
 
-Chcete to „svoje“? Část vody nahraďte mlékem, přidejte vejce nebo jednu uvařenou strouhanou bramboru. Spousta našich zákazníků to tak dělá.
+Chcete to „svoje“? Přidejte vejce nebo jednu uvařenou strouhanou bramboru. Spousta našich zákazníků to tak dělá.
 
 ### Co z jednoho těsta uvaříte
 
@@ -53,7 +53,7 @@ Z 5 kg připravíte přílohu zhruba pro 60–70 lidí. Pytel skladujte v suchu 
 
 *summary:* Musím přidat vejce?
 
-Ne. Těsto funguje jen s vodou. Vejce nebo mléko přidejte, chcete-li bohatší chuť.
+Ne. Směs zaděláte vodou podle návodu. Vejce přidejte, chcete-li bohatší chuť.
 
 *summary:* Vydrží knedlíky plnění ovocem?
 

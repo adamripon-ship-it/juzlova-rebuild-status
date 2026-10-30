@@ -21,7 +21,7 @@ Order
 
 - +420 728 466 141 · daily 8–19
 
-Delivery by arrangement; posting costs extra.
+We deliver to Humpolec and Havlíčkův Brod.
 
 Order from Jiřina Where to collect
 

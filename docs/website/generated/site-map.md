@@ -36,16 +36,16 @@ A dash means the page exists in Czech only (local landing pages).
 | Bramborovo-tvarohové knedlíky s jahodami | [`/tvarohove-knedliky-s-jahodami-recept/`](copy/cs/tvarohove-knedliky-s-jahodami-recept.md) | [`/en/strawberry-curd-dumplings/`](copy/en/strawberry-curd-dumplings.md) | [`/de/topfenknoedel-mit-erdbeeren/`](copy/de/topfenknoedel-mit-erdbeeren.md) | [`/sk/tvarohove-knedle-s-jahodami/`](copy/sk/tvarohove-knedle-s-jahodami.md) |
 | Vanilínový cukr 1 kg / 60 Kč | [`/vanilinovy-cukr/`](copy/cs/vanilinovy-cukr.md) | [`/en/vanilla-sugar/`](copy/en/vanilla-sugar.md) | [`/de/vanillinzucker/`](copy/de/vanillinzucker.md) | [`/sk/vanilinovy-cukor/`](copy/sk/vanilinovy-cukor.md) |
 | Vanilkový puding bez lepku, 1 kg / 60 Kč \| Jůzlová | [`/vanilkovy-puding-bez-lepku/`](copy/cs/vanilkovy-puding-bez-lepku.md) | [`/en/gluten-free-vanilla-pudding-powder/`](copy/en/gluten-free-vanilla-pudding-powder.md) | [`/de/glutenfreies-vanillepuddingpulver/`](copy/de/glutenfreies-vanillepuddingpulver.md) | [`/sk/vanilkovy-puding-bez-lepku/`](copy/sk/vanilkovy-puding-bez-lepku.md) |
-| Velkoobchod Brno | [`/velkoobchod-brno/`](copy/cs/velkoobchod-brno.md) | — | — | — |
+| Velkoobchod pro Brno | [`/velkoobchod-brno/`](copy/cs/velkoobchod-brno.md) | — | — | — |
 | Velkoobchod Kochánov | [`/velkoobchod-kochanov/`](copy/cs/velkoobchod-kochanov.md) | — | — | — |
-| Velkoobchod Praha | [`/velkoobchod-praha/`](copy/cs/velkoobchod-praha.md) | — | — | — |
-| Velkoobchod na Vysočině | [`/velkoobchod-vysocina/`](copy/cs/velkoobchod-vysocina.md) | — | — | — |
+| Velkoobchod pro Prahu | [`/velkoobchod-praha/`](copy/cs/velkoobchod-praha.md) | — | — | — |
+| Velkoobchod | [`/velkoobchod-vysocina/`](copy/cs/velkoobchod-vysocina.md) | — | — | — |
 | Velkoobchod mimo Česko | [`/velkoobchod-zahranici/`](copy/cs/velkoobchod-zahranici.md) | — | — | — |
 | Velkoobchod: knedlíky v prášku, puding, kakao \| Jůzlová | [`/velkoobchod/`](copy/cs/velkoobchod.md) | [`/en/wholesale/`](copy/en/wholesale.md) | [`/de/grosshandel/`](copy/de/grosshandel.md) | [`/sk/velkoobchod/`](copy/sk/velkoobchod.md) |
 | Věnečky s vanilkovým krémem a rumovou polevou | [`/venecky-s-vanilkovym-kremem-recept/`](copy/cs/venecky-s-vanilkovym-kremem-recept.md) | [`/en/choux-rings-with-vanilla-cream/`](copy/en/choux-rings-with-vanilla-cream.md) | [`/de/brandteigkraenze-mit-vanillecreme/`](copy/de/brandteigkraenze-mit-vanillecreme.md) | [`/sk/venceky-s-vanilkovym-kremom/`](copy/sk/venceky-s-vanilkovym-kremom.md) |
 | Větrníčky s vanilkovým krémem a cukrovou polevou | [`/vetrnicky-s-vanilkovym-kremem-recept/`](copy/cs/vetrnicky-s-vanilkovym-kremem-recept.md) | [`/en/cream-puffs-with-vanilla-cream/`](copy/en/cream-puffs-with-vanilla-cream.md) | [`/de/windbeutel-mit-vanillecreme/`](copy/de/windbeutel-mit-vanillecreme.md) | [`/sk/veterniky-s-vanilkovym-kremom/`](copy/sk/veterniky-s-vanilkovym-kremom.md) |
 | Knedlíky v prášku z Vysočiny | [`/vysocina/`](copy/cs/vysocina.md) | — | — | — |
-| Zásilka do zahraničí jen po domluvě \| Jůzlová, Kochánov | [`/zasilky-do-eu/`](copy/cs/zasilky-do-eu.md) | [`/en/shipping-to-eu/`](copy/en/shipping-to-eu.md) | [`/de/versand-in-die-eu/`](copy/de/versand-in-die-eu.md) | [`/sk/zasielky-do-eu/`](copy/sk/zasielky-do-eu.md) |
+| Bydlíte v zahraničí? Vyzvednutí v dílně \| Jůzlová | [`/zasilky-do-eu/`](copy/cs/zasilky-do-eu.md) | [`/en/shipping-to-eu/`](copy/en/shipping-to-eu.md) | [`/de/versand-in-die-eu/`](copy/de/versand-in-die-eu.md) | [`/sk/zasielky-do-eu/`](copy/sk/zasielky-do-eu.md) |
 
 **Pages per language:** cs 39, en 28, de 28, sk 28
 

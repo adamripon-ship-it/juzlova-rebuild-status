@@ -63,6 +63,10 @@ How to use it:
 
       Then close #28 with a comment linking the new PR.
 
+- [ ] **Owner review of the PDF content corrections** (2026-10-30, Adam).
+      Branch `content-corrections-owner-pdf`. Conflicting claims are settled in all
+      four languages. Owner to confirm: Humpolec pick-up, and the en/de/sk wording.
+
 ## 💡 Ideas, not scheduled
 
 - [ ] Anything new for the site (copy, recipes, photos, design): add it here

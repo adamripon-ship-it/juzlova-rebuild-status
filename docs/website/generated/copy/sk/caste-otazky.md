@@ -29,17 +29,13 @@ Nie. Objednávate hotové balenia. Na prvé vyskúšanie sa hodí puding v 400 g
 
 *summary:* Platím vopred, alebo pri prevzatí?
 
-Pri vyzdvihnutí a rozvoze platíte pri prevzatí. Keď tovar posielame balíkom, povieme celkovú sumu vopred a odošleme až po vašom súhlase.
+Pri vyzdvihnutí a rozvoze platíte pri prevzatí.
 
 ### Doprava
 
-*summary:* Kedy je rozvoz zadarmo?
+*summary:* Kam tovar dovezete?
 
-Do Humpolca a Havlíčkovho Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zvyšku Vysočiny od 5000 Kč.
-
-*summary:* Posielate aj balíkom, napríklad na Slovensko?
-
-Na požiadanie áno, hoci väčšina zákazníkov si pre tovar príde. Poštovné, krabicu a poistenie platíte celé vy a celkovú sumu dohodneme vopred.
+Do Humpolca a Havlíčkovho Brodu.
 
 *summary:* Môžem poslať vlastného dopravcu?
 
@@ -49,7 +45,7 @@ Na požiadanie áno, hoci väčšina zákazníkov si pre tovar príde. Poštovn�
 
 *summary:* Z čoho sú knedle v prášku?
 
-Z pšeničnej múky z mlyna v Havlíčkovom Brode, ktorý vedie naša širšia rodina, a zo sušených zemiakových vločiek. Zamiešate len s vodou; vajce, mlieko alebo strúhané zemiaky pridáte podľa zvyku.
+Múka, sušené zemiakové vločky, sušené vajcia, soľ, prášok do pečiva, zemiakový škrob. Zamiešate s vodou podľa návodu.
 
 *summary:* Je vanilkový puding naozaj bez lepku?
 
@@ -77,6 +73,6 @@ Zhruba 40 g na 500 ml mlieka. Z kila uvaríte asi 25 pudingov.
 
 V suchu a zatvorené. Kakao mimo silných pachov, ideálne pri 15–20 °C.
 
-Kuchyne a prevádzky: otázky k množstevným cenám a dodaniu sú na stránke Pre kuchyne. Pre kuchyne →
+Kuchyne a prevádzky: viac na stránke Pre kuchyne →
 
 Zavolať Jiřine Napísať e-mail

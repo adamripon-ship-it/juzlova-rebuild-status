@@ -33,7 +33,7 @@ Bramborové knedlíky v prášku 5 kg / 250 Kč Chlupaté knedlíky v prášku 5
 
 ### Pět směsí. Jedno místo výroby.
 
-Pšeničná mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dílny, se značkou KLASA. Mlýn vlastní a vede naše širší rodina.
+Mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dílny.
 
 5 kg bramborové knedlíky · 250 Kč
 
@@ -43,7 +43,7 @@ Pšeničná mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 
 
 Bramborové knedlíky v prášku 5 kg / 250 Kč Chlupaté knedlíky v prášku 5 kg / 260 Kč Vanilkový puding bez lepku 1 kg / 60 Kč · 400 g / 30 Kč Kakao holandského typu 500 g / 270 Kč Vanilínový cukr 1 kg / 60 Kč
 
-12 km od dílny k rodinnému mlýnu
+12 km od dílny k mlýnu
 
 21 % tuku v kakau holandského typu
 
@@ -83,11 +83,7 @@ Hruškový koláč s vanilkovým pudingem
 
 Všechny recepty
 
-### Víte, odkud je mouka. A komu voláte.
-
-#### Mouka z mlýna naší širší rodiny
-
-Pšeničná mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dílny, se značkou KLASA. Mlýn vlastní a vede naše širší rodina.
+### Víte, komu voláte.
 
 #### Voláte tomu, kdo to míchá
 
@@ -102,8 +98,7 @@ Pro kuchyně Kde nás najdete
 ### Většina lidí si pro směsi přijede
 
 - Vyzvednete zdarma v dílně v Kochánově 40 nebo v Humpolci. Den a hodinu domluvíte s Jiřinou po telefonu.
-- Po Vysočině přivezeme zdarma: Humpolec a Havlíčkův Brod od 1000 Kč, Jihlava od 3000 Kč, zbytek Vysočiny od 5000 Kč.
-- Poslat balíkem můžeme po domluvě; dopravu, balení a pojištění platíte navíc.
+- Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 Zavolat a domluvit vyzvednutí Kde nás najdete
 

@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20261018a"
+ASSET_VER = "20261030a"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -816,6 +816,11 @@ def contact_form_html(L, kind="contact"):
     heading = ui.get("form_b2b_h") if is_b2b else ui["form_h"]
     hint = ui.get("form_b2b_hint") if is_b2b else ui["form_hint"]
     heading_id = "b2b-write" if is_b2b else "write-to-us"
+    fulfill_opts = [("factory", ui["form_fulfill_factory"]),
+                    ("delivery_hb_humpolec", ui["form_fulfill_two_cities"])]
+    fulfill = "\n".join(
+        f'<label class="chk"><input type="radio" name="fulfillment" value="{v}"><span>{esc(label)}</span></label>'
+        for v, label in fulfill_opts)
     return f"""<form class="order-form" data-contact-form data-form-type="{esc(kind)}" data-lang="{esc(lang)}" data-i18n-success="{esc(ui['form_success'])}" data-i18n-error="{esc(ui['form_error'])}" data-i18n-captcha="{esc(ui['form_captcha'])}" data-i18n-sending="{esc(ui['form_sending'])}" data-i18n-need-contact="{esc(ui['form_need_contact'])}" action="/api/contact" method="post">
 <h2 id="{heading_id}">{esc(heading)}</h2>
 <p class="form-hint">{esc(hint)}</p>
@@ -830,9 +835,7 @@ def contact_form_html(L, kind="contact"):
 </fieldset>
 <fieldset class="fulfill">
 <legend>{esc(ui['form_fulfill'])}</legend>
-<label class="chk"><input type="radio" name="fulfillment" value="factory"><span>{esc(ui['form_fulfill_factory'])}</span></label>
-<label class="chk"><input type="radio" name="fulfillment" value="humpolec"><span>{esc(ui['form_fulfill_humpolec'])}</span></label>
-<label class="chk"><input type="radio" name="fulfillment" value="delivery"><span>{esc(ui['form_fulfill_delivery'])}</span></label>
+{fulfill}
 </fieldset>
 <label>{esc(ui['form_message'])}<textarea name="message" maxlength="4000" rows="5"></textarea></label>
 <div class="turnstile-slot" data-turnstile-slot></div>
@@ -962,7 +965,6 @@ def nav(L, depth, active, pid):
   </span>
   {a('ceny', ui['nav_prices'])}
   {a('recepty', ui['nav_recipes'])}
-  {a('velkoobchod', ui['nav_b2b'])}
   {a('kontakt', ui['nav_contact'])}
   {langsel}
 </nav>"""
@@ -973,9 +975,14 @@ def nav(L, depth, active, pid):
 # Footer anchors for Czech local pages whose H1 is a full sentence. The page
 # keeps its H1; the footer only needs a label that fits one line on a phone.
 FOOTER_LABELS = {
-    "objednavka_cesko": "Objednávka po celém Česku",
+    "objednavka_cesko": "Jak objednat",
     "navstevnikum": "Vyzvednutí po cestě",
+    "velkoobchod_vysocina": "Velkoobchod",
 }
+
+# Only these local pages are linked from the Czech footer; the others keep their routes.
+FOOTER_GEO = ("objednavka_cesko", "navstevnikum")
+FOOTER_B2B = ("velkoobchod_vysocina",)
 
 
 def credit_html(ui):
@@ -1016,10 +1023,10 @@ def footer(L, depth, pid="home"):
     if lg == "cs":
         geo = "".join(
             f'<a href="{pages}{GEO_SLUGS[k]}/">{esc(FOOTER_LABELS.get(k) or AEO_PAGES["cs"][k]["h1"])}</a>'
-            for k in GEO_SLUGS)
+            for k in FOOTER_GEO)
         b2b = "".join(
             f'<a href="{pages}{B2B_SLUGS[k]}/">{esc(FOOTER_LABELS.get(k) or AEO_PAGES["cs"][k]["h1"])}</a>'
-            for k in B2B_SLUGS)
+            for k in FOOTER_B2B)
         groups += [group("local", ui["footer_kitchens"], geo), group("b2b", ui["footer_b2b"], b2b)]
     links = "".join(groups)
     current = ' aria-current="page"'
@@ -1357,8 +1364,8 @@ def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None,
 """
 
 
-def price_note_html(L):
-    note = L["ui"].get("price_excludes_shipping") or ""
+def price_note_html(L, note=None):
+    note = note or L["ui"].get("price_excludes_shipping") or ""
     if not note:
         return ""
     return f'<p class="price-note">{esc(note)}</p>'
@@ -1711,13 +1718,15 @@ def build_home(L):
 </section>"""
 
     # 5 · why: three columns, vines with leaves, cocoa silhouette, banana-leaf cut-out
+    why_cols = ui.get("why_cols") or (1, 2, 3)
+    why_html = "\n      ".join(
+        f"""<div class="rv"><h3>{esc(ui[f'why_{n}_h'])}</h3><p class="body bullet">{esc(ui[f'why_{n}_p'])}</p></div>"""
+        for n in why_cols)
     why = f"""<section class="band gold why">
   <div class="wrap">
     <h2 class="sec rv" style="max-width:16ch">{esc(ui['sec_why'])}</h2>
-    <div class="cols3">
-      <div class="rv"><h3>{esc(ui['why_1_h'])}</h3><p class="body bullet">{esc(ui['why_1_p'])}</p></div>
-      <div class="rv"><h3>{esc(ui['why_2_h'])}</h3><p class="body bullet">{esc(ui['why_2_p'])}</p></div>
-      <div class="rv"><h3>{esc(ui['why_3_h'])}</h3><p class="body bullet">{esc(ui['why_3_p'])}</p></div>
+    <div class="cols3{' cols-2' if len(why_cols) == 2 else ''}">
+      {why_html}
     </div>
     <p class="actions start rv"><a class="btn white" href="{pages}{path_of(lg, 'velkoobchod')}"><span>{esc(ui['nav_b2b'])}</span>{ARROW}</a><a class="btn outline" href="{pages}{path_of(lg, 'kde_nas_najdete')}">{esc(ui['nav_delivery'])}</a></p>
   </div>
@@ -1731,7 +1740,7 @@ def build_home(L):
 </section>"""
 
     # 6 · white: delivery + reviews, then the newsletter
-    deliver_items = "".join(f"<li>{esc(ui[k])}</li>" for k in ("deliver_1", "deliver_2", "deliver_3"))
+    deliver_items = "".join(f"<li>{esc(ui[k])}</li>" for k in ("deliver_1", "deliver_2", "deliver_3") if ui.get(k))
     white = f"""<section class="band split tight" id="doprava">
   <div class="wrap">
     <div class="rv">
@@ -1894,7 +1903,7 @@ def build_product(L, key):
 <div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{' · '.join(f'<span>{esc(x)}</span>' for x in pr['price'].split(' · '))}</strong>
 <span class="price-sub">{esc(ui['price_pickup_badge'])}{(' · ' + esc(pr['per_unit'])) if pr.get('per_unit') else ''}</span></dd>
 <dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · {esc(ui['open_hours_short'])}</dd></dl>
-{price_note_html(L)}</div>
+{price_note_html(L, pr.get("price_note"))}</div>
 {cta_html(L, depth, ("cta_order", "kde_nas_najdete", "cta_pickup"))}
 </div>
 </div>
@@ -2733,11 +2742,8 @@ def build_llms(langs_data):
         "hours: pondělí–neděle 08:00–19:00 po telefonické domluvě",
         "order: telefon nebo formulář na webu; bez e-shopu",
         "pickup_free: Kochánov 40, 582 53; Humpolec u Pivovaru Bernard po dohodě",
-        "delivery_free_vysocina: nad 5000 Kč",
-        "delivery_free_humpolec_hb: nad 1000 Kč (Humpolec, Havlíčkův Brod)",
-        "delivery_free_jihlava: nad 3000 Kč (Jihlava)",
-        "eu_shipping: DE/AT/SK/PL a Češi v EU — dopravu, balení a pojištění platí zákazník",
-        "b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; cena podle množství; bez jmen zákazníků",
+        "delivery: Humpolec, Havlíčkův Brod",
+        "b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; bez jmen zákazníků",
         "newsletter: přihláška na webu; nové recepty občas a sezónní tipy před Vánoci a Velikonocemi",
         "price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo",
         "local_share: cca 90 % zakázek kolem Kochánova 40, 582 53",
@@ -2758,7 +2764,7 @@ def build_llms(langs_data):
         "PSČ je 582 53. Nikoli 582 91 (jiný Kochánov u Světlé).",
         "",
         "## Čím se lišíme",
-        "Pšeničná mouka z mlýna v Havlíčkově Brodě (12 km), který vlastní a vede naše širší rodina. Těsto se zadělává jen vodou; vejce, mléko nebo strouhanou bramboru přidá kuchař podle zvyku. Prodáváme přímo z dílny, po kilech.",
+        "Mouka z mlýna v Havlíčkově Brodě (12 km). Těsto se zadělává vodou podle návodu. Prodáváme přímo z dílny, po kilech.",
         "",
         "## Výrobky",
     ]
@@ -2889,7 +2895,7 @@ def build_llms(langs_data):
             "Sell Dutch-process cocoa (500 g)",
             "Sell vanilla sugar (1 kg)",
             "Free pick-up at Kochánov 40, 582 53 and in Humpolec near Pivovar Bernard by arrangement",
-            "Free Vysočina delivery from 5000 CZK; free to Humpolec and Havlíčkův Brod from 1000 CZK; free to Jihlava from 3000 CZK",
+            "Delivery to Humpolec and Havlíčkův Brod",
             "Take orders by phone or email",
         ],
         "updated": TODAY,

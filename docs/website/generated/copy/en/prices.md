@@ -11,7 +11,7 @@ Home › Prices
 
 ## Prices: five mixes, collected at the workshop in Kochánov or in Humpolec
 
-Prices are in Kč (CZK) and the same for everyone who collects at the workshop or in Humpolec. Delivery terms are below the table.
+The same price for everyone who collects at the workshop or has it delivered to Havlíčkův Brod or Humpolec.
 
 Call Jiřina Write to us
 
@@ -87,25 +87,8 @@ Portion counts follow the pack instructions.
 ### Pick-up and delivery
 
 - Pick-up in Kochánov or Humpolec: free
-- Humpolec and Havlíčkův Brod: free delivery from 1000 Kč
-- Jihlava: free from 3000 Kč · rest of Vysočina: free from 5000 Kč
-- Kitchens: Brno free from 5000 Kč; Prague for mixed orders from 25 kg
-- Parcels within Czechia or abroad: on request; you pay shipping, packing and insurance on top
-
-### Kitchens and shops
-
-Quantity prices by phone or through the form on the For kitchens page.
+- Humpolec and Havlíčkův Brod
 
 ### Old prices online
 
 Some websites still show our prices from 2017. Only this list applies.
-
-### Frequently asked questions
-
-*summary:* Do the prices apply to parcels?
-
-The goods prices do. We post a parcel only on request; you pay the full postage, box and insurance, and we agree the total first.
-
-*summary:* Are there quantity discounts?
-
-Yes, for kitchens and shops by quantity. We quote by phone.

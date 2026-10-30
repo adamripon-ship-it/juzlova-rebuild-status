@@ -21,7 +21,7 @@ Bestellung
 
 - +420 728 466 141 · täglich 8–19 Uhr
 
-Lieferung nach Absprache; der Postversand kostet extra.
+Nach Humpolec und Havlíčkův Brod liefern wir.
 
 Bei Jiřina bestellen Abholorte
 

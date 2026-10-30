@@ -49,9 +49,7 @@ Name und Telefon oder E-Mail genügen. Wir melden uns und vereinbaren einen Term
 
 *label:* Abholung in der Werkstatt, Kochánov 40, 582 53
 
-*label:* Abholung in Humpolec nahe der Brauerei Bernard (kostenlos, Tag und Uhrzeit nach Absprache)
-
-*label:* Lieferung in der Vysočina oder Paket auf Anfrage
+*label:* Lieferung nach Havlíčkův Brod oder Humpolec (kostenlos, Tag und Uhrzeit nach Absprache)
 
 *label:* Nachricht (was, wie viel, wohin)
 

@@ -21,7 +21,7 @@ Bestellung
 
 - +420 728 466 141 · täglich 8–19 Uhr
 
-Lieferung nach Absprache; der Postversand kostet extra.
+Nach Humpolec und Havlíčkův Brod liefern wir.
 
 Bei Jiřina bestellen Abholorte
 
@@ -102,10 +102,6 @@ Werte je 100 g nach EU-Verordnung 1169/2011. Kakao verwenden Sie löffelweise �
 ### Lagerung
 
 Trocken, fern von starken Gerüchen, ideal bei 15–20 °C und unter 50 % Luftfeuchte.
-
-### Für Konditoreien und Eishersteller
-
-Mengenpreis, Chargenzertifikat, Abholung oder Lieferung. Anfrage über die Seite „Für Küchen“.
 
 ### Häufige Fragen
 

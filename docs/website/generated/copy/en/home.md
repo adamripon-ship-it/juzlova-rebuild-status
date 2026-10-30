@@ -33,7 +33,7 @@ Potato dumpling mix 5 kg / 250 Kč Raw-potato dumpling mix (chlupaté knedlíky)
 
 ### Five mixes. One workshop.
 
-The wheat flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km from the workshop, with the Czech KLASA quality mark. Our extended family owns and runs the mill.
+The flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km from the workshop.
 
 5 kg potato dumpling mix · 250 Kč
 
@@ -43,7 +43,7 @@ The wheat flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12
 
 Potato dumpling mix 5 kg / 250 Kč Raw-potato dumpling mix (chlupaté knedlíky) 5 kg / 260 Kč Gluten-free vanilla pudding powder 1 kg / 60 Kč · 400 g / 30 Kč Dutch-process cocoa 500 g / 270 Kč Vanilla sugar 1 kg / 60 Kč
 
-12 km from the workshop to the family mill
+12 km from the workshop to the mill
 
 21 % cocoa butter in the Dutch-process cocoa
 
@@ -83,11 +83,7 @@ Pear cake with vanilla pudding
 
 All recipes
 
-### You know where the flour is from. And who picks up the phone.
-
-#### Flour from the family mill
-
-The wheat flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km from the workshop, with the Czech KLASA quality mark. Our extended family owns and runs the mill.
+### You know who picks up the phone.
 
 #### You talk to the maker
 
@@ -102,8 +98,7 @@ For kitchens Where to find us
 ### Collect in Kochánov or Humpolec
 
 - Free pick-up at the workshop in Kochánov or in Humpolec. Call Jiřina to arrange a time.
-- Free delivery within the Czech Highlands: Humpolec and Havlíčkův Brod from 1000 Kč, Jihlava from 3000 Kč, the rest of Vysočina from 5000 Kč.
-- We can post a parcel on request; you pay shipping, packing and insurance on top.
+- We deliver to Humpolec and Havlíčkův Brod.
 
 Call to arrange pick-up Where to find us
 

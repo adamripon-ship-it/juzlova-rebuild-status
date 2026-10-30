@@ -15,7 +15,7 @@ Druhé výdejní místo je v Humpolci u Pivovaru Bernard. Zdarma, den a hodinu d
 
 Humpolec má vlastní výdej. Zboží necháme u dcery majitelky v okolí Pivovaru Bernard. Nic za to neúčtujeme. Ulice sem nedáváme — den a hodinu řekneme po telefonu.
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Objednávka podle místa
 
@@ -53,9 +53,7 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 
@@ -70,10 +68,6 @@ Ano. Nic za výdej neúčtujeme.
 *summary:* Je to výdejna pivovaru?
 
 Ne. Soukromé místo v okolí Pivovaru Bernard, ne u vrat.
-
-*summary:* Od kolika je rozvoz po Humpolci zdarma?
-
-Od 1000 Kč.
 
 *summary:* Je v ceně doprava?
 

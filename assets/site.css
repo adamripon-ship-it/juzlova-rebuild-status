@@ -378,7 +378,8 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
 /* three columns */
 .why { padding-bottom: clamp(17rem, 28vw, 24rem); }
 .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 3.5rem; }
-@media (max-width: 900px) { .cols3 { grid-template-columns: 1fr; } }
+.cols3.cols-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) { .cols3, .cols3.cols-2 { grid-template-columns: 1fr; } }
 .why-leaf { position: absolute; right: 4%; bottom: -6%; width: clamp(200px, 22vw, 320px); z-index: 2; transform: rotate(-8deg); }
 
 /* deliver + reviews + newsletter (white) */

@@ -21,7 +21,7 @@ Objednávka
 
 - +420 728 466 141 · denne 8–19
 
-Rozvoz po dohode, poslanie balíkom sa platí zvlášť.
+Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 
 Objednať u Jiřiny Kde vyzdvihnúť
 

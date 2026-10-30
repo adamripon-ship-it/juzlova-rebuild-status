@@ -3,7 +3,7 @@
 # About us — the Jůzlová family workshop, Kochánov, since 2004
 
 - **URL:** `/en/about-us/`
-- **Meta description:** The Jůzl family has made dumpling mix, pudding and cocoa in Kochánov since 2004. Flour from the family mill in Havlíčkův Brod. No web shop, no middlemen.
+- **Meta description:** The Jůzl family has made dumpling mix, pudding and cocoa in Kochánov since 2004. No web shop, no middlemen. Potato dumpling mix.
 
 ---
 
@@ -11,7 +11,7 @@ Home › About us
 
 ## The Jůzl family of Kochánov: mixing the food they cook themselves since 2004
 
-The workshop is at Kochánov 40, twelve kilometres from Havlíčkův Brod. The flour comes from a mill our extended family runs. Jiřina takes the orders.
+The workshop is at Kochánov 40, twelve kilometres from Havlíčkův Brod. Jiřina takes the orders.
 
 Call Jiřina Write to us
 
@@ -65,7 +65,7 @@ Makes sure you can find us easily, see the products and know how to order.
 
 ### Where the flour comes from
 
-The wheat flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km from the workshop, carrying the Czech KLASA quality mark. Our extended family owns and runs the mill, so we know what goes into the bag.
+The flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km from the workshop.
 
 ### What we don't do
 

@@ -21,7 +21,7 @@ Bestellung
 
 - +420 728 466 141 · täglich 8–19 Uhr
 
-Lieferung nach Absprache; der Postversand kostet extra.
+Nach Humpolec und Havlíčkův Brod liefern wir.
 
 Bei Jiřina bestellen Abholorte
 
@@ -37,10 +37,6 @@ Bei Jiřina bestellen Abholorte
 - Mischung nach Anleitung mit Wasser anrühren.
 - Bosáky formen oder den Teig durch ein Sieb drücken.
 - Kochen. Vom Beutel bis zum Teller 15 Minuten.
-
-### Für Kantinen
-
-Bosáky liefern wir auch an Kantinen und Gaststätten: dieselbe Mischung, Mengenpreis, Abholung in Kochánov, unsere Lieferung oder Ihr Spediteur.
 
 ### Häufige Fragen
 

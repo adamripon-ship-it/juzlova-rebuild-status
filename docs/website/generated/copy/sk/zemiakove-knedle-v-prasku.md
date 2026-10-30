@@ -3,7 +3,7 @@
 # Zemiakové knedle v prášku 5 kg — stačí voda | Jůzlová
 
 - **URL:** `/sk/zemiakove-knedle-v-prasku/`
-- **Meta description:** Zemiakové cesto v prášku z múky rodinného mlyna a zemiakových vločiek. Nerozvarí sa, hotové za 20 minút. 5 kg / 250 Kč. Vyzdvihnutie v dielni po dohode.
+- **Meta description:** Zemiakové cesto v prášku, stačí voda. Nerozvarí sa, hotové za 20 minút. 5 kg / 250 Kč. Vyzdvihnutie v dielni po dohode. Knedle v prášku.
 
 ---
 
@@ -11,7 +11,7 @@
 
 ## Zemiakové knedle v prášku: zamiešate vodou, za 20 minút sú na stole a nerozvaria sa
 
-Pšeničná múka z mlyna v Havlíčkovom Brode a sušené zemiakové vločky. Nič iné. Vajce alebo postrúhaný varený zemiak pridáte podľa zvyku.
+Múka z mlyna v Havlíčkovom Brode. Celé zloženie nájdete nižšie.
 
 Cena
 
@@ -21,13 +21,13 @@ Objednávka
 
 - +420 728 466 141 · denne 8–19
 
-Rozvoz po dohode, poslanie balíkom sa platí zvlášť.
+Vyzdvihnete v prevádzke. Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 
 Objednať u Jiřiny Kde vyzdvihnúť
 
 ### Čo v tom je
 
-Pšeničná múka s českou značkou kvality KLASA z mlyna v Havlíčkovom Brode, ktorý vlastní a vedie naša širšia rodina, a sušené zemiakové vločky. Vločky dávajú cestu zemiakovú chuť a držia ho pri varení pokope.
+Múka, sušené zemiakové vločky, sušené vajcia, soľ, prášok do pečiva, zemiakový škrob
 
 ### Ako to pripravíte
 
@@ -35,7 +35,7 @@ Pšeničná múka s českou značkou kvality KLASA z mlyna v Havlíčkovom Brode
 - Vytvarujete knedle, šúľance alebo krokety.
 - Uvaríte. Od otvorenia vreca po tanier zhruba 20 minút.
 
-Chcete to „po svojom“? Časť vody nahraďte mliekom, pridajte vajce alebo jeden uvarený postrúhaný zemiak. Veľa našich zákazníkov to tak robí.
+Chcete to „po svojom“? Pridajte vajce alebo jeden uvarený postrúhaný zemiak. Veľa našich zákazníkov to tak robí.
 
 ### Čo z jedného cesta uvaríte
 
@@ -53,7 +53,7 @@ Z 5 kg pripravíte prílohu zhruba pre 60–70 ľudí. Vrece skladujte v suchu a
 
 *summary:* Musím pridať vajce?
 
-Nie. Cesto funguje len s vodou. Vajce alebo mlieko pridajte, ak chcete bohatšiu chuť.
+Nie. Zamiešate s vodou podľa návodu na vrecku. Vajce pridajte, ak chcete bohatšiu chuť.
 
 *summary:* Dajú sa knedle plniť ovocím?
 

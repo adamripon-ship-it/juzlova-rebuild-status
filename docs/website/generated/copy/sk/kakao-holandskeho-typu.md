@@ -21,7 +21,7 @@ Objednávka
 
 - +420 728 466 141 · denne 8–19
 
-Rozvoz po dohode, poslanie balíkom sa platí zvlášť.
+Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 
 Objednať u Jiřiny Kde vyzdvihnúť
 
@@ -102,10 +102,6 @@ K tomu horčík 490 mg, draslík 4 400 mg a železo 31 mg na 100 g.
 ### Skladovanie
 
 V suchu, mimo silných pachov, ideálne pri 15–20 °C a vlhkosti pod 50 %.
-
-### Pre cukrárne a zmrzlinárov
-
-Množstevná cena, certifikát k šarži, odber alebo doprava. Dopyt pošlite cez stránku Pre kuchyne.
 
 ### Časté otázky
 

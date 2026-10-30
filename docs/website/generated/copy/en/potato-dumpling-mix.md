@@ -3,7 +3,7 @@
 # Czech potato dumpling mix 5 kg — just add water | Jůzlová
 
 - **URL:** `/en/potato-dumpling-mix/`
-- **Meta description:** Czech potato dumpling mix: flour from the family mill, dried potato flakes, water. Holds together, ready in 20 minutes. 5 kg / 250 Kč. Collect in Kochánov.
+- **Meta description:** Czech potato dumpling mix: just add water. Holds together, ready in 20 minutes. 5 kg / 250 Kč. Collect in Kochánov.
 
 ---
 
@@ -11,7 +11,7 @@ Home › Potato dumpling mix
 
 ## Czech potato dumpling mix: just add water, 20 minutes to the table, and they hold together in the pot
 
-Wheat flour from the family mill in Havlíčkův Brod and dried potato flakes. Nothing else. Add an egg or a grated boiled potato if that's how you like them.
+Flour from a mill in Havlíčkův Brod. The full ingredient list is below.
 
 Price
 
@@ -21,13 +21,13 @@ Order
 
 - +420 728 466 141 · daily 8–19
 
-Delivery by arrangement; posting costs extra.
+Collect at the workshop. We deliver to Humpolec and Havlíčkův Brod.
 
 Order from Jiřina Where to collect
 
 ### What's in it
 
-Wheat flour carrying the Czech KLASA quality mark, from a mill in Havlíčkův Brod that our extended family owns and runs, plus dried potato flakes. The flakes give the dough its potato taste and hold it together while it cooks.
+Flour, dried potato flakes, dried egg, salt, baking powder, potato starch
 
 ### How to make it
 
@@ -35,7 +35,7 @@ Wheat flour carrying the Czech KLASA quality mark, from a mill in Havlíčkův B
 - Shape dumplings, rolls or croquettes.
 - Boil. About 20 minutes from opening the bag to the plate.
 
-Want it your way? Replace some of the water with milk, or add an egg or a boiled, grated potato. Many of our customers do.
+Want it your way? Add an egg or a boiled, grated potato. Many of our customers do.
 
 ### What one dough makes
 
@@ -53,7 +53,7 @@ A 5 kg bag makes a side dish for about 60–70 people. Store it dry and sealed.
 
 *summary:* Do I have to add an egg?
 
-No. The dough works with water alone. Add an egg or milk if you want a richer taste.
+No. Mix with water as directed on the bag. Add an egg if you want a richer taste.
 
 *summary:* Will the dumplings hold a fruit filling?
 

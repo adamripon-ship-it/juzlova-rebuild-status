@@ -11,7 +11,7 @@ Start › Preisliste
 
 ## Preisliste: fünf Mischungen bei Abholung in Kochánov oder Humpolec
 
-Derselbe Preis für alle, die in der Werkstatt oder in Humpolec abholen. Die Lieferbedingungen stehen unter der Tabelle.
+Derselbe Preis für alle, die in der Werkstatt abholen oder sich nach Havlíčkův Brod oder Humpolec liefern lassen.
 
 Jiřina anrufen Schreiben Sie uns
 
@@ -86,26 +86,9 @@ Portionsangaben folgen der Packungsanleitung.
 
 ### Abholung und Lieferung
 
-- Abholung in Kochánov oder Humpolec: kostenlos, Termin telefonisch
-- Humpolec und Havlíčkův Brod: kostenlose Lieferung ab 1000 Kč
-- Jihlava: kostenlos ab 3000 Kč · übrige Vysočina: kostenlos ab 5000 Kč
-- Küchen: Brünn kostenlos ab 5000 Kč, Prag bei gemischter Bestellung ab 25 kg
-- Auf Anfrage schicken wir auch ein Paket; Versand, Verpackung und Versicherung zahlen Sie zusätzlich, die Summe nennen wir vorab
-
-### Küchen und Betriebe
-
-Mengenpreise erfahren Sie telefonisch oder über das Formular auf der Seite „Für Küchen“.
+- Abholung in Kochánov oder Humpolec: kostenlos
+- Humpolec und Havlíčkův Brod
 
 ### Alte Preise im Internet
 
 Auf manchen Websites stehen noch Preise aus dem Jahr 2017. Es gilt allein diese Liste.
-
-### Häufige Fragen
-
-*summary:* Gelten die Preise auch für Pakete?
-
-Die Warenpreise ja. Ein Paket schicken wir nur auf Wunsch; Porto, Karton und Versicherung zahlen Sie vollständig, die Gesamtsumme vereinbaren wir vorab.
-
-*summary:* Gibt es Mengenrabatt?
-
-Ja, für Betriebe nach Menge. Den Preis nennen wir telefonisch.

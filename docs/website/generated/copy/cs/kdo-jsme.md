@@ -3,7 +3,7 @@
 # Kdo jsme — rodinná dílna Jůzlová, Kochánov, od roku 2004
 
 - **URL:** `/kdo-jsme/`
-- **Meta description:** Jůzlovi míchají knedlíky v prášku, puding a kakao v Kochánově na Vysočině od roku 2004. Mouka z rodinného mlýna v Havlíčkově Brodě. Bez e-shopu a překupníků.
+- **Meta description:** Jůzlovi míchají knedlíky v prášku, puding a kakao v Kochánově na Vysočině od roku 2004. Bez e-shopu a překupníků.
 
 ---
 
@@ -11,7 +11,7 @@
 
 ## Jůzlovi z Kochánova: rodina, která od roku 2004 míchá směsi a sama z nich vaří
 
-Dílna je v Kochánově 40, dvanáct kilometrů od Havlíčkova Brodu. Mouku bereme z mlýna, který vede naše širší rodina. Objednávky bere Jiřina.
+Dílna je v Kochánově 40, dvanáct kilometrů od Havlíčkova Brodu. Objednávky bere Jiřina.
 
 Zavolat Jiřině Napsat e-mail
 
@@ -65,7 +65,7 @@ Stará se o to, abyste nás snadno našli, prohlédli produkty a věděli, jak o
 
 ### Odkud je mouka
 
-Pšeničná mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dílny, se značkou KLASA. Mlýn vlastní a vede naše širší rodina, takže víme, co do pytle sypeme.
+Mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dílny.
 
 ### Co neděláme
 

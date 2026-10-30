@@ -27,12 +27,9 @@ Navigovať v Google Maps Navigovať v Mapy.cz
 
 Druhé odberné miesto je v Humpolci neďaleko Pivovaru Bernard, zadarmo. Presné miesto, deň a hodinu dohodneme po telefóne.
 
-### Rozvoz po Vysočine a iné možnosti
+### Rozvoz
 
-- Humpolec a Havlíčkův Brod: rozvoz zadarmo od 1000 Kč
-- Jihlava: zadarmo od 3000 Kč
-- Zvyšok Vysočiny: zadarmo od 5000 Kč
-- Inde v Česku, na Slovensku či v EÚ: po dohode pošleme aj balík; dopravu, balenie a poistenie platíte navyše
+- Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 - Môžete poslať aj vlastného dopravcu
 
 ### Napíšte, čo potrebujete
@@ -61,9 +58,7 @@ Stačí meno a telefón alebo e-mail. Ozveme sa a dohodneme termín.
 
 *label:* Vyzdvihnutie v dielni Kochánov 40, 582 53
 
-*label:* Vyzdvihnutie v Humpolci pri Pivovare Bernard (zadarmo, deň a hodinu dohodneme)
-
-*label:* Rozvoz po Vysočine alebo balík po dohode
+*label:* Rozvoz do Havlíčkovho Brodu alebo Humpolca (zadarmo, deň a hodinu dohodneme)
 
 *label:* Správa (čo, koľko, kde ste)
 
@@ -78,7 +73,3 @@ Stačí meno a telefón alebo e-mail. Ozveme sa a dohodneme termín.
 *summary:* Kde v Humpolci tovar vyzdvihnem?
 
 V okolí Pivovaru Bernard, zadarmo. Presné miesto a hodinu povieme po telefóne.
-
-*summary:* Môžem poslať vlastného dopravcu?
-
-Áno. Mimo bezplatných zón to často vyjde lacnejšie než náš rozvoz.

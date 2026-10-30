@@ -3,7 +3,7 @@
 # Über uns — Familienwerkstatt Jůzlová, Kochánov, seit 2004
 
 - **URL:** `/de/ueber-uns/`
-- **Meta description:** Familie Jůzl stellt seit 2004 in Kochánov Knödelmischung, Pudding und Kakao her. Mehl aus der Familienmühle in Havlíčkův Brod. Kein Onlineshop.
+- **Meta description:** Familie Jůzl stellt seit 2004 in Kochánov Knödelmischung, Pudding und Kakao her. Kein Onlineshop. Kartoffelknödelmischung.
 
 ---
 
@@ -11,7 +11,7 @@ Start › Über uns
 
 ## Familie Jůzl aus Kochánov: seit 2004 mischen wir, was wir selbst kochen
 
-Die Werkstatt liegt in Kochánov 40, zwölf Kilometer von Havlíčkův Brod. Das Mehl kommt aus einer Mühle, die unsere weitere Familie führt. Bestellungen nimmt Jiřina entgegen.
+Die Werkstatt liegt in Kochánov 40, zwölf Kilometer von Havlíčkův Brod. Bestellungen nimmt Jiřina entgegen.
 
 Jiřina anrufen Schreiben Sie uns
 
@@ -65,7 +65,7 @@ Sorgt dafür, dass Sie uns leicht finden, Produkte ansehen und wissen, wie Sie b
 
 ### Woher das Mehl kommt
 
-Das Weizenmehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt, und trägt das tschechische Gütesiegel KLASA. Die Mühle gehört unserer weiteren Familie, die sie auch führt — wir wissen, was in den Beutel kommt.
+Das Mehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt.
 
 ### Was wir nicht tun
 

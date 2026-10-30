@@ -27,25 +27,21 @@ In der Werkstatt, Kochánov 40, 582 53, oder in Humpolec nahe der Brauerei Berna
 
 Nein. Sie bestellen fertige Packungen. Zum Ausprobieren gibt es den Pudding als 400-g-Packung für 30 Kč.
 
-*summary:* Zahle ich vorab oder bei Übergabe?
+*summary:* Zahle ich im Voraus oder bei Übergabe?
 
-Abholung und Lieferung: bei Übergabe. Beim Paket nennen wir die Gesamtsumme vorab und versenden erst nach Ihrer Zusage.
+Abholung und Lieferung: bei Übergabe.
 
 ### Lieferung
 
-*summary:* Wann ist die Lieferung kostenlos?
+*summary:* Wohin liefern Sie?
 
-Nach Humpolec und Havlíčkův Brod ab 1000 Kč, nach Jihlava ab 3000 Kč, in der übrigen Vysočina ab 5000 Kč.
-
-*summary:* Verschicken Sie auch Pakete?
-
-Auf Wunsch ja, innerhalb Tschechiens oder ins Ausland; die meisten Kunden holen aber ab. Porto, Karton und Versicherung zahlen Sie vollständig, die Gesamtsumme vereinbaren wir vorab. Sie können auch einen eigenen Spediteur schicken.
+Nach Humpolec und Havlíčkův Brod.
 
 ### Zutaten und Allergene
 
 *summary:* Woraus besteht die Knödelmischung?
 
-Aus Weizenmehl der Mühle in Havlíčkův Brod, die unsere erweiterte Familie führt, und getrockneten Kartoffelflocken. Sie geben nur Wasser dazu; Ei, Milch oder geriebene Kartoffeln nach Belieben.
+Mehl, getrocknete Kartoffelflocken, Trockenei, Salz, Backpulver, Kartoffelstärke. Mit Wasser nach Anleitung anrühren.
 
 *summary:* Ist der Vanillepudding wirklich glutenfrei?
 
@@ -73,6 +69,6 @@ Etwa 40 g auf 500 ml Milch. Aus einem Kilo werden rund 25 Puddings.
 
 Trocken und verschlossen. Kakao fern von starken Gerüchen, ideal bei 15–20 °C.
 
-Küchen und Betriebe: Antworten zu Mengenpreisen und Lieferung finden Sie auf der Seite „Für Küchen“. Für Küchen →
+Küchen und Betriebe: mehr auf der Seite Für Küchen →
 
 Jiřina anrufen Schreiben Sie uns

@@ -29,23 +29,19 @@ No. You order finished packs. For a first try, the pudding comes in a 400 g pack
 
 *summary:* Do I pay in advance or on collection?
 
-For pick-up and delivery you pay on hand-over. If we post a parcel, we give you the total first and send it only once you agree.
+For pick-up and delivery you pay on hand-over.
 
 ### Delivery
 
-*summary:* When is delivery free?
+*summary:* Where do you deliver?
 
-To Humpolec and Havlíčkův Brod from 1000 Kč, to Jihlava from 3000 Kč, across the rest of Vysočina from 5000 Kč.
-
-*summary:* Can you post a parcel?
-
-On request, within Czechia or abroad, though most customers come and collect. You pay the full postage, box and insurance, and we agree the total first. You may also send your own courier.
+To Humpolec and Havlíčkův Brod.
 
 ### Ingredients and allergens
 
-*summary:* What is the dumpling mix made of?
+*summary:* What is in the dumpling mix?
 
-Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato go in if that is how you like them.
+Flour, dried potato flakes, dried egg, salt, baking powder, potato starch. Mix with water as directed.
 
 *summary:* Is the vanilla pudding really gluten-free?
 
@@ -73,6 +69,6 @@ About 40 g for 500 ml of milk. One kilo makes about 25 puddings.
 
 Dry and sealed. Keep the cocoa away from strong smells, ideally at 15–20 °C.
 
-Kitchens and shops: quantity pricing and delivery questions are on the For kitchens page. For kitchens →
+Kitchens and shops: more on the page For kitchens →
 
 Call Jiřina Write to us

@@ -11,7 +11,7 @@
 
 ## Zavolejte Jiřině nebo Jiřímu — denně 8–19, domluvíme objednávku i odběr
 
-Včetně sobot a nedělí, vždy po předchozí domluvě. Odpovídáme česky.
+Včetně sobot a nedělí, vždy po předchozí domluvě.
 
 Zavolat Jiřině
 
@@ -49,9 +49,7 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 

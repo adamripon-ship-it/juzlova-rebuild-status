@@ -30,7 +30,7 @@
 | [Kartoffel-Quark-Knödel mit Erdbeeren — Rezept in 20 Minuten](topfenknoedel-mit-erdbeeren.md) | `/de/topfenknoedel-mit-erdbeeren/` |
 | [Vanillinzucker 1 kg / 60 Kč — Backen & Bestreuen \| Jůzlová](vanillinzucker.md) | `/de/vanillinzucker/` |
 | [Glutenfreies Vanillepuddingpulver 1 kg / 60 Kč \| Jůzlová](glutenfreies-vanillepuddingpulver.md) | `/de/glutenfreies-vanillepuddingpulver/` |
-| [Großhandel: Knödelmischung, Pudding, Kakao \| Jůzlová](grosshandel.md) | `/de/grosshandel/` |
+| [Knödelmischung, Pudding & Kakao für Küchen \| Jůzlová](grosshandel.md) | `/de/grosshandel/` |
 | [Věnečky mit Vanillecreme und Rumguss — Rezept \| Jůzlová](brandteigkraenze-mit-vanillecreme.md) | `/de/brandteigkraenze-mit-vanillecreme/` |
 | [Tschechische Windbeutel mit Vanillecreme und Zuckerglasur — Rezept](windbeutel-mit-vanillecreme.md) | `/de/windbeutel-mit-vanillecreme/` |
-| [Paket ins Ausland auf Anfrage — Werkstatt Jůzlová](versand-in-die-eu.md) | `/de/versand-in-die-eu/` |
+| [Wohnen Sie im Ausland? Abholung in der Werkstatt \| Jůzlová](versand-in-die-eu.md) | `/de/versand-in-die-eu/` |

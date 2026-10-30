@@ -49,9 +49,7 @@ Your name and a phone number or e-mail are enough. We'll reply and arrange a dat
 
 *label:* Pick-up at the workshop, Kochánov 40, 582 53
 
-*label:* Pick-up in Humpolec near the Bernard brewery (free, day and time by arrangement)
-
-*label:* Delivery or parcel (at your cost)
+*label:* Delivery to Havlíčkův Brod or Humpolec (free, day and time by arrangement)
 
 *label:* Message (what, how much, where you are)
 

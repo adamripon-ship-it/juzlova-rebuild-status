@@ -33,4 +33,4 @@
 | [Dumpling mix, pudding & cocoa for kitchens \| Jůzlová](wholesale.md) | `/en/wholesale/` |
 | [Czech věnečky with vanilla cream and rum glaze — recipe](choux-rings-with-vanilla-cream.md) | `/en/choux-rings-with-vanilla-cream/` |
 | [Větrníčky with vanilla cream and sugar glaze — recipe](cream-puffs-with-vanilla-cream.md) | `/en/cream-puffs-with-vanilla-cream/` |
-| [Posting abroad on request — local workshop \| Jůzlová](shipping-to-eu.md) | `/en/shipping-to-eu/` |
+| [Living abroad? Collect at the workshop \| Jůzlová](shipping-to-eu.md) | `/en/shipping-to-eu/` |

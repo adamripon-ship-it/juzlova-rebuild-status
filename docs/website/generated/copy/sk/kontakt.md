@@ -49,9 +49,7 @@ Stačí meno a telefón alebo e-mail. Ozveme sa a dohodneme termín.
 
 *label:* Vyzdvihnutie v dielni Kochánov 40, 582 53
 
-*label:* Vyzdvihnutie v Humpolci pri Pivovare Bernard (zadarmo, deň a hodinu dohodneme)
-
-*label:* Rozvoz po Vysočine alebo balík po dohode
+*label:* Rozvoz do Havlíčkovho Brodu alebo Humpolca (zadarmo, deň a hodinu dohodneme)
 
 *label:* Správa (čo, koľko, kde ste)
 
