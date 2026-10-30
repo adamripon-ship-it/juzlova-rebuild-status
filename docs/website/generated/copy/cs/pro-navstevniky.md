@@ -20,7 +20,7 @@ Kdo jede na Vysočinu — k Bernardu, na kopce Vysočiny, nebo jen přes Humpole
 - 5 kg knedlíků 250 Kč nebo chlupatých 260 Kč — vydrží celou dovolenou
 - puding 60/30 Kč a kakao 270 Kč na chatu
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Objednávka podle místa
 
@@ -58,9 +58,7 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 

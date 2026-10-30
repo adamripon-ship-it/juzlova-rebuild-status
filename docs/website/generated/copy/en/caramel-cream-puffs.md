@@ -49,7 +49,7 @@ Mix used
 - Cook the pudding with the milk and sugar as directed on the packet, then cool completely (press cling film onto the surface). Fold in the whipped cream once both are cold.
 - Melt the sugar in a dry pan (no stirring, just swirling) until deep amber. Off the heat, carefully pour in a splash of the cream — it will bubble violently — then stir in the rest and a pinch of salt. Cool completely, chill for several hours or overnight, then whip to stiff peaks. Reserve 3–4 tablespoons for the glaze.
 - Caramelise the sugar for the glaze the same way, take it off the heat, then stir in the butter and then the cream until smooth and glossy. Cool until it coats the back of a spoon but is still pourable.
-- Slice each cooled bun horizontally, keeping the top as a cap. Pipe a base of vanilla pudding cream, then a swirl of caramel whipped cream, replace the cap and dip it in or spoon over the caramel glaze. Chill for at least 2 hours before serving so the layers set.
+- Slice each cooled bun horizontally, keeping the top as a cap. Pipe a base of vanilla pudding cream, then a swirl of caramel whipped cream, replace the cap and spoon over the caramel glaze, or dip the top in it. Chill for at least 2 hours before serving so the layers set.
 
 Add the eggs to the choux only once it has cooled to warm, and add them gradually. Flour absorbs liquid differently from batch to batch, so judge by texture, not by using up all the egg.
 
@@ -63,17 +63,17 @@ A choux shell, vanilla pudding cream, a ring of caramel whipped cream and a cara
 
 *summary:* Why make the caramel cream the day before?
 
-The caramel-and-cream mixture must chill until it whips stiff. Do not open the oven while the shells bake, or they will collapse.
+The caramel and cream must firm up in the fridge so the whipped cream holds its shape. Do not open the oven while the shells bake, or they will collapse.
 
 Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
-- Choux wreaths with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
+- Choux rings with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
 - Mini choux buns (minivětrníčky) Mini větrníčky from choux pastry with a butter, pudding and curd cream and a chocolate glaze. About 40–45 pieces. More
 - Větrníčky with vanilla cream Small star-piped choux puffs filled with vanilla buttercream and dipped in a white sugar glaze. About 30 pieces. More
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Homemade gingerbread (perník) Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough. More
-- Quick choux wreaths or puffs One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Homemade gingerbread (perník) Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa. More
+- Quick choux rings or puffs One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. More

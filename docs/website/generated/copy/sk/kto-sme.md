@@ -3,7 +3,7 @@
 # Kto sme — rodinná dielňa Jůzlová, Kochánov, od roku 2004
 
 - **URL:** `/sk/kto-sme/`
-- **Meta description:** Rodina Jůzlových mieša knedle v prášku, puding a kakao v Kochánove na Vysočine od roku 2004. Múka z rodinného mlyna v Havlíčkovom Brode. Bez e-shopu.
+- **Meta description:** Rodina Jůzlových mieša knedle v prášku, puding a kakao v Kochánove na Vysočine od roku 2004. Bez e-shopu.
 
 ---
 
@@ -11,15 +11,15 @@
 
 ## Jůzlovci z Kochánova: od roku 2004 miešame zmesi, z ktorých sami varíme
 
-Dielňa je v Kochánove 40, dvanásť kilometrov od Havlíčkovho Brodu. Múku berieme z mlyna, ktorý vedie naša širšia rodina. Objednávky prijíma Jiřina.
+Dielňa je v Kochánove 40, dvanásť kilometrov od Havlíčkovho Brodu. Objednávky prijíma Jiřina.
 
 Zavolať Jiřine Napísať e-mail
 
-Naša dielňa v Kochánove — vrecia s múkou, váha a balenie.
+Naša dielňa v Kochánove — vrecia s múkou, váha a baliaca linka.
 
 ### Ako to začalo
 
-Potravinárske zmesi sme začali vyrábať v malej dielni v Kochánove v roku 2004 a receptúry sme roky ladili. Dnes u nás nakupujú domácnosti v Čechách aj na Morave, jedálne, reštaurácie a pekárne.
+Potravinárske zmesi sme začali vyrábať v malej dielni v Kochánove v roku 2004 a receptúry sme roky ladili. Dnes u nás nakupujú domácnosti, jedálne, reštaurácie a pekárne.
 
 Ľudia
 
@@ -37,48 +37,48 @@ Voláte priamo tomu, kto zmesi mieša — nie do call centra. Dohodnete sa po č
 
 Majiteľ · výroba a logistika
 
-Druhý telefón do dielne. Pomôže s vyzdvihnutím, závozom a tým, aby balenie dorazilo v poriadku.
+Druhý telefón do dielne. Pomôže s vyzdvihnutím, rozvozom a tým, aby balenie dorazilo v poriadku.
 
 #### Lucie Kůželová
 
 Výroba, balenie, predaj a zákazníci
 
-Často vybaví váš dopyt aj na Facebooku. Stráži, aby tovar odišiel zabalený a včas.
+Často vybaví váš dopyt aj na Facebooku. Stráži, aby bol tovar včas a dobre zabalený.
 
 #### Filip Kůžel
 
 Logistika a zákazníci
 
-Pomáha s dopravou a odberom — aby cesta tovaru od dielne k vám bola jednoduchá.
+Pomáha s rozvozom a odberom — aby cesta tovaru od dielne k vám bola jednoduchá.
 
 #### Jířa Kennedy-Jůzlová
 
 Suroviny, kvalita a certifikácie
 
-Stráži suroviny a papiere od farmy po kuchyňu — aby každé balenie chutilo rovnako a malo dokumentáciu v poriadku.
+Stráži suroviny a doklady od farmy po kuchyňu — aby každé balenie chutilo rovnako a malo dokumentáciu v poriadku.
 
 #### Adam Kennedy
 
 Marketing a web
 
-Stará sa o to, aby ste nás ľahko našli, prezreli produkty a vedeli, ako objednať.
+Stará sa o to, aby ste nás ľahko našli, prezreli si produkty a vedeli, ako objednať.
 
 ### Odkiaľ je múka
 
-Pšeničná múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne, s českou značkou kvality KLASA. Mlyn vlastní a vedie naša širšia rodina, takže vieme, čo do vreca sypeme.
+Múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne.
 
 ### Čo nerobíme
 
 - Nemáme e-shop. Objednávate telefónom alebo formulárom.
 - Neposkytujeme vzorky ani ochutnávky.
-- Nevymýšľame si hviezdičky — hodnotenia berieme zo živých profilov Google a Firmy.cz.
+- Nevymýšľame si hviezdičky — hodnotenia berieme z aktuálnych profilov Google a Firmy.cz.
 - Odpovedáme po česky.
 
 Hodnotenia
 
 ### Čo o nás hovoria zákazníci
 
-Hodnotenia preberáme z našich živých profilov na Google a Firmy.cz. Nič si nevymýšľame.
+Hodnotenia preberáme z našich aktuálnych profilov na Google a Firmy.cz. Nič si nevymýšľame.
 
 Google Otvoriť hodnotenia → Firmy.cz Otvoriť hodnotenia →
 

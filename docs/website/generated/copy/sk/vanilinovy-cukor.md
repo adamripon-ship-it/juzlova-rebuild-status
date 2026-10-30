@@ -9,7 +9,7 @@
 
 Úvod › Vanilínový cukor
 
-## Vanilínový cukor v kile: do cesta aj na posypanie — jedno kilové vrece na celú sezónu
+## Vanilínový cukor v kile: do cesta aj na posyp — jedno kilové vrecko na celú sezónu
 
 Nie je to vanilka zo struku — je to jemne mletý cukor s vanilínovou arómou. Hovoríme to rovno.
 
@@ -21,7 +21,7 @@ Objednávka
 
 - +420 728 466 141 · denne 8–19
 
-Rozvoz po dohode, poslanie balíkom sa platí zvlášť.
+Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 
 Objednať u Jiřiny Kde vyzdvihnúť
 
@@ -30,7 +30,7 @@ Objednať u Jiřiny Kde vyzdvihnúť
 - koláče a zákusky
 - vianočné pečivo — do cesta aj na posyp
 - šľahačka a krémy
-- bebe rezy a mini veterníky z našich receptov
+- bebe rezy a miniveterníčky z našich receptov
 
 ### Skladovanie
 

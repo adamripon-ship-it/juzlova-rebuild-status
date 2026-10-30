@@ -4,11 +4,11 @@
   "faqs": [
     {
       "question": "How do I order without a web shop?",
-      "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we arrange the rest."
+      "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we’ll arrange the rest."
     },
     {
       "question": "Where can I collect for free?",
-      "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00."
+      "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always arranged by phone first, daily 8:00–19:00."
     },
     {
       "question": "Do you give samples or tastings?",
@@ -16,19 +16,15 @@
     },
     {
       "question": "Do I pay in advance or on collection?",
-      "answer": "For pick-up and delivery you pay on hand-over. If we post a parcel, we give you the total first and send it only once you agree."
+      "answer": "You pay on collection or on delivery."
     },
     {
-      "question": "When is delivery free?",
-      "answer": "To Humpolec and Havlíčkův Brod from 1000 Kč, to Jihlava from 3000 Kč, across the rest of Vysočina from 5000 Kč."
+      "question": "Where do you deliver?",
+      "answer": "To Humpolec and Havlíčkův Brod."
     },
     {
-      "question": "Can you post a parcel?",
-      "answer": "On request, within Czechia or abroad, though most customers come and collect. You pay the full postage, box and insurance, and we agree the total first. You may also send your own courier."
-    },
-    {
-      "question": "What is the dumpling mix made of?",
-      "answer": "Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato go in if that is how you like them."
+      "question": "What is in the dumpling mix?",
+      "answer": "Flour, dried potato flakes, dried egg, salt, baking powder, potato starch. Mix with water as directed."
     },
     {
       "question": "Is the vanilla pudding really gluten-free?",
@@ -71,19 +67,15 @@
       },
       {
         "question": "Platím předem, nebo při převzetí?",
-        "answer": "Při vyzvednutí a rozvozu platíte při převzetí. Když zboží posíláme balíkem, řekneme celkovou částku předem a odešleme až po vašem souhlasu."
+        "answer": "Při vyzvednutí a rozvozu platíte při převzetí."
       },
       {
-        "question": "Kdy je rozvoz zdarma?",
-        "answer": "Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč."
-      },
-      {
-        "question": "Posíláte i balíkem?",
-        "answer": "Na požádání ano, po Česku i do zahraničí. Většina zákazníků si ale pro zboží přijede. Poštovné, krabici a pojištění platíte celé vy a celkovou částku domluvíme předem. Můžete poslat i vlastního dopravce."
+        "question": "Kam zboží dovezete?",
+        "answer": "Do Humpolce a Havlíčkova Brodu."
       },
       {
         "question": "Z čeho jsou knedlíky v prášku?",
-        "answer": "Z pšeničné mouky z mlýna v Havlíčkově Brodě, který vede naše širší rodina, a ze sušených bramborových vloček. Zaděláváte jen vodou; vejce, mléko nebo strouhané brambory přidáte podle zvyku."
+        "answer": "Mouka, sušené bramborové vločky, sušená vejce, sůl, prášek do pečiva, bramborový škrob. Zaděláváte vodou podle návodu."
       },
       {
         "question": "Je vanilkový puding opravdu bez lepku?",
@@ -113,11 +105,11 @@
     "en": [
       {
         "question": "How do I order without a web shop?",
-        "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we arrange the rest."
+        "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we’ll arrange the rest."
       },
       {
         "question": "Where can I collect for free?",
-        "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00."
+        "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always arranged by phone first, daily 8:00–19:00."
       },
       {
         "question": "Do you give samples or tastings?",
@@ -125,19 +117,15 @@
       },
       {
         "question": "Do I pay in advance or on collection?",
-        "answer": "For pick-up and delivery you pay on hand-over. If we post a parcel, we give you the total first and send it only once you agree."
+        "answer": "You pay on collection or on delivery."
       },
       {
-        "question": "When is delivery free?",
-        "answer": "To Humpolec and Havlíčkův Brod from 1000 Kč, to Jihlava from 3000 Kč, across the rest of Vysočina from 5000 Kč."
+        "question": "Where do you deliver?",
+        "answer": "To Humpolec and Havlíčkův Brod."
       },
       {
-        "question": "Can you post a parcel?",
-        "answer": "On request, within Czechia or abroad, though most customers come and collect. You pay the full postage, box and insurance, and we agree the total first. You may also send your own courier."
-      },
-      {
-        "question": "What is the dumpling mix made of?",
-        "answer": "Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato go in if that is how you like them."
+        "question": "What is in the dumpling mix?",
+        "answer": "Flour, dried potato flakes, dried egg, salt, baking powder, potato starch. Mix with water as directed."
       },
       {
         "question": "Is the vanilla pudding really gluten-free?",
@@ -178,20 +166,16 @@
         "answer": "Nein. Sie bestellen fertige Packungen. Zum Ausprobieren gibt es den Pudding als 400-g-Packung für 30 Kč."
       },
       {
-        "question": "Zahle ich vorab oder bei Übergabe?",
-        "answer": "Abholung und Lieferung: bei Übergabe. Beim Paket nennen wir die Gesamtsumme vorab und versenden erst nach Ihrer Zusage."
+        "question": "Zahle ich im Voraus oder bei Übergabe?",
+        "answer": "Bei Abholung und Lieferung zahlen Sie bei der Übergabe."
       },
       {
-        "question": "Wann ist die Lieferung kostenlos?",
-        "answer": "Nach Humpolec und Havlíčkův Brod ab 1000 Kč, nach Jihlava ab 3000 Kč, in der übrigen Vysočina ab 5000 Kč."
-      },
-      {
-        "question": "Verschicken Sie auch Pakete?",
-        "answer": "Auf Wunsch ja, innerhalb Tschechiens oder ins Ausland; die meisten Kunden holen aber ab. Porto, Karton und Versicherung zahlen Sie vollständig, die Gesamtsumme vereinbaren wir vorab. Sie können auch einen eigenen Spediteur schicken."
+        "question": "Wohin liefern Sie?",
+        "answer": "Nach Humpolec und Havlíčkův Brod."
       },
       {
         "question": "Woraus besteht die Knödelmischung?",
-        "answer": "Aus Weizenmehl der Mühle in Havlíčkův Brod, die unsere erweiterte Familie führt, und getrockneten Kartoffelflocken. Sie geben nur Wasser dazu; Ei, Milch oder geriebene Kartoffeln nach Belieben."
+        "answer": "Mehl, getrocknete Kartoffelflocken, Trockenei, Salz, Backpulver, Kartoffelstärke. Mit Wasser nach Anleitung anrühren."
       },
       {
         "question": "Ist der Vanillepudding wirklich glutenfrei?",
@@ -199,7 +183,7 @@
       },
       {
         "question": "Wie viel Fett hat Ihr Kakao?",
-        "answer": "20–22 % Kakaobutter. Nach EU-Recht braucht Kakaopulver mindestens 20 %; darunter ist es fettreduzierter Kakao. Ohne Zuckerzusatz, ohne die 14 EU-Allergene, Gluten unter 20 ppm."
+        "answer": "20–22 % Kakaobutter. Nach EU-Recht braucht Kakaopulver mindestens 20 %; darunter ist es fettarmer Kakao. Ohne Zuckerzusatz, ohne die 14 EU-Allergene, Gluten unter 20 ppm."
       },
       {
         "question": "Ist der Vanillinzucker echte Vanille?",
@@ -233,27 +217,19 @@
       },
       {
         "question": "Platím vopred, alebo pri prevzatí?",
-        "answer": "Pri vyzdvihnutí a rozvoze platíte pri prevzatí. Keď tovar posielame balíkom, povieme celkovú sumu vopred a odošleme až po vašom súhlase."
+        "answer": "Pri vyzdvihnutí a rozvoze platíte pri prevzatí."
       },
       {
-        "question": "Kedy je rozvoz zadarmo?",
-        "answer": "Do Humpolca a Havlíčkovho Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zvyšku Vysočiny od 5000 Kč."
-      },
-      {
-        "question": "Posielate aj balíkom, napríklad na Slovensko?",
-        "answer": "Na požiadanie áno, hoci väčšina zákazníkov si pre tovar príde. Poštovné, krabicu a poistenie platíte celé vy a celkovú sumu dohodneme vopred."
-      },
-      {
-        "question": "Môžem poslať vlastného dopravcu?",
-        "answer": "Áno. Často to vyjde lacnejšie."
+        "question": "Kam tovar dovezete?",
+        "answer": "Do Humpolca a Havlíčkovho Brodu."
       },
       {
         "question": "Z čoho sú knedle v prášku?",
-        "answer": "Z pšeničnej múky z mlyna v Havlíčkovom Brode, ktorý vedie naša širšia rodina, a zo sušených zemiakových vločiek. Zamiešate len s vodou; vajce, mlieko alebo strúhané zemiaky pridáte podľa zvyku."
+        "answer": "Múka, sušené zemiakové vločky, sušené vajcia, soľ, prášok do pečiva, zemiakový škrob. Zamiešate s vodou podľa návodu."
       },
       {
         "question": "Je vanilkový puding naozaj bez lepku?",
-        "answer": "Áno. Základom je kukuričný škrob, ktorý lepok neobsahuje. Kakaový puding ako hotovú zmes nevedieme — čokoládový krém vznikne zamiešaním nášho kakaa."
+        "answer": "Áno. Základom je kukuričný škrob, ktorý lepok neobsahuje. Kakaový puding ako hotovú zmes nepredávame — čokoládový krém vznikne zamiešaním nášho kakaa."
       },
       {
         "question": "Koľko tuku má vaše kakao?",

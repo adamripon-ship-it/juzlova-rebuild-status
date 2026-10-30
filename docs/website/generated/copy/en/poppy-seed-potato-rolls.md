@@ -3,7 +3,7 @@
 # Potato-dough poppy-seed rolls — recipe | Jůzlová
 
 - **URL:** `/en/poppy-seed-potato-rolls/`
-- **Meta description:** Poppy-seed rolls (šišky) made from our potato dumpling mix: a quick, traditional sweet supper with ground poppy seeds, sugar and melted butter.
+- **Meta description:** Baked poppy-seed šišky from our potato dumpling mix: 400 g of mix, a 200 °C oven, then blanched and tossed with poppy seeds, sugar and melted butter.
 
 ---
 
@@ -32,28 +32,28 @@ Mix used
 
 - Mix the potato dumpling mix with water as directed on the bag and shape the dough into small rolls.
 - Bake on a greased tray in the middle of an oven preheated to 200 °C, turning them once so both sides turn golden.
-- After baking, drop the rolls into boiling water and let them boil for 5 minutes.
+- After baking, drop the rolls into boiling water and blanch them for 5 minutes.
 - Tip them into a large bowl, sprinkle with the poppy seeds and sugar, pour over the butter, toss and serve warm.
 
 ### Frequently asked questions
 
 *summary:* How do you make poppy-seed potato rolls with our dumpling mix?
 
-Mix the potato dumpling powder with water as directed on the pack, shape small rolls, bake at 200 °C until golden on both sides, blanch for 5 minutes in boiling water, then toss with poppy seed, sugar and butter.
+Mix the potato dumpling mix with water as directed on the bag, shape small rolls, bake at 200 °C until golden on both sides, blanch for 5 minutes in boiling water, then toss with poppy seeds, sugar and butter.
 
 *summary:* What oven temperature for šišky s mákem?
 
-200 °C on the middle rack, on a greased tray; turn once so both sides brown.
+200 °C on the middle shelf, on a greased tray; turn once so both sides brown.
 
 Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
-- Potato-and-curd dumplings with strawberries Summer brings ripe strawberries. A simple 20-minute recipe for anyone with a sweet tooth. More
-- Strapačky with cabbage and bacon A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon. More
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone. More
+- Potato-and-curd dumplings with strawberries Quick fruit dumplings for strawberry season: potato dough with curd cheese, ready in 20 minutes. More
+- Strapačky with sauerkraut and bacon A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? Anyone can make these no-bake biscuit slices. More
 - Whipped cream roulade A light dessert in half an hour: slightly bitter cocoa against gently sweet whipped cream. No flour, so no gluten either. More
-- Homemade gingerbread (perník) Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough. More
+- Homemade gingerbread (perník) Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa. More

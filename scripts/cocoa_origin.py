@@ -17,11 +17,11 @@ CAPSULE = {
            "They are fermented in banana leaves and dried in the sun. Soils in this region are naturally low "
            "in cadmium, and so is our cocoa; the value for your batch is in the certificate of analysis, sent "
            "on request. The powder is alkalised with natural salts to pH 7.8–8.2, which gives the deep red-brown colour "
-           "and a round taste without acidity."),
+           "and a rounded taste without acidity."),
     "de": ("Die Bohnen stammen vom Kakaobaum Theobroma cacao aus Westafrika, vor allem aus der Elfenbeinküste, "
            "Ghana, Kamerun und Nigeria. Sie werden in Bananenblättern fermentiert und an der Sonne getrocknet. "
-           "Die Böden dieser Region enthalten von Natur aus wenig Cadmium, deshalb auch unser Kakao; den Wert "
-           "Ihrer Charge finden Sie im Laborzertifikat, das wir auf Anfrage senden. Alkalisiert wird es mit "
+           "Die Böden dieser Region enthalten von Natur aus wenig Cadmium, deshalb enthält auch unser Kakao wenig davon; den Wert "
+           "Ihrer Charge finden Sie im Laborzertifikat, das wir auf Anfrage senden. Alkalisiert wird er mit "
            "natürlichen Salzen auf pH 7,8–8,2 — daher die tief rotbraune Farbe und der runde Geschmack ohne Säure."),
     "sk": ("Bôby sú z kakaovníka Theobroma cacao zo západnej Afriky — najmä z Pobrežia Slonoviny, Ghany, "
            "Kamerunu a Nigérie. Fermentujú sa v banánových listoch a sušia na slnku. Pôdy v tejto oblasti majú "
@@ -52,13 +52,13 @@ FAQ = {
         ("Where does our cocoa come from?",
          "West Africa, mainly Ivory Coast, Ghana, Cameroon and Nigeria. The tree is Theobroma cacao. The beans are "
          "fermented in banana leaves, sun-dried, then ground and alkalised to Dutch-process cocoa."),
-        ("Why is the cadmium content of the Jůzlová workshop's cocoa low?",
+        ("Why is the Jůzlová workshop's cocoa low in cadmium?",
          "Cadmium enters the beans from the soil. High values are typical of cocoa grown on volcanic soils in parts of "
          "Latin America, for example Peru and Ecuador. West African soils hold little cadmium, so cocoa from there is "
          "low in cadmium too. The EU limit for cocoa powder is 0.60 mg/kg (Regulation (EU) 2023/915); the value for our batch is "
          "in the certificate of analysis, sent on request."),
         ("What about lead?",
-         "In West Africa, lead is the metal that is monitored. It stays on the husk of the bean, not in the nib, and is "
+         "In West Africa, lead is the main metal monitored. It stays on the shell of the bean, not in the nib, and is "
          "removed with the shell before grinding. Lead is listed in the batch certificate as well."),
     ],
     "de": [
@@ -72,7 +72,7 @@ FAQ = {
          "von dort. Der EU-Grenzwert für Kakaopulver liegt bei 0,60 mg/kg (Verordnung (EU) 2023/915); den Wert unserer "
          "Charge finden Sie im Laborzertifikat, das wir auf Anfrage senden."),
         ("Und Blei?",
-         "In Westafrika ist Blei das Metall, auf das geachtet wird. Es bleibt auf der Schale der Bohne, nicht im Kern, "
+         "In Westafrika ist Blei das Metall, auf das geachtet wird. Es haftet an der Schale der Bohne, nicht am Kern, "
          "und wird beim Schälen vor dem Mahlen mit der Schale entfernt. Auch Blei steht im Chargenzertifikat."),
     ],
     "sk": [
@@ -80,12 +80,12 @@ FAQ = {
          "Zo západnej Afriky — najmä z Pobrežia Slonoviny, Ghany, Kamerunu a Nigérie. Je to kakaovník Theobroma cacao. "
          "Bôby sa fermentujú v banánových listoch, sušia na slnku a potom sa melú a alkalizujú na holandský typ."),
         ("Prečo má kakao z dielne Jůzlová nízky obsah kadmia?",
-         "Kadmium sa do bôbov dostáva z pôdy. Vysoké hodnoty máva kakao z vulkanických pôd časti Latinskej Ameriky, "
+         "Kadmium sa do bôbov dostáva z pôdy. Vysoké hodnoty máva kakao z vulkanických pôd v častiach Latinskej Ameriky, "
          "napríklad z Peru a Ekvádoru. Západoafrické pôdy obsahujú kadmia málo, a tak ho má málo aj kakao, ktoré odtiaľ pochádza. "
          "Limit EÚ pre kakaový prášok je 0,60 mg/kg (nariadenie (EÚ) 2023/915); hodnotu našej šarže máme v "
          "laboratórnom certifikáte a pošleme ho na vyžiadanie."),
         ("A čo olovo?",
-         "V západnej Afrike je to hlavný sledovaný kov. Drží sa na šupke bôbu, nie v jadre, a odchádza so šupkou pri lúpaní "
+         "V západnej Afrike je to hlavný sledovaný kov. Drží sa na šupke bôbu, nie v jadre, a odstráni sa so šupkou pri lúpaní "
          "pred mletím. Aj olovo nájdete v certifikáte k šarži."),
     ],
 }

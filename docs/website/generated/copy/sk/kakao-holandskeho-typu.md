@@ -3,7 +3,7 @@
 # Kakao holandského typu 20–22 % tuku, 500 g/270 Kč | Jůzlová
 
 - **URL:** `/sk/kakao-holandskeho-typu/`
-- **Meta description:** Tmavé kakao holandského typu, 20–22 % kakaového masla, bez pridaného cukru a alergénov. Farba drží v pečení aj v zmrzline. Certifikát k šarži.
+- **Meta description:** Tmavé kakao holandského typu, 20–22 % kakaového masla, bez pridaného cukru a bez 14 alergénov EÚ. Farba drží v pečení aj v zmrzline. Certifikát k šarži.
 
 ---
 
@@ -21,7 +21,7 @@ Objednávka
 
 - +420 728 466 141 · denne 8–19
 
-Rozvoz po dohode, poslanie balíkom sa platí zvlášť.
+Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 
 Objednať u Jiřiny Kde vyzdvihnúť
 
@@ -31,7 +31,7 @@ Kakaovník kvitne priamo z kmeňa; z každého kvetu, ktorý sa ujme, vyrastie j
 
 ### Prečo záleží na tuku
 
-Aby sa prášok smel nazývať kakao, musí podľa práva EÚ obsahovať najmenej 20 % kakaového masla; pod tým je to kakao so zníženým obsahom tuku. Naše má 20–22 %. Viac kakaového masla znamená tmavšiu farbu, plnšiu chuť a hladší krém.
+Aby sa prášok mohol nazývať kakao, musí podľa práva EÚ obsahovať najmenej 20 % kakaového masla; pod tým je to kakao so zníženým obsahom tuku. Naše má 20–22 %. Viac kakaového masla znamená tmavšiu farbu, plnšiu chuť a hladší krém.
 
 ### Odkiaľ je
 
@@ -53,7 +53,7 @@ Mliečne kakao a koktaily — v mlieku drží farbu aj krémovú chuť.
 
 #### Krémy
 
-Náplne a krémy — prášok bez pridaného cukru.
+Náplne a krémy — v prášku nie je pridaný cukor, sladkosť si určíte sami.
 
 #### Posyp
 
@@ -103,19 +103,15 @@ K tomu horčík 490 mg, draslík 4 400 mg a železo 31 mg na 100 g.
 
 V suchu, mimo silných pachov, ideálne pri 15–20 °C a vlhkosti pod 50 %.
 
-### Pre cukrárne a zmrzlinárov
-
-Množstevná cena, certifikát k šarži, odber alebo doprava. Dopyt pošlite cez stránku Pre kuchyne.
-
 ### Časté otázky
 
 *summary:* Prečo sa cena kakaa mení?
 
-Kakao je burzová komodita: cenou hýbe počasie, dopyt a nové limity EÚ na ťažké kovy. Cenník upravujeme, keď sa zmení náš nákup.
+Kakao je burzová komodita: cenou hýbe počasie, dopyt a nové limity EÚ na ťažké kovy. Cenník upravujeme, keď sa zmení naša nákupná cena.
 
 *summary:* Je to raw kakao?
 
-Nie. Je alkalizované (holandské) a pražené. Raw kakao je nepražené a chutí horko a trávnato; to naše je jemné a okrúhle, s praženými tónmi.
+Nie. Je alkalizované (holandské) a pražené. Raw kakao je nepražené a chutí horko a po tráve; to naše je jemné a okrúhle, s tónmi praženia.
 
 *summary:* Hodí sa do zmrzliny?
 
@@ -127,10 +123,10 @@ Zo západnej Afriky — najmä z Pobrežia Slonoviny, Ghany, Kamerunu a Nigérie
 
 *summary:* Prečo má kakao z dielne Jůzlová nízky obsah kadmia?
 
-Kadmium sa do bôbov dostáva z pôdy. Vysoké hodnoty máva kakao z vulkanických pôd časti Latinskej Ameriky, napríklad z Peru a Ekvádoru. Západoafrické pôdy obsahujú kadmia málo, a tak ho má málo aj kakao, ktoré odtiaľ pochádza. Limit EÚ pre kakaový prášok je 0,60 mg/kg (nariadenie (EÚ) 2023/915); hodnotu našej šarže máme v laboratórnom certifikáte a pošleme ho na vyžiadanie.
+Kadmium sa do bôbov dostáva z pôdy. Vysoké hodnoty máva kakao z vulkanických pôd v častiach Latinskej Ameriky, napríklad z Peru a Ekvádoru. Západoafrické pôdy obsahujú kadmia málo, a tak ho má málo aj kakao, ktoré odtiaľ pochádza. Limit EÚ pre kakaový prášok je 0,60 mg/kg (nariadenie (EÚ) 2023/915); hodnotu našej šarže máme v laboratórnom certifikáte a pošleme ho na vyžiadanie.
 
 *summary:* A čo olovo?
 
-V západnej Afrike je to hlavný sledovaný kov. Drží sa na šupke bôbu, nie v jadre, a odchádza so šupkou pri lúpaní pred mletím. Aj olovo nájdete v certifikáte k šarži.
+V západnej Afrike je to hlavný sledovaný kov. Drží sa na šupke bôbu, nie v jadre, a odstráni sa so šupkou pri lúpaní pred mletím. Aj olovo nájdete v certifikáte k šarži.
 
 Objednať u Jiřiny Napísať e-mail

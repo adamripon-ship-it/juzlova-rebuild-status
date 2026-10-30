@@ -18,10 +18,10 @@ Jůzlová je malá rodinná dílna v Kochánově na Vysočině. Většina zákaz
 ### Jak to probíhá
 
 - Zavoláte nebo napíšete, které směsi a kolik balení chcete.
-- Domluvíme vyzvednutí v dílně nebo v Humpolci, případně rozvoz.
-- Ceník 250 / 260 / 60 / 30 / 270 Kč platí v dílně. Dopravu mimo bezplatné zóny naceníme zvlášť.
+- Domluvíme vyzvednutí v dílně nebo v Humpolci, nebo rozvoz do Humpolce a Havlíčkova Brodu.
+- Ceník 250 / 260 / 60 / 30 / 270 Kč platí v dílně.
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Objednávka podle místa
 
@@ -59,9 +59,7 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 
@@ -69,17 +67,9 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 ### Časté dotazy
 
-*summary:* Objednáváte po celém Česku?
-
-Ano, ale většina zákazníků si pro zboží přijede. Mimo Vysočinu pošleme na požádání balík; poštovné platíte celé vy a celkovou částku domluvíme předem.
-
 *summary:* Máte e-shop?
 
 Ne. Objednávka telefonem nebo formulářem.
-
-*summary:* Kdy je rozvoz zdarma?
-
-Po Vysočině od 5000 Kč. Do Humpolce a Havlíčkova Brodu od 1000 Kč. Do Jihlavy od 3000 Kč.
 
 *summary:* Posíláte vzorky?
 

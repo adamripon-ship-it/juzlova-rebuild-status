@@ -21,7 +21,7 @@ Order
 
 - +420 728 466 141 · daily 8–19
 
-Delivery by arrangement; posting costs extra.
+We deliver to Humpolec and Havlíčkův Brod.
 
 Order from Jiřina Where to collect
 
@@ -33,7 +33,7 @@ We use no wheat starch in the pudding. Corn starch naturally contains no gluten,
 
 ### How much to use
 
-Dosage: about 40 g per 500 ml of milk. One kilo makes about 25 puddings, or cream for several trays of cream puffs.
+About 40 g per 500 ml of milk. One kilo makes about 25 puddings, or cream for several trays of cream puffs.
 
 ### Chocolate?
 

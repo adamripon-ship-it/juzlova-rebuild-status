@@ -44,7 +44,7 @@ Mix used
 - Bring the water, butter and salt to a boil. Off the heat, stir in the flour and baking powder until smooth, then stir over a low heat until the dough comes together. Let it cool slightly.
 - Beat in the eggs one at a time with a mixer. Pipe small 2–3 cm mounds onto baking paper (two spoons work if you have no piping bag).
 - Bake at 200 °C for about 20 minutes. Do not open the oven for the first 10 minutes.
-- Cook the pudding and cool it completely (a few hours ahead is fine). Beat the softened butter with the sugar and vanilla sugar until fluffy, add the rum, then fold in the cooled pudding and curd a little at a time until smooth.
+- Cook the pudding and cool it completely (a few hours ahead is fine). Beat the softened butter with the sugar and vanilla sugar until fluffy, add the rum, then beat in the cooled pudding and curd cheese a little at a time until smooth.
 - Split the cooled buns three-quarters of the way through, pipe in the filling, and dip or coat the top with melted chocolate.
 
 Lighter summer alternative: skip the buttercream and glaze — fill with sweetened whipped cream and fresh strawberry pieces, and dust with icing sugar.
@@ -53,7 +53,7 @@ Lighter summer alternative: skip the buttercream and glaze — fill with sweeten
 
 *summary:* What fills the mini cream puffs?
 
-A butter-and-pudding cream with quark, made from our vanilla pudding, with a chocolate glaze on top. About 40–45 pieces, 20 minutes at 200 °C.
+A butter-and-pudding cream with curd cheese, made from our vanilla pudding, with a chocolate glaze on top. About 40–45 pieces, 20 minutes at 200 °C.
 
 *summary:* Is there a lighter summer version?
 
@@ -63,11 +63,11 @@ Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
-- Choux wreaths with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
+- Choux rings with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
 - Caramel větrníky Větrníky with vanilla pudding cream, caramel whipped cream and caramel glaze. About 24 medium pieces. More
 - Větrníčky with vanilla cream Small star-piped choux puffs filled with vanilla buttercream and dipped in a white sugar glaze. About 30 pieces. More
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Homemade gingerbread (perník) Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough. More
-- Quick choux wreaths or puffs One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Homemade gingerbread (perník) Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa. More
+- Quick choux rings or puffs One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. More

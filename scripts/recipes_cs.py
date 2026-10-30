@@ -338,7 +338,7 @@ RECIPES = {
         "name": "Větrníčky s vanilkovým krémem",
         "teaser": "Malé větrníčky stříkané hvězdičkou, plněné vanilkovým máslovým krémem a namáčené v bílé cukrové polevě. Asi 30 kousků.",
         "title": "Větrníčky s vanilkovým krémem a cukrovou polevou — recept",
-        "desc": "Větrníčky z odpalovaného těsta (125 ml mléka, 125 ml vody, 100 g másla, 150 g mouky, 4–5 vajec) s vanilkovým máslovým krémem a bílou cukrovou polevou. Asi 30 kousků, pečení 10 min na 220 °C a 15–20 min na 180 °C.",
+        "desc": "Větrníčky z odpalovaného těsta (125 ml mléka, 125 ml vody, 100 g másla, 150 g mouky, 4–5 vajec) s vanilkovým máslovým krémem a bílou cukrovou polevou. Asi 30 kousků.",
         "product": "vanilkovy_pudink",
         "meta": "Asi 30 kousků · Pečení 25–30 min · krém a poleva",
         "ingredients": [

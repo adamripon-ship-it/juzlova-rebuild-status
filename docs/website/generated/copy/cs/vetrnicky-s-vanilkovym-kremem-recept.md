@@ -3,7 +3,7 @@
 # Větrníčky s vanilkovým krémem a cukrovou polevou — recept
 
 - **URL:** `/vetrnicky-s-vanilkovym-kremem-recept/`
-- **Meta description:** Větrníčky z odpalovaného těsta (125 ml mléka, 125 ml vody, 100 g másla, 150 g mouky, 4–5 vajec) s vanilkovým máslovým krémem a bílou cukrovou polevou. Asi 30 kousků, pečení 10 min na 220 °C a 15–20 min na 180 °C.
+- **Meta description:** Větrníčky z odpalovaného těsta (125 ml mléka, 125 ml vody, 100 g másla, 150 g mouky, 4–5 vajec) s vanilkovým máslovým krémem a bílou cukrovou polevou. Asi 30 kousků.
 
 ---
 

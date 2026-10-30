@@ -3,7 +3,7 @@
 # Kde nás najdete — Kochánov 40, Humpolec, Vysočina | Jůzlová
 
 - **URL:** `/kde-nas-najdete/`
-- **Meta description:** Dílna Kochánov 40, 582 53, Vysočina, a výdejní místo v Humpolci. Vyzvednutí zdarma, den a hodinu domluvíte s Jiřinou po telefonu. Po Vysočině i rozvážíme.
+- **Meta description:** Dílna Kochánov 40, 582 53, Vysočina, a výdejní místo v Humpolci. Vyzvednutí zdarma, den a hodinu domluvíte po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ---
 
@@ -27,12 +27,9 @@ Navigovat v Google Maps Navigovat v Mapy.cz
 
 Druhé výdejní místo je v Humpolci poblíž Pivovaru Bernard, zdarma. Přesné místo, den a hodinu domluvíme po telefonu.
 
-### Rozvoz po Vysočině
+### Rozvoz
 
-- Humpolec a Havlíčkův Brod: rozvoz zdarma od 1000 Kč
-- Jihlava: zdarma od 3000 Kč
-- Zbytek Vysočiny: zdarma od 5000 Kč
-- Jinam, po Česku i do zahraničí: poslat balíkem můžeme po domluvě; dopravu, balení a pojištění platíte navíc. Můžete poslat i vlastního dopravce.
+- Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Napište, co potřebujete
 
@@ -60,9 +57,7 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 
@@ -77,7 +72,3 @@ Ano. Dílna není obchod s otevírací dobou na dveřích. Denně 8:00–19:00 p
 *summary:* Kde v Humpolci zboží vyzvednu?
 
 V okolí Pivovaru Bernard, zdarma. Přesné místo a hodinu řekneme po telefonu.
-
-*summary:* Můžu poslat vlastního dopravce?
-
-Ano. Mimo bezplatné zóny to často vyjde levněji než náš rozvoz.

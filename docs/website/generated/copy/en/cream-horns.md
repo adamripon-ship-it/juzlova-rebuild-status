@@ -20,7 +20,7 @@ Rate this recipe
 ### Ingredients
 
 - Dough: 350 g flour
-- 250 g cold butter (or Hera shortening), grated or cubed
+- 250 g cold butter (or Hera baking margarine), grated or cubed
 - 125 ml whipping cream
 - optional, for extra flakiness: swap 25 g of the cream for sour cream
 - Italian meringue: 80 g egg whites (about 2 eggs)
@@ -36,15 +36,15 @@ Rate this recipe
 - Heat the sugar and water to 115–120 °C without stirring (a sugar thermometer helps). Meanwhile, whip the egg whites to stiff peaks.
 - With the mixer running, drizzle in the hot syrup in a thin stream, then keep beating until the meringue is glossy and only slightly warm. Chill briefly, then pipe into the cooled shells from both ends. Dust with icing sugar.
 
-Simplest version: whisk the egg whites with the sugar over a pan of simmering water (bain-marie) until glossy and thick. No thermometer needed; slightly less stable, but reliably good.
+Simplest version: whisk the egg whites with the sugar over a pan of simmering water (bain-marie) until glossy and thick. No thermometer needed; slightly less stable, but it works.
 
 You can improvise tubes from foil if you have no metal cream-horn moulds.
 
 ### Frequently asked questions
 
-*summary:* How many kremrole and what equipment?
+*summary:* How many kremrole, and what do I need?
 
-About 35–40 pieces. A butter pastry with an Italian-meringue filling. You need metal cream-horn tubes; foil tubes work in a pinch.
+About 35–40 pieces. A butter pastry with an Italian-meringue filling. You need metal cream-horn tubes; foil tubes work at a pinch.
 
 *summary:* What oven temperature for kremrole?
 
@@ -54,10 +54,10 @@ Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
-- Quick choux wreaths or puffs One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. More
-- Choux wreaths with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
+- Quick choux rings or puffs One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. More
+- Choux rings with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
 - Mini choux buns (minivětrníčky) Mini větrníčky from choux pastry with a butter, pudding and curd cream and a chocolate glaze. About 40–45 pieces. More
 - Caramel větrníky Větrníky with vanilla pudding cream, caramel whipped cream and caramel glaze. About 24 medium pieces. More
 - Větrníčky with vanilla cream Small star-piped choux puffs filled with vanilla buttercream and dipped in a white sugar glaze. About 30 pieces. More

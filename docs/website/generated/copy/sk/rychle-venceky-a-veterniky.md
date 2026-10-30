@@ -11,7 +11,7 @@
 
 ## Rýchle venčeky či veterníčky
 
-Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechách.
+Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechoch.
 
 Ohodnoťte tento recept
 
@@ -29,12 +29,12 @@ Ohodnoťte tento recept
 ### Postup
 
 - Vodu, soľ a maslo priveďte k varu.
-- Stiahnite plameň a naraz vmiešajte múku; miešajte, kým sa cesto neodlepuje od stien hrnca a prestane lepiť.
+- Znížte plameň a naraz vmiešajte múku; miešajte, kým sa cesto neodlepí od stien hrnca a neprestane lepiť.
 - Odstavte a nechajte mierne schladnúť.
 - Rúru predhrejte na 250 °C.
 - Po jednom zašľahajte vajcia a stále miešajte, kým nie je cesto hladké a mierne pružné.
 - Na vymastené plechy striekajte venčeky ako dva krúžky na sebe alebo veterníčky ako malé kopčeky.
-- Pečte 5 minút na 250 °C, potom znížte na 200 °C a pečte dozlata — zhruba ďalších 5 minút na vyššej a 5 na strednej teplote. Rúru počas pečenia neotvárajte.
+- Pečte 5 minút na 250 °C, potom znížte na 200 °C a pečte ďalších zhruba 5 minút. Posledných asi 5 minút dopečte dozlatista na strednej teplote. Rúru počas pečenia neotvárajte.
 - Ešte horúce ihneď rozrežte (škrupinky sa potom netrhajú). Pred plnením úplne vychlaďte.
 
 Náplň je voľná: najjednoduchšia je osladená šľahačka. K venčekom sa hodí vanilkový maslový krém a rumová poleva z receptu na venčeky, k veterníčkom vanilkový pudingový krém, karamelová šľahačka a karamelová poleva z receptu na karamelové veterníky.
@@ -47,9 +47,9 @@ Cesto má vyšší pomer masla k múke (90 g : 140 g) a pečie sa s horúcim št
 
 Horúci štart na 250 °C a vyšší podiel masla (90 g na 140 g múky) cesto rýchlo nafúknu. Po 5 minútach znížte na 200 °C. Asi 80 kúskov na dvoch plechoch.
 
-*summary:* Hodí sa jedno cesto na venčeky aj vetrníčky?
+*summary:* Hodí sa jedno cesto na venčeky aj veterníčky?
 
-Áno. Rovnaké odpaľované cesto: venčeky ako dva krúžky, vetrníčky ako kôpky. Náplň podľa chuti — šľahačka, vanilkový krém alebo karamel.
+Áno. Rovnaké odpaľované cesto: venčeky ako dva krúžky, veterníčky ako kopčeky. Náplň podľa chuti — šľahačka, vanilkový krém alebo karamel.
 
 Návrhy k tomuto receptu
 

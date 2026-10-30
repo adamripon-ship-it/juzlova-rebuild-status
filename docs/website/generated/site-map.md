@@ -36,22 +36,18 @@ A dash means the page exists in Czech only (local landing pages).
 | Bramborovo-tvarohové knedlíky s jahodami | [`/tvarohove-knedliky-s-jahodami-recept/`](copy/cs/tvarohove-knedliky-s-jahodami-recept.md) | [`/en/strawberry-curd-dumplings/`](copy/en/strawberry-curd-dumplings.md) | [`/de/topfenknoedel-mit-erdbeeren/`](copy/de/topfenknoedel-mit-erdbeeren.md) | [`/sk/tvarohove-knedle-s-jahodami/`](copy/sk/tvarohove-knedle-s-jahodami.md) |
 | Vanilínový cukr 1 kg / 60 Kč | [`/vanilinovy-cukr/`](copy/cs/vanilinovy-cukr.md) | [`/en/vanilla-sugar/`](copy/en/vanilla-sugar.md) | [`/de/vanillinzucker/`](copy/de/vanillinzucker.md) | [`/sk/vanilinovy-cukor/`](copy/sk/vanilinovy-cukor.md) |
 | Vanilkový puding bez lepku, 1 kg / 60 Kč \| Jůzlová | [`/vanilkovy-puding-bez-lepku/`](copy/cs/vanilkovy-puding-bez-lepku.md) | [`/en/gluten-free-vanilla-pudding-powder/`](copy/en/gluten-free-vanilla-pudding-powder.md) | [`/de/glutenfreies-vanillepuddingpulver/`](copy/de/glutenfreies-vanillepuddingpulver.md) | [`/sk/vanilkovy-puding-bez-lepku/`](copy/sk/vanilkovy-puding-bez-lepku.md) |
-| Velkoobchod Brno | [`/velkoobchod-brno/`](copy/cs/velkoobchod-brno.md) | — | — | — |
 | Velkoobchod Kochánov | [`/velkoobchod-kochanov/`](copy/cs/velkoobchod-kochanov.md) | — | — | — |
-| Velkoobchod Praha | [`/velkoobchod-praha/`](copy/cs/velkoobchod-praha.md) | — | — | — |
-| Velkoobchod na Vysočině | [`/velkoobchod-vysocina/`](copy/cs/velkoobchod-vysocina.md) | — | — | — |
-| Velkoobchod mimo Česko | [`/velkoobchod-zahranici/`](copy/cs/velkoobchod-zahranici.md) | — | — | — |
+| Velkoobchod | [`/velkoobchod-vysocina/`](copy/cs/velkoobchod-vysocina.md) | — | — | — |
 | Velkoobchod: knedlíky v prášku, puding, kakao \| Jůzlová | [`/velkoobchod/`](copy/cs/velkoobchod.md) | [`/en/wholesale/`](copy/en/wholesale.md) | [`/de/grosshandel/`](copy/de/grosshandel.md) | [`/sk/velkoobchod/`](copy/sk/velkoobchod.md) |
 | Věnečky s vanilkovým krémem a rumovou polevou | [`/venecky-s-vanilkovym-kremem-recept/`](copy/cs/venecky-s-vanilkovym-kremem-recept.md) | [`/en/choux-rings-with-vanilla-cream/`](copy/en/choux-rings-with-vanilla-cream.md) | [`/de/brandteigkraenze-mit-vanillecreme/`](copy/de/brandteigkraenze-mit-vanillecreme.md) | [`/sk/venceky-s-vanilkovym-kremom/`](copy/sk/venceky-s-vanilkovym-kremom.md) |
 | Větrníčky s vanilkovým krémem a cukrovou polevou | [`/vetrnicky-s-vanilkovym-kremem-recept/`](copy/cs/vetrnicky-s-vanilkovym-kremem-recept.md) | [`/en/cream-puffs-with-vanilla-cream/`](copy/en/cream-puffs-with-vanilla-cream.md) | [`/de/windbeutel-mit-vanillecreme/`](copy/de/windbeutel-mit-vanillecreme.md) | [`/sk/veterniky-s-vanilkovym-kremom/`](copy/sk/veterniky-s-vanilkovym-kremom.md) |
 | Knedlíky v prášku z Vysočiny | [`/vysocina/`](copy/cs/vysocina.md) | — | — | — |
-| Zásilka do zahraničí jen po domluvě \| Jůzlová, Kochánov | [`/zasilky-do-eu/`](copy/cs/zasilky-do-eu.md) | [`/en/shipping-to-eu/`](copy/en/shipping-to-eu.md) | [`/de/versand-in-die-eu/`](copy/de/versand-in-die-eu.md) | [`/sk/zasielky-do-eu/`](copy/sk/zasielky-do-eu.md) |
 
-**Pages per language:** cs 39, en 28, de 28, sk 28
+**Pages per language:** cs 35, en 27, de 27, sk 27
 
 ## Redirects (301)
 
-167 old addresses — mostly from the WordPress site — forward permanently to their current page. Generated from `LEGACY_REDIRECTS` and `WP_REDIRECTS` in `scripts/build_site.py`.
+186 old addresses — mostly from the WordPress site — forward permanently to their current page. Generated from `LEGACY_REDIRECTS` and `WP_REDIRECTS` in `scripts/build_site.py`.
 
 | Old address | Goes to |
 |---|---|
@@ -59,7 +55,7 @@ A dash means the page exists in Czech only (local landing pages).
 | `/bramborovo-tvarohove-knedliky-s-jahodami` | `/tvarohove-knedliky-s-jahodami-recept/` |
 | `/ceny` | `/cenik/` |
 | `/chlupate-knedliky` | `/chlupate-knedliky-v-prasku/` |
-| `/do-eu` | `/zasilky-do-eu/` |
+| `/do-eu` | `/kde-nas-najdete/` |
 | `/domaci-pernik-recept-podle-jirina-juzlova` | `/hrnickovy-pernik-recept/` |
 | `/dotaz-na-produkty` | `/kontakt/` |
 | `/faq` | `/caste-dotazy/` |
@@ -76,14 +72,21 @@ A dash means the page exists in Czech only (local landing pages).
 | `/podle-lucie-kuzelovebebe-rezy-s-cokoladovym-pudingem` | `/bebe-rezy-s-cokoladovym-pudinkem-recept/` |
 | `/potravinarske-smesi-kontact-praha-ceske-republiky` | `/kontakt/` |
 | `/recepty-index` | `/recepty/` |
+| `/shipping-to-eu` | `/kde-nas-najdete/` |
 | `/vanilkovy-cukr` | `/vanilinovy-cukr/` |
 | `/vanilkovy_puding` | `/vanilkovy-puding-bez-lepku/` |
 | `/vanilkovy_pudink` | `/vanilkovy-puding-bez-lepku/` |
+| `/velkoobchod-brno` | `/velkoobchod/` |
+| `/velkoobchod-praha` | `/velkoobchod/` |
+| `/velkoobchod-zahranici` | `/velkoobchod/` |
+| `/versand-in-die-eu` | `/kde-nas-najdete/` |
+| `/zasielky-do-eu` | `/kde-nas-najdete/` |
+| `/zasilky-do-eu` | `/kde-nas-najdete/` |
 | `/de/bramborove_knedliky` | `/de/kartoffelknoedel-mischung/` |
 | `/de/bramborovo-tvarohove-knedliky-s-jahodami` | `/de/topfenknoedel-mit-erdbeeren/` |
 | `/de/ceny` | `/de/preisliste/` |
 | `/de/chlupate-knedliky` | `/de/rohe-kartoffelknoedel-mischung/` |
-| `/de/do-eu` | `/de/versand-in-die-eu/` |
+| `/de/do-eu` | `/de/anfahrt/` |
 | `/de/domaci-pernik-recept-podle-jirina-juzlova` | `/de/tassen-lebkuchen/` |
 | `/de/dotaz-na-produkty` | `/de/kontakt/` |
 | `/de/faq` | `/de/haeufige-fragen/` |
@@ -113,6 +116,7 @@ A dash means the page exists in Czech only (local landing pages).
 | `/de/recepty-index` | `/de/rezepte/` |
 | `/de/recepty` | `/de/rezepte/` |
 | `/de/rychle-venecky-ci-vetrnicky-recept` | `/de/schnelle-brandteigkraenze/` |
+| `/de/shipping-to-eu` | `/de/anfahrt/` |
 | `/de/sisky-s-makem-recept` | `/de/mohnnudeln-aus-kartoffelteig/` |
 | `/de/slehackova-rolada-recept` | `/de/sahnerolle/` |
 | `/de/strapacky-se-zelim-a-slaninou-recept` | `/de/strapacky-mit-kraut-und-speck/` |
@@ -126,13 +130,16 @@ A dash means the page exists in Czech only (local landing pages).
 | `/de/velkoobchod-zahranici` | `/de/grosshandel/` |
 | `/de/velkoobchod` | `/de/grosshandel/` |
 | `/de/venecky-s-vanilkovym-kremem-recept` | `/de/brandteigkraenze-mit-vanillecreme/` |
+| `/de/versand-in-die-eu` | `/de/anfahrt/` |
 | `/de/vetrnicky-s-vanilkovym-kremem-recept` | `/de/windbeutel-mit-vanillecreme/` |
 | `/de/vysocina` | `/de/anfahrt/` |
+| `/de/zasielky-do-eu` | `/de/anfahrt/` |
+| `/de/zasilky-do-eu` | `/de/anfahrt/` |
 | `/en/bramborove_knedliky` | `/en/potato-dumpling-mix/` |
 | `/en/bramborovo-tvarohove-knedliky-s-jahodami` | `/en/strawberry-curd-dumplings/` |
 | `/en/ceny` | `/en/prices/` |
 | `/en/chlupate-knedliky` | `/en/raw-potato-dumpling-mix/` |
-| `/en/do-eu` | `/en/shipping-to-eu/` |
+| `/en/do-eu` | `/en/where-to-find-us/` |
 | `/en/domaci-pernik-recept-podle-jirina-juzlova` | `/en/cup-measure-gingerbread/` |
 | `/en/dotaz-na-produkty` | `/en/contact/` |
 | `/en/hairy-potato-dumpling-mix` | `/en/raw-potato-dumpling-mix/` |
@@ -162,6 +169,7 @@ A dash means the page exists in Czech only (local landing pages).
 | `/en/recepty-index` | `/en/recipes/` |
 | `/en/recepty` | `/en/recipes/` |
 | `/en/rychle-venecky-ci-vetrnicky-recept` | `/en/quick-choux-rings-and-puffs/` |
+| `/en/shipping-to-eu` | `/en/where-to-find-us/` |
 | `/en/sisky-s-makem-recept` | `/en/poppy-seed-potato-rolls/` |
 | `/en/slehackova-rolada-recept` | `/en/whipped-cream-roulade/` |
 | `/en/strapacky-se-zelim-a-slaninou-recept` | `/en/strapacky-cabbage-and-bacon/` |
@@ -175,13 +183,16 @@ A dash means the page exists in Czech only (local landing pages).
 | `/en/velkoobchod-zahranici` | `/en/wholesale/` |
 | `/en/velkoobchod` | `/en/wholesale/` |
 | `/en/venecky-s-vanilkovym-kremem-recept` | `/en/choux-rings-with-vanilla-cream/` |
+| `/en/versand-in-die-eu` | `/en/where-to-find-us/` |
 | `/en/vetrnicky-s-vanilkovym-kremem-recept` | `/en/cream-puffs-with-vanilla-cream/` |
 | `/en/vysocina` | `/en/where-to-find-us/` |
+| `/en/zasielky-do-eu` | `/en/where-to-find-us/` |
+| `/en/zasilky-do-eu` | `/en/where-to-find-us/` |
 | `/sk/bramborove_knedliky` | `/sk/zemiakove-knedle-v-prasku/` |
 | `/sk/bramborovo-tvarohove-knedliky-s-jahodami` | `/sk/tvarohove-knedle-s-jahodami/` |
 | `/sk/ceny` | `/sk/cennik/` |
 | `/sk/chlupate-knedliky` | `/sk/chlpate-knedle-v-prasku/` |
-| `/sk/do-eu` | `/sk/zasielky-do-eu/` |
+| `/sk/do-eu` | `/sk/kde-nas-najdete/` |
 | `/sk/domaci-pernik-recept-podle-jirina-juzlova` | `/sk/hrncekovy-pernik/` |
 | `/sk/dotaz-na-produkty` | `/sk/kontakt/` |
 | `/sk/faq` | `/sk/caste-otazky/` |
@@ -208,6 +219,7 @@ A dash means the page exists in Czech only (local landing pages).
 | `/sk/potravinarske-smesi-kontact-praha-ceske-republiky` | `/sk/kontakt/` |
 | `/sk/recepty-index` | `/sk/recepty/` |
 | `/sk/rychle-venecky-ci-vetrnicky-recept` | `/sk/rychle-venceky-a-veterniky/` |
+| `/sk/shipping-to-eu` | `/sk/kde-nas-najdete/` |
 | `/sk/sisky-s-makem-recept` | `/sk/sulance-s-makom/` |
 | `/sk/slehackova-rolada-recept` | `/sk/slahackova-rolada/` |
 | `/sk/strapacky-se-zelim-a-slaninou-recept` | `/sk/strapacky-s-kapustou-a-slaninou/` |
@@ -220,8 +232,11 @@ A dash means the page exists in Czech only (local landing pages).
 | `/sk/velkoobchod-vysocina` | `/sk/velkoobchod/` |
 | `/sk/velkoobchod-zahranici` | `/sk/velkoobchod/` |
 | `/sk/venecky-s-vanilkovym-kremem-recept` | `/sk/venceky-s-vanilkovym-kremom/` |
+| `/sk/versand-in-die-eu` | `/sk/kde-nas-najdete/` |
 | `/sk/vetrnicky-s-vanilkovym-kremem-recept` | `/sk/veterniky-s-vanilkovym-kremom/` |
 | `/sk/vysocina` | `/sk/kde-nas-najdete/` |
+| `/sk/zasielky-do-eu` | `/sk/kde-nas-najdete/` |
+| `/sk/zasilky-do-eu` | `/sk/kde-nas-najdete/` |
 
 ## Gone for good (410)
 

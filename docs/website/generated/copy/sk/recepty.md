@@ -19,7 +19,7 @@ Tradičná sladká večera zo zemiakového cesta: šúľance obalené v maku s c
 
 #### Hruškový koláč s vanilkovým pudingom
 
-Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní.
+Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti.
 
 #### Strapačky s kapustou a slaninou
 
@@ -35,15 +35,15 @@ Radi by ste pohostili návštevu, ale nie ste práve Jamie Oliver? Nepečené be
 
 #### Domáci perník
 
-Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom.
+Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu.
 
 #### Zemiakovo-tvarohové knedle s jahodami
 
-Leto je tu a s ním aj dozrievanie jahôd. Jednoduchý a rýchly recept, ktorým za 20 minút potešíte aj najväčších maškrtníkov.
+Rýchle ovocné knedle na jahodovú sezónu: zemiakové cesto s tvarohom, hotové za 20 minút.
 
 #### Rýchle venčeky či veterníčky
 
-Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechách.
+Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechoch.
 
 #### Venčeky s vanilkovým krémom
 

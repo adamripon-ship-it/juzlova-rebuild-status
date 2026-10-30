@@ -3,7 +3,7 @@
 # Knedlíky v prášku z Vysočiny — dílna Kochánov | Jůzlová
 
 - **URL:** `/vysocina/`
-- **Meta description:** Rodinná dílna v Kochánově 40, 582 53. Směsi si vyzvednete zdarma v dílně nebo v Humpolci; po Vysočině je po domluvě rozvezeme. Odběr Kochánov a Humpolec.
+- **Meta description:** Rodinná dílna v Kochánově 40, 582 53. Směsi si vyzvednete zdarma v dílně nebo v Humpolci. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ---
 
@@ -11,9 +11,9 @@
 
 ## Směsi z dílny na Vysočině, k vyzvednutí v Kochánově
 
-Většina sousedů si pro směsi přijede do dílny. Rozvoz po kraji domluvíme.
+Většina sousedů si pro směsi přijede do dílny. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
-Kraj Vysočina je náš domov. Asi 90 % zakázek je místních kolem Kochánova a většina zákazníků si zboží vyzvedne v dílně nebo v Humpolci. Kdo nemůže přijet, tomu po kraji rozvezeme po domluvě.
+Kraj Vysočina je náš domov. Asi 90 % zakázek je místních kolem Kochánova a většina zákazníků si zboží vyzvedne v dílně nebo v Humpolci. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Co u nás koupíte
 
@@ -21,7 +21,7 @@ Kraj Vysočina je náš domov. Asi 90 % zakázek je místních kolem Kochánova 
 - chlupaté knedlíky 5 kg / 260 Kč
 - vanilkový puding 60 Kč / 30 Kč, vanilínový cukr 60 Kč, kakao 270 Kč
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Objednávka podle místa
 
@@ -59,9 +59,7 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 
@@ -69,17 +67,9 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 ### Časté dotazy
 
-*summary:* Od kolika je rozvoz po Vysočině zdarma?
-
-Po Vysočině od 5000 Kč, do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč. Pod touto částkou dopravu naceníme.
-
 *summary:* Platí to i o víkendu?
 
 Telefon bereme denně 8:00–19:00. Termín vyzvednutí nebo rozvozu domluvíme.
-
-*summary:* Je cena s dopravou?
-
-Ne. Ceník je jen za zboží.
 
 *summary:* Kde sídlíte na Vysočině?
 

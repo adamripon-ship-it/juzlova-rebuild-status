@@ -3,7 +3,7 @@
 # Über uns — Familienwerkstatt Jůzlová, Kochánov, seit 2004
 
 - **URL:** `/de/ueber-uns/`
-- **Meta description:** Familie Jůzl stellt seit 2004 in Kochánov Knödelmischung, Pudding und Kakao her. Mehl aus der Familienmühle in Havlíčkův Brod. Kein Onlineshop.
+- **Meta description:** Familie Jůzl stellt seit 2004 in Kochánov Knödelmischung, Pudding und Kakao her. Kein Onlineshop. Kartoffelknödel-Mischung.
 
 ---
 
@@ -11,7 +11,7 @@ Start › Über uns
 
 ## Familie Jůzl aus Kochánov: seit 2004 mischen wir, was wir selbst kochen
 
-Die Werkstatt liegt in Kochánov 40, zwölf Kilometer von Havlíčkův Brod. Das Mehl kommt aus einer Mühle, die unsere weitere Familie führt. Bestellungen nimmt Jiřina entgegen.
+Die Werkstatt liegt in Kochánov 40, zwölf Kilometer von Havlíčkův Brod entfernt. Bestellungen nimmt Jiřina entgegen.
 
 Jiřina anrufen Schreiben Sie uns
 
@@ -19,7 +19,7 @@ Unsere Werkstatt in Kochánov — Mehlsäcke, Waage und Abfüllung.
 
 ### Wie es begann
 
-2004 haben wir in einer kleinen Werkstatt in Kochánov mit Lebensmittelmischungen begonnen. Die Rezepturen haben wir über Jahre verfeinert. Heute kaufen Haushalte in ganz Böhmen und Mähren bei uns, dazu Kantinen, Gaststätten und Bäckereien.
+2004 haben wir in einer kleinen Werkstatt in Kochánov mit Lebensmittelmischungen begonnen. Die Rezepturen haben wir über Jahre verfeinert. Heute kaufen Haushalte bei uns, dazu Kantinen, Gaststätten und Bäckereien.
 
 Menschen
 
@@ -37,13 +37,13 @@ Sie sprechen direkt mit der Person, die die Mischungen herstellt — nicht mit e
 
 Inhaber · Produktion und Logistik
 
-Die zweite Telefonnummer der Werkstatt. Hilft bei Abholung und Lieferung und sorgt dafür, dass Ihre Packungen unbeschädigt ankommen.
+Die zweite Telefonnummer der Werkstatt. Hilft bei Abholung und Lieferung und sorgt dafür, dass die Ware in gutem Zustand bei Ihnen ankommt.
 
 #### Lucie Kůželová
 
 Produktion, Verpackung, Verkauf und Kunden
 
-Beantwortet Ihre Anfrage oft auch auf Facebook. Sorgt dafür, dass die Ware gut verpackt und pünktlich das Haus verlässt.
+Beantwortet Ihre Anfrage oft auch auf Facebook. Sorgt dafür, dass die Ware gut verpackt und pünktlich bereitsteht.
 
 #### Filip Kůžel
 
@@ -65,12 +65,12 @@ Sorgt dafür, dass Sie uns leicht finden, Produkte ansehen und wissen, wie Sie b
 
 ### Woher das Mehl kommt
 
-Das Weizenmehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt, und trägt das tschechische Gütesiegel KLASA. Die Mühle gehört unserer weiteren Familie, die sie auch führt — wir wissen, was in den Beutel kommt.
+Das Mehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt entfernt.
 
 ### Was wir nicht tun
 
 - Kein Onlineshop. Sie bestellen telefonisch oder über das Formular.
-- Keine Muster, keine Verkostung.
+- Keine Muster und keine Verkostungen.
 - Keine erfundenen Sterne: Die Bewertungen stammen aus unseren öffentlichen Profilen bei Google und Firmy.cz.
 - Wir antworten auf Tschechisch; für Deutsch nutzen wir bei Bedarf eine Übersetzungshilfe.
 
@@ -86,7 +86,7 @@ Google Bewertungen öffnen → Firmy.cz Bewertungen öffnen →
 
 *summary:* Wo genau sind Sie?
 
-Kochánov 40, 582 53, Region Vysočina, Tschechien, 12 km von Havlíčkův Brod. Nicht 582 91 — das ist ein anderes Kochánov.
+Kochánov 40, 582 53, Region Vysočina, Tschechien, 12 km von Havlíčkův Brod entfernt. Nicht 582 91 — das ist ein anderes Kochánov.
 
 *summary:* Sind Sie ein eingetragenes Unternehmen?
 

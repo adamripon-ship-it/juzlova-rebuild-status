@@ -3,7 +3,7 @@
 # Tschechische Windbeutel mit Vanillecreme und Zuckerglasur — Rezept
 
 - **URL:** `/de/windbeutel-mit-vanillecreme/`
-- **Meta description:** Větrníčky aus Brandteig (125 ml Milch, 125 ml Wasser, 100 g Butter, 150 g Mehl, 4–5 Eier) mit Vanille-Buttercreme und weißer Zuckerglasur. Etwa 30 Stück; 10 Min. bei 220 °C, dann 15–20 Min. bei 180 °C backen.
+- **Meta description:** Větrníčky aus Brandteig (125 ml Milch, 125 ml Wasser, 100 g Butter, 150 g Mehl, 4–5 Eier) mit Vanille-Buttercreme und weißer Zuckerglasur. Etwa 30 Stück.
 
 ---
 
@@ -62,9 +62,9 @@ Ungefüllte Windbeutel halten sich in einer geschlossenen Dose 2 Tage. Erst weni
 
 ### Häufige Fragen
 
-*summary:* Was unterscheidet větrníčky von věnečky?
+*summary:* Was unterscheidet Větrníčky von Věnečky?
 
-Der Brandteig ist derselbe. Větrníčky werden mit der Sterntülle als runde Rosetten von 4–5 cm gespritzt, věnečky als Ringe. Diese větrníčky füllen wir mit Vanille-Buttercreme aus unserem Pudding und tauchen sie in weiße Zuckerglasur.
+Der Brandteig ist derselbe. Větrníčky werden mit der Sterntülle als runde Rosetten von 4–5 cm gespritzt, Věnečky als Ringe. Diese Větrníčky füllen wir mit Vanille-Buttercreme aus unserem Pudding und tauchen sie in weiße Zuckerglasur.
 
 *summary:* Warum fallen die Windbeutel nach dem Backen zusammen?
 
@@ -79,6 +79,6 @@ Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebac
 - Brandteigkränze mit Vanillecreme Klassische Věnečky aus Brandteig mit Vanillebuttercreme und Rumguss. Etwa 20 Stück. Mehr
 - Mini-Windbeutel (Minivětrníčky) Kleine Větrníčky aus Brandteig mit Butter-Pudding-Quark-Creme und Schokoladenguss. Etwa 40–45 Stück. Mehr
 - Karamell-Windbeutel (Větrníky) Větrníky mit Vanillepuddingcreme, Karamellsahne und Karamellguss. Etwa 24 mittlere Stück. Mehr
-- Birnenkuchen mit Vanillepudding Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren. Mehr
-- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen. Mehr
+- Birnenkuchen mit Vanillepudding Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder. Mehr
+- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art. Mehr
 - Schnelle Brandteigkränze oder Windbeutel Ein Brandteig für Věnečky und Větrníčky: mehr Butter und ein Start bei 250 °C. Etwa 80 Stück auf zwei Blechen. Mehr

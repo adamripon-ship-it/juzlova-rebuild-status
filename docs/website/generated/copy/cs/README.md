@@ -2,7 +2,7 @@
 
 # All page copy — Čeština (`cs`)
 
-39 pages. Each file holds the page title, meta description and every piece of visible text inside the page body, in reading order.
+35 pages. Each file holds the page title, meta description and every piece of visible text inside the page body, in reading order.
 
 | Page | URL |
 |---|---|
@@ -35,13 +35,9 @@
 | [Bramborovo-tvarohové knedlíky s jahodami — recept za 20 minut](tvarohove-knedliky-s-jahodami-recept.md) | `/tvarohove-knedliky-s-jahodami-recept/` |
 | [Vanilínový cukr 1 kg / 60 Kč — do těsta i na posyp \| Jůzlová](vanilinovy-cukr.md) | `/vanilinovy-cukr/` |
 | [Vanilkový puding bez lepku, 1 kg / 60 Kč \| Jůzlová](vanilkovy-puding-bez-lepku.md) | `/vanilkovy-puding-bez-lepku/` |
-| [Velkoobchod Brno — Morava, jiná trasa než Praha \| Jůzlová](velkoobchod-brno.md) | `/velkoobchod-brno/` |
 | [Velkoobchod Kochánov — odběr v dílně \| Jůzlová](velkoobchod-kochanov.md) | `/velkoobchod-kochanov/` |
-| [Velkoobchod Praha — od 25 kg mix \| Jůzlová](velkoobchod-praha.md) | `/velkoobchod-praha/` |
-| [Velkoobchod na Vysočině — Jůzlová — knedlíky v prášku](velkoobchod-vysocina.md) | `/velkoobchod-vysocina/` |
-| [Velkoobchod mimo Česko — jen na poptávku \| Jůzlová](velkoobchod-zahranici.md) | `/velkoobchod-zahranici/` |
+| [Velkoobchod — Jůzlová — knedlíky v prášku](velkoobchod-vysocina.md) | `/velkoobchod-vysocina/` |
 | [Velkoobchod: knedlíky v prášku, puding, kakao \| Jůzlová](velkoobchod.md) | `/velkoobchod/` |
 | [Věnečky s vanilkovým krémem a rumovou polevou — recept](venecky-s-vanilkovym-kremem-recept.md) | `/venecky-s-vanilkovym-kremem-recept/` |
 | [Větrníčky s vanilkovým krémem a cukrovou polevou — recept](vetrnicky-s-vanilkovym-kremem-recept.md) | `/vetrnicky-s-vanilkovym-kremem-recept/` |
 | [Knedlíky v prášku z Vysočiny — dílna Kochánov \| Jůzlová](vysocina.md) | `/vysocina/` |
-| [Zásilka do zahraničí jen po domluvě \| Jůzlová, Kochánov](zasilky-do-eu.md) | `/zasilky-do-eu/` |

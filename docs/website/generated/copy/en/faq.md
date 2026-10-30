@@ -17,11 +17,11 @@ Short answers. If your question is not here, call us.
 
 *summary:* How do I order without a web shop?
 
-Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we arrange the rest.
+Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we’ll arrange the rest.
 
 *summary:* Where can I collect for free?
 
-At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00.
+At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always arranged by phone first, daily 8:00–19:00.
 
 *summary:* Do you give samples or tastings?
 
@@ -29,23 +29,19 @@ No. You order finished packs. For a first try, the pudding comes in a 400 g pack
 
 *summary:* Do I pay in advance or on collection?
 
-For pick-up and delivery you pay on hand-over. If we post a parcel, we give you the total first and send it only once you agree.
+You pay on collection or on delivery.
 
 ### Delivery
 
-*summary:* When is delivery free?
+*summary:* Where do you deliver?
 
-To Humpolec and Havlíčkův Brod from 1000 Kč, to Jihlava from 3000 Kč, across the rest of Vysočina from 5000 Kč.
-
-*summary:* Can you post a parcel?
-
-On request, within Czechia or abroad, though most customers come and collect. You pay the full postage, box and insurance, and we agree the total first. You may also send your own courier.
+To Humpolec and Havlíčkův Brod.
 
 ### Ingredients and allergens
 
-*summary:* What is the dumpling mix made of?
+*summary:* What is in the dumpling mix?
 
-Wheat flour from the mill in Havlíčkův Brod run by our extended family, and dried potato flakes. You add only water; egg, milk or grated potato go in if that is how you like them.
+Flour, dried potato flakes, dried egg, salt, baking powder, potato starch. Mix with water as directed.
 
 *summary:* Is the vanilla pudding really gluten-free?
 
@@ -73,6 +69,6 @@ About 40 g for 500 ml of milk. One kilo makes about 25 puddings.
 
 Dry and sealed. Keep the cocoa away from strong smells, ideally at 15–20 °C.
 
-Kitchens and shops: quantity pricing and delivery questions are on the For kitchens page. For kitchens →
+Kitchens and food businesses: more on the page For kitchens →
 
 Call Jiřina Write to us

@@ -34,7 +34,7 @@ Použitá zmes
 - 3 lyžice cukru
 - 250 ml smotany na šľahanie (33 %), ušľahanej do tuha
 - Karamelová šľahačka: 150 g cukru
-- 250 ml smotany na šľahanie (33 %), studenej, plus trochu na stiahnutie karamelu
+- 250 ml smotany na šľahanie (33 %), studenej, plus trochu na zaliatie karamelu
 - štipka soli
 - Karamelová poleva: 125 g cukru
 - 45 g masla
@@ -43,12 +43,12 @@ Použitá zmes
 
 ### Postup
 
-- Vodu, maslo a soľ priveďte k varu. Odstavte, vsypte všetku múku, dôkladne zamiešajte a na miernom plameni 2–3 minúty varte, kým sa cesto nespojí do gule a na dne hrnca sa nevytvorí tenký film.
+- Vodu, maslo a soľ priveďte k varu. Odstavte, vsypte všetku múku, dôkladne zamiešajte a na miernom plameni 2–3 minúty varte, kým sa cesto nespojí do gule a na dne hrnca sa nevytvorí tenký povlak.
 - Cesto roztierajte po stenách misy, aby rýchlejšie vychladlo. Keď je len vlažné (horúce by vajcia zrazilo), po troškách ich zašľahajte na nízkych otáčkach. Prestaňte, keď cesto z lyžice padá v hustom „V“ — všetky vajcia nemusíte spotrebovať. Nakoniec vmiešajte kypriaci prášok.
 - Veľkou hviezdicovou špičkou striekajte na papier na pečenie kruhy s priemerom 4–5 cm, s veľkými rozstupmi. Pečte 10 minút na 200–220 °C, potom znížte na 170–180 °C a pečte ďalších 15–20 minút, kým nie sú sýto zlatisté a pevné. Rúru počas pečenia neotvárajte, inak veterníky spadnú. Pred plnením úplne vychlaďte.
 - Puding uvarte s mliekom a cukrom podľa návodu na obale a úplne vychlaďte (na povrch pritlačte fóliu). Keď sú puding aj šľahačka studené, šľahačku do pudingu zapracujte.
 - Cukor nasucho rozpustite na panvici (nemiešajte, len otáčajte panvicou) do sýto jantárovej farby. Odstavte, opatrne prilejte trochu smotany — bude prudko bublať — potom vmiešajte zvyšok a štipku soli. Úplne vychlaďte, nechajte v chladničke niekoľko hodín alebo cez noc a ušľahajte do tuha. 3–4 lyžice odložte na polevu.
-- Cukor na polevu skaramelizujte rovnako, odstavte a vmiešajte maslo a smotanu, kým poleva nie je hladká a lesklá. Nechajte schladnúť, kým poleva obalí lyžicu, ale ešte sa dá liať.
+- Cukor na polevu skaramelizujte rovnako, odstavte a vmiešajte maslo a smotanu, kým poleva nie je hladká a lesklá. Nechajte schladnúť, kým poleva neobalí lyžicu, ale ešte sa dá liať.
 - Každý vychladnutý veterník rozrežte vodorovne a vrch nechajte ako čiapočku. Do spodku nastriekajte vanilkový krém, naň krúžok karamelovej šľahačky, priklopte a prelejte alebo namočte do karamelovej polevy. Pred podávaním nechajte v chladničke aspoň 2 hodiny stuhnúť.
 
 Vajcia do odpaľovaného cesta pridávajte, až keď je vlažné, a po troškách — múka nasiakne vždy inak. Správnu hustotu spoznáte podľa konzistencie, nie podľa toho, že ste spotrebovali všetky vajcia.
@@ -57,13 +57,13 @@ Rúru počas pečenia neotvárajte. Karamelovú šľahačku pripravte deň vopre
 
 ### Časté otázky
 
-*summary:* Ako sa skladajú karamelové vetrníky?
+*summary:* Ako sa skladajú karamelové veterníky?
 
 Škrupina z odpaľovaného cesta, vanilkový pudingový krém, krúžok karamelovej šľahačky a karamelová poleva. Asi 24 stredných kúskov.
 
 *summary:* Prečo pripraviť karamelovú šľahačku deň vopred?
 
-Karamel so smotanou musí v chladničke stuhnúť, aby šľahačka držala tvar. Rúru pri pečení škrupín neotvárajte — vetrníky by spadli.
+Karamel so smotanou musí v chladničke stuhnúť, aby šľahačka držala tvar. Rúru pri pečení škrupín neotvárajte — veterníky by spadli.
 
 Návrhy k tomuto receptu
 
@@ -74,6 +74,6 @@ Návrhy k tomuto receptu
 - Venčeky s vanilkovým krémom Klasické venčeky z odpaľovaného cesta s vanilkovým maslovým krémom a rumovou polevou. Asi 20 kúskov. Viac
 - Miniveterníčky Malé veterníčky z odpaľovaného cesta s maslovo-pudingovým krémom s tvarohom a čokoládovou polevou. Asi 40–45 kúskov. Viac
 - Veterníčky s vanilkovým krémom Malé veterníčky striekané hviezdičkou, plnené vanilkovým maslovým krémom a namáčané v bielej cukrovej poleve. Asi 30 kúskov. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
-- Rýchle venčeky či veterníčky Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechách. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac
+- Rýchle venčeky či veterníčky Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechoch. Viac

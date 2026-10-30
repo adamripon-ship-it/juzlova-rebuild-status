@@ -11,7 +11,7 @@
 
 ## Zemiakovo-tvarohové knedle s jahodami
 
-Leto je tu a s ním aj dozrievanie jahôd. Jednoduchý a rýchly recept, ktorým za 20 minút potešíte aj najväčších maškrtníkov.
+Rýchle ovocné knedle na jahodovú sezónu: zemiakové cesto s tvarohom, hotové za 20 minút.
 
 Ohodnoťte tento recept
 
@@ -32,15 +32,15 @@ Použitá zmes
 
 - Zemiakové knedle v prášku zmiešajte s vodou podľa návodu a pripravte vláčne cesto; zapracujte mäkký tvaroh (lepivé cesto neprekáža).
 - Z cesta vytvarujte valec a nakrájajte ho na rovnako veľké časti, aby sa knedle varili rovnomerne.
-- Každý kúsok zaguľaťte, dlaňami sploštite na placku, do stredu vložte jahodu a zabaľte.
-- Knedle varte v pare 5 minút — cesto sa krásne uvarí a nerozvarí.
+- Každý kúsok zaguľaťte, dlaňami sploštite na placku, do stredu vtlačte jahodu a zabaľte.
+- Knedle varte v pare 5 minút — cesto sa uvarí a nerozvarí.
 - Medzitým môžete povariť kúsky jahôd na ozdobu. Na tanieri knedle dozdobte maslom, cukrom, jahodami alebo tvarohom.
 
 ### Časté otázky
 
 *summary:* Ako rýchlo sú zemiakovo-tvarohové knedle s jahodami hotové?
 
-Za 20 minút: cesto zo zemiakových knedieľ v prášku a tvarohu, jahoda dnu, 5 minút v pare.
+Za 20 minút: cesto zo zemiakových knedieľ v prášku a tvarohu, jahoda dovnútra, 5 minút v pare.
 
 *summary:* Aký tvaroh do ovocných knedieľ?
 
@@ -54,7 +54,7 @@ Návrhy k tomuto receptu
 
 - Šúľance s makom Tradičná sladká večera zo zemiakového cesta: šúľance obalené v maku s cukrom, preliate rozpusteným maslom. Viac
 - Strapačky s kapustou a slaninou Slovenská klasika z chlpatých knedieľ v prášku — halušky s kyslou kapustou a vypečenou slaninou. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
 - Bebe rezy s čokoládovým pudingom Radi by ste pohostili návštevu, ale nie ste práve Jamie Oliver? Nepečené bebe rezy zvládne naozaj každý. Viac
 - Šľahačková roláda Ľahký múčnik za pol hodiny: kontrast horkastého kakaa a jemne sladkej šľahačky. Bez múky, teda aj bez lepku. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac

@@ -3,7 +3,7 @@
 # Kartoffelknödel-Mischung 5 kg — nur Wasser dazu | Jůzlová
 
 - **URL:** `/de/kartoffelknoedel-mischung/`
-- **Meta description:** Knödelteig aus Mehl der Familienmühle und Kartoffelflocken, nur mit Wasser anrühren. Zerfällt nicht, in 20 Minuten fertig. 5 kg / 250 Kč.
+- **Meta description:** Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in 20 Minuten fertig. 5 kg / 250 Kč. Kartoffelknödel-Mischung.
 
 ---
 
@@ -11,7 +11,7 @@ Start › Kartoffelknödel-Mischung
 
 ## Böhmische Kartoffelknödel-Mischung: nur Wasser dazu, in 20 Minuten auf dem Tisch, zerfällt nicht im Topf
 
-Weizenmehl aus der Familienmühle in Havlíčkův Brod und getrocknete Kartoffelflocken. Sonst nichts. Ei oder geriebene gekochte Kartoffel nach Belieben.
+Mehl aus einer Mühle in Havlíčkův Brod. Die vollständige Zutatenliste finden Sie unten.
 
 Preis
 
@@ -21,21 +21,21 @@ Bestellung
 
 - +420 728 466 141 · täglich 8–19 Uhr
 
-Lieferung nach Absprache; der Postversand kostet extra.
+Abholung in der Werkstatt. Nach Humpolec und Havlíčkův Brod liefern wir.
 
 Bei Jiřina bestellen Abholorte
 
 ### Zutaten
 
-Weizenmehl mit dem tschechischen Gütesiegel KLASA aus einer Mühle in Havlíčkův Brod, die unserer weiteren Familie gehört, und getrocknete Kartoffelflocken. Die Flocken geben dem Teig den Kartoffelgeschmack und halten ihn beim Kochen zusammen.
+Mehl, getrocknete Kartoffelflocken, Trockenei, Salz, Backpulver, Kartoffelstärke
 
 ### Zubereitung
 
 - Mischung nach Packungsanleitung mit Wasser anrühren.
-- Knödel, Nudeln oder Kroketten formen.
+- Knödel, Schupfnudeln oder Kroketten formen.
 - Kochen. Vom Beutel bis zum Teller etwa 20 Minuten.
 
-Lieber nach eigener Art? Einen Teil des Wassers durch Milch ersetzen, ein Ei oder eine gekochte, geriebene Kartoffel zugeben. Viele unserer Kunden machen das so.
+Möchten Sie es auf Ihre Art? Geben Sie ein Ei oder eine gekochte, geriebene Kartoffel dazu. Viele unserer Kunden machen das so.
 
 ### Was aus dem Teig wird
 
@@ -53,7 +53,7 @@ Lieber nach eigener Art? Einen Teil des Wassers durch Milch ersetzen, ein Ei ode
 
 *summary:* Muss ich ein Ei zugeben?
 
-Nein. Der Teig gelingt nur mit Wasser. Ei oder Milch können Sie für mehr Geschmack nach Belieben zugeben.
+Nein. Mit Wasser nach Anleitung auf dem Beutel anrühren. Ein Ei können Sie für mehr Geschmack nach Belieben zugeben.
 
 *summary:* Halten die Knödel eine Obstfüllung?
 

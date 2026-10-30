@@ -9,7 +9,7 @@
 
 Start › Kontakt
 
-## Rufen Sie Jiřina oder Jiří an — täglich 8–19 Uhr klären wir Bestellung und Abholung
+## Rufen Sie Jiřina oder Jiří an — täglich 8⁠–⁠19 Uhr klären wir Bestellung und Abholung
 
 Auch samstags und sonntags, immer nach Absprache. Wir antworten auf Tschechisch; für Deutsch nutzen wir bei Bedarf eine Übersetzungshilfe.
 
@@ -49,11 +49,9 @@ Name und Telefon oder E-Mail genügen. Wir melden uns und vereinbaren einen Term
 
 *label:* Abholung in der Werkstatt, Kochánov 40, 582 53
 
-*label:* Abholung in Humpolec nahe der Brauerei Bernard (kostenlos, Tag und Uhrzeit nach Absprache)
+*label:* Lieferung nach Havlíčkův Brod oder Humpolec (kostenlos, Tag und Uhrzeit nach Absprache)
 
-*label:* Lieferung in der Vysočina oder Paket auf Anfrage
-
-*label:* Nachricht (was, wie viel, wohin)
+*label:* Nachricht (was, wie viel, wo Sie sind)
 
 *button:* Absenden und Termin vereinbaren
 
@@ -73,4 +71,4 @@ Nein. Die Werkstatt ist kein Laden — bitte zuerst anrufen. Telefonisch täglic
 
 *summary:* Kann ich vorher probieren?
 
-Nein. Muster oder Verkostung bieten wir nicht; Sie bestellen fertige Packungen.
+Nein. Muster oder Verkostungen bieten wir nicht an; Sie bestellen fertige Packungen.

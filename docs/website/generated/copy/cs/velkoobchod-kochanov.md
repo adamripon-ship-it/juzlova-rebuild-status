@@ -3,7 +3,7 @@
 # Velkoobchod Kochánov — odběr v dílně | Jůzlová
 
 - **URL:** `/velkoobchod-kochanov/`
-- **Meta description:** Provozovny z okolí Kochánova 40, 582 53 berou zboží přímo v dílně, vyzvednutí je zdarma. Cenu podle množství domluvíme telefonem nebo velkoobchodním formulářem.
+- **Meta description:** Provozovny z okolí Kochánova 40, 582 53 berou zboží přímo v dílně, vyzvednutí je zdarma. Knedlíky v prášku.
 
 ---
 
@@ -13,17 +13,14 @@
 
 Asi 90 % zakázek je kolem dílny. Vyzvednutí v Kochánově 40, 582 53 je pro provozovny zdarma.
 
-Když je kuchyně v Kochánově, Herálci nebo v okolních vsích, nejjednodušší je přijet do dílny. Žádný rozvoz, žádná krabice. Ceník domácností 250 / 260 / 60 / 30 / 270 Kč tu platí jako výchozí bod; větší množství oceníme zvlášť.
+Když je kuchyně v Kochánově, Herálci nebo v okolních vsích, nejjednodušší je přijet do dílny. Ceník domácností 250 / 260 / 60 / 30 / 270 Kč tu platí.
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Velkoobchod podle místa
 
-- Velkoobchod po Vysočině
+- Velkoobchod
 - Místní velkoobchod v Kochánově
-- Velkoobchod do Prahy
-- Velkoobchod do Brna
-- Velkoobchod mimo Česko
 - Pro kuchyně
 
 ### Poptávka pro kuchyni
@@ -36,7 +33,7 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 
 *label:* E-mail
 
-*label:* Téma poptávkyVyberte témaObecná velkoobchodní poptávkaPraha — od 25 kg mixBrnoVysočinaZahraniční velkoobchodRestaurace nebo jídelnaPekárna nebo cukrárnaŠkolní kuchyněVýroba zmrzlinyJiné
+*label:* Téma poptávkyVyberte témaObecná velkoobchodní poptávkaVysočinaRestaurace nebo jídelnaPekárna nebo cukrárnaŠkolní kuchyněVýroba zmrzlinyJiné
 
 *label:* Množství (balení nebo kg)
 
@@ -56,9 +53,7 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 
@@ -69,10 +64,6 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 *summary:* Může provozovna vyzvednout v dílně?
 
 Ano. Kochánov 40, 582 53, po telefonu.
-
-*summary:* Platí ceník i pro větší odběr?
-
-Ceník je výchozí. Množství oceníme zvlášť.
 
 *summary:* Je PSČ 582 91?
 

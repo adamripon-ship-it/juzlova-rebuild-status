@@ -34,7 +34,6 @@ match get Czech (`x-default`).
 | Contact | `/kontakt/` | `/en/contact/` | 1 |
 | FAQ | `/caste-dotazy/` | `/en/faq/` | 1 |
 | Wholesale | `/velkoobchod/` | `/en/wholesale/` | 1 (+5 local pages in Czech) |
-| Shipping to the EU | `/zasilky-do-eu/` | `/en/shipping-to-eu/` | 1 |
 
 👉 **The complete list of every page in every language is in the
 [site map](generated/site-map.md)**, with a link from each address to that

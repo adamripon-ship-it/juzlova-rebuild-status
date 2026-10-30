@@ -15,11 +15,8 @@ people: Jiřina Jůzlová +420 728 466 141; Jiří Jůzl +420 607 629 931
 hours: pondělí–neděle 08:00–19:00 po telefonické domluvě
 order: telefon nebo formulář na webu; bez e-shopu
 pickup_free: Kochánov 40, 582 53; Humpolec u Pivovaru Bernard po dohodě
-delivery_free_vysocina: nad 5000 Kč
-delivery_free_humpolec_hb: nad 1000 Kč (Humpolec, Havlíčkův Brod)
-delivery_free_jihlava: nad 3000 Kč (Jihlava)
-eu_shipping: DE/AT/SK/PL a Češi v EU — dopravu, balení a pojištění platí zákazník
-b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; cena podle množství; bez jmen zákazníků
+delivery: Humpolec, Havlíčkův Brod
+b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; bez jmen zákazníků
 newsletter: přihláška na webu; nové recepty občas a sezónní tipy před Vánoci a Velikonocemi
 price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo
 local_share: cca 90 % zakázek kolem Kochánova 40, 582 53
@@ -40,17 +37,17 @@ Pět výrobků. Staré adresy kakaovy_puding vedou na vanilkový puding.
 PSČ je 582 53. Nikoli 582 91 (jiný Kochánov u Světlé).
 
 ## Čím se lišíme
-Pšeničná mouka z mlýna v Havlíčkově Brodě (12 km), který vlastní a vede naše širší rodina. Těsto se zadělává jen vodou; vejce, mléko nebo strouhanou bramboru přidá kuchař podle zvyku. Prodáváme přímo z dílny, po kilech.
+Mouka z mlýna v Havlíčkově Brodě (12 km). Těsto se zadělává vodou podle návodu. Prodáváme přímo z dílny, po kilech.
 
 ## Výrobky
 ### Bramborové knedlíky v prášku
 url: https://www.juzlova.cz/bramborove-knedliky-v-prasku/
 package: 5 kg
 price_czk: 250 Kč
-fact: Mouka z mlýna v Havlíčkově Brodě a sušené bramborové vločky. Nic dalšího. Vejce nebo strouhanou bramboru přidáte, jak jste zvyklí.
-detail: Bramborové těsto v prášku z mouky z mlýna v Havlíčkově Brodě a bramborových vloček. Zaděláte vodou, nerozvaří se. 5 kg / 250 Kč, vyzvednutí Kochánov a Humpolec.
+fact: Mouka z mlýna v Havlíčkově Brodě. Celé složení najdete níže.
+detail: Bramborové těsto v prášku. Zaděláte vodou, nerozvaří se. 5 kg / 250 Kč, vyzvednutí Kochánov a Humpolec.
 Q: Musím přidat vejce?
-A: Ne. Těsto funguje jen s vodou. Vejce nebo mléko přidejte, chcete-li bohatší chuť.
+A: Ne. Směs zaděláte vodou podle návodu. Vejce přidejte, chcete-li bohatší chuť.
 Q: Vydrží knedlíky plnění ovocem?
 A: Ano, těsto drží tvar; zákazníci z něj dělají i plněné knedlíky.
 Q: Máte menší balení než 5 kg?
@@ -507,12 +504,8 @@ A: Mimo plotnu — delší var by vyhnal alkohol a ztlumil chuť likéru. Vody j
 ### Jak objednat: zavoláte nebo napíšete a zboží si vyzvednete v dílně
 url: https://www.juzlova.cz/objednavka/
 fact: Objednáte telefonem nebo formulářem, e-shop nemáme. Zboží si zdarma vyzvednete v dílně v Kochánově 40 nebo v Humpolci. Telefon denně 8:00–19:00.
-Q: Objednáváte po celém Česku?
-A: Ano, ale většina zákazníků si pro zboží přijede. Mimo Vysočinu pošleme na požádání balík; poštovné platíte celé vy a celkovou částku domluvíme předem.
 Q: Máte e-shop?
 A: Ne. Objednávka telefonem nebo formulářem.
-Q: Kdy je rozvoz zdarma?
-A: Po Vysočině od 5000 Kč. Do Humpolce a Havlíčkova Brodu od 1000 Kč. Do Jihlavy od 3000 Kč.
 Q: Posíláte vzorky?
 A: Ne. Objednáváte hotová balení.
 Q: Jaké je PSČ?
@@ -520,13 +513,9 @@ A: 582 53. Nikoli 582 91.
 
 ### Směsi z dílny na Vysočině, k vyzvednutí v Kochánově
 url: https://www.juzlova.cz/vysocina/
-fact: Rodinná dílna v Kochánově 40, 582 53. Směsi si vyzvednete zdarma v dílně nebo v Humpolci; po Vysočině je po domluvě rozvezeme.
-Q: Od kolika je rozvoz po Vysočině zdarma?
-A: Po Vysočině od 5000 Kč, do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč. Pod touto částkou dopravu naceníme.
+fact: Rodinná dílna v Kochánově 40, 582 53. Směsi si vyzvednete zdarma v dílně nebo v Humpolci. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 Q: Platí to i o víkendu?
 A: Telefon bereme denně 8:00–19:00. Termín vyzvednutí nebo rozvozu domluvíme.
-Q: Je cena s dopravou?
-A: Ne. Ceník je jen za zboží.
 Q: Kde sídlíte na Vysočině?
 A: Kochánov 40, 582 53, 12 km od Havlíčkova Brodu.
 Q: Máte kakaový puding?
@@ -534,17 +523,13 @@ A: Ne. Máme vanilkový puding a kakao zvlášť.
 
 ### Havlíčkův Brod
 url: https://www.juzlova.cz/havlickuv-brod/
-fact: Dílna Jůzlová je 12 km od Havlíčkova Brodu, v Kochánově 40. Mouku KLASA bereme z brodského mlýna naší širší rodiny. Nejdřív zavolejte, denně 8:00–19:00.
+fact: Dílna Jůzlová je 12 km od Havlíčkova Brodu, v Kochánově 40. Nejdřív zavolejte, denně 8:00–19:00.
 Q: Můžu jet do dílny?
 A: Ano. Vyzvednutí v Kochánově je zdarma po telefonu.
-Q: Od kolika je rozvoz do Havlíčkova Brodu zdarma?
-A: Od 1000 Kč.
 Q: Jak daleko je dílna?
 A: 12 km, Kochánov 40, 582 53.
 Q: Odkud je mouka?
-A: Z mlýna v Havlíčkově Brodě, se značkou KLASA — mlýn vlastní a vede naše širší rodina.
-Q: Je v ceně doprava?
-A: Ne. Cena na webu je jen za zboží.
+A: Z mlýna v Havlíčkově Brodě.
 
 ### Odběr v Humpolci
 url: https://www.juzlova.cz/humpolec/
@@ -553,10 +538,6 @@ Q: Je odběr v Humpolci zdarma?
 A: Ano. Nic za výdej neúčtujeme.
 Q: Je to výdejna pivovaru?
 A: Ne. Soukromé místo v okolí Pivovaru Bernard, ne u vrat.
-Q: Od kolika je rozvoz po Humpolci zdarma?
-A: Od 1000 Kč.
-Q: Je v ceně doprava?
-A: Ne. Cena na webu je jen za zboží.
 Q: Jak domluvím hodinu?
 A: Telefon +420 728 466 141 nebo +420 607 629 931, denně 8:00–19:00.
 
@@ -588,73 +569,21 @@ A: Ano. 250 / 260 / 60 / 30 / 270 Kč při vyzvednutí.
 Q: Umíte anglicky nebo německy na telefonu?
 A: Web je ve čtyřech jazycích. Na telefonu z dílny se domluvíte česky.
 
-### Velkoobchod po Vysočině
+### Velkoobchod
 url: https://www.juzlova.cz/velkoobchod-vysocina/
-fact: Provozovnám na Vysočině dodáváme knedlíky, puding a kakao. Cenu podle množství domluvíme, sazebník na webu není. Vyzvednutí v dílně zdarma.
-Q: Dodáváte jídelnám na Vysočině?
-A: Ano. Značky provozoven nejmenujeme.
-Q: Od kolika je rozvoz zdarma?
-A: Po Vysočině od 5000 Kč. Do Humpolce a Havlíčkova Brodu od 1000 Kč.
-Q: Je na webu velkoobchodní ceník?
-A: Ne. Cenu podle množství domluvíme.
-Q: Jak objedná provozovna?
-A: Velkoobchodním formulářem nebo telefonem.
-Q: Vydáváte vzorky kuchyním?
-A: Ne.
+fact: Provozovnám dodáváme knedlíky, puding a kakao. Vyzvednutí v dílně zdarma. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Místní velkoobchod v Kochánově
 url: https://www.juzlova.cz/velkoobchod-kochanov/
-fact: Provozovny z okolí Kochánova 40, 582 53 berou zboží přímo v dílně, vyzvednutí je zdarma. Cenu podle množství domluvíme telefonem nebo velkoobchodním formulářem.
+fact: Provozovny z okolí Kochánova 40, 582 53 berou zboží přímo v dílně, vyzvednutí je zdarma.
 Q: Může provozovna vyzvednout v dílně?
 A: Ano. Kochánov 40, 582 53, po telefonu.
-Q: Platí ceník i pro větší odběr?
-A: Ceník je výchozí. Množství oceníme zvlášť.
 Q: Je PSČ 582 91?
 A: Ne. Vždy 582 53.
 Q: Jmenujete místní restaurace?
 A: Ne.
 Q: Jaký formulář použít?
 A: Velkoobchodní formulář, ne kontakt pro domácnosti.
-
-### Velkoobchod do Prahy
-url: https://www.juzlova.cz/velkoobchod-praha/
-fact: Pražským provozovnám dodáme po domluvě smíšenou objednávku od 25 kg: knedlíky, puding, cukr a kakao. Cenu i dopravu řekneme předem, sazebník na webu není.
-Q: Jaké je minimum do Prahy?
-A: 25 kg smíšené objednávky.
-Q: Můžu namíchat víc druhů?
-A: Ano. Knedlíky, puding, cukr i kakao do jednoho závozu.
-Q: Zveřejňujete pražské velkoobchodní ceny?
-A: Ne. Cenu podle množství domluvíme.
-Q: Je doprava v ceníku?
-A: Ne. Cena na webu je jen za zboží.
-Q: Jmenujete pražské restaurace?
-A: Ne.
-
-### Velkoobchod do Brna
-url: https://www.juzlova.cz/velkoobchod-brno/
-fact: Brněnským kuchyním dodáváme po domluvě; trasu na Moravu plánujeme zvlášť od Prahy. Cenu a termín domluvíme, sazebník na webu není.
-Q: Je Brno stejné jako Praha?
-A: Ne. Jiná trasa, jiný den, jiná cena dopravy. Stejných pět směsí.
-Q: Je rozvoz do Brna zdarma?
-A: Ano — od objednávky nad 5000 Kč, po domluvě termínu.
-Q: Platí v Brně minimum 25 kg?
-A: Pražské minimum je 25 kg mix. Pro Brno platí prah zdarma dopravy 5000 Kč; přesné minimum zboží řekneme po poptávce.
-Q: Zveřejňujete brněnské sazby?
-A: Ne.
-Q: Můžu poslat dopravce do Kochánova?
-A: Ano. Často to vyjde levněji než náš závoz na Moravu.
-Q: Jmenujete brněnské zákazníky?
-A: Ne.
-
-### Velkoobchod mimo Česko
-url: https://www.juzlova.cz/velkoobchod-zahranici/
-fact: Jsme malá rodinná dílna na Vysočině. Zahraniční kuchyni nebo obchodu pošleme zboží na požádání; dopravu platí celou odběratel, částku řekneme předem.
-Q: Jsou na webu zahraniční velkoobchodní ceny?
-A: Ne. Cenu domluvíme po poptávce.
-Q: Kdo platí dopravu?
-A: Odběratel, celou částku. Dopravu, balení a pojištění řekneme předem.
-Q: Posíláte vzorky do zahraničí?
-A: Ne.
 
 ## FAQ
 Q: Jak u vás objednám, když nemáte e-shop?
@@ -667,16 +596,13 @@ Q: Dáváte vzorky nebo ochutnávky?
 A: Ne. Objednáváte hotová balení. Na první vyzkoušení se hodí puding ve 400 g balení za 30 Kč.
 
 Q: Platím předem, nebo při převzetí?
-A: Při vyzvednutí a rozvozu platíte při převzetí. Když zboží posíláme balíkem, řekneme celkovou částku předem a odešleme až po vašem souhlasu.
+A: Při vyzvednutí a rozvozu platíte při převzetí.
 
-Q: Kdy je rozvoz zdarma?
-A: Do Humpolce a Havlíčkova Brodu od 1000 Kč, do Jihlavy od 3000 Kč, po zbytku Vysočiny od 5000 Kč.
-
-Q: Posíláte i balíkem?
-A: Na požádání ano, po Česku i do zahraničí. Většina zákazníků si ale pro zboží přijede. Poštovné, krabici a pojištění platíte celé vy a celkovou částku domluvíme předem. Můžete poslat i vlastního dopravce.
+Q: Kam zboží dovezete?
+A: Do Humpolce a Havlíčkova Brodu.
 
 Q: Z čeho jsou knedlíky v prášku?
-A: Z pšeničné mouky z mlýna v Havlíčkově Brodě, který vede naše širší rodina, a ze sušených bramborových vloček. Zaděláváte jen vodou; vejce, mléko nebo strouhané brambory přidáte podle zvyku.
+A: Mouka, sušené bramborové vločky, sušená vejce, sůl, prášek do pečiva, bramborový škrob. Zaděláváte vodou podle návodu.
 
 Q: Je vanilkový puding opravdu bez lepku?
 A: Ano. Základem je kukuřičný škrob, který lepek neobsahuje. Kakaový puding jako hotovou směs nevedeme — čokoládový krém vznikne zamícháním našeho kakaa.

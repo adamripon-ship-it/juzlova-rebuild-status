@@ -15,20 +15,20 @@ A traditional recipe from our workshop. Mix with water, shape, boil. Push the do
 
 Price
 
-- 5 kg / 260 Kč at workshop pick-up · 52 Kč/kg · a season at home, or a week of service
+- 5 kg / 260 Kč at workshop pick-up · 52 Kč/kg · for a season at home, or for a canteen
 
 Order
 
 - +420 728 466 141 · daily 8–19
 
-Delivery by arrangement; posting costs extra.
+We deliver to Humpolec and Havlíčkův Brod.
 
 Order from Jiřina Where to collect
 
 ### What it goes with
 
 - sauerkraut and smoked meat
-- fried onion and cracklings
+- fried onion and pork crackling
 - sweet, with poppy seeds and sugar
 - pushed through a colander into boiling water for halušky and strapačky
 
@@ -37,10 +37,6 @@ Order from Jiřina Where to collect
 - Mix with water as directed on the bag.
 - Shape bosáky, or push the dough through a colander.
 - Boil. 15 minutes from bag to plate.
-
-### For canteens
-
-We supply bosáky mix to canteens and restaurants too: the same mix at quantity prices, with pick-up in Kochánov, our delivery or your own carrier.
 
 ### Frequently asked questions
 
@@ -58,6 +54,6 @@ No. 5 kg is the only size.
 
 *summary:* Do you supply canteens?
 
-Yes. We do not name the kitchens we supply. Order by phone or through the wholesale form.
+Yes. We do not name the kitchens we supply. Order by phone or through the kitchen enquiry form.
 
 Order from Jiřina Write to us

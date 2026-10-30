@@ -3,7 +3,7 @@
 # Vanilkový puding bez lepku 1 kg / 60 Kč | Jůzlová
 
 - **URL:** `/sk/vanilkovy-puding-bez-lepku/`
-- **Meta description:** Vanilkový puding z kukuričného škrobu bez lepku. Kilo vystačí na cca 25 pudingov alebo krémy na veterníky. 1 kg / 60 Kč, 400 g / 30 Kč. Odber v dielni.
+- **Meta description:** Vanilkový puding z kukuričného škrobu bez lepku. Kilo vystačí asi na 25 pudingov alebo krém na venčeky a veterníky. 1 kg / 60 Kč, 400 g / 30 Kč. Odber v dielni.
 
 ---
 
@@ -11,7 +11,7 @@
 
 ## Vanilkový puding bez lepku v kile: kukuričný škrob na krém, koláč aj perník — asi 25 pudingov za 60 Kč
 
-Základ je kukuričný škrob, ktorý lepok neobsahuje. Varíte ho ako každý puding; do krému na veterníky, do hruškového koláča, do hrnčekového perníka.
+Základ je kukuričný škrob, ktorý lepok neobsahuje. Varíte ho ako každý puding; do krému na venčeky, do hruškového koláča, do hrnčekového perníka.
 
 Cena
 
@@ -21,7 +21,7 @@ Objednávka
 
 - +420 728 466 141 · denne 8–19
 
-Rozvoz po dohode, poslanie balíkom sa platí zvlášť.
+Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 
 Objednať u Jiřiny Kde vyzdvihnúť
 
@@ -43,7 +43,7 @@ Kakaový puding nevyrábame. Do uvareného vanilkového pudingu zamiešajte lyž
 
 - hruškový koláč s vanilkovým pudingom
 - venčeky s vanilkovým krémom
-- mini veterníky
+- miniveterníčky
 - karamelové veterníky
 - hrnčekový perník
 

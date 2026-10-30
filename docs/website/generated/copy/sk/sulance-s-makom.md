@@ -37,11 +37,11 @@ Použitá zmes
 
 ### Časté otázky
 
-*summary:* Ako sa robia šišky s makom z knedieľ v prášku?
+*summary:* Ako sa robia šúľance s makom z knedieľ v prášku?
 
-Zemiakové knedle v prášku zmiešajte s vodou podľa návodu, vytvarujte šišky, pečte na 200 °C dozlatista z oboch strán, 5 minút sparte vo vriacej vode a obalte v maku, cukre a masle.
+Zemiakové knedle v prášku zmiešajte s vodou podľa návodu, vytvarujte šúľance, pečte na 200 °C dozlatista z oboch strán, 5 minút sparte vo vriacej vode a obalte v maku, cukre a masle.
 
-*summary:* Na koľko stupňov piecť šišky s makom?
+*summary:* Na koľko stupňov piecť šúľance s makom?
 
 Na 200 °C v strede rúry, na vymastenom plechu, s jedným otočením, aby mali zlatistú kôrku z oboch strán.
 
@@ -51,9 +51,9 @@ Návrhy k tomuto receptu
 
 Ďalšie recepty, ktoré sa k nemu hodia — rovnaká zmes alebo podobný postup.
 
-- Zemiakovo-tvarohové knedle s jahodami Leto je tu a s ním aj dozrievanie jahôd. Jednoduchý a rýchly recept, ktorým za 20 minút potešíte aj najväčších maškrtníkov. Viac
+- Zemiakovo-tvarohové knedle s jahodami Rýchle ovocné knedle na jahodovú sezónu: zemiakové cesto s tvarohom, hotové za 20 minút. Viac
 - Strapačky s kapustou a slaninou Slovenská klasika z chlpatých knedieľ v prášku — halušky s kyslou kapustou a vypečenou slaninou. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
 - Bebe rezy s čokoládovým pudingom Radi by ste pohostili návštevu, ale nie ste práve Jamie Oliver? Nepečené bebe rezy zvládne naozaj každý. Viac
 - Šľahačková roláda Ľahký múčnik za pol hodiny: kontrast horkastého kakaa a jemne sladkej šľahačky. Bez múky, teda aj bez lepku. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac

@@ -72,6 +72,7 @@ FULFILL_NAME_CS = {
     "factory": "vyzvednutí v dílně Kochánov 40, 582 53",
     "humpolec": "vyzvednutí v Humpolci u Pivovaru Bernard",
     "delivery": "rozvoz",
+    "delivery_hb_humpolec": "rozvoz do Havlíčkova Brodu nebo Humpolce",
 }
 KIND_NAME_CS = {
     "contact": "poptávka",
@@ -80,7 +81,7 @@ KIND_NAME_CS = {
 }
 TOPIC_OWNER_CS = {
     "general": "obecná velkoobchodní poptávka",
-    "praha": "Praha (min. 25 kg mix)",
+    "praha": "Praha",
     "brno": "Brno",
     "vysocina": "Vysočina",
     "international": "zahraniční velkoobchod",

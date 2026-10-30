@@ -21,7 +21,7 @@ Bestellung
 
 - +420 728 466 141 · täglich 8–19 Uhr
 
-Lieferung nach Absprache; der Postversand kostet extra.
+Nach Humpolec und Havlíčkův Brod liefern wir.
 
 Bei Jiřina bestellen Abholorte
 
@@ -30,7 +30,7 @@ Bei Jiřina bestellen Abholorte
 - Kuchen und Gebäck
 - Weihnachtsplätzchen — im Teig und zum Bestreuen
 - Schlagsahne und Cremes
-- die Keksschnitten und Mini-Windbeutel aus unseren Rezepten
+- die Bebe-Schnitten und Mini-Windbeutel aus unseren Rezepten
 
 ### Lagerung
 

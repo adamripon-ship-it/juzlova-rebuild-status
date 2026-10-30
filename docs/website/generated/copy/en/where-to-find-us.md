@@ -3,7 +3,7 @@
 # Where to find us — Kochánov 40 & Humpolec | Jůzlová
 
 - **URL:** `/en/where-to-find-us/`
-- **Meta description:** Workshop: Kochánov 40, 12 km from Havlíčkův Brod. Free pick-up there or in Humpolec by arrangement; free delivery in Vysočina from set amounts.
+- **Meta description:** Workshop: Kochánov 40, 12 km from Havlíčkův Brod. Free pick-up there or in Humpolec by arrangement. We deliver to Humpolec and Havlíčkův Brod.
 
 ---
 
@@ -11,13 +11,13 @@ Home › Where to find us
 
 ## Where to find us: collect at the workshop in Kochánov or in Humpolec
 
-Phone first, then drive. The workshop is not a shop with opening hours on the door.
+Call first, then drive over. The workshop is not a shop with opening hours on the door.
 
 Call Jiřina Write to us
 
 ### The workshop in Kochánov
 
-Kochánov 40, 582 53, Vysočina Region, Czechia. Pick-up is free, daily 8:00–19:00 by phone arrangement, weekends included. Check the postcode: 582 91 is a different Kochánov.
+Kochánov 40, 582 53, Vysočina Region, Czechia. Pick-up is free, daily 8:00–19:00 by arrangement over the phone, weekends included. Check the postcode: 582 91 is a different Kochánov.
 
 Kochánov 40, 582 53 — not 582 91, which is a different Kochánov
 
@@ -29,10 +29,7 @@ Our second pick-up point is in Humpolec, near the Bernard brewery, free of charg
 
 ### Delivery
 
-- Humpolec and Havlíčkův Brod: free delivery from 1000 Kč
-- Jihlava: free from 3000 Kč
-- Rest of Vysočina: free from 5000 Kč
-- Elsewhere in Czechia or abroad: we can post a parcel on request; you pay shipping, packing and insurance on top. Or send your own courier.
+- We deliver to Humpolec and Havlíčkův Brod.
 
 ### Tell us what you need
 
@@ -60,9 +57,7 @@ Your name and a phone number or e-mail are enough. We'll reply and arrange a dat
 
 *label:* Pick-up at the workshop, Kochánov 40, 582 53
 
-*label:* Pick-up in Humpolec near the Bernard brewery (free, day and time by arrangement)
-
-*label:* Delivery or parcel (at your cost)
+*label:* Delivery to Havlíčkův Brod or Humpolec (free, day and time by arrangement)
 
 *label:* Message (what, how much, where you are)
 
@@ -77,7 +72,3 @@ Yes. The workshop is not a shop with opening hours on the door. We take calls da
 *summary:* Where do I collect in Humpolec?
 
 Near the Bernard brewery, free of charge. We give the exact spot and time by phone.
-
-*summary:* Can I send my own courier?
-
-Yes. Outside the free zones it is often cheaper than our delivery.

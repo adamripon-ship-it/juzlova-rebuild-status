@@ -3,7 +3,7 @@
 # Havlíčkův Brod — dílna Jůzlová 12 km od města
 
 - **URL:** `/havlickuv-brod/`
-- **Meta description:** Dílna Jůzlová je 12 km od Havlíčkova Brodu, v Kochánově 40. Mouku KLASA bereme z brodského mlýna naší širší rodiny. Nejdřív zavolejte, denně 8:00–19:00.
+- **Meta description:** Dílna Jůzlová je 12 km od Havlíčkova Brodu, v Kochánově 40. Nejdřív zavolejte, denně 8:00–19:00. Odběr Kochánov a Humpolec.
 
 ---
 
@@ -11,15 +11,15 @@
 
 ## Havlíčkův Brod
 
-Město je 12 km od dílny. Mouka se značkou KLASA je z místního mlýna, který vlastní a vede naše širší rodina.
+Město je 12 km od dílny. Mouka je z místního mlýna.
 
-Havlíčkův Brod je nejbližší větší město. Pšeničnou mouku se značkou KLASA bereme ze zdejšího mlýna, který vlastní a vede naše širší rodina, 12 km od Kochánova.
+Havlíčkův Brod je nejbližší větší město, 12 km od Kochánova. Mouku bereme ze zdejšího mlýna.
 
 ### Jak objednat z Brodu
 
-Zavolejte +420 728 466 141 nebo +420 607 629 931 a přijeďte si pro zboží do Kochánova 40, 582 53. Když nemůžete přijet, domluvíme rozvoz.
+Zavolejte +420 728 466 141 nebo +420 607 629 931 a přijeďte si pro zboží do Kochánova 40, 582 53. Do Havlíčkova Brodu zboží dovezeme.
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ### Objednávka podle místa
 
@@ -57,9 +57,7 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 
@@ -71,18 +69,10 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 Ano. Vyzvednutí v Kochánově je zdarma po telefonu.
 
-*summary:* Od kolika je rozvoz do Havlíčkova Brodu zdarma?
-
-Od 1000 Kč.
-
 *summary:* Jak daleko je dílna?
 
 12 km, Kochánov 40, 582 53.
 
 *summary:* Odkud je mouka?
 
-Z mlýna v Havlíčkově Brodě, se značkou KLASA — mlýn vlastní a vede naše širší rodina.
-
-*summary:* Je v ceně doprava?
-
-Ne. Cena na webu je jen za zboží.
+Z mlýna v Havlíčkově Brodě.

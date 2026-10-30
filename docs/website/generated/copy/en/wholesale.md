@@ -3,39 +3,39 @@
 # Dumpling mix, pudding & cocoa for kitchens | Jůzlová
 
 - **URL:** `/en/wholesale/`
-- **Meta description:** Quantity prices for canteens, restaurants, bakeries and gelato makers. Pick-up in Kochánov, our delivery or your carrier. Cocoa certificate on request.
+- **Meta description:** Mixes for canteens, restaurants, bakeries and ice-cream makers. Pick-up in Kochánov, or delivery to Humpolec and Havlíčkův Brod. Potato dumpling mix.
 
 ---
 
 Home › For kitchens
 
-## Dumpling mix, pudding and cocoa for kitchens: quantity pricing, pick-up or delivery, batch certificate
+## Dumpling mix, pudding and cocoa for canteens and restaurants: pick-up in Kochánov
 
-We supply canteens, restaurants, bakeries, cafés, schools and ice-cream makers across Czechia. Quantity prices by phone; we don't publish customer names.
+We supply canteens, restaurants, bakeries, cafés, schools and ice-cream makers. We don't publish customer names.
 
 Call Jiřina
 
 ### Why kitchens use the mix
 
-Potato dough for 500 portions, without thirty kilos of potatoes to peel. The same consistency every day. The label reads flour and dried potato flakes; what you add is up to you.
+Potato dough for 500 portions, without thirty kilos of potatoes to peel. The same consistency every day.
 
 #### 500 portions, three people
 
-Potato dough from water alone: no peeling and grating thirty kilos of potatoes. The same consistency every day.
+Potato dough, just add water: no thirty kilos of potatoes to peel and grate. The same consistency every day.
 
 #### A short label
 
-Flour and dried potato flakes. We e-mail ingredient lists and labels for your paperwork.
+We e-mail ingredient lists and labels for your paperwork.
 
-#### Three ways to get it
+#### Two ways to get it
 
-Pick-up in Kochánov, our delivery (Brno free from 5000 Kč, Prague from 25 kg), or your own carrier — often cheaper.
+Pick-up in Kochánov, or delivery to Humpolec and Havlíčkův Brod.
 
 #### Cocoa paperwork
 
 A laboratory certificate for your cocoa batch, on request. None of the 14 EU allergens; gluten under 20 ppm.
 
-### What we supply to whom
+### What we supply, and to whom
 
 - canteens and restaurants — dumpling mix and pudding for service
 - bakeries and pastry shops — pudding, vanilla sugar, cocoa
@@ -46,14 +46,11 @@ A laboratory certificate for your cocoa batch, on request. None of the 14 EU all
 ### How you get it
 
 - Pick-up at the workshop in Kochánov
-- Our delivery — quoted first; Brno free from 5000 Kč, Prague for mixed orders from 25 kg
-- Your own carrier — often cheaper
-
-Parcels abroad are possible on request, at the buyer's cost.
+- Delivery to Humpolec and Havlíčkův Brod
 
 ### Kitchen enquiry
 
-This form is for kitchens and shops. Households can order via the Contact page.
+This form is for food businesses. Households can order via the Contact page.
 
 *label:* Name
 
@@ -61,7 +58,7 @@ This form is for kitchens and shops. Households can order via the Contact page.
 
 *label:* E-mail
 
-*label:* Enquiry topicChoose a topicGeneral wholesale enquiryPrague — from 25 kg mixedBrnoVysočinaInternational wholesaleRestaurant or canteenBakery or pastry shopSchool kitchenIce-cream productionOther
+*label:* Enquiry topicChoose a topicGeneral wholesale enquiryVysočinaRestaurant or canteenBakery or pastry shopSchool kitchenIce-cream productionOther
 
 *label:* Quantity (packs or kg)
 
@@ -81,9 +78,7 @@ This form is for kitchens and shops. Households can order via the Contact page.
 
 *label:* Pick-up at the workshop, Kochánov 40, 582 53
 
-*label:* Pick-up in Humpolec near the Bernard brewery (free, day and time by arrangement)
-
-*label:* Delivery or parcel (at your cost)
+*label:* Delivery to Havlíčkův Brod or Humpolec (free, day and time by arrangement)
 
 *label:* Message (what, how much, where you are)
 
@@ -91,17 +86,9 @@ This form is for kitchens and shops. Households can order via the Contact page.
 
 ### Frequently asked questions
 
-*summary:* What is the Prague minimum?
-
-A mixed order from 25 kg. We quote the quantity price by phone or e-mail.
-
-*summary:* Can I send my own courier?
-
-Yes. That is often cheaper than our delivery outside the free zones.
-
 *summary:* Is the cocoa suitable for ice-cream makers?
 
-Yes. The high cocoa butter content is what suits ice cream: a strong cocoa flavour, a smooth texture and a deep colour that does not fade. Quantity prices are agreed case by case. Get in touch and tell us what you need.
+Yes. The high cocoa butter content is what suits ice cream: a strong cocoa flavour, a smooth texture and a deep colour that does not fade. Get in touch and tell us what you need.
 
 *summary:* Do you provide a Certificate of Analysis?
 

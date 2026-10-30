@@ -9,7 +9,7 @@
 
 Úvod › Kontakt
 
-## Zavolajte Jiřine alebo Jiřímu — denne 8–19, dohodneme objednávku aj odber
+## Zavolajte Jiřine alebo Jiřímu — denne 8⁠–⁠19, dohodneme objednávku aj odber
 
 Vrátane sobôt a nedieľ, vždy po predchádzajúcej dohode. Odpovedáme po česky.
 
@@ -49,9 +49,7 @@ Stačí meno a telefón alebo e-mail. Ozveme sa a dohodneme termín.
 
 *label:* Vyzdvihnutie v dielni Kochánov 40, 582 53
 
-*label:* Vyzdvihnutie v Humpolci pri Pivovare Bernard (zadarmo, deň a hodinu dohodneme)
-
-*label:* Rozvoz po Vysočine alebo balík po dohode
+*label:* Rozvoz do Havlíčkovho Brodu alebo Humpolca (zadarmo, deň a hodinu dohodneme)
 
 *label:* Správa (čo, koľko, kde ste)
 
@@ -69,7 +67,7 @@ Dielňa: Kochánov 40, 582 53, kraj Vysočina, Česko, 12 km od Havlíčkovho Br
 
 *summary:* Máte otváracie hodiny?
 
-Nie. Dielňa nie je obchod — najprv zavolajte. Telefóny berieme denne 8:00–19:00 vrátane soboty a nedele.
+Nie. Dielňa nie je obchod — najprv zavolajte. Telefóny dvíhame denne 8:00–19:00 vrátane soboty a nedele.
 
 *summary:* Dáte ochutnať?
 

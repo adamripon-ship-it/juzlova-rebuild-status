@@ -62,11 +62,11 @@ Das Rezept enthält 100 ml weniger Wasser als das Original (180 ml statt 280 ml)
 
 *summary:* Ist unser Kakao im Sticky-Toffee-Pudding?
 
-Ja. 60 g Kakao holländischer Art und 100 ml Baileys im Dattelteig, 6 Portionen, 45–50 Minuten bei 160 °C, gesalzene Toffeesauce.
+Ja. 60 g Kakao holländischer Art und 100 ml Baileys im Dattelteig, 6 Portionen, 45–50 Minuten bei 160 °C, salzige Toffeesauce.
 
 *summary:* Warum Baileys erst nach dem Kochen der Datteln?
 
-Vom Herd genommen — längeres Kochen würde den Alkohol austreiben und den Likörgeschmack dämpfen. Wasser: 180 ml, also 100 ml weniger als im Original, genau die Baileys-Menge.
+Er kommt vom Herd genommen dazu, denn längeres Kochen würde den Alkohol austreiben und den Likörgeschmack dämpfen. Wasser: 180 ml, also 100 ml weniger als im Original, genau die Baileys-Menge.
 
 Vorschläge zu diesem Rezept
 
@@ -76,7 +76,7 @@ Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebac
 
 - Bebe-Schnitten mit Schokoladenpudding Sie möchten Gäste bewirten, sind aber kein Jamie Oliver? Diese Bebe-Schnitten ohne Backen gelingen wirklich jedem. Mehr
 - Sahneroulade Ein leichtes Dessert in einer halben Stunde: der Kontrast von herbem Kakao und zart gesüßter Schlagsahne. Ohne Mehl, also auch ohne Gluten. Mehr
-- Birnenkuchen mit Vanillepudding Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren. Mehr
-- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen. Mehr
+- Birnenkuchen mit Vanillepudding Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder. Mehr
+- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art. Mehr
 - Mohnnudeln (šišky s mákem) Ein traditionelles süßes Abendessen aus Kartoffelteig: Mohnnudeln, in Mohn und Zucker gewälzt und mit zerlassener Butter übergossen. Mehr
 - Strapačky mit Kraut und Speck Ein slowakischer Klassiker aus unserer rohen Kartoffelknödel-Mischung — Halušky mit Sauerkraut und knusprig ausgebratenem Speck. Mehr

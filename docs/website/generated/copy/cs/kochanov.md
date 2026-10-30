@@ -19,7 +19,7 @@ Kochánov 40, 582 53 je jediná dílna. Není to Kochánov u Světlé s PSČ 582
 
 Nejdřív zavolejte. Telefon bereme denně 8:00–19:00 včetně víkendů. Vyzvednutí je zdarma. Ceny 250 / 260 / 60 / 30 / 270 Kč platí tady v dílně.
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 Kochánov 40, 582 53 — ne 582 91, to je jiný Kochánov
 
@@ -61,9 +61,7 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 *label:* Vyzvednutí v dílně Kochánov 40, 582 53
 
-*label:* Vyzvednutí v Humpolci u Pivovaru Bernard (zdarma, den a hodinu domluvíme)
-
-*label:* Rozvoz po Vysočině, nebo balík po domluvě
+*label:* Rozvoz do Havlíčkova Brodu nebo Humpolce (zdarma, den a hodinu domluvíme)
 
 *label:* Zpráva (co, kolik, kde jste)
 

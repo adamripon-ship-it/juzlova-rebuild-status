@@ -11,7 +11,7 @@ Start › Rezepte › Hausgemachter Lebkuchen (Perník)
 
 ## Hausgemachter Lebkuchen (Perník)
 
-Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen.
+Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art.
 
 Dieses Rezept bewerten
 
@@ -46,7 +46,7 @@ Tipp: Nach Geschmack können Sie dem Teig etwas Rum oder Rumaroma, Zimt, grob ge
 
 *summary:* Brauche ich für den Lebkuchen eine Waage?
 
-Nein. Tassenrezept von Jiřina Jůzlová: 10 Minuten rühren, 20–25 Minuten bei 180 °C, 25–30 Stücke. Im Teig: Vanillepuddingpulver und Kakao holländischer Art.
+Nein. Tassenrezept von Jiřina Jůzlová: 10 Minuten rühren, 20–25 Minuten bei 180 °C, 25–30 Portionen. Im Teig: Vanillepuddingpulver und Kakao holländischer Art.
 
 *summary:* Wann ist der Lebkuchen fertig?
 
@@ -58,7 +58,7 @@ Vorschläge zu diesem Rezept
 
 Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebacken.
 
-- Birnenkuchen mit Vanillepudding Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren. Mehr
+- Birnenkuchen mit Vanillepudding Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder. Mehr
 - Brandteigkränze mit Vanillecreme Klassische Věnečky aus Brandteig mit Vanillebuttercreme und Rumguss. Etwa 20 Stück. Mehr
 - Mini-Windbeutel (Minivětrníčky) Kleine Větrníčky aus Brandteig mit Butter-Pudding-Quark-Creme und Schokoladenguss. Etwa 40–45 Stück. Mehr
 - Karamell-Windbeutel (Větrníky) Větrníky mit Vanillepuddingcreme, Karamellsahne und Karamellguss. Etwa 24 mittlere Stück. Mehr

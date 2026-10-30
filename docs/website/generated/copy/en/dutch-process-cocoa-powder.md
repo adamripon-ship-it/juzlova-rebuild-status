@@ -21,7 +21,7 @@ Order
 
 - +420 728 466 141 · daily 8–19
 
-Delivery by arrangement; posting costs extra.
+We deliver to Humpolec and Havlíčkův Brod.
 
 Order from Jiřina Where to collect
 
@@ -35,7 +35,7 @@ Under EU law, a powder needs at least 20 % cocoa butter to be called cocoa; belo
 
 ### Where it comes from
 
-The beans are Theobroma cacao from West Africa, mainly Ivory Coast, Ghana, Cameroon and Nigeria. They are fermented in banana leaves and dried in the sun. Soils in this region are naturally low in cadmium, and so is our cocoa; the value for your batch is in the certificate of analysis, sent on request. The powder is alkalised with natural salts to pH 7.8–8.2, which gives the deep red-brown colour and a round taste without acidity.
+The beans are Theobroma cacao from West Africa, mainly Ivory Coast, Ghana, Cameroon and Nigeria. They are fermented in banana leaves and dried in the sun. Soils in this region are naturally low in cadmium, and so is our cocoa; the value for your batch is in the certificate of analysis, sent on request. The powder is alkalised with natural salts to pH 7.8–8.2, which gives the deep red-brown colour and a rounded taste without acidity.
 
 ### What's not in it
 
@@ -53,11 +53,11 @@ Hot cocoa and shakes — it keeps its colour and creamy taste in milk.
 
 #### Creams
 
-Fillings and creams, with no added sugar coming from the powder.
+Fillings and creams — the powder has no added sugar, so you control the sweetness.
 
 #### Dusting
 
-Slices, roulades and biscuit desserts — a dark, fine dust that does not clump.
+Slices, roulades and biscuit desserts — a dark, fine powder that does not clump.
 
 #### With vanilla pudding
 
@@ -103,15 +103,11 @@ Values per 100 g, as required by EU Regulation 1169/2011. You use cocoa by the s
 
 Keep it dry and away from strong smells, ideally at 15–20 °C and below 50 % humidity.
 
-### For pastry shops and gelato makers
-
-Quantity pricing, batch certificate, pick-up or delivery. Ask on the For kitchens page.
-
 ### Frequently asked questions
 
 *summary:* Why does the cocoa price change?
 
-Cocoa is a traded commodity: weather, demand and new EU heavy-metal limits move the price. We adjust the list when our purchase price changes.
+Cocoa is a traded commodity: weather, demand and new EU heavy-metal limits move the price. We update the price list when what we pay changes.
 
 *summary:* Is it raw cocoa?
 
@@ -125,12 +121,12 @@ Yes. The higher cocoa-butter content gives ice cream a smooth texture and a dark
 
 West Africa, mainly Ivory Coast, Ghana, Cameroon and Nigeria. The tree is Theobroma cacao. The beans are fermented in banana leaves, sun-dried, then ground and alkalised to Dutch-process cocoa.
 
-*summary:* Why is the cadmium content of the Jůzlová workshop's cocoa low?
+*summary:* Why is the Jůzlová workshop's cocoa low in cadmium?
 
 Cadmium enters the beans from the soil. High values are typical of cocoa grown on volcanic soils in parts of Latin America, for example Peru and Ecuador. West African soils hold little cadmium, so cocoa from there is low in cadmium too. The EU limit for cocoa powder is 0.60 mg/kg (Regulation (EU) 2023/915); the value for our batch is in the certificate of analysis, sent on request.
 
 *summary:* What about lead?
 
-In West Africa, lead is the metal that is monitored. It stays on the husk of the bean, not in the nib, and is removed with the shell before grinding. Lead is listed in the batch certificate as well.
+In West Africa, lead is the main metal monitored. It stays on the shell of the bean, not in the nib, and is removed with the shell before grinding. Lead is listed in the batch certificate as well.
 
 Order from Jiřina Write to us

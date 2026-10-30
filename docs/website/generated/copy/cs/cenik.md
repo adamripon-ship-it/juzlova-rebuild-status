@@ -11,7 +11,7 @@
 
 ## Ceník: pět směsí, ceny při vyzvednutí v Kochánově
 
-Stejná cena pro každého, kdo si zboží vyzvedne v dílně nebo v Humpolci. Rozvoz po Vysočině najdete pod tabulkou.
+Stejná cena pro všechny, kteří si zboží vyzvednou v dílně nebo jimž ho doručíme do Havlíčkova Brodu či Humpolce.
 
 Zavolat Jiřině Napsat e-mail
 
@@ -82,30 +82,13 @@ Balení: 1 kg
 - 60 Kč
 - 60 Kč/kg
 
-Počet porcí je orientační podle návodu na obalu. Doprava mimo bezplatné zóny se počítá zvlášť.
+Počet porcí je orientační podle návodu na obalu.
 
 ### Vyzvednutí a rozvoz
 
 - Vyzvednutí v Kochánově nebo v Humpolci: zdarma, termín po telefonu
-- Humpolec a Havlíčkův Brod: rozvoz zdarma od 1000 Kč
-- Jihlava: zdarma od 3000 Kč · zbytek Vysočiny: zdarma od 5000 Kč
-- Kuchyně: Brno zdarma od 5000 Kč, Praha smíšená objednávka od 25 kg
-- Balík po Česku i do zahraničí: po domluvě; dopravu, balení a pojištění platíte navíc
-
-### Kuchyně a provozovny
-
-Množstevní ceny řekneme po telefonu nebo přes formulář na stránce Pro kuchyně.
+- Humpolec a Havlíčkův Brod
 
 ### Staré ceny na internetu
 
 Na některých webech ještě visí ceny z roku 2017. Platí jen tento ceník.
-
-### Časté dotazy
-
-*summary:* Platí ceny i pro zásilku?
-
-Ceny zboží ano. Balík posíláme jen na požádání; poštovné, krabici a pojištění platíte celé vy a celkovou částku domluvíme předem.
-
-*summary:* Máte slevy pro velké odběry?
-
-Ano, pro provozovny podle množství. Cenu řekneme po telefonu.

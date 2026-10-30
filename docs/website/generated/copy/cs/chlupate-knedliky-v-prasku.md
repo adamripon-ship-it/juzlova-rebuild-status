@@ -21,7 +21,7 @@ Objednávka
 
 - +420 728 466 141 · denně 8–19
 
-Rozvoz po domluvě, poslání balíkem se platí zvlášť.
+Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 Objednat u Jiřiny Kde vyzvednout
 
@@ -37,10 +37,6 @@ Objednat u Jiřiny Kde vyzvednout
 - Směs zamícháte s vodou podle návodu.
 - Vytvarujete bosáky, nebo těsto protlačíte cedníkem.
 - Povaříte. Od pytle na talíř 15 minut.
-
-### Pro jídelny
-
-Bosáky dodáváme i jídelnám a restauracím: stejná směs, množstevní cena, odběr v Kochánově, náš rozvoz nebo váš dopravce.
 
 ### Časté dotazy
 

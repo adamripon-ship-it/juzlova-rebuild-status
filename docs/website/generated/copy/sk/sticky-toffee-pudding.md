@@ -45,13 +45,13 @@ Použitá zmes
 
 ### Postup
 
-- Rúru predhrejte na 160 °C (140 °C horúcovzdušne). Vymastite zapekaciu misu s priemerom 20 cm.
+- Rúru predhrejte na 160 °C (140 °C v teplovzdušnej rúre). Vymastite zapekaciu misu s priemerom 20 cm.
 - Maslo a cukor vyšľahajte do svetlej peny.
-- Na nízke otáčky pomaly vmiešajte zlatý sirup, melasu, vajcia a vanilku.
-- Samokypriacu múku preosejte s kakaom a na nízke otáčky zapracujte do cesta.
+- Pri nízkych otáčkach pomaly vmiešajte zlatý sirup, melasu, vajcia a vanilku.
+- Samokypriacu múku preosejte s kakaom a pri nízkych otáčkach zapracujte do cesta.
 - 180 ml vody s posekanými datľami niekoľko minút povarte, odstavte a vmiešajte Baileys a jedlú sódu — zmes spení.
-- Horúcu datľovo-baileysovú zmes zapracujte do kakaového cesta, vlejte do misy a pečte 45–50 minút, kým je puding pevný a mierne pružný. Špajdľou skontrolujte, či sa nelepia vlhké omrvinky; farbou sa neriaďte — cesto je tmavé.
-- Omáčka: maslo, cukor a zlatý sirup rozohrejte, kým sa cukor nerozpustí. Pridajte smotanu, vanilku a soľ a 3 minúty mierne povarte, kým zahustne. Pre silnejšiu írsku chuť na záver mimo plotny vmiešajte 1–2 lyžice Baileys (voliteľné — alkohol sa už neodparí).
+- Horúcu datľovo-baileysovú zmes zapracujte do kakaového cesta, vlejte do misy a pečte 45–50 minút, kým nie je puding pevný a mierne pružný. Špajdľou skontrolujte, či sa nelepia vlhké omrvinky; farbou sa neriaďte — cesto je tmavé.
+- Omáčka: maslo, cukor a zlatý sirup rozohrejte, kým sa cukor nerozpustí. Pridajte smotanu, vanilku a soľ a 3 minúty mierne povarte, kým nezhustne. Pre silnejšiu írsku chuť na záver mimo plotne vmiešajte 1–2 lyžice Baileys (voliteľné — alkohol sa už neodparí).
 - Teplý puding prelejte toffee omáčkou a podávajte s vanilkovou zmrzlinou.
 
 Baileys sa pridáva až po povarení datlí s vodou, mimo plotne — dlhší var by vyhnal alkohol a stlmil chuť likéru.
@@ -66,7 +66,7 @@ Vody je o 100 ml menej ako v pôvodnom recepte (180 ml namiesto 280 ml), práve 
 
 *summary:* Prečo sa Baileys pridáva až po povarení datlí?
 
-Mimo platne — dlhší var by vyhnal alkohol a stlmil chuť likéru. Vody je 180 ml (o 100 ml menej než v pôvodnom recepte), práve o množstvo Baileys.
+Mimo plotne — dlhší var by vyhnal alkohol a stlmil chuť likéru. Vody je 180 ml (o 100 ml menej než v pôvodnom recepte), práve o množstvo Baileys.
 
 Návrhy k tomuto receptu
 
@@ -76,7 +76,7 @@ Návrhy k tomuto receptu
 
 - Bebe rezy s čokoládovým pudingom Radi by ste pohostili návštevu, ale nie ste práve Jamie Oliver? Nepečené bebe rezy zvládne naozaj každý. Viac
 - Šľahačková roláda Ľahký múčnik za pol hodiny: kontrast horkastého kakaa a jemne sladkej šľahačky. Bez múky, teda aj bez lepku. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac
 - Šúľance s makom Tradičná sladká večera zo zemiakového cesta: šúľance obalené v maku s cukrom, preliate rozpusteným maslom. Viac
 - Strapačky s kapustou a slaninou Slovenská klasika z chlpatých knedieľ v prášku — halušky s kyslou kapustou a vypečenou slaninou. Viac

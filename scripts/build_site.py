@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20261018a"
+ASSET_VER = "20261030c"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -79,7 +79,6 @@ PAGE_SLUGS = {
     "kdo_jsme": "kdo-jsme",
     "kde_nas_najdete": "kde-nas-najdete",
     "velkoobchod": "velkoobchod",
-    "do_eu": "zasilky-do-eu",
     "kontakt": "kontakt",
     "ceny": "cenik",
 }
@@ -96,7 +95,7 @@ SLUGS = {
     "en": {
         "home": "", "recepty": "recipes", "faq": "faq",
         "kdo_jsme": "about-us", "kde_nas_najdete": "where-to-find-us",
-        "velkoobchod": "wholesale", "do_eu": "shipping-to-eu",
+        "velkoobchod": "wholesale",
         "kontakt": "contact", "ceny": "prices",
         "bramborove_knedliky": "potato-dumpling-mix",
         "chlupate_knedliky": "raw-potato-dumpling-mix",
@@ -121,7 +120,7 @@ SLUGS = {
     "de": {
         "home": "", "recepty": "rezepte", "faq": "haeufige-fragen",
         "kdo_jsme": "ueber-uns", "kde_nas_najdete": "anfahrt",
-        "velkoobchod": "grosshandel", "do_eu": "versand-in-die-eu",
+        "velkoobchod": "grosshandel",
         "kontakt": "kontakt", "ceny": "preisliste",
         "bramborove_knedliky": "kartoffelknoedel-mischung",
         "chlupate_knedliky": "rohe-kartoffelknoedel-mischung",
@@ -146,7 +145,7 @@ SLUGS = {
     "sk": {
         "home": "", "recepty": "recepty", "faq": "caste-otazky",
         "kdo_jsme": "kto-sme", "kde_nas_najdete": "kde-nas-najdete",
-        "velkoobchod": "velkoobchod", "do_eu": "zasielky-do-eu",
+        "velkoobchod": "velkoobchod",
         "kontakt": "kontakt", "ceny": "cennik",
         "bramborove_knedliky": "zemiakove-knedle-v-prasku",
         "chlupate_knedliky": "chlpate-knedle-v-prasku",
@@ -479,22 +478,22 @@ LEGACY_REDIRECTS = {
     "dotaz-na-produkty": "kontakt", "kdo-jsme": "kdo_jsme", "kdo_jsme": "kdo_jsme",
     "potravinarske-smesi-kontact-praha-ceske-republiky": "kontakt",
     "recepty-index": "recepty", "recepty": "recepty", "faq": "faq",
-    "ceny": "ceny", "do-eu": "do_eu", "kde-nas-najdete": "kde_nas_najdete",
+    "ceny": "ceny", "do-eu": "kde_nas_najdete", "kde-nas-najdete": "kde_nas_najdete",
+    "zasilky-do-eu": "kde_nas_najdete", "shipping-to-eu": "kde_nas_najdete",
+    "versand-in-die-eu": "kde_nas_najdete", "zasielky-do-eu": "kde_nas_najdete",
     "velkoobchod": "velkoobchod", "kontakt": "kontakt",
     "objednavka-cesko": "objednavka_cesko", "navstevnikum": "navstevnikum",
     "vysocina": "vysocina", "havlickuv-brod": "havlickuv_brod", "humpolec": "humpolec",
     "kochanov": "kochanov",
     "velkoobchod-vysocina": "velkoobchod_vysocina", "velkoobchod-kochanov": "velkoobchod_kochanov",
-    "velkoobchod-praha": "velkoobchod_praha", "velkoobchod-brno": "velkoobchod_brno",
-    "velkoobchod-zahranici": "velkoobchod_zahranici",
+    "velkoobchod-praha": "velkoobchod", "velkoobchod-brno": "velkoobchod",
+    "velkoobchod-zahranici": "velkoobchod",
 }
 # Local pages exist only in Czech; foreign visitors of the old copies land here.
 LOCAL_FALLBACK = {"objednavka_cesko": "kontakt", "navstevnikum": "kde_nas_najdete",
                   "vysocina": "kde_nas_najdete", "havlickuv_brod": "kde_nas_najdete",
                   "humpolec": "kde_nas_najdete", "kochanov": "kde_nas_najdete",
-                  "velkoobchod_vysocina": "velkoobchod", "velkoobchod_kochanov": "velkoobchod",
-                  "velkoobchod_praha": "velkoobchod", "velkoobchod_brno": "velkoobchod",
-                  "velkoobchod_zahranici": "velkoobchod"}
+                  "velkoobchod_vysocina": "velkoobchod", "velkoobchod_kochanov": "velkoobchod"}
 
 # WordPress-era root URLs that Search Console still reports as 404 and that have
 # a real equivalent today. Root only (they never existed under /en/ /de/ /sk/),
@@ -816,6 +815,11 @@ def contact_form_html(L, kind="contact"):
     heading = ui.get("form_b2b_h") if is_b2b else ui["form_h"]
     hint = ui.get("form_b2b_hint") if is_b2b else ui["form_hint"]
     heading_id = "b2b-write" if is_b2b else "write-to-us"
+    fulfill_opts = [("factory", ui["form_fulfill_factory"]),
+                    ("delivery_hb_humpolec", ui["form_fulfill_two_cities"])]
+    fulfill = "\n".join(
+        f'<label class="chk"><input type="radio" name="fulfillment" value="{v}"><span>{esc(label)}</span></label>'
+        for v, label in fulfill_opts)
     return f"""<form class="order-form" data-contact-form data-form-type="{esc(kind)}" data-lang="{esc(lang)}" data-i18n-success="{esc(ui['form_success'])}" data-i18n-error="{esc(ui['form_error'])}" data-i18n-captcha="{esc(ui['form_captcha'])}" data-i18n-sending="{esc(ui['form_sending'])}" data-i18n-need-contact="{esc(ui['form_need_contact'])}" action="/api/contact" method="post">
 <h2 id="{heading_id}">{esc(heading)}</h2>
 <p class="form-hint">{esc(hint)}</p>
@@ -830,9 +834,7 @@ def contact_form_html(L, kind="contact"):
 </fieldset>
 <fieldset class="fulfill">
 <legend>{esc(ui['form_fulfill'])}</legend>
-<label class="chk"><input type="radio" name="fulfillment" value="factory"><span>{esc(ui['form_fulfill_factory'])}</span></label>
-<label class="chk"><input type="radio" name="fulfillment" value="humpolec"><span>{esc(ui['form_fulfill_humpolec'])}</span></label>
-<label class="chk"><input type="radio" name="fulfillment" value="delivery"><span>{esc(ui['form_fulfill_delivery'])}</span></label>
+{fulfill}
 </fieldset>
 <label>{esc(ui['form_message'])}<textarea name="message" maxlength="4000" rows="5"></textarea></label>
 <div class="turnstile-slot" data-turnstile-slot></div>
@@ -962,7 +964,6 @@ def nav(L, depth, active, pid):
   </span>
   {a('ceny', ui['nav_prices'])}
   {a('recepty', ui['nav_recipes'])}
-  {a('velkoobchod', ui['nav_b2b'])}
   {a('kontakt', ui['nav_contact'])}
   {langsel}
 </nav>"""
@@ -973,9 +974,14 @@ def nav(L, depth, active, pid):
 # Footer anchors for Czech local pages whose H1 is a full sentence. The page
 # keeps its H1; the footer only needs a label that fits one line on a phone.
 FOOTER_LABELS = {
-    "objednavka_cesko": "Objednávka po celém Česku",
+    "objednavka_cesko": "Jak objednat",
     "navstevnikum": "Vyzvednutí po cestě",
+    "velkoobchod_vysocina": "Velkoobchod",
 }
+
+# Only these local pages are linked from the Czech footer; the others keep their routes.
+FOOTER_GEO = ("objednavka_cesko", "navstevnikum")
+FOOTER_B2B = ("velkoobchod_vysocina",)
 
 
 def credit_html(ui):
@@ -1016,10 +1022,10 @@ def footer(L, depth, pid="home"):
     if lg == "cs":
         geo = "".join(
             f'<a href="{pages}{GEO_SLUGS[k]}/">{esc(FOOTER_LABELS.get(k) or AEO_PAGES["cs"][k]["h1"])}</a>'
-            for k in GEO_SLUGS)
+            for k in FOOTER_GEO)
         b2b = "".join(
             f'<a href="{pages}{B2B_SLUGS[k]}/">{esc(FOOTER_LABELS.get(k) or AEO_PAGES["cs"][k]["h1"])}</a>'
-            for k in B2B_SLUGS)
+            for k in FOOTER_B2B)
         groups += [group("local", ui["footer_kitchens"], geo), group("b2b", ui["footer_b2b"], b2b)]
     links = "".join(groups)
     current = ' aria-current="page"'
@@ -1357,8 +1363,8 @@ def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None,
 """
 
 
-def price_note_html(L):
-    note = L["ui"].get("price_excludes_shipping") or ""
+def price_note_html(L, note=None):
+    note = note or L["ui"].get("price_excludes_shipping") or ""
     if not note:
         return ""
     return f'<p class="price-note">{esc(note)}</p>'
@@ -1604,9 +1610,9 @@ def build_home(L):
     next_arrow = '<svg viewBox="0 0 34 14" aria-hidden="true"><path d="M0,7 H31 M25,1 l6,6 -6,6"/></svg>'
     hero = f"""<section class="band gold hero">
   <div class="clip">
-    {sil(depth, "sil-leaf-banana", "left:-16%;bottom:-6%;width:clamp(460px,54vw,780px);opacity:.55", cls="art plx", speed=30, rotate="-10deg", origin="4% 55%")}
-    {sil(depth, "sil-leaf-cocoa", "left:8%;top:10%;width:clamp(150px,15vw,220px);opacity:.95", cls="art plx hide-phone", speed=-20, rotate="-24deg", origin="50% 95%")}
-    {sil(depth, "sil-beans", "right:2%;bottom:1%;width:clamp(150px,14vw,230px);opacity:.9", cls="art plx hide-phone", speed=50, rotate="12deg", origin="50% 90%")}
+    {sil(depth, "sil-leaf-banana", "left:-16%;bottom:-6%;width:clamp(460px,54vw,max(780px,41.1rem));opacity:.55", cls="art plx", speed=30, rotate="-10deg", origin="4% 55%")}
+    {sil(depth, "sil-leaf-cocoa", "left:8%;top:10%;width:clamp(150px,15vw,max(220px,11.6rem));opacity:.95", cls="art plx hide-phone", speed=-20, rotate="-24deg", origin="50% 95%")}
+    {sil(depth, "sil-beans", "right:2%;bottom:1%;width:clamp(150px,14vw,max(230px,12.1rem));opacity:.9", cls="art plx hide-phone", speed=50, rotate="12deg", origin="50% 90%")}
   </div>
   <div class="wrap">
     <p class="tagline">{esc(ui['est'])}</p>
@@ -1669,8 +1675,8 @@ def build_home(L):
         for i, pos in enumerate(step_pos))
     journey = f"""<section class="band gold journey">
   <div class="clip">
-    {sil(depth, "sil-leaf-banana", "right:-12%;top:-2%;width:clamp(440px,56vw,820px);opacity:.42", cls="art plx", speed=35, rotate="14deg", origin="96% 50%")}
-    {sil(depth, "sil-vine-vanilla", "left:-4%;bottom:-4%;width:clamp(300px,34vw,520px);opacity:.55", cls="art plx", speed=-15, origin="0% 50%")}
+    {sil(depth, "sil-leaf-banana", "right:-12%;top:-2%;width:clamp(440px,56vw,max(820px,43.2rem));opacity:.42", cls="art plx", speed=35, rotate="14deg", origin="96% 50%")}
+    {sil(depth, "sil-vine-vanilla", "left:-4%;bottom:-4%;width:clamp(300px,34vw,max(520px,27.4rem));opacity:.55", cls="art plx", speed=-15, origin="0% 50%")}
   </div>
   <div class="wrap">
     {cutout_html(assets, "vanilla", ui['alt_vanilla'], cls="bridge-up plx rv", width=806, height=1200, speed=28)}
@@ -1711,13 +1717,15 @@ def build_home(L):
 </section>"""
 
     # 5 · why: three columns, vines with leaves, cocoa silhouette, banana-leaf cut-out
+    why_cols = ui.get("why_cols") or (1, 2, 3)
+    why_html = "\n      ".join(
+        f"""<div class="rv"><h3>{esc(ui[f'why_{n}_h'])}</h3><p class="body bullet">{esc(ui[f'why_{n}_p'])}</p></div>"""
+        for n in why_cols)
     why = f"""<section class="band gold why">
   <div class="wrap">
     <h2 class="sec rv" style="max-width:16ch">{esc(ui['sec_why'])}</h2>
-    <div class="cols3">
-      <div class="rv"><h3>{esc(ui['why_1_h'])}</h3><p class="body bullet">{esc(ui['why_1_p'])}</p></div>
-      <div class="rv"><h3>{esc(ui['why_2_h'])}</h3><p class="body bullet">{esc(ui['why_2_p'])}</p></div>
-      <div class="rv"><h3>{esc(ui['why_3_h'])}</h3><p class="body bullet">{esc(ui['why_3_p'])}</p></div>
+    <div class="cols3{' cols-2' if len(why_cols) == 2 else ''}">
+      {why_html}
     </div>
     <p class="actions start rv"><a class="btn white" href="{pages}{path_of(lg, 'velkoobchod')}"><span>{esc(ui['nav_b2b'])}</span>{ARROW}</a><a class="btn outline" href="{pages}{path_of(lg, 'kde_nas_najdete')}">{esc(ui['nav_delivery'])}</a></p>
   </div>
@@ -1725,13 +1733,13 @@ def build_home(L):
     <path class="stroke" stroke-width="6" data-vine data-leaves="4" data-leaf="sil-leaf-single" data-leaf-size="170" data-leaf-ratio="0.65" data-sprite="{sprite}" d="M-20,180 C200,50 380,310 600,170 S980,30 1200,180 S1500,290 1640,140"/>
     <path class="stroke" stroke-width="4" opacity=".8" data-vine data-leaves="3" data-leaf="sil-leaf-single" data-leaf-size="130" data-leaf-ratio="0.65" data-sprite="{sprite}" d="M-20,250 C240,140 420,330 700,230 S1050,120 1300,240 S1520,320 1640,210"/>
   </svg>
-  {sil(depth, "sil-cocoa", "left:50%;bottom:-8%;width:clamp(300px,28vw,420px);transform:translateX(-50%)", cls="art plx", speed=18, origin="60% 5%")}
-  {sil(depth, "sil-sugarcane-leaves", "left:2%;bottom:0;width:clamp(240px,26vw,380px);opacity:.75", cls="art plx", speed=26, origin="50% 100%")}
+  {sil(depth, "sil-cocoa", "left:50%;bottom:-8%;width:clamp(300px,28vw,max(420px,22.1rem));transform:translateX(-50%)", cls="art plx", speed=18, origin="60% 5%")}
+  {sil(depth, "sil-sugarcane-leaves", "left:2%;bottom:0;width:clamp(240px,26vw,max(380px,20.0rem));opacity:.75", cls="art plx", speed=26, origin="50% 100%")}
   {cutout_html(assets, "leaf-banana", ui['alt_leaf_banana'], cls="why-leaf plx rv", width=1200, height=740, speed=30)}
 </section>"""
 
     # 6 · white: delivery + reviews, then the newsletter
-    deliver_items = "".join(f"<li>{esc(ui[k])}</li>" for k in ("deliver_1", "deliver_2", "deliver_3"))
+    deliver_items = "".join(f"<li>{esc(ui[k])}</li>" for k in ("deliver_1", "deliver_2", "deliver_3") if ui.get(k))
     white = f"""<section class="band split tight" id="doprava">
   <div class="wrap">
     <div class="rv">
@@ -1894,7 +1902,7 @@ def build_product(L, key):
 <div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{' · '.join(f'<span>{esc(x)}</span>' for x in pr['price'].split(' · '))}</strong>
 <span class="price-sub">{esc(ui['price_pickup_badge'])}{(' · ' + esc(pr['per_unit'])) if pr.get('per_unit') else ''}</span></dd>
 <dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · {esc(ui['open_hours_short'])}</dd></dl>
-{price_note_html(L)}</div>
+{price_note_html(L, pr.get("price_note"))}</div>
 {cta_html(L, depth, ("cta_order", "kde_nas_najdete", "cta_pickup"))}
 </div>
 </div>
@@ -2182,6 +2190,9 @@ def build_aeo_page(L, key):
     extra_ld = [breadcrumb_jsonld(L, crumbs)]
     if faqs:
         extra_ld.append(faq_jsonld(faqs))
+    # A page without a form still needs a way to act.
+    has_form = any(kind in ("form", "form_b2b") for kind, _val in pack["body"])
+    closing_cta = "" if has_form else cta_html(L, depth, ("cta_call", "kontakt", "cta_write"))
     active = "velkoobchod" if is_b2b else "kde_nas_najdete"
     meta_kind = "velkoobchod" if is_b2b else "kde_nas_najdete"
     body = f"""<main id="main" class="wrap"><article class="page">
@@ -2190,6 +2201,7 @@ def build_aeo_page(L, key):
 <p class="sub">{esc(pack['sub'])}</p>
 {render_body(L, pack['body'], depth)}
 {faq_html(faqs, L['ui'].get('sec_faq', 'FAQ'))}
+{closing_cta}
 </article></main>"""
     html_out = shell(
         L, title=pack["title"], desc=pack["desc"], pid=key, depth=depth,
@@ -2656,7 +2668,6 @@ def _llms_index(langs_data, lang):
         f"- [{ui['nav_about']}]({url_of(lang, 'kdo_jsme')}): {L['pages']['kdo_jsme']['desc']}",
         f"- [{ui['nav_delivery']}]({url_of(lang, 'kde_nas_najdete')}): {L['pages']['kde_nas_najdete']['desc']}",
         f"- [{ui['nav_b2b']}]({url_of(lang, 'velkoobchod')}): {L['pages']['velkoobchod']['desc']}",
-        f"- [{ui['nav_d2c']}]({url_of(lang, 'do_eu')}): {L['pages']['do_eu']['desc']}",
         f"- [{ui['nav_prices']}]({url_of(lang, 'ceny')}): {L['pages']['ceny']['desc']}",
         f"- [{ui['nav_faq']}]({url_of(lang, 'faq')}): {L['faq_page']['desc']}",
         f"- [{ui['nav_contact']}]({url_of(lang, 'kontakt')}): {L['pages']['kontakt']['desc']}",
@@ -2733,11 +2744,8 @@ def build_llms(langs_data):
         "hours: pondělí–neděle 08:00–19:00 po telefonické domluvě",
         "order: telefon nebo formulář na webu; bez e-shopu",
         "pickup_free: Kochánov 40, 582 53; Humpolec u Pivovaru Bernard po dohodě",
-        "delivery_free_vysocina: nad 5000 Kč",
-        "delivery_free_humpolec_hb: nad 1000 Kč (Humpolec, Havlíčkův Brod)",
-        "delivery_free_jihlava: nad 3000 Kč (Jihlava)",
-        "eu_shipping: DE/AT/SK/PL a Češi v EU — dopravu, balení a pojištění platí zákazník",
-        "b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; cena podle množství; bez jmen zákazníků",
+        "delivery: Humpolec, Havlíčkův Brod",
+        "b2b: restaurace, pekárny, kavárny, školy, výrobci zmrzliny; bez jmen zákazníků",
         "newsletter: přihláška na webu; nové recepty občas a sezónní tipy před Vánoci a Velikonocemi",
         "price_story: vlastní dílna, jednoduché obaly, prodej přímo z dílny bez překupníků; ceny za kilo",
         "local_share: cca 90 % zakázek kolem Kochánova 40, 582 53",
@@ -2758,7 +2766,7 @@ def build_llms(langs_data):
         "PSČ je 582 53. Nikoli 582 91 (jiný Kochánov u Světlé).",
         "",
         "## Čím se lišíme",
-        "Pšeničná mouka z mlýna v Havlíčkově Brodě (12 km), který vlastní a vede naše širší rodina. Těsto se zadělává jen vodou; vejce, mléko nebo strouhanou bramboru přidá kuchař podle zvyku. Prodáváme přímo z dílny, po kilech.",
+        "Mouka z mlýna v Havlíčkově Brodě (12 km). Těsto se zadělává vodou podle návodu. Prodáváme přímo z dílny, po kilech.",
         "",
         "## Výrobky",
     ]
@@ -2889,7 +2897,7 @@ def build_llms(langs_data):
             "Sell Dutch-process cocoa (500 g)",
             "Sell vanilla sugar (1 kg)",
             "Free pick-up at Kochánov 40, 582 53 and in Humpolec near Pivovar Bernard by arrangement",
-            "Free Vysočina delivery from 5000 CZK; free to Humpolec and Havlíčkův Brod from 1000 CZK; free to Jihlava from 3000 CZK",
+            "Delivery to Humpolec and Havlíčkův Brod",
             "Take orders by phone or email",
         ],
         "updated": TODAY,

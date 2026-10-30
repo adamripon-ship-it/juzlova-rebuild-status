@@ -3,7 +3,7 @@
 # Bebe-Schnitten mit Schokoladenpudding — ohne Backen
 
 - **URL:** `/de/keksschnitten-mit-schokopudding/`
-- **Meta description:** Bebe-Schnitten ohne Backen mit Schokoladenpudding nach Lucie Kůželová: Kekse, Puddingcreme und Schlagsahne. Ganz ohne Ofen. Rezepte aus unseren Mischungen.
+- **Meta description:** Bebe-Schnitten ohne Backen mit Schokoladenpudding nach Lucie Kůželová: helle und dunkle Kekse, Puddingcreme, Sahne und Kakao zum Bestäuben.
 
 ---
 
@@ -27,7 +27,7 @@ Verwendete Mischung
 - 2 Becher saure Sahne
 - 1 Becher Schlagsahne
 - 40 g Vanillinzucker
-- 150 g unser Vanillepuddingpulver und 2 EL Kakaopulver holländischer Art
+- 150 g unseres Vanillepuddingpulvers und 2 EL Kakaopulver holländischer Art
 - 1 Liter Milch
 - Kakao holländischer Art zum Bestäuben
 
@@ -37,19 +37,19 @@ Verwendete Mischung
 - Kochen Sie den Schokoladenpudding nach Packungsanleitung und gießen Sie ihn gleichmäßig über die Kekse.
 - Legen Sie die dunklen Bebe-Kekse auf die Puddingschicht.
 - Schlagen Sie die Sahne mit dem Vanillinzucker steif, heben Sie die saure Sahne unter und streichen Sie die Creme auf die Kekse.
-- Bestäuben Sie die Schnitten mit dunklem Kakao und lassen Sie sie im Kühlschrank durchziehen, am besten über Nacht.
+- Bestäuben Sie die Schnitten mit Kakao und lassen Sie sie im Kühlschrank durchziehen, am besten über Nacht.
 
-Tipp: Haben Sie gerade keinen Schokoladenpudding zur Hand, nehmen Sie Vanillepudding und bestäuben Sie die Schnitten mit Zimt — das schmeckt ebenso gut.
+Tipp: Die Schnitten gelingen auch mit Vanillepudding und Zimt zum Bestäuben.
 
 ### Häufige Fragen
 
-*summary:* Backt man die Bebe-Schnitten mit Schokopudding?
+*summary:* Werden die Bebe-Schnitten gebacken?
 
-Nein. Sie werden nicht gebacken: helle Kekse, gekochter Pudding, dunkle Kekse, Sahne mit Sauerrahm, darüber Kakao. Am besten über Nacht kühlen.
+Nein. Sie werden nur geschichtet: helle Kekse, gekochter Pudding, dunkle Kekse, Sahne mit Sauerrahm, darüber Kakao. Am besten über Nacht kühlen.
 
 *summary:* Geht Vanillepudding statt Schokolade?
 
-Ja. Die Schnitte schmeckt auch mit unserem Vanillepudding und Zimt.
+Ja. Die Schnitten gelingen auch mit unserem Vanillepudding und Zimt zum Bestäuben.
 
 Vorschläge zu diesem Rezept
 
@@ -59,7 +59,7 @@ Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebac
 
 - Sahneroulade Ein leichtes Dessert in einer halben Stunde: der Kontrast von herbem Kakao und zart gesüßter Schlagsahne. Ohne Mehl, also auch ohne Gluten. Mehr
 - Irischer Sticky-Toffee-Pudding Feuchter Dattelpudding mit Kakao holländischer Art und Baileys, dazu salzige Toffeesauce. 6 Portionen. Mehr
-- Birnenkuchen mit Vanillepudding Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren. Mehr
-- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen. Mehr
+- Birnenkuchen mit Vanillepudding Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder. Mehr
+- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art. Mehr
 - Mohnnudeln (šišky s mákem) Ein traditionelles süßes Abendessen aus Kartoffelteig: Mohnnudeln, in Mohn und Zucker gewälzt und mit zerlassener Butter übergossen. Mehr
 - Strapačky mit Kraut und Speck Ein slowakischer Klassiker aus unserer rohen Kartoffelknödel-Mischung — Halušky mit Sauerkraut und knusprig ausgebratenem Speck. Mehr

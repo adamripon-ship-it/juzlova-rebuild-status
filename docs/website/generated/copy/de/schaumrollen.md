@@ -22,7 +22,7 @@ Dieses Rezept bewerten
 - Teig: 350 g Mehl
 - 250 g kalte Butter (oder Backmargarine), gerieben oder gewürfelt
 - 125 ml Schlagsahne
-- optional, damit der Teig blättriger wird: 25 g der Sahne durch saure Sahne ersetzen
+- optional, damit der Teig mürber wird: 25 g der Sahne durch saure Sahne ersetzen
 - Italienisches Baiser: 80 g Eiweiß (etwa 2 Eier)
 - 160 g Zucker
 - 40 ml Wasser
@@ -44,11 +44,11 @@ Die Formen können Sie aus Alufolie improvisieren, wenn Sie keine Metallröhrche
 
 *summary:* Wie viele Schaumrollen ergibt das Rezept und was brauche ich?
 
-Etwa 35–40 Stück. Butterteig mit italienischer Meringue. Sie brauchen Metallhülsen; notfalls geht Alufolie.
+Etwa 35–40 Stück. Butterteig mit italienischem Baiser. Sie brauchen Metallformen; notfalls geht Alufolie.
 
-*summary:* Bei welcher Temperatur backt man Kremrole?
+*summary:* Bei welcher Temperatur backt man Schaumrollen?
 
-12–15 Minuten bei 180–200 °C goldbraun. Meringue: Zuckersirup auf 115–120 °C kochen und in den steifen Eischnee gießen.
+12–15 Minuten bei 180–200 °C goldbraun. Baiser: Zuckersirup auf 115–120 °C kochen und in den steifen Eischnee gießen.
 
 Vorschläge zu diesem Rezept
 

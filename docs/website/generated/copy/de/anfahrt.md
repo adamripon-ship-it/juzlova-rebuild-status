@@ -3,7 +3,7 @@
 # Anfahrt — Kochánov 40 und Humpolec, Vysočina | Jůzlová
 
 - **URL:** `/de/anfahrt/`
-- **Meta description:** Werkstatt Kochánov 40, 12 km von Havlíčkův Brod. Abholung dort oder in Humpolec nach Absprache. Gratis-Lieferung in der Vysočina ab Mindestbestellwert.
+- **Meta description:** Werkstatt Kochánov 40, 12 km von Havlíčkův Brod. Abholung dort oder in Humpolec nach Absprache. Nach Humpolec und Havlíčkův Brod liefern wir.
 
 ---
 
@@ -29,10 +29,7 @@ Ein zweiter Abholort liegt in Humpolec nahe der Brauerei Bernard, ebenfalls kost
 
 ### Lieferung
 
-- Humpolec und Havlíčkův Brod: kostenlose Lieferung ab 1000 Kč
-- Jihlava: kostenlos ab 3000 Kč
-- Übrige Vysočina: kostenlos ab 5000 Kč
-- Auf Anfrage schicken wir auch ein Paket (Tschechien, Deutschland, Österreich, übrige EU); Versand, Verpackung und Versicherung zahlen Sie zusätzlich, die Summe nennen wir vorab
+- Nach Humpolec und Havlíčkův Brod liefern wir.
 
 ### Sagen Sie uns, was Sie brauchen
 
@@ -60,11 +57,9 @@ Name und Telefon oder E-Mail genügen. Wir melden uns und vereinbaren einen Term
 
 *label:* Abholung in der Werkstatt, Kochánov 40, 582 53
 
-*label:* Abholung in Humpolec nahe der Brauerei Bernard (kostenlos, Tag und Uhrzeit nach Absprache)
+*label:* Lieferung nach Havlíčkův Brod oder Humpolec (kostenlos, Tag und Uhrzeit nach Absprache)
 
-*label:* Lieferung in der Vysočina oder Paket auf Anfrage
-
-*label:* Nachricht (was, wie viel, wohin)
+*label:* Nachricht (was, wie viel, wo Sie sind)
 
 *button:* Absenden und Termin vereinbaren
 
@@ -77,7 +72,3 @@ Ja. Die Werkstatt ist kein Laden mit Öffnungszeiten an der Tür. Täglich 8:00�
 *summary:* Wo hole ich in Humpolec ab?
 
 In der Nähe der Brauerei Bernard, kostenlos. Ort und Uhrzeit nennen wir telefonisch.
-
-*summary:* Kann ich einen eigenen Spediteur schicken?
-
-Ja. Außerhalb der Gratiszonen ist das oft günstiger als unsere Lieferung.

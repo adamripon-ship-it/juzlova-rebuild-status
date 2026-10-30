@@ -48,7 +48,7 @@ Mix used
 - Heat the oven to 160 °C (140 °C fan). Grease a 20 cm round ovenproof dish.
 - Beat the butter and sugar until light and fluffy.
 - Slowly mix in the golden syrup, treacle, eggs and vanilla on a low speed.
-- Sift the self-raising flour and cocoa together, then fold into the mixture on low speed.
+- Sift the self-raising flour and cocoa together, then mix into the batter on a low speed.
 - Simmer the 180 ml water with the chopped dates for a few minutes, take off the heat, then stir in the Baileys and the bicarbonate of soda — it will foam up.
 - Fold the hot date and Baileys mixture into the batter, pour into the prepared dish and bake for 45–50 minutes, until firm and slightly springy. Test with a skewer, looking for a few moist crumbs, rather than judging by colour: the batter is dark.
 - For the sauce: melt the butter, sugar and golden syrup until the sugar dissolves. Add the cream, vanilla and salt, and simmer for 3 minutes until thickened. For extra Irish flavour, stir 1–2 tablespoons of Baileys into the finished sauce off the heat (optional; the alcohol won’t cook off once the pan is off the heat).
@@ -64,19 +64,19 @@ The water is 100 ml less than in the original recipe (180 ml instead of 280 ml),
 
 Yes. 60 g Dutch-process cocoa and 100 ml Baileys in the date batter, 6 portions, 45–50 minutes at 160 °C, salted toffee sauce.
 
-*summary:* Why add Baileys after boiling the dates?
+*summary:* Why add the Baileys after simmering the dates?
 
-Off the heat, because longer boiling would drive off the alcohol and mute the liqueur. The water is 180 ml, 100 ml less than in the original recipe, matching the volume of Baileys.
+It goes in off the heat, because longer boiling would drive off the alcohol and mute the liqueur. The water is 180 ml, 100 ml less than in the original recipe, matching the volume of Baileys.
 
 Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
-- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone. More
+- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? Anyone can make these no-bake biscuit slices. More
 - Whipped cream roulade A light dessert in half an hour: slightly bitter cocoa against gently sweet whipped cream. No flour, so no gluten either. More
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Homemade gingerbread (perník) Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Homemade gingerbread (perník) Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa. More
 - Poppy-seed rolls (šišky s mákem) A traditional sweet supper from potato dough: rolls coated in poppy seeds and sugar, drizzled with melted butter. More
-- Strapačky with cabbage and bacon A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon. More
+- Strapačky with sauerkraut and bacon A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon. More

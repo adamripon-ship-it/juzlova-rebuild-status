@@ -6,27 +6,27 @@ Every file in `img/`, with its size and the pages that show it. Where each image
 
 | Preview | File | Size | Used on |
 |---|---|---|---|
-| <img src="../../../img/apple-touch-icon.png" width="120"> | `apple-touch-icon.png` | 6 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +119 more |
+| <img src="../../../img/apple-touch-icon.png" width="120"> | `apple-touch-icon.png` | 6 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +112 more |
 | <img src="../../../img/baleni-kakao_holandskeho_typu.webp" width="120"> | `baleni-kakao_holandskeho_typu.webp` | 189 kB | `/de/kakaopulver-hollaendischer-art/`, `/en/dutch-process-cocoa-powder/`, `/kakao-holandskeho-typu/`, `/sk/kakao-holandskeho-typu/` |
 | <img src="../../../img/baleni-vanilkovy_pudink.webp" width="120"> | `baleni-vanilkovy_pudink.webp` | 194 kB | `/de/glutenfreies-vanillepuddingpulver/`, `/en/gluten-free-vanilla-pudding-powder/`, `/sk/vanilkovy-puding-bez-lepku/`, `/vanilkovy-puding-bez-lepku/` |
 | <img src="../../../img/bebe-rezy.gif" width="120"> | `bebe-rezy.gif` | 41 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/bebe-rezy.webp" width="120"> | `bebe-rezy.webp` | 145 kB | `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/de/birnenkuchen-mit-vanillepudding/`, `/de/keksschnitten-mit-schokopudding/`, `/de/mohnnudeln-aus-kartoffelteig/` +32 more |
 | <img src="../../../img/bramborove-knedliky.png" width="120"> | `bramborove-knedliky.png` | 61 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/bramborovo-tvarohove-knedliky.webp" width="120"> | `bramborovo-tvarohove-knedliky.webp` | 130 kB | `/de/mohnnudeln-aus-kartoffelteig/`, `/de/rezepte/`, `/de/strapacky-mit-kraut-und-speck/`, `/de/topfenknoedel-mit-erdbeeren/` +12 more |
-| <img src="../../../img/dilna-panorama.webp" width="120"> | `dilna-panorama.webp` | 101 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +119 more |
+| <img src="../../../img/dilna-panorama.webp" width="120"> | `dilna-panorama.webp` | 101 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +112 more |
 | <img src="../../../img/domaci-pernik.webp" width="120"> | `domaci-pernik.webp` | 83 kB | `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/de/birnenkuchen-mit-vanillepudding/`, `/de/brandteigkraenze-mit-vanillecreme/`, `/de/karamell-windbeutel/` +48 more |
-|  | `favicon.ico` | 3 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +119 more |
+|  | `favicon.ico` | 3 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +112 more |
 | <img src="../../../img/film-blizko.webp" width="120"> | `film-blizko.webp` | 198 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/film-krajina.webp" width="120"> | `film-krajina.webp` | 423 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/film-makro.webp" width="120"> | `film-makro.webp` | 89 kB | not referenced by the current site (source, original or spare size) |
-| <img src="../../../img/hero.webp" width="120"> | `hero.webp` | 222 kB | `/`, `/caste-dotazy/`, `/cenik/`, `/de/` +43 more |
+| <img src="../../../img/hero.webp" width="120"> | `hero.webp` | 222 kB | `/`, `/caste-dotazy/`, `/cenik/`, `/de/` +36 more |
 | <img src="../../../img/hruskovy-kolac-640.webp" width="120"> | `hruskovy-kolac-640.webp` | 28 kB | `/`, `/de/`, `/en/`, `/sk/` |
 | <img src="../../../img/hruskovy-kolac.webp" width="120"> | `hruskovy-kolac.webp` | 79 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/de/`, `/de/birnenkuchen-mit-vanillepudding/` +52 more |
-| <img src="../../../img/icon-192.png" width="120"> | `icon-192.png` | 9 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +120 more |
-| <img src="../../../img/icon-32.png" width="120"> | `icon-32.png` | 1 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +119 more |
-| <img src="../../../img/icon-512.png" width="120"> | `icon-512.png` | 27 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +120 more |
+| <img src="../../../img/icon-192.png" width="120"> | `icon-192.png` | 9 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +113 more |
+| <img src="../../../img/icon-32.png" width="120"> | `icon-32.png` | 1 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +112 more |
+| <img src="../../../img/icon-512.png" width="120"> | `icon-512.png` | 27 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +113 more |
 | <img src="../../../img/icon-white-192.png" width="120"> | `icon-white-192.png` | 9 kB | not referenced by the current site (source, original or spare size) |
-| <img src="../../../img/icon-white-32.png" width="120"> | `icon-white-32.png` | 1 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +119 more |
+| <img src="../../../img/icon-white-32.png" width="120"> | `icon-white-32.png` | 1 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +112 more |
 | <img src="../../../img/icon-white-512.png" width="120"> | `icon-white-512.png` | 26 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/irsky-sticky-toffee-pudding.webp" width="120"> | `irsky-sticky-toffee-pudding.webp` | 76 kB | `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/de/keksschnitten-mit-schokopudding/`, `/de/rezepte/`, `/de/sahnerolle/` +12 more |
 | <img src="../../../img/kakao.jpg" width="120"> | `kakao.jpg` | 44 kB | not referenced by the current site (source, original or spare size) |
@@ -38,7 +38,7 @@ Every file in `img/`, with its size and the pages that show it. Where each image
 | <img src="../../../img/kochanov-letecky.webp" width="120"> | `kochanov-letecky.webp` | 280 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/kochanov.png" width="120"> | `kochanov.png` | 50 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/kremrole.webp" width="120"> | `kremrole.webp` | 112 kB | `/de/rezepte/`, `/de/schaumrollen/`, `/de/schnelle-brandteigkraenze/`, `/en/cream-horns/` +8 more |
-| <img src="../../../img/logo-wordmark-black.png" width="120"> | `logo-wordmark-black.png` | 21 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +119 more |
+| <img src="../../../img/logo-wordmark-black.png" width="120"> | `logo-wordmark-black.png` | 21 kB | `/`, `/bebe-rezy-s-cokoladovym-pudinkem-recept/`, `/bramborove-knedliky-v-prasku/`, `/caste-dotazy/` +112 more |
 | <img src="../../../img/logo-wordmark-white.png" width="120"> | `logo-wordmark-white.png` | 25 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/logo.png" width="120"> | `logo.png` | 2 kB | not referenced by the current site (source, original or spare size) |
 | <img src="../../../img/mark-white.png" width="120"> | `mark-white.png` | 33 kB | not referenced by the current site (source, original or spare size) |

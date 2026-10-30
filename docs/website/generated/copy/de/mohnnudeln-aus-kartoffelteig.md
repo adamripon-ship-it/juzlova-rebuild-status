@@ -32,18 +32,18 @@ Verwendete Mischung
 
 - Rühren Sie die Kartoffelknödel-Mischung nach Anleitung mit Wasser an und formen Sie aus dem Teig kleine Nudeln.
 - Backen Sie sie auf einem gefetteten Blech in der Mitte des auf 200 °C vorgeheizten Ofens. Wenden Sie die Nudeln einmal, damit sie von beiden Seiten goldgelb werden.
-- Geben Sie die Nudeln nach dem Backen in kochendes Wasser und brühen Sie sie 5 Minuten.
+- Geben Sie die Nudeln nach dem Backen in kochendes Wasser und lassen Sie sie 5 Minuten ziehen.
 - Geben Sie sie in eine große Schüssel, bestreuen Sie sie mit Mohn und Zucker und übergießen Sie sie mit der Butter. Alles vermengen und noch warm servieren.
 
 ### Häufige Fragen
 
-*summary:* Wie macht man Mohnnockerl aus unserer Knödelmischung?
+*summary:* Wie macht man Mohnnudeln aus unserer Knödelmischung?
 
-Kartoffelknödelpulver nach Packungsanleitung mit Wasser mischen, Nockerl formen, bei 200 °C beidseitig goldbraun backen, 5 Minuten in kochendem Wasser blanchieren und in Mohn, Zucker und Butter wenden.
+Kartoffelknödel-Mischung nach Anleitung mit Wasser anrühren, Nudeln formen, bei 200 °C beidseitig goldbraun backen, 5 Minuten in kochendem Wasser ziehen lassen und in Mohn, Zucker und Butter wenden.
 
-*summary:* Bei welcher Temperatur backt man Šišky s mákem?
+*summary:* Bei welcher Temperatur backt man die Mohnnudeln?
 
-Bei 200 °C auf der mittleren Schiene, auf gefettetem Blech, einmal wenden.
+Bei 200 °C auf mittlerer Schiene und gefettetem Blech; einmal wenden.
 
 Vorschläge zu diesem Rezept
 
@@ -51,9 +51,9 @@ Vorschläge zu diesem Rezept
 
 Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebacken.
 
-- Kartoffel-Quark-Knödel mit Erdbeeren Der Sommer ist da, und mit ihm reifen die Erdbeeren. Ein einfaches, schnelles Rezept, mit dem Sie in 20 Minuten auch die größten Naschkatzen verwöhnen. Mehr
+- Kartoffel-Quark-Knödel mit Erdbeeren Schnelle Fruchtknödel für die Erdbeerzeit: Kartoffelteig mit Quark, fertig in 20 Minuten. Mehr
 - Strapačky mit Kraut und Speck Ein slowakischer Klassiker aus unserer rohen Kartoffelknödel-Mischung — Halušky mit Sauerkraut und knusprig ausgebratenem Speck. Mehr
-- Birnenkuchen mit Vanillepudding Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren. Mehr
+- Birnenkuchen mit Vanillepudding Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder. Mehr
 - Bebe-Schnitten mit Schokoladenpudding Sie möchten Gäste bewirten, sind aber kein Jamie Oliver? Diese Bebe-Schnitten ohne Backen gelingen wirklich jedem. Mehr
 - Sahneroulade Ein leichtes Dessert in einer halben Stunde: der Kontrast von herbem Kakao und zart gesüßter Schlagsahne. Ohne Mehl, also auch ohne Gluten. Mehr
-- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen. Mehr
+- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art. Mehr
