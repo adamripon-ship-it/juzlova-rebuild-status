@@ -38,6 +38,9 @@ How to use it:
       put its `G-…` ID in the Cloud Run setting
       `GOOGLE_ANALYTICS_MEASUREMENT_ID`. See
       [`docs/GA4-AEO.md`](docs/GA4-AEO.md).
+- [ ] **Check contact-form e-mail after the 2026-10-30 changes.** Send one
+      enquiry with the new delivery option and confirm it reaches the client
+      (2026-10-30, Adam).
 
 ## 🛠️ Development work (an AI agent or developer can do these)
 
@@ -63,10 +66,6 @@ How to use it:
 
       Then close #28 with a comment linking the new PR.
 
-- [ ] **Owner review of the PDF content corrections** (2026-10-30, Adam).
-      Branch `content-corrections-owner-pdf`. Conflicting claims are settled in all
-      four languages. Owner to confirm: Humpolec pick-up, and the en/de/sk wording.
-
 ## 💡 Ideas, not scheduled
 
 - [ ] Anything new for the site (copy, recipes, photos, design): add it here
@@ -76,6 +75,11 @@ How to use it:
 
 ## ✅ Done
 
+- [x] 2026-10-30: owner's PDF content corrections, posting removal, translation
+      review and responsive fixes
+      ([#48](https://github.com/adamripon-ship-it/juzlova-rebuild-status/pull/48)).
+      Humpolec pick-up stays. The en/de/sk wording has had an AI review, not a
+      native one.
 - [x] 2026-10-29: live site checked byte-for-byte against `main`; they match.
 - [x] 2026-10-29: website handbook in `docs/website/`, with the site map, all
       page copy and the image gallery generated automatically
