@@ -1,0 +1,41 @@
+name: Temporary - apply PDF corrections
+
+# One-off for branch content-corrections-owner-pdf. Delete after it has run.
+on:
+  push:
+    branches: [content-corrections-owner-pdf]
+    paths: ['.tmp-apply/**']
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply edits
+        run: |
+          python .tmp-apply/apply_pre.py
+          python .tmp-apply/settle_conflicts.py
+          python .tmp-apply/apply_post.py
+      - name: Rebuild
+        env:
+          SITE_BASE: https://www.juzlova.cz
+        run: |
+          python scripts/build_site.py
+          python scripts/export_docs.py
+          python scripts/verify_refs.py
+      - name: Commit
+        run: |
+          git checkout -- data/reviews.json
+          rm -rf .tmp-apply
+          git config user.name adamripon-ship-it
+          git config user.email adam.ripon@surfstr.com
+          git add -A
+          git commit -m "Apply owner's content corrections and settle conflicting claims" -m "PDF change IDs H01-H02, F01-F02, P01-P10, C01-C03, N01, K01-K02 and W01-W02, with the same facts carried into en, de and sk across copy, FAQs, meta tags, JSON-LD and llms files. No routes or redirects change." -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+          git push
