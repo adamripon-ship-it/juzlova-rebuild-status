@@ -3,7 +3,7 @@
 # Knödelmischung, Pudding & Kakao für Küchen | Jůzlová
 
 - **URL:** `/de/grosshandel/`
-- **Meta description:** Mischungen für Kantinen, Gaststätten, Bäckereien und Eishersteller. Abholung in Kochánov, Lieferung nach Humpolec und Havlíčkův Brod oder Ihr Spediteur.
+- **Meta description:** Mischungen für Kantinen, Gaststätten, Bäckereien und Eishersteller. Abholung in Kochánov oder Lieferung nach Humpolec und Havlíčkův Brod.
 
 ---
 
@@ -27,9 +27,9 @@ Kartoffelteig nur mit Wasser: Dreißig Kilo Kartoffeln müssen weder geschält n
 
 Zutatenlisten und Etiketten schicken wir per E-Mail für Ihre Unterlagen.
 
-#### Drei Wege
+#### Zwei Bezugswege
 
-Abholung in Kochánov, Lieferung nach Humpolec und Havlíčkův Brod oder Ihr Spediteur.
+Abholung in Kochánov oder Lieferung nach Humpolec und Havlíčkův Brod.
 
 #### Unterlagen zum Kakao
 
@@ -40,14 +40,13 @@ Laborzertifikat zu Ihrer Kakao-Charge auf Anfrage. Frei von den 14 EU-Allergenen
 - Kantinen und Gaststätten — Knödelmischung und Pudding für die Ausgabe
 - Bäckereien und Konditoreien — Pudding, Vanillinzucker, Kakao
 - Cafés — Kakao und Pudding
-- Schulen — Mischungen für Kinderessen
+- Schulen — Mischungen für Kindergerichte
 - Eishersteller — Kakao nach holländischer Art, der im Frost seine Farbe behält
 
 ### So bekommen Sie die Ware
 
 - Abholung in der Werkstatt in Kochánov
 - Lieferung nach Humpolec und Havlíčkův Brod
-- Ihr eigener Spediteur
 
 ### Anfrage für Ihre Küche
 
@@ -59,7 +58,7 @@ Dieses Formular ist für Betriebe. Haushalte bestellen über die Seite „Kontak
 
 *label:* E-Mail
 
-*label:* Thema der AnfrageThema wählenAllgemeine GroßhandelsanfragePragBrünnVysočinaAusländischer GroßhandelRestaurant oder KantineBäckerei oder KonditoreiSchulkücheSpeiseeisproduktionSonstiges
+*label:* Thema der AnfrageThema wählenAllgemeine GroßhandelsanfrageVysočinaRestaurant oder KantineBäckerei oder KonditoreiSchulkücheSpeiseeisproduktionSonstiges
 
 *label:* Menge (Packungen oder kg)
 
@@ -81,15 +80,11 @@ Dieses Formular ist für Betriebe. Haushalte bestellen über die Seite „Kontak
 
 *label:* Lieferung nach Havlíčkův Brod oder Humpolec (kostenlos, Tag und Uhrzeit nach Absprache)
 
-*label:* Nachricht (was, wie viel, wohin)
+*label:* Nachricht (was, wie viel, wo Sie sind)
 
 *button:* Absenden und Termin vereinbaren
 
 ### Häufige Fragen
-
-*summary:* Kann ich einen eigenen Kurier schicken?
-
-Ja. Das ist oft günstiger als unsere Lieferung außerhalb der Gratiszonen.
 
 *summary:* Eignet sich der Kakao für Eishersteller?
 

@@ -11,13 +11,13 @@ Home › Where to find us
 
 ## Where to find us: collect at the workshop in Kochánov or in Humpolec
 
-Phone first, then drive. The workshop is not a shop with opening hours on the door.
+Call first, then drive over. The workshop is not a shop with opening hours on the door.
 
 Call Jiřina Write to us
 
 ### The workshop in Kochánov
 
-Kochánov 40, 582 53, Vysočina Region, Czechia. Pick-up is free, daily 8:00–19:00 by phone arrangement, weekends included. Check the postcode: 582 91 is a different Kochánov.
+Kochánov 40, 582 53, Vysočina Region, Czechia. Pick-up is free, daily 8:00–19:00 by arrangement over the phone, weekends included. Check the postcode: 582 91 is a different Kochánov.
 
 Kochánov 40, 582 53 — not 582 91, which is a different Kochánov
 

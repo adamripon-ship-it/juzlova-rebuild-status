@@ -4,11 +4,11 @@
   "faqs": [
     {
       "question": "How do I order without a web shop?",
-      "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we arrange the rest."
+      "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we’ll arrange the rest."
     },
     {
       "question": "Where can I collect for free?",
-      "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00."
+      "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always arranged by phone first, daily 8:00–19:00."
     },
     {
       "question": "Do you give samples or tastings?",
@@ -16,7 +16,7 @@
     },
     {
       "question": "Do I pay in advance or on collection?",
-      "answer": "For pick-up and delivery you pay on hand-over."
+      "answer": "You pay on collection or on delivery."
     },
     {
       "question": "Where do you deliver?",
@@ -105,11 +105,11 @@
     "en": [
       {
         "question": "How do I order without a web shop?",
-        "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we arrange the rest."
+        "answer": "Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we’ll arrange the rest."
       },
       {
         "question": "Where can I collect for free?",
-        "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00."
+        "answer": "At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always arranged by phone first, daily 8:00–19:00."
       },
       {
         "question": "Do you give samples or tastings?",
@@ -117,7 +117,7 @@
       },
       {
         "question": "Do I pay in advance or on collection?",
-        "answer": "For pick-up and delivery you pay on hand-over."
+        "answer": "You pay on collection or on delivery."
       },
       {
         "question": "Where do you deliver?",
@@ -167,7 +167,7 @@
       },
       {
         "question": "Zahle ich im Voraus oder bei Übergabe?",
-        "answer": "Abholung und Lieferung: bei Übergabe."
+        "answer": "Bei Abholung und Lieferung zahlen Sie bei der Übergabe."
       },
       {
         "question": "Wohin liefern Sie?",
@@ -183,7 +183,7 @@
       },
       {
         "question": "Wie viel Fett hat Ihr Kakao?",
-        "answer": "20–22 % Kakaobutter. Nach EU-Recht braucht Kakaopulver mindestens 20 %; darunter ist es fettreduzierter Kakao. Ohne Zuckerzusatz, ohne die 14 EU-Allergene, Gluten unter 20 ppm."
+        "answer": "20–22 % Kakaobutter. Nach EU-Recht braucht Kakaopulver mindestens 20 %; darunter ist es fettarmer Kakao. Ohne Zuckerzusatz, ohne die 14 EU-Allergene, Gluten unter 20 ppm."
       },
       {
         "question": "Ist der Vanillinzucker echte Vanille?",
@@ -224,16 +224,12 @@
         "answer": "Do Humpolca a Havlíčkovho Brodu."
       },
       {
-        "question": "Môžem poslať vlastného dopravcu?",
-        "answer": "Áno. Často to vyjde lacnejšie."
-      },
-      {
         "question": "Z čoho sú knedle v prášku?",
         "answer": "Múka, sušené zemiakové vločky, sušené vajcia, soľ, prášok do pečiva, zemiakový škrob. Zamiešate s vodou podľa návodu."
       },
       {
         "question": "Je vanilkový puding naozaj bez lepku?",
-        "answer": "Áno. Základom je kukuričný škrob, ktorý lepok neobsahuje. Kakaový puding ako hotovú zmes nevedieme — čokoládový krém vznikne zamiešaním nášho kakaa."
+        "answer": "Áno. Základom je kukuričný škrob, ktorý lepok neobsahuje. Kakaový puding ako hotovú zmes nepredávame — čokoládový krém vznikne zamiešaním nášho kakaa."
       },
       {
         "question": "Koľko tuku má vaše kakao?",

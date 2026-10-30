@@ -9,7 +9,7 @@
 
 Úvod › Kontakt
 
-## Zavolejte Jiřině nebo Jiřímu — denně 8–19, domluvíme objednávku i odběr
+## Zavolejte Jiřině nebo Jiřímu — denně 8⁠–⁠19, domluvíme objednávku i odběr
 
 Včetně sobot a nedělí, vždy po předchozí domluvě.
 

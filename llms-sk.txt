@@ -26,8 +26,7 @@ Poznámky k firme: https://www.juzlova.cz/ai/about.md
 - [Úvod](https://www.juzlova.cz/sk/): Zemiakové a chlpaté knedle v prášku na halušky a strapačky, puding bez lepku a kakao z rodinnej dielne na Vysočine. Vyzdvihnutie po dohode s Jiřinou.
 - [Kto sme](https://www.juzlova.cz/sk/kto-sme/): Rodina Jůzlových mieša knedle v prášku, puding a kakao v Kochánove na Vysočine od roku 2004. Bez e-shopu.
 - [Kde nás nájdete](https://www.juzlova.cz/sk/kde-nas-najdete/): Dielňa Kochánov 40, 582 53, 12 km od Havlíčkovho Brodu. Vyzdvihnutie v dielni alebo v Humpolci zadarmo, po telefonickej dohode s Jiřinou.
-- [Pre kuchyne](https://www.juzlova.cz/sk/velkoobchod/): Zmesi pre jedálne, reštaurácie, pekárne a zmrzlinárov. Vyzdvihnutie v Kochánove, rozvoz do Humpolca a Havlíčkovho Brodu alebo váš dopravca.
-- [Bývate v zahraničí](https://www.juzlova.cz/sk/zasielky-do-eu/): Sme miestna rodinná dielňa a zákazníci si tovar vyzdvihnú v dielni. Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
+- [Pre kuchyne](https://www.juzlova.cz/sk/velkoobchod/): Zmesi pre jedálne, reštaurácie, pekárne a zmrzlinárov. Vyzdvihnutie v Kochánove alebo rozvoz do Humpolca a Havlíčkovho Brodu.
 - [Cenník](https://www.juzlova.cz/sk/cennik/): Zemiakové knedle 5 kg 250 Kč, chlpaté 260 Kč, puding bez lepku 60 Kč/kg, kakao 270 Kč/500 g, vanilínový cukor 60 Kč/kg. Ceny pri vyzdvihnutí v dielni.
 - [Časté otázky](https://www.juzlova.cz/sk/caste-otazky/): Ako objednať bez e-shopu, kde vyzdvihnúť, čo je zadarmo, či je puding bez lepku, koľko tuku má kakao a ako skladovať 5 kg vrece. Odpovede z dielne.
 - [Kontakt](https://www.juzlova.cz/sk/kontakt/): Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931. Dielňa Kochánov 40, 582 53, Vysočina. Vyzdvihnutie v dielni alebo v Humpolci po dohode.
@@ -36,19 +35,19 @@ Poznámky k firme: https://www.juzlova.cz/ai/about.md
 ## Výrobky
 - [Zemiakové knedle v prášku](https://www.juzlova.cz/sk/zemiakove-knedle-v-prasku/): Múka z mlyna v Havlíčkovom Brode. Celé zloženie nájdete nižšie. · 5 kg · 250 Kč
 - [Chlpaté knedle v prášku](https://www.juzlova.cz/sk/chlpate-knedle-v-prasku/): Podľa tradičnej receptúry z našej dielne. Zmiešate s vodou a pretlačíte cez cedník do vriacej vody — máte halušky. Alebo vytvarujete bosáky ku kapuste. · 5 kg · 260 Kč
-- [Vanilkový puding bez lepku](https://www.juzlova.cz/sk/vanilkovy-puding-bez-lepku/): Základ je kukuričný škrob, ktorý lepok neobsahuje. Varíte ho ako každý puding; do krému na veterníky, do hruškového koláča, do hrnčekového perníka. · 1 kg / 400 g · 60 Kč / 30 Kč
+- [Vanilkový puding bez lepku](https://www.juzlova.cz/sk/vanilkovy-puding-bez-lepku/): Základ je kukuričný škrob, ktorý lepok neobsahuje. Varíte ho ako každý puding; do krému na venčeky, do hruškového koláča, do hrnčekového perníka. · 1 kg / 400 g · 60 Kč / 30 Kč
 - [Kakao holandského typu](https://www.juzlova.cz/sk/kakao-holandskeho-typu/): Alkalizovaný prášok z kakaovej hmoty, bez pridaného cukru, bez 14 alergénov EÚ. Do perníka, krémov, kakaa na pitie a zmrzliny. Certifikát k šarži pošleme na požiadanie. · 500 g · 270 Kč
 - [Vanilínový cukor](https://www.juzlova.cz/sk/vanilinovy-cukor/): Nie je to vanilka zo struku — je to jemne mletý cukor s vanilínovou arómou. Hovoríme to rovno. · 1 kg · 60 Kč
 
 ## Recepty
 - [Šúľance s makom](https://www.juzlova.cz/sk/sulance-s-makom/): Tradičná sladká večera zo zemiakového cesta: šúľance obalené v maku s cukrom, preliate rozpusteným maslom.
-- [Hruškový koláč s vanilkovým pudingom](https://www.juzlova.cz/sk/hruskovy-kolac-s-vanilkovym-pudingom/): Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní.
+- [Hruškový koláč s vanilkovým pudingom](https://www.juzlova.cz/sk/hruskovy-kolac-s-vanilkovym-pudingom/): Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti.
 - [Strapačky s kapustou a slaninou](https://www.juzlova.cz/sk/strapacky-s-kapustou-a-slaninou/): Slovenská klasika z chlpatých knedieľ v prášku — halušky s kyslou kapustou a vypečenou slaninou.
 - [Bebe rezy s čokoládovým pudingom](https://www.juzlova.cz/sk/bebe-rezy-s-cokoladovym-pudingom/): Radi by ste pohostili návštevu, ale nie ste práve Jamie Oliver? Nepečené bebe rezy zvládne naozaj každý.
 - [Šľahačková roláda](https://www.juzlova.cz/sk/slahackova-rolada/): Ľahký múčnik za pol hodiny: kontrast horkastého kakaa a jemne sladkej šľahačky. Bez múky, teda aj bez lepku.
-- [Domáci perník](https://www.juzlova.cz/sk/hrncekovy-pernik/): Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom.
-- [Zemiakovo-tvarohové knedle s jahodami](https://www.juzlova.cz/sk/tvarohove-knedle-s-jahodami/): Leto je tu a s ním aj dozrievanie jahôd. Jednoduchý a rýchly recept, ktorým za 20 minút potešíte aj najväčších maškrtníkov.
-- [Rýchle venčeky či veterníčky](https://www.juzlova.cz/sk/rychle-venceky-a-veterniky/): Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechách.
+- [Domáci perník](https://www.juzlova.cz/sk/hrncekovy-pernik/): Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu.
+- [Zemiakovo-tvarohové knedle s jahodami](https://www.juzlova.cz/sk/tvarohove-knedle-s-jahodami/): Rýchle ovocné knedle na jahodovú sezónu: zemiakové cesto s tvarohom, hotové za 20 minút.
+- [Rýchle venčeky či veterníčky](https://www.juzlova.cz/sk/rychle-venceky-a-veterniky/): Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechoch.
 - [Venčeky s vanilkovým krémom](https://www.juzlova.cz/sk/venceky-s-vanilkovym-kremom/): Klasické venčeky z odpaľovaného cesta s vanilkovým maslovým krémom a rumovou polevou. Asi 20 kúskov.
 - [Kremrole](https://www.juzlova.cz/sk/kremrole/): Krehké trubičky plnené lesklým talianskym snehom. Asi 35–40 kúskov; budete potrebovať kovové trubičky na kremrole.
 - [Miniveterníčky](https://www.juzlova.cz/sk/mini-veterniky/): Malé veterníčky z odpaľovaného cesta s maslovo-pudingovým krémom s tvarohom a čokoládovou polevou. Asi 40–45 kúskov.

@@ -19,7 +19,7 @@ Naše dílna v Kochánově — pytle s moukou, váha a balicí linka.
 
 ### Jak to začalo
 
-Výrobu potravinářských směsí jsme v malé dílně v Kochánově zahájili v roce 2004. Receptury jsme léta ladili. Dnes od nás berou domácnosti v Čechách i na Moravě a k tomu jídelny, restaurace a pekárny.
+Výrobu potravinářských směsí jsme v malé dílně v Kochánově zahájili v roce 2004. Receptury jsme léta ladili. Dnes od nás berou domácnosti, jídelny, restaurace a pekárny.
 
 Lidé
 

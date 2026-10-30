@@ -30,7 +30,7 @@ Bei Jiřina bestellen Abholorte
 - Kuchen und Gebäck
 - Weihnachtsplätzchen — im Teig und zum Bestreuen
 - Schlagsahne und Cremes
-- die Keksschnitten und Mini-Windbeutel aus unseren Rezepten
+- die Bebe-Schnitten und Mini-Windbeutel aus unseren Rezepten
 
 ### Lagerung
 

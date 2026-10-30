@@ -3,7 +3,7 @@
 # Šľahačková roláda — bezlepkový recept s kakaom | Jůzlová
 
 - **URL:** `/sk/slahackova-rolada/`
-- **Meta description:** Šľahačková roláda bez múky a bez lepku: 5 vajec, práškový cukor, kakao holandského typu a šľahačka. Pečenie 8 minút na 180 °C, hotová za 30 minút.
+- **Meta description:** Šľahačková roláda bez múky a bez lepku: 5 vajec, 100 g práškového cukru, lyžica kakaa holandského typu a šľahačka. Pečenie 8 minút na 180 °C, hotová za 30 minút.
 
 ---
 
@@ -35,7 +35,7 @@ Použitá zmes
 - Pripravte si papier na pečenie zľahka vymastený masťou (poslúži aj olej), aby sa roláda po upečení dala dobre zvinúť.
 - Pečte v rúre predhriatej na 180 °C asi 8 minút; rúru počas pečenia neotvárajte.
 - Roládu nechajte na plechu vychladnúť a opatrne ju odlepte z papiera.
-- Vyšľahajte tuhú šľahačku, roládu potrite a zviňte. Zvyšnou šľahačkou ozdobte vrch a pridajte čokoládové hobliny.
+- Vyšľahajte tuhú šľahačku, roládu potrite a zviňte. Zvyšnou šľahačkou ozdobte vrch a posypte čokoládovými hoblinami.
 
 Tip: Roládu ozvláštnite obľúbeným ovocím — jahodami, malinami alebo banánom.
 
@@ -47,7 +47,7 @@ Tip: Roládu ozvláštnite obľúbeným ovocím — jahodami, malinami alebo ban
 
 *summary:* Na koľko stupňov piecť šľahačkovú roládu?
 
-8 minút na 180 °C, rúru neotvárajte. Po vychladnutí potrite šľahačkou a zrolujte.
+8 minút na 180 °C, rúru neotvárajte. Po vychladnutí potrite šľahačkou a zviňte.
 
 Návrhy k tomuto receptu
 
@@ -57,7 +57,7 @@ Návrhy k tomuto receptu
 
 - Bebe rezy s čokoládovým pudingom Radi by ste pohostili návštevu, ale nie ste práve Jamie Oliver? Nepečené bebe rezy zvládne naozaj každý. Viac
 - Írsky sticky toffee pudding Vlhký datľový zákusok s kakaom holandského typu a Baileys, preliaty slanou toffee omáčkou. 6 porcií. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac
 - Šúľance s makom Tradičná sladká večera zo zemiakového cesta: šúľance obalené v maku s cukrom, preliate rozpusteným maslom. Viac
 - Strapačky s kapustou a slaninou Slovenská klasika z chlpatých knedieľ v prášku — halušky s kyslou kapustou a vypečenou slaninou. Viac

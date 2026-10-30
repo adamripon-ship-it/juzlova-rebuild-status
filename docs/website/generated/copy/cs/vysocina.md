@@ -71,10 +71,6 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 Telefon bereme denně 8:00–19:00. Termín vyzvednutí nebo rozvozu domluvíme.
 
-*summary:* Je cena s dopravou?
-
-Ne. Ceník je jen za zboží.
-
 *summary:* Kde sídlíte na Vysočině?
 
 Kochánov 40, 582 53, 12 km od Havlíčkova Brodu.

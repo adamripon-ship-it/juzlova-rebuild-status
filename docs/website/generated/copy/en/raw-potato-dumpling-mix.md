@@ -15,7 +15,7 @@ A traditional recipe from our workshop. Mix with water, shape, boil. Push the do
 
 Price
 
-- 5 kg / 260 Kč at workshop pick-up · 52 Kč/kg · a season at home, or a week of service
+- 5 kg / 260 Kč at workshop pick-up · 52 Kč/kg · for a season at home, or for a canteen
 
 Order
 
@@ -28,7 +28,7 @@ Order from Jiřina Where to collect
 ### What it goes with
 
 - sauerkraut and smoked meat
-- fried onion and cracklings
+- fried onion and pork crackling
 - sweet, with poppy seeds and sugar
 - pushed through a colander into boiling water for halušky and strapačky
 
@@ -54,6 +54,6 @@ No. 5 kg is the only size.
 
 *summary:* Do you supply canteens?
 
-Yes. We do not name the kitchens we supply. Order by phone or through the wholesale form.
+Yes. We do not name the kitchens we supply. Order by phone or through the kitchen enquiry form.
 
 Order from Jiřina Write to us

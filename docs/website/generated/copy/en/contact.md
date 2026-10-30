@@ -9,9 +9,9 @@
 
 Home › Contact
 
-## Call or write to Jiřina or Jiří, daily 8–19. We'll arrange your order and pick-up.
+## Call Jiřina or Jiří, daily 8⁠–⁠19. We'll arrange your order and pick-up.
 
-Saturdays and Sundays included, always by prior arrangement. We reply in Czech; for German and English we sometimes use a translator.
+Saturdays and Sundays included, always by prior arrangement. We reply in Czech; for German and English we sometimes use a translation tool.
 
 Call Jiřina
 

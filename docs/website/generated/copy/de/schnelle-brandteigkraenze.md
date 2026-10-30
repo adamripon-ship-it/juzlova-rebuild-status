@@ -3,7 +3,7 @@
 # Schnelle Věnečky oder Větrníčky aus Brandteig — Rezept
 
 - **URL:** `/de/schnelle-brandteigkraenze/`
-- **Meta description:** Schnelle tschechische Brandteigkränze und Windbeutel: 250 ml Wasser, 90 g Butter, 140 g grobes Mehl, 4 Eier. 45 Min. Zubereitung, ca. 15 Min. Backzeit, etwa 80 Stück.
+- **Meta description:** Schnelle tschechische Brandteigkränze und Windbeutel: 250 ml Wasser, 90 g Butter, 140 g griffiges Mehl, 4 Eier. 45 Min. Zubereitung, ca. 15 Min. Backzeit, etwa 80 Stück.
 
 ---
 
@@ -34,8 +34,8 @@ Dieses Rezept bewerten
 - Den Ofen auf 250 °C vorheizen.
 - Die Eier nacheinander unter ständigem Rühren einarbeiten, bis der Teig glatt und leicht elastisch ist.
 - Auf gefettete Bleche spritzen: zwei übereinanderliegende Ringe für Věnečky oder kleine Häufchen für Větrníčky.
-- 5 Minuten bei 250 °C backen, dann auf 200 °C senken und goldbraun backen — etwa 5 weitere Minuten bei hoher und 5 bei mittlerer Hitze. Den Ofen während des Backens nicht öffnen.
-- Noch heiß sofort aufschneiden, dann reißen die Hüllen später nicht. Vor dem Füllen vollständig auskühlen lassen.
+- 5 Minuten bei 250 °C backen, dann auf 200 °C senken und etwa 5 weitere Minuten backen. Die letzten rund 5 Minuten bei mittlerer Temperatur goldbraun fertig backen. Den Ofen während des Backens nicht öffnen.
+- Noch heiß sofort aufschneiden, dann reißen die Schalen später nicht. Vor dem Füllen vollständig auskühlen lassen.
 
 Die Füllung ist Ihnen überlassen; gezuckerte Schlagsahne ist am einfachsten. Zu den Kränzen passen Vanillebuttercreme und Rumguss aus dem Věnečky-Rezept, zu den Windbeuteln Vanillepuddingcreme, Karamellsahne und Karamellguss aus dem Karamell-Větrník-Rezept.
 

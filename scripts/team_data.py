@@ -23,7 +23,7 @@ TEAM = [
         },
         "wiifm": {
             "cs": "Voláte přímo tomu, kdo směsi míchá — ne do call centra. Domluvíte se česky, denně 8:00–19:00.",
-            "en": "You speak directly to the person who mixes the blends — not to a call centre. Calls are in Czech, daily 8:00–19:00.",
+            "en": "You speak directly to the person who makes the mixes — not to a call centre. Calls are in Czech, daily 8:00–19:00.",
             "de": "Sie sprechen direkt mit der Person, die die Mischungen herstellt — nicht mit einem Callcenter. Auf Tschechisch, täglich 8:00–19:00 Uhr.",
             "sk": "Voláte priamo tomu, kto zmesi mieša — nie do call centra. Dohodnete sa po česky, denne 8:00–19:00.",
         },
@@ -46,8 +46,8 @@ TEAM = [
         "wiifm": {
             "cs": "Druhý telefon do dílny. Pomůže s vyzvednutím, závozem a tím, aby balení dorazilo v pořádku.",
             "en": "The second phone line to the workshop. Helps with pick-up and delivery, and makes sure your packs arrive in good order.",
-            "de": "Die zweite Telefonnummer der Werkstatt. Hilft bei Abholung und Lieferung und sorgt dafür, dass Ihre Packungen unbeschädigt ankommen.",
-            "sk": "Druhý telefón do dielne. Pomôže s vyzdvihnutím, závozom a tým, aby balenie dorazilo v poriadku.",
+            "de": "Die zweite Telefonnummer der Werkstatt. Hilft bei Abholung und Lieferung und sorgt dafür, dass die Ware in gutem Zustand bei Ihnen ankommt.",
+            "sk": "Druhý telefón do dielne. Pomôže s vyzdvihnutím, rozvozom a tým, aby balenie dorazilo v poriadku.",
         },
     },
     {
@@ -67,9 +67,9 @@ TEAM = [
         },
         "wiifm": {
             "cs": "Často vyřídí vaši poptávku i na Facebooku. Hlídá, aby zboží odešlo zabalené a včas.",
-            "en": "Often answers your enquiry on Facebook as well. Makes sure the goods leave well packed and on time.",
-            "de": "Beantwortet Ihre Anfrage oft auch auf Facebook. Sorgt dafür, dass die Ware gut verpackt und pünktlich das Haus verlässt.",
-            "sk": "Často vybaví váš dopyt aj na Facebooku. Stráži, aby tovar odišiel zabalený a včas.",
+            "en": "Often answers your enquiry on Facebook as well. Makes sure your order is packed and ready on time.",
+            "de": "Beantwortet Ihre Anfrage oft auch auf Facebook. Sorgt dafür, dass die Ware gut verpackt und pünktlich bereitsteht.",
+            "sk": "Často vybaví váš dopyt aj na Facebooku. Stráži, aby bol tovar včas a dobre zabalený.",
         },
     },
     {
@@ -91,7 +91,7 @@ TEAM = [
             "cs": "Pomáhá s dopravou a odběrem — aby cesta zboží od dílny k vám byla jednoduchá.",
             "en": "Helps with delivery and collection — so the journey from the workshop to you stays simple.",
             "de": "Hilft bei Lieferung und Abholung — damit der Weg von der Werkstatt zu Ihnen einfach bleibt.",
-            "sk": "Pomáha s dopravou a odberom — aby cesta tovaru od dielne k vám bola jednoduchá.",
+            "sk": "Pomáha s rozvozom a odberom — aby cesta tovaru od dielne k vám bola jednoduchá.",
         },
     },
     {
@@ -111,9 +111,9 @@ TEAM = [
         },
         "wiifm": {
             "cs": "Hlídá suroviny a papíry od farmy po kuchyni — aby každé balení chutnalo stejně a mělo dokumentaci v pořádku.",
-            "en": "Watches over ingredients and paperwork from farm to kitchen — so every pack tastes the same and the documents are in order.",
+            "en": "Looks after ingredients and paperwork from farm to kitchen — so every pack tastes the same and the documents are in order.",
             "de": "Prüft Rohstoffe und Papiere vom Hof bis in die Küche — damit jede Packung gleich schmeckt und die Unterlagen stimmen.",
-            "sk": "Stráži suroviny a papiere od farmy po kuchyňu — aby každé balenie chutilo rovnako a malo dokumentáciu v poriadku.",
+            "sk": "Stráži suroviny a doklady od farmy po kuchyňu — aby každé balenie chutilo rovnako a malo dokumentáciu v poriadku.",
         },
     },
     {
@@ -135,7 +135,7 @@ TEAM = [
             "cs": "Stará se o to, abyste nás snadno našli, prohlédli produkty a věděli, jak objednat.",
             "en": "Makes sure you can find us easily, see the products and know how to order.",
             "de": "Sorgt dafür, dass Sie uns leicht finden, Produkte ansehen und wissen, wie Sie bestellen.",
-            "sk": "Stará sa o to, aby ste nás ľahko našli, prezreli produkty a vedeli, ako objednať.",
+            "sk": "Stará sa o to, aby ste nás ľahko našli, prezreli si produkty a vedeli, ako objednať.",
         },
     },
 ]

@@ -22,19 +22,13 @@ GEO_SLUGS = {
 B2B_SLUGS = {
     "velkoobchod_vysocina": "velkoobchod-vysocina",
     "velkoobchod_kochanov": "velkoobchod-kochanov",
-    "velkoobchod_praha": "velkoobchod-praha",
-    "velkoobchod_brno": "velkoobchod-brno",
-    "velkoobchod_zahranici": "velkoobchod-zahranici",
 }
 
 AEO_PAGE_KEYS = list(GEO_SLUGS) + list(B2B_SLUGS)
 
 TOPIC_KEYS = [
     "general",
-    "praha",
-    "brno",
     "vysocina",
-    "international",
     "restaurant",
     "bakery",
     "school",
@@ -44,10 +38,7 @@ TOPIC_KEYS = [
 
 TOPIC_OWNER_CS = {
     "general": "obecná velkoobchodní poptávka",
-    "praha": "Praha",
-    "brno": "Brno",
     "vysocina": "Vysočina",
-    "international": "zahraniční velkoobchod",
     "restaurant": "restaurace / jídelna",
     "bakery": "pekárna / cukrárna",
     "school": "škola",
@@ -64,10 +55,7 @@ AEO_UI = {
         "form_topic_prompt": "Vyberte téma",
         "form_topics": {
             "general": "Obecná velkoobchodní poptávka",
-            "praha": "Praha",
-            "brno": "Brno",
             "vysocina": "Vysočina",
-            "international": "Zahraniční velkoobchod",
             "restaurant": "Restaurace nebo jídelna",
             "bakery": "Pekárna nebo cukrárna",
             "school": "Školní kuchyně",
@@ -98,10 +86,7 @@ AEO_UI = {
         "form_topic_prompt": "Choose a topic",
         "form_topics": {
             "general": "General wholesale enquiry",
-            "praha": "Prague",
-            "brno": "Brno",
             "vysocina": "Vysočina",
-            "international": "International wholesale",
             "restaurant": "Restaurant or canteen",
             "bakery": "Bakery or pastry shop",
             "school": "School kitchen",
@@ -110,7 +95,7 @@ AEO_UI = {
         },
         "form_b2b_h": "Wholesale enquiry",
         "form_b2b_hint": (
-            "This form is for kitchens and shops only. Households, please use the Contact page."
+            "This form is for food businesses only. Households, please use the Contact page."
         ),
         "lang_cs": "Čeština",
         "lang_en": "English",
@@ -132,10 +117,7 @@ AEO_UI = {
         "form_topic_prompt": "Thema wählen",
         "form_topics": {
             "general": "Allgemeine Großhandelsanfrage",
-            "praha": "Prag",
-            "brno": "Brünn",
             "vysocina": "Vysočina",
-            "international": "Ausländischer Großhandel",
             "restaurant": "Restaurant oder Kantine",
             "bakery": "Bäckerei oder Konditorei",
             "school": "Schulküche",
@@ -166,10 +148,7 @@ AEO_UI = {
         "form_topic_prompt": "Vyberte tému",
         "form_topics": {
             "general": "Všeobecný veľkoobchodný dopyt",
-            "praha": "Praha",
-            "brno": "Brno",
             "vysocina": "Vysočina",
-            "international": "Zahraničný veľkoobchod",
             "restaurant": "Reštaurácia alebo jedáleň",
             "bakery": "Pekáreň alebo cukráreň",
             "school": "Školská kuchyňa",
@@ -186,7 +165,7 @@ AEO_UI = {
         "lang_sk": "Slovenčina",
         "lang_more": "Ďalšie jazyky",
         "reviews_later": (
-            "Zákaznícke recenzie zverejníme, až ich budeme mať z Google profilu. "
+            "Zákaznícke recenzie zverejníme, keď ich budeme mať z Google profilu. "
             "Hviezdičky ani počet recenzií si nevymýšľame."
         ),
         "geo_hub": "Objednávka podľa miesta",
@@ -231,17 +210,16 @@ PAGE_FAQ = {
     },
     "de": {
         "kdo_jsme": [
-            ("Wo genau sind Sie?", "Kochánov 40, 582 53, Region Vysočina, Tschechien, 12 km von Havlíčkův Brod. Nicht 582 91 — das ist ein anderes Kochánov."),
+            ("Wo genau sind Sie?", "Kochánov 40, 582 53, Region Vysočina, Tschechien, 12 km von Havlíčkův Brod entfernt. Nicht 582 91 — das ist ein anderes Kochánov."),
             ("Sind Sie ein eingetragenes Unternehmen?", "Ja. Jůzlová s.r.o., IČO 45900124. Auf Karten stehen wir als Juzlova - Potravinářské směsi."),
         ],
         "kde_nas_najdete": [
             ("Muss ich vorher anrufen?", "Ja. Die Werkstatt ist kein Laden mit Öffnungszeiten an der Tür. Täglich 8:00–19:00 Uhr telefonisch, auch am Wochenende."),
             ("Wo hole ich in Humpolec ab?", "In der Nähe der Brauerei Bernard, kostenlos. Ort und Uhrzeit nennen wir telefonisch."),
-            ("Kann ich einen eigenen Spediteur schicken?", "Ja. Außerhalb der Gratiszonen ist das oft günstiger als unsere Lieferung."),
         ],
         "kontakt": [
             ("Haben Sie Öffnungszeiten?", "Nein. Die Werkstatt ist kein Laden — bitte zuerst anrufen. Telefonisch täglich 8:00–19:00 Uhr, auch samstags und sonntags."),
-            ("Kann ich vorher probieren?", "Nein. Muster oder Verkostung bieten wir nicht; Sie bestellen fertige Packungen."),
+            ("Kann ich vorher probieren?", "Nein. Muster oder Verkostungen bieten wir nicht an; Sie bestellen fertige Packungen."),
         ],
         "ceny": [],
         "velkoobchod": [],
@@ -257,7 +235,7 @@ PAGE_FAQ = {
             ("Kde v Humpolci tovar vyzdvihnem?", "V okolí Pivovaru Bernard, zadarmo. Presné miesto a hodinu povieme po telefóne."),
         ],
         "kontakt": [
-            ("Máte otváracie hodiny?", "Nie. Dielňa nie je obchod — najprv zavolajte. Telefóny berieme denne 8:00–19:00 vrátane soboty a nedele."),
+            ("Máte otváracie hodiny?", "Nie. Dielňa nie je obchod — najprv zavolajte. Telefóny dvíhame denne 8:00–19:00 vrátane soboty a nedele."),
             ("Dáte ochutnať?", "Nie. Vzorky ani ochutnávky neponúkame; objednávate hotové balenia."),
         ],
         "ceny": [],
@@ -269,8 +247,6 @@ PAGE_FAQ = {
 PRODUCT_FAQ_EXTRA = {
     "cs": {
         "bramborove_knedliky": [
-            ("Je v ceně 250 Kč i doprava?",
-             "Ne. 250 Kč za 5 kg je cena při vyzvednutí v dílně."),
             ("Kde směs vyzvednu?",
              "V Kochánově 40, 582 53, nebo po dohodě v Humpolci u Pivovaru Bernard."),
             ("Vyrábíte kakaový puding?",
@@ -279,16 +255,12 @@ PRODUCT_FAQ_EXTRA = {
         "chlupate_knedliky": [
             ("Jak rychle jsou chlupaté knedlíky hotové?",
              "Za 15 minut: směs s vodou, vytvarovat, povařit."),
-            ("Je 260 Kč s dopravou?",
-             "Ne. Cena 5 kg / 260 Kč je jen za zboží při vyzvednutí v dílně."),
             ("Jsou to bosáky?",
              "Ano. Říkáme jim chlupaté knedlíky i bosáky. Hodí se na strapačky a halušky."),
         ],
         "vanilkovy_puding": [
             ("Jaká jsou balení?",
              "1 kg / 60 Kč a 400 g / 30 Kč při vyzvednutí v Kochánově 40, 582 53."),
-            ("Je v ceně doprava?",
-             "Ne. Uvedená cena platí při vyzvednutí v dílně."),
             ("Můžu z něj udělat čokoládový krém?",
              "Ano. Smíchejte ho s naším kakaem holandského typu. Hotovou kakaovou pudingovou směs nevedeme."),
             ("Hodí se do pečení?",
@@ -297,14 +269,10 @@ PRODUCT_FAQ_EXTRA = {
         "kakao_holandskeho_typu": [
             ("Je kakao totéž co puding?",
              "Ne. Kakao je kakaový prášek holandského typu, 500 g za 270 Kč. Puding je samostatná vanilková směs."),
-            ("Je v 270 Kč doprava?",
-             "Ne. 270 Kč je cena při vyzvednutí v dílně."),
         ],
         "vanilkovy_cukr": [
             ("Kolik stojí kilogram?",
              "60 Kč při vyzvednutí v dílně Kochánov 40, 582 53."),
-            ("Je doprava v ceně?",
-             "Ne. Uvedená cena je jen za zboží."),
             ("Používáte ho v receptech na webu?",
              "Ano. Hodí se do těsta i na posyp cukroví a koláčů."),
             ("Je to vanilkový lusk?",
@@ -313,26 +281,20 @@ PRODUCT_FAQ_EXTRA = {
     },
     "en": {
         "bramborove_knedliky": [
-            ("Does 250 Kč include delivery?",
-             "No. 250 Kč for 5 kg is the price when you collect at the workshop."),
             ("Where do I collect the mix?",
              "At Kochánov 40, 582 53, or in Humpolec near the Bernard brewery by arrangement."),
             ("Do you make cocoa pudding?",
              "No. We only sell gluten-free vanilla pudding. For a chocolate flavour, stir in Dutch-process cocoa."),
         ],
         "chlupate_knedliky": [
-            ("How fast are hairy dumplings ready?",
+            ("How quickly are the raw-potato dumplings ready?",
              "In 15 minutes: mix with water, shape, boil."),
-            ("Is 260 Kč with delivery?",
-             "No. 5 kg / 260 Kč is for the goods only at workshop pick-up."),
             ("Are these bosáky?",
-             "Yes. We call them hairy dumplings or bosáky. They are made for strapačky and halušky."),
+             "Yes. We call them chlupaté knedlíky or bosáky. The mix also works for strapačky and halušky."),
         ],
         "vanilkovy_puding": [
             ("What pack sizes are there?",
-             "1 kg / 60 Kč and 400 g / 30 Kč at pick-up in Kochánov 40, 582 53."),
-            ("Is shipping included?",
-             "No. The listed price is the price when you collect at the workshop."),
+             "1 kg / 60 Kč and 400 g / 30 Kč when collected at Kochánov 40, 582 53."),
             ("Can I make a chocolate cream from it?",
              "Yes. Stir in our Dutch-process cocoa. We do not sell a ready-made cocoa pudding mix."),
             ("Does it work in baking?",
@@ -341,68 +303,52 @@ PRODUCT_FAQ_EXTRA = {
         "kakao_holandskeho_typu": [
             ("Is the cocoa the same as pudding?",
              "No. The cocoa is a 500 g pack of Dutch-process powder for 270 Kč. The pudding is a separate vanilla mix."),
-            ("Does 270 Kč include delivery?",
-             "No. 270 Kč is the price when you collect at the workshop."),
         ],
         "vanilkovy_cukr": [
             ("What does a kilogram cost?",
-             "60 Kč at pick-up in Kochánov 40, 582 53."),
-            ("Is delivery included?",
-             "No. The listed price is for the goods only."),
+             "60 Kč when collected at Kochánov 40, 582 53."),
             ("Do your website recipes use it?",
              "Yes. It goes into doughs and is dusted over biscuits and cakes."),
-            ("Is this a vanilla pod?",
-             "No. It is vanilla sugar — finely milled sugar with vanillin aroma."),
+            ("Is it made from vanilla pods?",
+             "No. It is vanilla sugar — finely ground sugar flavoured with vanillin."),
         ],
     },
     "de": {
         "bramborove_knedliky": [
-            ("Sind 250 Kč inklusive Lieferung?",
-             "Nein. 250 Kč für 5 kg ist der Preis bei Abholung in der Werkstatt."),
             ("Wo hole ich die Mischung ab?",
-             "In Kochánov 40, 582 53 oder nach Absprache in Humpolec bei Pivovar Bernard."),
+             "In Kochánov 40, 582 53 oder nach Absprache in Humpolec nahe der Brauerei Bernard."),
             ("Machen Sie Kakaopudding?",
              "Nein. Wir führen nur glutenfreien Vanillepudding. Für Schokoladengeschmack rühren Sie Kakao holländischer Art ein."),
         ],
         "chlupate_knedliky": [
-            ("Wie schnell sind haarige Knödel fertig?",
+            ("Wie schnell sind die chlupaté knedlíky fertig?",
              "In 15 Minuten: Mischung mit Wasser, formen, kochen."),
-            ("Sind 260 Kč mit Lieferung?",
-             "Nein. 5 kg / 260 Kč gelten nur für die Ware bei Abholung."),
             ("Sind das Bosáky?",
-             "Ja. Wir nennen sie haarige Knödel oder Bosáky. Sie eignen sich für Strapačky und Halušky."),
+             "Ja. Wir nennen sie chlupaté knedlíky oder Bosáky. Sie eignen sich für Strapačky und Halušky."),
         ],
         "vanilkovy_puding": [
             ("Welche Packungen gibt es?",
              "1 kg / 60 Kč und 400 g / 30 Kč bei Abholung in Kochánov 40, 582 53."),
-            ("Ist die Lieferung im Preis?",
-             "Nein. Der angegebene Preis gilt nur für die Ware."),
             ("Kann ich daraus Schokocreme machen?",
              "Ja. Rühren Sie unseren Kakao holländischer Art ein. Eine fertige Kakaopuddingmischung führen wir nicht."),
-            ("Geht er auch zum Backen?",
+            ("Eignet er sich auch zum Backen?",
              "Ja. Er steckt im Birnenkuchen, Lebkuchen und in den Brandteig-Rezepten auf dieser Website."),
         ],
         "kakao_holandskeho_typu": [
             ("Ist Kakao dasselbe wie Pudding?",
-             "Nein. Der Kakao ist eine 500-g-Packung Pulver holländischer Art für 270 Kč. Der Pudding ist eine eigene Vanillemischung."),
-            ("Sind 270 Kč inklusive Lieferung?",
-             "Nein. 270 Kč ist der Preis bei Abholung in der Werkstatt."),
+             "Nein. Der Kakao ist Kakaopulver holländischer Art, 500 g für 270 Kč. Der Pudding ist eine eigene Vanillemischung."),
         ],
         "vanilkovy_cukr": [
             ("Was kostet ein Kilogramm?",
              "60 Kč bei Abholung in Kochánov 40, 582 53."),
-            ("Ist die Lieferung im Preis?",
-             "Nein. Der angegebene Preis gilt nur für die Ware."),
             ("Steckt er in den Rezepten auf der Website?",
-             "Ja. Er kommt in den Teig und als Bestreuung auf Gebäck und Kuchen."),
+             "Ja. Er kommt in den Teig und zum Bestreuen auf Gebäck und Kuchen."),
             ("Ist das eine Vanilleschote?",
              "Nein. Es ist Vanillinzucker — fein gemahlener Zucker mit Vanillinaroma."),
         ],
     },
     "sk": {
         "bramborove_knedliky": [
-            ("Je v cene 250 Kč aj doprava?",
-             "Nie. 250 Kč za 5 kg je cena pri vyzdvihnutí v dielni."),
             ("Kde zmes vyzdvihnem?",
              "V Kochánove 40, 582 53, alebo po dohode v Humpolci pri Pivovare Bernard."),
             ("Vyrábate kakaový puding?",
@@ -411,8 +357,6 @@ PRODUCT_FAQ_EXTRA = {
         "chlupate_knedliky": [
             ("Ako rýchlo sú chlpaté knedle hotové?",
              "Za 15 minút: zmes s vodou, vytvarovať, povariť."),
-            ("Je 260 Kč s dopravou?",
-             "Nie. Cena 5 kg / 260 Kč je len za tovar pri vyzdvihnutí v dielni."),
             ("Sú to bosáky?",
              "Áno. Hovoríme im chlpaté knedle aj bosáky. Hodia sa na strapačky a halušky."),
             ("Dodávate jedálňam?",
@@ -421,26 +365,20 @@ PRODUCT_FAQ_EXTRA = {
         "vanilkovy_puding": [
             ("Aké sú balenia?",
              "1 kg / 60 Kč a 400 g / 30 Kč pri vyzdvihnutí v Kochánove 40, 582 53."),
-            ("Je v cene doprava?",
-             "Nie. Uvedená cena je len za tovar."),
             ("Môžem z neho urobiť čokoládový krém?",
-             "Áno. Zmiešajte ho s naším kakaom holandského typu. Hotovú kakaovú pudingovú zmes nevedieme."),
+             "Áno. Zmiešajte ho s naším kakaom holandského typu. Hotovú kakaovú pudingovú zmes nepredávame."),
             ("Hodí sa do pečenia?",
              "Áno. Je v hruškovom koláči, perníku aj venčekoch na tomto webe."),
         ],
         "kakao_holandskeho_typu": [
-            ("Je kakao to isté čo puding?",
+            ("Je kakao to isté ako puding?",
              "Nie. Kakao je kakaový prášok holandského typu, 500 g za 270 Kč. Puding je samostatná vanilková zmes."),
-            ("Je v 270 Kč doprava?",
-             "Nie. 270 Kč je cena pri vyzdvihnutí v dielni."),
         ],
         "vanilkovy_cukr": [
             ("Koľko stojí kilogram?",
              "60 Kč pri vyzdvihnutí v dielni Kochánov 40, 582 53."),
-            ("Je doprava v cene?",
-             "Nie. Uvedená cena je len za tovar."),
             ("Používate ho v receptoch na webe?",
-             "Áno. Hodí sa do cesta aj na posyp cukrovia a koláčov."),
+             "Áno. Hodí sa do cesta aj na posyp vianočného pečiva a koláčov."),
             ("Je to vanilkový struk?",
              "Nie. Je to vanilínový cukor — jemne mletý cukor s vanilínovou arómou."),
         ],
@@ -547,11 +485,6 @@ def _build_pages(lang):
                 ("form", None),
             ],
             [
-                (t("Objednáváte po celém Česku?", "Do you take orders from all of Czechia?", "Nehmen Sie Bestellungen aus ganz Tschechien an?", "Objednávate z celého Česka?"),
-                 t("Ano, ale zboží si vyzvednete v dílně nebo vám ho dovezeme do Humpolce či Havlíčkova Brodu.",
-                   "Yes, though most customers come and collect. Outside Vysočina we post a parcel on request; you pay the full postage and we agree the total first.",
-                   "Ja, auch wenn die meisten Kunden abholen. Außerhalb der Vysočina schicken wir auf Wunsch ein Paket; das Porto zahlen Sie vollständig, die Summe vereinbaren wir vorab.",
-                   "Áno, ale väčšina zákazníkov si pre tovar príde. Mimo Vysočiny pošleme na požiadanie balík; poštovné platíte celé vy a celkovú sumu dohodneme vopred.")),
                 (t("Máte e-shop?", "Is there a web shop?", "Gibt es einen Onlineshop?", "Máte e-shop?"),
                  t("Ne. Objednávka telefonem nebo formulářem.",
                    "No. Order by phone or the form.",
@@ -616,8 +549,6 @@ def _build_pages(lang):
                    "We take calls daily 8:00–19:00 and agree a collection or delivery time with you.",
                    "Telefon täglich 8:00–19:00 Uhr. Abhol- oder Liefertermin vereinbaren wir.",
                    "Telefón denne 8:00–19:00. Termín vyzdvihnutia alebo rozvozu dohodneme.")),
-                (t("Je cena s dopravou?", "Is the price with delivery?", "Ist der Preis mit Lieferung?", "Je cena s dopravou?"),
-                 t("Ne. Ceník je jen za zboží.", "No. The price list covers the goods only.", "Nein. Die Liste gilt nur für die Ware.", "Nie. Cenník je len za tovar.")),
                 (t("Kde sídlíte na Vysočině?", "Where are you based in Vysočina?", "Wo sitzen Sie in der Vysočina?", "Kde sídlite na Vysočine?"),
                  t("Kochánov 40, 582 53, 12 km od Havlíčkova Brodu.",
                    "Kochánov 40, 582 53, 12 km from Havlíčkův Brod.",
@@ -679,8 +610,6 @@ def _build_pages(lang):
                    "From the mill in Havlíčkův Brod, with the KLASA quality mark — the mill is owned and run by our extended family.",
                    "Aus der Mühle in Havlíčkův Brod, mit dem KLASA-Siegel — die Mühle gehört unserer erweiterten Familie und wird von ihr geführt.",
                    "Z mlyna v Havlíčkovom Brode, značka KLASA — mlyn vlastní a vedie naša širšia rodina.")),
-                (t("Je v ceně doprava?", "Is delivery included?", "Ist die Lieferung im Preis?", "Je v cene doprava?"),
-                 t("Ne. Cena na webu je jen za zboží.", "No. The website price is for the goods only.", "Nein. Der Website-Preis gilt nur für die Ware.", "Nie. Cena na webe je len za tovar.")),
             ],
             t("Havlíčkův Brod Jůzlová, knedlíky v prášku, vyzvednutí Kochánov",
               "Havlíčkův Brod Jůzlová, dumpling mix, KLASA flour, collect in Kochánov",

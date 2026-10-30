@@ -3,7 +3,7 @@
 # Bebe rezy s čokoládovým pudingom — nepečený recept | Jůzlová
 
 - **URL:** `/sk/bebe-rezy-s-cokoladovym-pudingom/`
-- **Meta description:** Nepečené bebe rezy s čokoládovým pudingom podľa Lucie Kůželovej: 4 balíčky keksov, puding z litra mlieka, šľahačka s kyslou smotanou. Odležať cez noc.
+- **Meta description:** Nepečené bebe rezy s čokoládovým pudingom podľa Lucie Kůželovej: svetlé a tmavé keksy, pudingový krém, šľahačka s kyslou smotanou a kakao na posypanie.
 
 ---
 
@@ -37,19 +37,19 @@ Použitá zmes
 - Uvarte čokoládový puding podľa návodu na obale a nalejte ho na keksy tak, aby sa rovnomerne rozprestrel.
 - Na vrstvu pudingu poukladajte tmavé bebe keksy.
 - V mise vyšľahajte smotanu s vanilkovým cukrom dotuha, primiešajte kyslú smotanu a zmes rozotrite na keksy.
-- Rez posypte tmavým kakaom a nechajte v chladničke odležať, ideálne cez noc.
+- Rezy posypte kakaom a nechajte v chladničke odležať, ideálne cez noc.
 
-Tip: Ak máte poruke iný ako čokoládový puding, experimentujte — rezy chutia výborne aj s vanilkovým pudingom a škoricou.
+Tip: Rezy sa dajú pripraviť aj s vanilkovým pudingom a škoricou na posypanie.
 
 ### Časté otázky
 
 *summary:* Pečú sa bebe rezy s čokoládovým pudingom?
 
-Nie. Sú nepečené: vrstva svetlých sušienok, uvarený puding, tmavé sušienky, šľahačka so zakysanou smotanou a kakao. Najlepšie cez noc v chladničke.
+Nie. Sú nepečené: vrstva svetlých keksov, uvarený puding, tmavé keksy, šľahačka s kyslou smotanou a kakao. Najlepšie cez noc v chladničke.
 
 *summary:* Možno namiesto čokoládového pudingu použiť vanilkový?
 
-Áno. Rez chutí výborne aj s naším vanilkovým pudingom a škoricovým posypom.
+Áno. Rezy sa dajú pripraviť aj s naším vanilkovým pudingom a škoricovým posypom.
 
 Návrhy k tomuto receptu
 
@@ -59,7 +59,7 @@ Návrhy k tomuto receptu
 
 - Šľahačková roláda Ľahký múčnik za pol hodiny: kontrast horkastého kakaa a jemne sladkej šľahačky. Bez múky, teda aj bez lepku. Viac
 - Írsky sticky toffee pudding Vlhký datľový zákusok s kakaom holandského typu a Baileys, preliaty slanou toffee omáčkou. 6 porcií. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac
 - Šúľance s makom Tradičná sladká večera zo zemiakového cesta: šúľance obalené v maku s cukrom, preliate rozpusteným maslom. Viac
 - Strapačky s kapustou a slaninou Slovenská klasika z chlpatých knedieľ v prášku — halušky s kyslou kapustou a vypečenou slaninou. Viac

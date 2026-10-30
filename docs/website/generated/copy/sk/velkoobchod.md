@@ -3,7 +3,7 @@
 # Knedle v prášku, puding a kakao pre kuchyne | Jůzlová
 
 - **URL:** `/sk/velkoobchod/`
-- **Meta description:** Zmesi pre jedálne, reštaurácie, pekárne a zmrzlinárov. Vyzdvihnutie v Kochánove, rozvoz do Humpolca a Havlíčkovho Brodu alebo váš dopravca. Knedle v prášku.
+- **Meta description:** Zmesi pre jedálne, reštaurácie, pekárne a zmrzlinárov. Vyzdvihnutie v Kochánove alebo rozvoz do Humpolca a Havlíčkovho Brodu. Knedle v prášku.
 
 ---
 
@@ -15,7 +15,7 @@ Zásobujeme jedálne, reštaurácie, pekárne, kaviarne, školy a zmrzlinárov. 
 
 Zavolať Jiřine
 
-### Prečo kuchyne berú zmes
+### Prečo kuchyne siahajú po zmesi
 
 Zemiakové cesto na 500 porcií bez tridsiatich kíl zemiakov na šúpanie. Rovnaká konzistencia každý deň.
 
@@ -27,11 +27,11 @@ Zemiakové cesto len s vodou: odpadá šúpanie a strúhanie tridsiatich kíl ze
 
 Zloženie a etikety pošleme e-mailom.
 
-#### Tri cesty dodania
+#### Dva spôsoby dodania
 
-Vyzdvihnutie v Kochánove, rozvoz do Humpolca a Havlíčkovho Brodu alebo váš dopravca.
+Vyzdvihnutie v Kochánove alebo rozvoz do Humpolca a Havlíčkovho Brodu.
 
-#### Papiere ku kakau
+#### Doklady ku kakau
 
 Ku kakau pošleme laboratórny certifikát k vašej šarži. Bez 14 alergénov EÚ, lepok pod 20 ppm.
 
@@ -47,7 +47,6 @@ Ku kakau pošleme laboratórny certifikát k vašej šarži. Bez 14 alergénov E
 
 - Vyzdvihnutie v dielni v Kochánove
 - Rozvoz do Humpolca a Havlíčkovho Brodu
-- Váš vlastný dopravca
 
 ### Dopyt pre kuchyňu
 
@@ -59,7 +58,7 @@ Formulár je pre prevádzky. Domácnosti objednávajú cez Kontakt.
 
 *label:* E-mail
 
-*label:* Téma dopytuVyberte témuVšeobecný veľkoobchodný dopytPrahaBrnoVysočinaZahraničný veľkoobchodReštaurácia alebo jedáleňPekáreň alebo cukráreňŠkolská kuchyňaVýroba zmrzlinyIné
+*label:* Téma dopytuVyberte témuVšeobecný veľkoobchodný dopytVysočinaReštaurácia alebo jedáleňPekáreň alebo cukráreňŠkolská kuchyňaVýroba zmrzlinyIné
 
 *label:* Množstvo (balenia alebo kg)
 
@@ -87,13 +86,9 @@ Formulár je pre prevádzky. Domácnosti objednávajú cez Kontakt.
 
 ### Časté otázky
 
-*summary:* Môžem poslať vlastného dopravcu?
-
-Áno. Tovar si vyzdvihne v dielni v Kochánove.
-
 *summary:* Hodí sa kakao výrobcom zmrzliny?
 
-Áno. Vysoký obsah kakaového masla zmrzline svedčí: silná kakaová chuť, hladká textúra a sýta farba, ktorá nevybledne. Ozvite sa a napíšte, čo potrebujete.
+Áno. Vysoký obsah kakaového masla zmrzline prospieva: silná kakaová chuť, hladká textúra a sýta farba, ktorá nevybledne. Ozvite sa a napíšte, čo potrebujete.
 
 *summary:* Poskytujete certifikát analýzy (CoA)?
 

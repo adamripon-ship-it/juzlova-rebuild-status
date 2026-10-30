@@ -11,7 +11,7 @@ Start › Rezepte › Birnenkuchen mit Vanillepudding
 
 ## Birnenkuchen mit Vanillepudding
 
-Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren.
+Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder.
 
 Dieses Rezept bewerten
 
@@ -42,9 +42,9 @@ Verwendete Mischung
 
 ### Häufige Fragen
 
-*summary:* Wie lange backt der Birnenkuchen mit Vanillepudding?
+*summary:* Wie lange muss der Birnenkuchen mit Vanillepudding backen?
 
-20 Minuten Vorbereitung und ca. 45 Minuten bei 180 °C. Das Rezept ergibt 8 Stücke und geht auch mit Äpfeln, Himbeeren oder Pfirsichen.
+20 Minuten Vorbereitung und ca. 45 Minuten bei 180 °C. Das Rezept ergibt 8 Portionen und gelingt auch mit Äpfeln, Himbeeren oder Pfirsichen.
 
 *summary:* Wie viel Puddingpulver kommt in den Birnenkuchen?
 
@@ -56,7 +56,7 @@ Vorschläge zu diesem Rezept
 
 Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebacken.
 
-- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen. Mehr
+- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art. Mehr
 - Brandteigkränze mit Vanillecreme Klassische Věnečky aus Brandteig mit Vanillebuttercreme und Rumguss. Etwa 20 Stück. Mehr
 - Mini-Windbeutel (Minivětrníčky) Kleine Větrníčky aus Brandteig mit Butter-Pudding-Quark-Creme und Schokoladenguss. Etwa 40–45 Stück. Mehr
 - Karamell-Windbeutel (Větrníky) Větrníky mit Vanillepuddingcreme, Karamellsahne und Karamellguss. Etwa 24 mittlere Stück. Mehr

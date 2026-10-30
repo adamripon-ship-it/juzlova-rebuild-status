@@ -59,7 +59,7 @@ Name und Telefon oder E-Mail genügen. Wir melden uns und vereinbaren einen Term
 
 *label:* Lieferung nach Havlíčkův Brod oder Humpolec (kostenlos, Tag und Uhrzeit nach Absprache)
 
-*label:* Nachricht (was, wie viel, wohin)
+*label:* Nachricht (was, wie viel, wo Sie sind)
 
 *button:* Absenden und Termin vereinbaren
 
@@ -72,7 +72,3 @@ Ja. Die Werkstatt ist kein Laden mit Öffnungszeiten an der Tür. Täglich 8:00�
 *summary:* Wo hole ich in Humpolec ab?
 
 In der Nähe der Brauerei Bernard, kostenlos. Ort und Uhrzeit nennen wir telefonisch.
-
-*summary:* Kann ich einen eigenen Spediteur schicken?
-
-Ja. Außerhalb der Gratiszonen ist das oft günstiger als unsere Lieferung.

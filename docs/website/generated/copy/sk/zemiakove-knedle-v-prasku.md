@@ -9,7 +9,7 @@
 
 Úvod › Zemiakové knedle v prášku
 
-## Zemiakové knedle v prášku: zamiešate vodou, za 20 minút sú na stole a nerozvaria sa
+## Zemiakové knedle v prášku: zamiešate s vodou, za 20 minút sú na stole a nerozvaria sa
 
 Múka z mlyna v Havlíčkovom Brode. Celé zloženie nájdete nižšie.
 
@@ -21,7 +21,7 @@ Objednávka
 
 - +420 728 466 141 · denne 8–19
 
-Vyzdvihnete v prevádzke. Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
+Vyzdvihnete si ich v dielni. Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
 
 Objednať u Jiřiny Kde vyzdvihnúť
 
@@ -53,7 +53,7 @@ Z 5 kg pripravíte prílohu zhruba pre 60–70 ľudí. Vrece skladujte v suchu a
 
 *summary:* Musím pridať vajce?
 
-Nie. Zamiešate s vodou podľa návodu na vrecku. Vajce pridajte, ak chcete bohatšiu chuť.
+Nie. Zamiešate s vodou podľa návodu na vreci. Vajce pridajte, ak chcete bohatšiu chuť.
 
 *summary:* Dajú sa knedle plniť ovocím?
 

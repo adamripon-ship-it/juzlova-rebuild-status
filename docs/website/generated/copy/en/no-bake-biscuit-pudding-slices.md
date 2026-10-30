@@ -11,7 +11,7 @@ Home › Recipes › Bebe biscuit slices with chocolate pudding
 
 ## Bebe biscuit slices with chocolate pudding
 
-Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone.
+Want to treat your guests but you’re no Jamie Oliver? Anyone can make these no-bake biscuit slices.
 
 Rate this recipe
 
@@ -39,7 +39,7 @@ Mix used
 - Whip the cream with the vanilla sugar until stiff, fold in the sour cream and spread the mixture over the biscuits.
 - Dust with the cocoa and leave to set in the fridge, ideally overnight.
 
-Tip: if you have a different pudding to hand, experiment — the slices also work well with vanilla pudding and a dusting of cinnamon.
+Tip: the slices also work with vanilla pudding and a dusting of cinnamon.
 
 ### Frequently asked questions
 
@@ -49,17 +49,17 @@ No. They are no-bake: a layer of light biscuits, cooked pudding, dark biscuits, 
 
 *summary:* Can I use vanilla pudding instead of chocolate?
 
-Yes. The slice is excellent with our vanilla pudding and a dusting of cinnamon.
+Yes. The slices also work with our vanilla pudding and a dusting of cinnamon.
 
 Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
 - Whipped cream roulade A light dessert in half an hour: slightly bitter cocoa against gently sweet whipped cream. No flour, so no gluten either. More
 - Irish sticky toffee pudding A moist date pudding with Dutch-process cocoa and Baileys, finished with a salted toffee sauce. Serves 6. More
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Homemade gingerbread (perník) Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Homemade gingerbread (perník) Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa. More
 - Poppy-seed rolls (šišky s mákem) A traditional sweet supper from potato dough: rolls coated in poppy seeds and sugar, drizzled with melted butter. More
-- Strapačky with cabbage and bacon A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon. More
+- Strapačky with sauerkraut and bacon A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon. More

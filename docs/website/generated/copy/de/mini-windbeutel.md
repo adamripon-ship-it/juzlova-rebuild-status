@@ -30,7 +30,7 @@ Verwendete Mischung
 - 1 Teelöffel Backpulver
 - 4 Eier
 - Füllung: 500 ml Milch
-- 80 g unser Vanillepuddingpulver
+- 80 g unseres Vanillepuddingpulvers
 - 3 Esslöffel Zucker
 - 250 g weiche Butter
 - 125 g Zucker
@@ -42,7 +42,7 @@ Verwendete Mischung
 ### Zubereitung
 
 - Wasser, Butter und Salz zum Kochen bringen. Vom Herd nehmen, Mehl und Backpulver glatt einrühren, dann kurz bei kleiner Hitze weiterrühren und den Teig leicht abkühlen lassen.
-- Die Eier nacheinander mit dem Mixer einschlagen. Kleine Häufchen von 2–3 cm auf Backpapier spritzen; ohne Spritzbeutel geht es auch mit zwei Löffeln.
+- Die Eier nacheinander mit dem Mixer unterschlagen. Kleine Häufchen von 2–3 cm auf Backpapier spritzen; ohne Spritzbeutel geht es auch mit zwei Löffeln.
 - Bei 200 °C etwa 20 Minuten backen. Die ersten 10 Minuten den Ofen nicht öffnen.
 - Den Pudding kochen und vollständig auskühlen lassen, gern einige Stunden vorher. Die weiche Butter mit Zucker und Vanillinzucker schaumig schlagen, Rum zugeben, dann den erkalteten Pudding und den Quark portionsweise glatt unterheben.
 - Die ausgekühlten Windbeutel zu drei Vierteln einschneiden, die Füllung hineinspritzen und die Oberseite in geschmolzene Schokolade tauchen oder bestreichen.
@@ -53,11 +53,11 @@ Leichtere Sommervariante: Buttercreme und Guss weglassen — mit gezuckerter Sch
 
 *summary:* Womit füllt man die Mini-Windbeutel?
 
-Mit Butter-Puddingcreme mit Quark aus unserem Vanillepudding, darauf Schokoglasur. Etwa 40–45 Stück, 20 Minuten bei 200 °C.
+Mit Butter-Puddingcreme mit Quark aus unserem Vanillepudding, darauf Schokoladenguss. Etwa 40–45 Stück, 20 Minuten bei 200 °C.
 
 *summary:* Gibt es eine leichtere Sommerversion?
 
-Ja: statt Buttercreme und Glasur gesüßte Sahne und Erdbeeren, darüber Puderzucker.
+Ja: statt Buttercreme und Guss gesüßte Sahne und Erdbeeren, darüber Puderzucker.
 
 Vorschläge zu diesem Rezept
 
@@ -68,6 +68,6 @@ Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebac
 - Brandteigkränze mit Vanillecreme Klassische Věnečky aus Brandteig mit Vanillebuttercreme und Rumguss. Etwa 20 Stück. Mehr
 - Karamell-Windbeutel (Větrníky) Větrníky mit Vanillepuddingcreme, Karamellsahne und Karamellguss. Etwa 24 mittlere Stück. Mehr
 - Windbeutel mit Vanillecreme (větrníčky) Kleine, mit der Sterntülle gespritzte Windbeutel mit Vanille-Buttercreme, in weiße Zuckerglasur getaucht. Etwa 30 Stück. Mehr
-- Birnenkuchen mit Vanillepudding Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren. Mehr
-- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen. Mehr
+- Birnenkuchen mit Vanillepudding Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder. Mehr
+- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art. Mehr
 - Schnelle Brandteigkränze oder Windbeutel Ein Brandteig für Věnečky und Větrníčky: mehr Butter und ein Start bei 250 °C. Etwa 80 Stück auf zwei Blechen. Mehr

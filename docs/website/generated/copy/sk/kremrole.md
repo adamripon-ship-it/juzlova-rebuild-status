@@ -36,7 +36,7 @@ Ohodnoťte tento recept
 - Cukor s vodou zohrejte bez miešania na 115–120 °C (teplomer pomôže). Medzitým ušľahajte bielky do tuha.
 - Za stáleho šľahania prilievajte horúci sirup tenkým prúdom a šľahajte, kým sneh nie je lesklý a len vlažný. Krátko vychlaďte a striekajte do trubičiek z oboch koncov. Posypte práškovým cukrom.
 
-Najjednoduchší variant: bielky s cukrom šľahajte priamo nad hrncom s mierne vriacou vodou (vo vodnom kúpeli), kým nie sú lesklé a husté — bez teplomera, o niečo menej stabilný, ale spoľahlivý.
+Najjednoduchší variant: bielky s cukrom šľahajte priamo nad hrncom s mierne vriacou vodou (vo vodnom kúpeli), kým nie sú lesklé a husté — bez teplomera; sneh je o niečo menej stabilný, ale funguje.
 
 Trubičky môžete improvizovať z alobalu, ak nemáte kovové formy.
 
@@ -48,7 +48,7 @@ Asi 35–40 kúskov. Cesto z múky, masla a smotany, náplň taliansky sneh. Pot
 
 *summary:* Na koľko stupňov piecť kremrole?
 
-12–15 minút na 180–200 °C dozlatista. Sneh: cukor s vodou na 115–120 °C do ušľahaných bielok.
+12–15 minút na 180–200 °C dozlatista. Sneh: cukor s vodou zohrejte na 115–120 °C a vlejte do ušľahaných bielkov.
 
 Návrhy k tomuto receptu
 
@@ -56,7 +56,7 @@ Návrhy k tomuto receptu
 
 Ďalšie recepty, ktoré sa k nemu hodia — rovnaká zmes alebo podobný postup.
 
-- Rýchle venčeky či veterníčky Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechách. Viac
+- Rýchle venčeky či veterníčky Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechoch. Viac
 - Venčeky s vanilkovým krémom Klasické venčeky z odpaľovaného cesta s vanilkovým maslovým krémom a rumovou polevou. Asi 20 kúskov. Viac
 - Miniveterníčky Malé veterníčky z odpaľovaného cesta s maslovo-pudingovým krémom s tvarohom a čokoládovou polevou. Asi 40–45 kúskov. Viac
 - Karamelové veterníky Veterníky s vanilkovým pudingovým krémom, karamelovou šľahačkou a karamelovou polevou. Asi 24 stredných kúskov. Viac

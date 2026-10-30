@@ -9,7 +9,7 @@
 
 Home › About us
 
-## The Jůzl family of Kochánov: mixing the food they cook themselves since 2004
+## The Jůzl family of Kochánov: making mixes since 2004, and cooking with them too
 
 The workshop is at Kochánov 40, twelve kilometres from Havlíčkův Brod. Jiřina takes the orders.
 
@@ -19,7 +19,7 @@ Our workshop in Kochánov — flour sacks, the scales and the bagging line.
 
 ### How it started
 
-We began making food mixes in a small workshop in Kochánov in 2004 and have refined the recipes over the years. Today households across Bohemia and Moravia buy from us, as do canteens, restaurants and bakeries.
+We began making food mixes in a small workshop in Kochánov in 2004 and have refined the recipes over the years. Today households buy from us, as do canteens, restaurants and bakeries.
 
 People
 
@@ -31,7 +31,7 @@ When you call or write, you are talking to one of us.
 
 Owner · production and orders
 
-You speak directly to the person who mixes the blends — not to a call centre. Calls are in Czech, daily 8:00–19:00.
+You speak directly to the person who makes the mixes — not to a call centre. Calls are in Czech, daily 8:00–19:00.
 
 #### Jiří Jůzl
 
@@ -43,7 +43,7 @@ The second phone line to the workshop. Helps with pick-up and delivery, and make
 
 Production, packing, sales and customers
 
-Often answers your enquiry on Facebook as well. Makes sure the goods leave well packed and on time.
+Often answers your enquiry on Facebook as well. Makes sure your order is packed and ready on time.
 
 #### Filip Kůžel
 
@@ -55,7 +55,7 @@ Helps with delivery and collection — so the journey from the workshop to you s
 
 Ingredients, quality and certifications
 
-Watches over ingredients and paperwork from farm to kitchen — so every pack tastes the same and the documents are in order.
+Looks after ingredients and paperwork from farm to kitchen — so every pack tastes the same and the documents are in order.
 
 #### Adam Kennedy
 
@@ -72,7 +72,7 @@ The flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km fr
 - No web shop. You order by phone or the form.
 - No samples or tastings.
 - No invented stars — ratings come from our live Google and Firmy.cz profiles.
-- We reply in Czech; for German and English we sometimes use a translator.
+- We reply in Czech; for German and English we sometimes use a translation tool.
 
 Ratings
 

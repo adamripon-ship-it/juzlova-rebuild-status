@@ -3,7 +3,7 @@
 # Dumpling mix, pudding & cocoa for kitchens | Jůzlová
 
 - **URL:** `/en/wholesale/`
-- **Meta description:** Mixes for canteens, restaurants, bakeries and gelato makers. Pick-up in Kochánov, delivery to Humpolec and Havlíčkův Brod, or your carrier. Potato dumpling mix.
+- **Meta description:** Mixes for canteens, restaurants, bakeries and ice-cream makers. Pick-up in Kochánov, or delivery to Humpolec and Havlíčkův Brod. Potato dumpling mix.
 
 ---
 
@@ -21,21 +21,21 @@ Potato dough for 500 portions, without thirty kilos of potatoes to peel. The sam
 
 #### 500 portions, three people
 
-Potato dough, just add water: no peeling and grating thirty kilos of potatoes. The same consistency every day.
+Potato dough, just add water: no thirty kilos of potatoes to peel and grate. The same consistency every day.
 
 #### A short label
 
 We e-mail ingredient lists and labels for your paperwork.
 
-#### Three ways to get it
+#### Two ways to get it
 
-Pick-up in Kochánov, delivery to Humpolec and Havlíčkův Brod, or your own carrier.
+Pick-up in Kochánov, or delivery to Humpolec and Havlíčkův Brod.
 
 #### Cocoa paperwork
 
 A laboratory certificate for your cocoa batch, on request. None of the 14 EU allergens; gluten under 20 ppm.
 
-### What we supply to whom
+### What we supply, and to whom
 
 - canteens and restaurants — dumpling mix and pudding for service
 - bakeries and pastry shops — pudding, vanilla sugar, cocoa
@@ -47,11 +47,10 @@ A laboratory certificate for your cocoa batch, on request. None of the 14 EU all
 
 - Pick-up at the workshop in Kochánov
 - Delivery to Humpolec and Havlíčkův Brod
-- Your own carrier
 
 ### Kitchen enquiry
 
-This form is for kitchens and shops. Households can order via the Contact page.
+This form is for food businesses. Households can order via the Contact page.
 
 *label:* Name
 
@@ -59,7 +58,7 @@ This form is for kitchens and shops. Households can order via the Contact page.
 
 *label:* E-mail
 
-*label:* Enquiry topicChoose a topicGeneral wholesale enquiryPragueBrnoVysočinaInternational wholesaleRestaurant or canteenBakery or pastry shopSchool kitchenIce-cream productionOther
+*label:* Enquiry topicChoose a topicGeneral wholesale enquiryVysočinaRestaurant or canteenBakery or pastry shopSchool kitchenIce-cream productionOther
 
 *label:* Quantity (packs or kg)
 
@@ -86,10 +85,6 @@ This form is for kitchens and shops. Households can order via the Contact page.
 *button:* Send and arrange a date
 
 ### Frequently asked questions
-
-*summary:* Can I send my own courier?
-
-Yes. They collect at the workshop in Kochánov.
 
 *summary:* Is the cocoa suitable for ice-cream makers?
 

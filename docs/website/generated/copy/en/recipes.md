@@ -19,15 +19,15 @@ A traditional sweet supper from potato dough: rolls coated in poppy seeds and su
 
 #### Pear cake with vanilla pudding
 
-A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating.
+A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake.
 
-#### Strapačky with cabbage and bacon
+#### Strapačky with sauerkraut and bacon
 
 A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon.
 
 #### Bebe biscuit slices with chocolate pudding
 
-Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone.
+Want to treat your guests but you’re no Jamie Oliver? Anyone can make these no-bake biscuit slices.
 
 #### Whipped cream roulade
 
@@ -35,17 +35,17 @@ A light dessert in half an hour: slightly bitter cocoa against gently sweet whip
 
 #### Homemade gingerbread (perník)
 
-Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough.
+Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa.
 
 #### Potato-and-curd dumplings with strawberries
 
-Summer brings ripe strawberries. A simple 20-minute recipe for anyone with a sweet tooth.
+Quick fruit dumplings for strawberry season: potato dough with curd cheese, ready in 20 minutes.
 
-#### Quick choux wreaths or puffs
+#### Quick choux rings or puffs
 
 One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays.
 
-#### Choux wreaths with vanilla cream
+#### Choux rings with vanilla cream
 
 Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces.
 

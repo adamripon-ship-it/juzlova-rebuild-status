@@ -2,7 +2,7 @@
 
 # All page copy — Slovenčina (`sk`)
 
-28 pages. Each file holds the page title, meta description and every piece of visible text inside the page body, in reading order.
+27 pages. Each file holds the page title, meta description and every piece of visible text inside the page body, in reading order.
 
 | Page | URL |
 |---|---|
@@ -13,7 +13,7 @@
 | [Cenník — knedle v prášku, puding, kakao od výrobcu \| Jůzlová](cennik.md) | `/sk/cennik/` |
 | [Cesto na halušky a strapačky v prášku 5 kg \| Jůzlová](chlpate-knedle-v-prasku.md) | `/sk/chlpate-knedle-v-prasku/` |
 | [Domáci perník — hrnčekový recept podľa Jiřiny Jůzlovej](hrncekovy-pernik.md) | `/sk/hrncekovy-pernik/` |
-| [Hruškový koláč s vanilkovým pudingom podľa Lucie Kůželovej](hruskovy-kolac-s-vanilkovym-pudingom.md) | `/sk/hruskovy-kolac-s-vanilkovym-pudingom/` |
+| [Hruškový koláč s vanilkovým pudingom — recept Lucie Kůželovej](hruskovy-kolac-s-vanilkovym-pudingom.md) | `/sk/hruskovy-kolac-s-vanilkovym-pudingom/` |
 | [Írsky sticky toffee pudding s kakaom a Baileys — recept](sticky-toffee-pudding.md) | `/sk/sticky-toffee-pudding/` |
 | [Kakao holandského typu 20–22 % tuku, 500 g/270 Kč \| Jůzlová](kakao-holandskeho-typu.md) | `/sk/kakao-holandskeho-typu/` |
 | [Karamelové veterníky s dvojakým krémom — recept \| Jůzlová](karamelove-veterniky.md) | `/sk/karamelove-veterniky/` |
@@ -21,7 +21,7 @@
 | [Kto sme — rodinná dielňa Jůzlová, Kochánov, od roku 2004](kto-sme.md) | `/sk/kto-sme/` |
 | [Kontakt Jůzlová — Kochánov 40, Česko, denne 8–19](kontakt.md) | `/sk/kontakt/` |
 | [Kremrole z maslového cesta s talianskym snehom — recept](kremrole.md) | `/sk/kremrole/` |
-| [Miniveterníčky s pudingovým krémom — recept \| Jůzlová](mini-veterniky.md) | `/sk/mini-veterniky/` |
+| [Miniveterníčky s pudingovým krémom a čokoládou — recept](mini-veterniky.md) | `/sk/mini-veterniky/` |
 | [Recepty z knedieľ v prášku, pudingu a kakaa \| Jůzlová](recepty.md) | `/sk/recepty/` |
 | [Rýchle venčeky či veterníčky z odpaľovaného cesta — recept](rychle-venceky-a-veterniky.md) | `/sk/rychle-venceky-a-veterniky/` |
 | [Šúľance s makom zo zemiakového cesta — recept \| Jůzlová](sulance-s-makom.md) | `/sk/sulance-s-makom/` |
@@ -33,4 +33,3 @@
 | [Knedle v prášku, puding a kakao pre kuchyne \| Jůzlová](velkoobchod.md) | `/sk/velkoobchod/` |
 | [Venčeky s vanilkovým krémom a rumovou polevou — recept](venceky-s-vanilkovym-kremom.md) | `/sk/venceky-s-vanilkovym-kremom/` |
 | [Veterníčky s vanilkovým krémom a cukrovou polevou — recept](veterniky-s-vanilkovym-kremom.md) | `/sk/veterniky-s-vanilkovym-kremom/` |
-| [Bývate v zahraničí? Vyzdvihnutie v dielni \| Jůzlová](zasielky-do-eu.md) | `/sk/zasielky-do-eu/` |

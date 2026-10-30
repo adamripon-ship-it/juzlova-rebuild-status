@@ -33,7 +33,7 @@ We use no wheat starch in the pudding. Corn starch naturally contains no gluten,
 
 ### How much to use
 
-Dosage: about 40 g per 500 ml of milk. One kilo makes about 25 puddings, or cream for several trays of cream puffs.
+About 40 g per 500 ml of milk. One kilo makes about 25 puddings, or cream for several trays of cream puffs.
 
 ### Chocolate?
 

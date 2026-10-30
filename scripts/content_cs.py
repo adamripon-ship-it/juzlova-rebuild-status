@@ -1,8 +1,8 @@
 # Czech content — source of truth. Rewritten 2026-09-16 per docs/messaging/04-rewrite-cs.md.
 # Rules: one fact once per page, proof before adjectives, no unprovable taste claims,
 # no supermarket multipliers, no invented scores. Czech first; EN/DE/SK adapt the argument.
-# Framing (2026-09-23, owner): collection first — pick-up in Kochánov or Humpolec, arranged by
-# phone with Jiřina. Free Vysočina delivery is secondary; parcels (CZ or abroad) only on request.
+# Framing (owner): collection first — pick-up in Kochánov or Humpolec, arranged by phone with
+# Jiřina. Delivery to Humpolec and Havlíčkův Brod only.
 from cocoa_faq import product_cocoa_faq
 
 LANG = {
@@ -13,7 +13,7 @@ LANG = {
         "nav_home": "Úvod", "nav_about": "Kdo jsme", "nav_delivery": "Kde nás najdete",
         "nav_products": "Produkty", "nav_prices": "Ceník", "nav_recipes": "Recepty",
         "nav_faq": "Časté dotazy", "nav_contact": "Kontakt",
-        "nav_b2b": "Pro kuchyně", "nav_d2c": "Bydlíte v zahraničí",
+        "nav_b2b": "Pro kuchyně",
         "nav_aria": "Hlavní navigace",
         "menu_open": "Otevřít menu",
         "menu_close": "Zavřít menu",
@@ -41,14 +41,6 @@ LANG = {
         "deliver_1": "Vyzvednete zdarma v dílně v Kochánově 40 nebo v Humpolci. Den a hodinu domluvíte s Jiřinou po telefonu.",
         "deliver_2": "Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
         "deliver_btn": "Zavolat a domluvit vyzvednutí",
-        "sec_b2b": "Vaříte pro stovky lidí?",
-        "sec_b2b_kicker": "Pro kuchyně",
-        "sec_b2b_lead": "Jídelnám, restauracím, pekárnám a zmrzlinářům dodáváme stejných pět směsí za množstevní cenu. Vyzvednete v Kochánově, nebo domluvíme rozvoz.",
-        "sec_b2b_btn": "Poptat cenu pro kuchyni",
-        "sec_d2c": "Bydlíte v zahraničí?",
-        "sec_d2c_kicker": "Mimo Česko",
-        "sec_d2c_lead": "Jsme malá místní dílna a většina lidí si směsi vyzvedne. Poslat balíkem do zahraničí můžeme po domluvě; dopravu, balení a pojištění platíte navíc.",
-        "sec_d2c_btn": "Zavolat a domluvit se",
         "nl_h": "Recepty a novinky e-mailem",
         "nl_kicker": "Novinky",
         "nl_lead": "Občas pošleme nový recept ze směsí a sezónní tipy před Vánoci a Velikonocemi. Odhlásíte se jedním kliknutím.",
@@ -68,7 +60,6 @@ LANG = {
         "cta_order": "Objednat u Jiřiny",
         "cta_pickup": "Kde vyzvednout",
         "cta_quote": "Poptat cenu pro kuchyni",
-        "cta_eu": "Zavolat a domluvit se",
         "full_price_list": "Celý ceník",
         "all_recipes": "Všechny recepty",
         "recipes_h1": "Recepty z našich směsí: od nedělních knedlíků po věnečky a perník",
@@ -109,8 +100,8 @@ LANG = {
         "b2b_vis_1_p": "Bramborové těsto na vodu: odpadá loupání a strouhání třiceti kil brambor. Konzistence je každý den stejná.",
         "b2b_vis_2_h": "Krátká etiketa",
         "b2b_vis_2_p": "Složení a etikety pošleme e-mailem.",
-        "b2b_vis_3_h": "Tři cesty dodání",
-        "b2b_vis_3_p": "Vyzvednutí v Kochánově, rozvoz do Humpolce a Havlíčkova Brodu nebo váš dopravce.",
+        "b2b_vis_3_h": "Dvě cesty dodání",
+        "b2b_vis_3_p": "Vyzvednutí v Kochánově nebo rozvoz do Humpolce a Havlíčkova Brodu.",
         "b2b_vis_4_h": "Papíry ke kakau",
         "b2b_vis_4_p": "Ke kakau pošleme laboratorní certifikát k vaší šarži. Bez 14 alergenů EU, lepek pod 20 ppm.",
         "order_info": "Objednávka",
@@ -175,7 +166,7 @@ LANG = {
             "cta": ("cta_call", "kontakt", "cta_write"),
             "body": [
                 ("h2", "Jak to začalo"),
-                ("p", "Výrobu potravinářských směsí jsme v malé dílně v Kochánově zahájili v roce 2004. Receptury jsme léta ladili. Dnes od nás berou domácnosti v Čechách i na Moravě a k tomu jídelny, restaurace a pekárny."),
+                ("p", "Výrobu potravinářských směsí jsme v malé dílně v Kochánově zahájili v roce 2004. Receptury jsme léta ladili. Dnes od nás berou domácnosti, jídelny, restaurace a pekárny."),
                 ("team", None),
                 ("h2", "Odkud je mouka"),
                 ("p", "Mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dílny."),
@@ -213,7 +204,7 @@ LANG = {
             "title": "Kontakt Jůzlová — Kochánov 40, telefon denně 8–19",
             "desc": "Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931. Dílna Kochánov 40, 582 53, 12 km od Havlíčkova Brodu. Odběr i v Humpolci po domluvě.",
             "nav": "Kontakt",
-            "h1": "Zavolejte Jiřině nebo Jiřímu — denně 8–19, domluvíme objednávku i odběr",
+            "h1": "Zavolejte Jiřině nebo Jiřímu — denně 8⁠–⁠19, domluvíme objednávku i odběr",
             "sub": "Včetně sobot a nedělí, vždy po předchozí domluvě.",
             "cta": None,
             "body": [
@@ -244,7 +235,7 @@ LANG = {
         },
         "velkoobchod": {
             "title": "Velkoobchod: knedlíky v prášku, puding, kakao | Jůzlová",
-            "desc": "Směsi pro jídelny, restaurace, pekárny a zmrzlináře od výrobce z Vysočiny. Odběr v Kochánově, rozvoz do Humpolce a Havlíčkova Brodu nebo váš dopravce.",
+            "desc": "Směsi pro jídelny, restaurace, pekárny a zmrzlináře od výrobce z Vysočiny. Odběr v Kochánově nebo rozvoz do Humpolce a Havlíčkova Brodu.",
             "nav": "Pro kuchyně",
             "h1": "Knedlíky, puding a kakao pro jídelny a restaurace: odběr v Kochánově",
             "sub": "Zásobujeme jídelny, restaurace, pekárny, kavárny, školy a zmrzlináře. Jména zákazníků na web nedáváme.",
@@ -265,22 +256,8 @@ LANG = {
                 ("ol", [
                     "Vyzvednutí v dílně v Kochánově",
                     "Rozvoz do Humpolce a Havlíčkova Brodu",
-                    "Váš vlastní dopravce",
                 ]),
                 ("form_b2b", None),
-            ],
-        },
-        "do_eu": {
-            "title": "Bydlíte v zahraničí? Vyzvednutí v dílně | Jůzlová",
-            "desc": "Jsme malá dílna v Kochánově a zákazníci si směsi vyzvednou v dílně. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
-            "nav": "Bydlíte v zahraničí",
-            "h1": "Bydlíte v zahraničí? Jsme malá místní dílna a zboží si vyzvednete u nás",
-            "sub": "Vyzvednutí v dílně v Kochánově po domluvě. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
-            "cta": ("cta_call", "kontakt", "cta_write"),
-            "body": [
-                ("h2", "Pro rodinu v Česku"),
-                ("p", "Chcete směsi pro rodiče v Česku? Nejjednodušší je, když si je vyzvednou v Kochánově nebo v Humpolci."),
-                ("form", None),
             ],
         },
     },

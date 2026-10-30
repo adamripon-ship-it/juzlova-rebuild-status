@@ -17,7 +17,7 @@ Jiřina anrufen und bestellen Alles zum Kakao
 
 Jiřina anrufen und bestellen Alles zur Mischung
 
-### Rohe Kartoffelknödel ohne Schälen und Reiben Mit Wasser anrühren, formen, kochen. Bosáky, Halušky und Strapačky ohne Kartoffelarbeit.
+### Rohe Kartoffelknödel ohne Schälen und Reiben Mit Wasser anrühren, formen, kochen. Bosáky, Halušky und Strapačky, ohne Kartoffeln zu schälen.
 
 Jiřina anrufen und bestellen Alles zu Bosáky
 
@@ -33,7 +33,7 @@ Kartoffelknödel-Mischung 5 kg / 250 Kč Rohe Kartoffelknödel-Mischung (chlupat
 
 ### Fünf Mischungen. Eine Werkstatt.
 
-Das Mehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt.
+Das Mehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt entfernt.
 
 5 kg Kartoffelknödel-Mischung · 250 Kč
 
@@ -49,7 +49,7 @@ Kartoffelknödel-Mischung 5 kg / 250 Kč Rohe Kartoffelknödel-Mischung (chlupat
 
 1 kg Pudding und Zucker im Kilobeutel
 
-Pudding im Kilo, Zucker im Kilo, Knödelmischung im 5-kg-Beutel. Einfache Verpackung, Verkauf direkt aus der Werkstatt.
+Pudding und Zucker im Kilobeutel, Knödelmischung im 5-kg-Beutel. Einfache Verpackung, Verkauf direkt aus der Werkstatt.
 
 - Kartoffelknödel-Mischung 5 kg / 250 Kč
 - Rohe Kartoffelknödel-Mischung (chlupaté knedlíky) 5 kg / 260 Kč
@@ -89,15 +89,15 @@ Alle Rezepte
 
 Bestellungen nimmt Jiřina Jůzlová entgegen, täglich 8–19 Uhr. Kein Onlineshop, kein Callcenter. Wir antworten auf Tschechisch; für Deutsch nutzen wir bei Bedarf eine Übersetzungshilfe.
 
-#### Abgepackt im Kilo
+#### Kiloweise abgepackt
 
-Pudding im Kilo, Zucker im Kilo, Knödelmischung im 5-kg-Beutel. Einfache Verpackung, Verkauf direkt aus der Werkstatt.
+Pudding und Zucker im Kilobeutel, Knödelmischung im 5-kg-Beutel. Einfache Verpackung, Verkauf direkt aus der Werkstatt.
 
 Für Küchen Anfahrt
 
 ### Abholen in Kochánov oder Humpolec
 
-- Abholung in der Werkstatt in Kochánov oder in Humpolec, kostenlos — Termin telefonisch mit Jiřina vereinbart.
+- Kostenlose Abholung in der Werkstatt in Kochánov oder in Humpolec. Den Termin vereinbaren Sie telefonisch mit Jiřina.
 - Nach Humpolec und Havlíčkův Brod liefern wir.
 
 Anrufen und Abholung vereinbaren Anfahrt
@@ -118,6 +118,6 @@ Gelegentlich ein neues Rezept mit unseren Mischungen und saisonale Tipps vor Wei
 
 *label:* E-Mail
 
-*label:* Ich stimme dem Erhalt von Neuigkeiten per E-Mail zu. Die Werkstatt Jůzlová erhält meine E-Mail-Adresse. Widerruf jederzeit per E-Mail.
+*label:* Ich stimme dem Erhalt von Neuigkeiten per E-Mail zu. Meine E-Mail-Adresse erhält die Jůzlová s.r.o. Widerruf jederzeit per E-Mail.
 
 *button:* Rezepte abonnieren

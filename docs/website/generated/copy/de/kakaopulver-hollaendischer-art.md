@@ -31,7 +31,7 @@ Der Kakaobaum blüht direkt am Stamm; aus jeder Blüte, die ansetzt, wird eine F
 
 ### Warum das Fett zählt
 
-Nach EU-Recht braucht ein Pulver mindestens 20 % Kakaobutter, um Kakaopulver heißen zu dürfen; darunter gilt es als fettarmer Kakao. Unser Kakao ist schwach entölt mit 20–22 %; stark entölter Supermarktkakao liegt bei 10–12 %. Mehr Kakaobutter bedeutet dunklere Farbe, volleren Geschmack und glattere Creme.
+Nach EU-Recht braucht ein Pulver mindestens 20 % Kakaobutter, um Kakaopulver heißen zu dürfen; darunter gilt es als fettarmer Kakao. Unser Kakao ist schwach entölt und enthält 20–22 %. Mehr Kakaobutter bedeutet dunklere Farbe, volleren Geschmack und glattere Creme.
 
 ### Herkunft
 
@@ -53,11 +53,11 @@ Trinkkakao und Shakes — in Milch bleiben Farbe und cremiger Geschmack erhalten
 
 #### Cremes
 
-Füllungen und Cremes — das Pulver selbst bringt keinen Zucker mit.
+Füllungen und Cremes — ohne Zuckerzusatz, die Süße bestimmen Sie selbst.
 
 #### Bestreuen
 
-Schnitten, Rouladen und Keksdesserts — feiner dunkler Staub, der nicht klumpt.
+Schnitten, Rouladen und Keksdesserts — feines dunkles Pulver, das nicht klumpt.
 
 #### Mit Vanillepudding
 
@@ -85,15 +85,15 @@ Eisen 31 mg
 
 Dazu Magnesium 490 mg, Kalium 4 400 mg und Eisen 31 mg je 100 g.
 
-Werte je 100 g nach EU-Verordnung 1169/2011. Kakao verwenden Sie löffelweise — je Portion ein Bruchteil der Tabelle.
+Werte je 100 g nach EU-Verordnung 1169/2011. Kakao verwenden Sie löffelweise — je Portion nur ein Bruchteil der Tabellenwerte.
 
 ### Technische Daten
 
 - Kakaobutter 20,0–22,0 %
 - pH (10 % Lösung) 7,8–8,2
 - Feinheit min. 99,5 % unter 75 µm
-- Feuchte max. 5,0 %
-- Schalen max. 1,75 %
+- Feuchtigkeit max. 5,0 %
+- Schalenanteil max. 1,75 %
 - Schwermetalle innerhalb der Grenzwerte der Verordnung (EU) 2023/915
 - EU-Allergene keines der 14
 - Gluten < 20 ppm
@@ -101,17 +101,17 @@ Werte je 100 g nach EU-Verordnung 1169/2011. Kakao verwenden Sie löffelweise �
 
 ### Lagerung
 
-Trocken, fern von starken Gerüchen, ideal bei 15–20 °C und unter 50 % Luftfeuchte.
+Trocken, fern von starken Gerüchen, ideal bei 15–20 °C und unter 50 % Luftfeuchtigkeit.
 
 ### Häufige Fragen
 
 *summary:* Warum ändert sich der Kakaopreis?
 
-Kakao ist eine Börsenware: Wetter, Nachfrage und neue EU-Grenzwerte für Schwermetalle bewegen den Preis. Die Liste passen wir an, wenn sich unser Einkauf ändert.
+Kakao ist eine Börsenware: Wetter, Nachfrage und neue EU-Grenzwerte für Schwermetalle bewegen den Preis. Die Preisliste passen wir an, wenn sich unser Einkaufspreis ändert.
 
 *summary:* Ist das Rohkakao?
 
-Nein. Er ist alkalisiert (holländisch) und geröstet. Rohkakao ist ungeröstet und schmeckt bitter und grasig; unserer ist mild und rund mit Röstnoten.
+Nein. Er ist alkalisiert (holländische Art) und geröstet. Rohkakao ist ungeröstet und schmeckt bitter und grasig; unserer ist mild und rund mit Röstnoten.
 
 *summary:* Eignet er sich für Speiseeis?
 
@@ -127,6 +127,6 @@ Cadmium gelangt aus dem Boden in die Bohne. Hohe Werte sind typisch für Kakao v
 
 *summary:* Und Blei?
 
-In Westafrika ist Blei das Metall, auf das geachtet wird. Es bleibt auf der Schale der Bohne, nicht im Kern, und wird beim Schälen vor dem Mahlen mit der Schale entfernt. Auch Blei steht im Chargenzertifikat.
+In Westafrika ist Blei das Metall, auf das geachtet wird. Es haftet an der Schale der Bohne, nicht am Kern, und wird beim Schälen vor dem Mahlen mit der Schale entfernt. Auch Blei steht im Chargenzertifikat.
 
 Bei Jiřina bestellen Schreiben Sie uns

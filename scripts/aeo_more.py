@@ -36,8 +36,6 @@ def more_pages(lang, t, price, page):
                    "No. A private address near the Bernard brewery, not at the brewery gate.",
                    "Nein. Ein privater Ort nahe Pivovar Bernard, nicht am Tor.",
                    "Nie. Súkromné miesto v okolí Pivovaru Bernard, nie pri vrátach.")),
-                (t("Je v ceně doprava?", "Is delivery included?", "Ist die Lieferung im Preis?", "Je v cene doprava?"),
-                 t("Ne. Cena na webu je jen za zboží.", "No. The website price is for the goods only.", "Nein. Der Website-Preis gilt nur für die Ware.", "Nie. Cena na webe je len za tovar.")),
                 (t("Jak domluvím hodinu?", "How do I agree a time?", "Wie vereinbare ich die Uhrzeit?", "Ako dohodnem hodinu?"),
                  t("Telefon +420 728 466 141 nebo +420 607 629 931, denně 8:00–19:00.",
                    "Phone +420 728 466 141 or +420 607 629 931, daily 8:00–19:00.",
@@ -220,7 +218,7 @@ def more_pages(lang, t, price, page):
               "Asi 90 % zákaziek je okolo dielne. Vyzdvihnutie v Kochánove 40, 582 53 je pre prevádzky zadarmo."),
             [
                 ("p", t(
-                    "Když je kuchyně v Kochánově, Herálci nebo v okolních vsích, nejjednodušší je přijet do dílny. Žádný rozvoz, žádná krabice. Ceník domácností 250 / 260 / 60 / 30 / 270 Kč tu platí.",
+                    "Když je kuchyně v Kochánově, Herálci nebo v okolních vsích, nejjednodušší je přijet do dílny. Ceník domácností 250 / 260 / 60 / 30 / 270 Kč tu platí.",
                     "If your kitchen is in Kochánov, Herálec or one of the nearby villages, the simplest option is to collect at the workshop. No delivery, no packaging. The household list prices 250 / 260 / 60 / 30 / 270 Kč are the starting point; larger volumes are quoted separately.",
                     "Liegt die Küche in Kochánov, Herálec oder einem der Nachbardörfer, ist die Werkstatt der kürzeste Weg. Keine Lieferung, kein Karton. Die Haushaltspreise 250 / 260 / 60 / 30 / 270 Kč sind der Ausgangspunkt; größere Mengen kalkulieren wir separat.",
                     "Keď je kuchyňa v Kochánove, Herálci alebo v okolitých dedinách, najjednoduchšie je prísť do dielne. Žiadny rozvoz, žiadna krabica. Cenník domácností 250 / 260 / 60 / 30 / 270 Kč tu platí ako východisko; väčšie množstvo oceníme zvlášť.",
@@ -243,42 +241,5 @@ def more_pages(lang, t, price, page):
               "wholesale Kochánov 40 workshop collection",
               "Großhandel Kochánov 40 Werkstatt",
               "veľkoobchod Kochánov 40 odber v dielni"),
-        ),
-        # Czech-only pages, so these need no translations.
-        "velkoobchod_praha": page(
-            "Velkoobchod pro Prahu — odběr v dílně | Jůzlová",
-            "Provozovny si zboží vyzvednou v dílně v Kochánově 40, 582 53; den a hodinu domluvíme po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
-            "Velkoobchod pro Prahu",
-            "Vyzvednete v dílně v Kochánově po domluvě. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
-            [
-                ("links", "b2b"),
-                ("form_b2b", None),
-            ],
-            [],
-            "velkoobchod Praha Jůzlová, knedlíky v prášku",
-        ),
-        "velkoobchod_brno": page(
-            "Velkoobchod pro Brno — odběr v dílně | Jůzlová",
-            "Provozovny si zboží vyzvednou v dílně v Kochánově 40, 582 53; den a hodinu domluvíme po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
-            "Velkoobchod pro Brno",
-            "Vyzvednete v dílně v Kochánově po domluvě. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
-            [
-                ("links", "b2b"),
-                ("form_b2b", None),
-            ],
-            [],
-            "velkoobchod Brno Jůzlová, knedlíky v prášku",
-        ),
-        "velkoobchod_zahranici": page(
-            "Velkoobchod mimo Česko — odběr v dílně | Jůzlová",
-            "Provozovny si zboží vyzvednou v dílně v Kochánově 40, 582 53; den a hodinu domluvíme po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
-            "Velkoobchod mimo Česko",
-            "Vyzvednete v dílně v Kochánově po domluvě. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
-            [
-                ("links", "b2b"),
-                ("form_b2b", None),
-            ],
-            [],
-            "velkoobchod Jůzlová, odběr v dílně",
         ),
     }

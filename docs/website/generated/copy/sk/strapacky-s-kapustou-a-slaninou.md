@@ -3,7 +3,7 @@
 # Strapačky s kapustou a slaninou — recept z chlpatých knedieľ
 
 - **URL:** `/sk/strapacky-s-kapustou-a-slaninou/`
-- **Meta description:** Strapačky z našich chlpatých knedieľ v prášku s kyslou kapustou, jarnou cibuľkou a slaninou vypečenou na masti. Výdatná slovenská klasika.
+- **Meta description:** Strapačky z našich chlpatých knedieľ v prášku (400 g) so 400 g kyslej kapusty, jarnou cibuľkou a slaninou vypečenou na masti. Výdatná slovenská klasika.
 
 ---
 
@@ -33,7 +33,7 @@ Použitá zmes
 
 - Chlpaté knedle v prášku zmiešajte s vodou podľa návodu. Napučané cesto pretlačte cez cedník na halušky priamo do vriacej vody a varte, kým nevyplávajú.
 - Kyslú kapustu povarte v hrnci s vodou asi 10 minút; zvyšnú vodu zlejte.
-- Na panvici na masti opražte slaninu nakrájanú na menšie kúsky; keď je zľahka vypražená, pridajte na kolieska nakrájanú jarnú cibuľku a po minúte odstavte.
+- Na panvici na masti opražte slaninu nakrájanú na menšie kúsky; keď je zľahka vypečená, pridajte na kolieska nakrájanú jarnú cibuľku a po minúte odstavte.
 - Halušky zmiešajte s kapustou a na tanieri posypte slaninou s cibuľkou.
 
 ### Časté otázky
@@ -44,7 +44,7 @@ Z chlpatých knedieľ v prášku pretlačených na halušky do vriacej vody, s k
 
 *summary:* Ako dlho trvá príprava strapačiek?
 
-Asi 30 minút: cesto podľa návodu, halušky variť, kým vyplávajú, kapustu 10 minút povariť, slaninu opražiť.
+Asi 30 minút: cesto podľa návodu, halušky variť, kým nevyplávajú, kapustu 10 minút povariť, slaninu opražiť.
 
 Návrhy k tomuto receptu
 
@@ -53,8 +53,8 @@ Návrhy k tomuto receptu
 Ďalšie recepty, ktoré sa k nemu hodia — rovnaká zmes alebo podobný postup.
 
 - Šúľance s makom Tradičná sladká večera zo zemiakového cesta: šúľance obalené v maku s cukrom, preliate rozpusteným maslom. Viac
-- Zemiakovo-tvarohové knedle s jahodami Leto je tu a s ním aj dozrievanie jahôd. Jednoduchý a rýchly recept, ktorým za 20 minút potešíte aj najväčších maškrtníkov. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
+- Zemiakovo-tvarohové knedle s jahodami Rýchle ovocné knedle na jahodovú sezónu: zemiakové cesto s tvarohom, hotové za 20 minút. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
 - Bebe rezy s čokoládovým pudingom Radi by ste pohostili návštevu, ale nie ste práve Jamie Oliver? Nepečené bebe rezy zvládne naozaj každý. Viac
 - Šľahačková roláda Ľahký múčnik za pol hodiny: kontrast horkastého kakaa a jemne sladkej šľahačky. Bez múky, teda aj bez lepku. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac

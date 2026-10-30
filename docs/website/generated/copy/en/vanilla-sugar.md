@@ -40,7 +40,7 @@ Keep it dry and sealed so the sugar doesn't turn damp and hard.
 
 *summary:* Is it the same as shop-bought vanilla sugar?
 
-Yes. Like most shop-bought vanilla sugar, it is flavoured with vanillin rather than ground vanilla pod.
+Yes. It is sugar flavoured with vanillin, not ground vanilla pod.
 
 *summary:* Do you sell real vanilla?
 

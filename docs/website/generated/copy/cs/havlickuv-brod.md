@@ -76,7 +76,3 @@ Ano. Vyzvednutí v Kochánově je zdarma po telefonu.
 *summary:* Odkud je mouka?
 
 Z mlýna v Havlíčkově Brodě.
-
-*summary:* Je v ceně doprava?
-
-Ne. Cena na webu je jen za zboží.

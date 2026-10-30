@@ -32,7 +32,7 @@ Použitá zmes
 - Vanilkový maslový krém: 500 ml mlieka
 - 80 g nášho vanilkového pudingu v prášku
 - 2 žĺtky
-- 80 g kryštálového cukru
+- 80 g krupicového cukru
 - 200 g zmäknutého masla
 - 1–2 lyžice rumu (podľa chuti)
 - Cukrová poleva: 250 g práškového cukru
@@ -43,11 +43,11 @@ Použitá zmes
 ### Postup
 
 - Krém začnite ako prvý, musí úplne vychladnúť. Puding rozmiešajte v 100 ml studeného mlieka so žĺtkami. Zvyšné mlieko s cukrom priveďte do varu, za stáleho miešania vlejte pudingovú zmes a varte na miernom ohni 1–2 minúty, kým nezhustne. Prelejte do misy, na povrch pritlačte fóliu a nechajte vychladnúť na izbovú teplotu.
-- Mlieko, vodu, maslo a soľ priveďte do varu. Stiahnite plameň, vsypte všetku múku naraz a miešajte 2–3 minúty, kým sa cesto nespojí do hladkej gule a na dne hrnca nezostane tenký povlak.
-- Cesto preložte do misy a nechajte 5–10 minút vychladnúť, kým nie je len vlažné. Po jednom zašľahajte vajcia. Posledné vajce pridávajte po troškách: cesto je hotové, keď zo stierky padá v hustom, lesklom „V“. Všetky vajcia minúť nemusíte.
+- Mlieko, vodu, maslo a soľ priveďte do varu. Znížte plameň, vsypte všetku múku naraz a miešajte 2–3 minúty, kým sa cesto nespojí do hladkej gule a na dne hrnca nezostane tenký povlak.
+- Cesto preložte do misy a nechajte 5–10 minút vychladnúť, kým nie je len vlažné. Po jednom zašľahajte vajcia. Posledné vajce pridávajte po troškách: cesto je hotové, keď zo stierky padá v hustom, lesklom „V“. Všetky vajcia spotrebovať nemusíte.
 - Rúru predhrejte na 220 °C (horný a spodný ohrev). Cesto dajte do vrecka s veľkou hviezdicovou špičkou a na plech s papierom na pečenie striekajte ružice s priemerom 4–5 cm s rozostupmi asi 3 cm.
 - Pečte 10 minút na 220 °C, potom znížte na 180 °C a pečte ešte 15–20 minút, kým nie sú veterníčky sýto zlatisté a ľahké. Rúru prvých 20 minút neotvárajte, inak veterníčky spadnú.
-- Ešte teplé veterníčky rozrežte vodorovne nožom so zúbkami a nechajte úplne vychladnúť na mriežke.
+- Ešte teplé veterníčky rozrežte vodorovne zúbkovaným nožom a nechajte úplne vychladnúť na mriežke.
 - Zmäknuté maslo šľahajte 3–4 minúty do svetlej peny. Po lyžiciach pridávajte vychladnutý puding rovnakej teploty a šľahajte dohladka. Nakoniec vmiešajte rum.
 - Práškový cukor preosejte a vymiešajte s citrónovou šťavou, rumom a horúcou vodou do hustej polevy, ktorá pomaly steká z lyžice.
 - Do spodných polovíc nastriekajte krém hviezdicovou špičkou tak, aby presahoval okraj. Vrchy namočte do polevy, nechajte odkvapkať a priklopte. Pred podávaním nechajte v chlade aspoň hodinu stuhnúť.
@@ -56,7 +56,7 @@ Poleva zostane biela vďaka citrónovej šťave. Keď je príliš hustá, pridaj
 
 Maslo a puding musia mať rovnakú teplotu. Studený puding v teplom masle krém zrazí.
 
-Ľahšia varianta: do hotového krému vmiešajte 150 ml vyšľahanej smotany na šľahanie. Takéto veterníčky vydržia v chladničke len do druhého dňa.
+Ľahší variant: do hotového krému vmiešajte 150 ml vyšľahanej smotany na šľahanie. Takéto veterníčky vydržia v chladničke len do druhého dňa.
 
 Neplnené veterníčky vydržia v uzavretej dóze 2 dni. Plňte ich najneskôr niekoľko hodín pred podávaním, aby zostali chrumkavé.
 
@@ -79,6 +79,6 @@ Návrhy k tomuto receptu
 - Venčeky s vanilkovým krémom Klasické venčeky z odpaľovaného cesta s vanilkovým maslovým krémom a rumovou polevou. Asi 20 kúskov. Viac
 - Miniveterníčky Malé veterníčky z odpaľovaného cesta s maslovo-pudingovým krémom s tvarohom a čokoládovou polevou. Asi 40–45 kúskov. Viac
 - Karamelové veterníky Veterníky s vanilkovým pudingovým krémom, karamelovou šľahačkou a karamelovou polevou. Asi 24 stredných kúskov. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
-- Rýchle venčeky či veterníčky Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechách. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac
+- Rýchle venčeky či veterníčky Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechoch. Viac

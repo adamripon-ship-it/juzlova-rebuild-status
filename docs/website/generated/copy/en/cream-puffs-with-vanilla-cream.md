@@ -74,11 +74,11 @@ Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
-- Choux wreaths with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
+- Choux rings with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
 - Mini choux buns (minivětrníčky) Mini větrníčky from choux pastry with a butter, pudding and curd cream and a chocolate glaze. About 40–45 pieces. More
 - Caramel větrníky Větrníky with vanilla pudding cream, caramel whipped cream and caramel glaze. About 24 medium pieces. More
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Homemade gingerbread (perník) Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough. More
-- Quick choux wreaths or puffs One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Homemade gingerbread (perník) Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa. More
+- Quick choux rings or puffs One choux pastry for both věnečky and větrníčky: extra butter and a 250 °C start. About 80 pieces on two trays. More

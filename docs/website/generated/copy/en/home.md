@@ -77,7 +77,7 @@ Every recipe says how much mix to use, the oven temperature and how many portion
 
 Poppy-seed rolls (šišky s mákem)
 
-Strapačky with cabbage and bacon
+Strapačky with sauerkraut and bacon
 
 Pear cake with vanilla pudding
 
@@ -87,7 +87,7 @@ All recipes
 
 #### You talk to the maker
 
-Jiřina Jůzlová takes orders daily, 8–19. No web shop, no call centre. Replies are in Czech; for German and English we sometimes use a translator.
+Jiřina Jůzlová takes orders daily, 8–19. No web shop, no call centre. Replies are in Czech; for German and English we sometimes use a translation tool.
 
 #### Packed by the kilo
 

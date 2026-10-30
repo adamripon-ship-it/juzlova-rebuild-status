@@ -61,7 +61,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20261030a"
+ASSET_VER = "20261030b"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -79,7 +79,6 @@ PAGE_SLUGS = {
     "kdo_jsme": "kdo-jsme",
     "kde_nas_najdete": "kde-nas-najdete",
     "velkoobchod": "velkoobchod",
-    "do_eu": "zasilky-do-eu",
     "kontakt": "kontakt",
     "ceny": "cenik",
 }
@@ -96,7 +95,7 @@ SLUGS = {
     "en": {
         "home": "", "recepty": "recipes", "faq": "faq",
         "kdo_jsme": "about-us", "kde_nas_najdete": "where-to-find-us",
-        "velkoobchod": "wholesale", "do_eu": "shipping-to-eu",
+        "velkoobchod": "wholesale",
         "kontakt": "contact", "ceny": "prices",
         "bramborove_knedliky": "potato-dumpling-mix",
         "chlupate_knedliky": "raw-potato-dumpling-mix",
@@ -121,7 +120,7 @@ SLUGS = {
     "de": {
         "home": "", "recepty": "rezepte", "faq": "haeufige-fragen",
         "kdo_jsme": "ueber-uns", "kde_nas_najdete": "anfahrt",
-        "velkoobchod": "grosshandel", "do_eu": "versand-in-die-eu",
+        "velkoobchod": "grosshandel",
         "kontakt": "kontakt", "ceny": "preisliste",
         "bramborove_knedliky": "kartoffelknoedel-mischung",
         "chlupate_knedliky": "rohe-kartoffelknoedel-mischung",
@@ -146,7 +145,7 @@ SLUGS = {
     "sk": {
         "home": "", "recepty": "recepty", "faq": "caste-otazky",
         "kdo_jsme": "kto-sme", "kde_nas_najdete": "kde-nas-najdete",
-        "velkoobchod": "velkoobchod", "do_eu": "zasielky-do-eu",
+        "velkoobchod": "velkoobchod",
         "kontakt": "kontakt", "ceny": "cennik",
         "bramborove_knedliky": "zemiakove-knedle-v-prasku",
         "chlupate_knedliky": "chlpate-knedle-v-prasku",
@@ -479,22 +478,22 @@ LEGACY_REDIRECTS = {
     "dotaz-na-produkty": "kontakt", "kdo-jsme": "kdo_jsme", "kdo_jsme": "kdo_jsme",
     "potravinarske-smesi-kontact-praha-ceske-republiky": "kontakt",
     "recepty-index": "recepty", "recepty": "recepty", "faq": "faq",
-    "ceny": "ceny", "do-eu": "do_eu", "kde-nas-najdete": "kde_nas_najdete",
+    "ceny": "ceny", "do-eu": "kde_nas_najdete", "kde-nas-najdete": "kde_nas_najdete",
+    "zasilky-do-eu": "kde_nas_najdete", "shipping-to-eu": "kde_nas_najdete",
+    "versand-in-die-eu": "kde_nas_najdete", "zasielky-do-eu": "kde_nas_najdete",
     "velkoobchod": "velkoobchod", "kontakt": "kontakt",
     "objednavka-cesko": "objednavka_cesko", "navstevnikum": "navstevnikum",
     "vysocina": "vysocina", "havlickuv-brod": "havlickuv_brod", "humpolec": "humpolec",
     "kochanov": "kochanov",
     "velkoobchod-vysocina": "velkoobchod_vysocina", "velkoobchod-kochanov": "velkoobchod_kochanov",
-    "velkoobchod-praha": "velkoobchod_praha", "velkoobchod-brno": "velkoobchod_brno",
-    "velkoobchod-zahranici": "velkoobchod_zahranici",
+    "velkoobchod-praha": "velkoobchod", "velkoobchod-brno": "velkoobchod",
+    "velkoobchod-zahranici": "velkoobchod",
 }
 # Local pages exist only in Czech; foreign visitors of the old copies land here.
 LOCAL_FALLBACK = {"objednavka_cesko": "kontakt", "navstevnikum": "kde_nas_najdete",
                   "vysocina": "kde_nas_najdete", "havlickuv_brod": "kde_nas_najdete",
                   "humpolec": "kde_nas_najdete", "kochanov": "kde_nas_najdete",
-                  "velkoobchod_vysocina": "velkoobchod", "velkoobchod_kochanov": "velkoobchod",
-                  "velkoobchod_praha": "velkoobchod", "velkoobchod_brno": "velkoobchod",
-                  "velkoobchod_zahranici": "velkoobchod"}
+                  "velkoobchod_vysocina": "velkoobchod", "velkoobchod_kochanov": "velkoobchod"}
 
 # WordPress-era root URLs that Search Console still reports as 404 and that have
 # a real equivalent today. Root only (they never existed under /en/ /de/ /sk/),
@@ -1611,9 +1610,9 @@ def build_home(L):
     next_arrow = '<svg viewBox="0 0 34 14" aria-hidden="true"><path d="M0,7 H31 M25,1 l6,6 -6,6"/></svg>'
     hero = f"""<section class="band gold hero">
   <div class="clip">
-    {sil(depth, "sil-leaf-banana", "left:-16%;bottom:-6%;width:clamp(460px,54vw,780px);opacity:.55", cls="art plx", speed=30, rotate="-10deg", origin="4% 55%")}
-    {sil(depth, "sil-leaf-cocoa", "left:8%;top:10%;width:clamp(150px,15vw,220px);opacity:.95", cls="art plx hide-phone", speed=-20, rotate="-24deg", origin="50% 95%")}
-    {sil(depth, "sil-beans", "right:2%;bottom:1%;width:clamp(150px,14vw,230px);opacity:.9", cls="art plx hide-phone", speed=50, rotate="12deg", origin="50% 90%")}
+    {sil(depth, "sil-leaf-banana", "left:-16%;bottom:-6%;width:clamp(460px,54vw,max(780px,41.1rem));opacity:.55", cls="art plx", speed=30, rotate="-10deg", origin="4% 55%")}
+    {sil(depth, "sil-leaf-cocoa", "left:8%;top:10%;width:clamp(150px,15vw,max(220px,11.6rem));opacity:.95", cls="art plx hide-phone", speed=-20, rotate="-24deg", origin="50% 95%")}
+    {sil(depth, "sil-beans", "right:2%;bottom:1%;width:clamp(150px,14vw,max(230px,12.1rem));opacity:.9", cls="art plx hide-phone", speed=50, rotate="12deg", origin="50% 90%")}
   </div>
   <div class="wrap">
     <p class="tagline">{esc(ui['est'])}</p>
@@ -1676,8 +1675,8 @@ def build_home(L):
         for i, pos in enumerate(step_pos))
     journey = f"""<section class="band gold journey">
   <div class="clip">
-    {sil(depth, "sil-leaf-banana", "right:-12%;top:-2%;width:clamp(440px,56vw,820px);opacity:.42", cls="art plx", speed=35, rotate="14deg", origin="96% 50%")}
-    {sil(depth, "sil-vine-vanilla", "left:-4%;bottom:-4%;width:clamp(300px,34vw,520px);opacity:.55", cls="art plx", speed=-15, origin="0% 50%")}
+    {sil(depth, "sil-leaf-banana", "right:-12%;top:-2%;width:clamp(440px,56vw,max(820px,43.2rem));opacity:.42", cls="art plx", speed=35, rotate="14deg", origin="96% 50%")}
+    {sil(depth, "sil-vine-vanilla", "left:-4%;bottom:-4%;width:clamp(300px,34vw,max(520px,27.4rem));opacity:.55", cls="art plx", speed=-15, origin="0% 50%")}
   </div>
   <div class="wrap">
     {cutout_html(assets, "vanilla", ui['alt_vanilla'], cls="bridge-up plx rv", width=806, height=1200, speed=28)}
@@ -1734,8 +1733,8 @@ def build_home(L):
     <path class="stroke" stroke-width="6" data-vine data-leaves="4" data-leaf="sil-leaf-single" data-leaf-size="170" data-leaf-ratio="0.65" data-sprite="{sprite}" d="M-20,180 C200,50 380,310 600,170 S980,30 1200,180 S1500,290 1640,140"/>
     <path class="stroke" stroke-width="4" opacity=".8" data-vine data-leaves="3" data-leaf="sil-leaf-single" data-leaf-size="130" data-leaf-ratio="0.65" data-sprite="{sprite}" d="M-20,250 C240,140 420,330 700,230 S1050,120 1300,240 S1520,320 1640,210"/>
   </svg>
-  {sil(depth, "sil-cocoa", "left:50%;bottom:-8%;width:clamp(300px,28vw,420px);transform:translateX(-50%)", cls="art plx", speed=18, origin="60% 5%")}
-  {sil(depth, "sil-sugarcane-leaves", "left:2%;bottom:0;width:clamp(240px,26vw,380px);opacity:.75", cls="art plx", speed=26, origin="50% 100%")}
+  {sil(depth, "sil-cocoa", "left:50%;bottom:-8%;width:clamp(300px,28vw,max(420px,22.1rem));transform:translateX(-50%)", cls="art plx", speed=18, origin="60% 5%")}
+  {sil(depth, "sil-sugarcane-leaves", "left:2%;bottom:0;width:clamp(240px,26vw,max(380px,20.0rem));opacity:.75", cls="art plx", speed=26, origin="50% 100%")}
   {cutout_html(assets, "leaf-banana", ui['alt_leaf_banana'], cls="why-leaf plx rv", width=1200, height=740, speed=30)}
 </section>"""
 
@@ -2191,6 +2190,9 @@ def build_aeo_page(L, key):
     extra_ld = [breadcrumb_jsonld(L, crumbs)]
     if faqs:
         extra_ld.append(faq_jsonld(faqs))
+    # A page without a form still needs a way to act.
+    has_form = any(kind in ("form", "form_b2b") for kind, _val in pack["body"])
+    closing_cta = "" if has_form else cta_html(L, depth, ("cta_call", "kontakt", "cta_write"))
     active = "velkoobchod" if is_b2b else "kde_nas_najdete"
     meta_kind = "velkoobchod" if is_b2b else "kde_nas_najdete"
     body = f"""<main id="main" class="wrap"><article class="page">
@@ -2199,6 +2201,7 @@ def build_aeo_page(L, key):
 <p class="sub">{esc(pack['sub'])}</p>
 {render_body(L, pack['body'], depth)}
 {faq_html(faqs, L['ui'].get('sec_faq', 'FAQ'))}
+{closing_cta}
 </article></main>"""
     html_out = shell(
         L, title=pack["title"], desc=pack["desc"], pid=key, depth=depth,
@@ -2665,7 +2668,6 @@ def _llms_index(langs_data, lang):
         f"- [{ui['nav_about']}]({url_of(lang, 'kdo_jsme')}): {L['pages']['kdo_jsme']['desc']}",
         f"- [{ui['nav_delivery']}]({url_of(lang, 'kde_nas_najdete')}): {L['pages']['kde_nas_najdete']['desc']}",
         f"- [{ui['nav_b2b']}]({url_of(lang, 'velkoobchod')}): {L['pages']['velkoobchod']['desc']}",
-        f"- [{ui['nav_d2c']}]({url_of(lang, 'do_eu')}): {L['pages']['do_eu']['desc']}",
         f"- [{ui['nav_prices']}]({url_of(lang, 'ceny')}): {L['pages']['ceny']['desc']}",
         f"- [{ui['nav_faq']}]({url_of(lang, 'faq')}): {L['faq_page']['desc']}",
         f"- [{ui['nav_contact']}]({url_of(lang, 'kontakt')}): {L['pages']['kontakt']['desc']}",

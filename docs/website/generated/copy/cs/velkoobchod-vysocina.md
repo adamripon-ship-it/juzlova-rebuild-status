@@ -14,3 +14,5 @@
 Restaurace, jídelny a cukrárny v kraji. Vyzvednete v dílně. Do Humpolce a Havlíčkova Brodu zboží dovezeme. Značky zákazníků nejmenujeme.
 
 Na Vysočině je většina našich provozoven. Dílna je v Kochánově, takže to kuchyně mají blízko; většina si pro zboží přijede.
+
+Zavolat Jiřině Napsat e-mail

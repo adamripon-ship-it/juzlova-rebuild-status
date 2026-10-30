@@ -68,7 +68,7 @@ Packung: 1 kg
 - Rohe Kartoffelknödel-Mischung (chlupaté knedlíky)
 - 5 kg
 - 260 Kč
-- 52 Kč/kg · eine Saison zu Hause oder eine Woche Essensausgabe
+- 52 Kč/kg · für eine Saison oder für die Kantine
 - Glutenfreies Vanillepuddingpulver
 - 1 kg / 400 g
 - 60 Kč / 30 Kč
@@ -86,8 +86,8 @@ Portionsangaben folgen der Packungsanleitung.
 
 ### Abholung und Lieferung
 
-- Abholung in Kochánov oder Humpolec: kostenlos
-- Humpolec und Havlíčkův Brod
+- Abholung in Kochánov oder Humpolec: kostenlos, Termin telefonisch
+- Lieferung nach Humpolec und Havlíčkův Brod
 
 ### Alte Preise im Internet
 

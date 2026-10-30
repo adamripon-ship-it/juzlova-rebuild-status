@@ -11,7 +11,7 @@ Home › Recipes › Potato-and-curd dumplings with strawberries
 
 ## Potato-and-curd dumplings with strawberries
 
-Summer brings ripe strawberries. A simple 20-minute recipe for anyone with a sweet tooth.
+Quick fruit dumplings for strawberry season: potato dough with curd cheese, ready in 20 minutes.
 
 Rate this recipe
 
@@ -38,23 +38,23 @@ Mix used
 
 ### Frequently asked questions
 
-*summary:* How fast are the strawberry quark dumplings?
+*summary:* How quickly are the strawberry dumplings ready?
 
-In 20 minutes: a dough of potato dumpling mix and quark, a strawberry inside, 5 minutes in steam.
+In 20 minutes: a dough of potato dumpling mix and curd cheese, a strawberry inside, 5 minutes in steam.
 
-*summary:* Which quark for fruit dumplings?
+*summary:* Which curd cheese for fruit dumplings?
 
-Soft block quark, not the tub kind — 250 g to 250 g of our mix.
+Soft curd cheese in a block, not a tub — 250 g to 250 g of our mix.
 
 Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
 - Poppy-seed rolls (šišky s mákem) A traditional sweet supper from potato dough: rolls coated in poppy seeds and sugar, drizzled with melted butter. More
-- Strapačky with cabbage and bacon A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon. More
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone. More
+- Strapačky with sauerkraut and bacon A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? Anyone can make these no-bake biscuit slices. More
 - Whipped cream roulade A light dessert in half an hour: slightly bitter cocoa against gently sweet whipped cream. No flour, so no gluten either. More
-- Homemade gingerbread (perník) Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough. More
+- Homemade gingerbread (perník) Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa. More

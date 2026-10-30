@@ -13,7 +13,7 @@
 
 Asi 90 % zakázek je kolem dílny. Vyzvednutí v Kochánově 40, 582 53 je pro provozovny zdarma.
 
-Když je kuchyně v Kochánově, Herálci nebo v okolních vsích, nejjednodušší je přijet do dílny. Žádný rozvoz, žádná krabice. Ceník domácností 250 / 260 / 60 / 30 / 270 Kč tu platí.
+Když je kuchyně v Kochánově, Herálci nebo v okolních vsích, nejjednodušší je přijet do dílny. Ceník domácností 250 / 260 / 60 / 30 / 270 Kč tu platí.
 
 Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
@@ -21,9 +21,6 @@ Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 - Velkoobchod
 - Místní velkoobchod v Kochánově
-- Velkoobchod pro Prahu
-- Velkoobchod pro Brno
-- Velkoobchod mimo Česko
 - Pro kuchyně
 
 ### Poptávka pro kuchyni
@@ -36,7 +33,7 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 
 *label:* E-mail
 
-*label:* Téma poptávkyVyberte témaObecná velkoobchodní poptávkaPrahaBrnoVysočinaZahraniční velkoobchodRestaurace nebo jídelnaPekárna nebo cukrárnaŠkolní kuchyněVýroba zmrzlinyJiné
+*label:* Téma poptávkyVyberte témaObecná velkoobchodní poptávkaVysočinaRestaurace nebo jídelnaPekárna nebo cukrárnaŠkolní kuchyněVýroba zmrzlinyJiné
 
 *label:* Množství (balení nebo kg)
 

@@ -3,7 +3,7 @@
 # Velkoobchod: knedlíky v prášku, puding, kakao | Jůzlová
 
 - **URL:** `/velkoobchod/`
-- **Meta description:** Směsi pro jídelny, restaurace, pekárny a zmrzlináře od výrobce z Vysočiny. Odběr v Kochánově, rozvoz do Humpolce a Havlíčkova Brodu nebo váš dopravce.
+- **Meta description:** Směsi pro jídelny, restaurace, pekárny a zmrzlináře od výrobce z Vysočiny. Odběr v Kochánově nebo rozvoz do Humpolce a Havlíčkova Brodu. Knedlíky v prášku.
 
 ---
 
@@ -27,15 +27,15 @@ Bramborové těsto na vodu: odpadá loupání a strouhání třiceti kil brambor
 
 Složení a etikety pošleme e-mailem.
 
-#### Tři cesty dodání
+#### Dvě cesty dodání
 
-Vyzvednutí v Kochánově, rozvoz do Humpolce a Havlíčkova Brodu nebo váš dopravce.
+Vyzvednutí v Kochánově nebo rozvoz do Humpolce a Havlíčkova Brodu.
 
 #### Papíry ke kakau
 
 Ke kakau pošleme laboratorní certifikát k vaší šarži. Bez 14 alergenů EU, lepek pod 20 ppm.
 
-Velkoobchod Místní velkoobchod v Kochánově Velkoobchod pro Prahu Velkoobchod pro Brno Velkoobchod mimo Česko
+Velkoobchod Místní velkoobchod v Kochánově
 
 ### Co dodáváme komu
 
@@ -49,7 +49,6 @@ Velkoobchod Místní velkoobchod v Kochánově Velkoobchod pro Prahu Velkoobchod
 
 - Vyzvednutí v dílně v Kochánově
 - Rozvoz do Humpolce a Havlíčkova Brodu
-- Váš vlastní dopravce
 
 ### Poptávka pro kuchyni
 
@@ -61,7 +60,7 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 
 *label:* E-mail
 
-*label:* Téma poptávkyVyberte témaObecná velkoobchodní poptávkaPrahaBrnoVysočinaZahraniční velkoobchodRestaurace nebo jídelnaPekárna nebo cukrárnaŠkolní kuchyněVýroba zmrzlinyJiné
+*label:* Téma poptávkyVyberte témaObecná velkoobchodní poptávkaVysočinaRestaurace nebo jídelnaPekárna nebo cukrárnaŠkolní kuchyněVýroba zmrzlinyJiné
 
 *label:* Množství (balení nebo kg)
 
@@ -88,10 +87,6 @@ Formulář je pro provozovny. Domácnosti objednávají přes Kontakt.
 *button:* Odeslat a domluvit termín
 
 ### Časté dotazy
-
-*summary:* Můžu poslat vlastního dopravce?
-
-Ano. Zboží si vyzvedne v dílně v Kochánově.
 
 *summary:* Hodí se kakao výrobcům zmrzliny?
 

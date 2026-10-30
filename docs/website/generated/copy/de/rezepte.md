@@ -19,7 +19,7 @@ Ein traditionelles süßes Abendessen aus Kartoffelteig: Mohnnudeln, in Mohn und
 
 #### Birnenkuchen mit Vanillepudding
 
-Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren.
+Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder.
 
 #### Strapačky mit Kraut und Speck
 
@@ -35,11 +35,11 @@ Ein leichtes Dessert in einer halben Stunde: der Kontrast von herbem Kakao und z
 
 #### Hausgemachter Lebkuchen (Perník)
 
-Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen.
+Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art.
 
 #### Kartoffel-Quark-Knödel mit Erdbeeren
 
-Der Sommer ist da, und mit ihm reifen die Erdbeeren. Ein einfaches, schnelles Rezept, mit dem Sie in 20 Minuten auch die größten Naschkatzen verwöhnen.
+Schnelle Fruchtknödel für die Erdbeerzeit: Kartoffelteig mit Quark, fertig in 20 Minuten.
 
 #### Schnelle Brandteigkränze oder Windbeutel
 

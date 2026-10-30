@@ -35,7 +35,7 @@ Flour, dried potato flakes, dried egg, salt, baking powder, potato starch
 - Shape dumplings, rolls or croquettes.
 - Boil. About 20 minutes from opening the bag to the plate.
 
-Want it your way? Add an egg or a boiled, grated potato. Many of our customers do.
+Want it your way? Add an egg or one boiled, grated potato. Many of our customers do.
 
 ### What one dough makes
 
@@ -47,7 +47,7 @@ Want it your way? Add an egg or a boiled, grated potato. Many of our customers d
 
 ### How far it goes
 
-A 5 kg bag makes a side dish for about 60–70 people. Store it dry and sealed.
+A 5 kg bag makes a side dish for about 60–70 people. Keep the bag dry and sealed.
 
 ### Frequently asked questions
 

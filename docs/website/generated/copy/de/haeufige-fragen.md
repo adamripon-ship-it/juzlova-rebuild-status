@@ -29,7 +29,7 @@ Nein. Sie bestellen fertige Packungen. Zum Ausprobieren gibt es den Pudding als 
 
 *summary:* Zahle ich im Voraus oder bei Übergabe?
 
-Abholung und Lieferung: bei Übergabe.
+Bei Abholung und Lieferung zahlen Sie bei der Übergabe.
 
 ### Lieferung
 
@@ -49,7 +49,7 @@ Ja. Grundlage ist Maisstärke, die kein Gluten enthält. Eine Kakaopuddingmischu
 
 *summary:* Wie viel Fett hat Ihr Kakao?
 
-20–22 % Kakaobutter. Nach EU-Recht braucht Kakaopulver mindestens 20 %; darunter ist es fettreduzierter Kakao. Ohne Zuckerzusatz, ohne die 14 EU-Allergene, Gluten unter 20 ppm.
+20–22 % Kakaobutter. Nach EU-Recht braucht Kakaopulver mindestens 20 %; darunter ist es fettarmer Kakao. Ohne Zuckerzusatz, ohne die 14 EU-Allergene, Gluten unter 20 ppm.
 
 *summary:* Ist der Vanillinzucker echte Vanille?
 

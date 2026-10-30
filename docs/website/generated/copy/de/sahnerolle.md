@@ -35,17 +35,17 @@ Verwendete Mischung
 - Bereiten Sie ein leicht mit Schmalz gefettetes Backpapier vor (Öl geht auch), damit sich die Roulade nach dem Backen gut aufrollen lässt.
 - Backen Sie im auf 180 °C vorgeheizten Ofen etwa 8 Minuten; öffnen Sie den Ofen während der gesamten Zeit nicht.
 - Lassen Sie die Roulade auf dem Blech abkühlen und lösen Sie sie vorsichtig vom Papier.
-- Schlagen Sie die Sahne steif, bestreichen Sie die Roulade damit und rollen Sie sie auf. Verzieren Sie die Oberseite mit der restlichen Sahne, nach Belieben mit Schokoladenspänen.
+- Schlagen Sie die Sahne steif, bestreichen Sie die Roulade damit und rollen Sie sie auf. Verzieren Sie die Oberseite mit der restlichen Sahne und bestreuen Sie sie mit Schokoladenspänen.
 
 Tipp: Verfeinern Sie die Roulade mit Ihrem Lieblingsobst — Erdbeeren, Himbeeren oder Banane.
 
 ### Häufige Fragen
 
-*summary:* Ist die Sahnerolle glutenfrei?
+*summary:* Ist die Sahneroulade glutenfrei?
 
 Ja. Der Biskuit besteht nur aus Eiern, Puderzucker und Kakao holländischer Art — ohne Mehl, also ohne Gluten. Fertig in ca. 30 Minuten.
 
-*summary:* Bei welcher Temperatur backt die Sahnerolle?
+*summary:* Bei welcher Temperatur wird die Sahneroulade gebacken?
 
 8 Minuten bei 180 °C, Ofen nicht öffnen. Auskühlen lassen, mit Sahne bestreichen, aufrollen.
 
@@ -57,7 +57,7 @@ Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebac
 
 - Bebe-Schnitten mit Schokoladenpudding Sie möchten Gäste bewirten, sind aber kein Jamie Oliver? Diese Bebe-Schnitten ohne Backen gelingen wirklich jedem. Mehr
 - Irischer Sticky-Toffee-Pudding Feuchter Dattelpudding mit Kakao holländischer Art und Baileys, dazu salzige Toffeesauce. 6 Portionen. Mehr
-- Birnenkuchen mit Vanillepudding Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren. Mehr
-- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen. Mehr
+- Birnenkuchen mit Vanillepudding Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder. Mehr
+- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art. Mehr
 - Mohnnudeln (šišky s mákem) Ein traditionelles süßes Abendessen aus Kartoffelteig: Mohnnudeln, in Mohn und Zucker gewälzt und mit zerlassener Butter übergossen. Mehr
 - Strapačky mit Kraut und Speck Ein slowakischer Klassiker aus unserer rohen Kartoffelknödel-Mischung — Halušky mit Sauerkraut und knusprig ausgebratenem Speck. Mehr

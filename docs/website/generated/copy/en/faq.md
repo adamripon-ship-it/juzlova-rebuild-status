@@ -17,11 +17,11 @@ Short answers. If your question is not here, call us.
 
 *summary:* How do I order without a web shop?
 
-Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we arrange the rest.
+Call Jiřina (+420 728 466 141) or Jiří (+420 607 629 931), or use the form. Tell us what you want, how much and where you are; we’ll arrange the rest.
 
 *summary:* Where can I collect for free?
 
-At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always by prior phone call, daily 8:00–19:00.
+At the workshop, Kochánov 40, 582 53, or in Humpolec near the Bernard brewery. Always arranged by phone first, daily 8:00–19:00.
 
 *summary:* Do you give samples or tastings?
 
@@ -29,7 +29,7 @@ No. You order finished packs. For a first try, the pudding comes in a 400 g pack
 
 *summary:* Do I pay in advance or on collection?
 
-For pick-up and delivery you pay on hand-over.
+You pay on collection or on delivery.
 
 ### Delivery
 
@@ -69,6 +69,6 @@ About 40 g for 500 ml of milk. One kilo makes about 25 puddings.
 
 Dry and sealed. Keep the cocoa away from strong smells, ideally at 15–20 °C.
 
-Kitchens and shops: more on the page For kitchens →
+Kitchens and food businesses: more on the page For kitchens →
 
 Call Jiřina Write to us

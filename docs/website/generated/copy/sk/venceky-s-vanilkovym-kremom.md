@@ -59,7 +59,7 @@ Vanilkovým maslovým krémom z nášho pudingu, žĺtkov a masla, navrch rumov�
 
 *summary:* Ako piecť škrupiny venčekov, aby nespadli?
 
-10 minút na 200 °C bez otvárania dvierok, potom 15–25 minút na 180 °C, kým sú sýto zlatisté a suché. Pred plnením úplne vychladiť.
+10 minút na 200 °C bez otvárania dvierok, potom 15–25 minút na 180 °C, kým nie sú sýto zlatisté a suché. Pred plnením úplne vychladiť.
 
 Návrhy k tomuto receptu
 
@@ -70,6 +70,6 @@ Návrhy k tomuto receptu
 - Miniveterníčky Malé veterníčky z odpaľovaného cesta s maslovo-pudingovým krémom s tvarohom a čokoládovou polevou. Asi 40–45 kúskov. Viac
 - Karamelové veterníky Veterníky s vanilkovým pudingovým krémom, karamelovou šľahačkou a karamelovou polevou. Asi 24 stredných kúskov. Viac
 - Veterníčky s vanilkovým krémom Malé veterníčky striekané hviezdičkou, plnené vanilkovým maslovým krémom a namáčané v bielej cukrovej poleve. Asi 30 kúskov. Viac
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
-- Domáci perník Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom. Viac
-- Rýchle venčeky či veterníčky Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechách. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
+- Domáci perník Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu. Viac
+- Rýchle venčeky či veterníčky Jedno odpaľované cesto na venčeky aj veterníčky: vyšší podiel masla a štart na 250 °C. Asi 80 kúskov na dvoch plechoch. Viac

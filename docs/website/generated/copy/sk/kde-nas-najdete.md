@@ -30,7 +30,6 @@ Druhé odberné miesto je v Humpolci neďaleko Pivovaru Bernard, zadarmo. Presn�
 ### Rozvoz
 
 - Do Humpolca a Havlíčkovho Brodu tovar dovezieme.
-- Môžete poslať aj vlastného dopravcu
 
 ### Napíšte, čo potrebujete
 

@@ -37,10 +37,6 @@ Pri vyzdvihnutí a rozvoze platíte pri prevzatí.
 
 Do Humpolca a Havlíčkovho Brodu.
 
-*summary:* Môžem poslať vlastného dopravcu?
-
-Áno. Často to vyjde lacnejšie.
-
 ### Zloženie a alergény
 
 *summary:* Z čoho sú knedle v prášku?
@@ -49,7 +45,7 @@ Múka, sušené zemiakové vločky, sušené vajcia, soľ, prášok do pečiva, 
 
 *summary:* Je vanilkový puding naozaj bez lepku?
 
-Áno. Základom je kukuričný škrob, ktorý lepok neobsahuje. Kakaový puding ako hotovú zmes nevedieme — čokoládový krém vznikne zamiešaním nášho kakaa.
+Áno. Základom je kukuričný škrob, ktorý lepok neobsahuje. Kakaový puding ako hotovú zmes nepredávame — čokoládový krém vznikne zamiešaním nášho kakaa.
 
 *summary:* Koľko tuku má vaše kakao?
 

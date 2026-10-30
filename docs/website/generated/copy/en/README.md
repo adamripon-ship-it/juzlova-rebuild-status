@@ -2,7 +2,7 @@
 
 # All page copy — English (`en`)
 
-28 pages. Each file holds the page title, meta description and every piece of visible text inside the page body, in reading order.
+27 pages. Each file holds the page title, meta description and every piece of visible text inside the page body, in reading order.
 
 | Page | URL |
 |---|---|
@@ -10,7 +10,7 @@
 | [Bebe biscuit slices with chocolate pudding — no-bake recipe](no-bake-biscuit-pudding-slices.md) | `/en/no-bake-biscuit-pudding-slices/` |
 | [Czech potato dumpling mix 5 kg — just add water \| Jůzlová](potato-dumpling-mix.md) | `/en/potato-dumpling-mix/` |
 | [FAQ — ordering, pick-up, what's in the mixes \| Jůzlová](faq.md) | `/en/faq/` |
-| [Prices — dumpling mix, pudding, cocoa ex-workshop \| Jůzlová](prices.md) | `/en/prices/` |
+| [Price list — dumpling mix, pudding, cocoa \| Jůzlová](prices.md) | `/en/prices/` |
 | [Chlupaté knedlíky mix 5 kg — raw-potato dumplings \| Jůzlová](raw-potato-dumpling-mix.md) | `/en/raw-potato-dumpling-mix/` |
 | [Homemade Czech gingerbread — Jiřina Jůzlová’s cup recipe](cup-measure-gingerbread.md) | `/en/cup-measure-gingerbread/` |
 | [Pear cake with vanilla pudding — Lucie Kůželová’s recipe](pear-cake-with-vanilla-pudding.md) | `/en/pear-cake-with-vanilla-pudding/` |
@@ -23,7 +23,7 @@
 | [Czech kremrole with Italian meringue — recipe \| Jůzlová](cream-horns.md) | `/en/cream-horns/` |
 | [Mini větrníčky with pudding cream and chocolate glaze — recipe](mini-cream-puffs.md) | `/en/mini-cream-puffs/` |
 | [Recipes with potato dumpling mix, pudding and cocoa](recipes.md) | `/en/recipes/` |
-| [Quick choux wreaths or puffs — recipe \| Jůzlová](quick-choux-rings-and-puffs.md) | `/en/quick-choux-rings-and-puffs/` |
+| [Quick choux rings or puffs — recipe \| Jůzlová](quick-choux-rings-and-puffs.md) | `/en/quick-choux-rings-and-puffs/` |
 | [Potato-dough poppy-seed rolls — recipe \| Jůzlová](poppy-seed-potato-rolls.md) | `/en/poppy-seed-potato-rolls/` |
 | [Whipped cream roulade — gluten-free cocoa recipe \| Jůzlová](whipped-cream-roulade.md) | `/en/whipped-cream-roulade/` |
 | [Strapačky with sauerkraut and bacon — bosáky mix recipe](strapacky-cabbage-and-bacon.md) | `/en/strapacky-cabbage-and-bacon/` |
@@ -33,4 +33,3 @@
 | [Dumpling mix, pudding & cocoa for kitchens \| Jůzlová](wholesale.md) | `/en/wholesale/` |
 | [Czech věnečky with vanilla cream and rum glaze — recipe](choux-rings-with-vanilla-cream.md) | `/en/choux-rings-with-vanilla-cream/` |
 | [Větrníčky with vanilla cream and sugar glaze — recipe](cream-puffs-with-vanilla-cream.md) | `/en/cream-puffs-with-vanilla-cream/` |
-| [Living abroad? Collect at the workshop \| Jůzlová](shipping-to-eu.md) | `/en/shipping-to-eu/` |

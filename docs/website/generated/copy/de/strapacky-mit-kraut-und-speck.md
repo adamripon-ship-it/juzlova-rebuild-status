@@ -40,7 +40,7 @@ Verwendete Mischung
 
 *summary:* Woraus bestehen unsere Strapačky?
 
-Aus der Mischung für haarige Knödel, als Halušky ins kochende Wasser gedrückt, dazu Sauerkraut, Speck und Frühlingszwiebel.
+Aus der Mischung für chlupaté knedlíky, als Halušky ins kochende Wasser gedrückt, dazu Sauerkraut, Speck und Frühlingszwiebeln.
 
 *summary:* Wie lange dauern Strapačky?
 
@@ -53,8 +53,8 @@ Vorschläge zu diesem Rezept
 Weitere passende Rezepte — mit derselben Mischung oder auf ähnliche Art gebacken.
 
 - Mohnnudeln (šišky s mákem) Ein traditionelles süßes Abendessen aus Kartoffelteig: Mohnnudeln, in Mohn und Zucker gewälzt und mit zerlassener Butter übergossen. Mehr
-- Kartoffel-Quark-Knödel mit Erdbeeren Der Sommer ist da, und mit ihm reifen die Erdbeeren. Ein einfaches, schnelles Rezept, mit dem Sie in 20 Minuten auch die größten Naschkatzen verwöhnen. Mehr
-- Birnenkuchen mit Vanillepudding Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren. Mehr
+- Kartoffel-Quark-Knödel mit Erdbeeren Schnelle Fruchtknödel für die Erdbeerzeit: Kartoffelteig mit Quark, fertig in 20 Minuten. Mehr
+- Birnenkuchen mit Vanillepudding Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder. Mehr
 - Bebe-Schnitten mit Schokoladenpudding Sie möchten Gäste bewirten, sind aber kein Jamie Oliver? Diese Bebe-Schnitten ohne Backen gelingen wirklich jedem. Mehr
 - Sahneroulade Ein leichtes Dessert in einer halben Stunde: der Kontrast von herbem Kakao und zart gesüßter Schlagsahne. Ohne Mehl, also auch ohne Gluten. Mehr
-- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen. Mehr
+- Hausgemachter Lebkuchen (Perník) Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art. Mehr

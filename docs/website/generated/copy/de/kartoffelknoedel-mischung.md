@@ -3,7 +3,7 @@
 # Kartoffelknödel-Mischung 5 kg — nur Wasser dazu | Jůzlová
 
 - **URL:** `/de/kartoffelknoedel-mischung/`
-- **Meta description:** Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in 20 Minuten fertig. 5 kg / 250 Kč. Kartoffelknödelmischung.
+- **Meta description:** Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in 20 Minuten fertig. 5 kg / 250 Kč. Kartoffelknödel-Mischung.
 
 ---
 
@@ -32,10 +32,10 @@ Mehl, getrocknete Kartoffelflocken, Trockenei, Salz, Backpulver, Kartoffelstärk
 ### Zubereitung
 
 - Mischung nach Packungsanleitung mit Wasser anrühren.
-- Knödel, Nudeln oder Kroketten formen.
+- Knödel, Schupfnudeln oder Kroketten formen.
 - Kochen. Vom Beutel bis zum Teller etwa 20 Minuten.
 
-Lieber nach eigener Art? Ein Ei oder eine gekochte, geriebene Kartoffel zugeben. Viele unserer Kunden machen das so.
+Möchten Sie es auf Ihre Art? Geben Sie ein Ei oder eine gekochte, geriebene Kartoffel dazu. Viele unserer Kunden machen das so.
 
 ### Was aus dem Teig wird
 

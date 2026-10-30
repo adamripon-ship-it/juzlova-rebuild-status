@@ -3,7 +3,7 @@
 # Domáci perník — hrnčekový recept podľa Jiřiny Jůzlovej
 
 - **URL:** `/sk/hrncekovy-pernik/`
-- **Meta description:** Domáci hrnčekový perník bez váženia: 10 minút prípravy, 20–25 minút pečenia, 25–30 porcií. S vanilkovým pudingom a kakaom holandského typu.
+- **Meta description:** Domáci hrnčekový perník bez váženia: 10 minút prípravy, 20–25 minút pečenia na 180 °C, 25–30 porcií. S vanilkovým pudingom a kakaom holandského typu.
 
 ---
 
@@ -11,7 +11,7 @@
 
 ## Domáci perník
 
-Hrnčekový perník: jednoduchá príprava, výrazná chuť. Nepotrebujete váhu — vystačíte si s hrnčekom.
+Hrnčekový perník bez váženia: vystačíte si s hrnčekom a jednou misou. S vanilkovým pudingom a kakaom holandského typu.
 
 Ohodnoťte tento recept
 
@@ -58,7 +58,7 @@ Návrhy k tomuto receptu
 
 Ďalšie recepty, ktoré sa k nemu hodia — rovnaká zmes alebo podobný postup.
 
-- Hruškový koláč s vanilkovým pudingom Koláč, ktorý s vami zvládnu upiecť aj deti. Baví dvakrát — pri príprave aj pri ochutnávaní. Viac
+- Hruškový koláč s vanilkovým pudingom Krehký spodok, plátky hrušiek a krém z kyslej smotany s pudingom. Zvládnu ho upiecť aj deti. Viac
 - Venčeky s vanilkovým krémom Klasické venčeky z odpaľovaného cesta s vanilkovým maslovým krémom a rumovou polevou. Asi 20 kúskov. Viac
 - Miniveterníčky Malé veterníčky z odpaľovaného cesta s maslovo-pudingovým krémom s tvarohom a čokoládovou polevou. Asi 40–45 kúskov. Viac
 - Karamelové veterníky Veterníky s vanilkovým pudingovým krémom, karamelovou šľahačkou a karamelovou polevou. Asi 24 stredných kúskov. Viac

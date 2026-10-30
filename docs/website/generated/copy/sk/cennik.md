@@ -87,7 +87,7 @@ Počet porcií je orientačný podľa návodu na obale.
 ### Vyzdvihnutie a rozvoz
 
 - Vyzdvihnutie v Kochánove alebo v Humpolci: zadarmo
-- Humpolec a Havlíčkův Brod
+- Rozvoz do Humpolca a Havlíčkovho Brodu
 
 ### Staré ceny na internete
 

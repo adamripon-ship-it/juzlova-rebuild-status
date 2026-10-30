@@ -504,8 +504,6 @@ A: Mimo plotnu — delší var by vyhnal alkohol a ztlumil chuť likéru. Vody j
 ### Jak objednat: zavoláte nebo napíšete a zboží si vyzvednete v dílně
 url: https://www.juzlova.cz/objednavka/
 fact: Objednáte telefonem nebo formulářem, e-shop nemáme. Zboží si zdarma vyzvednete v dílně v Kochánově 40 nebo v Humpolci. Telefon denně 8:00–19:00.
-Q: Objednáváte po celém Česku?
-A: Ano, ale zboží si vyzvednete v dílně nebo vám ho dovezeme do Humpolce či Havlíčkova Brodu.
 Q: Máte e-shop?
 A: Ne. Objednávka telefonem nebo formulářem.
 Q: Posíláte vzorky?
@@ -518,8 +516,6 @@ url: https://www.juzlova.cz/vysocina/
 fact: Rodinná dílna v Kochánově 40, 582 53. Směsi si vyzvednete zdarma v dílně nebo v Humpolci. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 Q: Platí to i o víkendu?
 A: Telefon bereme denně 8:00–19:00. Termín vyzvednutí nebo rozvozu domluvíme.
-Q: Je cena s dopravou?
-A: Ne. Ceník je jen za zboží.
 Q: Kde sídlíte na Vysočině?
 A: Kochánov 40, 582 53, 12 km od Havlíčkova Brodu.
 Q: Máte kakaový puding?
@@ -534,8 +530,6 @@ Q: Jak daleko je dílna?
 A: 12 km, Kochánov 40, 582 53.
 Q: Odkud je mouka?
 A: Z mlýna v Havlíčkově Brodě.
-Q: Je v ceně doprava?
-A: Ne. Cena na webu je jen za zboží.
 
 ### Odběr v Humpolci
 url: https://www.juzlova.cz/humpolec/
@@ -544,8 +538,6 @@ Q: Je odběr v Humpolci zdarma?
 A: Ano. Nic za výdej neúčtujeme.
 Q: Je to výdejna pivovaru?
 A: Ne. Soukromé místo v okolí Pivovaru Bernard, ne u vrat.
-Q: Je v ceně doprava?
-A: Ne. Cena na webu je jen za zboží.
 Q: Jak domluvím hodinu?
 A: Telefon +420 728 466 141 nebo +420 607 629 931, denně 8:00–19:00.
 
@@ -592,18 +584,6 @@ Q: Jmenujete místní restaurace?
 A: Ne.
 Q: Jaký formulář použít?
 A: Velkoobchodní formulář, ne kontakt pro domácnosti.
-
-### Velkoobchod pro Prahu
-url: https://www.juzlova.cz/velkoobchod-praha/
-fact: Provozovny si zboží vyzvednou v dílně v Kochánově 40, 582 53; den a hodinu domluvíme po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
-
-### Velkoobchod pro Brno
-url: https://www.juzlova.cz/velkoobchod-brno/
-fact: Provozovny si zboží vyzvednou v dílně v Kochánově 40, 582 53; den a hodinu domluvíme po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
-
-### Velkoobchod mimo Česko
-url: https://www.juzlova.cz/velkoobchod-zahranici/
-fact: Provozovny si zboží vyzvednou v dílně v Kochánově 40, 582 53; den a hodinu domluvíme po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ## FAQ
 Q: Jak u vás objednám, když nemáte e-shop?

@@ -2,7 +2,7 @@
 
 # All page copy — Deutsch (`de`)
 
-28 pages. Each file holds the page title, meta description and every piece of visible text inside the page body, in reading order.
+27 pages. Each file holds the page title, meta description and every piece of visible text inside the page body, in reading order.
 
 | Page | URL |
 |---|---|
@@ -33,4 +33,3 @@
 | [Knödelmischung, Pudding & Kakao für Küchen \| Jůzlová](grosshandel.md) | `/de/grosshandel/` |
 | [Věnečky mit Vanillecreme und Rumguss — Rezept \| Jůzlová](brandteigkraenze-mit-vanillecreme.md) | `/de/brandteigkraenze-mit-vanillecreme/` |
 | [Tschechische Windbeutel mit Vanillecreme und Zuckerglasur — Rezept](windbeutel-mit-vanillecreme.md) | `/de/windbeutel-mit-vanillecreme/` |
-| [Wohnen Sie im Ausland? Abholung in der Werkstatt \| Jůzlová](versand-in-die-eu.md) | `/de/versand-in-die-eu/` |

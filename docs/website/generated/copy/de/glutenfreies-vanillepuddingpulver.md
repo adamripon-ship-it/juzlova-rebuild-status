@@ -33,7 +33,7 @@ Weizenstärke verwenden wir im Pudding nicht. Maisstärke enthält von Natur aus
 
 ### Dosierung
 
-Dosierung: etwa 40 g auf 500 ml Milch. Aus einem Kilo werden rund 25 Puddings oder Creme für mehrere Bleche Windbeutel.
+Etwa 40 g auf 500 ml Milch. Aus einem Kilo werden rund 25 Puddings oder Creme für mehrere Bleche Windbeutel.
 
 ### Schokolade?
 

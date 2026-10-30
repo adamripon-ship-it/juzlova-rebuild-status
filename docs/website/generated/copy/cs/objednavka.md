@@ -67,10 +67,6 @@ Stačí jméno a telefon nebo e-mail. Ozveme se a domluvíme termín.
 
 ### Časté dotazy
 
-*summary:* Objednáváte po celém Česku?
-
-Ano, ale zboží si vyzvednete v dílně nebo vám ho dovezeme do Humpolce či Havlíčkova Brodu.
-
 *summary:* Máte e-shop?
 
 Ne. Objednávka telefonem nebo formulářem.

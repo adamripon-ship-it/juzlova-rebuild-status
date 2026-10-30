@@ -69,10 +69,6 @@ Ano. Nic za výdej neúčtujeme.
 
 Ne. Soukromé místo v okolí Pivovaru Bernard, ne u vrat.
 
-*summary:* Je v ceně doprava?
-
-Ne. Cena na webu je jen za zboží.
-
 *summary:* Jak domluvím hodinu?
 
 Telefon +420 728 466 141 nebo +420 607 629 931, denně 8:00–19:00.

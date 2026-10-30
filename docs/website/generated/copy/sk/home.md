@@ -17,7 +17,7 @@ Zavolať Jiřine a objednať Všetko o kakau
 
 Zavolať Jiřine a objednať Všetko o zmesi
 
-### Chlpaté knedle bez šúpania a strúhania Zamiešať s vodou, vytvarovať, uvariť. Bosáky, halušky aj strapačky bez roboty so zemiakmi.
+### Chlpaté knedle bez šúpania a strúhania Zamiešať s vodou, vytvarovať, uvariť. Bosáky, halušky aj strapačky bez práce so zemiakmi.
 
 Zavolať Jiřine a objednať Všetko o bosákoch
 
@@ -25,7 +25,7 @@ Zavolať Jiřine a objednať Všetko o bosákoch
 
 Zavolať Jiřine a objednať Všetko o pudingu
 
-### Vanilínový cukor v kilovom vreci Do cesta, do šľahačky aj na posyp koláčikov. Jedno vrece vydrží celú sezónu pečenia.
+### Vanilínový cukor v kilovom vrecku Do cesta, do šľahačky aj na posyp koláčikov. Jedno vrecko vydrží celú sezónu pečenia.
 
 Zavolať Jiřine a objednať Všetko o cukre
 
@@ -49,7 +49,7 @@ Zemiakové knedle v prášku 5 kg / 250 Kč Chlpaté knedle v prášku 5 kg / 26
 
 1 kg puding a cukor v kilovom balení
 
-Puding v kile, cukor v kile, knedle v päťkilovom vreci. Balíme jednoducho a predávame priamo z dielne.
+Puding a cukor po kile, knedle v päťkilovom vreci. Balíme jednoducho a predávame priamo z dielne.
 
 - Zemiakové knedle v prášku 5 kg / 250 Kč
 - Chlpaté knedle v prášku 5 kg / 260 Kč
@@ -91,7 +91,7 @@ Objednávky prijíma Jiřina Jůzlová, denne 8–19. Žiadny e-shop, žiadne ca
 
 #### Balíme po kilách
 
-Puding v kile, cukor v kile, knedle v päťkilovom vreci. Balíme jednoducho a predávame priamo z dielne.
+Puding a cukor po kile, knedle v päťkilovom vreci. Balíme jednoducho a predávame priamo z dielne.
 
 Pre kuchyne Kde nás nájdete
 
@@ -106,7 +106,7 @@ Hodnotenia
 
 ### Čo o nás hovoria zákazníci
 
-Hodnotenia preberáme z našich živých profilov na Google a Firmy.cz. Nič si nevymýšľame.
+Hodnotenia preberáme z našich aktuálnych profilov na Google a Firmy.cz. Nič si nevymýšľame.
 
 Google Otvoriť hodnotenia → Firmy.cz Otvoriť hodnotenia →
 

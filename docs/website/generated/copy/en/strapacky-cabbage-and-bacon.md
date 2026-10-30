@@ -7,9 +7,9 @@
 
 ---
 
-Home › Recipes › Strapačky with cabbage and bacon
+Home › Recipes › Strapačky with sauerkraut and bacon
 
-## Strapačky with cabbage and bacon
+## Strapačky with sauerkraut and bacon
 
 A Slovak classic made from our raw-potato dumpling mix: halušky with sauerkraut and crisp bacon.
 
@@ -40,21 +40,21 @@ Mix used
 
 *summary:* What are our strapačky made from?
 
-Hairy-dumpling mix pressed through a colander into boiling water as halušky, served with sauerkraut, bacon and spring onion.
+Raw-potato dumpling mix pressed through a colander into boiling water as halušky, served with sauerkraut, bacon and spring onion.
 
 *summary:* How long do strapačky take?
 
-About 30 minutes: mix the dough, boil the dumplings until they float, simmer cabbage 10 minutes, fry the bacon.
+About 30 minutes: mix the dough, boil the dumplings until they float, simmer the sauerkraut for 10 minutes, fry the bacon.
 
 Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
 - Poppy-seed rolls (šišky s mákem) A traditional sweet supper from potato dough: rolls coated in poppy seeds and sugar, drizzled with melted butter. More
-- Potato-and-curd dumplings with strawberries Summer brings ripe strawberries. A simple 20-minute recipe for anyone with a sweet tooth. More
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone. More
+- Potato-and-curd dumplings with strawberries Quick fruit dumplings for strawberry season: potato dough with curd cheese, ready in 20 minutes. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? Anyone can make these no-bake biscuit slices. More
 - Whipped cream roulade A light dessert in half an hour: slightly bitter cocoa against gently sweet whipped cream. No flour, so no gluten either. More
-- Homemade gingerbread (perník) Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough. More
+- Homemade gingerbread (perník) Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa. More

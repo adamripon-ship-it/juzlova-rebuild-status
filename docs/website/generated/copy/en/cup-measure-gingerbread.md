@@ -11,7 +11,7 @@ Home › Recipes › Homemade gingerbread (perník)
 
 ## Homemade gingerbread (perník)
 
-Cup-measure gingerbread that is easy to make and easy to like. No scales needed — a mug is enough.
+Cup-measure gingerbread with no weighing: a mug and one bowl are all you need. With vanilla pudding powder and Dutch-process cocoa.
 
 Rate this recipe
 
@@ -56,11 +56,11 @@ Suggestions for this recipe
 
 ### If you liked this one
 
-More recipes that go with it — same mix, or similar baking.
+More recipes that go with it — the same mix, or a similar method.
 
-- Pear cake with vanilla pudding A cake your children will enjoy making with you. The fun comes twice: once in the making, once in the eating. More
-- Choux wreaths with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
+- Pear cake with vanilla pudding A shortcrust base, sliced pears and a sour cream and pudding topping. Easy enough for children to bake. More
+- Choux rings with vanilla cream Classic věnečky from choux pastry with vanilla buttercream and rum glaze. About 20 pieces. More
 - Mini choux buns (minivětrníčky) Mini větrníčky from choux pastry with a butter, pudding and curd cream and a chocolate glaze. About 40–45 pieces. More
 - Caramel větrníky Větrníky with vanilla pudding cream, caramel whipped cream and caramel glaze. About 24 medium pieces. More
 - Větrníčky with vanilla cream Small star-piped choux puffs filled with vanilla buttercream and dipped in a white sugar glaze. About 30 pieces. More
-- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? These no-bake biscuit slices are for everyone. More
+- Bebe biscuit slices with chocolate pudding Want to treat your guests but you’re no Jamie Oliver? Anyone can make these no-bake biscuit slices. More

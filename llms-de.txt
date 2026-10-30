@@ -26,8 +26,7 @@ Firmennotizen: https://www.juzlova.cz/ai/about.md
 - [Start](https://www.juzlova.cz/de/): Kartoffelknödel-Mischung, rohe Knödel (bosáky), glutenfreier Pudding und Kakao aus der Familienwerkstatt. Abholung in Kochánov oder Humpolec.
 - [Über uns](https://www.juzlova.cz/de/ueber-uns/): Familie Jůzl stellt seit 2004 in Kochánov Knödelmischung, Pudding und Kakao her. Kein Onlineshop.
 - [Anfahrt](https://www.juzlova.cz/de/anfahrt/): Werkstatt Kochánov 40, 12 km von Havlíčkův Brod. Abholung dort oder in Humpolec nach Absprache. Nach Humpolec und Havlíčkův Brod liefern wir.
-- [Für Küchen](https://www.juzlova.cz/de/grosshandel/): Mischungen für Kantinen, Gaststätten, Bäckereien und Eishersteller. Abholung in Kochánov, Lieferung nach Humpolec und Havlíčkův Brod oder Ihr Spediteur.
-- [Wohnen im Ausland](https://www.juzlova.cz/de/versand-in-die-eu/): Wir sind eine kleine Familienwerkstatt, unsere Kunden holen in der Werkstatt ab. Nach Humpolec und Havlíčkův Brod liefern wir.
+- [Für Küchen](https://www.juzlova.cz/de/grosshandel/): Mischungen für Kantinen, Gaststätten, Bäckereien und Eishersteller. Abholung in Kochánov oder Lieferung nach Humpolec und Havlíčkův Brod.
 - [Preisliste](https://www.juzlova.cz/de/preisliste/): Knödelmischung 5 kg / 250 Kč, rohe Knödel 260 Kč, glutenfreier Pudding 60 Kč/kg, Kakao 270 Kč/500 g, Vanillinzucker 60 Kč/kg. Preise bei Abholung.
 - [Häufige Fragen](https://www.juzlova.cz/de/haeufige-fragen/): Bestellen ohne Onlineshop, Abholung und kostenlose Lieferung, glutenfreier Pudding, Fettgehalt des Kakaos, Lagerung des 5-kg-Beutels.
 - [Kontakt](https://www.juzlova.cz/de/kontakt/): Jiřina Jůzlová +420 728 466 141, Jiří Jůzl +420 607 629 931. Werkstatt Kochánov 40, 582 53, Tschechien. Abholung in Kochánov oder Humpolec nach Absprache.
@@ -42,12 +41,12 @@ Firmennotizen: https://www.juzlova.cz/ai/about.md
 
 ## Rezepte
 - [Mohnnudeln (šišky s mákem)](https://www.juzlova.cz/de/mohnnudeln-aus-kartoffelteig/): Ein traditionelles süßes Abendessen aus Kartoffelteig: Mohnnudeln, in Mohn und Zucker gewälzt und mit zerlassener Butter übergossen.
-- [Birnenkuchen mit Vanillepudding](https://www.juzlova.cz/de/birnenkuchen-mit-vanillepudding/): Ein Kuchen, bei dem Kinder gern mithelfen. Die Freude kommt zweimal — beim Backen und beim Probieren.
+- [Birnenkuchen mit Vanillepudding](https://www.juzlova.cz/de/birnenkuchen-mit-vanillepudding/): Mürber Boden, Birnenspalten und eine Creme aus Sauerrahm und Pudding. Diesen Kuchen schaffen auch Kinder.
 - [Strapačky mit Kraut und Speck](https://www.juzlova.cz/de/strapacky-mit-kraut-und-speck/): Ein slowakischer Klassiker aus unserer rohen Kartoffelknödel-Mischung — Halušky mit Sauerkraut und knusprig ausgebratenem Speck.
 - [Bebe-Schnitten mit Schokoladenpudding](https://www.juzlova.cz/de/keksschnitten-mit-schokopudding/): Sie möchten Gäste bewirten, sind aber kein Jamie Oliver? Diese Bebe-Schnitten ohne Backen gelingen wirklich jedem.
 - [Sahneroulade](https://www.juzlova.cz/de/sahnerolle/): Ein leichtes Dessert in einer halben Stunde: der Kontrast von herbem Kakao und zart gesüßter Schlagsahne. Ohne Mehl, also auch ohne Gluten.
-- [Hausgemachter Lebkuchen (Perník)](https://www.juzlova.cz/de/tassen-lebkuchen/): Tassen-Lebkuchen: Alle Zutaten messen Sie mit einer Tasse ab, eine Waage brauchen Sie nicht. In zehn Minuten ist der Teig im Ofen.
-- [Kartoffel-Quark-Knödel mit Erdbeeren](https://www.juzlova.cz/de/topfenknoedel-mit-erdbeeren/): Der Sommer ist da, und mit ihm reifen die Erdbeeren. Ein einfaches, schnelles Rezept, mit dem Sie in 20 Minuten auch die größten Naschkatzen verwöhnen.
+- [Hausgemachter Lebkuchen (Perník)](https://www.juzlova.cz/de/tassen-lebkuchen/): Tassen-Lebkuchen ohne Abwiegen: Sie brauchen nur eine Tasse und eine Schüssel. Mit Vanillepudding und Kakao holländischer Art.
+- [Kartoffel-Quark-Knödel mit Erdbeeren](https://www.juzlova.cz/de/topfenknoedel-mit-erdbeeren/): Schnelle Fruchtknödel für die Erdbeerzeit: Kartoffelteig mit Quark, fertig in 20 Minuten.
 - [Schnelle Brandteigkränze oder Windbeutel](https://www.juzlova.cz/de/schnelle-brandteigkraenze/): Ein Brandteig für Věnečky und Větrníčky: mehr Butter und ein Start bei 250 °C. Etwa 80 Stück auf zwei Blechen.
 - [Brandteigkränze mit Vanillecreme](https://www.juzlova.cz/de/brandteigkraenze-mit-vanillecreme/): Klassische Věnečky aus Brandteig mit Vanillebuttercreme und Rumguss. Etwa 20 Stück.
 - [Schaumrollen (Kremrole)](https://www.juzlova.cz/de/schaumrollen/): Mürbe Röhrchen, gefüllt mit glänzendem italienischem Baiser. Etwa 35–40 Stück; Sie brauchen Schaumrollen-Formen aus Metall.
