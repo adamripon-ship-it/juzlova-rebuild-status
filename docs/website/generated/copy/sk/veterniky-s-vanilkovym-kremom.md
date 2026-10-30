@@ -3,7 +3,7 @@
 # Veterníčky s vanilkovým krémom a cukrovou polevou — recept
 
 - **URL:** `/sk/veterniky-s-vanilkovym-kremom/`
-- **Meta description:** Veterníčky z odpaľovaného cesta (125 ml mlieka, 125 ml vody, 100 g masla, 150 g múky, 4–5 vajec) s vanilkovým maslovým krémom a bielou cukrovou polevou. Asi 30 kúskov, pečenie 10 min na 220 °C a 15–20 min na 180 °C.
+- **Meta description:** Veterníčky z odpaľovaného cesta (125 ml mlieka, 125 ml vody, 100 g masla, 150 g múky, 4–5 vajec) s vanilkovým maslovým krémom a bielou cukrovou polevou. Asi 30 kúskov.
 
 ---
 

@@ -3,7 +3,7 @@
 # Větrníčky with vanilla cream and sugar glaze — recipe
 
 - **URL:** `/en/cream-puffs-with-vanilla-cream/`
-- **Meta description:** Czech větrníčky from choux pastry (125 ml milk, 125 ml water, 100 g butter, 150 g flour, 4–5 eggs) with vanilla buttercream and a white sugar glaze. About 30 pieces; bake 10 min at 220 °C, then 15–20 min at 180 °C.
+- **Meta description:** Czech větrníčky from choux pastry (125 ml milk, 125 ml water, 100 g butter, 150 g flour, 4–5 eggs) with vanilla buttercream and a white sugar glaze. About 30 pieces.
 
 ---
 

@@ -13,7 +13,7 @@
 }
 :root {
   --gold: #D4AF37; --gold-hover: #C7A22E; --white: #fff;
-  --ink: #1A1A1A; --ink-soft: #3D3D3D; --grey: #767676;
+  --ink: #1A1A1A; --ink-soft: #3D3D3D; --grey: #696969;
   --line: #E4E4E4; --field: #F6F6F6; --ok: #2E6B3A; --error: #B3261E; --teal: #094853;
   --shadow: 0 28px 28px rgba(26,26,26,.18);
   --shadow-soft: 0 12px 32px -14px rgba(26,26,26,.28);

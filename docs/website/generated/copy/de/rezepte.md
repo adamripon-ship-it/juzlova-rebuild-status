@@ -3,7 +3,7 @@
 # Rezepte mit Knödelmischung, Pudding und Kakao | Jůzlová
 
 - **URL:** `/de/rezepte/`
-- **Meta description:** Mohnnudeln, Strapačky, Birnenkuchen mit Pudding, Brandteigkränze, Schaumrollen, Tassen-Lebkuchen. Rezepte mit Zutaten, Temperaturen und Portionen — mit den Mischungen aus Kochánov.
+- **Meta description:** Mohnnudeln, Strapačky, Birnenkuchen mit Pudding, Brandteigkränze, Schaumrollen, Tassen-Lebkuchen. Rezepte mit Zutaten, Temperaturen und Portionen.
 
 ---
 

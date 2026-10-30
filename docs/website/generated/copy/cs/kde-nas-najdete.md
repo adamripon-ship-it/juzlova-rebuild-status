@@ -3,7 +3,7 @@
 # Kde nás najdete — Kochánov 40, Humpolec, Vysočina | Jůzlová
 
 - **URL:** `/kde-nas-najdete/`
-- **Meta description:** Dílna Kochánov 40, 582 53, Vysočina, a výdejní místo v Humpolci. Vyzvednutí zdarma, den a hodinu domluvíte s Jiřinou po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
+- **Meta description:** Dílna Kochánov 40, 582 53, Vysočina, a výdejní místo v Humpolci. Vyzvednutí zdarma, den a hodinu domluvíte po telefonu. Do Humpolce a Havlíčkova Brodu zboží dovezeme.
 
 ---
 

@@ -422,7 +422,7 @@ LANG = {
         },
     },
     "recipes_intro": "Jedes Rezept nennt die Menge Mischung, die Backtemperatur und die Portionen.",
-    "recipes_desc": "Mohnnudeln, Strapačky, Birnenkuchen mit Pudding, Brandteigkränze, Schaumrollen, Tassen-Lebkuchen. Rezepte mit Zutaten, Temperaturen und Portionen — mit den Mischungen aus Kochánov.",
+    "recipes_desc": "Mohnnudeln, Strapačky, Birnenkuchen mit Pudding, Brandteigkränze, Schaumrollen, Tassen-Lebkuchen. Rezepte mit Zutaten, Temperaturen und Portionen.",
     "faq_page": {
         "title": "Häufige Fragen — Bestellung, Abholung, Zutaten | Jůzlová",
         "desc": "Bestellen ohne Onlineshop, Abholung und kostenlose Lieferung, glutenfreier Pudding, Fettgehalt des Kakaos, Lagerung des 5-kg-Beutels.",

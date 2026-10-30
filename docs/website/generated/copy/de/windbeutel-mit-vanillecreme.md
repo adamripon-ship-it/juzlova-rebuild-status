@@ -3,7 +3,7 @@
 # Tschechische Windbeutel mit Vanillecreme und Zuckerglasur — Rezept
 
 - **URL:** `/de/windbeutel-mit-vanillecreme/`
-- **Meta description:** Větrníčky aus Brandteig (125 ml Milch, 125 ml Wasser, 100 g Butter, 150 g Mehl, 4–5 Eier) mit Vanille-Buttercreme und weißer Zuckerglasur. Etwa 30 Stück; 10 Min. bei 220 °C, dann 15–20 Min. bei 180 °C backen.
+- **Meta description:** Větrníčky aus Brandteig (125 ml Milch, 125 ml Wasser, 100 g Butter, 150 g Mehl, 4–5 Eier) mit Vanille-Buttercreme und weißer Zuckerglasur. Etwa 30 Stück.
 
 ---
 

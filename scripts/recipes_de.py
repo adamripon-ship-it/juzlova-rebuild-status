@@ -338,7 +338,7 @@ RECIPES = {
         "name": "Windbeutel mit Vanillecreme (větrníčky)",
         "teaser": "Kleine, mit der Sterntülle gespritzte Windbeutel mit Vanille-Buttercreme, in weiße Zuckerglasur getaucht. Etwa 30 Stück.",
         "title": "Tschechische Windbeutel mit Vanillecreme und Zuckerglasur — Rezept",
-        "desc": "Větrníčky aus Brandteig (125 ml Milch, 125 ml Wasser, 100 g Butter, 150 g Mehl, 4–5 Eier) mit Vanille-Buttercreme und weißer Zuckerglasur. Etwa 30 Stück; 10 Min. bei 220 °C, dann 15–20 Min. bei 180 °C backen.",
+        "desc": "Větrníčky aus Brandteig (125 ml Milch, 125 ml Wasser, 100 g Butter, 150 g Mehl, 4–5 Eier) mit Vanille-Buttercreme und weißer Zuckerglasur. Etwa 30 Stück.",
         "product": "vanilkovy_pudink",
         "meta": "Etwa 30 Stück · Backzeit 25–30 Min. · Creme und Glasur",
         "ingredients": [
