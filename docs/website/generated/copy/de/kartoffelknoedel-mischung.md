@@ -3,7 +3,7 @@
 # Kartoffelknödel-Mischung 5 kg — nur Wasser dazu | Jůzlová
 
 - **URL:** `/de/kartoffelknoedel-mischung/`
-- **Meta description:** Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in etwa 25 Minuten fertig. 5 kg / 250 Kč. Kartoffelknödel-Mischung.
+- **Meta description:** Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in etwa 25 Minuten fertig. 5 kg / 250 CZK. Kartoffelknödel-Mischung.
 
 ---
 
@@ -15,13 +15,15 @@ Mehl aus einer Mühle in Havlíčkův Brod. Die vollständige Zutatenliste finde
 
 Preis
 
-- 5 kg / 250 Kč bei Abholung in der Werkstatt · 50 Kč/kg · etwa 4 Kč pro Portion (60–70 Portionen)
+- 5 kg / 250 CZK ≈ 10,50 € bei Abholung und Lieferung · 50 CZK/kg · etwa 4 CZK pro Portion (60–70 Portionen)
 
 Bestellung
 
-- +420 728 466 141 · täglich 8–19 Uhr
+- +420 728 466 141 · täglich 8–19 Uhr, auf Tschechisch und Slowakisch
 
 Abholung in der Werkstatt. Nach Humpolec und Havlíčkův Brod liefern wir.
+
+Preise in Tschechischen Kronen (CZK). Euro-Beträge sind Näherungswerte, Kurs der Tschechischen Nationalbank vom 30.10.2026.
 
 Bei Jiřina bestellen Abholorte
 

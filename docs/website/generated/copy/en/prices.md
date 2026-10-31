@@ -3,57 +3,57 @@
 # Price list — dumpling mix, pudding, cocoa | Jůzlová
 
 - **URL:** `/en/prices/`
-- **Meta description:** Dumpling mix 5 kg 250 Kč (CZK), raw-potato mix 260 Kč, gluten-free pudding 60 Kč/kg, cocoa 270 Kč/500 g, vanilla sugar 60 Kč/kg. Collect in Kochánov.
+- **Meta description:** Dumpling mix 5 kg 250 CZK, raw-potato mix 260 CZK, gluten-free pudding 60 CZK/kg, cocoa 270 CZK/500 g, vanilla sugar 60 CZK/kg. Collect in Kochánov.
 
 ---
 
 Home › Prices
 
-## Prices: five mixes, collected at the workshop in Kochánov or in Humpolec
+## Price list: five mixes, for pick-up in Kochánov or Humpolec
 
-The same price for everyone, whether you collect at the workshop or have your order delivered to Havlíčkův Brod or Humpolec.
+The same price for everyone, whether you pick up in Kochánov or Humpolec, or we deliver to Humpolec or Havlíčkův Brod.
 
 Call Jiřina Write to us
 
-at workshop pick-up
+for pick-up and delivery
 
 #### Potato dumpling mix
 
 Pack: 5 kg
 
-250 Kč
+250 CZK ≈ €10.50
 
-at workshop pick-up
+for pick-up and delivery
 
 #### Raw-potato dumpling mix (chlupaté knedlíky)
 
 Pack: 5 kg
 
-260 Kč
+260 CZK ≈ €10.50
 
-at workshop pick-up
+for pick-up and delivery
 
 #### Gluten-free vanilla pudding powder
 
 Pack: 1 kg / 400 g
 
-60 Kč / 30 Kč
+60 CZK / 30 CZK ≈ €2.50 / €1
 
-at workshop pick-up
+for pick-up and delivery
 
 #### Dutch-process cocoa
 
 Pack: 500 g
 
-270 Kč
+270 CZK ≈ €11
 
-at workshop pick-up
+for pick-up and delivery
 
 #### Vanilla sugar
 
 Pack: 1 kg
 
-60 Kč
+60 CZK ≈ €2.50
 
 ### Per kilo and per portion
 
@@ -63,24 +63,24 @@ Pack: 1 kg
 - Per kilo / per portion
 - Potato dumpling mix
 - 5 kg
-- 250 Kč
-- 50 Kč/kg · about 4 Kč per portion (60–70 portions)
+- 250 CZK ≈ €10.50
+- 50 CZK/kg · about 4 CZK per portion (60–70 portions)
 - Raw-potato dumpling mix (chlupaté knedlíky)
 - 5 kg
-- 260 Kč
-- 52 Kč/kg · for a season at home, or for a canteen
+- 260 CZK ≈ €10.50
+- 52 CZK/kg · for a season at home, or for a canteen
 - Gluten-free vanilla pudding powder
 - 1 kg / 400 g
-- 60 Kč / 30 Kč
-- 60 Kč/kg · about 2.40 Kč per pudding (40 g)
+- 60 CZK / 30 CZK ≈ €2.50 / €1
+- 60 CZK/kg · about 2.40 CZK per pudding (40 g)
 - Dutch-process cocoa
 - 500 g
-- 270 Kč
-- 540 Kč/kg · about 50 spoonfuls per pack
+- 270 CZK ≈ €11
+- 540 CZK/kg · about 50 spoonfuls per pack
 - Vanilla sugar
 - 1 kg
-- 60 Kč
-- 60 Kč/kg
+- 60 CZK ≈ €2.50
+- 60 CZK/kg
 
 Portion counts are approximate, based on the pack instructions.
 

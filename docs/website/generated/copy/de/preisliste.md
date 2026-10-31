@@ -3,7 +3,7 @@
 # Preisliste — Knödelmischung, Pudding, Kakao | Jůzlová
 
 - **URL:** `/de/preisliste/`
-- **Meta description:** Knödelmischung 5 kg / 250 Kč, rohe Knödel 260 Kč, glutenfreier Pudding 60 Kč/kg, Kakao 270 Kč/500 g, Vanillinzucker 60 Kč/kg. Preise bei Abholung.
+- **Meta description:** Knödelmischung 5 kg / 250 CZK, rohe Knödel 260 CZK, glutenfreier Pudding 60 CZK/kg, Kakao 270 CZK/500 g, Vanillinzucker 60 CZK/kg. Preise bei Abholung.
 
 ---
 
@@ -15,45 +15,45 @@ Derselbe Preis für alle, die in der Werkstatt abholen oder sich nach Havlíčk�
 
 Jiřina anrufen Schreiben Sie uns
 
-bei Abholung in der Werkstatt
+bei Abholung und Lieferung
 
 #### Kartoffelknödel-Mischung
 
 Packung: 5 kg
 
-250 Kč
+250 CZK ≈ 10,50 €
 
-bei Abholung in der Werkstatt
+bei Abholung und Lieferung
 
 #### Rohe Kartoffelknödel-Mischung (chlupaté knedlíky)
 
 Packung: 5 kg
 
-260 Kč
+260 CZK ≈ 10,50 €
 
-bei Abholung in der Werkstatt
+bei Abholung und Lieferung
 
 #### Glutenfreies Vanillepuddingpulver
 
 Packung: 1 kg / 400 g
 
-60 Kč / 30 Kč
+60 CZK / 30 CZK ≈ 2,50 € / 1 €
 
-bei Abholung in der Werkstatt
+bei Abholung und Lieferung
 
 #### Kakaopulver holländischer Art
 
 Packung: 500 g
 
-270 Kč
+270 CZK ≈ 11 €
 
-bei Abholung in der Werkstatt
+bei Abholung und Lieferung
 
 #### Vanillinzucker
 
 Packung: 1 kg
 
-60 Kč
+60 CZK ≈ 2,50 €
 
 ### Pro Kilo und pro Portion
 
@@ -63,24 +63,24 @@ Packung: 1 kg
 - Pro Kilo / pro Portion
 - Kartoffelknödel-Mischung
 - 5 kg
-- 250 Kč
-- 50 Kč/kg · etwa 4 Kč pro Portion (60–70 Portionen)
+- 250 CZK ≈ 10,50 €
+- 50 CZK/kg · etwa 4 CZK pro Portion (60–70 Portionen)
 - Rohe Kartoffelknödel-Mischung (chlupaté knedlíky)
 - 5 kg
-- 260 Kč
-- 52 Kč/kg · für eine Saison oder für die Kantine
+- 260 CZK ≈ 10,50 €
+- 52 CZK/kg · für eine Saison oder für die Kantine
 - Glutenfreies Vanillepuddingpulver
 - 1 kg / 400 g
-- 60 Kč / 30 Kč
-- 60 Kč/kg · etwa 2,40 Kč pro Pudding (40 g)
+- 60 CZK / 30 CZK ≈ 2,50 € / 1 €
+- 60 CZK/kg · etwa 2,40 CZK pro Pudding (40 g)
 - Kakaopulver holländischer Art
 - 500 g
-- 270 Kč
-- 540 Kč/kg · etwa 50 Löffel pro Packung
+- 270 CZK ≈ 11 €
+- 540 CZK/kg · etwa 50 Löffel pro Packung
 - Vanillinzucker
 - 1 kg
-- 60 Kč
-- 60 Kč/kg
+- 60 CZK ≈ 2,50 €
+- 60 CZK/kg
 
 Portionsangaben folgen der Packungsanleitung.
 

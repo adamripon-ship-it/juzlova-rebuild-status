@@ -33,7 +33,7 @@ Your name and a phone number or e-mail are enough. We'll reply and arrange a dat
 
 *label:* E-mail
 
-*legend:* Which mixes are you interested in
+*legend:* Which mixes are you interested in?
 
 *label:* Potato dumpling mix
 
@@ -45,9 +45,11 @@ Your name and a phone number or e-mail are enough. We'll reply and arrange a dat
 
 *label:* Vanilla sugar
 
-*legend:* How would you like to receive your order
+*legend:* How would you like to receive your order?
 
 *label:* Pick-up at the workshop, Kochánov 40, 582 53
+
+*label:* Pick-up in Humpolec near the Bernard brewery (exact place by arrangement)
 
 *label:* Delivery to Havlíčkův Brod or Humpolec (free, day and time by arrangement)
 

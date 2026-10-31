@@ -29,7 +29,7 @@ Zavolat Jiřině a objednat Vše o pudingu
 
 Zavolat Jiřině a objednat Vše o cukru
 
-Bramborové knedlíky v prášku 5 kg / 250 Kč Chlupaté knedlíky v prášku 5 kg / 260 Kč Vanilkový puding bez lepku 1 kg / 60 Kč · 400 g / 30 Kč Kakao holandského typu 500 g / 270 Kč Vanilínový cukr 1 kg / 60 Kč Ceny platí při vyzvednutí v dílně
+Bramborové knedlíky v prášku 5 kg / 250 Kč Chlupaté knedlíky v prášku 5 kg / 260 Kč Vanilkový puding bez lepku 1 kg / 60 Kč · 400 g / 30 Kč Kakao holandského typu 500 g / 270 Kč Vanilínový cukr 1 kg / 60 Kč Stejné ceny při vyzvednutí i rozvozu
 
 ### Pět směsí. Jedno místo výroby.
 
@@ -37,7 +37,7 @@ Mouka do knedlíkových směsí je z mlýna v Havlíčkově Brodě, 12 km od dí
 
 5 kg bramborové knedlíky · 250 Kč
 
-15 minut na chlupaté knedlíky
+20 minut na chlupaté knedlíky
 
 2004 rok, kdy jsme začali míchat
 
@@ -51,11 +51,11 @@ Bramborové knedlíky v prášku 5 kg / 250 Kč Chlupaté knedlíky v prášku 5
 
 Puding v kile, cukr v kile, knedlíky v pětikilovém pytli. Balíme jednoduše a prodáváme přímo z dílny — na ceně je to znát.
 
-- Bramborové knedlíky v prášku 5 kg / 250 Kč
-- Chlupaté knedlíky v prášku 5 kg / 260 Kč
-- Vanilkový puding bez lepku 1 kg / 60 Kč · 400 g / 30 Kč
-- Kakao holandského typu 500 g / 270 Kč
-- Vanilínový cukr 1 kg / 60 Kč
+- Bramborové knedlíky v prášku 5 kg 250 Kč
+- Chlupaté knedlíky v prášku 5 kg 260 Kč
+- Vanilkový puding bez lepku 1 kg 60 Kč 400 g 30 Kč
+- Kakao holandského typu 500 g 270 Kč
+- Vanilínový cukr 1 kg 60 Kč
 
 Celý ceník
 

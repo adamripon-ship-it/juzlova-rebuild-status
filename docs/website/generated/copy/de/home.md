@@ -19,7 +19,7 @@ Jiřina anrufen und bestellen Alles zur Mischung
 
 ### Rohe Kartoffelknödel ohne Schälen und Reiben Mit Wasser anrühren, formen, kochen. Bosáky, Halušky und Strapačky, ohne Kartoffeln zu schälen.
 
-Jiřina anrufen und bestellen Alles zu Bosáky
+Jiřina anrufen und bestellen Alles zu dieser Mischung
 
 ### Glutenfreier Vanillepudding im Kilo Maisstärke für Cremes, Windbeutel und Birnenkuchen. Ein Beutel reicht für eine ganze Saison.
 
@@ -29,19 +29,19 @@ Jiřina anrufen und bestellen Alles zum Pudding
 
 Jiřina anrufen und bestellen Alles zum Zucker
 
-Kartoffelknödel-Mischung 5 kg / 250 Kč Rohe Kartoffelknödel-Mischung (chlupaté knedlíky) 5 kg / 260 Kč Glutenfreies Vanillepuddingpulver 1 kg / 60 Kč · 400 g / 30 Kč Kakaopulver holländischer Art 500 g / 270 Kč Vanillinzucker 1 kg / 60 Kč Preise gelten bei Abholung in der Werkstatt
+Kartoffelknödel-Mischung 5 kg / 250 CZK Rohe Kartoffelknödel-Mischung (chlupaté knedlíky) 5 kg / 260 CZK Glutenfreies Vanillepuddingpulver 1 kg / 60 CZK · 400 g / 30 CZK Kakaopulver holländischer Art 500 g / 270 CZK Vanillinzucker 1 kg / 60 CZK Gleiche Preise bei Abholung und Lieferung
 
 ### Fünf Mischungen. Eine Werkstatt.
 
 Das Mehl in unseren Knödelmischungen stammt aus einer Mühle in Havlíčkův Brod, 12 km von der Werkstatt entfernt.
 
-5 kg Kartoffelknödel-Mischung · 250 Kč
+5 kg Kartoffelknödel-Mischung · 250 CZK
 
-15 Minuten für rohe Kartoffelknödel
+20 Minuten für rohe Kartoffelknödel
 
 2004 Gründungsjahr der Werkstatt
 
-Kartoffelknödel-Mischung 5 kg / 250 Kč Rohe Kartoffelknödel-Mischung (chlupaté knedlíky) 5 kg / 260 Kč Glutenfreies Vanillepuddingpulver 1 kg / 60 Kč · 400 g / 30 Kč Kakaopulver holländischer Art 500 g / 270 Kč Vanillinzucker 1 kg / 60 Kč
+Kartoffelknödel-Mischung 5 kg / 250 CZK Rohe Kartoffelknödel-Mischung (chlupaté knedlíky) 5 kg / 260 CZK Glutenfreies Vanillepuddingpulver 1 kg / 60 CZK · 400 g / 30 CZK Kakaopulver holländischer Art 500 g / 270 CZK Vanillinzucker 1 kg / 60 CZK
 
 12 km von der Werkstatt zur Mühle
 
@@ -51,11 +51,11 @@ Kartoffelknödel-Mischung 5 kg / 250 Kč Rohe Kartoffelknödel-Mischung (chlupat
 
 Pudding und Zucker im Kilobeutel, Knödelmischung im 5-kg-Beutel. Einfache Verpackung, Verkauf direkt aus der Werkstatt.
 
-- Kartoffelknödel-Mischung 5 kg / 250 Kč
-- Rohe Kartoffelknödel-Mischung (chlupaté knedlíky) 5 kg / 260 Kč
-- Glutenfreies Vanillepuddingpulver 1 kg / 60 Kč · 400 g / 30 Kč
-- Kakaopulver holländischer Art 500 g / 270 Kč
-- Vanillinzucker 1 kg / 60 Kč
+- Kartoffelknödel-Mischung 5 kg 250 CZK ≈ 10,50 €
+- Rohe Kartoffelknödel-Mischung (chlupaté knedlíky) 5 kg 260 CZK ≈ 10,50 €
+- Glutenfreies Vanillepuddingpulver 1 kg 60 CZK ≈ 2,50 € 400 g 30 CZK ≈ 1 €
+- Kakaopulver holländischer Art 500 g 270 CZK ≈ 11 €
+- Vanillinzucker 1 kg 60 CZK ≈ 2,50 €
 
 Komplette Preisliste
 
@@ -93,14 +93,14 @@ Bestellungen nimmt Jiřina Jůzlová entgegen, täglich 8–19 Uhr. Kein Onlines
 
 Pudding und Zucker im Kilobeutel, Knödelmischung im 5-kg-Beutel. Einfache Verpackung, Verkauf direkt aus der Werkstatt.
 
-Für Küchen Anfahrt
+Für Küchen So finden Sie uns
 
 ### Abholen in Kochánov oder Humpolec
 
-- Kostenlose Abholung in der Werkstatt in Kochánov oder in Humpolec. Den Termin vereinbaren Sie telefonisch mit Jiřina.
+- Kostenlose Abholung in der Werkstatt in Kochánov oder in Humpolec. Den Termin vereinbaren Sie telefonisch mit Jiřina (auf Tschechisch oder Slowakisch).
 - Nach Humpolec und Havlíčkův Brod liefern wir.
 
-Anrufen und Abholung vereinbaren Anfahrt
+Anrufen und Abholung vereinbaren So finden Sie uns
 
 Bewertungen
 

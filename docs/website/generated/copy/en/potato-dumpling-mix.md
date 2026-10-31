@@ -3,7 +3,7 @@
 # Czech potato dumpling mix 5 kg — just add water | Jůzlová
 
 - **URL:** `/en/potato-dumpling-mix/`
-- **Meta description:** Czech potato dumpling mix: just add water. Holds together, ready in about 25 minutes. 5 kg / 250 Kč. Collect in Kochánov.
+- **Meta description:** Czech potato dumpling mix: just add water. Holds together, ready in about 25 minutes. 5 kg / 250 CZK. Collect in Kochánov.
 
 ---
 
@@ -15,15 +15,17 @@ Flour from a mill in Havlíčkův Brod. The full ingredient list is below.
 
 Price
 
-- 5 kg / 250 Kč at workshop pick-up · 50 Kč/kg · about 4 Kč per portion (60–70 portions)
+- 5 kg / 250 CZK ≈ €10.50 for pick-up and delivery · 50 CZK/kg · about 4 CZK per portion (60–70 portions)
 
 Order
 
-- +420 728 466 141 · daily 8–19
+- +420 728 466 141 · daily 8–19, in Czech and Slovak
 
 Collect at the workshop. We deliver to Humpolec and Havlíčkův Brod.
 
-Order from Jiřina Where to collect
+Prices are in Czech koruna (CZK). Euro amounts are approximate, at the Czech National Bank rate of 30 Oct 2026.
+
+Order from Jiřina Where to pick up
 
 ### What's in it
 

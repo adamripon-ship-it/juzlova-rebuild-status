@@ -29,7 +29,7 @@ Zavolať Jiřine a objednať Všetko o pudingu
 
 Zavolať Jiřine a objednať Všetko o cukre
 
-Zemiakové knedle v prášku 5 kg / 250 Kč Chlpaté knedle v prášku 5 kg / 260 Kč Vanilkový puding bez lepku 1 kg / 60 Kč · 400 g / 30 Kč Kakao holandského typu 500 g / 270 Kč Vanilínový cukor 1 kg / 60 Kč Ceny platia pri vyzdvihnutí v dielni
+Zemiakové knedle v prášku 5 kg / 250 Kč Chlpaté knedle v prášku 5 kg / 260 Kč Vanilkový puding bez lepku 1 kg / 60 Kč · 400 g / 30 Kč Kakao holandského typu 500 g / 270 Kč Vanilínový cukor 1 kg / 60 Kč Rovnaké ceny pri vyzdvihnutí aj rozvoze
 
 ### Päť zmesí. Jedno miesto výroby.
 
@@ -37,7 +37,7 @@ Múka do knedľových zmesí je z mlyna v Havlíčkovom Brode, 12 km od dielne.
 
 5 kg zemiakové knedle · 250 Kč
 
-15 minút na chlpaté knedle
+20 minút na chlpaté knedle
 
 2004 rok, keď sme začali miešať
 
@@ -51,11 +51,11 @@ Zemiakové knedle v prášku 5 kg / 250 Kč Chlpaté knedle v prášku 5 kg / 26
 
 Puding a cukor po kile, knedle v päťkilovom vreci. Balíme jednoducho a predávame priamo z dielne.
 
-- Zemiakové knedle v prášku 5 kg / 250 Kč
-- Chlpaté knedle v prášku 5 kg / 260 Kč
-- Vanilkový puding bez lepku 1 kg / 60 Kč · 400 g / 30 Kč
-- Kakao holandského typu 500 g / 270 Kč
-- Vanilínový cukor 1 kg / 60 Kč
+- Zemiakové knedle v prášku 5 kg 250 Kč
+- Chlpaté knedle v prášku 5 kg 260 Kč
+- Vanilkový puding bez lepku 1 kg 60 Kč 400 g 30 Kč
+- Kakao holandského typu 500 g 270 Kč
+- Vanilínový cukor 1 kg 60 Kč
 
 Celý cenník
 

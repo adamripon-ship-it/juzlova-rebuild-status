@@ -78,6 +78,8 @@ Formulár je pre prevádzky. Domácnosti objednávajú cez Kontakt.
 
 *label:* Vyzdvihnutie v dielni Kochánov 40, 582 53
 
+*label:* Vyzdvihnutie v Humpolci pri Pivovare Bernard (presné miesto dohodneme)
+
 *label:* Rozvoz do Havlíčkovho Brodu alebo Humpolca (zadarmo, deň a hodinu dohodneme)
 
 *label:* Správa (čo, koľko, kde ste)

@@ -15,7 +15,7 @@ Základ je kukuřičný škrob, který lepek neobsahuje. Vaříte ho jako každ�
 
 Cena
 
-- 1 kg / 60 Kč · 400 g / 30 Kč při vyzvednutí v dílně · 60 Kč/kg · zhruba 2,40 Kč na jeden puding (40 g)
+- 1 kg / 60 Kč · 400 g / 30 Kč při vyzvednutí i rozvozu · 60 Kč/kg · zhruba 2,40 Kč na jeden puding (40 g)
 
 Objednávka
 

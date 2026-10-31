@@ -19,7 +19,7 @@ Call Jiřina to order All about the mix
 
 ### Raw-potato dumplings with no peeling or grating Mix with water, shape, boil. Bosáky, halušky and strapačky without the potato work.
 
-Call Jiřina to order All about bosáky
+Call Jiřina to order All about this mix
 
 ### Gluten-free vanilla pudding, by the kilo Corn starch for creams, cream puffs and pear cake. One bag lasts a whole season.
 
@@ -29,19 +29,19 @@ Call Jiřina to order All about the pudding
 
 Call Jiřina to order All about the sugar
 
-Potato dumpling mix 5 kg / 250 Kč Raw-potato dumpling mix (chlupaté knedlíky) 5 kg / 260 Kč Gluten-free vanilla pudding powder 1 kg / 60 Kč · 400 g / 30 Kč Dutch-process cocoa 500 g / 270 Kč Vanilla sugar 1 kg / 60 Kč Prices apply at workshop pick-up
+Potato dumpling mix 5 kg / 250 CZK Raw-potato dumpling mix (chlupaté knedlíky) 5 kg / 260 CZK Gluten-free vanilla pudding powder 1 kg / 60 CZK · 400 g / 30 CZK Dutch-process cocoa 500 g / 270 CZK Vanilla sugar 1 kg / 60 CZK Same prices for pick-up and delivery
 
 ### Five mixes. One workshop.
 
 The flour in our dumpling mixes comes from a mill in Havlíčkův Brod, 12 km from the workshop.
 
-5 kg potato dumpling mix · 250 Kč
+5 kg potato dumpling mix · 250 CZK
 
-15 minutes for raw-potato dumplings
+20 minutes for raw-potato dumplings
 
 2004 the year we started mixing
 
-Potato dumpling mix 5 kg / 250 Kč Raw-potato dumpling mix (chlupaté knedlíky) 5 kg / 260 Kč Gluten-free vanilla pudding powder 1 kg / 60 Kč · 400 g / 30 Kč Dutch-process cocoa 500 g / 270 Kč Vanilla sugar 1 kg / 60 Kč
+Potato dumpling mix 5 kg / 250 CZK Raw-potato dumpling mix (chlupaté knedlíky) 5 kg / 260 CZK Gluten-free vanilla pudding powder 1 kg / 60 CZK · 400 g / 30 CZK Dutch-process cocoa 500 g / 270 CZK Vanilla sugar 1 kg / 60 CZK
 
 12 km from the workshop to the mill
 
@@ -51,11 +51,11 @@ Potato dumpling mix 5 kg / 250 Kč Raw-potato dumpling mix (chlupaté knedlíky)
 
 Pudding by the kilo, sugar by the kilo, dumpling mix in a 5 kg bag. Plain packaging, sold straight from the workshop.
 
-- Potato dumpling mix 5 kg / 250 Kč
-- Raw-potato dumpling mix (chlupaté knedlíky) 5 kg / 260 Kč
-- Gluten-free vanilla pudding powder 1 kg / 60 Kč · 400 g / 30 Kč
-- Dutch-process cocoa 500 g / 270 Kč
-- Vanilla sugar 1 kg / 60 Kč
+- Potato dumpling mix 5 kg 250 CZK ≈ €10.50
+- Raw-potato dumpling mix (chlupaté knedlíky) 5 kg 260 CZK ≈ €10.50
+- Gluten-free vanilla pudding powder 1 kg 60 CZK ≈ €2.50 400 g 30 CZK ≈ €1
+- Dutch-process cocoa 500 g 270 CZK ≈ €11
+- Vanilla sugar 1 kg 60 CZK ≈ €2.50
 
 Full price list
 

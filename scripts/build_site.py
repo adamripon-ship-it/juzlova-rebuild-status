@@ -62,7 +62,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20261031d"
+ASSET_VER = "20261031f"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -425,6 +425,25 @@ def format_czk_parts(amounts):
     return " / ".join(f"{n} Kč" for n in amounts)
 
 
+EUR_CZK = 24.36  # Czech National Bank fixing, 30 Oct 2026; also named in ui["eur_note"]
+
+
+def localized_price(lang, price):
+    return price.replace("Kč", "CZK") if lang in ("en", "de") else price
+
+
+def eur_approx(lang, price):
+    """Approximate euros for the foreign-language pages, to the nearest 50 cents."""
+    if lang not in ("en", "de"):
+        return ""
+    parts = []
+    for czk in re.findall(r"(\d+) (?:Kč|CZK)", price):
+        eur = round(int(czk) / EUR_CZK * 2) / 2
+        text = f"{eur:.0f}" if eur == int(eur) else f"{eur:.2f}"
+        parts.append(f"€{text}" if lang == "en" else f"{text.replace('.', ',')} €")
+    return "≈ " + " / ".join(parts)
+
+
 def price_board_html(L, depth):
     """Pick-up price tiles plus a unit-price table (per kg, per portion)."""
     ui = L["ui"]
@@ -434,6 +453,9 @@ def price_board_html(L, depth):
     for i, (key, pack, price) in enumerate(PRICE_ROWS):
         pr = L["products"][key]
         name = pr["name"]
+        price = localized_price(L["code"], price)
+        eur = eur_approx(L["code"], price)
+        eur_html = f'<small class="price-eur">{esc(eur)}</small>' if eur else ""
         href = f"{pages}{slug_of(L['code'], key)}/"
         tiles.append(
             f"""<article class="price-tile" style="--i:{i}">
@@ -441,13 +463,13 @@ def price_board_html(L, depth):
 <span class="price-tile-badge">{esc(ui.get('price_pickup_badge', ui['price_label']))}</span>
 <h3 class="price-tile-name">{esc(name)}</h3>
 <p class="price-tile-pack">{esc(ui['package_label'])}: {esc(pack)}</p>
-<p class="price-tile-amount"><span class="price-num">{esc(price)}</span></p>
+<p class="price-tile-amount"><span class="price-num">{esc(price)}</span>{eur_html}</p>
 </a>
 </article>"""
         )
         rows.append(
             f'<tr><td><a href="{href}">{esc(name)}</a></td><td>{esc(pack)}</td>'
-            f'<td>{esc(price)}</td><td>{esc(pr.get("per_unit", ""))}</td></tr>'
+            f'<td>{esc(price)}{eur_html}</td><td>{esc(pr.get("per_unit", ""))}</td></tr>'
         )
     board = (
         f'<div class="price-board" aria-label="{esc(ui.get("price_board_label", ui["price_label"]))}">'
@@ -818,6 +840,7 @@ def contact_form_html(L, kind="contact"):
     hint = ui.get("form_b2b_hint") if is_b2b else ui["form_hint"]
     heading_id = "b2b-write" if is_b2b else "write-to-us"
     fulfill_opts = [("factory", ui["form_fulfill_factory"]),
+                    ("humpolec", ui["form_fulfill_humpolec"]),
                     ("delivery_hb_humpolec", ui["form_fulfill_two_cities"])]
     fulfill = "\n".join(
         f'<label class="chk"><input type="radio" name="fulfillment" value="{v}"><span>{esc(label)}</span></label>'
@@ -1367,9 +1390,9 @@ def shell(L, *, title, desc, pid, depth, active, body, jsonld=None, og_img=None,
 
 def price_note_html(L, note=None):
     note = note or L["ui"].get("price_excludes_shipping") or ""
-    if not note:
-        return ""
-    return f'<p class="price-note">{esc(note)}</p>'
+    eur_note = L["ui"].get("eur_note")
+    out = f'<p class="price-note">{esc(note)}</p>' if note else ""
+    return out + (f'<p class="price-note">{esc(eur_note)}</p>' if eur_note else "")
 
 
 TEL_JIRINA = "tel:+420728466141"
@@ -1551,6 +1574,13 @@ def _h1_with_num(text):
     return re.sub(r"(\d+)", r'<span class="num">\1</span>', esc(text), count=1)
 
 
+def pack_price_html(entry, lang):
+    pack, price = entry.split(" / ")
+    eur = eur_approx(lang, price)
+    eur_html = f' <small class="price-eur">{esc(eur)}</small>' if eur else ""
+    return f'<span class="pl-price"><span class="pl-pack">{esc(pack)}</span> <span class="pl-amount"><b>{esc(price)}</b>{eur_html}</span></span>'
+
+
 def _stat(num, unit, label, start=None):
     frm = f' data-from="{start}"' if start is not None else ""
     unit_html = f" {unit}" if unit else ""
@@ -1645,7 +1675,9 @@ def build_home(L):
                    cls=f"p-{PRODUCT_OBJECT[k]}")
         for k in PRODUCT_SLUGS if pimg(k))
     prod_links = "".join(
-        f'<li><a href="{pages}{slug_of(lg, k)}/">{esc(L["products"][k]["name"])}<span>{esc(L["products"][k]["price"])}</span></a></li>'
+        f'<li><a href="{pages}{slug_of(lg, k)}/"><span class="pl-name">{esc(L["products"][k]["name"])}</span>'
+        f'<span class="pl-prices">{"".join(pack_price_html(x, lg) for x in L["products"][k]["price"].split(" · "))}</span>'
+        f'<svg class="pl-arrow" viewBox="0 0 22 14" aria-hidden="true"><path d="M0,7 H20 M14,1 l6,6 -6,6"/></svg></a></li>'
         for k in PRODUCT_SLUGS)
     stats = f"""<section class="band stats" id="produkty">
   <div class="wrap">
@@ -1654,7 +1686,7 @@ def build_home(L):
       <p class="body bullet prose rv">{esc(ui['why_1_p'])}</p>
       <div class="stats-left">
         {_stat(5, "kg", ui['stat_1'])}
-        {_stat(15, "", ui['stat_2'])}
+        {_stat(20, "", ui['stat_2'])}
         {_stat(2004, "", ui['stat_3'], start=1990)}
       </div>
       <div class="stack rv" aria-label="{esc(ui['nav_products'])}">{stack}</div>
@@ -1998,7 +2030,7 @@ def build_product(L, key):
 <div class="product-hero">
 {panel}
 <div>
-<div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{' · '.join(f'<span>{esc(x)}</span>' for x in pr['price'].split(' · '))}</strong>
+<div class="factbox price-card"><dl><dt>{esc(ui['price_label'])}</dt><dd><strong>{' · '.join(f'<span>{esc(x)}</span>' + (f' <small class="price-eur">{esc(eur_approx(lg, x))}</small>' if eur_approx(lg, x) else '') for x in pr['price'].split(' · '))}</strong>
 <span class="price-sub">{esc(ui['price_pickup_badge'])}{(' · ' + esc(pr['per_unit'])) if pr.get('per_unit') else ''}</span></dd>
 <dt>{esc(ui['order_info'])}</dt><dd><a href="{TEL_JIRINA}">+420 728 466 141</a> · {esc(ui['open_hours_short'])}</dd></dl>
 {price_note_html(L, pr.get("price_note"))}</div>
