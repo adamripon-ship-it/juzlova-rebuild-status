@@ -15,7 +15,7 @@ Mouka z mlýna v Havlíčkově Brodě. Celé složení najdete níže.
 
 Cena
 
-- 5 kg / 250 Kč při vyzvednutí v dílně · 50 Kč/kg · zhruba 4 Kč na porci (60–70 porcí)
+- 5 kg / 250 Kč při vyzvednutí i rozvozu · 50 Kč/kg · zhruba 4 Kč na porci (60–70 porcí)
 
 Objednávka
 

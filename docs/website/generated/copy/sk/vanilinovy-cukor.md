@@ -15,7 +15,7 @@ Nie je to vanilka zo struku — je to jemne mletý cukor s vanilínovou arómou.
 
 Cena
 
-- 1 kg / 60 Kč pri vyzdvihnutí v dielni · 60 Kč/kg
+- 1 kg / 60 Kč pri vyzdvihnutí aj rozvoze · 60 Kč/kg
 
 Objednávka
 

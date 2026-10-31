@@ -15,7 +15,7 @@ Podle tradiční receptury z naší dílny. Smícháte s vodou, vytvarujete, pov
 
 Cena
 
-- 5 kg / 260 Kč při vyzvednutí v dílně · 52 Kč/kg · na sezónu i pro jídelnu
+- 5 kg / 260 Kč při vyzvednutí i rozvozu · 52 Kč/kg · na sezónu i pro jídelnu
 
 Objednávka
 

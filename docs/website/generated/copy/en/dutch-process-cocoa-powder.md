@@ -15,15 +15,17 @@ Alkalised powder made from cocoa mass, with no added sugar and none of the 14 EU
 
 Price
 
-- 500 g / 270 Kč at workshop pick-up · 540 Kč/kg · about 50 spoonfuls per pack
+- 500 g / 270 CZK ≈ €11 for pick-up and delivery · 540 CZK/kg · about 50 spoonfuls per pack
 
 Order
 
-- +420 728 466 141 · daily 8–19
+- +420 728 466 141 · daily 8–19, in Czech and Slovak
 
 We deliver to Humpolec and Havlíčkův Brod.
 
-Order from Jiřina Where to collect
+Prices are in Czech koruna (CZK). Euro amounts are approximate, at the Czech National Bank rate of 30 Oct 2026.
+
+Order from Jiřina Where to pick up
 
 ### What the pack looks like
 

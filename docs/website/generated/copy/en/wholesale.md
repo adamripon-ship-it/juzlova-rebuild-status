@@ -62,7 +62,7 @@ This form is for food businesses. Households can order via the Contact page.
 
 *label:* Quantity (packs or kg)
 
-*legend:* Which mixes are you interested in
+*legend:* Which mixes are you interested in?
 
 *label:* Potato dumpling mix
 
@@ -74,9 +74,11 @@ This form is for food businesses. Households can order via the Contact page.
 
 *label:* Vanilla sugar
 
-*legend:* How would you like to receive your order
+*legend:* How would you like to receive your order?
 
 *label:* Pick-up at the workshop, Kochánov 40, 582 53
+
+*label:* Pick-up in Humpolec near the Bernard brewery (exact place by arrangement)
 
 *label:* Delivery to Havlíčkův Brod or Humpolec (free, day and time by arrangement)
 

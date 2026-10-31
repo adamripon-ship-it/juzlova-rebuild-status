@@ -3,7 +3,7 @@
 # Chlupaté knedlíky mix 5 kg — raw-potato dumplings | Jůzlová
 
 - **URL:** `/en/raw-potato-dumpling-mix/`
-- **Meta description:** Traditional Czech raw-potato dumpling mix. Serve with sauerkraut and smoked meat, or make halušky. Ready in about 20 minutes. 5 kg / 260 Kč. Collect in Kochánov.
+- **Meta description:** Traditional Czech raw-potato dumpling mix. Serve with sauerkraut and smoked meat, or make halušky. Ready in about 20 minutes. 5 kg / 260 CZK. Collect in Kochánov.
 
 ---
 
@@ -15,15 +15,17 @@ A traditional recipe from our workshop. Mix with water, shape, boil. Push the do
 
 Price
 
-- 5 kg / 260 Kč at workshop pick-up · 52 Kč/kg · for a season at home, or for a canteen
+- 5 kg / 260 CZK ≈ €10.50 for pick-up and delivery · 52 CZK/kg · for a season at home, or for a canteen
 
 Order
 
-- +420 728 466 141 · daily 8–19
+- +420 728 466 141 · daily 8–19, in Czech and Slovak
 
 We deliver to Humpolec and Havlíčkův Brod.
 
-Order from Jiřina Where to collect
+Prices are in Czech koruna (CZK). Euro amounts are approximate, at the Czech National Bank rate of 30 Oct 2026.
+
+Order from Jiřina Where to pick up
 
 ### What it goes with
 

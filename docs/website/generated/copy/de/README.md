@@ -15,7 +15,7 @@
 | [Lebkuchen (Perník) — Tassenrezept nach Jiřina Jůzlová](tassen-lebkuchen.md) | `/de/tassen-lebkuchen/` |
 | [Birnenkuchen mit Vanillepudding — Rezept von Lucie Kůželová](birnenkuchen-mit-vanillepudding.md) | `/de/birnenkuchen-mit-vanillepudding/` |
 | [Irischer Sticky-Toffee-Pudding mit Kakao und Baileys — Rezept](sticky-toffee-pudding.md) | `/de/sticky-toffee-pudding/` |
-| [Kakaopulver holländischer Art 500 g / 270 Kč \| Jůzlová](kakaopulver-hollaendischer-art.md) | `/de/kakaopulver-hollaendischer-art/` |
+| [Kakaopulver holländischer Art 500 g / 270 CZK \| Jůzlová](kakaopulver-hollaendischer-art.md) | `/de/kakaopulver-hollaendischer-art/` |
 | [Karamell-Větrníky mit zweifacher Creme — Rezept \| Jůzlová](karamell-windbeutel.md) | `/de/karamell-windbeutel/` |
 | [Anfahrt — Kochánov 40 und Humpolec, Vysočina \| Jůzlová](anfahrt.md) | `/de/anfahrt/` |
 | [Über uns — Familienwerkstatt Jůzlová, Kochánov, seit 2004](ueber-uns.md) | `/de/ueber-uns/` |
@@ -28,8 +28,8 @@
 | [Sahneroulade — glutenfreies Rezept mit Kakao \| Jůzlová](sahnerolle.md) | `/de/sahnerolle/` |
 | [Strapačky mit Kraut und Speck — Rezept \| Jůzlová](strapacky-mit-kraut-und-speck.md) | `/de/strapacky-mit-kraut-und-speck/` |
 | [Kartoffel-Quark-Knödel mit Erdbeeren — Rezept in 20 Minuten](topfenknoedel-mit-erdbeeren.md) | `/de/topfenknoedel-mit-erdbeeren/` |
-| [Vanillinzucker 1 kg / 60 Kč — Backen & Bestreuen \| Jůzlová](vanillinzucker.md) | `/de/vanillinzucker/` |
-| [Glutenfreies Vanillepuddingpulver 1 kg / 60 Kč \| Jůzlová](glutenfreies-vanillepuddingpulver.md) | `/de/glutenfreies-vanillepuddingpulver/` |
+| [Vanillinzucker 1 kg / 60 CZK — Backen & Bestreuen \| Jůzlová](vanillinzucker.md) | `/de/vanillinzucker/` |
+| [Glutenfreies Vanillepuddingpulver 1 kg / 60 CZK \| Jůzlová](glutenfreies-vanillepuddingpulver.md) | `/de/glutenfreies-vanillepuddingpulver/` |
 | [Knödelmischung, Pudding & Kakao für Küchen \| Jůzlová](grosshandel.md) | `/de/grosshandel/` |
 | [Věnečky mit Vanillecreme und Rumguss — Rezept \| Jůzlová](brandteigkraenze-mit-vanillecreme.md) | `/de/brandteigkraenze-mit-vanillecreme/` |
 | [Tschechische Windbeutel mit Vanillecreme und Zuckerglasur — Rezept](windbeutel-mit-vanillecreme.md) | `/de/windbeutel-mit-vanillecreme/` |

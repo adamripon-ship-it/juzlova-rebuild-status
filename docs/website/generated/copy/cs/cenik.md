@@ -9,13 +9,13 @@
 
 Úvod › Ceník
 
-## Ceník: pět směsí, ceny při vyzvednutí v Kochánově
+## Ceník: pět směsí, ceny při vyzvednutí v Kochánově nebo v Humpolci
 
-Stejná cena pro všechny, kteří si zboží vyzvednou v dílně nebo jimž ho doručíme do Havlíčkova Brodu či Humpolce.
+Stejná cena pro všechny, kteří si zboží vyzvednou v Kochánově nebo v Humpolci, nebo jimž ho dovezeme do Humpolce či Havlíčkova Brodu.
 
 Zavolat Jiřině Napsat e-mail
 
-při vyzvednutí v dílně
+při vyzvednutí i rozvozu
 
 #### Bramborové knedlíky v prášku
 
@@ -23,7 +23,7 @@ Balení: 5 kg
 
 250 Kč
 
-při vyzvednutí v dílně
+při vyzvednutí i rozvozu
 
 #### Chlupaté knedlíky v prášku
 
@@ -31,7 +31,7 @@ Balení: 5 kg
 
 260 Kč
 
-při vyzvednutí v dílně
+při vyzvednutí i rozvozu
 
 #### Vanilkový puding bez lepku
 
@@ -39,7 +39,7 @@ Balení: 1 kg / 400 g
 
 60 Kč / 30 Kč
 
-při vyzvednutí v dílně
+při vyzvednutí i rozvozu
 
 #### Kakao holandského typu
 
@@ -47,7 +47,7 @@ Balení: 500 g
 
 270 Kč
 
-při vyzvednutí v dílně
+při vyzvednutí i rozvozu
 
 #### Vanilínový cukr
 

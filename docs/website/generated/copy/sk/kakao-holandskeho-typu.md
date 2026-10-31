@@ -15,7 +15,7 @@ Alkalizovaný prášok z kakaovej hmoty, bez pridaného cukru, bez 14 alergénov
 
 Cena
 
-- 500 g / 270 Kč pri vyzdvihnutí v dielni · 540 Kč/kg · asi 50 lyžíc z balenia
+- 500 g / 270 Kč pri vyzdvihnutí aj rozvoze · 540 Kč/kg · asi 50 lyžíc z balenia
 
 Objednávka
 

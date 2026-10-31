@@ -15,7 +15,7 @@ Múka z mlyna v Havlíčkovom Brode. Celé zloženie nájdete nižšie.
 
 Cena
 
-- 5 kg / 250 Kč pri vyzdvihnutí v dielni · 50 Kč/kg · zhruba 4 Kč na porciu (60–70 porcií)
+- 5 kg / 250 Kč pri vyzdvihnutí aj rozvoze · 50 Kč/kg · zhruba 4 Kč na porciu (60–70 porcií)
 
 Objednávka
 

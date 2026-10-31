@@ -15,7 +15,7 @@ Není to vanilka z lusku — je to jemně mletý cukr s vanilínovým aroma. Ř�
 
 Cena
 
-- 1 kg / 60 Kč při vyzvednutí v dílně · 60 Kč/kg
+- 1 kg / 60 Kč při vyzvednutí i rozvozu · 60 Kč/kg
 
 Objednávka
 

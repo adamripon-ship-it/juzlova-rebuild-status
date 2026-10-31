@@ -28,8 +28,8 @@
 | [Whipped cream roulade — gluten-free cocoa recipe \| Jůzlová](whipped-cream-roulade.md) | `/en/whipped-cream-roulade/` |
 | [Strapačky with sauerkraut and bacon — bosáky mix recipe](strapacky-cabbage-and-bacon.md) | `/en/strapacky-cabbage-and-bacon/` |
 | [Potato-curd dumplings with strawberries — 20-minute recipe](strawberry-curd-dumplings.md) | `/en/strawberry-curd-dumplings/` |
-| [Vanilla sugar 1 kg / 60 Kč — baking & dusting \| Jůzlová](vanilla-sugar.md) | `/en/vanilla-sugar/` |
-| [Gluten-free vanilla pudding powder 1 kg / 60 Kč \| Jůzlová](gluten-free-vanilla-pudding-powder.md) | `/en/gluten-free-vanilla-pudding-powder/` |
+| [Vanilla sugar 1 kg / 60 CZK — baking & dusting \| Jůzlová](vanilla-sugar.md) | `/en/vanilla-sugar/` |
+| [Gluten-free vanilla pudding powder 1 kg / 60 CZK \| Jůzlová](gluten-free-vanilla-pudding-powder.md) | `/en/gluten-free-vanilla-pudding-powder/` |
 | [Dumpling mix, pudding & cocoa for kitchens \| Jůzlová](wholesale.md) | `/en/wholesale/` |
 | [Czech věnečky with vanilla cream and rum glaze — recipe](choux-rings-with-vanilla-cream.md) | `/en/choux-rings-with-vanilla-cream/` |
 | [Větrníčky with vanilla cream and sugar glaze — recipe](cream-puffs-with-vanilla-cream.md) | `/en/cream-puffs-with-vanilla-cream/` |

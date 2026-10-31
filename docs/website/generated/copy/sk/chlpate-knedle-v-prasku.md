@@ -15,7 +15,7 @@ Podľa tradičnej receptúry z našej dielne. Zmiešate s vodou a pretlačíte c
 
 Cena
 
-- 5 kg / 260 Kč pri vyzdvihnutí v dielni · 52 Kč/kg · na sezónu aj pre jedáleň
+- 5 kg / 260 Kč pri vyzdvihnutí aj rozvoze · 52 Kč/kg · na sezónu aj pre jedáleň
 
 Objednávka
 

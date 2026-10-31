@@ -78,6 +78,8 @@ Dieses Formular ist für Betriebe. Haushalte bestellen über die Seite „Kontak
 
 *label:* Abholung in der Werkstatt, Kochánov 40, 582 53
 
+*label:* Abholung in Humpolec nahe der Brauerei Bernard (genauer Ort nach Absprache)
+
 *label:* Lieferung nach Havlíčkův Brod oder Humpolec (kostenlos, Tag und Uhrzeit nach Absprache)
 
 *label:* Nachricht (was, wie viel, wo Sie sind)

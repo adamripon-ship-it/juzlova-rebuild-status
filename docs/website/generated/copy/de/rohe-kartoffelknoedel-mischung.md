@@ -3,7 +3,7 @@
 # Rohe Kartoffelknödel-Mischung (bosáky) 5 kg | Jůzlová
 
 - **URL:** `/de/rohe-kartoffelknoedel-mischung/`
-- **Meta description:** Böhmische rohe Kartoffelknödel aus der Mischung: zu Sauerkraut und Rauchfleisch oder als Halušky. etwa 20 Minuten, 5 kg / 260 Kč. Familienwerkstatt in der Vysočina.
+- **Meta description:** Böhmische rohe Kartoffelknödel aus der Mischung: zu Sauerkraut und Rauchfleisch oder als Halušky. etwa 20 Minuten, 5 kg / 260 CZK. Familienwerkstatt in der Vysočina.
 
 ---
 
@@ -15,13 +15,15 @@ Traditionelles Rezept aus unserer Werkstatt. Mit Wasser anrühren, formen, koche
 
 Preis
 
-- 5 kg / 260 Kč bei Abholung in der Werkstatt · 52 Kč/kg · für eine Saison oder für die Kantine
+- 5 kg / 260 CZK ≈ 10,50 € bei Abholung und Lieferung · 52 CZK/kg · für eine Saison oder für die Kantine
 
 Bestellung
 
-- +420 728 466 141 · täglich 8–19 Uhr
+- +420 728 466 141 · täglich 8–19 Uhr, auf Tschechisch und Slowakisch
 
 Nach Humpolec und Havlíčkův Brod liefern wir.
+
+Preise in Tschechischen Kronen (CZK). Euro-Beträge sind Näherungswerte, Kurs der Tschechischen Nationalbank vom 30.10.2026.
 
 Bei Jiřina bestellen Abholorte
 

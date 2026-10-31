@@ -11,11 +11,11 @@
 
 ## Cenník: päť zmesí, ceny pri vyzdvihnutí v Kochánove alebo v Humpolci
 
-Rovnaká cena pre všetkých, ktorí si tovar vyzdvihnú v dielni alebo ktorým ho doručíme do Havlíčkovho Brodu či Humpolca.
+Rovnaká cena pre všetkých, ktorí si tovar vyzdvihnú v Kochánove alebo v Humpolci, alebo ktorým ho dovezieme do Humpolca či Havlíčkovho Brodu.
 
 Zavolať Jiřine Napísať e-mail
 
-pri vyzdvihnutí v dielni
+pri vyzdvihnutí aj rozvoze
 
 #### Zemiakové knedle v prášku
 
@@ -23,7 +23,7 @@ Balenie: 5 kg
 
 250 Kč
 
-pri vyzdvihnutí v dielni
+pri vyzdvihnutí aj rozvoze
 
 #### Chlpaté knedle v prášku
 
@@ -31,7 +31,7 @@ Balenie: 5 kg
 
 260 Kč
 
-pri vyzdvihnutí v dielni
+pri vyzdvihnutí aj rozvoze
 
 #### Vanilkový puding bez lepku
 
@@ -39,7 +39,7 @@ Balenie: 1 kg / 400 g
 
 60 Kč / 30 Kč
 
-pri vyzdvihnutí v dielni
+pri vyzdvihnutí aj rozvoze
 
 #### Kakao holandského typu
 
@@ -47,7 +47,7 @@ Balenie: 500 g
 
 270 Kč
 
-pri vyzdvihnutí v dielni
+pri vyzdvihnutí aj rozvoze
 
 #### Vanilínový cukor
 

@@ -47,6 +47,12 @@ How to use it:
       - **👤 owner:** send label photos of the **pudding, cocoa and vanilla
         sugar**, and the **Firmy.cz score**.
 
+- [ ] **Euro amounts on EN and DE pages.** Approximate, at the CNB rate of
+      30 October 2026 (`EUR_CZK` in `build_site.py`, named in `eur_note`).
+      Review each quarter with the prices (2026-10-31, Adam).
+- [ ] **Native-speaker check of German and Slovak copy** before larger copy
+      changes, including the German product names (2026-10-31, Adam).
+
 ## 💡 Ideas, not scheduled
 
 - [ ] Anything new for the site (copy, recipes, photos, design): add it here
