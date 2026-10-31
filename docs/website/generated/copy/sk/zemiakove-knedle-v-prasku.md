@@ -3,13 +3,13 @@
 # Zemiakové knedle v prášku 5 kg — stačí voda | Jůzlová
 
 - **URL:** `/sk/zemiakove-knedle-v-prasku/`
-- **Meta description:** Zemiakové cesto v prášku, stačí voda. Nerozvarí sa, hotové za 20 minút. 5 kg / 250 Kč. Vyzdvihnutie v dielni po dohode. Knedle v prášku.
+- **Meta description:** Zemiakové cesto v prášku, stačí voda. Nerozvarí sa, hotové približne za 25 minút. 5 kg / 250 Kč. Vyzdvihnutie v dielni po dohode. Knedle v prášku.
 
 ---
 
 Úvod › Zemiakové knedle v prášku
 
-## Zemiakové knedle v prášku: zamiešate s vodou, za 20 minút sú na stole a nerozvaria sa
+## Zemiakové knedle v prášku: zamiešate s vodou, približne za 25 minút sú na stole a nerozvaria sa
 
 Múka z mlyna v Havlíčkovom Brode. Celé zloženie nájdete nižšie.
 
@@ -33,7 +33,7 @@ Múka, sušené zemiakové vločky, sušené vajcia, soľ, prášok do pečiva, 
 
 - Zmes zamiešate s vodou podľa návodu na vreci.
 - Vytvarujete knedle, šúľance alebo krokety.
-- Uvaríte. Od otvorenia vreca po tanier zhruba 20 minút.
+- Uvaríte. Od otvorenia vreca po tanier zhruba 25 minút.
 
 Chcete to „po svojom“? Pridajte vajce alebo jeden uvarený postrúhaný zemiak. Veľa našich zákazníkov to tak robí.
 
@@ -48,6 +48,38 @@ Chcete to „po svojom“? Pridajte vajce alebo jeden uvarený postrúhaný zemi
 ### Koľko toho je
 
 Z 5 kg pripravíte prílohu zhruba pre 60–70 ľudí. Vrece skladujte v suchu a zatvorené.
+
+### Zloženie a výživové údaje
+
+Hmotnosť
+
+- 5 kg
+
+Skladovanie
+
+- Uchovávajte v suchu a chlade.
+
+#### Výživové údaje na 100 g
+
+- Energetická hodnota
+- 1432,7 kJ (342 kcal)
+- Sacharidy
+- 71,53 g
+- Bielkoviny
+- 9,55 g
+- Tuky
+- 1,42 g
+- Soľ
+- 2 g
+
+Údaje zodpovedajú textu vytlačenému na obale 5 kg balenia.
+
+### Návod na použitie
+
+- 1 kg zmesi nasypeme do misky a zalejeme 1 litrom vody.
+- Dôkladne premiesime a cesto necháme 2 až 3 minúty odležať.
+- Z cesta vypracujeme valčeky s priemerom asi 6 cm.
+- Vložíme ich do vriacej vody a varíme 15 až 20 minút podľa veľkosti knedlí.
 
 ### Časté otázky
 

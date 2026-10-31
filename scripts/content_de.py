@@ -260,13 +260,13 @@ LANG = {
     "products": {
         "bramborove_knedliky": {
             "name": "Kartoffelknödel-Mischung",
-            "h1": "Böhmische Kartoffelknödel-Mischung: nur Wasser dazu, in 20 Minuten auf dem Tisch, zerfällt nicht im Topf",
+            "h1": "Böhmische Kartoffelknödel-Mischung: nur Wasser dazu, in etwa 25 Minuten auf dem Tisch, zerfällt nicht im Topf",
             "price_note": "Abholung in der Werkstatt. Nach Humpolec und Havlíčkův Brod liefern wir.",
             "short": "Mehl aus einer Mühle in Havlíčkův Brod. Die vollständige Zutatenliste finden Sie unten.",
             "price": "5 kg / 250 Kč",
             "per_unit": "50 Kč/kg · etwa 4 Kč pro Portion (60–70 Portionen)",
             "title": "Kartoffelknödel-Mischung 5 kg — nur Wasser dazu | Jůzlová",
-            "desc": "Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in 20 Minuten fertig. 5 kg / 250 Kč.",
+            "desc": "Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in etwa 25 Minuten fertig. 5 kg / 250 Kč.",
             "body": [
                 ("h2", "Zutaten"),
                 ("p", "Mehl, getrocknete Kartoffelflocken, Trockenei, Salz, Backpulver, Kartoffelstärke"),
@@ -274,7 +274,7 @@ LANG = {
                 ("ol", [
                     "Mischung nach Packungsanleitung mit Wasser anrühren.",
                     "Knödel, Schupfnudeln oder Kroketten formen.",
-                    "Kochen. Vom Beutel bis zum Teller etwa 20 Minuten.",
+                    "Kochen. Vom Beutel bis zum Teller etwa 25 Minuten.",
                 ]),
                 ("tip", "Möchten Sie es auf Ihre Art? Geben Sie ein Ei oder eine gekochte, geriebene Kartoffel dazu. Viele unserer Kunden machen das so."),
                 ("h2", "Was aus dem Teig wird"),
@@ -292,12 +292,12 @@ LANG = {
         },
         "chlupate_knedliky": {
             "name": "Rohe Kartoffelknödel-Mischung (chlupaté knedlíky)",
-            "h1": "Chlupaté knedlíky (bosáky): böhmische rohe Kartoffelknödel zu Kraut und Rauchfleisch in 15 Minuten — ohne Reiben",
+            "h1": "Chlupaté knedlíky (bosáky): böhmische rohe Kartoffelknödel zu Kraut und Rauchfleisch in etwa 20 Minuten — ohne Reiben",
             "short": "Traditionelles Rezept aus unserer Werkstatt. Mit Wasser anrühren, formen, kochen. Durch ein Sieb gedrückt ergibt der Teig slowakische Halušky.",
             "price": "5 kg / 260 Kč",
             "per_unit": "52 Kč/kg · für eine Saison oder für die Kantine",
             "title": "Rohe Kartoffelknödel-Mischung (bosáky) 5 kg | Jůzlová",
-            "desc": "Böhmische rohe Kartoffelknödel aus der Mischung: zu Sauerkraut und Rauchfleisch oder als Halušky. 15 Minuten, 5 kg / 260 Kč. Familienwerkstatt in der Vysočina.",
+            "desc": "Böhmische rohe Kartoffelknödel aus der Mischung: zu Sauerkraut und Rauchfleisch oder als Halušky. etwa 20 Minuten, 5 kg / 260 Kč. Familienwerkstatt in der Vysočina.",
             "body": [
                 ("h2", "Wozu sie passen"),
                 ("ul", ["zu Sauerkraut und Rauchfleisch",
@@ -308,7 +308,7 @@ LANG = {
                 ("ol", [
                     "Mischung nach Anleitung mit Wasser anrühren.",
                     "Bosáky formen oder den Teig durch ein Sieb drücken.",
-                    "Kochen. Vom Beutel bis zum Teller 15 Minuten.",
+                    "Kochen. Vom Beutel bis zum Teller etwa 20 Minuten.",
                 ]),
             ],
             "faq": [
@@ -435,7 +435,7 @@ LANG = {
 
 # --- rev. 5 home, footer and marquee strings (2026-09-17) ---
 LANG["ui"].update({
-    'h1_main': 'Kartoffelknödel auf dem Tisch in 20 Minuten',
+    'h1_main': 'Kartoffelknödel auf dem Tisch in etwa 25 Minuten',
     'h1_sub': 'aus Mehl, gemahlen 12 km von unserer Werkstatt entfernt',
     'stat_1': 'Kartoffelknödel-Mischung · 250 Kč',
     'stat_2': 'Minuten für rohe Kartoffelknödel',
@@ -448,7 +448,7 @@ LANG["ui"].update({
     'step_2': 'Die Mühle 12 km entfernt',
     'step_3': 'Mischen in Kochánov',
     'step_4': 'Abholung oder Lieferung',
-    'step_5': 'In 20 Minuten auf dem Teller',
+    'step_5': 'In etwa 25 Minuten auf dem Teller',
     'marks': 'Vysočina · Abholung',
     'cta_short': 'Anrufen',
     'cb_h': 'Brauchen Sie Hilfe bei der Bestellung?',
@@ -475,7 +475,7 @@ LANG["ui"].update({
     'slide_h1_kakao_holandskeho_typu': 'Kakao holländischer Art, der im Kuchen dunkel bleibt',
     'slide_sub_kakao_holandskeho_typu': 'Alkalisiert, ohne Zuckerzusatz: für Lebkuchen, Cremes, Trinkkakao und Eis.',
     'slide_btn_kakao_holandskeho_typu': 'Alles zum Kakao',
-    'slide_h1_bramborove_knedliky': 'Kartoffelknödel auf dem Tisch in 20 Minuten',
+    'slide_h1_bramborove_knedliky': 'Kartoffelknödel auf dem Tisch in etwa 25 Minuten',
     'slide_sub_bramborove_knedliky': 'aus Mehl, gemahlen 12 km von unserer Werkstatt entfernt',
     'slide_btn_bramborove_knedliky': 'Alles zur Mischung',
     'slide_h1_chlupate_knedliky': 'Rohe Kartoffelknödel ohne Schälen und Reiben',

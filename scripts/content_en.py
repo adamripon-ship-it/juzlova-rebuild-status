@@ -260,13 +260,13 @@ LANG = {
     "products": {
         "bramborove_knedliky": {
             "name": "Potato dumpling mix",
-            "h1": "Czech potato dumpling mix: just add water, 20 minutes to the table, and they hold together in the pot",
+            "h1": "Czech potato dumpling mix: just add water, about 25 minutes to the table, and they hold together in the pot",
             "price_note": "Collect at the workshop. We deliver to Humpolec and Havlíčkův Brod.",
             "short": "Flour from a mill in Havlíčkův Brod. The full ingredient list is below.",
             "price": "5 kg / 250 Kč",
             "per_unit": "50 Kč/kg · about 4 Kč per portion (60–70 portions)",
             "title": "Czech potato dumpling mix 5 kg — just add water | Jůzlová",
-            "desc": "Czech potato dumpling mix: just add water. Holds together, ready in 20 minutes. 5 kg / 250 Kč. Collect in Kochánov.",
+            "desc": "Czech potato dumpling mix: just add water. Holds together, ready in about 25 minutes. 5 kg / 250 Kč. Collect in Kochánov.",
             "body": [
                 ("h2", "What's in it"),
                 ("p", "Flour, dried potato flakes, dried egg, salt, baking powder, potato starch"),
@@ -274,7 +274,7 @@ LANG = {
                 ("ol", [
                     "Mix with water as directed on the bag.",
                     "Shape dumplings, rolls or croquettes.",
-                    "Boil. About 20 minutes from opening the bag to the plate.",
+                    "Boil. About 25 minutes from opening the bag to the plate.",
                 ]),
                 ("tip", "Want it your way? Add an egg or one boiled, grated potato. Many of our customers do."),
                 ("h2", "What one dough makes"),
@@ -292,12 +292,12 @@ LANG = {
         },
         "chlupate_knedliky": {
             "name": "Raw-potato dumpling mix (chlupaté knedlíky)",
-            "h1": "Chlupaté knedlíky (bosáky) mix: Czech raw-potato dumplings for sauerkraut and smoked meat in 15 minutes, no grating",
+            "h1": "Chlupaté knedlíky (bosáky) mix: Czech raw-potato dumplings for sauerkraut and smoked meat in about 20 minutes, no grating",
             "short": "A traditional recipe from our workshop. Mix with water, shape, boil. Push the dough through a colander for Slovak-style halušky.",
             "price": "5 kg / 260 Kč",
             "per_unit": "52 Kč/kg · for a season at home, or for a canteen",
             "title": "Chlupaté knedlíky mix 5 kg — raw-potato dumplings | Jůzlová",
-            "desc": "Traditional Czech raw-potato dumpling mix. Serve with sauerkraut and smoked meat, or make halušky. Ready in 15 minutes. 5 kg / 260 Kč. Collect in Kochánov.",
+            "desc": "Traditional Czech raw-potato dumpling mix. Serve with sauerkraut and smoked meat, or make halušky. Ready in about 20 minutes. 5 kg / 260 Kč. Collect in Kochánov.",
             "body": [
                 ("h2", "What it goes with"),
                 ("ul", ["sauerkraut and smoked meat",
@@ -308,7 +308,7 @@ LANG = {
                 ("ol", [
                     "Mix with water as directed on the bag.",
                     "Shape bosáky, or push the dough through a colander.",
-                    "Boil. 15 minutes from bag to plate.",
+                    "Boil. About 20 minutes from bag to plate.",
                 ]),
             ],
             "faq": [
@@ -435,7 +435,7 @@ LANG = {
 
 # --- rev. 5 home, footer and marquee strings (2026-09-17) ---
 LANG["ui"].update({
-    'h1_main': 'Czech potato dumplings on the table in 20 minutes',
+    'h1_main': 'Czech potato dumplings on the table in about 25 minutes',
     'h1_sub': 'from flour milled 12 km from our workshop',
     'stat_1': 'potato dumpling mix · 250 Kč',
     'stat_2': 'minutes for raw-potato dumplings',
@@ -448,7 +448,7 @@ LANG["ui"].update({
     'step_2': 'The mill 12 km away',
     'step_3': 'Mixing in Kochánov',
     'step_4': 'Pick-up or delivery',
-    'step_5': 'On the plate in 20 minutes',
+    'step_5': 'On the plate in about 25 minutes',
     'marks': 'Vysočina · pick-up',
     'cta_short': 'Call us',
     'cb_h': 'Need help with your order?',
@@ -475,7 +475,7 @@ LANG["ui"].update({
     'slide_h1_kakao_holandskeho_typu': 'Dutch-process cocoa that stays dark in the cake',
     'slide_sub_kakao_holandskeho_typu': 'Alkalised, no added sugar: for gingerbread, creams, drinking cocoa and ice cream.',
     'slide_btn_kakao_holandskeho_typu': 'All about the cocoa',
-    'slide_h1_bramborove_knedliky': 'Czech potato dumplings on the table in 20 minutes',
+    'slide_h1_bramborove_knedliky': 'Czech potato dumplings on the table in about 25 minutes',
     'slide_sub_bramborove_knedliky': 'from flour milled 12 km from our workshop',
     'slide_btn_bramborove_knedliky': 'All about the mix',
     'slide_h1_chlupate_knedliky': 'Raw-potato dumplings with no peeling or grating',

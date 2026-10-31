@@ -3,13 +3,13 @@
 # Cesto na halušky a strapačky v prášku 5 kg | Jůzlová
 
 - **URL:** `/sk/chlpate-knedle-v-prasku/`
-- **Meta description:** Chlpaté knedle v prášku: pretlačíte na halušky alebo vytvarujete bosáky. Bez strúhania zemiakov, hotové za 15 minút. 5 kg / 260 Kč. Vyzdvihnutie po dohode.
+- **Meta description:** Chlpaté knedle v prášku: pretlačíte na halušky alebo vytvarujete bosáky. Bez strúhania zemiakov, hotové približne za 20 minút. 5 kg / 260 Kč. Vyzdvihnutie po dohode.
 
 ---
 
 Úvod › Chlpaté knedle v prášku
 
-## Cesto na halušky a strapačky v prášku: chlpaté knedle (bosáky) bez strúhania zemiakov, hotové za 15 minút
+## Cesto na halušky a strapačky v prášku: chlpaté knedle (bosáky) bez strúhania zemiakov, hotové približne za 20 minút
 
 Podľa tradičnej receptúry z našej dielne. Zmiešate s vodou a pretlačíte cez cedník do vriacej vody — máte halušky. Alebo vytvarujete bosáky ku kapuste.
 
@@ -36,7 +36,47 @@ Objednať u Jiřiny Kde vyzdvihnúť
 
 - Zmes zamiešate s vodou podľa návodu.
 - Pretlačíte cez cedník alebo vytvarujete bosáky.
-- Uvaríte. Od vreca na tanier 15 minút.
+- Uvaríte. Od vreca na tanier približne 20 minút.
+
+### Zloženie a výživové údaje
+
+Hmotnosť
+
+- 5 kg
+
+Zloženie
+
+- pšeničná múka, sušená zemiaková kaša, sušené zemiaky, zemiakový škrob, soľ, sušené vajcia
+
+Alergénne zložky
+
+- lepok
+
+Skladovanie
+
+- Uchovávajte v suchu a chlade.
+
+#### Výživové údaje na 100 g
+
+- Energetická hodnota
+- 1459,4 kJ (349 kcal)
+- Sacharidy
+- 76,49 g
+- Bielkoviny
+- 8,83 g
+- Tuky
+- 1,43 g
+- Soľ
+- 2 g
+
+Údaje zodpovedajú textu vytlačenému na obale 5 kg balenia.
+
+### Návod na použitie
+
+- 1 kg zmesi nasypeme do misky a zalejeme 1,2 litra vody.
+- Dôkladne premiešame a cesto necháme 10 minút napučať.
+- Lyžicou tvarujeme knedle a vkladáme ich do vriacej vody.
+- Varíme, kým nevyplávajú — asi 5 až 8 minút podľa veľkosti.
 
 ### Časté otázky
 

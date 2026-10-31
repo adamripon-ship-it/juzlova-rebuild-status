@@ -39,6 +39,7 @@ from seo_data import (
 )
 from team_data import TEAM
 import cocoa_origin
+import product_spec
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -61,7 +62,7 @@ def _load_dotenv():
 _load_dotenv()
 BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
 TODAY = "2026-09-17"
-ASSET_VER = "20261030c"
+ASSET_VER = "20261031d"
 REVIEWS = load_reviews()
 
 LANGS = ["cs", "en", "de", "sk"]
@@ -624,6 +625,7 @@ MAPS_SAME_AS = [
     MAP_SEARCH,
     MAPY_LISTING,
     "https://www.firmy.cz/detail/12906730-juzlova-kochanov.html",
+    "https://www.facebook.com/juzlova",
 ]
 
 
@@ -1062,7 +1064,7 @@ def footer(L, depth, pid="home"):
       {form}
     </div>
     <nav class="foot-langs" aria-label="{esc(ui['lang_label'])}">{langs}</nav>
-    <div class="fine"><span>{esc(ui['footer_addr'])}</span><span class="fine-hours">{esc(ui['open_hours'])}</span><span>© 2004–2026 Jůzlová s.r.o. · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span></div>
+    <div class="fine"><span>{esc(ui['footer_addr'])}</span><span><a href="https://www.facebook.com/juzlova" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.firmy.cz/detail/12906730-juzlova-kochanov.html" target="_blank" rel="noopener">Firmy.cz</a></span><span class="fine-hours">{esc(ui['open_hours'])}</span><span>© 2004–2026 Jůzlová s.r.o. · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span></div>
     {credit_html(ui)}
   </div>
 </footer>"""
@@ -1828,6 +1830,99 @@ def build_page(L, key):
     write(([lg] if lg != "cs" else []) + [slug, "index.html"], html_out)
 
 
+def spec_html(lang, key, pr):
+    """The label, rendered as page copy.
+
+    Composition, allergens, nutrition and method are the questions a customer
+    and a language model both arrive with, and until now none of them was
+    answerable from the site — every word of it was only on the sack. Each
+    block carries one concept under its own heading so it survives being
+    lifted out of the page on its own.
+    """
+    sp = product_spec.spec_for(lang, key)
+    if not sp:
+        return ""
+    ui = sp["ui"]
+    n = sp["nutrition"]
+    fmt = lambda v: esc(product_spec.num(lang, v))
+    rows = "".join([
+        f"<tr><td>{esc(ui['energy'])}</td><td>{fmt(n['energy_kj'])} kJ"
+        f" ({product_spec.kcal(n['energy_kj'])} kcal)</td></tr>",
+        f"<tr><td>{esc(ui['carbohydrate'])}</td><td>{fmt(n['carbohydrate_g'])} g</td></tr>",
+        f"<tr><td>{esc(ui['protein'])}</td><td>{fmt(n['protein_g'])} g</td></tr>",
+        f"<tr><td>{esc(ui['fat'])}</td><td>{fmt(n['fat_g'])} g</td></tr>",
+        f"<tr><td>{esc(ui['salt'])}</td><td>{fmt(n['salt_g'])} g</td></tr>",
+    ])
+    steps = "".join(f"<li>{esc(x)}</li>" for x in sp["steps"])
+    kg = sp["net_weight_g"] // 1000
+    label_rows = ""
+    if sp.get("ingredients"):
+        label_rows += f"<dt>{esc(ui['ingredients'])}</dt><dd>{esc(sp['ingredients'])}</dd>\n"
+    if sp.get("allergens"):
+        label_rows += f"<dt>{esc(ui['allergens'])}</dt><dd><strong>{esc(sp['allergens'])}</strong></dd>\n"
+    return f'''<section class="spec" aria-labelledby="spec-h">
+<h2 id="spec-h">{esc(ui['spec_h'])}</h2>
+<div class="factbox"><dl>
+<dt>{esc(ui['net_weight'])}</dt><dd>{kg} kg</dd>
+{label_rows}<dt>{esc(ui['storage'])}</dt><dd>{esc(sp['storage'])}</dd>
+</dl></div>
+<h3>{esc(ui['nutrition'])}</h3>
+<table class="tbl"><tbody>{rows}</tbody></table>
+<p class="label-note">{esc(ui['source'])}</p>
+</section>
+<section class="prep" aria-labelledby="prep-h">
+<h2 id="prep-h">{esc(ui['prep_h'])}</h2>
+<ol>{steps}</ol>
+</section>'''
+
+
+def _prop(name, value, unit=None):
+    p = {"@type": "PropertyValue", "name": name, "value": value}
+    if unit:
+        p["unitCode"] = unit
+    return p
+
+
+def spec_jsonld(lang, key, pr, url):
+    """Label data as structured data: Product properties plus a HowTo.
+
+    schema.org puts `nutrition` on Recipe and MenuItem, not on Product, so the
+    figures go in `additionalProperty` with UN/CEFACT unit codes rather than
+    into a property that does not exist for this type. The preparation method
+    is a genuine HowTo, which is both a real rich result and the shape an
+    assistant wants when someone asks how to cook the things.
+    """
+    sp = product_spec.spec_for(lang, key)
+    if not sp:
+        return {}, None
+    ui, n = sp["ui"], sp["nutrition"]
+    props = [_prop(ui[k], sp[k]) for k in ("ingredients", "allergens") if sp.get(k)] + [
+        _prop(ui["energy"], n["energy_kj"], "KJO"),
+        _prop(ui["carbohydrate"], n["carbohydrate_g"], "GRM"),
+        _prop(ui["protein"], n["protein_g"], "GRM"),
+        _prop(ui["fat"], n["fat_g"], "GRM"),
+        _prop(ui["salt"], n["salt_g"], "GRM"),
+    ]
+    extra = {
+        "weight": {"@type": "QuantitativeValue",
+                   "value": sp["net_weight_g"], "unitCode": "GRM"},
+        "additionalProperty": props,
+    }
+    howto = {
+        "@context": "https://schema.org", "@type": "HowTo",
+        "name": f"{ui['prep_h']} — {pr['name']}",
+        "inLanguage": lang,
+        "url": url,
+        "totalTime": sp["total_time"],
+        "prepTime": sp["prep_time"],
+        "performTime": sp["cook_time"],
+        "supply": [{"@type": "HowToSupply", "name": pr["name"]}],
+        "step": [{"@type": "HowToStep", "position": i + 1, "text": x}
+                 for i, x in enumerate(sp["steps"])],
+    }
+    return extra, howto
+
+
 def build_product(L, key):
     lg = L["code"]
     slug = slug_of(lg, key)
@@ -1854,7 +1949,6 @@ def build_product(L, key):
         flower = (f'<figure class="cutout flower rv"><img src="{asset_rel(depth)}assets/botanicals/cutouts/flower-cocoa.webp" '
                   f'alt="{esc(cocoa_origin.FLOWER_ALT[lg])}" width="1200" height="800" loading="lazy" decoding="async">'
                   f'<figcaption>{esc(cocoa_origin.FLOWER_CAPTION[lg])}</figcaption></figure>')
-    price_num = re.search(r"(\d+)\s*(?:Kč|CZK)", pr["price"])
     img_name = PRODUCT_IMG.get(key)
     product_ld = {
         "@context": "https://schema.org", "@type": "Product",
@@ -1872,24 +1966,29 @@ def build_product(L, key):
             "contentUrl": f"{BASE}/img/{img_name}",
             "caption": pr["name"],
         }} if img_name else {}),
-        "offers": {
+        "offers": [{
             "@type": "Offer",
+            "name": f"{pr['name']} — {amount} {unit}",
             "priceCurrency": "CZK",
-            "price": price_num.group(1) if price_num else "0",
+            "price": pack_price,
             "availability": "https://schema.org/InStock",
             "url": url_for(lg, path),
             "seller": {"@id": BASE + "/#org"},
             "itemCondition": "https://schema.org/NewCondition",
-        },
+        } for amount, unit, pack_price in re.findall(r"(\d+)\s*(kg|g)\s*/\s*(\d+)\s*(?:Kč|CZK)", pr["price"])],
         "keywords": keywords_for(lg, "product", key),
     }
     # Each product page owns its own questions; the cocoa page adds origin and cadmium.
     faqs = list(pr.get("faq") or [])
     if key == "kakao_holandskeho_typu":
         faqs += cocoa_origin.FAQ[lg]
+    spec_extra, howto_ld = spec_jsonld(lg, key, pr, url_for(lg, path))
+    product_ld.update(spec_extra)
     lds = [product_ld, breadcrumb_jsonld(L, [
         (ui["breadcrumb_home"], url_for(lg, "")),
         (pr["name"], url_for(lg, path))])]
+    if howto_ld:
+        lds.append(howto_ld)
     if faqs:
         lds.append(faq_jsonld(faqs))
     body = f"""<main id="main" class="wrap"><article class="page">
@@ -1909,6 +2008,7 @@ def build_product(L, key):
 {pack_html(L, depth, key)}
 {flower}
 {render_body(L, body_blocks, depth, product=pr)}
+{spec_html(lg, key, pr)}
 {faq_html(faqs, ui.get('sec_faq', 'FAQ'))}
 {cta_html(L, depth, ("cta_order", "kontakt", "cta_write"))}
 </article></main>"""
@@ -2778,6 +2878,16 @@ def build_llms(langs_data):
         full.append(f"price_czk: {price}")
         full.append(f"fact: {pr_cs['short']}")
         full.append(f"detail: {pr_cs['desc']}")
+        sp = product_spec.spec_for("en", key)
+        if sp:
+            n = sp["nutrition"]
+            for field in ("ingredients", "allergens"):
+                if sp.get(field):
+                    full.append(f"{field}: {sp[field]}")
+            full.append(f"storage: {sp['storage']}")
+            full.append(f"nutrition_per_100g: energy {n['energy_kj']} kJ ({product_spec.kcal(n['energy_kj'])} kcal); "
+                        f"carbohydrate {n['carbohydrate_g']} g; protein {n['protein_g']} g; fat {n['fat_g']} g; salt {n['salt_g']} g")
+            full.extend(f"preparation {i + 1}: {x}" for i, x in enumerate(sp["steps"]))
         if pr_cs.get("faq"):
             for q, a in pr_cs["faq"]:
                 full.append(f"Q: {q}")

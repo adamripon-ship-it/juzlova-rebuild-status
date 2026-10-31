@@ -20,7 +20,7 @@ LANG = {
         "hero_img_alt": "Kochánov z ptačí perspektivy",
         "workshop_caption": "Naše dílna v Kochánově — pytle s moukou, váha a balicí linka.",
         "est": "Rodinná dílna · Kochánov · od roku 2004",
-        "hero_h1": "Bramborové knedlíky na stole za 20 minut — z mouky z mlýna 12 km od naší dílny",
+        "hero_h1": "Bramborové knedlíky na stole zhruba za 25 minut — z mouky z mlýna 12 km od naší dílny",
         "hero_lead": "Rodina Jůzlových míchá směsi v Kochánově od roku 2004. Pro směsi si přijedete k nám do Kochánova nebo do Humpolce — den a hodinu domluvíte s Jiřinou po telefonu.",
         "hero_cta": "Zavolat Jiřině a objednat",
         "hero_cta2": "Podívat se na ceník",
@@ -264,12 +264,12 @@ LANG = {
     "products": {
         "bramborove_knedliky": {
             "name": "Bramborové knedlíky v prášku",
-            "h1": "Bramborové knedlíky v prášku: zaděláte vodou, za 20 minut jsou na stole a nerozvaří se",
+            "h1": "Bramborové knedlíky v prášku: zaděláte vodou, zhruba za 25 minut jsou na stole a nerozvaří se",
             "short": "Mouka z mlýna v Havlíčkově Brodě. Celé složení najdete níže.",
             "price_note": "Vyzvednete na provozovně. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
             "price": "5 kg / 250 Kč",
             "per_unit": "50 Kč/kg · zhruba 4 Kč na porci (60–70 porcí)",
-            "title": "Bramborové knedlíky v prášku 5 kg — za 20 minut | Jůzlová",
+            "title": "Bramborové knedlíky v prášku 5 kg — zhruba za 25 minut | Jůzlová",
             "desc": "Bramborové těsto v prášku. Zaděláte vodou, nerozvaří se. 5 kg / 250 Kč, vyzvednutí Kochánov a Humpolec.",
             "body": [
                 ("h2", "Co v tom je"),
@@ -278,7 +278,7 @@ LANG = {
                 ("ol", [
                     "Směs zamícháte s vodou podle návodu na pytli.",
                     "Vytvarujete knedlíky, šišky nebo krokety.",
-                    "Povaříte. Od otevření pytle po talíř zhruba 20 minut.",
+                    "Povaříte. Od otevření pytle po talíř zhruba 25 minut.",
                 ]),
                 ("tip", "Chcete to „svoje“? Přidejte vejce nebo jednu uvařenou strouhanou bramboru. Spousta našich zákazníků to tak dělá."),
                 ("h2", "Co z jednoho těsta uvaříte"),
@@ -296,12 +296,12 @@ LANG = {
         },
         "chlupate_knedliky": {
             "name": "Chlupaté knedlíky v prášku",
-            "h1": "Chlupaté knedlíky (bosáky) v prášku: k zelí a uzenému za 15 minut, bez strouhání brambor",
+            "h1": "Chlupaté knedlíky (bosáky) v prášku: k zelí a uzenému zhruba za 20 minut, bez strouhání brambor",
             "short": "Podle tradiční receptury z naší dílny. Smícháte s vodou, vytvarujete, povaříte. Hodí se i na strapačky a halušky.",
             "price": "5 kg / 260 Kč",
             "per_unit": "52 Kč/kg · na sezónu i pro jídelnu",
-            "title": "Chlupaté knedlíky v prášku 5 kg — za 15 minut | Jůzlová",
-            "desc": "Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. K zelí a uzenému, na halušky i strapačky, hotové za 15 minut. 5 kg / 260 Kč, Kochánov a Humpolec.",
+            "title": "Chlupaté knedlíky v prášku 5 kg — zhruba za 20 minut | Jůzlová",
+            "desc": "Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. K zelí a uzenému, na halušky i strapačky, hotové zhruba za 20 minut. 5 kg / 260 Kč, Kochánov a Humpolec.",
             "body": [
                 ("h2", "K čemu se hodí"),
                 ("ul", ["se zelím a uzeným masem",
@@ -312,7 +312,7 @@ LANG = {
                 ("ol", [
                     "Směs zamícháte s vodou podle návodu.",
                     "Vytvarujete bosáky, nebo těsto protlačíte cedníkem.",
-                    "Povaříte. Od pytle na talíř 15 minut.",
+                    "Povaříte. Od pytle na talíř zhruba 20 minut.",
                 ]),
             ],
             "faq": [
@@ -439,7 +439,7 @@ LANG = {
 
 # --- rev. 5 home, footer and marquee strings (2026-09-17) ---
 LANG["ui"].update({
-    'h1_main': 'Bramborové knedlíky na stole za 20 minut',
+    'h1_main': 'Bramborové knedlíky na stole zhruba za 25 minut',
     'h1_sub': 'z mouky z mlýna 12 km od naší dílny',
     'stat_1': 'bramborové knedlíky · 250 Kč',
     'stat_2': 'minut na chlupaté knedlíky',
@@ -452,7 +452,7 @@ LANG["ui"].update({
     'step_2': 'Mlýn 12 km od dílny',
     'step_3': 'Míchání v Kochánově',
     'step_4': 'Vyzvednutí nebo rozvoz',
-    'step_5': 'Na talíři za 20 minut',
+    'step_5': 'Na talíři zhruba za 25 minut',
     'marks': 'Vyzvednutí po telefonu',
     'cta_short': 'Zavolat',
     'cb_h': 'Potřebujete poradit s objednávkou?',
@@ -480,7 +480,7 @@ LANG["ui"].update({
     'slide_h1_kakao_holandskeho_typu': 'Kakao holandského typu, které v bábovce nevybledne',
     'slide_sub_kakao_holandskeho_typu': 'Alkalizovaný prášek bez přidaného cukru: do perníku, krémů, kakaa na pití i zmrzliny.',
     'slide_btn_kakao_holandskeho_typu': 'Vše o kakau',
-    'slide_h1_bramborove_knedliky': 'Bramborové knedlíky na stole za 20 minut',
+    'slide_h1_bramborove_knedliky': 'Bramborové knedlíky na stole zhruba za 25 minut',
     'slide_sub_bramborove_knedliky': 'z mouky z mlýna 12 km od naší dílny',
     'slide_btn_bramborove_knedliky': 'Vše o směsi',
     'slide_h1_chlupate_knedliky': 'Chlupaté knedlíky bez loupání a strouhání',

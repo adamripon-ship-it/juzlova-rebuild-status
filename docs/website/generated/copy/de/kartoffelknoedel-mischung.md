@@ -3,13 +3,13 @@
 # Kartoffelknödel-Mischung 5 kg — nur Wasser dazu | Jůzlová
 
 - **URL:** `/de/kartoffelknoedel-mischung/`
-- **Meta description:** Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in 20 Minuten fertig. 5 kg / 250 Kč. Kartoffelknödel-Mischung.
+- **Meta description:** Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in etwa 25 Minuten fertig. 5 kg / 250 Kč. Kartoffelknödel-Mischung.
 
 ---
 
 Start › Kartoffelknödel-Mischung
 
-## Böhmische Kartoffelknödel-Mischung: nur Wasser dazu, in 20 Minuten auf dem Tisch, zerfällt nicht im Topf
+## Böhmische Kartoffelknödel-Mischung: nur Wasser dazu, in etwa 25 Minuten auf dem Tisch, zerfällt nicht im Topf
 
 Mehl aus einer Mühle in Havlíčkův Brod. Die vollständige Zutatenliste finden Sie unten.
 
@@ -33,7 +33,7 @@ Mehl, getrocknete Kartoffelflocken, Trockenei, Salz, Backpulver, Kartoffelstärk
 
 - Mischung nach Packungsanleitung mit Wasser anrühren.
 - Knödel, Schupfnudeln oder Kroketten formen.
-- Kochen. Vom Beutel bis zum Teller etwa 20 Minuten.
+- Kochen. Vom Beutel bis zum Teller etwa 25 Minuten.
 
 Möchten Sie es auf Ihre Art? Geben Sie ein Ei oder eine gekochte, geriebene Kartoffel dazu. Viele unserer Kunden machen das so.
 
@@ -48,6 +48,38 @@ Möchten Sie es auf Ihre Art? Geben Sie ein Ei oder eine gekochte, geriebene Kar
 ### Wie weit der Beutel reicht
 
 5 kg ergeben Beilage für etwa 60–70 Personen. Den Beutel trocken und verschlossen lagern.
+
+### Zutaten und Nährwerte
+
+Füllmenge
+
+- 5 kg
+
+Lagerung
+
+- Trocken und kühl lagern.
+
+#### Nährwerte je 100 g
+
+- Energie
+- 1432,7 kJ (342 kcal)
+- Kohlenhydrate
+- 71,53 g
+- Eiweiß
+- 9,55 g
+- Fett
+- 1,42 g
+- Salz
+- 2 g
+
+Die Angaben entsprechen dem Etikett auf dem 5-kg-Sack.
+
+### Zubereitung
+
+- 1 kg der Mischung in eine Schüssel geben und mit 1 Liter Wasser übergießen.
+- Gründlich durchkneten und den Teig 2 bis 3 Minuten ruhen lassen.
+- Aus dem Teig Rollen von etwa 6 cm Durchmesser formen.
+- In kochendes Wasser geben und je nach Größe der Knödel 15 bis 20 Minuten garen.
 
 ### Häufige Fragen
 

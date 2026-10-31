@@ -13,7 +13,7 @@ Rodinná dílna · Kochánov · od roku 2004
 
 Zavolat Jiřině a objednat Vše o kakau
 
-### Bramborové knedlíky na stole za 20 minut z mouky z mlýna 12 km od naší dílny
+### Bramborové knedlíky na stole zhruba za 25 minut z mouky z mlýna 12 km od naší dílny
 
 Zavolat Jiřině a objednat Vše o směsi
 
@@ -69,7 +69,7 @@ Celý ceník
 
 4 Vyzvednutí nebo rozvoz
 
-5 Na talíři za 20 minut
+5 Na talíři zhruba za 25 minut
 
 ### Co z toho uvaříte
 

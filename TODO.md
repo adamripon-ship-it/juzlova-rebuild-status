@@ -25,9 +25,6 @@ How to use it:
       2 minutes.
 - [ ] **Add the developers on GitHub.** Settings → Collaborators, with
       **Write** access. Send them `docs/website/README.md` to start.
-- [ ] **Resubmit the sitemap in Google Search Console.** Sitemaps → submit
-      `https://www.juzlova.cz/sitemap.xml`. Open since the address change on
-      16 September 2026.
 - [ ] **Delete the unused Cloud Run service** `juzlova-web` in
       **europe-west3**, in the Google Cloud console (project `aiapply-ch`).
       Only once you're sure nothing uses it. ⚠️ Do **not** touch the
@@ -44,27 +41,11 @@ How to use it:
 
 ## 🛠️ Development work (an AI agent or developer can do these)
 
-- [ ] **Product labels: finish
-      [#27](https://github.com/adamripon-ship-it/juzlova-rebuild-status/pull/27).**
-      Rebuild it on today's `main` rather than merging the old branch (it is
-      far behind). Add ingredients, allergens, nutrition per 100 g, storage
-      and preparation to the two dumpling-mix pages, in all four languages,
-      from the label transcription in that PR. Link the Facebook and Firmy.cz
-      review profiles. Do not invent any rating. Then close #27.
-      - Blocked on the owner for: label photos of the **pudding, cocoa and
-        vanilla sugar**, the **Firmy.cz score**, and the three label
-        questions at the end of `docs/PRODUCT-LABELS.md` on the #27 branch.
-- [ ] **Pudding packs and enquiry source: redo the useful parts of
-      [#28](https://github.com/adamripon-ship-it/juzlova-rebuild-status/pull/28).**
-      That branch conflicts in 198 files, so rebuild on today's `main` and do
-      not merge it. Two parts are worth keeping:
-      1. The pudding's product data (JSON-LD) lists both packs: **1 kg / 60 Kč
-         and 400 g / 30 Kč**.
-      2. The contact form records which channel an enquiry came from, only
-         with the visitor's consent. Phone or e-mail clicks are not counted
-         as sales.
-
-      Then close #28 with a comment linking the new PR.
+- [ ] **Product labels: remaining data.** Dumpling-mix label data is published.
+      - **👤 owner:** confirm the E 223 sulphite level with the dried-potato
+        supplier, then publish the potato mix allergen line.
+      - **👤 owner:** send label photos of the **pudding, cocoa and vanilla
+        sugar**, and the **Firmy.cz score**.
 
 ## 💡 Ideas, not scheduled
 
@@ -75,6 +56,9 @@ How to use it:
 
 ## ✅ Done
 
+- [x] 2026-10-31: pudding product data lists both packs, and the contact form records the visitor's channel only with analytics consent (dormant until GA is on). Replaces #28 (Adam).
+- [x] 2026-10-31: sitemap resubmitted in Google Search Console (Adam).
+- [x] 2026-10-31: hero button contrast raised to about 8:1 and phone numbers kept on one line, after a 116-page iOS Simulator audit (Adam).
 - [x] 2026-10-30: owner's PDF content corrections, posting removal, translation
       review and responsive fixes
       ([#48](https://github.com/adamripon-ship-it/juzlova-rebuild-status/pull/48)).

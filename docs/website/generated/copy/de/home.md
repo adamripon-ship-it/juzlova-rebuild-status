@@ -13,7 +13,7 @@ Familienwerkstatt · Kochánov, Tschechien · seit 2004
 
 Jiřina anrufen und bestellen Alles zum Kakao
 
-### Kartoffelknödel auf dem Tisch in 20 Minuten aus Mehl, gemahlen 12 km von unserer Werkstatt entfernt
+### Kartoffelknödel auf dem Tisch in etwa 25 Minuten aus Mehl, gemahlen 12 km von unserer Werkstatt entfernt
 
 Jiřina anrufen und bestellen Alles zur Mischung
 
@@ -69,7 +69,7 @@ Komplette Preisliste
 
 4 Abholung oder Lieferung
 
-5 In 20 Minuten auf dem Teller
+5 In etwa 25 Minuten auf dem Teller
 
 ### Was Sie daraus kochen
 
