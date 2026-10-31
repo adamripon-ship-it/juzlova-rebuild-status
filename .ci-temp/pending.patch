@@ -1,0 +1,1054 @@
+diff --git a/TODO.md b/TODO.md
+index 75abcad..b7e642e 100644
+--- a/TODO.md
++++ b/TODO.md
+@@ -25,9 +25,6 @@ How to use it:
+       2 minutes.
+ - [ ] **Add the developers on GitHub.** Settings → Collaborators, with
+       **Write** access. Send them `docs/website/README.md` to start.
+-- [ ] **Resubmit the sitemap in Google Search Console.** Sitemaps → submit
+-      `https://www.juzlova.cz/sitemap.xml`. Open since the address change on
+-      16 September 2026.
+ - [ ] **Delete the unused Cloud Run service** `juzlova-web` in
+       **europe-west3**, in the Google Cloud console (project `aiapply-ch`).
+       Only once you're sure nothing uses it. ⚠️ Do **not** touch the
+@@ -44,27 +41,11 @@ How to use it:
+ 
+ ## 🛠️ Development work (an AI agent or developer can do these)
+ 
+-- [ ] **Product labels: finish
+-      [#27](https://github.com/adamripon-ship-it/juzlova-rebuild-status/pull/27).**
+-      Rebuild it on today's `main` rather than merging the old branch (it is
+-      far behind). Add ingredients, allergens, nutrition per 100 g, storage
+-      and preparation to the two dumpling-mix pages, in all four languages,
+-      from the label transcription in that PR. Link the Facebook and Firmy.cz
+-      review profiles. Do not invent any rating. Then close #27.
+-      - Blocked on the owner for: label photos of the **pudding, cocoa and
+-        vanilla sugar**, the **Firmy.cz score**, and the three label
+-        questions at the end of `docs/PRODUCT-LABELS.md` on the #27 branch.
+-- [ ] **Pudding packs and enquiry source: redo the useful parts of
+-      [#28](https://github.com/adamripon-ship-it/juzlova-rebuild-status/pull/28).**
+-      That branch conflicts in 198 files, so rebuild on today's `main` and do
+-      not merge it. Two parts are worth keeping:
+-      1. The pudding's product data (JSON-LD) lists both packs: **1 kg / 60 Kč
+-         and 400 g / 30 Kč**.
+-      2. The contact form records which channel an enquiry came from, only
+-         with the visitor's consent. Phone or e-mail clicks are not counted
+-         as sales.
+-
+-      Then close #28 with a comment linking the new PR.
++- [ ] **Product labels: remaining data.** Dumpling-mix label data is published.
++      - **👤 owner:** confirm the E 223 sulphite level with the dried-potato
++        supplier, then publish the potato mix allergen line.
++      - **👤 owner:** send label photos of the **pudding, cocoa and vanilla
++        sugar**, and the **Firmy.cz score**.
+ 
+ ## 💡 Ideas, not scheduled
+ 
+@@ -75,6 +56,9 @@ How to use it:
+ 
+ ## ✅ Done
+ 
++- [x] 2026-10-31: pudding product data lists both packs, and the contact form records the visitor's channel only with analytics consent (dormant until GA is on). Replaces #28 (Adam).
++- [x] 2026-10-31: sitemap resubmitted in Google Search Console (Adam).
++- [x] 2026-10-31: hero button contrast raised to about 8:1 and phone numbers kept on one line, after a 116-page iOS Simulator audit (Adam).
+ - [x] 2026-10-30: owner's PDF content corrections, posting removal, translation
+       review and responsive fixes
+       ([#48](https://github.com/adamripon-ship-it/juzlova-rebuild-status/pull/48)).
+diff --git a/assets/site.css b/assets/site.css
+index c982e72..9421e25 100644
+--- a/assets/site.css
++++ b/assets/site.css
+@@ -183,10 +183,11 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
+ .btn.gold { background: var(--gold); color: var(--ink); --fill-hover: var(--ink); }
+ .btn.gold:hover, .btn.gold:focus-visible { color: #fff; }
+ /* on gold bands (owner's instruction): white fill with gold text; outline in white with white text */
+-.btn.white { background: #fff; color: var(--gold); --fill-hover: var(--ink); }
++.btn.white { background: #fff; color: var(--ink); --fill-hover: var(--ink); }
+ .btn.white:hover, .btn.white:focus-visible { color: #fff; }
+-.btn.outline { background: transparent; color: #fff; border-color: #fff; --fill-hover: #fff; }
+-.btn.outline:hover, .btn.outline:focus-visible { color: var(--gold); }
++.btn.outline { background: transparent; color: var(--ink); border-color: var(--ink); --fill-hover: var(--ink); }
++.btn.outline:hover, .btn.outline:focus-visible { color: #fff; }
++a[href^="tel:"] { white-space: nowrap; }
+ /* on white: ink outline */
+ .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); --fill-hover: var(--ink); }
+ .btn.ghost:hover, .btn.ghost:focus-visible { color: #fff; }
+@@ -298,14 +299,14 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
+ .hero-track .slide { scroll-snap-align: start; scroll-snap-stop: always; min-width: 0; -webkit-tap-highlight-color: transparent; }
+ .hero-track .display { position: relative; left: 0; }
+ .hero-nav { display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: 1.4rem; }
+-.hero-arrow { width: max(48px, 2.6rem); height: max(48px, 2.6rem); padding: 0; border: 0; background: none; color: #fff; cursor: pointer; display: grid; place-items: center; flex: 0 0 auto; opacity: .9; transition: transform .45s var(--ease), opacity .3s; -webkit-tap-highlight-color: transparent; }
++.hero-arrow { width: max(48px, 2.6rem); height: max(48px, 2.6rem); padding: 0; border: 0; background: none; color: var(--ink); cursor: pointer; display: grid; place-items: center; flex: 0 0 auto; opacity: .9; transition: transform .45s var(--ease), opacity .3s; -webkit-tap-highlight-color: transparent; }
+ .hero-arrow svg { width: max(34px, 1.9rem); height: max(14px, .8rem); stroke: currentColor; stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+ .hero-arrow:hover, .hero-arrow:focus-visible { opacity: 1; outline: none; }
+ .hero-arrow.prev:hover { transform: translateX(-4px); } .hero-arrow.next:hover { transform: translateX(4px); }
+ .hero-arrow:active { transform: scale(.94); }
+-.hero-arrow:focus-visible svg { outline: 2px solid #fff; outline-offset: 10px; border-radius: 4px; }
+-.hero-progress { width: 9rem; height: 2px; background: rgba(255,255,255,.35); border-radius: 1px; overflow: hidden; flex: 0 0 auto; }
+-.hero-progress i { display: block; height: 100%; width: var(--p, 20%); background: #fff; transition: width .7s var(--ease-expo); }
++.hero-arrow:focus-visible svg { outline: 2px solid var(--ink); outline-offset: 10px; border-radius: 4px; }
++.hero-progress { width: 9rem; height: 2px; background: rgba(26,26,26,.25); border-radius: 1px; overflow: hidden; flex: 0 0 auto; }
++.hero-progress i { display: block; height: 100%; width: var(--p, 20%); background: var(--ink); transition: width .7s var(--ease-expo); }
+ @media (max-width: 700px) { .hero-progress { width: 7rem; } .hero-nav { margin-top: 1rem; } }
+ @media (prefers-reduced-motion: reduce) { .hero-track { scroll-behavior: auto; } .hero-progress i, .hero-obj img, .hero-arrow { transition: none; } }
+ @media (max-width: 1100px) { .hero-obj { position: relative; width: min(300px, 60%); margin: 2.5rem auto 0; } }
+@@ -801,3 +802,8 @@ a.more { padding-block: .45rem; }
+ 
+ /* touch screens large enough to show the footer groups open */
+ @media (pointer: coarse) { .foot-links .fh { min-height: 44px; display: flex; align-items: center; margin: 0; } }
++
++.caption a { display: inline-block; padding: .15rem 0; }
++.label-note { font-size: .82rem; color: var(--ink-soft); margin-top: .8rem; }
++.prep ol { margin: 1rem 0 0; padding-left: 1.2rem; }
++.prep ol li { margin-bottom: .5rem; }
+diff --git a/assets/site.js b/assets/site.js
+index 3bdcf75..fb89389 100644
+--- a/assets/site.js
++++ b/assets/site.js
+@@ -382,7 +382,10 @@
+       var topicEl = form.querySelector('[name="topic"]');
+       var formType = form.getAttribute('data-form-type') || 'contact';
+       var val = function (name) { var el = form.querySelector('[name="' + name + '"]'); return el ? (el.value || '').trim() : ''; };
++      var attribution = null;
++      try { if (localStorage.getItem('juzlova-ga-consent') === 'accept' && localStorage.getItem('juzlova-source')) attribution = { consent: true, source: localStorage.getItem('juzlova-source') }; } catch (err) {}
+       var payload = {
++        attribution: attribution,
+         type: formType === 'callback' ? 'contact' : formType,
+         name: val('name'), phone: val('phone'), email: val('email'), message: val('message'), quantity: val('quantity'),
+         topic: topicEl ? (topicEl.value || '').trim() : '',
+@@ -578,12 +581,23 @@
+     sources.forEach(function (pair) { if (found) return; if (host === pair[0] || host.slice(-(pair[0].length + 1)) === '.' + pair[0]) found = pair[1]; });
+     if (found) gtag('event', 'ai_referral', { ai_source: found });
+   };
++  var rememberSource = function () {
++    try {
++      if (localStorage.getItem('juzlova-source')) return;
++      var host = ''; try { host = new URL(document.referrer).hostname.toLowerCase(); } catch (err) {}
++      var source = host ? 'referral' : 'direct';
++      if (host === location.hostname) source = 'direct';
++      if (/(^|\.)(google|bing|seznam|duckduckgo)\./.test(host)) source = 'search';
++      [['chatgpt.com', 'chatgpt'], ['chat.openai.com', 'chatgpt'], ['perplexity.ai', 'perplexity'], ['claude.ai', 'claude'], ['gemini.google.com', 'gemini'], ['copilot.microsoft.com', 'copilot']].forEach(function (pair) { if (host === pair[0] || host.slice(-(pair[0].length + 1)) === '.' + pair[0]) source = pair[1]; });
++      localStorage.setItem('juzlova-source', source);
++    } catch (err) {}
++  };
+   var hideConsent = function () { if (consentBar) { consentBar.hidden = true; consentBar.setAttribute('aria-hidden', 'true'); } };
+   var showConsent = function () { if (consentBar) { consentBar.hidden = false; consentBar.removeAttribute('aria-hidden'); } };
+   var loadGtag = function () {
+     if (gaLoaded || !gaId) return; gaLoaded = true;
+     var gtag = gtagFn();
+-    gtag('consent', 'update', { analytics_storage: 'granted' }); gtag('js', new Date()); gtag('config', gaId); aiReferral(gtag);
++    gtag('consent', 'update', { analytics_storage: 'granted' }); gtag('js', new Date()); gtag('config', gaId); aiReferral(gtag); rememberSource();
+     var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId); document.head.appendChild(s);
+   };
+   if (!gaId) hideConsent();
+@@ -596,6 +610,6 @@
+     var acceptBtn = consentBar ? consentBar.querySelector('[data-consent-accept]') : null;
+     var essentialBtn = consentBar ? consentBar.querySelector('[data-consent-essential]') : null;
+     if (acceptBtn) acceptBtn.addEventListener('click', function () { try { localStorage.setItem(CONSENT_KEY, 'accept'); } catch (e) {} loadGtag(); hideConsent(); });
+-    if (essentialBtn) essentialBtn.addEventListener('click', function () { try { localStorage.setItem(CONSENT_KEY, 'essential'); } catch (e) {} hideConsent(); });
++    if (essentialBtn) essentialBtn.addEventListener('click', function () { try { localStorage.setItem(CONSENT_KEY, 'essential'); localStorage.removeItem('juzlova-source'); } catch (e) {} hideConsent(); });
+   }
+ })();
+diff --git a/docs/PRODUCT-LABELS.md b/docs/PRODUCT-LABELS.md
+new file mode 100644
+index 0000000..0976c5e
+--- /dev/null
++++ b/docs/PRODUCT-LABELS.md
+@@ -0,0 +1,78 @@
++# Printed label text, 5 kg sacks
++
++Transcribed from photographs of the actual sacks, 2026-09-03. This is the
++authoritative record of what is printed on the packaging.
++
++It exists for two reasons. First, the product pages carry no composition,
++allergen, nutrition or preparation data at all, and every word of it is here.
++Second, when a product photograph is regenerated the label text has to be
++handed to the image model verbatim — left to itself it invents plausible
++Czech and the result looks right until somebody reads it.
++
++Both labels end with the same producer block:
++
++    Vyrobila: Jiřina Jůzlová, Kochánov 40, 582 53 Štoky
++    tel.: 728 466 141, e-mail: juzlj@seznam.cz
++    www.juzlova.cz
++
++Note the address includes **Štoky**, which the site's footer omits.
++
++## Chlupaté knedlíky / Halušky
++
++    Hmotnost: 5 kg
++    Uschovejte v suchu a chladu. Minimální trvanlivost do: [handwritten]
++
++    100 g výrobku průměrně obsahuje:
++      sacharidy: 76,49 g
++      bílkoviny: 8,83 g
++      tuky: 1,43 g
++      sůl: 2 g
++      energetická hodnota: 1459,4 kJ/100 g
++
++    Složení:
++    pšeničná mouka, sušená bramborová kaše, sušené brambory,
++    bramborový škrob, sůl, sušená vejce
++
++    Alergenní složky: lepek
++
++    Návod k použití:
++    1kg směsi nasypeme do misky, přelijeme 1,2 litru vody, řádně
++    promícháme a těsto necháme 10 minut bobtnat. Lžící vytvarujeme
++    knedlíky, které vložíme do vroucí vody a vaříme, až vyplavou
++    (asi 5 - 8 minut dle velikosti).
++
++## Bramborové knedlíky
++
++    Hmotnost: 5 kg
++    Uschovejte v suchu a chladu. Minimální trvanlivost do: [handwritten]
++
++    100 g výrobku průměrně obsahuje:
++      sacharidy: 71,53 g
++      bílkoviny: 9,55 g
++      tuky: 1,42 g
++      sůl: 2 g
++      energetická hodnota: 1432,7 kJ/100 g
++
++    Složení:
++    pšeničná mouka, sušená bramborová kaše (přírodní barvivo E 100,
++    antioxidant E 304, E 223, emulgátor E 471), sůl, sušená vejce,
++    kypřidlo, škrob
++
++    Alergenní složky: lepek, sušená vejce
++
++    Návod k použití:
++    1kg směsi nasypeme do misky, přelijeme 1 litrem vody, řádně
++    prohněteme a těsto necháme 2 až 3 minuty odležet. Z těsta
++    vypracujeme válečky o průměru cca 6cm, které vložíme do vroucí
++    vody a vaříme 15 - 20 minut (dle velikosti knedlíků).
++
++## Owner decisions, 2026-10-31
++
++- **Potato mix ingredients:** the page keeps the owner's PDF wording, not the
++  sack wording. The two differ, including the E numbers.
++- **Potato mix allergens:** no allergen line until the dried-potato supplier
++  confirms the E 223 (sulphite) level against the 10 mg/kg limit.
++- **Chlupaté allergens:** the page copies the sack, which says only `lepek`
++  although the ingredients include `sušená vejce`.
++- **Cooking times:** headlines now say about 25 minutes (potato) and about 20
++  minutes (chlupaté), and the sack steps are published.
+diff --git a/scripts/build_site.py b/scripts/build_site.py
+index 2c22878..a960adb 100644
+--- a/scripts/build_site.py
++++ b/scripts/build_site.py
+@@ -39,6 +39,7 @@ from seo_data import (
+ )
+ from team_data import TEAM
+ import cocoa_origin
++import product_spec
+ 
+ ROOT = pathlib.Path(__file__).resolve().parent.parent
+ 
+@@ -61,7 +62,7 @@ def _load_dotenv():
+ _load_dotenv()
+ BASE = os.environ.get("SITE_BASE", "https://www.juzlova.cz").rstrip("/")
+ TODAY = "2026-09-17"
+-ASSET_VER = "20261030c"
++ASSET_VER = "20261031d"
+ REVIEWS = load_reviews()
+ 
+ LANGS = ["cs", "en", "de", "sk"]
+@@ -624,6 +625,7 @@ MAPS_SAME_AS = [
+     MAP_SEARCH,
+     MAPY_LISTING,
+     "https://www.firmy.cz/detail/12906730-juzlova-kochanov.html",
++    "https://www.facebook.com/juzlova",
+ ]
+ 
+ 
+@@ -1062,7 +1064,7 @@ def footer(L, depth, pid="home"):
+       {form}
+     </div>
+     <nav class="foot-langs" aria-label="{esc(ui['lang_label'])}">{langs}</nav>
+-    <div class="fine"><span>{esc(ui['footer_addr'])}</span><span class="fine-hours">{esc(ui['open_hours'])}</span><span>© 2004–2026 Jůzlová s.r.o. · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span></div>
++    <div class="fine"><span>{esc(ui['footer_addr'])}</span><span><a href="https://www.facebook.com/juzlova" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.firmy.cz/detail/12906730-juzlova-kochanov.html" target="_blank" rel="noopener">Firmy.cz</a></span><span class="fine-hours">{esc(ui['open_hours'])}</span><span>© 2004–2026 Jůzlová s.r.o. · <a href="{assets}llms.txt">llms.txt</a> · <a href="{assets}llms-full.txt">llms-full.txt</a></span></div>
+     {credit_html(ui)}
+   </div>
+ </footer>"""
+@@ -1828,6 +1830,99 @@ def build_page(L, key):
+     write(([lg] if lg != "cs" else []) + [slug, "index.html"], html_out)
+ 
+ 
++def spec_html(lang, key, pr):
++    """The label, rendered as page copy.
++
++    Composition, allergens, nutrition and method are the questions a customer
++    and a language model both arrive with, and until now none of them was
++    answerable from the site — every word of it was only on the sack. Each
++    block carries one concept under its own heading so it survives being
++    lifted out of the page on its own.
++    """
++    sp = product_spec.spec_for(lang, key)
++    if not sp:
++        return ""
++    ui = sp["ui"]
++    n = sp["nutrition"]
++    fmt = lambda v: esc(product_spec.num(lang, v))
++    rows = "".join([
++        f"<tr><td>{esc(ui['energy'])}</td><td>{fmt(n['energy_kj'])} kJ"
++        f" ({product_spec.kcal(n['energy_kj'])} kcal)</td></tr>",
++        f"<tr><td>{esc(ui['carbohydrate'])}</td><td>{fmt(n['carbohydrate_g'])} g</td></tr>",
++        f"<tr><td>{esc(ui['protein'])}</td><td>{fmt(n['protein_g'])} g</td></tr>",
++        f"<tr><td>{esc(ui['fat'])}</td><td>{fmt(n['fat_g'])} g</td></tr>",
++        f"<tr><td>{esc(ui['salt'])}</td><td>{fmt(n['salt_g'])} g</td></tr>",
++    ])
++    steps = "".join(f"<li>{esc(x)}</li>" for x in sp["steps"])
++    kg = sp["net_weight_g"] // 1000
++    label_rows = ""
++    if sp.get("ingredients"):
++        label_rows += f"<dt>{esc(ui['ingredients'])}</dt><dd>{esc(sp['ingredients'])}</dd>\n"
++    if sp.get("allergens"):
++        label_rows += f"<dt>{esc(ui['allergens'])}</dt><dd><strong>{esc(sp['allergens'])}</strong></dd>\n"
++    return f'''<section class="spec" aria-labelledby="spec-h">
++<h2 id="spec-h">{esc(ui['spec_h'])}</h2>
++<div class="factbox"><dl>
++<dt>{esc(ui['net_weight'])}</dt><dd>{kg} kg</dd>
++{label_rows}<dt>{esc(ui['storage'])}</dt><dd>{esc(sp['storage'])}</dd>
++</dl></div>
++<h3>{esc(ui['nutrition'])}</h3>
++<table class="tbl"><tbody>{rows}</tbody></table>
++<p class="label-note">{esc(ui['source'])}</p>
++</section>
++<section class="prep" aria-labelledby="prep-h">
++<h2 id="prep-h">{esc(ui['prep_h'])}</h2>
++<ol>{steps}</ol>
++</section>'''
++
++
++def _prop(name, value, unit=None):
++    p = {"@type": "PropertyValue", "name": name, "value": value}
++    if unit:
++        p["unitCode"] = unit
++    return p
++
++
++def spec_jsonld(lang, key, pr, url):
++    """Label data as structured data: Product properties plus a HowTo.
++
++    schema.org puts `nutrition` on Recipe and MenuItem, not on Product, so the
++    figures go in `additionalProperty` with UN/CEFACT unit codes rather than
++    into a property that does not exist for this type. The preparation method
++    is a genuine HowTo, which is both a real rich result and the shape an
++    assistant wants when someone asks how to cook the things.
++    """
++    sp = product_spec.spec_for(lang, key)
++    if not sp:
++        return {}, None
++    ui, n = sp["ui"], sp["nutrition"]
++    props = [_prop(ui[k], sp[k]) for k in ("ingredients", "allergens") if sp.get(k)] + [
++        _prop(ui["energy"], n["energy_kj"], "KJO"),
++        _prop(ui["carbohydrate"], n["carbohydrate_g"], "GRM"),
++        _prop(ui["protein"], n["protein_g"], "GRM"),
++        _prop(ui["fat"], n["fat_g"], "GRM"),
++        _prop(ui["salt"], n["salt_g"], "GRM"),
++    ]
++    extra = {
++        "weight": {"@type": "QuantitativeValue",
++                   "value": sp["net_weight_g"], "unitCode": "GRM"},
++        "additionalProperty": props,
++    }
++    howto = {
++        "@context": "https://schema.org", "@type": "HowTo",
++        "name": f"{ui['prep_h']} — {pr['name']}",
++        "inLanguage": lang,
++        "url": url,
++        "totalTime": sp["total_time"],
++        "prepTime": sp["prep_time"],
++        "performTime": sp["cook_time"],
++        "supply": [{"@type": "HowToSupply", "name": pr["name"]}],
++        "step": [{"@type": "HowToStep", "position": i + 1, "text": x}
++                 for i, x in enumerate(sp["steps"])],
++    }
++    return extra, howto
++
++
+ def build_product(L, key):
+     lg = L["code"]
+     slug = slug_of(lg, key)
+@@ -1854,7 +1949,6 @@ def build_product(L, key):
+         flower = (f'<figure class="cutout flower rv"><img src="{asset_rel(depth)}assets/botanicals/cutouts/flower-cocoa.webp" '
+                   f'alt="{esc(cocoa_origin.FLOWER_ALT[lg])}" width="1200" height="800" loading="lazy" decoding="async">'
+                   f'<figcaption>{esc(cocoa_origin.FLOWER_CAPTION[lg])}</figcaption></figure>')
+-    price_num = re.search(r"(\d+)\s*(?:Kč|CZK)", pr["price"])
+     img_name = PRODUCT_IMG.get(key)
+     product_ld = {
+         "@context": "https://schema.org", "@type": "Product",
+@@ -1872,24 +1966,29 @@ def build_product(L, key):
+             "contentUrl": f"{BASE}/img/{img_name}",
+             "caption": pr["name"],
+         }} if img_name else {}),
+-        "offers": {
++        "offers": [{
+             "@type": "Offer",
++            "name": f"{pr['name']} — {amount} {unit}",
+             "priceCurrency": "CZK",
+-            "price": price_num.group(1) if price_num else "0",
++            "price": pack_price,
+             "availability": "https://schema.org/InStock",
+             "url": url_for(lg, path),
+             "seller": {"@id": BASE + "/#org"},
+             "itemCondition": "https://schema.org/NewCondition",
+-        },
++        } for amount, unit, pack_price in re.findall(r"(\d+)\s*(kg|g)\s*/\s*(\d+)\s*(?:Kč|CZK)", pr["price"])],
+         "keywords": keywords_for(lg, "product", key),
+     }
+     # Each product page owns its own questions; the cocoa page adds origin and cadmium.
+     faqs = list(pr.get("faq") or [])
+     if key == "kakao_holandskeho_typu":
+         faqs += cocoa_origin.FAQ[lg]
++    spec_extra, howto_ld = spec_jsonld(lg, key, pr, url_for(lg, path))
++    product_ld.update(spec_extra)
+     lds = [product_ld, breadcrumb_jsonld(L, [
+         (ui["breadcrumb_home"], url_for(lg, "")),
+         (pr["name"], url_for(lg, path))])]
++    if howto_ld:
++        lds.append(howto_ld)
+     if faqs:
+         lds.append(faq_jsonld(faqs))
+     body = f"""<main id="main" class="wrap"><article class="page">
+@@ -1909,6 +2008,7 @@ def build_product(L, key):
+ {pack_html(L, depth, key)}
+ {flower}
+ {render_body(L, body_blocks, depth, product=pr)}
++{spec_html(lg, key, pr)}
+ {faq_html(faqs, ui.get('sec_faq', 'FAQ'))}
+ {cta_html(L, depth, ("cta_order", "kontakt", "cta_write"))}
+ </article></main>"""
+@@ -2778,6 +2878,16 @@ def build_llms(langs_data):
+         full.append(f"price_czk: {price}")
+         full.append(f"fact: {pr_cs['short']}")
+         full.append(f"detail: {pr_cs['desc']}")
++        sp = product_spec.spec_for("en", key)
++        if sp:
++            n = sp["nutrition"]
++            for field in ("ingredients", "allergens"):
++                if sp.get(field):
++                    full.append(f"{field}: {sp[field]}")
++            full.append(f"storage: {sp['storage']}")
++            full.append(f"nutrition_per_100g: energy {n['energy_kj']} kJ ({product_spec.kcal(n['energy_kj'])} kcal); "
++                        f"carbohydrate {n['carbohydrate_g']} g; protein {n['protein_g']} g; fat {n['fat_g']} g; salt {n['salt_g']} g")
++            full.extend(f"preparation {i + 1}: {x}" for i, x in enumerate(sp["steps"]))
+         if pr_cs.get("faq"):
+             for q, a in pr_cs["faq"]:
+                 full.append(f"Q: {q}")
+diff --git a/scripts/content_cs.py b/scripts/content_cs.py
+index b51569d..fab182c 100644
+--- a/scripts/content_cs.py
++++ b/scripts/content_cs.py
+@@ -20,7 +20,7 @@ LANG = {
+         "hero_img_alt": "Kochánov z ptačí perspektivy",
+         "workshop_caption": "Naše dílna v Kochánově — pytle s moukou, váha a balicí linka.",
+         "est": "Rodinná dílna · Kochánov · od roku 2004",
+-        "hero_h1": "Bramborové knedlíky na stole za 20 minut — z mouky z mlýna 12 km od naší dílny",
++        "hero_h1": "Bramborové knedlíky na stole zhruba za 25 minut — z mouky z mlýna 12 km od naší dílny",
+         "hero_lead": "Rodina Jůzlových míchá směsi v Kochánově od roku 2004. Pro směsi si přijedete k nám do Kochánova nebo do Humpolce — den a hodinu domluvíte s Jiřinou po telefonu.",
+         "hero_cta": "Zavolat Jiřině a objednat",
+         "hero_cta2": "Podívat se na ceník",
+@@ -264,12 +264,12 @@ LANG = {
+     "products": {
+         "bramborove_knedliky": {
+             "name": "Bramborové knedlíky v prášku",
+-            "h1": "Bramborové knedlíky v prášku: zaděláte vodou, za 20 minut jsou na stole a nerozvaří se",
++            "h1": "Bramborové knedlíky v prášku: zaděláte vodou, zhruba za 25 minut jsou na stole a nerozvaří se",
+             "short": "Mouka z mlýna v Havlíčkově Brodě. Celé složení najdete níže.",
+             "price_note": "Vyzvednete na provozovně. Do Humpolce a Havlíčkova Brodu zboží dovezeme.",
+             "price": "5 kg / 250 Kč",
+             "per_unit": "50 Kč/kg · zhruba 4 Kč na porci (60–70 porcí)",
+-            "title": "Bramborové knedlíky v prášku 5 kg — za 20 minut | Jůzlová",
++            "title": "Bramborové knedlíky v prášku 5 kg — zhruba za 25 minut | Jůzlová",
+             "desc": "Bramborové těsto v prášku. Zaděláte vodou, nerozvaří se. 5 kg / 250 Kč, vyzvednutí Kochánov a Humpolec.",
+             "body": [
+                 ("h2", "Co v tom je"),
+@@ -278,7 +278,7 @@ LANG = {
+                 ("ol", [
+                     "Směs zamícháte s vodou podle návodu na pytli.",
+                     "Vytvarujete knedlíky, šišky nebo krokety.",
+-                    "Povaříte. Od otevření pytle po talíř zhruba 20 minut.",
++                    "Povaříte. Od otevření pytle po talíř zhruba 25 minut.",
+                 ]),
+                 ("tip", "Chcete to „svoje“? Přidejte vejce nebo jednu uvařenou strouhanou bramboru. Spousta našich zákazníků to tak dělá."),
+                 ("h2", "Co z jednoho těsta uvaříte"),
+@@ -296,12 +296,12 @@ LANG = {
+         },
+         "chlupate_knedliky": {
+             "name": "Chlupaté knedlíky v prášku",
+-            "h1": "Chlupaté knedlíky (bosáky) v prášku: k zelí a uzenému za 15 minut, bez strouhání brambor",
++            "h1": "Chlupaté knedlíky (bosáky) v prášku: k zelí a uzenému zhruba za 20 minut, bez strouhání brambor",
+             "short": "Podle tradiční receptury z naší dílny. Smícháte s vodou, vytvarujete, povaříte. Hodí se i na strapačky a halušky.",
+             "price": "5 kg / 260 Kč",
+             "per_unit": "52 Kč/kg · na sezónu i pro jídelnu",
+-            "title": "Chlupaté knedlíky v prášku 5 kg — za 15 minut | Jůzlová",
+-            "desc": "Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. K zelí a uzenému, na halušky i strapačky, hotové za 15 minut. 5 kg / 260 Kč, Kochánov a Humpolec.",
++            "title": "Chlupaté knedlíky v prášku 5 kg — zhruba za 20 minut | Jůzlová",
++            "desc": "Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. K zelí a uzenému, na halušky i strapačky, hotové zhruba za 20 minut. 5 kg / 260 Kč, Kochánov a Humpolec.",
+             "body": [
+                 ("h2", "K čemu se hodí"),
+                 ("ul", ["se zelím a uzeným masem",
+@@ -312,7 +312,7 @@ LANG = {
+                 ("ol", [
+                     "Směs zamícháte s vodou podle návodu.",
+                     "Vytvarujete bosáky, nebo těsto protlačíte cedníkem.",
+-                    "Povaříte. Od pytle na talíř 15 minut.",
++                    "Povaříte. Od pytle na talíř zhruba 20 minut.",
+                 ]),
+             ],
+             "faq": [
+@@ -439,7 +439,7 @@ LANG = {
+ 
+ # --- rev. 5 home, footer and marquee strings (2026-09-17) ---
+ LANG["ui"].update({
+-    'h1_main': 'Bramborové knedlíky na stole za 20 minut',
++    'h1_main': 'Bramborové knedlíky na stole zhruba za 25 minut',
+     'h1_sub': 'z mouky z mlýna 12 km od naší dílny',
+     'stat_1': 'bramborové knedlíky · 250 Kč',
+     'stat_2': 'minut na chlupaté knedlíky',
+@@ -452,7 +452,7 @@ LANG["ui"].update({
+     'step_2': 'Mlýn 12 km od dílny',
+     'step_3': 'Míchání v Kochánově',
+     'step_4': 'Vyzvednutí nebo rozvoz',
+-    'step_5': 'Na talíři za 20 minut',
++    'step_5': 'Na talíři zhruba za 25 minut',
+     'marks': 'Vyzvednutí po telefonu',
+     'cta_short': 'Zavolat',
+     'cb_h': 'Potřebujete poradit s objednávkou?',
+@@ -480,7 +480,7 @@ LANG["ui"].update({
+     'slide_h1_kakao_holandskeho_typu': 'Kakao holandského typu, které v bábovce nevybledne',
+     'slide_sub_kakao_holandskeho_typu': 'Alkalizovaný prášek bez přidaného cukru: do perníku, krémů, kakaa na pití i zmrzliny.',
+     'slide_btn_kakao_holandskeho_typu': 'Vše o kakau',
+-    'slide_h1_bramborove_knedliky': 'Bramborové knedlíky na stole za 20 minut',
++    'slide_h1_bramborove_knedliky': 'Bramborové knedlíky na stole zhruba za 25 minut',
+     'slide_sub_bramborove_knedliky': 'z mouky z mlýna 12 km od naší dílny',
+     'slide_btn_bramborove_knedliky': 'Vše o směsi',
+     'slide_h1_chlupate_knedliky': 'Chlupaté knedlíky bez loupání a strouhání',
+diff --git a/scripts/content_de.py b/scripts/content_de.py
+index d316766..ffdd944 100644
+--- a/scripts/content_de.py
++++ b/scripts/content_de.py
+@@ -260,13 +260,13 @@ LANG = {
+     "products": {
+         "bramborove_knedliky": {
+             "name": "Kartoffelknödel-Mischung",
+-            "h1": "Böhmische Kartoffelknödel-Mischung: nur Wasser dazu, in 20 Minuten auf dem Tisch, zerfällt nicht im Topf",
++            "h1": "Böhmische Kartoffelknödel-Mischung: nur Wasser dazu, in etwa 25 Minuten auf dem Tisch, zerfällt nicht im Topf",
+             "price_note": "Abholung in der Werkstatt. Nach Humpolec und Havlíčkův Brod liefern wir.",
+             "short": "Mehl aus einer Mühle in Havlíčkův Brod. Die vollständige Zutatenliste finden Sie unten.",
+             "price": "5 kg / 250 Kč",
+             "per_unit": "50 Kč/kg · etwa 4 Kč pro Portion (60–70 Portionen)",
+             "title": "Kartoffelknödel-Mischung 5 kg — nur Wasser dazu | Jůzlová",
+-            "desc": "Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in 20 Minuten fertig. 5 kg / 250 Kč.",
++            "desc": "Knödelteig zum Anrühren, nur Wasser dazu. Zerfällt nicht, in etwa 25 Minuten fertig. 5 kg / 250 Kč.",
+             "body": [
+                 ("h2", "Zutaten"),
+                 ("p", "Mehl, getrocknete Kartoffelflocken, Trockenei, Salz, Backpulver, Kartoffelstärke"),
+@@ -274,7 +274,7 @@ LANG = {
+                 ("ol", [
+                     "Mischung nach Packungsanleitung mit Wasser anrühren.",
+                     "Knödel, Schupfnudeln oder Kroketten formen.",
+-                    "Kochen. Vom Beutel bis zum Teller etwa 20 Minuten.",
++                    "Kochen. Vom Beutel bis zum Teller etwa 25 Minuten.",
+                 ]),
+                 ("tip", "Möchten Sie es auf Ihre Art? Geben Sie ein Ei oder eine gekochte, geriebene Kartoffel dazu. Viele unserer Kunden machen das so."),
+                 ("h2", "Was aus dem Teig wird"),
+@@ -292,12 +292,12 @@ LANG = {
+         },
+         "chlupate_knedliky": {
+             "name": "Rohe Kartoffelknödel-Mischung (chlupaté knedlíky)",
+-            "h1": "Chlupaté knedlíky (bosáky): böhmische rohe Kartoffelknödel zu Kraut und Rauchfleisch in 15 Minuten — ohne Reiben",
++            "h1": "Chlupaté knedlíky (bosáky): böhmische rohe Kartoffelknödel zu Kraut und Rauchfleisch in etwa 20 Minuten — ohne Reiben",
+             "short": "Traditionelles Rezept aus unserer Werkstatt. Mit Wasser anrühren, formen, kochen. Durch ein Sieb gedrückt ergibt der Teig slowakische Halušky.",
+             "price": "5 kg / 260 Kč",
+             "per_unit": "52 Kč/kg · für eine Saison oder für die Kantine",
+             "title": "Rohe Kartoffelknödel-Mischung (bosáky) 5 kg | Jůzlová",
+-            "desc": "Böhmische rohe Kartoffelknödel aus der Mischung: zu Sauerkraut und Rauchfleisch oder als Halušky. 15 Minuten, 5 kg / 260 Kč. Familienwerkstatt in der Vysočina.",
++            "desc": "Böhmische rohe Kartoffelknödel aus der Mischung: zu Sauerkraut und Rauchfleisch oder als Halušky. etwa 20 Minuten, 5 kg / 260 Kč. Familienwerkstatt in der Vysočina.",
+             "body": [
+                 ("h2", "Wozu sie passen"),
+                 ("ul", ["zu Sauerkraut und Rauchfleisch",
+@@ -308,7 +308,7 @@ LANG = {
+                 ("ol", [
+                     "Mischung nach Anleitung mit Wasser anrühren.",
+                     "Bosáky formen oder den Teig durch ein Sieb drücken.",
+-                    "Kochen. Vom Beutel bis zum Teller 15 Minuten.",
++                    "Kochen. Vom Beutel bis zum Teller etwa 20 Minuten.",
+                 ]),
+             ],
+             "faq": [
+@@ -435,7 +435,7 @@ LANG = {
+ 
+ # --- rev. 5 home, footer and marquee strings (2026-09-17) ---
+ LANG["ui"].update({
+-    'h1_main': 'Kartoffelknödel auf dem Tisch in 20 Minuten',
++    'h1_main': 'Kartoffelknödel auf dem Tisch in etwa 25 Minuten',
+     'h1_sub': 'aus Mehl, gemahlen 12 km von unserer Werkstatt entfernt',
+     'stat_1': 'Kartoffelknödel-Mischung · 250 Kč',
+     'stat_2': 'Minuten für rohe Kartoffelknödel',
+@@ -448,7 +448,7 @@ LANG["ui"].update({
+     'step_2': 'Die Mühle 12 km entfernt',
+     'step_3': 'Mischen in Kochánov',
+     'step_4': 'Abholung oder Lieferung',
+-    'step_5': 'In 20 Minuten auf dem Teller',
++    'step_5': 'In etwa 25 Minuten auf dem Teller',
+     'marks': 'Vysočina · Abholung',
+     'cta_short': 'Anrufen',
+     'cb_h': 'Brauchen Sie Hilfe bei der Bestellung?',
+@@ -475,7 +475,7 @@ LANG["ui"].update({
+     'slide_h1_kakao_holandskeho_typu': 'Kakao holländischer Art, der im Kuchen dunkel bleibt',
+     'slide_sub_kakao_holandskeho_typu': 'Alkalisiert, ohne Zuckerzusatz: für Lebkuchen, Cremes, Trinkkakao und Eis.',
+     'slide_btn_kakao_holandskeho_typu': 'Alles zum Kakao',
+-    'slide_h1_bramborove_knedliky': 'Kartoffelknödel auf dem Tisch in 20 Minuten',
++    'slide_h1_bramborove_knedliky': 'Kartoffelknödel auf dem Tisch in etwa 25 Minuten',
+     'slide_sub_bramborove_knedliky': 'aus Mehl, gemahlen 12 km von unserer Werkstatt entfernt',
+     'slide_btn_bramborove_knedliky': 'Alles zur Mischung',
+     'slide_h1_chlupate_knedliky': 'Rohe Kartoffelknödel ohne Schälen und Reiben',
+diff --git a/scripts/content_en.py b/scripts/content_en.py
+index 35fe391..e02513b 100644
+--- a/scripts/content_en.py
++++ b/scripts/content_en.py
+@@ -260,13 +260,13 @@ LANG = {
+     "products": {
+         "bramborove_knedliky": {
+             "name": "Potato dumpling mix",
+-            "h1": "Czech potato dumpling mix: just add water, 20 minutes to the table, and they hold together in the pot",
++            "h1": "Czech potato dumpling mix: just add water, about 25 minutes to the table, and they hold together in the pot",
+             "price_note": "Collect at the workshop. We deliver to Humpolec and Havlíčkův Brod.",
+             "short": "Flour from a mill in Havlíčkův Brod. The full ingredient list is below.",
+             "price": "5 kg / 250 Kč",
+             "per_unit": "50 Kč/kg · about 4 Kč per portion (60–70 portions)",
+             "title": "Czech potato dumpling mix 5 kg — just add water | Jůzlová",
+-            "desc": "Czech potato dumpling mix: just add water. Holds together, ready in 20 minutes. 5 kg / 250 Kč. Collect in Kochánov.",
++            "desc": "Czech potato dumpling mix: just add water. Holds together, ready in about 25 minutes. 5 kg / 250 Kč. Collect in Kochánov.",
+             "body": [
+                 ("h2", "What's in it"),
+                 ("p", "Flour, dried potato flakes, dried egg, salt, baking powder, potato starch"),
+@@ -274,7 +274,7 @@ LANG = {
+                 ("ol", [
+                     "Mix with water as directed on the bag.",
+                     "Shape dumplings, rolls or croquettes.",
+-                    "Boil. About 20 minutes from opening the bag to the plate.",
++                    "Boil. About 25 minutes from opening the bag to the plate.",
+                 ]),
+                 ("tip", "Want it your way? Add an egg or one boiled, grated potato. Many of our customers do."),
+                 ("h2", "What one dough makes"),
+@@ -292,12 +292,12 @@ LANG = {
+         },
+         "chlupate_knedliky": {
+             "name": "Raw-potato dumpling mix (chlupaté knedlíky)",
+-            "h1": "Chlupaté knedlíky (bosáky) mix: Czech raw-potato dumplings for sauerkraut and smoked meat in 15 minutes, no grating",
++            "h1": "Chlupaté knedlíky (bosáky) mix: Czech raw-potato dumplings for sauerkraut and smoked meat in about 20 minutes, no grating",
+             "short": "A traditional recipe from our workshop. Mix with water, shape, boil. Push the dough through a colander for Slovak-style halušky.",
+             "price": "5 kg / 260 Kč",
+             "per_unit": "52 Kč/kg · for a season at home, or for a canteen",
+             "title": "Chlupaté knedlíky mix 5 kg — raw-potato dumplings | Jůzlová",
+-            "desc": "Traditional Czech raw-potato dumpling mix. Serve with sauerkraut and smoked meat, or make halušky. Ready in 15 minutes. 5 kg / 260 Kč. Collect in Kochánov.",
++            "desc": "Traditional Czech raw-potato dumpling mix. Serve with sauerkraut and smoked meat, or make halušky. Ready in about 20 minutes. 5 kg / 260 Kč. Collect in Kochánov.",
+             "body": [
+                 ("h2", "What it goes with"),
+                 ("ul", ["sauerkraut and smoked meat",
+@@ -308,7 +308,7 @@ LANG = {
+                 ("ol", [
+                     "Mix with water as directed on the bag.",
+                     "Shape bosáky, or push the dough through a colander.",
+-                    "Boil. 15 minutes from bag to plate.",
++                    "Boil. About 20 minutes from bag to plate.",
+                 ]),
+             ],
+             "faq": [
+@@ -435,7 +435,7 @@ LANG = {
+ 
+ # --- rev. 5 home, footer and marquee strings (2026-09-17) ---
+ LANG["ui"].update({
+-    'h1_main': 'Czech potato dumplings on the table in 20 minutes',
++    'h1_main': 'Czech potato dumplings on the table in about 25 minutes',
+     'h1_sub': 'from flour milled 12 km from our workshop',
+     'stat_1': 'potato dumpling mix · 250 Kč',
+     'stat_2': 'minutes for raw-potato dumplings',
+@@ -448,7 +448,7 @@ LANG["ui"].update({
+     'step_2': 'The mill 12 km away',
+     'step_3': 'Mixing in Kochánov',
+     'step_4': 'Pick-up or delivery',
+-    'step_5': 'On the plate in 20 minutes',
++    'step_5': 'On the plate in about 25 minutes',
+     'marks': 'Vysočina · pick-up',
+     'cta_short': 'Call us',
+     'cb_h': 'Need help with your order?',
+@@ -475,7 +475,7 @@ LANG["ui"].update({
+     'slide_h1_kakao_holandskeho_typu': 'Dutch-process cocoa that stays dark in the cake',
+     'slide_sub_kakao_holandskeho_typu': 'Alkalised, no added sugar: for gingerbread, creams, drinking cocoa and ice cream.',
+     'slide_btn_kakao_holandskeho_typu': 'All about the cocoa',
+-    'slide_h1_bramborove_knedliky': 'Czech potato dumplings on the table in 20 minutes',
++    'slide_h1_bramborove_knedliky': 'Czech potato dumplings on the table in about 25 minutes',
+     'slide_sub_bramborove_knedliky': 'from flour milled 12 km from our workshop',
+     'slide_btn_bramborove_knedliky': 'All about the mix',
+     'slide_h1_chlupate_knedliky': 'Raw-potato dumplings with no peeling or grating',
+diff --git a/scripts/content_sk.py b/scripts/content_sk.py
+index dac17e3..3fb2c8a 100644
+--- a/scripts/content_sk.py
++++ b/scripts/content_sk.py
+@@ -259,13 +259,13 @@ LANG = {
+     "products": {
+         "bramborove_knedliky": {
+             "name": "Zemiakové knedle v prášku",
+-            "h1": "Zemiakové knedle v prášku: zamiešate s vodou, za 20 minút sú na stole a nerozvaria sa",
++            "h1": "Zemiakové knedle v prášku: zamiešate s vodou, približne za 25 minút sú na stole a nerozvaria sa",
+             "price_note": "Vyzdvihnete si ich v dielni. Do Humpolca a Havlíčkovho Brodu tovar dovezieme.",
+             "short": "Múka z mlyna v Havlíčkovom Brode. Celé zloženie nájdete nižšie.",
+             "price": "5 kg / 250 Kč",
+             "per_unit": "50 Kč/kg · zhruba 4 Kč na porciu (60–70 porcií)",
+             "title": "Zemiakové knedle v prášku 5 kg — stačí voda | Jůzlová",
+-            "desc": "Zemiakové cesto v prášku, stačí voda. Nerozvarí sa, hotové za 20 minút. 5 kg / 250 Kč. Vyzdvihnutie v dielni po dohode.",
++            "desc": "Zemiakové cesto v prášku, stačí voda. Nerozvarí sa, hotové približne za 25 minút. 5 kg / 250 Kč. Vyzdvihnutie v dielni po dohode.",
+             "body": [
+                 ("h2", "Čo v tom je"),
+                 ("p", "Múka, sušené zemiakové vločky, sušené vajcia, soľ, prášok do pečiva, zemiakový škrob"),
+@@ -273,7 +273,7 @@ LANG = {
+                 ("ol", [
+                     "Zmes zamiešate s vodou podľa návodu na vreci.",
+                     "Vytvarujete knedle, šúľance alebo krokety.",
+-                    "Uvaríte. Od otvorenia vreca po tanier zhruba 20 minút.",
++                    "Uvaríte. Od otvorenia vreca po tanier zhruba 25 minút.",
+                 ]),
+                 ("tip", "Chcete to „po svojom“? Pridajte vajce alebo jeden uvarený postrúhaný zemiak. Veľa našich zákazníkov to tak robí."),
+                 ("h2", "Čo z jedného cesta uvaríte"),
+@@ -291,12 +291,12 @@ LANG = {
+         },
+         "chlupate_knedliky": {
+             "name": "Chlpaté knedle v prášku",
+-            "h1": "Cesto na halušky a strapačky v prášku: chlpaté knedle (bosáky) bez strúhania zemiakov, hotové za 15 minút",
++            "h1": "Cesto na halušky a strapačky v prášku: chlpaté knedle (bosáky) bez strúhania zemiakov, hotové približne za 20 minút",
+             "short": "Podľa tradičnej receptúry z našej dielne. Zmiešate s vodou a pretlačíte cez cedník do vriacej vody — máte halušky. Alebo vytvarujete bosáky ku kapuste.",
+             "price": "5 kg / 260 Kč",
+             "per_unit": "52 Kč/kg · na sezónu aj pre jedáleň",
+             "title": "Cesto na halušky a strapačky v prášku 5 kg | Jůzlová",
+-            "desc": "Chlpaté knedle v prášku: pretlačíte na halušky alebo vytvarujete bosáky. Bez strúhania zemiakov, hotové za 15 minút. 5 kg / 260 Kč. Vyzdvihnutie po dohode.",
++            "desc": "Chlpaté knedle v prášku: pretlačíte na halušky alebo vytvarujete bosáky. Bez strúhania zemiakov, hotové približne za 20 minút. 5 kg / 260 Kč. Vyzdvihnutie po dohode.",
+             "body": [
+                 ("h2", "Na čo sa hodí"),
+                 ("ul", ["halušky a strapačky — cesto pretlačené cez cedník do vriacej vody",
+@@ -307,7 +307,7 @@ LANG = {
+                 ("ol", [
+                     "Zmes zamiešate s vodou podľa návodu.",
+                     "Pretlačíte cez cedník alebo vytvarujete bosáky.",
+-                    "Uvaríte. Od vreca na tanier 15 minút.",
++                    "Uvaríte. Od vreca na tanier približne 20 minút.",
+                 ]),
+             ],
+             "faq": [
+@@ -434,7 +434,7 @@ LANG = {
+ 
+ # --- rev. 5 home, footer and marquee strings (2026-09-17) ---
+ LANG["ui"].update({
+-    'h1_main': 'Zemiakové knedle na stole za 20 minút',
++    'h1_main': 'Zemiakové knedle na stole približne za 25 minút',
+     'h1_sub': 'z múky z mlyna 12 km od našej dielne',
+     'stat_1': 'zemiakové knedle · 250 Kč',
+     'stat_2': 'minút na chlpaté knedle',
+@@ -447,7 +447,7 @@ LANG["ui"].update({
+     'step_2': 'Mlyn 12 km od dielne',
+     'step_3': 'Miešanie v Kochánove',
+     'step_4': 'Vyzdvihnutie alebo rozvoz',
+-    'step_5': 'Na tanieri za 20 minút',
++    'step_5': 'Na tanieri približne za 25 minút',
+     'marks': 'Vysočina · vyzdvihnutie po dohode',
+     'cta_short': 'Zavolať',
+     'cb_h': 'Potrebujete poradiť s objednávkou?',
+@@ -474,7 +474,7 @@ LANG["ui"].update({
+     'slide_h1_kakao_holandskeho_typu': 'Kakao holandského typu, ktoré v bábovke nevybledne',
+     'slide_sub_kakao_holandskeho_typu': 'Alkalizovaný prášok bez pridaného cukru: do perníka, krémov, kakaa na pitie aj zmrzliny.',
+     'slide_btn_kakao_holandskeho_typu': 'Všetko o kakau',
+-    'slide_h1_bramborove_knedliky': 'Zemiakové knedle na stole za 20 minút',
++    'slide_h1_bramborove_knedliky': 'Zemiakové knedle na stole približne za 25 minút',
+     'slide_sub_bramborove_knedliky': 'z múky z mlyna 12 km od našej dielne',
+     'slide_btn_bramborove_knedliky': 'Všetko o zmesi',
+     'slide_h1_chlupate_knedliky': 'Chlpaté knedle bez šúpania a strúhania',
+diff --git a/scripts/product_spec.py b/scripts/product_spec.py
+new file mode 100644
+index 0000000..008711e
+--- /dev/null
++++ b/scripts/product_spec.py
+@@ -0,0 +1,235 @@
++"""Label data for the packaged mixes, transcribed from the printed sacks.
++
++Every figure here is read off the label a customer actually receives; the
++transcription and its provenance are in docs/PRODUCT-LABELS.md. Nothing in
++this file may be inferred, rounded to look tidier, or filled in by analogy
++with another product — a wrong allergen line is the one mistake on a food
++site that can hurt somebody.
++
++Only the products whose labels have been photographed appear in SPEC. The
++vanilla pudding, cocoa and vanilla sugar are absent because nobody has sent
++a photograph of their sacks yet, and the page renders without the section
++rather than showing invented numbers. Adding one is a matter of
++photographing the label and filling in an entry.
++
++Numbers are stored with a decimal point and formatted per language at render
++time, so the page shows "71,53" in Czech and "71.53" in English from one
++source. Energy in kcal is derived from the printed kJ (1 kcal = 4.184 kJ);
++the labels print kJ only.
++"""
++
++# ── language-neutral figures, per 100 g unless stated ───────────────────────
++
++SPEC = {
++    "bramborove_knedliky": {
++        "net_weight_g": 5000,
++        "nutrition": {
++            "energy_kj": "1432.7",
++            "carbohydrate_g": "71.53",
++            "protein_g": "9.55",
++            "fat_g": "1.42",
++            "salt_g": "2",
++        },
++        # For HowTo totalTime: 2-3 min resting plus 15-20 min boiling.
++        "prep_time": "PT3M",
++        "cook_time": "PT20M",
++        "total_time": "PT23M",
++    },
++    "chlupate_knedliky": {
++        "net_weight_g": 5000,
++        "nutrition": {
++            "energy_kj": "1459.4",
++            "carbohydrate_g": "76.49",
++            "protein_g": "8.83",
++            "fat_g": "1.43",
++            "salt_g": "2",
++        },
++        # 10 min swelling plus 5-8 min boiling.
++        "prep_time": "PT10M",
++        "cook_time": "PT8M",
++        "total_time": "PT18M",
++    },
++}
++
++# ── translated label text ───────────────────────────────────────────────────
++# Czech is the printed original; the rest are translations of it.
++# The potato mix has no ingredients or allergens here on purpose: the page keeps
++# the owner's ingredient list, and the allergen line waits on the sulphite level.
++
++TEXT = {
++    "cs": {
++        "bramborove_knedliky": {
++            "storage": "Uschovejte v suchu a chladu.",
++            "steps": [
++                "1 kg směsi nasypeme do misky a přelijeme 1 litrem vody.",
++                "Řádně prohněteme a těsto necháme 2 až 3 minuty odležet.",
++                "Z těsta vypracujeme válečky o průměru cca 6 cm.",
++                "Vložíme je do vroucí vody a vaříme 15 až 20 minut podle velikosti knedlíků.",
++            ],
++        },
++        "chlupate_knedliky": {
++            "ingredients": "pšeničná mouka, sušená bramborová kaše, sušené brambory, bramborový škrob, sůl, sušená vejce",
++            "allergens": "lepek",
++            "storage": "Uschovejte v suchu a chladu.",
++            "steps": [
++                "1 kg směsi nasypeme do misky a přelijeme 1,2 litru vody.",
++                "Řádně promícháme a těsto necháme 10 minut nabobtnat.",
++                "Lžící tvarujeme knedlíky a vkládáme je do vroucí vody.",
++                "Vaříme, až vyplavou — asi 5 až 8 minut podle velikosti.",
++            ],
++        },
++    },
++    "en": {
++        "bramborove_knedliky": {
++            "storage": "Store in a dry, cool place.",
++            "steps": [
++                "Tip 1 kg of the mix into a bowl and pour over 1 litre of water.",
++                "Knead thoroughly and let the dough rest for 2 to 3 minutes.",
++                "Roll the dough into cylinders about 6 cm across.",
++                "Lower them into boiling water and cook for 15 to 20 minutes, depending on the size of the dumplings.",
++            ],
++        },
++        "chlupate_knedliky": {
++            "ingredients": "wheat flour, dried mashed potato, dried potato, potato starch, salt, dried egg",
++            "allergens": "gluten",
++            "storage": "Store in a dry, cool place.",
++            "steps": [
++                "Tip 1 kg of the mix into a bowl and pour over 1.2 litres of water.",
++                "Stir thoroughly and leave the dough to swell for 10 minutes.",
++                "Shape the dumplings with a spoon and drop them into boiling water.",
++                "Cook until they float — about 5 to 8 minutes, depending on size.",
++            ],
++        },
++    },
++    "de": {
++        "bramborove_knedliky": {
++            "storage": "Trocken und kühl lagern.",
++            "steps": [
++                "1 kg der Mischung in eine Schüssel geben und mit 1 Liter Wasser übergießen.",
++                "Gründlich durchkneten und den Teig 2 bis 3 Minuten ruhen lassen.",
++                "Aus dem Teig Rollen von etwa 6 cm Durchmesser formen.",
++                "In kochendes Wasser geben und je nach Größe der Knödel 15 bis 20 Minuten garen.",
++            ],
++        },
++        "chlupate_knedliky": {
++            "ingredients": "Weizenmehl, Kartoffelpüreepulver, Trockenkartoffeln, Kartoffelstärke, Salz, Trockenei",
++            "allergens": "Gluten",
++            "storage": "Trocken und kühl lagern.",
++            "steps": [
++                "1 kg der Mischung in eine Schüssel geben und mit 1,2 Litern Wasser übergießen.",
++                "Gründlich verrühren und den Teig 10 Minuten quellen lassen.",
++                "Mit einem Löffel Knödel formen und in kochendes Wasser geben.",
++                "Garen, bis sie an die Oberfläche steigen — je nach Größe etwa 5 bis 8 Minuten.",
++            ],
++        },
++    },
++    "sk": {
++        "bramborove_knedliky": {
++            "storage": "Uchovávajte v suchu a chlade.",
++            "steps": [
++                "1 kg zmesi nasypeme do misky a zalejeme 1 litrom vody.",
++                "Dôkladne premiesime a cesto necháme 2 až 3 minúty odležať.",
++                "Z cesta vypracujeme valčeky s priemerom asi 6 cm.",
++                "Vložíme ich do vriacej vody a varíme 15 až 20 minút podľa veľkosti knedlí.",
++            ],
++        },
++        "chlupate_knedliky": {
++            "ingredients": "pšeničná múka, sušená zemiaková kaša, sušené zemiaky, zemiakový škrob, soľ, sušené vajcia",
++            "allergens": "lepok",
++            "storage": "Uchovávajte v suchu a chlade.",
++            "steps": [
++                "1 kg zmesi nasypeme do misky a zalejeme 1,2 litra vody.",
++                "Dôkladne premiešame a cesto necháme 10 minút napučať.",
++                "Lyžicou tvarujeme knedle a vkladáme ich do vriacej vody.",
++                "Varíme, kým nevyplávajú — asi 5 až 8 minút podľa veľkosti.",
++            ],
++        },
++    },
++}
++
++# ── section and row labels ──────────────────────────────────────────────────
++
++UI = {
++    "cs": {
++        "spec_h": "Složení a výživové údaje",
++        "net_weight": "Hmotnost",
++        "ingredients": "Složení",
++        "allergens": "Alergenní složky",
++        "storage": "Skladování",
++        "nutrition": "Výživové údaje na 100 g",
++        "prep_h": "Návod k použití",
++        "energy": "Energetická hodnota",
++        "carbohydrate": "Sacharidy",
++        "protein": "Bílkoviny",
++        "fat": "Tuky",
++        "salt": "Sůl",
++        "source": "Údaje odpovídají textu vytištěnému na obalu 5kg balení.",
++    },
++    "en": {
++        "spec_h": "Ingredients and nutrition",
++        "net_weight": "Net weight",
++        "ingredients": "Ingredients",
++        "allergens": "Allergens",
++        "storage": "Storage",
++        "nutrition": "Nutrition per 100 g",
++        "prep_h": "How to prepare",
++        "energy": "Energy",
++        "carbohydrate": "Carbohydrate",
++        "protein": "Protein",
++        "fat": "Fat",
++        "salt": "Salt",
++        "source": "These figures are transcribed from the label printed on the 5 kg sack.",
++    },
++    "de": {
++        "spec_h": "Zutaten und Nährwerte",
++        "net_weight": "Füllmenge",
++        "ingredients": "Zutaten",
++        "allergens": "Allergene",
++        "storage": "Lagerung",
++        "nutrition": "Nährwerte je 100 g",
++        "prep_h": "Zubereitung",
++        "energy": "Energie",
++        "carbohydrate": "Kohlenhydrate",
++        "protein": "Eiweiß",
++        "fat": "Fett",
++        "salt": "Salz",
++        "source": "Die Angaben entsprechen dem Etikett auf dem 5-kg-Sack.",
++    },
++    "sk": {
++        "spec_h": "Zloženie a výživové údaje",
++        "net_weight": "Hmotnosť",
++        "ingredients": "Zloženie",
++        "allergens": "Alergénne zložky",
++        "storage": "Skladovanie",
++        "nutrition": "Výživové údaje na 100 g",
++        "prep_h": "Návod na použitie",
++        "energy": "Energetická hodnota",
++        "carbohydrate": "Sacharidy",
++        "protein": "Bielkoviny",
++        "fat": "Tuky",
++        "salt": "Soľ",
++        "source": "Údaje zodpovedajú textu vytlačenému na obale 5 kg balenia.",
++    },
++}
++
++# Languages that write decimals with a comma.
++_COMMA = {"cs", "de", "sk"}
++
++
++def num(lang, value):
++    """Format a stored dot-decimal for display in `lang`."""
++    return value.replace(".", ",") if lang in _COMMA else value
++
++
++def kcal(energy_kj):
++    """kcal from the printed kJ. The labels give kJ only; 1 kcal = 4.184 kJ."""
++    return str(round(float(energy_kj) / 4.184))
++
++
++def spec_for(lang, key):
++    """Merged figures and translated text for one product, or None."""
++    base = SPEC.get(key)
++    text = TEXT.get(lang, {}).get(key)
++    if not base or not text:
++        return None
++    return {**base, **text, "ui": UI[lang]}
+diff --git a/server/app.py b/server/app.py
+index 4f1ad07..78ab888 100644
+--- a/server/app.py
++++ b/server/app.py
+@@ -56,6 +56,7 @@ EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
+ FORMSPREE_ID_RE = re.compile(r"^[A-Za-z0-9]{6,20}$")
+ PHONE_DIGITS_RE = re.compile(r"\d")
+ LANGS = ("cs", "en", "de", "sk")
++ATTRIBUTION_SOURCES = ("chatgpt", "perplexity", "claude", "gemini", "copilot", "search", "referral", "direct")
+ OWNER_SUBJECT = "Jůzlová — nová poptávka z webu"
+ OWNER_SUBJECT_NL = "Jůzlová — nový odběr novinek"
+ LANG_NAME_CS = {
+@@ -334,6 +335,8 @@ def format_mail(payload: dict) -> str:
+         f"Jazyk webu: {lang_cs}",
+         f"Jméno: {payload['name']}",
+     ]
++    if payload.get("source"):
++        lines.append(f"Zdroj návštěvy (se souhlasem): {payload['source']}")
+     if payload["phone"]:
+         lines.append(f"Telefon: {payload['phone']}")
+     if payload["email"]:
+@@ -578,6 +581,14 @@ def public_config() -> dict:
+     }
+ 
+ 
++def parse_attribution(raw: object) -> str:
++    """The channel the visitor came from, only if they accepted measurement."""
++    if not isinstance(raw, dict) or raw.get("consent") is not True:
++        return ""
++    source = raw.get("source")
++    return source if source in ATTRIBUTION_SOURCES else ""
++
++
+ def parse_contact(raw: object) -> dict | str:
+     if not isinstance(raw, dict):
+         return "invalid"
+@@ -646,6 +657,7 @@ def parse_contact(raw: object) -> dict | str:
+         "quantity": quantity,
+         "topic": topic,
+         "fulfillment": fulfillment,
++        "source": parse_attribution(raw.get("attribution")),
+         "lang": lang,
+         "honeypot": honeypot,
+     }
