@@ -1,0 +1,33 @@
+name: Temporary rebuild (remove before merge)
+on:
+  push:
+    branches: [fix/price-board-copy]
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply patch and rebuild
+        env:
+          SITE_BASE: https://www.juzlova.cz
+        run: |
+          if [ ! -f .ci-temp/pending.patch ]; then exit 0; fi
+          git apply --whitespace=nowarn .ci-temp/pending.patch
+          rm -rf .ci-temp
+          python scripts/build_site.py
+          python scripts/export_docs.py
+          python scripts/verify_refs.py
+          git config user.name "Adam Kennedy"
+          git config user.email "adam.kennedy@surfstr.ch"
+          git add -A
+          git reset -q .github/workflows/temp-rebuild.yml || true
+          git commit -m "Price board, localised prices and pick-up copy
+
+          Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+          git push
