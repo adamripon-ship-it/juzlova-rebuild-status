@@ -13,7 +13,7 @@ Rodinná dielňa · Kochánov, Česko · od roku 2004
 
 Zavolať Jiřine a objednať Všetko o kakau
 
-### Zemiakové knedle na stole za 20 minút z múky z mlyna 12 km od našej dielne
+### Zemiakové knedle na stole približne za 25 minút z múky z mlyna 12 km od našej dielne
 
 Zavolať Jiřine a objednať Všetko o zmesi
 
@@ -69,7 +69,7 @@ Celý cenník
 
 4 Vyzdvihnutie alebo rozvoz
 
-5 Na tanieri za 20 minút
+5 Na tanieri približne za 25 minút
 
 ### Čo z toho uvaríte
 

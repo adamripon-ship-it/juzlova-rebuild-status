@@ -56,6 +56,7 @@ EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
 FORMSPREE_ID_RE = re.compile(r"^[A-Za-z0-9]{6,20}$")
 PHONE_DIGITS_RE = re.compile(r"\d")
 LANGS = ("cs", "en", "de", "sk")
+ATTRIBUTION_SOURCES = ("chatgpt", "perplexity", "claude", "gemini", "copilot", "search", "referral", "direct")
 OWNER_SUBJECT = "Jůzlová — nová poptávka z webu"
 OWNER_SUBJECT_NL = "Jůzlová — nový odběr novinek"
 LANG_NAME_CS = {
@@ -334,6 +335,8 @@ def format_mail(payload: dict) -> str:
         f"Jazyk webu: {lang_cs}",
         f"Jméno: {payload['name']}",
     ]
+    if payload.get("source"):
+        lines.append(f"Zdroj návštěvy (se souhlasem): {payload['source']}")
     if payload["phone"]:
         lines.append(f"Telefon: {payload['phone']}")
     if payload["email"]:
@@ -578,6 +581,14 @@ def public_config() -> dict:
     }
 
 
+def parse_attribution(raw: object) -> str:
+    """The channel the visitor came from, only if they accepted measurement."""
+    if not isinstance(raw, dict) or raw.get("consent") is not True:
+        return ""
+    source = raw.get("source")
+    return source if source in ATTRIBUTION_SOURCES else ""
+
+
 def parse_contact(raw: object) -> dict | str:
     if not isinstance(raw, dict):
         return "invalid"
@@ -646,6 +657,7 @@ def parse_contact(raw: object) -> dict | str:
         "quantity": quantity,
         "topic": topic,
         "fulfillment": fulfillment,
+        "source": parse_attribution(raw.get("attribution")),
         "lang": lang,
         "honeypot": honeypot,
     }

@@ -3,13 +3,13 @@
 # Czech potato dumpling mix 5 kg — just add water | Jůzlová
 
 - **URL:** `/en/potato-dumpling-mix/`
-- **Meta description:** Czech potato dumpling mix: just add water. Holds together, ready in 20 minutes. 5 kg / 250 Kč. Collect in Kochánov.
+- **Meta description:** Czech potato dumpling mix: just add water. Holds together, ready in about 25 minutes. 5 kg / 250 Kč. Collect in Kochánov.
 
 ---
 
 Home › Potato dumpling mix
 
-## Czech potato dumpling mix: just add water, 20 minutes to the table, and they hold together in the pot
+## Czech potato dumpling mix: just add water, about 25 minutes to the table, and they hold together in the pot
 
 Flour from a mill in Havlíčkův Brod. The full ingredient list is below.
 
@@ -33,7 +33,7 @@ Flour, dried potato flakes, dried egg, salt, baking powder, potato starch
 
 - Mix with water as directed on the bag.
 - Shape dumplings, rolls or croquettes.
-- Boil. About 20 minutes from opening the bag to the plate.
+- Boil. About 25 minutes from opening the bag to the plate.
 
 Want it your way? Add an egg or one boiled, grated potato. Many of our customers do.
 
@@ -48,6 +48,38 @@ Want it your way? Add an egg or one boiled, grated potato. Many of our customers
 ### How far it goes
 
 A 5 kg bag makes a side dish for about 60–70 people. Keep the bag dry and sealed.
+
+### Ingredients and nutrition
+
+Net weight
+
+- 5 kg
+
+Storage
+
+- Store in a dry, cool place.
+
+#### Nutrition per 100 g
+
+- Energy
+- 1432.7 kJ (342 kcal)
+- Carbohydrate
+- 71.53 g
+- Protein
+- 9.55 g
+- Fat
+- 1.42 g
+- Salt
+- 2 g
+
+These figures are transcribed from the label printed on the 5 kg sack.
+
+### How to prepare
+
+- Tip 1 kg of the mix into a bowl and pour over 1 litre of water.
+- Knead thoroughly and let the dough rest for 2 to 3 minutes.
+- Roll the dough into cylinders about 6 cm across.
+- Lower them into boiling water and cook for 15 to 20 minutes, depending on the size of the dumplings.
 
 ### Frequently asked questions
 

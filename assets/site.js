@@ -382,7 +382,10 @@
       var topicEl = form.querySelector('[name="topic"]');
       var formType = form.getAttribute('data-form-type') || 'contact';
       var val = function (name) { var el = form.querySelector('[name="' + name + '"]'); return el ? (el.value || '').trim() : ''; };
+      var attribution = null;
+      try { if (localStorage.getItem('juzlova-ga-consent') === 'accept' && localStorage.getItem('juzlova-source')) attribution = { consent: true, source: localStorage.getItem('juzlova-source') }; } catch (err) {}
       var payload = {
+        attribution: attribution,
         type: formType === 'callback' ? 'contact' : formType,
         name: val('name'), phone: val('phone'), email: val('email'), message: val('message'), quantity: val('quantity'),
         topic: topicEl ? (topicEl.value || '').trim() : '',
@@ -578,12 +581,23 @@
     sources.forEach(function (pair) { if (found) return; if (host === pair[0] || host.slice(-(pair[0].length + 1)) === '.' + pair[0]) found = pair[1]; });
     if (found) gtag('event', 'ai_referral', { ai_source: found });
   };
+  var rememberSource = function () {
+    try {
+      if (localStorage.getItem('juzlova-source')) return;
+      var host = ''; try { host = new URL(document.referrer).hostname.toLowerCase(); } catch (err) {}
+      var source = host ? 'referral' : 'direct';
+      if (host === location.hostname) source = 'direct';
+      if (/(^|\.)(google|bing|seznam|duckduckgo)\./.test(host)) source = 'search';
+      [['chatgpt.com', 'chatgpt'], ['chat.openai.com', 'chatgpt'], ['perplexity.ai', 'perplexity'], ['claude.ai', 'claude'], ['gemini.google.com', 'gemini'], ['copilot.microsoft.com', 'copilot']].forEach(function (pair) { if (host === pair[0] || host.slice(-(pair[0].length + 1)) === '.' + pair[0]) source = pair[1]; });
+      localStorage.setItem('juzlova-source', source);
+    } catch (err) {}
+  };
   var hideConsent = function () { if (consentBar) { consentBar.hidden = true; consentBar.setAttribute('aria-hidden', 'true'); } };
   var showConsent = function () { if (consentBar) { consentBar.hidden = false; consentBar.removeAttribute('aria-hidden'); } };
   var loadGtag = function () {
     if (gaLoaded || !gaId) return; gaLoaded = true;
     var gtag = gtagFn();
-    gtag('consent', 'update', { analytics_storage: 'granted' }); gtag('js', new Date()); gtag('config', gaId); aiReferral(gtag);
+    gtag('consent', 'update', { analytics_storage: 'granted' }); gtag('js', new Date()); gtag('config', gaId); aiReferral(gtag); rememberSource();
     var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId); document.head.appendChild(s);
   };
   if (!gaId) hideConsent();
@@ -596,6 +610,6 @@
     var acceptBtn = consentBar ? consentBar.querySelector('[data-consent-accept]') : null;
     var essentialBtn = consentBar ? consentBar.querySelector('[data-consent-essential]') : null;
     if (acceptBtn) acceptBtn.addEventListener('click', function () { try { localStorage.setItem(CONSENT_KEY, 'accept'); } catch (e) {} loadGtag(); hideConsent(); });
-    if (essentialBtn) essentialBtn.addEventListener('click', function () { try { localStorage.setItem(CONSENT_KEY, 'essential'); } catch (e) {} hideConsent(); });
+    if (essentialBtn) essentialBtn.addEventListener('click', function () { try { localStorage.setItem(CONSENT_KEY, 'essential'); localStorage.removeItem('juzlova-source'); } catch (e) {} hideConsent(); });
   }
 })();

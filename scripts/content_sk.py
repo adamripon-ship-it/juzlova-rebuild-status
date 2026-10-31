@@ -259,13 +259,13 @@ LANG = {
     "products": {
         "bramborove_knedliky": {
             "name": "Zemiakové knedle v prášku",
-            "h1": "Zemiakové knedle v prášku: zamiešate s vodou, za 20 minút sú na stole a nerozvaria sa",
+            "h1": "Zemiakové knedle v prášku: zamiešate s vodou, približne za 25 minút sú na stole a nerozvaria sa",
             "price_note": "Vyzdvihnete si ich v dielni. Do Humpolca a Havlíčkovho Brodu tovar dovezieme.",
             "short": "Múka z mlyna v Havlíčkovom Brode. Celé zloženie nájdete nižšie.",
             "price": "5 kg / 250 Kč",
             "per_unit": "50 Kč/kg · zhruba 4 Kč na porciu (60–70 porcií)",
             "title": "Zemiakové knedle v prášku 5 kg — stačí voda | Jůzlová",
-            "desc": "Zemiakové cesto v prášku, stačí voda. Nerozvarí sa, hotové za 20 minút. 5 kg / 250 Kč. Vyzdvihnutie v dielni po dohode.",
+            "desc": "Zemiakové cesto v prášku, stačí voda. Nerozvarí sa, hotové približne za 25 minút. 5 kg / 250 Kč. Vyzdvihnutie v dielni po dohode.",
             "body": [
                 ("h2", "Čo v tom je"),
                 ("p", "Múka, sušené zemiakové vločky, sušené vajcia, soľ, prášok do pečiva, zemiakový škrob"),
@@ -273,7 +273,7 @@ LANG = {
                 ("ol", [
                     "Zmes zamiešate s vodou podľa návodu na vreci.",
                     "Vytvarujete knedle, šúľance alebo krokety.",
-                    "Uvaríte. Od otvorenia vreca po tanier zhruba 20 minút.",
+                    "Uvaríte. Od otvorenia vreca po tanier zhruba 25 minút.",
                 ]),
                 ("tip", "Chcete to „po svojom“? Pridajte vajce alebo jeden uvarený postrúhaný zemiak. Veľa našich zákazníkov to tak robí."),
                 ("h2", "Čo z jedného cesta uvaríte"),
@@ -291,12 +291,12 @@ LANG = {
         },
         "chlupate_knedliky": {
             "name": "Chlpaté knedle v prášku",
-            "h1": "Cesto na halušky a strapačky v prášku: chlpaté knedle (bosáky) bez strúhania zemiakov, hotové za 15 minút",
+            "h1": "Cesto na halušky a strapačky v prášku: chlpaté knedle (bosáky) bez strúhania zemiakov, hotové približne za 20 minút",
             "short": "Podľa tradičnej receptúry z našej dielne. Zmiešate s vodou a pretlačíte cez cedník do vriacej vody — máte halušky. Alebo vytvarujete bosáky ku kapuste.",
             "price": "5 kg / 260 Kč",
             "per_unit": "52 Kč/kg · na sezónu aj pre jedáleň",
             "title": "Cesto na halušky a strapačky v prášku 5 kg | Jůzlová",
-            "desc": "Chlpaté knedle v prášku: pretlačíte na halušky alebo vytvarujete bosáky. Bez strúhania zemiakov, hotové za 15 minút. 5 kg / 260 Kč. Vyzdvihnutie po dohode.",
+            "desc": "Chlpaté knedle v prášku: pretlačíte na halušky alebo vytvarujete bosáky. Bez strúhania zemiakov, hotové približne za 20 minút. 5 kg / 260 Kč. Vyzdvihnutie po dohode.",
             "body": [
                 ("h2", "Na čo sa hodí"),
                 ("ul", ["halušky a strapačky — cesto pretlačené cez cedník do vriacej vody",
@@ -307,7 +307,7 @@ LANG = {
                 ("ol", [
                     "Zmes zamiešate s vodou podľa návodu.",
                     "Pretlačíte cez cedník alebo vytvarujete bosáky.",
-                    "Uvaríte. Od vreca na tanier 15 minút.",
+                    "Uvaríte. Od vreca na tanier približne 20 minút.",
                 ]),
             ],
             "faq": [
@@ -434,7 +434,7 @@ LANG = {
 
 # --- rev. 5 home, footer and marquee strings (2026-09-17) ---
 LANG["ui"].update({
-    'h1_main': 'Zemiakové knedle na stole za 20 minút',
+    'h1_main': 'Zemiakové knedle na stole približne za 25 minút',
     'h1_sub': 'z múky z mlyna 12 km od našej dielne',
     'stat_1': 'zemiakové knedle · 250 Kč',
     'stat_2': 'minút na chlpaté knedle',
@@ -447,7 +447,7 @@ LANG["ui"].update({
     'step_2': 'Mlyn 12 km od dielne',
     'step_3': 'Miešanie v Kochánove',
     'step_4': 'Vyzdvihnutie alebo rozvoz',
-    'step_5': 'Na tanieri za 20 minút',
+    'step_5': 'Na tanieri približne za 25 minút',
     'marks': 'Vysočina · vyzdvihnutie po dohode',
     'cta_short': 'Zavolať',
     'cb_h': 'Potrebujete poradiť s objednávkou?',
@@ -474,7 +474,7 @@ LANG["ui"].update({
     'slide_h1_kakao_holandskeho_typu': 'Kakao holandského typu, ktoré v bábovke nevybledne',
     'slide_sub_kakao_holandskeho_typu': 'Alkalizovaný prášok bez pridaného cukru: do perníka, krémov, kakaa na pitie aj zmrzliny.',
     'slide_btn_kakao_holandskeho_typu': 'Všetko o kakau',
-    'slide_h1_bramborove_knedliky': 'Zemiakové knedle na stole za 20 minút',
+    'slide_h1_bramborove_knedliky': 'Zemiakové knedle na stole približne za 25 minút',
     'slide_sub_bramborove_knedliky': 'z múky z mlyna 12 km od našej dielne',
     'slide_btn_bramborove_knedliky': 'Všetko o zmesi',
     'slide_h1_chlupate_knedliky': 'Chlpaté knedle bez šúpania a strúhania',

@@ -3,13 +3,13 @@
 # Chlupaté knedlíky mix 5 kg — raw-potato dumplings | Jůzlová
 
 - **URL:** `/en/raw-potato-dumpling-mix/`
-- **Meta description:** Traditional Czech raw-potato dumpling mix. Serve with sauerkraut and smoked meat, or make halušky. Ready in 15 minutes. 5 kg / 260 Kč. Collect in Kochánov.
+- **Meta description:** Traditional Czech raw-potato dumpling mix. Serve with sauerkraut and smoked meat, or make halušky. Ready in about 20 minutes. 5 kg / 260 Kč. Collect in Kochánov.
 
 ---
 
 Home › Raw-potato dumpling mix (chlupaté knedlíky)
 
-## Chlupaté knedlíky (bosáky) mix: Czech raw-potato dumplings for sauerkraut and smoked meat in 15 minutes, no grating
+## Chlupaté knedlíky (bosáky) mix: Czech raw-potato dumplings for sauerkraut and smoked meat in about 20 minutes, no grating
 
 A traditional recipe from our workshop. Mix with water, shape, boil. Push the dough through a colander for Slovak-style halušky.
 
@@ -36,7 +36,47 @@ Order from Jiřina Where to collect
 
 - Mix with water as directed on the bag.
 - Shape bosáky, or push the dough through a colander.
-- Boil. 15 minutes from bag to plate.
+- Boil. About 20 minutes from bag to plate.
+
+### Ingredients and nutrition
+
+Net weight
+
+- 5 kg
+
+Ingredients
+
+- wheat flour, dried mashed potato, dried potato, potato starch, salt, dried egg
+
+Allergens
+
+- gluten
+
+Storage
+
+- Store in a dry, cool place.
+
+#### Nutrition per 100 g
+
+- Energy
+- 1459.4 kJ (349 kcal)
+- Carbohydrate
+- 76.49 g
+- Protein
+- 8.83 g
+- Fat
+- 1.43 g
+- Salt
+- 2 g
+
+These figures are transcribed from the label printed on the 5 kg sack.
+
+### How to prepare
+
+- Tip 1 kg of the mix into a bowl and pour over 1.2 litres of water.
+- Stir thoroughly and leave the dough to swell for 10 minutes.
+- Shape the dumplings with a spoon and drop them into boiling water.
+- Cook until they float — about 5 to 8 minutes, depending on size.
 
 ### Frequently asked questions
 

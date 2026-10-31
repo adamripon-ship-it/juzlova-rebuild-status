@@ -183,10 +183,11 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
 .btn.gold { background: var(--gold); color: var(--ink); --fill-hover: var(--ink); }
 .btn.gold:hover, .btn.gold:focus-visible { color: #fff; }
 /* on gold bands (owner's instruction): white fill with gold text; outline in white with white text */
-.btn.white { background: #fff; color: var(--gold); --fill-hover: var(--ink); }
+.btn.white { background: #fff; color: var(--ink); --fill-hover: var(--ink); }
 .btn.white:hover, .btn.white:focus-visible { color: #fff; }
-.btn.outline { background: transparent; color: #fff; border-color: #fff; --fill-hover: #fff; }
-.btn.outline:hover, .btn.outline:focus-visible { color: var(--gold); }
+.btn.outline { background: transparent; color: var(--ink); border-color: var(--ink); --fill-hover: var(--ink); }
+.btn.outline:hover, .btn.outline:focus-visible { color: #fff; }
+a[href^="tel:"] { white-space: nowrap; }
 /* on white: ink outline */
 .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); --fill-hover: var(--ink); }
 .btn.ghost:hover, .btn.ghost:focus-visible { color: #fff; }
@@ -298,14 +299,14 @@ p.body { max-width: 26em; margin: 0; line-height: 1.6; }
 .hero-track .slide { scroll-snap-align: start; scroll-snap-stop: always; min-width: 0; -webkit-tap-highlight-color: transparent; }
 .hero-track .display { position: relative; left: 0; }
 .hero-nav { display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: 1.4rem; }
-.hero-arrow { width: max(48px, 2.6rem); height: max(48px, 2.6rem); padding: 0; border: 0; background: none; color: #fff; cursor: pointer; display: grid; place-items: center; flex: 0 0 auto; opacity: .9; transition: transform .45s var(--ease), opacity .3s; -webkit-tap-highlight-color: transparent; }
+.hero-arrow { width: max(48px, 2.6rem); height: max(48px, 2.6rem); padding: 0; border: 0; background: none; color: var(--ink); cursor: pointer; display: grid; place-items: center; flex: 0 0 auto; opacity: .9; transition: transform .45s var(--ease), opacity .3s; -webkit-tap-highlight-color: transparent; }
 .hero-arrow svg { width: max(34px, 1.9rem); height: max(14px, .8rem); stroke: currentColor; stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .hero-arrow:hover, .hero-arrow:focus-visible { opacity: 1; outline: none; }
 .hero-arrow.prev:hover { transform: translateX(-4px); } .hero-arrow.next:hover { transform: translateX(4px); }
 .hero-arrow:active { transform: scale(.94); }
-.hero-arrow:focus-visible svg { outline: 2px solid #fff; outline-offset: 10px; border-radius: 4px; }
-.hero-progress { width: 9rem; height: 2px; background: rgba(255,255,255,.35); border-radius: 1px; overflow: hidden; flex: 0 0 auto; }
-.hero-progress i { display: block; height: 100%; width: var(--p, 20%); background: #fff; transition: width .7s var(--ease-expo); }
+.hero-arrow:focus-visible svg { outline: 2px solid var(--ink); outline-offset: 10px; border-radius: 4px; }
+.hero-progress { width: 9rem; height: 2px; background: rgba(26,26,26,.25); border-radius: 1px; overflow: hidden; flex: 0 0 auto; }
+.hero-progress i { display: block; height: 100%; width: var(--p, 20%); background: var(--ink); transition: width .7s var(--ease-expo); }
 @media (max-width: 700px) { .hero-progress { width: 7rem; } .hero-nav { margin-top: 1rem; } }
 @media (prefers-reduced-motion: reduce) { .hero-track { scroll-behavior: auto; } .hero-progress i, .hero-obj img, .hero-arrow { transition: none; } }
 @media (max-width: 1100px) { .hero-obj { position: relative; width: min(300px, 60%); margin: 2.5rem auto 0; } }
@@ -801,3 +802,8 @@ a.more { padding-block: .45rem; }
 
 /* touch screens large enough to show the footer groups open */
 @media (pointer: coarse) { .foot-links .fh { min-height: 44px; display: flex; align-items: center; margin: 0; } }
+
+.caption a { display: inline-block; padding: .15rem 0; }
+.label-note { font-size: .82rem; color: var(--ink-soft); margin-top: .8rem; }
+.prep ol { margin: 1rem 0 0; padding-left: 1.2rem; }
+.prep ol li { margin-bottom: .5rem; }

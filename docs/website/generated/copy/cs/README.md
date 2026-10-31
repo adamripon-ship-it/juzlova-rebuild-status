@@ -8,10 +8,10 @@
 |---|---|
 | [Knedlíky v prášku z Vysočiny — rodinná dílna Jůzlová, Kochánov](home.md) | `/` |
 | [Bebe řezy s čokoládovým pudingem — nepečený recept \| Jůzlová](bebe-rezy-s-cokoladovym-pudinkem-recept.md) | `/bebe-rezy-s-cokoladovym-pudinkem-recept/` |
-| [Bramborové knedlíky v prášku 5 kg — za 20 minut \| Jůzlová](bramborove-knedliky-v-prasku.md) | `/bramborove-knedliky-v-prasku/` |
+| [Bramborové knedlíky v prášku 5 kg — zhruba za 25 minut \| Jůzlová](bramborove-knedliky-v-prasku.md) | `/bramborove-knedliky-v-prasku/` |
 | [Časté dotazy — objednání, vyzvednutí, složení směsí \| Jůzlová](caste-dotazy.md) | `/caste-dotazy/` |
 | [Ceník knedlíků v prášku, pudingu a kakaa od výrobce \| Jůzlová](cenik.md) | `/cenik/` |
-| [Chlupaté knedlíky v prášku 5 kg — za 15 minut \| Jůzlová](chlupate-knedliky-v-prasku.md) | `/chlupate-knedliky-v-prasku/` |
+| [Chlupaté knedlíky v prášku 5 kg — zhruba za 20 minut \| Jůzlová](chlupate-knedliky-v-prasku.md) | `/chlupate-knedliky-v-prasku/` |
 | [Havlíčkův Brod — dílna Jůzlová 12 km od města](havlickuv-brod.md) | `/havlickuv-brod/` |
 | [Domácí perník — hrníčkový recept podle Jiřiny Jůzlové](hrnickovy-pernik-recept.md) | `/hrnickovy-pernik-recept/` |
 | [Hruškový koláč s vanilkovým pudingem — recept Lucie Kůželové](hruskovy-kolac-s-vanilkovym-pudinkem-recept.md) | `/hruskovy-kolac-s-vanilkovym-pudinkem-recept/` |

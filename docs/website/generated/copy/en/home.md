@@ -13,7 +13,7 @@ Family workshop · Kochánov, Czechia · since 2004
 
 Call Jiřina to order All about the cocoa
 
-### Czech potato dumplings on the table in 20 minutes from flour milled 12 km from our workshop
+### Czech potato dumplings on the table in about 25 minutes from flour milled 12 km from our workshop
 
 Call Jiřina to order All about the mix
 
@@ -69,7 +69,7 @@ Full price list
 
 4 Pick-up or delivery
 
-5 On the plate in 20 minutes
+5 On the plate in about 25 minutes
 
 ### What you can cook with them
 

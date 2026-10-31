@@ -3,13 +3,13 @@
 # Rohe Kartoffelknödel-Mischung (bosáky) 5 kg | Jůzlová
 
 - **URL:** `/de/rohe-kartoffelknoedel-mischung/`
-- **Meta description:** Böhmische rohe Kartoffelknödel aus der Mischung: zu Sauerkraut und Rauchfleisch oder als Halušky. 15 Minuten, 5 kg / 260 Kč. Familienwerkstatt in der Vysočina.
+- **Meta description:** Böhmische rohe Kartoffelknödel aus der Mischung: zu Sauerkraut und Rauchfleisch oder als Halušky. etwa 20 Minuten, 5 kg / 260 Kč. Familienwerkstatt in der Vysočina.
 
 ---
 
 Start › Rohe Kartoffelknödel-Mischung (chlupaté knedlíky)
 
-## Chlupaté knedlíky (bosáky): böhmische rohe Kartoffelknödel zu Kraut und Rauchfleisch in 15 Minuten — ohne Reiben
+## Chlupaté knedlíky (bosáky): böhmische rohe Kartoffelknödel zu Kraut und Rauchfleisch in etwa 20 Minuten — ohne Reiben
 
 Traditionelles Rezept aus unserer Werkstatt. Mit Wasser anrühren, formen, kochen. Durch ein Sieb gedrückt ergibt der Teig slowakische Halušky.
 
@@ -36,7 +36,47 @@ Bei Jiřina bestellen Abholorte
 
 - Mischung nach Anleitung mit Wasser anrühren.
 - Bosáky formen oder den Teig durch ein Sieb drücken.
-- Kochen. Vom Beutel bis zum Teller 15 Minuten.
+- Kochen. Vom Beutel bis zum Teller etwa 20 Minuten.
+
+### Zutaten und Nährwerte
+
+Füllmenge
+
+- 5 kg
+
+Zutaten
+
+- Weizenmehl, Kartoffelpüreepulver, Trockenkartoffeln, Kartoffelstärke, Salz, Trockenei
+
+Allergene
+
+- Gluten
+
+Lagerung
+
+- Trocken und kühl lagern.
+
+#### Nährwerte je 100 g
+
+- Energie
+- 1459,4 kJ (349 kcal)
+- Kohlenhydrate
+- 76,49 g
+- Eiweiß
+- 8,83 g
+- Fett
+- 1,43 g
+- Salz
+- 2 g
+
+Die Angaben entsprechen dem Etikett auf dem 5-kg-Sack.
+
+### Zubereitung
+
+- 1 kg der Mischung in eine Schüssel geben und mit 1,2 Litern Wasser übergießen.
+- Gründlich verrühren und den Teig 10 Minuten quellen lassen.
+- Mit einem Löffel Knödel formen und in kochendes Wasser geben.
+- Garen, bis sie an die Oberfläche steigen — je nach Größe etwa 5 bis 8 Minuten.
 
 ### Häufige Fragen
 

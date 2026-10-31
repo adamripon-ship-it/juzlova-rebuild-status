@@ -46,6 +46,12 @@ package: 5 kg
 price_czk: 250 Kč
 fact: Mouka z mlýna v Havlíčkově Brodě. Celé složení najdete níže.
 detail: Bramborové těsto v prášku. Zaděláte vodou, nerozvaří se. 5 kg / 250 Kč, vyzvednutí Kochánov a Humpolec.
+storage: Store in a dry, cool place.
+nutrition_per_100g: energy 1432.7 kJ (342 kcal); carbohydrate 71.53 g; protein 9.55 g; fat 1.42 g; salt 2 g
+preparation 1: Tip 1 kg of the mix into a bowl and pour over 1 litre of water.
+preparation 2: Knead thoroughly and let the dough rest for 2 to 3 minutes.
+preparation 3: Roll the dough into cylinders about 6 cm across.
+preparation 4: Lower them into boiling water and cook for 15 to 20 minutes, depending on the size of the dumplings.
 Q: Musím přidat vejce?
 A: Ne. Směs zaděláte vodou podle návodu. Vejce přidejte, chcete-li bohatší chuť.
 Q: Vydrží knedlíky plnění ovocem?
@@ -58,7 +64,15 @@ url: https://www.juzlova.cz/chlupate-knedliky-v-prasku/
 package: 5 kg
 price_czk: 260 Kč
 fact: Podle tradiční receptury z naší dílny. Smícháte s vodou, vytvarujete, povaříte. Hodí se i na strapačky a halušky.
-detail: Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. K zelí a uzenému, na halušky i strapačky, hotové za 15 minut. 5 kg / 260 Kč, Kochánov a Humpolec.
+detail: Chlupaté knedlíky v prášku podle tradiční receptury z Vysočiny. K zelí a uzenému, na halušky i strapačky, hotové zhruba za 20 minut. 5 kg / 260 Kč, Kochánov a Humpolec.
+ingredients: wheat flour, dried mashed potato, dried potato, potato starch, salt, dried egg
+allergens: gluten
+storage: Store in a dry, cool place.
+nutrition_per_100g: energy 1459.4 kJ (349 kcal); carbohydrate 76.49 g; protein 8.83 g; fat 1.43 g; salt 2 g
+preparation 1: Tip 1 kg of the mix into a bowl and pour over 1.2 litres of water.
+preparation 2: Stir thoroughly and leave the dough to swell for 10 minutes.
+preparation 3: Shape the dumplings with a spoon and drop them into boiling water.
+preparation 4: Cook until they float — about 5 to 8 minutes, depending on size.
 Q: Jsou chlupaté knedlíky a bosáky totéž?
 A: Ano, jsou to dva názvy pro jedno jídlo.
 Q: Dají se z toho dělat halušky?
