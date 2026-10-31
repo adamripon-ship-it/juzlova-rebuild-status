@@ -849,3 +849,12 @@ a.more { padding-block: .45rem; }
 .prod-links + .right { position: relative; z-index: 2; }
 .pl-amount { text-align: right; }
 .price-eur { display: block; color: var(--grey); font-size: .82em; font-weight: 400; }
+.btn { max-width: 100%; }
+@media (max-width: 480px) {
+  .btn { white-space: normal; text-align: center; }
+  .wrap > * , .rv { min-width: 0; }
+}
+@media (max-width: 420px) {
+  .prod-links a { flex-direction: column; align-items: stretch; gap: .45rem; }
+  .pl-prices { min-width: 0; }
+}
